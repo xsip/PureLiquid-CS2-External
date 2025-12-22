@@ -1,7 +1,7 @@
 # CS2 External TraceShape Visibility Check
 
-**External visibility detection for Counter-Strike 2 using remote TraceShape execution.**  
-( Make sure to check out my other project [CS2-External-Chams](https://github.com/xsip/CS2-External-Chams) )
+## **External visibility detection for Counter-Strike 2 using remote TraceShape execution.**   
+
 ---
 [Watch on YouTube](https://www.youtube.com/watch?v=lRgEfxrMk-8)
 ![CS2 Chams Demo](https://img.youtube.com/vi/lRgEfxrMk-8/maxres2.jpg)
@@ -236,3 +236,8 @@ Compile in **Release mode** for optimal performance and correct shellcode genera
 ## License
 
 This project is provided for **educational and research purposes only**. Using this software in online games violates Terms of Service and may be illegal. The author assumes no responsibility for misuse.
+
+---
+
+## Other Projects
+[CS2-External-Chams](https://github.com/xsip/CS2-External-Chams)
