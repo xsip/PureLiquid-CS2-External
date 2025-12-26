@@ -127,7 +127,7 @@ int main() {
 - MASM (Microsoft Macro Assembler)
 
 **Steps:**
-1. Open `CS2-External-TraceShape-Visibility-Check.slnx`
+1. Open `PureLiquid-CS2-External.slnx`
 2. Set configuration to **Release | x64**
 3. Build solution (Ctrl+Shift+B)
 4. Output: `Bin/x64/Release/External.exe`
