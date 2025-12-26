@@ -1,15 +1,16 @@
-# CS2 External TraceShape Visibility Check
+# Pure Liquid CS2
 
-## **External visibility detection for Counter-Strike 2 using remote TraceShape execution.**   
+## *Advanced External Base For Counter Strike 2 Including TraceShape visibility check*  
 
 ---
-[Watch on YouTube](https://www.youtube.com/watch?v=lRgEfxrMk-8)
 ![CS2 Chams Demo](https://img.youtube.com/vi/lRgEfxrMk-8/maxres2.jpg)
 ---
 
 ## Overview
 
-CS2 External TraceShape Visibility Check is a reverse engineering project that implements accurate player visibility detection for Counter-Strike 2 without DLL injection. The project demonstrates:
+PureLiquid CS2 is a reverse engineering project that implements accurate player visibility detection for Counter-Strike 2 without DLL injection.   
+There is also support for Interfaces, PatternScanning, module cloning and so on  
+The project demonstrates:  
 
 - **Remote Function Execution** - Execute CS2's internal TraceShape function from an external process
 - **External Process Manipulation** - Comprehensive memory operations without traditional injection techniques
@@ -19,6 +20,7 @@ CS2 External TraceShape Visibility Check is a reverse engineering project that i
 ## Features
 
 ✨ **Authentic Visibility Checking** - Uses CS2's own TraceShape function for accurate line-of-sight detection  
+✨ **External Interface Usage** - Feels like an internal!  
 🎯 **External Operation** - No DLL injection required, operates entirely from external process  
 🔧 **Real-time Entity Tracking** - Background thread continuously monitors all player entities  
 📊 **Dynamic Pattern Scanning** - Automatic function discovery via IDA-style signatures  
@@ -39,41 +41,7 @@ This approach provides the same accuracy as CS2's internal checks while operatin
 
 ---
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    External.exe                         │
-│  ┌───────────────────────────────────────────────────┐  │
-│  │  Main Thread: Visibility Checking (Left Shift)    │  │
-│  └───────────────────────────────────────────────────┘  │
-│  ┌───────────────────────────────────────────────────┐  │
-│  │  Background Thread: Entity Tracking               │  │
-│  └───────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────┘
-                          │
-                          │ Process Handle
-                          ▼
-┌─────────────────────────────────────────────────────────┐
-│                      cs2.exe                            │
-│  ┌───────────────────────────────────────────────────┐  │
-│  │  Allocated Memory:                                │  │
-│  │  • TraceShapeCtx (parameters)                     │  │
-│  │  • TraceFilter_t (entity filtering)               │  │
-│  │  • trace_t (results buffer)                       │  │
-│  │  • Shellcode (wrapper function)                   │  │
-│  └───────────────────────────────────────────────────┘  │
-│  ┌───────────────────────────────────────────────────┐  │
-│  │  Game Functions (executed remotely):              │  │
-│  │  • TraceShape() - Line-of-sight checking          │  │
-│  │  • InitTraceFilter() - Filter initialization      │  │
-│  └───────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## Usage Example
+## Usage Example Visibility Check
 
 ```cpp
 int main() {
@@ -130,75 +98,25 @@ Entity 9: Visible
 
 ---
 
-## Hotkeys
+## External CCSGOInput Usage:
 
-| Key | Action                                        |
-|-----|-----------------------------------------------|
-| **Left Shift (Hold)** | Perform visibility checks and display results |
-| **Release** | Pause checking                                |
+```c++
 
----
-
-## Technical Highlights
-
-### Remote Code Execution
-Shellcode injection enables calling CS2's internal functions with proper context:
-
-```cpp
-// Wrapper function (runs in CS2's address space)
-DWORD WINAPI TraceShapeThread(LPVOID lpParam) {
-    TraceShapeCtx* ctx = (TraceShapeCtx*)lpParam;
-    
-    // Call CS2's internal function
-    ctx->TraceShape(
-        ctx->pGameTraceManager,
-        ctx->ray,
-        ctx->vStartPos,
-        ctx->vEndPos,
-        ctx->pTraceFilter,
-        ctx->pTrace
-    );
-    
-    return 1;
+int main() {
+	
+	I::Initialize();
+	while (true) {
+		if (GetAsyncKeyState(VK_LSHIFT)) {
+        // Getting angles
+			auto v = I::pCsGoInput->vViewAngles;
+			printf("View: %.2f %.2f %.2f\n", v.x, v.y, v.z);
+        // Setting angles:
+        I::pCsGoInput->vViewAngles = {0.0f, 0.0f, 0.0f};
+		}
+	}
 }
-```
-
-### Pattern Scanning
-IDA-style pattern scanning locates functions dynamically without hardcoded offsets:
-
-```cpp
-// Find TraceShape function
-TraceShapeFn = pClient->ScanMemory("48 89 5C 24 ?? 48 89 4C 24 ?? 55 57");
-
-// Find TraceFilter initialization
-TraceFilterFn = pClient->ScanMemory("48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC ?? 0F B6 41 ?? 33 FF 24");
-```
-
----
-
-## Project Structure
 
 ```
-CS2-External-TraceShape-Visibility-Check/
-├── Memory/              # Low-level memory manipulation
-│   ├── Process.h/cpp    # External process memory operations
-│   ├── SyscallManager   # Direct NT syscall invocation
-│   └── Syscalls_x64.asm # Assembly syscall stubs
-├── GlobalData/          # Shared state and utility macros
-│   └── Include.h        # PROPERTY macros for external memory access
-├── CS2/                 # Counter-Strike 2 SDK
-│   ├── Interfaces/      # Game interface abstractions
-│   │   ├── Manager.h    # Interface acquisition
-│   │   ├── CGameEntitySystem # Entity management
-│   │   └── CGameTraceManager # Visibility checking
-│   └── SDK/             # Game structures
-│       ├── C_CSPlayerPawn
-│       ├── CCSPlayerController
-│       └── CBaseHandle
-└── External/            # Main application
-    └── Main.cpp         # Entry point and game loop
-```
-
 ---
 
 ## Building
