@@ -39,9 +39,6 @@
     <ClInclude Include="Include\CS2\SDK\CCSPlayerController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\SDK\CBaseHandle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\CS2\Interfaces\CGameTraceManager.cpp">

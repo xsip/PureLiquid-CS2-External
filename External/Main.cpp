@@ -1,5 +1,5 @@
 #include <External/Include.h>
-#include <CS2/SDK/CBaseHandle.h>
+#include <Source2/CBaseHandle.h>
 #include <CS2/SDK/CCSPlayerController.h>
 #include <CS2/SDK/C_CSPlayerPawn.h>
 #include <CS2/Interfaces/Manager.h>

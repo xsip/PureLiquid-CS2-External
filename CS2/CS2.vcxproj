@@ -73,12 +73,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDIr)GlobalData\Include;$(ProjectDir)Include;$(SolutionDIr)Memory\Include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDIr)GlobalData\Include;$(ProjectDir)Include;$(SolutionDIr)Memory\Include;$(SolutionDIr)Source2\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDIr)GlobalData\Include;$(ProjectDir)Include;$(SolutionDIr)Memory\Include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDIr)GlobalData\Include;$(ProjectDir)Include;$(SolutionDIr)Memory\Include;$(SolutionDIr)Source2\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -145,6 +145,9 @@
     <ProjectReference Include="..\Memory\Memory.vcxproj">
       <Project>{a211709a-5578-4c34-9d70-69516f31770f}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Source2\Source2.vcxproj">
+      <Project>{05502e0d-e6ab-40b0-9d8a-274fb372452b}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\CS2\Enums\TraceMasks.h" />
@@ -153,7 +156,6 @@
     <ClInclude Include="Include\CS2\Interfaces\CGameTraceManager.h" />
     <ClInclude Include="Include\CS2\Math\Vector.h" />
     <ClInclude Include="Include\CS2\Interfaces\Manager.h" />
-    <ClInclude Include="Include\CS2\SDK\CBaseHandle.h" />
     <ClInclude Include="Include\CS2\SDK\CCSPlayerController.h" />
     <ClInclude Include="Include\CS2\SDK\C_CSPlayerPawn.h" />
   </ItemGroup>
