@@ -15,48 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\CS2\Interfaces\Manager.h">
+    <ClInclude Include="Include\Math\Definitions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\Enums\TraceMasks.h">
+    <ClInclude Include="Include\Math\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\Interfaces\CGameTraceManager.h">
+    <ClInclude Include="Include\Math\Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\SDK\C_CSPlayerPawn.h">
+    <ClInclude Include="Include\Math\Matrix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\Interfaces\CGameResourceService.h">
+    <ClInclude Include="Include\Math\QAngle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\Interfaces\CGameEntitySystem.h">
+    <ClInclude Include="Include\Math\Quaternion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\CS2\SDK\CCSPlayerController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\CS2\Interfaces\CCSGOInput.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\CS2\Interfaces\Include.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\CS2\Patterns.h">
+    <ClInclude Include="Include\Math\Ray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\CS2\Interfaces\CGameTraceManager.cpp">
+    <ClCompile Include="Source\Math\Vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CS2\Interfaces\CGameResourceService.cpp">
+    <ClCompile Include="Source\Math\QAngle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CS2\Interfaces\CGameEntitySystem.cpp">
+    <ClCompile Include="Source\Math\Quaternion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CS2\Interfaces\CCSGOInput.cpp">
+    <ClCompile Include="Source\Math\Matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Ray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

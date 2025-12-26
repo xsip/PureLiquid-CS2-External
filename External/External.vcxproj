@@ -73,12 +73,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDir)Memory\Include;$(ProjectDir)Include;$(SolutionDir)GlobalData\Include;$(SolutionDir)CS2\Include;$(SolutionDIr)Source2\Include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Memory\Include;$(ProjectDir)Include;$(SolutionDir)GlobalData\Include;$(SolutionDir)CS2\Include;$(SolutionDIr)Source2\Include;$(SolutionDir)Math\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDir)Memory\Include;$(ProjectDir)Include;$(SolutionDir)GlobalData\Include;$(SolutionDir)CS2\Include;$(SolutionDIr)Source2\Include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Memory\Include;$(ProjectDir)Include;$(SolutionDir)GlobalData\Include;$(SolutionDir)CS2\Include;$(SolutionDIr)Source2\Include;$(SolutionDir)Math\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -150,6 +150,9 @@
     </ProjectReference>
     <ProjectReference Include="..\GlobalData\GlobalData.vcxproj">
       <Project>{67c0b8c6-8308-41d3-9540-2d33fc61bc34}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Math\Math.vcxproj">
+      <Project>{94096955-e595-4626-a42a-48722d7983cd}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Memory\Memory.vcxproj">
       <Project>{a211709a-5578-4c34-9d70-69516f31770f}</Project>

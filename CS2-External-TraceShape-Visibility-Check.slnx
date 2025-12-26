@@ -6,6 +6,7 @@
   <Project Path="CS2/CS2.vcxproj" Id="54589bb2-7b3a-4a66-97a7-2628f9e792d4" />
   <Project Path="External/External.vcxproj" Id="b6c877f1-2d97-40b2-bb37-1673e3cf2c21" />
   <Project Path="GlobalData/GlobalData.vcxproj" Id="67c0b8c6-8308-41d3-9540-2d33fc61bc34" />
+  <Project Path="Math/Math.vcxproj" Id="94096955-e595-4626-a42a-48722d7983cd" />
   <Project Path="Memory/Memory.vcxproj" Id="a211709a-5578-4c34-9d70-69516f31770f" />
   <Project Path="Source2/Source2.vcxproj" Id="05502e0d-e6ab-40b0-9d8a-274fb372452b" />
 </Solution>

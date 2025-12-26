@@ -2,11 +2,7 @@
 #include <Source2/CBaseHandle.h>
 #include <CS2/SDK/CCSPlayerController.h>
 #include <CS2/SDK/C_CSPlayerPawn.h>
-#include <CS2/Interfaces/Manager.h>
-#include <CS2/Interfaces/CGameResourceService.h>
-#include <CS2/Interfaces/CGameEntitySystem.h>
-#include <CS2/Interfaces/CGameTraceManager.h>
-
+#include <CS2/Interfaces/Include.h>
 
 namespace Globals {
 	Process proc{ "cs2.exe" };
@@ -63,6 +59,8 @@ int main() {
 	SetConsoleTitle("xsip's external traceshape visibility check");
 	
 	I::Initialize();
+
+
 	std::thread([]() {ReadEntititesThread();}).detach();
 
 	auto pGameEntitySystem = I::pGameResourceService->GetGameEntitySystem();
@@ -70,7 +68,7 @@ int main() {
 	auto lpController = pGameEntitySystem->GetEntityByIndex<CS2::client::CCSPlayerController>(1);
 	auto lpPawn = pGameEntitySystem->GetEntityByIndex<CS2::client::C_CSPlayerPawn>(lpController->m_hPawn.GetEntryIndex());
 	
-	while (true) {
+	while (!GetAsyncKeyState(VK_DELETE)) {
 
 		if (!GetAsyncKeyState(VK_LSHIFT)) {
 			Sleep(500);

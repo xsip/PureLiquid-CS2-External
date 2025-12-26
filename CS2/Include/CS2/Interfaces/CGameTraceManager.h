@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <cstddef>
 #include <array>
-#include <CS2/Math/Vector.h>
+#include <Math/Vector.h>
 
 namespace CS2 {
 

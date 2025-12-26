@@ -3,7 +3,7 @@
 #include <CS2/Interfaces/Manager.h>
 #include <CS2/Enums/TraceMasks.h>
 #include <GlobalData/Include.h>
-
+#include <CS2/Patterns.h>
 using namespace Globals;
 
 
@@ -44,8 +44,7 @@ namespace CS2 {
 				return {};
 			}
 
-			// @xref => Physics/TraceShape (Client)
-			TraceShapeFn = reinterpret_cast<TraceShapeFnDef>(pClient->ScanMemory("48 89 5C 24 ?? 48 89 4C 24 ?? 55 57"));
+			TraceShapeFn = reinterpret_cast<TraceShapeFnDef>(pClient->ScanMemory(TRACESHAPE_PATTERN));
 			if (!TraceShapeFn) {
 				printf("Error Finding TraceShape Function!!\n");
 				return {};
@@ -187,12 +186,8 @@ namespace CS2 {
 			return nullptr;
 		}
 
-		// .text:0000000000200C59 C6 44 24 20 0F								mov[rsp + 38h + var_18], 0Fh
-		// .text : 0000000000200C5E E8 3D 0C 00 00								call    TraceInitEntitiesOnly_sub_2018A0
-		// .text : 0000000000200C63 48 81 4B 10 00 00 0C 00						or qword ptr[rbx + 10h], 0C0000h
-		// .text : 0000000000200C6B 48 8D 05 7E 3A 33 01						lea     rax, ? ? _7CAnimGraphTraceFilter@@6B@; const CAnimGraphTraceFilter::`vftable'
 
-		auto TraceFilterFn = reinterpret_cast<InitTraceFilterFn>(pClient->ScanMemory("48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC ?? 0F B6 41 ?? 33 FF 24"));
+		auto TraceFilterFn = reinterpret_cast<InitTraceFilterFn>(pClient->ScanMemory(INIT_TRACE_ENTITIES_ONLY_PATTERN));
 		if (!TraceFilterFn) {
 			printf("Error Finding TraceFilterFn Function!!\n");
 			return nullptr;

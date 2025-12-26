@@ -1,6 +1,6 @@
 #pragma once
 #include <GlobalData/Include.h>
-#include <CS2/Math/Vector.h>
+#include <Math/Vector.h>
 namespace CS2 {
 	namespace client {
 		class C_CSPlayerPawn {

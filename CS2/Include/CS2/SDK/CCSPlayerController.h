@@ -1,6 +1,5 @@
 #pragma once
 #include <GlobalData/Include.h>
-#include <CS2/Math/Vector.h>
 #include <Source2/CBaseHandle.h>
 namespace CS2 {
 	namespace client {
