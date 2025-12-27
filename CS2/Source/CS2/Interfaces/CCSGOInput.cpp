@@ -27,7 +27,7 @@ namespace CS2 {
 
         if (data->bForceSubtickViewAngle) {
             data->bForceSubtickViewAngle = false;
-            auto pHistoryBase = *reinterpret_cast<uintptr_t*>(reinterpret_cast<uintptr_t>(cmd) + 0x38);
+            /*auto pHistoryBase = *reinterpret_cast<uintptr_t*>(reinterpret_cast<uintptr_t>(cmd) + 0x38);
             if (pHistoryBase) {
                 auto pHistoryCountBase = *reinterpret_cast<uintptr_t*>(pHistoryBase);
                 if (pHistoryCountBase) {
@@ -43,19 +43,21 @@ namespace CS2 {
                                     pHistoryEntry->pViewCmd->angValue.x = data->vViewAnglesToSet.x;
                                     pHistoryEntry->pViewCmd->angValue.y = data->vViewAnglesToSet.y;
                                     pHistoryEntry->pViewCmd->angValue.z = data->vViewAnglesToSet.z;
-                                    pHistoryEntry->cached_bits |= INPUT_HISTORY_BITS_VIEWANGLES;
+                                    // pHistoryEntry->has_bits |= INPUT_HISTORY_BITS_VIEWANGLES;
                                 }
                             }
                         }
                     }
                 }
+                 }
+                 */
+
                 if (cmd->csgoUserCmd.pBaseCmd && cmd->csgoUserCmd.pBaseCmd->pViewAngles) {
                     cmd->csgoUserCmd.pBaseCmd->pViewAngles->angValue.x = data->vViewAnglesToSet.x;
                     cmd->csgoUserCmd.pBaseCmd->pViewAngles->angValue.y = data->vViewAnglesToSet.y;
                     cmd->csgoUserCmd.pBaseCmd->pViewAngles->angValue.z = data->vViewAnglesToSet.z;
-
                 }
-            }
+           
         }
         
         if (data->bForceBtn) {

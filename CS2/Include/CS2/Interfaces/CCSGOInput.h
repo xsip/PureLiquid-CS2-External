@@ -51,7 +51,7 @@ namespace CS2 {
 		INPUT_HISTORY_BITS_TARGETENTINDEX = 0x4000U
 	};
 
-	// TODO: fix structures! it should extend CBasePb instead of  class CBasePB* base;!
+
 
 	class CMsgQAngle
 	{
@@ -65,17 +65,18 @@ namespace CS2 {
 	class CBasePB
 	{
 	public:
-		char pad_0000[8]; //0x0000
-		std::uint32_t has_bits; //0x0004
-		std::uint64_t cached_bits; //0x0012
-
-		void set_bits(std::uint64_t bits)
+		void* __vftable; //0x00
+		uint32_t nHasBits; //0x08
+		uint64_t nCachedBits; //0x0C
+		char pad_0014[48]; //0x14
+		void SetBits(std::uint64_t nBits)
 		{
-			cached_bits |= bits;
+			nCachedBits |= nBits;
 		}
-	}; //Size: 0x0012
+	}; //Size: 0x0044
 
-	class CCSGOInterpolationInfoPB	{
+	class CCSGOInterpolationInfoPB
+	{
 	public:
 		class CBasePB* base; //0x00
 		char pad_0008[16]; //0x08
@@ -109,16 +110,16 @@ namespace CS2 {
 		char pad_0030[24]; //0x30
 	}; //Size: 0x0048
 
-	class CSGOInputHistoryEntryPB: public CBasePB
+	class CSGOInputHistoryEntryPB
 	{
 	public:
+		class CBasePB* base; //0x00
+		char pad_0008[16]; //0x08
 		class CMsgQAngle* pViewCmd; //0x18
 		class CMsgQAngle* pShootPosition; //0x20
 		char pad_0028[24]; //0x28
 	}; //Size: 0x0040
 
-	static_assert(offsetof(CSGOInputHistoryEntryPB, pViewCmd) == 0x18);
-	
 	class CBaseUserCmdPB
 	{
 	public:
