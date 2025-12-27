@@ -32,9 +32,9 @@ public:
 	inline static TargetInfo bestTarget{};
 	inline static int bestTargetIdx = -1;
 	inline static int targetBoneIdx = -1;
-	inline static float flMaxFov = 10.0f;
+	inline static float flMaxFov = 360.0f;
 	inline static float flMaxDist = 1000.0f;
-	inline static bool m_bIgnoreTeamMembers = false;
+	inline static bool m_bIgnoreTeamMembers = true;
 	static void Run();
 	static void ResetTarget();
 	static void AimbotThread();
