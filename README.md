@@ -1,9 +1,13 @@
-# Pure Liquid CS2
+# Pure Liquid CS2 [Watch Preview on YouTube](https://www.youtube.com/watch?v=S9A8UnHnU7Y)
 
 ## *Advanced External Base For Counter Strike 2 Including TraceShape visibility check, CreateMove Hook for autofire/ Silentaim and Chams*  
 
 ---
 ![CS2 Chams Demo](https://raw.githubusercontent.com/xsip/PureLiquid-CS2-External/refs/heads/main/chams-preview.png)
+---
+
+---
+![CS2 Chams Demo](https://img.youtube.com/vi/S9A8UnHnU7Y/maxres1.jpg)
 ---
 
 ## Overview
