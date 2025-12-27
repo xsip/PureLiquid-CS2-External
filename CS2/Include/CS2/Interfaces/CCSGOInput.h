@@ -32,50 +32,26 @@ namespace CS2 {
 		IN_LOOKSPIN = (1 << 25),
 	};
 
-	// can also be generated from: https://github.com/SteamDatabase/Protobufs
-	/*class CBasePB {
-	private:
-		char _pad01[0x10];
-	private:
-		std::uint32_t _has_bits_;
-		std::uint32_t _cached_size_;
-	};
-
-
-	class CMsgQAngle : public CBasePB {
-	public:
-		float x;
-		float y;
-		float z;
-	};
-	class CBaseUserCmdBP {
-	public:
-		char pad_0[0x40];
-		CMsgQAngle* qAng;
-
-	};
-
-
-	class CInButtonState
+	enum EInputHistoryBits : std::uint32_t
 	{
-	public:
-		void* __vftable; //0x00
-		int64_t nValue; //0x08
-		int64_t nValueChanged; //0x10
-		int64_t nValueScroll; //0x18
-		char pad_0020[32]; //0x20
-	}; //Size: 0x0040
-	static_assert(offsetof(CInButtonState, nValue) == 0x8);
-
-	class CUserCmd {
-	public:
-		char pad_0000[0x40];
-		CBaseUserCmdBP* pBase;
-		char pad_0048[0x10];
-		CInButtonState buttons;
+		INPUT_HISTORY_BITS_VIEWANGLES = 0x1U,
+		INPUT_HISTORY_BITS_SHOOTPOSITION = 0x2U,
+		INPUT_HISTORY_BITS_TARGETHEADPOSITIONCHECK = 0x4U,
+		INPUT_HISTORY_BITS_TARGETABSPOSITIONCHECK = 0x8U,
+		INPUT_HISTORY_BITS_TARGETANGCHECK = 0x10U,
+		INPUT_HISTORY_BITS_CL_INTERP = 0x20U,
+		INPUT_HISTORY_BITS_SV_INTERP0 = 0x40U,
+		INPUT_HISTORY_BITS_SV_INTERP1 = 0x80U,
+		INPUT_HISTORY_BITS_PLAYER_INTERP = 0x100U,
+		INPUT_HISTORY_BITS_RENDERTICKCOUNT = 0x200U,
+		INPUT_HISTORY_BITS_RENDERTICKFRACTION = 0x400U,
+		INPUT_HISTORY_BITS_PLAYERTICKCOUNT = 0x800U,
+		INPUT_HISTORY_BITS_PLAYERTICKFRACTION = 0x1000U,
+		INPUT_HISTORY_BITS_FRAMENUMBER = 0x2000U,
+		INPUT_HISTORY_BITS_TARGETENTINDEX = 0x4000U
 	};
-	static_assert(offsetof(CUserCmd, buttons) == 0x58);
-	*/
+
+	// TODO: fix structures! it should extend CBasePb instead of  class CBasePB* base;!
 
 	class CMsgQAngle
 	{
@@ -89,18 +65,17 @@ namespace CS2 {
 	class CBasePB
 	{
 	public:
-		void* __vftable; //0x00
-		uint32_t nHasBits; //0x08
-		uint64_t nCachedBits; //0x0C
-		char pad_0014[48]; //0x14
-		void SetBits(std::uint64_t nBits)
-		{
-			nCachedBits |= nBits;
-		}
-	}; //Size: 0x0044
+		char pad_0000[8]; //0x0000
+		std::uint32_t has_bits; //0x0004
+		std::uint64_t cached_bits; //0x0012
 
-	class CCSGOInterpolationInfoPB
-	{
+		void set_bits(std::uint64_t bits)
+		{
+			cached_bits |= bits;
+		}
+	}; //Size: 0x0012
+
+	class CCSGOInterpolationInfoPB	{
 	public:
 		class CBasePB* base; //0x00
 		char pad_0008[16]; //0x08
@@ -134,16 +109,16 @@ namespace CS2 {
 		char pad_0030[24]; //0x30
 	}; //Size: 0x0048
 
-	class CSGOInputHistoryEntryPB
+	class CSGOInputHistoryEntryPB: public CBasePB
 	{
 	public:
-		class CBasePB* base; //0x00
-		char pad_0008[16]; //0x08
 		class CMsgQAngle* pViewCmd; //0x18
 		class CMsgQAngle* pShootPosition; //0x20
 		char pad_0028[24]; //0x28
 	}; //Size: 0x0040
 
+	static_assert(offsetof(CSGOInputHistoryEntryPB, pViewCmd) == 0x18);
+	
 	class CBaseUserCmdPB
 	{
 	public:

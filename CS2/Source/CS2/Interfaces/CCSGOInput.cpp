@@ -43,6 +43,7 @@ namespace CS2 {
                                     pHistoryEntry->pViewCmd->angValue.x = data->vViewAnglesToSet.x;
                                     pHistoryEntry->pViewCmd->angValue.y = data->vViewAnglesToSet.y;
                                     pHistoryEntry->pViewCmd->angValue.z = data->vViewAnglesToSet.z;
+                                    pHistoryEntry->cached_bits |= INPUT_HISTORY_BITS_VIEWANGLES;
                                 }
                             }
                         }
