@@ -13,7 +13,8 @@ private:
 		CS2::Entity* entity;
 	};
 
-	inline static int iAimKey = 1;
+	inline static int iAimKey = 4;
+	inline static bool bAuthoShoot = true;
 	inline static int iTargetBone = 6;
 	struct FOVResult
 	{

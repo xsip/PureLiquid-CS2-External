@@ -52,8 +52,8 @@ namespace CS2 {
 
 		inline static void LogAll() {
 			printf("[+] Interfaces\n");
-			printf("[+] CGameTraceManager: 0x%p\n\n", pGameTraceManager);
-			printf("[+] CCSGOInput: 0x%p\n\n", pCsGoInput);
+			printf("[+] CGameTraceManager: 0x%p\n", pGameTraceManager);
+			printf("[+] CCSGOInput: 0x%p\n", pCsGoInput);
 			printf("[+] CGameResourceService: 0x%p\n\n", pGameResourceService);
 		}
 	};

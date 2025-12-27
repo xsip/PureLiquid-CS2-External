@@ -56,10 +56,27 @@ void ReadEntititesThread() {
 
 int main() {
 	
-	SetConsoleTitle("xsip's external traceshape visibility check");
+	SetConsoleTitle("PureLiquid CS2 External");
 	
 	I::Initialize();
+	I::pCsGoInput->HookCreateMove();
 
+	std::thread([]() {ReadEntititesThread();}).detach();
+	std::thread([]() {Aimbot::AimbotThread();}).detach();
+
+	while (!GetAsyncKeyState(VK_DELETE)) {
+
+		if (!GetAsyncKeyState(VK_LSHIFT)) {
+			Sleep(500);
+			continue;
+		}
+
+	}
+
+	I::pCsGoInput->UnhookCreateMove();
+
+
+	return 1;
 	std::thread([]() {ReadEntititesThread();}).detach();
 	std::thread([]() {Aimbot::AimbotThread();}).detach();
 

@@ -123,6 +123,9 @@ void Aimbot::Run() {
             auto aimAngle = (boneMatrix.at(targetBoneIdx).GetOrigin() - vLocalPos).RelativeAngle();
             aimAngle.ClampAngle();
             CS2::I::pCsGoInput->vViewAngles = aimAngle;
+            if (bAuthoShoot)
+                CS2::I::pCsGoInput->Attack();
+
             if (!bestTarget.entity->m_bIsAlive)
                 ResetTarget();
         }
