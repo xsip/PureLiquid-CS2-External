@@ -62,7 +62,7 @@ int main() {
 	
 	I::Initialize();
 	
-
+#ifdef USE_CHAMS
 	auto hLatexChamsMaterial = I::pMaterialSystem->CreateMaterial(CMaterialSystem2::GetLatexChams(), "LatexChamsMaterial");
 
 	if (!hLatexChamsMaterial) {
@@ -78,9 +78,9 @@ int main() {
 	CAnimatableSceneObjectDesc::SetChamsColor(0, 35, 255, 255);
 	CAnimatableSceneObjectDesc::SetChamsMaterial(hLatexChamsMaterial);
 	CAnimatableSceneObjectDesc::SetChamsEnabled(true);
-
+#endif
 	I::pCsGoInput->HookCreateMove();
-
+	
 	std::thread([]() {ReadEntititesThread();}).detach();
 	std::thread([]() {Aimbot::AimbotThread();}).detach();
 
@@ -90,12 +90,14 @@ int main() {
 			Sleep(500);
 			continue;
 		}
+		printf("CMD: 0x%p\n", I::pCsGoInput->GetExecutionData().cmd);
 
 	}
 
 	I::pCsGoInput->UnhookCreateMove();
+#ifdef USE_CHAMS
 	CAnimatableSceneObjectDesc::UninstallRendererHook();
-
+#endif
 	return 1;
 	std::thread([]() {ReadEntititesThread();}).detach();
 	std::thread([]() {Aimbot::AimbotThread();}).detach();

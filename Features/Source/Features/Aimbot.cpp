@@ -122,7 +122,8 @@ void Aimbot::Run() {
        
             auto aimAngle = (boneMatrix.at(targetBoneIdx).GetOrigin() - vLocalPos).RelativeAngle();
             aimAngle.ClampAngle();
-            CS2::I::pCsGoInput->vViewAngles = aimAngle;
+            // CS2::I::pCsGoInput->vViewAngles = aimAngle;
+            CS2::I::pCsGoInput->SetSubTickAngle({ aimAngle.x,aimAngle.y,aimAngle.z});
             if (bAuthoShoot)
                 CS2::I::pCsGoInput->Attack();
 

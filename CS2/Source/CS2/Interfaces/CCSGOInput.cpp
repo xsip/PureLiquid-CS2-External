@@ -24,7 +24,38 @@ namespace CS2 {
             return original(a1, a2, cmd);
         }
         
-        data->cmd = (uint64_t)cmd;
+
+        if (data->bForceSubtickViewAngle) {
+            data->bForceSubtickViewAngle = false;
+            auto pHistoryBase = *reinterpret_cast<uintptr_t*>(reinterpret_cast<uintptr_t>(cmd) + 0x38);
+            if (pHistoryBase) {
+                auto pHistoryCountBase = *reinterpret_cast<uintptr_t*>(pHistoryBase);
+                if (pHistoryCountBase) {
+                    int pHistoryCount = *reinterpret_cast<int*>(pHistoryCountBase + +0x4);
+                    if (pHistoryCount) {
+
+                        for (int i = 1; i < pHistoryCount; i++) {
+                            CSGOInputHistoryEntryPB* pHistoryEntry = *reinterpret_cast<CSGOInputHistoryEntryPB**>(pHistoryBase + (0x8 * i));
+                            if (pHistoryEntry) {
+                                if (pHistoryEntry->pViewCmd) {
+                                    data->cmd = (uint64_t)cmd;
+
+                                    pHistoryEntry->pViewCmd->angValue.x = data->vViewAnglesToSet.x;
+                                    pHistoryEntry->pViewCmd->angValue.y = data->vViewAnglesToSet.y;
+                                    pHistoryEntry->pViewCmd->angValue.z = data->vViewAnglesToSet.z;
+                                }
+                            }
+                        }
+                    }
+                }
+                if (cmd->csgoUserCmd.pBaseCmd && cmd->csgoUserCmd.pBaseCmd->pViewAngles) {
+                    cmd->csgoUserCmd.pBaseCmd->pViewAngles->angValue.x = data->vViewAnglesToSet.x;
+                    cmd->csgoUserCmd.pBaseCmd->pViewAngles->angValue.y = data->vViewAnglesToSet.y;
+                    cmd->csgoUserCmd.pBaseCmd->pViewAngles->angValue.z = data->vViewAnglesToSet.z;
+
+                }
+            }
+        }
         
         if (data->bForceBtn) {
             data->bForcedBtn = false;
@@ -33,6 +64,8 @@ namespace CS2 {
             data->btnToForce = 0;
             data->bForcedBtn = true;
         }
+
+
 
         // Call original
         typedef double(__fastcall* CreateMoveFn)(int64_t, unsigned int, CUserCmd*);
@@ -143,9 +176,11 @@ namespace CS2 {
         data.originalFunc = originalFunc;
         data.cmd = 0;
         data.bForceBtn = false;
-
         data.bForcedBtn = true;
         data.btnToForce = IN_JUMP;
+
+        data.bForceSubtickViewAngle = false;
+        data.vViewAnglesToSet = { 0.0f,0.0f,0.0f };
 
         proc.Write<CreateMoveHookData>(reinterpret_cast<uintptr_t>(m_pDataRemote), data);
 
@@ -339,6 +374,16 @@ namespace CS2 {
 
     void CCSGOInput::Attack(){
         ForceButton(IN_ATTACK);
+    }
+
+    void CCSGOInput::SetSubTickAngle(Vector vAngle) {
+        if (!m_pDataRemote)
+            return;
+        proc.Write<Vector>(reinterpret_cast<uintptr_t>(m_pDataRemote) +
+            offsetof(CreateMoveHookData, vViewAnglesToSet), vAngle);
+
+        proc.Write<bool>(reinterpret_cast<uintptr_t>(m_pDataRemote) +
+            offsetof(CreateMoveHookData, bForceSubtickViewAngle), true);
     }
 
     CreateMoveHookData CCSGOInput::GetExecutionData()

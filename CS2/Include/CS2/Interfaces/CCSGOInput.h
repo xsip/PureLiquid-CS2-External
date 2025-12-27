@@ -211,7 +211,9 @@ namespace CS2 {
 	{
 		uint64_t originalFunc;
 		uint64_t cmd;       
-		uint64_t btnToForce; 
+		uint64_t btnToForce;
+		Vector3 vViewAnglesToSet;
+		bool bForceSubtickViewAngle;
 		bool bForceBtn;
 		bool bForcedBtn;
 	};
@@ -244,6 +246,7 @@ namespace CS2 {
 		CreateMoveHookData GetExecutionData();
 		void ForceButton(ECommandButtons btn);
 		void Attack();
+		void SetSubTickAngle(Vector vAngle);
 		bool IsHooked() { return m_bIsHooked; }
     };
 }
