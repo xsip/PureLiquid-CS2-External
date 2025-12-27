@@ -28,6 +28,7 @@ The project demonstrates:
 🎯 **External CGameEntitySystem** - Resolve Entities easily  
 🎯 **Generated SDK** - Fully generated SDK    
 🎯 **External Aimbot** - with TraceShape Visibility Check     
+🎯 **External CreateMove Hook** - for AImbot Autoshoot and in the feature silent aim  
 
 ---
 
