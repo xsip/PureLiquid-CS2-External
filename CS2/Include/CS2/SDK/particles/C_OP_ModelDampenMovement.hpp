@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 			PROPERTY(m_bOutside,bool, 0x1d5);
 			PROPERTY(m_bUseBones,bool, 0x1d6);
 			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1d7);
-			NESTED_PROPERTY(m_vecPosOffset,IDENTITY(particleslib::CPerParticleVecInput), 0x258);
+			NESTED_PROPERTY(m_vecPosOffset,particleslib::CPerParticleVecInput, 0x258);
 			PROPERTY(m_fDrag,float32, 0x910);
 			S2_PAD(0x748);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ModelDampenMovement) == 0x918, "C_OP_ModelDampenMovement size should be 0x918");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
+#include <SDK/server/CPointEntity.hpp>
 
 
 
@@ -47,9 +47,6 @@ namespace CS2 {
 			PROPERTY(m_bLocalPlayerOnly,bool, 0x512);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvInstructorHint) == 0x518, "CEnvInstructorHint size should be 0x518");
-
-#endif
 	}
 }

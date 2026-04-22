@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -25,12 +25,9 @@ namespace CS2 {
 			PROPERTY(m_fadeColor,GlobalTypes::Color, 0x4a8);
 			PROPERTY(m_Duration,float32, 0x4ac);
 			PROPERTY(m_HoldDuration,float32, 0x4b0);
-			NESTED_PROPERTY(m_OnBeginFade,IDENTITY(entity2::CEntityIOOutput), 0x4b8);
+			NESTED_PROPERTY(m_OnBeginFade,entity2::CEntityIOOutput, 0x4b8);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvFade) == 0x4D0, "CEnvFade size should be 0x4D0");
-
-#endif
 	}
 }

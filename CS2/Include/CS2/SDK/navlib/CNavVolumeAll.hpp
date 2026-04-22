@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNavVolumeVector.hpp"
+#include <SDK/navlib/CNavVolumeVector.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace navlib {
 		class CNavVolumeAll : public CS2::navlib::CNavVolumeVector {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::navlib::CNavVolumeAll) == 0xA0, "CNavVolumeAll size should be 0xA0");
-
-#endif
 	}
 }

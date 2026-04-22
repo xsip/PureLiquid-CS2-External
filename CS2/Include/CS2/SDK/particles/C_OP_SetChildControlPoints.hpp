@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleOrientationType_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleOrientationType_t.hpp>
 
 
 
@@ -26,15 +26,12 @@ namespace CS2 {
 			PROPERTY(m_nChildGroupID,int32_t, 0x1d0);
 			PROPERTY(m_nFirstControlPoint,int32_t, 0x1d4);
 			PROPERTY(m_nNumControlPoints,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_nFirstSourcePoint,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_nFirstSourcePoint,particleslib::CParticleCollectionFloatInput, 0x1e0);
 			PROPERTY(m_bReverse,bool, 0x350);
 			PROPERTY(m_bSetOrientation,bool, 0x351);
-			PROPERTY(m_nOrientation,IDENTITY(particles::ParticleOrientationType_t), 0x354);
+			PROPERTY(m_nOrientation,particles::ParticleOrientationType_t, 0x354);
 			S2_PAD(0x188);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetChildControlPoints) == 0x358, "C_OP_SetChildControlPoints size should be 0x358");
-
-#endif
 	}
 }

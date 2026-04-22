@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseToggle.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "CBaseEntity.hpp"
+#include <SDK/server/CBaseToggle.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -28,23 +28,20 @@ namespace CS2 {
 	namespace server {
 		class CBaseTrigger : public CS2::server::CBaseToggle {
 		public:
-			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0x7b0);
-			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x7c8);
-			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0x7e0);
-			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x7f8);
-			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x810);
-			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x828);
-			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x840);
-			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x858);
+			NESTED_PROPERTY(m_OnStartTouch,entity2::CEntityIOOutput, 0x7b0);
+			NESTED_PROPERTY(m_OnStartTouchAll,entity2::CEntityIOOutput, 0x7c8);
+			NESTED_PROPERTY(m_OnEndTouch,entity2::CEntityIOOutput, 0x7e0);
+			NESTED_PROPERTY(m_OnEndTouchAll,entity2::CEntityIOOutput, 0x7f8);
+			NESTED_PROPERTY(m_OnTouching,entity2::CEntityIOOutput, 0x810);
+			NESTED_PROPERTY(m_OnTouchingEachEntity,entity2::CEntityIOOutput, 0x828);
+			NESTED_PROPERTY(m_OnNotTouching,entity2::CEntityIOOutput, 0x840);
+			NESTED_PROPERTY(m_hTouchingEntities,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x858);
 			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x870);
-			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0x878);
+			PROPERTY(m_hFilter,GlobalTypes::CHandle<server::CBaseFilter>, 0x878);
 			PROPERTY(m_bDisabled,bool, 0x87c);
 			PROPERTY(m_bUseAsyncQueries,bool, 0x888);
 			S2_PAD(0xE0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseTrigger) == 0x890, "CBaseTrigger size should be 0x890");
-
-#endif
 	}
 }

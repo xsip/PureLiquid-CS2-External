@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "DamageTypes_t.hpp"
-#include "AmmoIndex_t.hpp"
-#include "TakeDamageFlags_t.hpp"
-#include "HitGroup_t.hpp"
-#include "DestructibleHitGroupToDestroy_t.hpp"
+#include <SDK/client/DamageTypes_t.hpp>
+#include <SDK/client/AmmoIndex_t.hpp>
+#include <SDK/client/TakeDamageFlags_t.hpp>
+#include <SDK/client/HitGroup_t.hpp>
+#include <SDK/client/DestructibleHitGroupToDestroy_t.hpp>
 
 
 
@@ -34,29 +34,26 @@ namespace CS2 {
 			PROPERTY(m_vecDamagePosition,GlobalTypes::VectorWS, 0x14);
 			PROPERTY(m_vecReportedPosition,GlobalTypes::VectorWS, 0x20);
 			PROPERTY(m_vecDamageDirection,GlobalTypes::Vector, 0x2c);
-			PROPERTY(m_hInflictor,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x38);
-			PROPERTY(m_hAttacker,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x3c);
-			PROPERTY(m_hAbility,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x40);
+			PROPERTY(m_hInflictor,GlobalTypes::CHandle<client::C_BaseEntity>, 0x38);
+			PROPERTY(m_hAttacker,GlobalTypes::CHandle<client::C_BaseEntity>, 0x3c);
+			PROPERTY(m_hAbility,GlobalTypes::CHandle<client::C_BaseEntity>, 0x40);
 			PROPERTY(m_flDamage,float32, 0x44);
 			PROPERTY(m_flTotalledDamage,float32, 0x48);
-			PROPERTY(m_bitsDamageType,IDENTITY(client::DamageTypes_t), 0x4c);
+			PROPERTY(m_bitsDamageType,client::DamageTypes_t, 0x4c);
 			PROPERTY(m_iDamageCustom,int32_t, 0x50);
-			NESTED_PROPERTY(m_iAmmoType,IDENTITY(client::AmmoIndex_t), 0x54);
+			NESTED_PROPERTY(m_iAmmoType,client::AmmoIndex_t, 0x54);
 			PROPERTY(m_flOriginalDamage,float32, 0x60);
 			PROPERTY(m_bShouldBleed,bool, 0x64);
 			PROPERTY(m_bShouldSpark,bool, 0x65);
-			PROPERTY(m_nDamageFlags,IDENTITY(client::TakeDamageFlags_t), 0x70);
-			PROPERTY(m_iHitGroupId,IDENTITY(client::HitGroup_t), 0x78);
+			PROPERTY(m_nDamageFlags,client::TakeDamageFlags_t, 0x70);
+			PROPERTY(m_iHitGroupId,client::HitGroup_t, 0x78);
 			PROPERTY(m_nNumObjectsPenetrated,int32_t, 0x7c);
 			PROPERTY(m_flFriendlyFireDamageReductionRatio,float32, 0x80);
 			PROPERTY(m_bStoppedBullet,bool, 0x84);
-			NESTED_PROPERTY(m_nDestructibleHitGroupsToForceDestroy,IDENTITY(GlobalTypes::CUtlVector<client::DestructibleHitGroupToDestroy_t>), 0x100);
+			NESTED_PROPERTY(m_nDestructibleHitGroupsToForceDestroy,GlobalTypes::CUtlVector<client::DestructibleHitGroupToDestroy_t>, 0x100);
 			PROPERTY(m_bInTakeDamageFlow,bool, 0x118);
 			S2_PAD(0x120);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CTakeDamageInfo) == 0x120, "CTakeDamageInfo size should be 0x120");
-
-#endif
 	}
 }

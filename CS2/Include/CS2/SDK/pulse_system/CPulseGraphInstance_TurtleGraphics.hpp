@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CBasePulseGraphInstance.hpp"
+#include <SDK/pulse_runtime_lib/CBasePulseGraphInstance.hpp>
 
 
 
@@ -23,9 +23,6 @@ namespace CS2 {
 		public:
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TurtleGraphics) == 0x140, "CPulseGraphInstance_TurtleGraphics size should be 0x140");
-
-#endif
 	}
 }

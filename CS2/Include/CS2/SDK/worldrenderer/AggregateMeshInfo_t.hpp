@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ObjectTypeFlags_t.hpp"
-#include "AggregateInstanceStream_t.hpp"
+#include <SDK/worldrenderer/ObjectTypeFlags_t.hpp>
+#include <SDK/worldrenderer/AggregateInstanceStream_t.hpp>
 
 
 
@@ -29,16 +29,13 @@ namespace CS2 {
 			PROPERTY(m_nDrawCallIndex,int16_t, 0x8);
 			PROPERTY(m_nLODSetupIndex,int16_t, 0xa);
 			PROPERTY(m_vTintColor,GlobalTypes::Color, 0xc);
-			PROPERTY(m_objectFlags,IDENTITY(worldrenderer::ObjectTypeFlags_t), 0x10);
+			PROPERTY(m_objectFlags,worldrenderer::ObjectTypeFlags_t, 0x10);
 			PROPERTY(m_nLightProbeVolumePrecomputedHandshake,int32_t, 0x14);
 			PROPERTY(m_nInstanceStreamOffset,uint32_t, 0x18);
 			PROPERTY(m_nVertexAlbedoStreamOffset,uint32_t, 0x1c);
-			PROPERTY(m_instanceStreams,IDENTITY(worldrenderer::AggregateInstanceStream_t), 0x20);
+			PROPERTY(m_instanceStreams,worldrenderer::AggregateInstanceStream_t, 0x20);
 			S2_PAD(0x24);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::AggregateMeshInfo_t) == 0x24, "AggregateMeshInfo_t size should be 0x24");
-
-#endif
 	}
 }

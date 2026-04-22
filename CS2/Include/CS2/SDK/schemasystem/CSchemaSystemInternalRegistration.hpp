@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -41,13 +41,10 @@ namespace CS2 {
 			PROPERTY(m_CUtlSymbol,GlobalTypes::CUtlSymbol, 0x140);
 			PROPERTY(m_stringToken,GlobalTypes::CUtlStringToken*, 0x144);
 			PROPERTY(m_stringTokenWithStorage,GlobalTypes::CUtlStringTokenWithStorage*, 0x148);
-			// PROPERTY(m_ResourceTypes,IDENTITY(GlobalTypes::CResourceArray<GlobalTypes::CResourcePointer<GlobalTypes::CResourceString>>), 0x160);
+			PROPERTY(m_ResourceTypes,GlobalTypes::CResourceArray<GlobalTypes::CResourcePointer<GlobalTypes::CResourceString>>, 0x160);
 			PROPERTY(m_KV3,GlobalTypes::KeyValues3, 0x168);
 			S2_PAD(0x180);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::schemasystem::CSchemaSystemInternalRegistration) == 0x180, "CSchemaSystemInternalRegistration size should be 0x180");
-
-#endif
 	}
 }

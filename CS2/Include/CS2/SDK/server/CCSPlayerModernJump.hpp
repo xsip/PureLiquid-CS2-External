@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTick_t.hpp"
+#include <SDK/entity2/GameTick_t.hpp>
 
 
 
@@ -21,20 +21,17 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayerModernJump  {
 		public:
-			NESTED_PROPERTY(m_nLastActualJumpPressTick,IDENTITY(entity2::GameTick_t), 0x10);
+			NESTED_PROPERTY(m_nLastActualJumpPressTick,entity2::GameTick_t, 0x10);
 			PROPERTY(m_flLastActualJumpPressFrac,float32, 0x14);
-			NESTED_PROPERTY(m_nLastUsableJumpPressTick,IDENTITY(entity2::GameTick_t), 0x18);
+			NESTED_PROPERTY(m_nLastUsableJumpPressTick,entity2::GameTick_t, 0x18);
 			PROPERTY(m_flLastUsableJumpPressFrac,float32, 0x1c);
-			NESTED_PROPERTY(m_nLastLandedTick,IDENTITY(entity2::GameTick_t), 0x20);
+			NESTED_PROPERTY(m_nLastLandedTick,entity2::GameTick_t, 0x20);
 			PROPERTY(m_flLastLandedFrac,float32, 0x24);
 			PROPERTY(m_flLastLandedVelocityX,float32, 0x28);
 			PROPERTY(m_flLastLandedVelocityY,float32, 0x2c);
 			PROPERTY(m_flLastLandedVelocityZ,float32, 0x30);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerModernJump) == 0x38, "CCSPlayerModernJump size should be 0x38");
-
-#endif
 	}
 }

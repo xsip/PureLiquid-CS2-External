@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "SetStatisticExpressionType_t.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleRemapFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particles/SetStatisticExpressionType_t.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleRemapFloatInput.hpp>
 
 
 
@@ -25,17 +25,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapAverageScalarValuetoCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nExpression,IDENTITY(particles::SetStatisticExpressionType_t), 0x1d8);
-			NESTED_PROPERTY(m_flDecimalPlaces,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			PROPERTY(m_nExpression,particles::SetStatisticExpressionType_t, 0x1d8);
+			NESTED_PROPERTY(m_flDecimalPlaces,particleslib::CParticleCollectionFloatInput, 0x1e0);
 			PROPERTY(m_nOutControlPointNumber,int32_t, 0x350);
 			PROPERTY(m_nOutVectorField,int32_t, 0x354);
-			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x358);
-			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x360);
+			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x358);
+			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0x360);
 			S2_PAD(0x2F8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapAverageScalarValuetoCP) == 0x4D0, "C_OP_RemapAverageScalarValuetoCP size should be 0x4D0");
-
-#endif
 	}
 }

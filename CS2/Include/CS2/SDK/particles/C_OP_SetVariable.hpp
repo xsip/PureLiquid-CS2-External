@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleVariableRef.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleVariableRef.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -25,17 +25,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetVariable : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_variableReference,IDENTITY(particleslib::CParticleVariableRef), 0x1d8);
-			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x228);
+			NESTED_PROPERTY(m_variableReference,particleslib::CParticleVariableRef, 0x1d8);
+			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x228);
 			PROPERTY(m_positionOffset,GlobalTypes::Vector, 0x290);
 			PROPERTY(m_rotationOffset,GlobalTypes::QAngle, 0x29c);
-			NESTED_PROPERTY(m_vecInput,IDENTITY(particleslib::CParticleCollectionVecInput), 0x2a8);
-			NESTED_PROPERTY(m_floatInput,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x960);
+			NESTED_PROPERTY(m_vecInput,particleslib::CParticleCollectionVecInput, 0x2a8);
+			NESTED_PROPERTY(m_floatInput,particleslib::CParticleCollectionFloatInput, 0x960);
 			S2_PAD(0x8F8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetVariable) == 0xAD0, "C_OP_SetVariable size should be 0xAD0");
-
-#endif
 	}
 }

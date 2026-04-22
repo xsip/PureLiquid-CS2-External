@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLeafUpdateNode.hpp"
+#include <SDK/animgraphlib/CLeafUpdateNode.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_bLoop,bool, 0x70);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSequenceUpdateNodeBase) == 0x78, "CSequenceUpdateNodeBase size should be 0x78");
-
-#endif
 	}
 }

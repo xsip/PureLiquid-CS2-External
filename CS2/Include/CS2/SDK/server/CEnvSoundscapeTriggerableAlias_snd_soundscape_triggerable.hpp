@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CEnvSoundscapeTriggerable.hpp"
+#include <SDK/server/CEnvSoundscapeTriggerable.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable : public CS2::server::CEnvSoundscapeTriggerable {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable) == 0x538, "CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable size should be 0x538");
-
-#endif
 	}
 }

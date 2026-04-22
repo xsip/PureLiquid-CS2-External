@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ParamSpan_t.hpp"
+#include <SDK/animgraphlib/ParamSpan_t.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CParamSpanUpdater  {
 		public:
-			NESTED_PROPERTY(m_spans,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::ParamSpan_t>), 0x0);
+			NESTED_PROPERTY(m_spans,GlobalTypes::CUtlVector<animgraphlib::ParamSpan_t>, 0x0);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CParamSpanUpdater) == 0x18, "CParamSpanUpdater size should be 0x18");
-
-#endif
 	}
 }

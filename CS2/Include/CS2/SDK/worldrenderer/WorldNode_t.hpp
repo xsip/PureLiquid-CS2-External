@@ -4,22 +4,22 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "SceneObject_t.hpp"
-#include "AggregateSceneObject_t.hpp"
-#include "ClutterSceneObject_t.hpp"
-#include "AggregateRTProxySceneObject_t.hpp"
-#include "ExtraVertexStreamOverride_t.hpp"
-#include "MaterialOverride_t.hpp"
-#include "WorldNodeOnDiskBufferData_t.hpp"
-#include "AggregateInstanceStreamOnDiskData_t.hpp"
-#include "AggregateVertexAlbedoStreamOnDiskData_t.hpp"
-#include "BakedLightingInfo_t.hpp"
+#include <SDK/worldrenderer/SceneObject_t.hpp>
+#include <SDK/worldrenderer/AggregateSceneObject_t.hpp>
+#include <SDK/worldrenderer/ClutterSceneObject_t.hpp>
+#include <SDK/worldrenderer/AggregateRTProxySceneObject_t.hpp>
+#include <SDK/worldrenderer/ExtraVertexStreamOverride_t.hpp>
+#include <SDK/worldrenderer/MaterialOverride_t.hpp>
+#include <SDK/worldrenderer/WorldNodeOnDiskBufferData_t.hpp>
+#include <SDK/worldrenderer/AggregateInstanceStreamOnDiskData_t.hpp>
+#include <SDK/worldrenderer/AggregateVertexAlbedoStreamOnDiskData_t.hpp>
+#include <SDK/worldrenderer/BakedLightingInfo_t.hpp>
 
 
 
@@ -30,26 +30,23 @@ namespace CS2 {
 	namespace worldrenderer {
 		class WorldNode_t  {
 		public:
-			NESTED_PROPERTY(m_sceneObjects,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::SceneObject_t>), 0x0);
-			NESTED_PROPERTY(m_visClusterMembership,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x18);
-			NESTED_PROPERTY(m_aggregateSceneObjects,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateSceneObject_t>), 0x30);
-			NESTED_PROPERTY(m_clutterSceneObjects,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::ClutterSceneObject_t>), 0x48);
-			NESTED_PROPERTY(m_rtProxies,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateRTProxySceneObject_t>), 0x60);
-			NESTED_PROPERTY(m_extraVertexStreamOverrides,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::ExtraVertexStreamOverride_t>), 0x78);
-			NESTED_PROPERTY(m_materialOverrides,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::MaterialOverride_t>), 0x90);
-			NESTED_PROPERTY(m_extraVertexStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::WorldNodeOnDiskBufferData_t>), 0xa8);
-			NESTED_PROPERTY(m_aggregateInstanceStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateInstanceStreamOnDiskData_t>), 0xc0);
-			NESTED_PROPERTY(m_vertexAlbedoStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateVertexAlbedoStreamOnDiskData_t>), 0xd8);
-			PROPERTY(m_layerNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0xf0);
-			NESTED_PROPERTY(m_sceneObjectLayerIndices,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x108);
+			NESTED_PROPERTY(m_sceneObjects,GlobalTypes::CUtlVector<worldrenderer::SceneObject_t>, 0x0);
+			NESTED_PROPERTY(m_visClusterMembership,GlobalTypes::CUtlVector< uint16 >, 0x18);
+			NESTED_PROPERTY(m_aggregateSceneObjects,GlobalTypes::CUtlVector<worldrenderer::AggregateSceneObject_t>, 0x30);
+			NESTED_PROPERTY(m_clutterSceneObjects,GlobalTypes::CUtlVector<worldrenderer::ClutterSceneObject_t>, 0x48);
+			NESTED_PROPERTY(m_rtProxies,GlobalTypes::CUtlVector<worldrenderer::AggregateRTProxySceneObject_t>, 0x60);
+			NESTED_PROPERTY(m_extraVertexStreamOverrides,GlobalTypes::CUtlVector<worldrenderer::ExtraVertexStreamOverride_t>, 0x78);
+			NESTED_PROPERTY(m_materialOverrides,GlobalTypes::CUtlVector<worldrenderer::MaterialOverride_t>, 0x90);
+			NESTED_PROPERTY(m_extraVertexStreams,GlobalTypes::CUtlVector<worldrenderer::WorldNodeOnDiskBufferData_t>, 0xa8);
+			NESTED_PROPERTY(m_aggregateInstanceStreams,GlobalTypes::CUtlVector<worldrenderer::AggregateInstanceStreamOnDiskData_t>, 0xc0);
+			NESTED_PROPERTY(m_vertexAlbedoStreams,GlobalTypes::CUtlVector<worldrenderer::AggregateVertexAlbedoStreamOnDiskData_t>, 0xd8);
+			PROPERTY(m_layerNames,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0xf0);
+			NESTED_PROPERTY(m_sceneObjectLayerIndices,GlobalTypes::CUtlVector< uint8 >, 0x108);
 			PROPERTY(m_grassFileName,GlobalTypes::CUtlString*, 0x120);
-			NESTED_PROPERTY(m_nodeLightingInfo,IDENTITY(worldrenderer::BakedLightingInfo_t), 0x128);
+			NESTED_PROPERTY(m_nodeLightingInfo,worldrenderer::BakedLightingInfo_t, 0x128);
 			PROPERTY(m_bHasBakedGeometryFlag,bool, 0x170);
 			S2_PAD(0x178);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::WorldNode_t) == 0x178, "WorldNode_t size should be 0x178");
-
-#endif
 	}
 }

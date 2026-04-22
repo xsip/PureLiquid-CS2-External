@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "dynpitchvol_base_t.hpp"
+#include <SDK/server/dynpitchvol_base_t.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class dynpitchvol_t : public CS2::server::dynpitchvol_base_t {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::dynpitchvol_t) == 0x64, "dynpitchvol_t size should be 0x64");
-
-#endif
 	}
 }

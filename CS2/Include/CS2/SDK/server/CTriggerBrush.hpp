@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace server {
 		class CTriggerBrush : public CS2::server::CBaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0x730);
-			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0x748);
-			NESTED_PROPERTY(m_OnUse,IDENTITY(entity2::CEntityIOOutput), 0x760);
+			NESTED_PROPERTY(m_OnStartTouch,entity2::CEntityIOOutput, 0x730);
+			NESTED_PROPERTY(m_OnEndTouch,entity2::CEntityIOOutput, 0x748);
+			NESTED_PROPERTY(m_OnUse,entity2::CEntityIOOutput, 0x760);
 			PROPERTY(m_iInputFilter,int32_t, 0x778);
 			PROPERTY(m_iDontMessageParent,int32_t, 0x77c);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerBrush) == 0x780, "CTriggerBrush size should be 0x780");
-
-#endif
 	}
 }

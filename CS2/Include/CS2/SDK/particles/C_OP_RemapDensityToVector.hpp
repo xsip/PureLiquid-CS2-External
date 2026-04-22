@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		class C_OP_RemapDensityToVector : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_flRadiusScale,float32, 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d4);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d4);
 			PROPERTY(m_flDensityMin,float32, 0x1d8);
 			PROPERTY(m_flDensityMax,float32, 0x1dc);
 			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1e0);
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_nVoxelGridResolution,int32_t, 0x1fc);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapDensityToVector) == 0x200, "C_OP_RemapDensityToVector size should be 0x200");
-
-#endif
 	}
 }

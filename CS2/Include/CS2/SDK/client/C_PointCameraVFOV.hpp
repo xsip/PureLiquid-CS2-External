@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_PointCamera.hpp"
+#include <SDK/client/C_PointCamera.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_flVerticalFOV,float32, 0x668);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PointCameraVFOV) == 0x670, "C_PointCameraVFOV size should be 0x670");
-
-#endif
 	}
 }

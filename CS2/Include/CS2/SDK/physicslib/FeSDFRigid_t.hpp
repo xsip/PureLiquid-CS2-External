@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -27,15 +27,12 @@ namespace CS2 {
 			PROPERTY(nCollisionMask,uint16_t, 0x1e);
 			PROPERTY(nVertexMapIndex,uint16_t, 0x20);
 			PROPERTY(nFlags,uint16_t, 0x22);
-			NESTED_PROPERTY(m_Distances,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x28);
+			NESTED_PROPERTY(m_Distances,GlobalTypes::CUtlVector< float32 >, 0x28);
 			PROPERTY(m_nWidth,int32_t, 0x40);
 			PROPERTY(m_nHeight,int32_t, 0x44);
 			PROPERTY(m_nDepth,int32_t, 0x48);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeSDFRigid_t) == 0x50, "FeSDFRigid_t size should be 0x50");
-
-#endif
 	}
 }

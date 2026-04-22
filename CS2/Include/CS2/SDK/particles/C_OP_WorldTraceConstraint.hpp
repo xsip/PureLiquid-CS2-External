@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionConstraint.hpp"
-#include "ParticleCollisionMode_t.hpp"
-#include "ParticleTraceSet_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionConstraint.hpp>
+#include <SDK/particles/ParticleCollisionMode_t.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -27,9 +27,9 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nCP,int32_t, 0x1d0);
 			PROPERTY(m_vecCpOffset,GlobalTypes::Vector, 0x1d4);
-			PROPERTY(m_nCollisionMode,IDENTITY(particles::ParticleCollisionMode_t), 0x1e0);
-			PROPERTY(m_nCollisionModeMin,IDENTITY(particles::ParticleCollisionMode_t), 0x1e4);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x1e8);
+			PROPERTY(m_nCollisionMode,particles::ParticleCollisionMode_t, 0x1e0);
+			PROPERTY(m_nCollisionModeMin,particles::ParticleCollisionMode_t, 0x1e4);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x1e8);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1ec);
 			PROPERTY(m_bWorldOnly,bool, 0x26c);
 			PROPERTY(m_bBrushOnly,bool, 0x26d);
@@ -40,23 +40,20 @@ namespace CS2 {
 			PROPERTY(m_flTraceTolerance,float32, 0x27c);
 			PROPERTY(m_flCollisionConfirmationSpeed,float32, 0x280);
 			PROPERTY(m_nMaxTracesPerFrame,float32, 0x284);
-			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x288);
-			NESTED_PROPERTY(m_flBounceAmount,IDENTITY(particleslib::CPerParticleFloatInput), 0x3f8);
-			NESTED_PROPERTY(m_flSlideAmount,IDENTITY(particleslib::CPerParticleFloatInput), 0x568);
-			NESTED_PROPERTY(m_flRandomDirScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x6d8);
+			NESTED_PROPERTY(m_flRadiusScale,particleslib::CPerParticleFloatInput, 0x288);
+			NESTED_PROPERTY(m_flBounceAmount,particleslib::CPerParticleFloatInput, 0x3f8);
+			NESTED_PROPERTY(m_flSlideAmount,particleslib::CPerParticleFloatInput, 0x568);
+			NESTED_PROPERTY(m_flRandomDirScale,particleslib::CPerParticleFloatInput, 0x6d8);
 			PROPERTY(m_bDecayBounce,bool, 0x848);
 			PROPERTY(m_bKillonContact,bool, 0x849);
 			PROPERTY(m_flMinSpeed,float32, 0x84c);
 			PROPERTY(m_bSetNormal,bool, 0x850);
-			NESTED_PROPERTY(m_nStickOnCollisionField,IDENTITY(particles::ParticleAttributeIndex_t), 0x854);
-			NESTED_PROPERTY(m_flStopSpeed,IDENTITY(particleslib::CPerParticleFloatInput), 0x858);
-			NESTED_PROPERTY(m_nEntityStickDataField,IDENTITY(particles::ParticleAttributeIndex_t), 0x9c8);
-			NESTED_PROPERTY(m_nEntityStickNormalField,IDENTITY(particles::ParticleAttributeIndex_t), 0x9cc);
+			NESTED_PROPERTY(m_nStickOnCollisionField,particles::ParticleAttributeIndex_t, 0x854);
+			NESTED_PROPERTY(m_flStopSpeed,particleslib::CPerParticleFloatInput, 0x858);
+			NESTED_PROPERTY(m_nEntityStickDataField,particles::ParticleAttributeIndex_t, 0x9c8);
+			NESTED_PROPERTY(m_nEntityStickNormalField,particles::ParticleAttributeIndex_t, 0x9cc);
 			S2_PAD(0x800);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_WorldTraceConstraint) == 0x9D0, "C_OP_WorldTraceConstraint size should be 0x9D0");
-
-#endif
 	}
 }

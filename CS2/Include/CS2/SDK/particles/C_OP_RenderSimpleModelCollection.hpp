@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CParticleModelInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CParticleModelInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -31,19 +31,16 @@ namespace CS2 {
 		class C_OP_RenderSimpleModelCollection : public CS2::particles::CParticleFunctionRenderer {
 		public:
 			PROPERTY(m_bCenterOffset,bool, 0x220);
-			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x228);
-			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x230);
-			NESTED_PROPERTY(m_fSizeCullScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x290);
+			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x228);
+			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x230);
+			NESTED_PROPERTY(m_fSizeCullScale,particleslib::CParticleCollectionFloatInput, 0x290);
 			PROPERTY(m_bDisableShadows,bool, 0x400);
 			PROPERTY(m_bDisableMotionBlur,bool, 0x401);
 			PROPERTY(m_bAcceptsDecals,bool, 0x402);
-			NESTED_PROPERTY(m_fDrawFilter,IDENTITY(particleslib::CPerParticleFloatInput), 0x408);
-			NESTED_PROPERTY(m_nAngularVelocityField,IDENTITY(particles::ParticleAttributeIndex_t), 0x578);
+			NESTED_PROPERTY(m_fDrawFilter,particleslib::CPerParticleFloatInput, 0x408);
+			NESTED_PROPERTY(m_nAngularVelocityField,particles::ParticleAttributeIndex_t, 0x578);
 			S2_PAD(0x370);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderSimpleModelCollection) == 0x590, "C_OP_RenderSimpleModelCollection size should be 0x590");
-
-#endif
 	}
 }

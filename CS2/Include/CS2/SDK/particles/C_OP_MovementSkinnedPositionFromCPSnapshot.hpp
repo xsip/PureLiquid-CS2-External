@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "SnapshotIndexType_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/SnapshotIndexType_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -30,17 +30,14 @@ namespace CS2 {
 			PROPERTY(m_nRandomSeed,int32_t, 0x1dc);
 			PROPERTY(m_bSetNormal,bool, 0x1e0);
 			PROPERTY(m_bSetRadius,bool, 0x1e1);
-			PROPERTY(m_nIndexType,IDENTITY(particles::SnapshotIndexType_t), 0x1e4);
-			NESTED_PROPERTY(m_flReadIndex,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
-			NESTED_PROPERTY(m_flIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x358);
-			NESTED_PROPERTY(m_nFullLoopIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4c8);
-			NESTED_PROPERTY(m_nSnapShotStartPoint,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x638);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x7a8);
+			PROPERTY(m_nIndexType,particles::SnapshotIndexType_t, 0x1e4);
+			NESTED_PROPERTY(m_flReadIndex,particleslib::CPerParticleFloatInput, 0x1e8);
+			NESTED_PROPERTY(m_flIncrement,particleslib::CParticleCollectionFloatInput, 0x358);
+			NESTED_PROPERTY(m_nFullLoopIncrement,particleslib::CParticleCollectionFloatInput, 0x4c8);
+			NESTED_PROPERTY(m_nSnapShotStartPoint,particleslib::CParticleCollectionFloatInput, 0x638);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x7a8);
 			S2_PAD(0x748);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_MovementSkinnedPositionFromCPSnapshot) == 0x918, "C_OP_MovementSkinnedPositionFromCPSnapshot size should be 0x918");
-
-#endif
 	}
 }

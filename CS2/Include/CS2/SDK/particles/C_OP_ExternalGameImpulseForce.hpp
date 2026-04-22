@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionForce.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionForce.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ExternalGameImpulseForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			NESTED_PROPERTY(m_flForceScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flForceScale,particleslib::CPerParticleFloatInput, 0x1e0);
 			PROPERTY(m_bRopes,bool, 0x350);
 			PROPERTY(m_bRopesZOnly,bool, 0x351);
 			PROPERTY(m_bExplosions,bool, 0x352);
 			PROPERTY(m_bParticles,bool, 0x353);
 			S2_PAD(0x178);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ExternalGameImpulseForce) == 0x358, "C_OP_ExternalGameImpulseForce size should be 0x358");
-
-#endif
 	}
 }

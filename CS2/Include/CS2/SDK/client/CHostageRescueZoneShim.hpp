@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseTrigger.hpp"
+#include <SDK/client/C_BaseTrigger.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class CHostageRescueZoneShim : public CS2::client::C_BaseTrigger {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CHostageRescueZoneShim) == 0xF58, "CHostageRescueZoneShim size should be 0xF58");
-
-#endif
 	}
 }

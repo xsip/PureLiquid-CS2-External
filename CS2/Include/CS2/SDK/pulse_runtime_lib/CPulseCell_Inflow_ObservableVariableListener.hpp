@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPulseCell_Inflow_BaseEntrypoint.hpp"
-#include "PulseRuntimeBlackboardReferenceIndex_t.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_Inflow_BaseEntrypoint.hpp>
+#include <SDK/pulse_runtime_lib/PulseRuntimeBlackboardReferenceIndex_t.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Inflow_ObservableVariableListener : public CS2::pulse_runtime_lib::CPulseCell_Inflow_BaseEntrypoint {
 		public:
-			NESTED_PROPERTY(m_nBlackboardReference,IDENTITY(pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t), 0x80);
+			NESTED_PROPERTY(m_nBlackboardReference,pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t, 0x80);
 			PROPERTY(m_bSelfReference,bool, 0x82);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Inflow_ObservableVariableListener) == 0x88, "CPulseCell_Inflow_ObservableVariableListener size should be 0x88");
-
-#endif
 	}
 }

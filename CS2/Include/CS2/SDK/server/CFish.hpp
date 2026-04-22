@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "CountdownTimer.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
+#include <SDK/server/CountdownTimer.hpp>
 
 
 
@@ -27,7 +27,7 @@ namespace CS2 {
 	namespace server {
 		class CFish : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_pool,IDENTITY(GlobalTypes::CHandle<server::CFishPool>), 0xa20);
+			PROPERTY(m_pool,GlobalTypes::CHandle<server::CFishPool>, 0xa20);
 			PROPERTY(m_id,uint32_t, 0xa24);
 			PROPERTY(m_x,float32, 0xa28);
 			PROPERTY(m_y,float32, 0xa2c);
@@ -43,19 +43,16 @@ namespace CS2 {
 			PROPERTY(m_calmSpeed,float32, 0xa6c);
 			PROPERTY(m_panicSpeed,float32, 0xa70);
 			PROPERTY(m_avoidRange,float32, 0xa74);
-			NESTED_PROPERTY(m_turnTimer,IDENTITY(server::CountdownTimer), 0xa78);
+			NESTED_PROPERTY(m_turnTimer,server::CountdownTimer, 0xa78);
 			PROPERTY(m_turnClockwise,bool, 0xa90);
-			NESTED_PROPERTY(m_goTimer,IDENTITY(server::CountdownTimer), 0xa98);
-			NESTED_PROPERTY(m_moveTimer,IDENTITY(server::CountdownTimer), 0xab0);
-			NESTED_PROPERTY(m_panicTimer,IDENTITY(server::CountdownTimer), 0xac8);
-			NESTED_PROPERTY(m_disperseTimer,IDENTITY(server::CountdownTimer), 0xae0);
-			NESTED_PROPERTY(m_proximityTimer,IDENTITY(server::CountdownTimer), 0xaf8);
-			NESTED_PROPERTY(m_visible,IDENTITY(GlobalTypes::CUtlVector<server::CFish*>), 0xb10);
+			NESTED_PROPERTY(m_goTimer,server::CountdownTimer, 0xa98);
+			NESTED_PROPERTY(m_moveTimer,server::CountdownTimer, 0xab0);
+			NESTED_PROPERTY(m_panicTimer,server::CountdownTimer, 0xac8);
+			NESTED_PROPERTY(m_disperseTimer,server::CountdownTimer, 0xae0);
+			NESTED_PROPERTY(m_proximityTimer,server::CountdownTimer, 0xaf8);
+			NESTED_PROPERTY(m_visible,server::CUtlVector<server::CFish*>, 0xb10);
 			S2_PAD(0x110);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFish) == 0xB30, "CFish size should be 0xB30");
-
-#endif
 	}
 }

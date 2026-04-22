@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunction.hpp"
+#include <SDK/particles/CParticleFunction.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace particles {
 		class CParticleFunctionConstraint : public CS2::particles::CParticleFunction {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CParticleFunctionConstraint) == 0x1D0, "CParticleFunctionConstraint size should be 0x1D0");
-
-#endif
 	}
 }

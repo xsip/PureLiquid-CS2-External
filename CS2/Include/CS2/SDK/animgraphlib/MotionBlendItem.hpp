@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMotionNode.hpp"
+#include <SDK/animgraphlib/CMotionNode.hpp>
 
 
 
@@ -21,13 +21,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class MotionBlendItem  {
 		public:
-			PROPERTY(m_pChild,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CMotionNode>), 0x0);
+			PROPERTY(m_pChild,GlobalTypes::CSmartPtr<animgraphlib::CMotionNode>, 0x0);
 			PROPERTY(m_flKeyValue,float32, 0x8);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::MotionBlendItem) == 0x10, "MotionBlendItem size should be 0x10");
-
-#endif
 	}
 }

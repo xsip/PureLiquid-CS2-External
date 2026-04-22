@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_Item.hpp"
+#include <SDK/client/C_Item.hpp>
 
 
 
@@ -26,13 +26,10 @@ namespace CS2 {
 	namespace client {
 		class C_ItemDogtags : public CS2::client::C_Item {
 		public:
-			PROPERTY(m_OwningPlayer,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x19c0);
-			PROPERTY(m_KillingPlayer,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x19c4);
+			PROPERTY(m_OwningPlayer,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x19c0);
+			PROPERTY(m_KillingPlayer,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x19c4);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_ItemDogtags) == 0x19C8, "C_ItemDogtags size should be 0x19C8");
-
-#endif
 	}
 }

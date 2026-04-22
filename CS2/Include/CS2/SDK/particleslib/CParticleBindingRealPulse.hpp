@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleCollectionBindingInstance.hpp"
+#include <SDK/particleslib/CParticleCollectionBindingInstance.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleBindingRealPulse : public CS2::particleslib::CParticleCollectionBindingInstance {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleBindingRealPulse) == 0x138, "CParticleBindingRealPulse size should be 0x138");
-
-#endif
 	}
 }

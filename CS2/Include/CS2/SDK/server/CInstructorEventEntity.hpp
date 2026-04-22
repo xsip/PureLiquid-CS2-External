@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
+#include <SDK/server/CPointEntity.hpp>
 
 
 
@@ -28,12 +28,9 @@ namespace CS2 {
 		public:
 			PROPERTY(m_iszName,GlobalTypes::CUtlSymbolLarge*, 0x4a8);
 			PROPERTY(m_iszHintTargetEntity,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
-			PROPERTY(m_hTargetPlayer,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0x4b8);
+			PROPERTY(m_hTargetPlayer,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0x4b8);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInstructorEventEntity) == 0x4C0, "CInstructorEventEntity size should be 0x4C0");
-
-#endif
 	}
 }

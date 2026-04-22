@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropFilter.hpp"
+#include <SDK/smartprops/CSmartPropFilter.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_flProbability,GlobalTypes::CSmartPropAttributeFloat, 0x50);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropFilter_Probability) == 0x90, "CSmartPropFilter_Probability size should be 0x90");
-
-#endif
 	}
 }

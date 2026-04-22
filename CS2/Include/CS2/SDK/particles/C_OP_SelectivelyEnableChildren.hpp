@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SelectivelyEnableChildren : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_nChildGroupID,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_nFirstChild,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x348);
-			NESTED_PROPERTY(m_nNumChildrenToEnable,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4b8);
+			NESTED_PROPERTY(m_nChildGroupID,particleslib::CParticleCollectionFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_nFirstChild,particleslib::CParticleCollectionFloatInput, 0x348);
+			NESTED_PROPERTY(m_nNumChildrenToEnable,particleslib::CParticleCollectionFloatInput, 0x4b8);
 			PROPERTY(m_bPlayEndcapOnStop,bool, 0x628);
 			PROPERTY(m_bDestroyImmediately,bool, 0x629);
 			S2_PAD(0x458);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SelectivelyEnableChildren) == 0x630, "C_OP_SelectivelyEnableChildren size should be 0x630");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "BloomBlendMode_t.hpp"
+#include <SDK/materialsystem2/BloomBlendMode_t.hpp>
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace materialsystem2 {
 		class PostProcessingBloomParameters_t  {
 		public:
-			PROPERTY(m_blendMode,IDENTITY(materialsystem2::BloomBlendMode_t), 0x0);
+			PROPERTY(m_blendMode,materialsystem2::BloomBlendMode_t, 0x0);
 			PROPERTY(m_flBloomStrength,float32, 0x4);
 			PROPERTY(m_flScreenBloomStrength,float32, 0x8);
 			PROPERTY(m_flBlurBloomStrength,float32, 0xc);
@@ -39,9 +39,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_vBlurTint,GlobalTypes::Vector, 5 , 0x4c);
 			S2_PAD(0x88);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::PostProcessingBloomParameters_t) == 0x88, "PostProcessingBloomParameters_t size should be 0x88");
-
-#endif
 	}
 }

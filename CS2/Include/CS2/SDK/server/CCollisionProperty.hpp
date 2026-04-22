@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VPhysicsCollisionAttribute_t.hpp"
-#include "../client/SolidType_t.hpp"
-#include "../client/SurroundingBoundsType_t.hpp"
+#include <SDK/server/VPhysicsCollisionAttribute_t.hpp>
+#include <SDK/client/SolidType_t.hpp>
+#include <SDK/client/SurroundingBoundsType_t.hpp>
 
 
 
@@ -23,13 +23,13 @@ namespace CS2 {
 	namespace server {
 		class CCollisionProperty  {
 		public:
-			NESTED_PROPERTY(m_collisionAttribute,IDENTITY(server::VPhysicsCollisionAttribute_t), 0x10);
+			NESTED_PROPERTY(m_collisionAttribute,server::VPhysicsCollisionAttribute_t, 0x10);
 			PROPERTY(m_vecMins,GlobalTypes::Vector, 0x40);
 			PROPERTY(m_vecMaxs,GlobalTypes::Vector, 0x4c);
 			PROPERTY(m_usSolidFlags,uint8_t, 0x5a);
-			PROPERTY(m_nSolidType,IDENTITY(client::SolidType_t), 0x5b);
+			PROPERTY(m_nSolidType,client::SolidType_t, 0x5b);
 			PROPERTY(m_triggerBloat,uint8_t, 0x5c);
-			PROPERTY(m_nSurroundType,IDENTITY(client::SurroundingBoundsType_t), 0x5d);
+			PROPERTY(m_nSurroundType,client::SurroundingBoundsType_t, 0x5d);
 			PROPERTY(m_CollisionGroup,uint8_t, 0x5e);
 			PROPERTY(m_nEnablePhysics,uint8_t, 0x5f);
 			PROPERTY(m_flBoundingRadius,float32, 0x60);
@@ -42,9 +42,6 @@ namespace CS2 {
 			PROPERTY(m_flCapsuleRadius,float32, 0xac);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCollisionProperty) == 0xB0, "CCollisionProperty size should be 0xB0");
-
-#endif
 	}
 }

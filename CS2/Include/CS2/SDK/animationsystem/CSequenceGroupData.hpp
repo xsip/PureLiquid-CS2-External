@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSeqS1SeqDesc.hpp"
-#include "CSeqSynthAnimDesc.hpp"
-#include "CSeqCmdSeqDesc.hpp"
-#include "CSeqBoneMaskList.hpp"
-#include "CSeqScaleSet.hpp"
-#include "CSeqPoseParamDesc.hpp"
-#include "CSeqIKLock.hpp"
+#include <SDK/animationsystem/CSeqS1SeqDesc.hpp>
+#include <SDK/animationsystem/CSeqSynthAnimDesc.hpp>
+#include <SDK/animationsystem/CSeqCmdSeqDesc.hpp>
+#include <SDK/animationsystem/CSeqBoneMaskList.hpp>
+#include <SDK/animationsystem/CSeqScaleSet.hpp>
+#include <SDK/animationsystem/CSeqPoseParamDesc.hpp>
+#include <SDK/animationsystem/CSeqIKLock.hpp>
 
 
 
@@ -29,23 +29,20 @@ namespace CS2 {
 		public:
 			PROPERTY(m_sName,GlobalTypes::CBufferString, 0x10);
 			PROPERTY(m_nFlags,uint32_t, 0x20);
-			NESTED_PROPERTY(m_localSequenceNameArray,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CBufferString>), 0x28);
-			NESTED_PROPERTY(m_localS1SeqDescArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqS1SeqDesc>), 0x40);
-			NESTED_PROPERTY(m_localMultiSeqDescArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqS1SeqDesc>), 0x58);
-			NESTED_PROPERTY(m_localSynthAnimDescArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqSynthAnimDesc>), 0x70);
-			NESTED_PROPERTY(m_localCmdSeqDescArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqCmdSeqDesc>), 0x88);
-			NESTED_PROPERTY(m_localBoneMaskArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqBoneMaskList>), 0xa0);
-			NESTED_PROPERTY(m_localScaleSetArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqScaleSet>), 0xb8);
-			NESTED_PROPERTY(m_localBoneNameArray,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CBufferString>), 0xd0);
+			NESTED_PROPERTY(m_localSequenceNameArray,GlobalTypes::CUtlVector<GlobalTypes::CBufferString>, 0x28);
+			NESTED_PROPERTY(m_localS1SeqDescArray,GlobalTypes::CUtlVector<animationsystem::CSeqS1SeqDesc>, 0x40);
+			NESTED_PROPERTY(m_localMultiSeqDescArray,GlobalTypes::CUtlVector<animationsystem::CSeqS1SeqDesc>, 0x58);
+			NESTED_PROPERTY(m_localSynthAnimDescArray,GlobalTypes::CUtlVector<animationsystem::CSeqSynthAnimDesc>, 0x70);
+			NESTED_PROPERTY(m_localCmdSeqDescArray,GlobalTypes::CUtlVector<animationsystem::CSeqCmdSeqDesc>, 0x88);
+			NESTED_PROPERTY(m_localBoneMaskArray,GlobalTypes::CUtlVector<animationsystem::CSeqBoneMaskList>, 0xa0);
+			NESTED_PROPERTY(m_localScaleSetArray,GlobalTypes::CUtlVector<animationsystem::CSeqScaleSet>, 0xb8);
+			NESTED_PROPERTY(m_localBoneNameArray,GlobalTypes::CUtlVector<GlobalTypes::CBufferString>, 0xd0);
 			PROPERTY(m_localNodeName,GlobalTypes::CBufferString, 0xe8);
-			NESTED_PROPERTY(m_localPoseParamArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqPoseParamDesc>), 0xf8);
+			NESTED_PROPERTY(m_localPoseParamArray,GlobalTypes::CUtlVector<animationsystem::CSeqPoseParamDesc>, 0xf8);
 			PROPERTY(m_keyValues,GlobalTypes::KeyValues3, 0x110);
-			NESTED_PROPERTY(m_localIKAutoplayLockArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqIKLock>), 0x120);
+			NESTED_PROPERTY(m_localIKAutoplayLockArray,GlobalTypes::CUtlVector<animationsystem::CSeqIKLock>, 0x120);
 			S2_PAD(0x138);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSequenceGroupData) == 0x138, "CSequenceGroupData size should be 0x138");
-
-#endif
 	}
 }

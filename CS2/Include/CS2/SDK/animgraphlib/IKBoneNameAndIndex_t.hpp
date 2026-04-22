@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -23,9 +23,6 @@ namespace CS2 {
 			PROPERTY(m_Name,GlobalTypes::CUtlString*, 0x0);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::IKBoneNameAndIndex_t) == 0x10, "IKBoneNameAndIndex_t size should be 0x10");
-
-#endif
 	}
 }

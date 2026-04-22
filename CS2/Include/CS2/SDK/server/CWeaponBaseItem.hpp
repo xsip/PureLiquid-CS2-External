@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSWeaponBase.hpp"
+#include <SDK/server/CCSWeaponBase.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_bRedraw,bool, 0x1131);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CWeaponBaseItem) == 0x1140, "CWeaponBaseItem size should be 0x1140");
-
-#endif
 	}
 }

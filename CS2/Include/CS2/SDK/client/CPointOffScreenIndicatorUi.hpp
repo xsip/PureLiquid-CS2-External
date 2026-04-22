@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_PointClientUIWorldPanel.hpp"
+#include <SDK/client/C_PointClientUIWorldPanel.hpp>
 
 
 
@@ -24,12 +24,9 @@ namespace CS2 {
 			PROPERTY(m_bBeenEnabled,bool, 0x10e0);
 			PROPERTY(m_bHide,bool, 0x10e1);
 			PROPERTY(m_flSeenTargetTime,float32, 0x10e4);
-			PROPERTY(m_pTargetPanel,IDENTITY(client::C_PointClientUIWorldPanel*), 0x10e8);
+			PROPERTY(m_pTargetPanel,client::C_PointClientUIWorldPanel*, 0x10e8);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPointOffScreenIndicatorUi) == 0x10F0, "CPointOffScreenIndicatorUi size should be 0x10F0");
-
-#endif
 	}
 }

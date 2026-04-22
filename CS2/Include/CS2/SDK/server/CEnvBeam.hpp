@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBeam.hpp"
-#include "Touch_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBeam.hpp>
+#include <SDK/server/Touch_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -32,7 +32,7 @@ namespace CS2 {
 		class CEnvBeam : public CS2::server::CBeam {
 		public:
 			PROPERTY(m_active,int32_t, 0x7d0);
-			PROPERTY(m_spriteTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x7d8);
+			PROPERTY(m_spriteTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x7d8);
 			PROPERTY(m_iszStartEntity,GlobalTypes::CUtlSymbolLarge*, 0x7e0);
 			PROPERTY(m_iszEndEntity,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
 			PROPERTY(m_life,float32, 0x7f0);
@@ -45,16 +45,13 @@ namespace CS2 {
 			PROPERTY(m_vEndPointWorld,GlobalTypes::VectorWS, 0x814);
 			PROPERTY(m_vEndPointRelative,GlobalTypes::Vector, 0x820);
 			PROPERTY(m_radius,float32, 0x82c);
-			PROPERTY(m_TouchType,IDENTITY(server::Touch_t), 0x830);
+			PROPERTY(m_TouchType,server::Touch_t, 0x830);
 			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x838);
-			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x840);
+			PROPERTY(m_hFilter,GlobalTypes::CHandle<server::CBaseEntity>, 0x840);
 			PROPERTY(m_iszDecal,GlobalTypes::CUtlSymbolLarge*, 0x848);
-			NESTED_PROPERTY(m_OnTouchedByEntity,IDENTITY(entity2::CEntityIOOutput), 0x850);
+			NESTED_PROPERTY(m_OnTouchedByEntity,entity2::CEntityIOOutput, 0x850);
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvBeam) == 0x868, "CEnvBeam size should be 0x868");
-
-#endif
 	}
 }

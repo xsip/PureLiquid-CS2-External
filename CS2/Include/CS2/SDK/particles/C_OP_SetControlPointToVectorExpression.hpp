@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "VectorExpressionType_t.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particles/VectorExpressionType_t.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -24,17 +24,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointToVectorExpression : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nExpression,IDENTITY(particles::VectorExpressionType_t), 0x1d8);
+			PROPERTY(m_nExpression,particles::VectorExpressionType_t, 0x1d8);
 			PROPERTY(m_nOutputCP,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_vInput1,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
-			NESTED_PROPERTY(m_vInput2,IDENTITY(particleslib::CParticleCollectionVecInput), 0x898);
-			NESTED_PROPERTY(m_flLerp,IDENTITY(particleslib::CPerParticleFloatInput), 0xf50);
+			NESTED_PROPERTY(m_vInput1,particleslib::CParticleCollectionVecInput, 0x1e0);
+			NESTED_PROPERTY(m_vInput2,particleslib::CParticleCollectionVecInput, 0x898);
+			NESTED_PROPERTY(m_flLerp,particleslib::CPerParticleFloatInput, 0xf50);
 			PROPERTY(m_bNormalizedOutput,bool, 0x10c0);
 			S2_PAD(0xEF0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToVectorExpression) == 0x10C8, "C_OP_SetControlPointToVectorExpression size should be 0x10C8");
-
-#endif
 	}
 }

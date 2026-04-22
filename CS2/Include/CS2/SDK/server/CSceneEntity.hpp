@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
-#include "CBaseEntity.hpp"
-#include "CBaseFlex.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "CSceneListManager.hpp"
-#include "SceneOnPlayerDeath_t.hpp"
+#include <SDK/server/CPointEntity.hpp>
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/server/CBaseFlex.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/CSceneListManager.hpp>
+#include <SDK/server/SceneOnPlayerDeath_t.hpp>
 
 
 
@@ -35,14 +35,14 @@ namespace CS2 {
 			PROPERTY(m_iszTarget6,GlobalTypes::CUtlSymbolLarge*, 0x4e0);
 			PROPERTY(m_iszTarget7,GlobalTypes::CUtlSymbolLarge*, 0x4e8);
 			PROPERTY(m_iszTarget8,GlobalTypes::CUtlSymbolLarge*, 0x4f0);
-			PROPERTY(m_hTarget1,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4f8);
-			PROPERTY(m_hTarget2,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4fc);
-			PROPERTY(m_hTarget3,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x500);
-			PROPERTY(m_hTarget4,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x504);
-			PROPERTY(m_hTarget5,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x508);
-			PROPERTY(m_hTarget6,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x50c);
-			PROPERTY(m_hTarget7,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x510);
-			PROPERTY(m_hTarget8,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x514);
+			PROPERTY(m_hTarget1,GlobalTypes::CHandle<server::CBaseEntity>, 0x4f8);
+			PROPERTY(m_hTarget2,GlobalTypes::CHandle<server::CBaseEntity>, 0x4fc);
+			PROPERTY(m_hTarget3,GlobalTypes::CHandle<server::CBaseEntity>, 0x500);
+			PROPERTY(m_hTarget4,GlobalTypes::CHandle<server::CBaseEntity>, 0x504);
+			PROPERTY(m_hTarget5,GlobalTypes::CHandle<server::CBaseEntity>, 0x508);
+			PROPERTY(m_hTarget6,GlobalTypes::CHandle<server::CBaseEntity>, 0x50c);
+			PROPERTY(m_hTarget7,GlobalTypes::CHandle<server::CBaseEntity>, 0x510);
+			PROPERTY(m_hTarget8,GlobalTypes::CHandle<server::CBaseEntity>, 0x514);
 			PROPERTY(m_sTargetAttachment,GlobalTypes::CUtlSymbolLarge*, 0x518);
 			PROPERTY(m_bIsPlayingBack,bool, 0x520);
 			PROPERTY(m_bPaused,bool, 0x521);
@@ -65,34 +65,31 @@ namespace CS2 {
 			PROPERTY(m_bInterruptedActorsScenes,bool, 0x550);
 			PROPERTY(m_bBreakOnNonIdle,bool, 0x551);
 			PROPERTY(m_bSceneFinished,bool, 0x552);
-			// PROPERTY(m_hActorList,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseFlex>>), 0x558);
-			NESTED_PROPERTY(m_hRemoveActorList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x570);
+			PROPERTY(m_hActorList,server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseFlex>>, 0x558);
+			NESTED_PROPERTY(m_hRemoveActorList,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x570);
 			PROPERTY(m_nSceneStringIndex,uint16_t, 0x5b8);
-			NESTED_PROPERTY(m_OnStart,IDENTITY(entity2::CEntityIOOutput), 0x5c0);
-			NESTED_PROPERTY(m_OnCompletion,IDENTITY(entity2::CEntityIOOutput), 0x5d8);
-			NESTED_PROPERTY(m_OnCanceled,IDENTITY(entity2::CEntityIOOutput), 0x5f0);
-			NESTED_PROPERTY(m_OnPaused,IDENTITY(entity2::CEntityIOOutput), 0x608);
-			NESTED_PROPERTY(m_OnResumed,IDENTITY(entity2::CEntityIOOutput), 0x620);
-			PROPERTY(m_hInterruptScene,IDENTITY(GlobalTypes::CHandle<server::CSceneEntity>), 0x6c8);
+			NESTED_PROPERTY(m_OnStart,entity2::CEntityIOOutput, 0x5c0);
+			NESTED_PROPERTY(m_OnCompletion,entity2::CEntityIOOutput, 0x5d8);
+			NESTED_PROPERTY(m_OnCanceled,entity2::CEntityIOOutput, 0x5f0);
+			NESTED_PROPERTY(m_OnPaused,entity2::CEntityIOOutput, 0x608);
+			NESTED_PROPERTY(m_OnResumed,entity2::CEntityIOOutput, 0x620);
+			PROPERTY(m_hInterruptScene,GlobalTypes::CHandle<server::CSceneEntity>, 0x6c8);
 			PROPERTY(m_nInterruptCount,int32_t, 0x6cc);
 			PROPERTY(m_bSceneMissing,bool, 0x6d0);
 			PROPERTY(m_bInterrupted,bool, 0x6d1);
 			PROPERTY(m_bCompletedEarly,bool, 0x6d2);
 			PROPERTY(m_bInterruptSceneFinished,bool, 0x6d3);
 			PROPERTY(m_bRestoring,bool, 0x6d4);
-			NESTED_PROPERTY(m_hNotifySceneCompletion,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CSceneEntity>>), 0x6d8);
-			NESTED_PROPERTY(m_hListManagers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>), 0x6f0);
+			NESTED_PROPERTY(m_hNotifySceneCompletion,server::CUtlVector<GlobalTypes::CHandle<server::CSceneEntity>>, 0x6d8);
+			NESTED_PROPERTY(m_hListManagers,server::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>, 0x6f0);
 			PROPERTY(m_iszSoundName,GlobalTypes::CUtlSymbolLarge*, 0x708);
 			PROPERTY(m_iszSequenceName,GlobalTypes::CUtlSymbolLarge*, 0x710);
-			PROPERTY(m_hActor,IDENTITY(GlobalTypes::CHandle<server::CBaseFlex>), 0x718);
-			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x71c);
+			PROPERTY(m_hActor,GlobalTypes::CHandle<server::CBaseFlex>, 0x718);
+			PROPERTY(m_hActivator,GlobalTypes::CHandle<server::CBaseEntity>, 0x71c);
 			PROPERTY(m_BusyActor,int32_t, 0x720);
-			PROPERTY(m_iPlayerDeathBehavior,IDENTITY(server::SceneOnPlayerDeath_t), 0x724);
+			PROPERTY(m_iPlayerDeathBehavior,server::SceneOnPlayerDeath_t, 0x724);
 			S2_PAD(0x288);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSceneEntity) == 0x730, "CSceneEntity size should be 0x730");
-
-#endif
 	}
 }

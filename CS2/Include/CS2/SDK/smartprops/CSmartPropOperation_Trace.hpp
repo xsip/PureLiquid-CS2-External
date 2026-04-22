@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropTransformOperation.hpp"
-#include "CSmartPropAttributeCoordinateSpace.hpp"
-#include "CSmartPropAttributeTraceNoHit.hpp"
+#include <SDK/smartprops/CSmartPropTransformOperation.hpp>
+#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
+#include <SDK/smartprops/CSmartPropAttributeTraceNoHit.hpp>
 
 
 
@@ -24,10 +24,10 @@ namespace CS2 {
 		class CSmartPropOperation_Trace : public CS2::smartprops::CSmartPropTransformOperation {
 		public:
 			PROPERTY(m_Origin,GlobalTypes::CSmartPropAttributeVector, 0x50);
-			NESTED_PROPERTY(m_OriginSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x90);
+			NESTED_PROPERTY(m_OriginSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x90);
 			PROPERTY(m_flOriginOffset,GlobalTypes::CSmartPropAttributeFloat, 0xd0);
 			PROPERTY(m_flSurfaceUpInfluence,GlobalTypes::CSmartPropAttributeFloat, 0x110);
-			NESTED_PROPERTY(m_nNoHitResult,IDENTITY(smartprops::CSmartPropAttributeTraceNoHit), 0x150);
+			NESTED_PROPERTY(m_nNoHitResult,smartprops::CSmartPropAttributeTraceNoHit, 0x150);
 			PROPERTY(m_bIgnoreToolMaterials,GlobalTypes::CSmartPropAttributeBool, 0x190);
 			PROPERTY(m_bIgnoreSky,GlobalTypes::CSmartPropAttributeBool, 0x1d0);
 			PROPERTY(m_bIgnoreNoDraw,GlobalTypes::CSmartPropAttributeBool, 0x210);
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_bIgnoreCables,GlobalTypes::CSmartPropAttributeBool, 0x310);
 			S2_PAD(0x300);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_Trace) == 0x350, "CSmartPropOperation_Trace size should be 0x350");
-
-#endif
 	}
 }

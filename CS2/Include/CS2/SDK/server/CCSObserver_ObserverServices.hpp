@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayer_ObserverServices.hpp"
+#include <SDK/server/CPlayer_ObserverServices.hpp>
 
 
 
@@ -23,9 +23,6 @@ namespace CS2 {
 		public:
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSObserver_ObserverServices) == 0x80, "CCSObserver_ObserverServices size should be 0x80");
-
-#endif
 	}
 }

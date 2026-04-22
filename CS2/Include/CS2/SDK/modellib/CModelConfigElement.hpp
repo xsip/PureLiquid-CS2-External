@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -21,12 +21,9 @@ namespace CS2 {
 		class CModelConfigElement  {
 		public:
 			PROPERTY(m_ElementName,GlobalTypes::CUtlString*, 0x8);
-			NESTED_PROPERTY(m_NestedElements,IDENTITY(GlobalTypes::CUtlVector<modellib::CModelConfigElement*>), 0x10);
+			NESTED_PROPERTY(m_NestedElements,GlobalTypes::CUtlVector<modellib::CModelConfigElement*>, 0x10);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CModelConfigElement) == 0x48, "CModelConfigElement size should be 0x48");
-
-#endif
 	}
 }

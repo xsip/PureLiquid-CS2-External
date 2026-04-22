@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,12 +20,9 @@ namespace CS2 {
 	namespace client {
 		class CPhysicsBodyGameMarkupData  {
 		public:
-			// PROPERTY(m_PhysicsBodyMarkupByBoneName,IDENTITY(GlobalTypes::CUtlOrderedMap< CUtlString, CPhysicsBodyGameMarkup >*), 0x0);
+			PROPERTY(m_PhysicsBodyMarkupByBoneName,GlobalTypes::CUtlOrderedMap< CUtlString, CPhysicsBodyGameMarkup >*, 0x0);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPhysicsBodyGameMarkupData) == 0x28, "CPhysicsBodyGameMarkupData size should be 0x28");
-
-#endif
 	}
 }

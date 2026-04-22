@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -27,13 +27,10 @@ namespace CS2 {
 		class CEntityInstance  {
 		public:
 			PROPERTY(m_iszPrivateVScripts,GlobalTypes::CUtlSymbolLarge*, 0x8);
-			PROPERTY(m_pEntity,IDENTITY(entity2::CEntityIdentity*), 0x10);
-			PROPERTY(m_CScriptComponent,IDENTITY(entity2::CScriptComponent*), 0x30);
+			PROPERTY(m_pEntity,entity2::CEntityIdentity*, 0x10);
+			PROPERTY(m_CScriptComponent,entity2::CScriptComponent*, 0x30);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::entity2::CEntityInstance) == 0x38, "CEntityInstance size should be 0x38");
-
-#endif
 	}
 }

@@ -4,28 +4,28 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleCollectionRendererVecInput.hpp"
-#include "ParticleColorBlendType_t.hpp"
-#include "SpriteCardShaderType_t.hpp"
-#include "ParticleSequenceCropOverride_t.hpp"
-#include "TextureGroup_t.hpp"
-#include "AnimationType_t.hpp"
-#include "ParticleOutputBlendMode_t.hpp"
-#include "ParticleFogType_t.hpp"
-#include "SpriteCardPerParticleScale_t.hpp"
-#include "ParticleAlphaReferenceType_t.hpp"
-#include "BlurFilterType_t.hpp"
-#include "ParticleDepthFeatheringMode_t.hpp"
-#include "ParticleSortingChoiceList_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererVecInput.hpp>
+#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particles/SpriteCardShaderType_t.hpp>
+#include <SDK/particles/ParticleSequenceCropOverride_t.hpp>
+#include <SDK/particles/TextureGroup_t.hpp>
+#include <SDK/particles/AnimationType_t.hpp>
+#include <SDK/particles/ParticleOutputBlendMode_t.hpp>
+#include <SDK/particles/ParticleFogType_t.hpp>
+#include <SDK/particles/SpriteCardPerParticleScale_t.hpp>
+#include <SDK/particles/ParticleAlphaReferenceType_t.hpp>
+#include <SDK/particles/BlurFilterType_t.hpp>
+#include <SDK/particles/ParticleDepthFeatheringMode_t.hpp>
+#include <SDK/particles/ParticleSortingChoiceList_t.hpp>
 
 
 
@@ -36,50 +36,50 @@ namespace CS2 {
 	namespace particles {
 		class CBaseRendererSource2 : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x220);
-			NESTED_PROPERTY(m_flAlphaScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x390);
-			NESTED_PROPERTY(m_flRollScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x500);
-			NESTED_PROPERTY(m_nAlpha2Field,IDENTITY(particles::ParticleAttributeIndex_t), 0x670);
-			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionRendererVecInput), 0x678);
-			PROPERTY(m_nColorBlendType,IDENTITY(particles::ParticleColorBlendType_t), 0xd30);
-			PROPERTY(m_nShaderType,IDENTITY(particles::SpriteCardShaderType_t), 0xd34);
+			NESTED_PROPERTY(m_flRadiusScale,particleslib::CParticleCollectionRendererFloatInput, 0x220);
+			NESTED_PROPERTY(m_flAlphaScale,particleslib::CParticleCollectionRendererFloatInput, 0x390);
+			NESTED_PROPERTY(m_flRollScale,particleslib::CParticleCollectionRendererFloatInput, 0x500);
+			NESTED_PROPERTY(m_nAlpha2Field,particles::ParticleAttributeIndex_t, 0x670);
+			NESTED_PROPERTY(m_vecColorScale,particleslib::CParticleCollectionRendererVecInput, 0x678);
+			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0xd30);
+			PROPERTY(m_nShaderType,particles::SpriteCardShaderType_t, 0xd34);
 			PROPERTY(m_strShaderOverride,GlobalTypes::CUtlString*, 0xd38);
-			NESTED_PROPERTY(m_flCenterXOffset,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0xd40);
-			NESTED_PROPERTY(m_flCenterYOffset,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0xeb0);
+			NESTED_PROPERTY(m_flCenterXOffset,particleslib::CParticleCollectionRendererFloatInput, 0xd40);
+			NESTED_PROPERTY(m_flCenterYOffset,particleslib::CParticleCollectionRendererFloatInput, 0xeb0);
 			PROPERTY(m_flBumpStrength,float32, 0x1020);
-			PROPERTY(m_nCropTextureOverride,IDENTITY(particles::ParticleSequenceCropOverride_t), 0x1024);
-			// PROPERTY(m_vecTexturesInput,IDENTITY(GlobalTypes::CUtlLeanVector<particles::TextureGroup_t>), 0x1028);
+			PROPERTY(m_nCropTextureOverride,particles::ParticleSequenceCropOverride_t, 0x1024);
+			PROPERTY(m_vecTexturesInput,GlobalTypes::CUtlLeanVector<particles::TextureGroup_t>, 0x1028);
 			PROPERTY(m_flAnimationRate,float32, 0x1038);
-			PROPERTY(m_nAnimationType,IDENTITY(particles::AnimationType_t), 0x103c);
+			PROPERTY(m_nAnimationType,particles::AnimationType_t, 0x103c);
 			PROPERTY(m_bAnimateInFPS,bool, 0x1040);
-			NESTED_PROPERTY(m_flMotionVectorScaleU,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1048);
-			NESTED_PROPERTY(m_flMotionVectorScaleV,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x11b8);
-			NESTED_PROPERTY(m_flSelfIllumAmount,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1328);
-			NESTED_PROPERTY(m_flDiffuseAmount,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1498);
-			NESTED_PROPERTY(m_flDiffuseClamp,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1608);
+			NESTED_PROPERTY(m_flMotionVectorScaleU,particleslib::CParticleCollectionRendererFloatInput, 0x1048);
+			NESTED_PROPERTY(m_flMotionVectorScaleV,particleslib::CParticleCollectionRendererFloatInput, 0x11b8);
+			NESTED_PROPERTY(m_flSelfIllumAmount,particleslib::CParticleCollectionRendererFloatInput, 0x1328);
+			NESTED_PROPERTY(m_flDiffuseAmount,particleslib::CParticleCollectionRendererFloatInput, 0x1498);
+			NESTED_PROPERTY(m_flDiffuseClamp,particleslib::CParticleCollectionRendererFloatInput, 0x1608);
 			PROPERTY(m_nLightingControlPoint,int32_t, 0x1778);
-			PROPERTY(m_nOutputBlendMode,IDENTITY(particles::ParticleOutputBlendMode_t), 0x177c);
+			PROPERTY(m_nOutputBlendMode,particles::ParticleOutputBlendMode_t, 0x177c);
 			PROPERTY(m_bGammaCorrectVertexColors,bool, 0x1780);
 			PROPERTY(m_bSaturateColorPreAlphaBlend,bool, 0x1781);
-			NESTED_PROPERTY(m_flAddSelfAmount,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1788);
-			NESTED_PROPERTY(m_flDesaturation,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x18f8);
-			NESTED_PROPERTY(m_flOverbrightFactor,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1a68);
+			NESTED_PROPERTY(m_flAddSelfAmount,particleslib::CParticleCollectionRendererFloatInput, 0x1788);
+			NESTED_PROPERTY(m_flDesaturation,particleslib::CParticleCollectionRendererFloatInput, 0x18f8);
+			NESTED_PROPERTY(m_flOverbrightFactor,particleslib::CParticleCollectionRendererFloatInput, 0x1a68);
 			PROPERTY(m_nHSVShiftControlPoint,int32_t, 0x1bd8);
-			PROPERTY(m_nFogType,IDENTITY(particles::ParticleFogType_t), 0x1bdc);
-			NESTED_PROPERTY(m_flFogAmount,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1be0);
+			PROPERTY(m_nFogType,particles::ParticleFogType_t, 0x1bdc);
+			NESTED_PROPERTY(m_flFogAmount,particleslib::CParticleCollectionRendererFloatInput, 0x1be0);
 			PROPERTY(m_bTintByFOW,bool, 0x1d50);
 			PROPERTY(m_bTintByGlobalLight,bool, 0x1d51);
-			PROPERTY(m_nPerParticleAlphaReference,IDENTITY(particles::SpriteCardPerParticleScale_t), 0x1d54);
-			PROPERTY(m_nPerParticleAlphaRefWindow,IDENTITY(particles::SpriteCardPerParticleScale_t), 0x1d58);
-			PROPERTY(m_nAlphaReferenceType,IDENTITY(particles::ParticleAlphaReferenceType_t), 0x1d5c);
-			NESTED_PROPERTY(m_flAlphaReferenceSoftness,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1d60);
-			NESTED_PROPERTY(m_flSourceAlphaValueToMapToZero,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1ed0);
-			NESTED_PROPERTY(m_flSourceAlphaValueToMapToOne,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2040);
+			PROPERTY(m_nPerParticleAlphaReference,particles::SpriteCardPerParticleScale_t, 0x1d54);
+			PROPERTY(m_nPerParticleAlphaRefWindow,particles::SpriteCardPerParticleScale_t, 0x1d58);
+			PROPERTY(m_nAlphaReferenceType,particles::ParticleAlphaReferenceType_t, 0x1d5c);
+			NESTED_PROPERTY(m_flAlphaReferenceSoftness,particleslib::CParticleCollectionRendererFloatInput, 0x1d60);
+			NESTED_PROPERTY(m_flSourceAlphaValueToMapToZero,particleslib::CParticleCollectionRendererFloatInput, 0x1ed0);
+			NESTED_PROPERTY(m_flSourceAlphaValueToMapToOne,particleslib::CParticleCollectionRendererFloatInput, 0x2040);
 			PROPERTY(m_bRefract,bool, 0x21b0);
 			PROPERTY(m_bRefractSolid,bool, 0x21b1);
-			NESTED_PROPERTY(m_flRefractAmount,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x21b8);
+			NESTED_PROPERTY(m_flRefractAmount,particleslib::CParticleCollectionRendererFloatInput, 0x21b8);
 			PROPERTY(m_nRefractBlurRadius,int32_t, 0x2328);
-			PROPERTY(m_nRefractBlurType,IDENTITY(particles::BlurFilterType_t), 0x232c);
+			PROPERTY(m_nRefractBlurType,particles::BlurFilterType_t, 0x232c);
 			PROPERTY(m_bOnlyRenderInEffectsBloomPass,bool, 0x2330);
 			PROPERTY(m_bOnlyRenderInEffectsWaterPass,bool, 0x2331);
 			PROPERTY(m_bUseMixedResolutionRendering,bool, 0x2332);
@@ -91,20 +91,17 @@ namespace CS2 {
 			PROPERTY(m_bWriteStencilOnDepthFail,bool, 0x2436);
 			PROPERTY(m_bReverseZBuffering,bool, 0x2437);
 			PROPERTY(m_bDisableZBuffering,bool, 0x2438);
-			PROPERTY(m_nFeatheringMode,IDENTITY(particles::ParticleDepthFeatheringMode_t), 0x243c);
-			NESTED_PROPERTY(m_flFeatheringMinDist,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2440);
-			NESTED_PROPERTY(m_flFeatheringMaxDist,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x25b0);
-			NESTED_PROPERTY(m_flFeatheringFilter,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2720);
-			NESTED_PROPERTY(m_flFeatheringDepthMapFilter,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2890);
-			NESTED_PROPERTY(m_flDepthBias,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2a00);
-			PROPERTY(m_nSortMethod,IDENTITY(particles::ParticleSortingChoiceList_t), 0x2b70);
+			PROPERTY(m_nFeatheringMode,particles::ParticleDepthFeatheringMode_t, 0x243c);
+			NESTED_PROPERTY(m_flFeatheringMinDist,particleslib::CParticleCollectionRendererFloatInput, 0x2440);
+			NESTED_PROPERTY(m_flFeatheringMaxDist,particleslib::CParticleCollectionRendererFloatInput, 0x25b0);
+			NESTED_PROPERTY(m_flFeatheringFilter,particleslib::CParticleCollectionRendererFloatInput, 0x2720);
+			NESTED_PROPERTY(m_flFeatheringDepthMapFilter,particleslib::CParticleCollectionRendererFloatInput, 0x2890);
+			NESTED_PROPERTY(m_flDepthBias,particleslib::CParticleCollectionRendererFloatInput, 0x2a00);
+			PROPERTY(m_nSortMethod,particles::ParticleSortingChoiceList_t, 0x2b70);
 			PROPERTY(m_bBlendFramesSeq0,bool, 0x2b74);
 			PROPERTY(m_bMaxLuminanceBlendingSequence0,bool, 0x2b75);
 			S2_PAD(0x2BC8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CBaseRendererSource2) == 0x2DE8, "CBaseRendererSource2 size should be 0x2DE8");
-
-#endif
 	}
 }

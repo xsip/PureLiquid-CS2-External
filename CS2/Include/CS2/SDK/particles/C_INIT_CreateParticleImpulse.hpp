@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleFalloffFunction_t.hpp"
-#include "ParticleImpulseType_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleFalloffFunction_t.hpp>
+#include <SDK/particles/ParticleImpulseType_t.hpp>
 
 
 
@@ -24,16 +24,13 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateParticleImpulse : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_InputRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_InputMagnitude,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
-			PROPERTY(m_nFalloffFunction,IDENTITY(particles::ParticleFalloffFunction_t), 0x4b8);
-			NESTED_PROPERTY(m_InputFalloffExp,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c0);
-			PROPERTY(m_nImpulseType,IDENTITY(particles::ParticleImpulseType_t), 0x630);
+			NESTED_PROPERTY(m_InputRadius,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_InputMagnitude,particleslib::CPerParticleFloatInput, 0x348);
+			PROPERTY(m_nFalloffFunction,particles::ParticleFalloffFunction_t, 0x4b8);
+			NESTED_PROPERTY(m_InputFalloffExp,particleslib::CPerParticleFloatInput, 0x4c0);
+			PROPERTY(m_nImpulseType,particles::ParticleImpulseType_t, 0x630);
 			S2_PAD(0x460);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_CreateParticleImpulse) == 0x638, "C_INIT_CreateParticleImpulse size should be 0x638");
-
-#endif
 	}
 }

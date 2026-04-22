@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ModelMeshBufferData_t.hpp"
+#include <SDK/modellib/ModelMeshBufferData_t.hpp>
 
 
 
@@ -25,16 +25,13 @@ namespace CS2 {
 			PROPERTY(m_nMeshIndex,int32_t, 0x10);
 			PROPERTY(m_nDataBlock,int32_t, 0x14);
 			PROPERTY(m_nMorphBlock,int32_t, 0x18);
-			NESTED_PROPERTY(m_vertexBuffers,IDENTITY(GlobalTypes::CUtlVector<modellib::ModelMeshBufferData_t>), 0x20);
-			NESTED_PROPERTY(m_indexBuffers,IDENTITY(GlobalTypes::CUtlVector<modellib::ModelMeshBufferData_t>), 0x38);
-			NESTED_PROPERTY(m_toolsBuffers,IDENTITY(GlobalTypes::CUtlVector<modellib::ModelMeshBufferData_t>), 0x50);
+			NESTED_PROPERTY(m_vertexBuffers,GlobalTypes::CUtlVector<modellib::ModelMeshBufferData_t>, 0x20);
+			NESTED_PROPERTY(m_indexBuffers,GlobalTypes::CUtlVector<modellib::ModelMeshBufferData_t>, 0x38);
+			NESTED_PROPERTY(m_toolsBuffers,GlobalTypes::CUtlVector<modellib::ModelMeshBufferData_t>, 0x50);
 			PROPERTY(m_nVBIBBlock,int32_t, 0x68);
 			PROPERTY(m_nToolsVBBlock,int32_t, 0x6c);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::ModelEmbeddedMesh_t) == 0x70, "ModelEmbeddedMesh_t size should be 0x70");
-
-#endif
 	}
 }

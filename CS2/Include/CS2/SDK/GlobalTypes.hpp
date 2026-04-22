@@ -36,8 +36,6 @@ namespace GlobalTypes {
 	using CSmartPtr /*CSmartPtr< CAnimActionUpdater >*/ = char[0x8]; //  Schema_Atomic
 	using CGlobalSymbol /*CGlobalSymbol*/ = char[0x8]; //  Schema_Atomic
 
-	using std::pair /*std::pair< CAnimParamHandle, CAnimVariant >*/ = char[0x13]; //  Schema_Atomic
-
 	using CUtlBinaryBlock /*CUtlBinaryBlock*/ = char[0x10]; //  Schema_Atomic
 	using CTransform /*CTransform*/ = char[0x20]; //  Schema_Atomic
 	using VectorAligned /*VectorAligned*/ = char[0x10]; //  Schema_Atomic
@@ -127,6 +125,9 @@ namespace GlobalTypes {
 
 	template <typename T>
 	using CResourceNameTyped /*CResourceNameTyped< CWeakHandle< InfoForResourceTypeCCompositeMaterialKit > >*/ = char[0xe0]; //  Schema_Atomic
+
+	template <typename T>
+	using CWeakHandle /*CWeakHandle< InfoForResourceTypeCCompositeMaterialKit >*/ = char[0x8]; //  Schema_DeclaredClass
 	using RotationVector /*RotationVector*/ = char[0xc]; //  Schema_Atomic
 
 	template <typename T>

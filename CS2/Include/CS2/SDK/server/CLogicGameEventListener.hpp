@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace server {
 		class CLogicGameEventListener : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_OnEventFired,IDENTITY(entity2::CEntityIOOutput), 0x4b8);
+			NESTED_PROPERTY(m_OnEventFired,entity2::CEntityIOOutput, 0x4b8);
 			PROPERTY(m_iszGameEventName,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
 			PROPERTY(m_iszGameEventItem,GlobalTypes::CUtlSymbolLarge*, 0x4d8);
 			PROPERTY(m_bEnabled,bool, 0x4e0);
 			PROPERTY(m_bStartDisabled,bool, 0x4e1);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicGameEventListener) == 0x4E8, "CLogicGameEventListener size should be 0x4E8");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPathNode.hpp"
+#include <SDK/server/CPathNode.hpp>
 
 
 
@@ -21,16 +21,13 @@ namespace CS2 {
 	namespace server {
 		class CMoverPathNode : public CS2::server::CPathNode {
 		public:
-			// PROPERTY(m_OnStartFromOrInSegment,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x500);
-			// PROPERTY(m_OnStoppedAtOrInSegment,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x520);
-			// PROPERTY(m_OnPassThrough,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x540);
-			// PROPERTY(m_OnPassThroughForward,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x560);
-			// PROPERTY(m_OnPassThroughReverse,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x580);
+			PROPERTY(m_OnStartFromOrInSegment,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x500);
+			PROPERTY(m_OnStoppedAtOrInSegment,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x520);
+			PROPERTY(m_OnPassThrough,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x540);
+			PROPERTY(m_OnPassThroughForward,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x560);
+			PROPERTY(m_OnPassThroughReverse,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x580);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMoverPathNode) == 0x5A0, "CMoverPathNode size should be 0x5A0");
-
-#endif
 	}
 }

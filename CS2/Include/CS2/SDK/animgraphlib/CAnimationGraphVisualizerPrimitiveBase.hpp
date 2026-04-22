@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimationGraphVisualizerPrimitiveType.hpp"
-#include "../modellib/AnimNodeID.hpp"
+#include <SDK/animgraphlib/CAnimationGraphVisualizerPrimitiveType.hpp>
+#include <SDK/modellib/AnimNodeID.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimationGraphVisualizerPrimitiveBase  {
 		public:
-			PROPERTY(m_Type,IDENTITY(animgraphlib::CAnimationGraphVisualizerPrimitiveType), 0x8);
-			PROPERTY_ARRAY(m_OwningAnimNodePaths,IDENTITY(modellib::AnimNodeID), 11 , 0xc);
+			PROPERTY(m_Type,animgraphlib::CAnimationGraphVisualizerPrimitiveType, 0x8);
+			PROPERTY_ARRAY(m_OwningAnimNodePaths,modellib::AnimNodeID, 11 , 0xc);
 			PROPERTY(m_nOwningAnimNodePathCount,int32_t, 0x38);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimationGraphVisualizerPrimitiveBase) == 0x40, "CAnimationGraphVisualizerPrimitiveBase size should be 0x40");
-
-#endif
 	}
 }

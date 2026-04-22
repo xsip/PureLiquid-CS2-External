@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		class CBaseFilter : public CS2::server::CLogicalEntity {
 		public:
 			PROPERTY(m_bNegated,bool, 0x4a8);
-			NESTED_PROPERTY(m_OnPass,IDENTITY(entity2::CEntityIOOutput), 0x4b0);
-			NESTED_PROPERTY(m_OnFail,IDENTITY(entity2::CEntityIOOutput), 0x4c8);
+			NESTED_PROPERTY(m_OnPass,entity2::CEntityIOOutput, 0x4b0);
+			NESTED_PROPERTY(m_OnFail,entity2::CEntityIOOutput, 0x4c8);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseFilter) == 0x4E0, "CBaseFilter size should be 0x4E0");
-
-#endif
 	}
 }

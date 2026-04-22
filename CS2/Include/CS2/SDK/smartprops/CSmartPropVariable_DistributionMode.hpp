@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropVariable.hpp"
-#include "SmartPropDistributionMode_t.hpp"
+#include <SDK/smartprops/CSmartPropVariable.hpp>
+#include <SDK/smartprops/SmartPropDistributionMode_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropVariable_DistributionMode : public CS2::smartprops::CSmartPropVariable {
 		public:
-			PROPERTY(m_DefaultValue,IDENTITY(smartprops::SmartPropDistributionMode_t), 0x38);
+			PROPERTY(m_DefaultValue,smartprops::SmartPropDistributionMode_t, 0x38);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_DistributionMode) == 0x40, "CSmartPropVariable_DistributionMode size should be 0x40");
-
-#endif
 	}
 }

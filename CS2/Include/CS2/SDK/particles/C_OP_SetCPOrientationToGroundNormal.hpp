@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleTraceSet_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
 
 
 
@@ -27,15 +27,12 @@ namespace CS2 {
 			PROPERTY(m_flTolerance,float32, 0x1d8);
 			PROPERTY(m_flTraceOffset,float32, 0x1dc);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1e0);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x260);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x260);
 			PROPERTY(m_nInputCP,int32_t, 0x264);
 			PROPERTY(m_nOutputCP,int32_t, 0x268);
 			PROPERTY(m_bIncludeWater,bool, 0x278);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetCPOrientationToGroundNormal) == 0x280, "C_OP_SetCPOrientationToGroundNormal size should be 0x280");
-
-#endif
 	}
 }

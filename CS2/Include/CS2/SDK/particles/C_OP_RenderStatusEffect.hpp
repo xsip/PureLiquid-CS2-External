@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
 
 
 
@@ -26,18 +26,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderStatusEffect : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_pTextureColorWarp,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x220);
-			PROPERTY(m_pTextureDetail2,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x228);
-			PROPERTY(m_pTextureDiffuseWarp,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x230);
-			PROPERTY(m_pTextureFresnelColorWarp,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x238);
-			PROPERTY(m_pTextureFresnelWarp,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x240);
-			PROPERTY(m_pTextureSpecularWarp,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x248);
-			PROPERTY(m_pTextureEnvMap,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x250);
+			PROPERTY(m_pTextureColorWarp,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x220);
+			PROPERTY(m_pTextureDetail2,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x228);
+			PROPERTY(m_pTextureDiffuseWarp,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x230);
+			PROPERTY(m_pTextureFresnelColorWarp,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x238);
+			PROPERTY(m_pTextureFresnelWarp,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x240);
+			PROPERTY(m_pTextureSpecularWarp,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x248);
+			PROPERTY(m_pTextureEnvMap,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x250);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderStatusEffect) == 0x258, "C_OP_RenderStatusEffect size should be 0x258");
-
-#endif
 	}
 }

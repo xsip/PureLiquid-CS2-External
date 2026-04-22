@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0xE50
 			namespace CBasePropDoor /*: public CS2::server::CDynamicProp*/ {
 				constexpr std::ptrdiff_t m_flAutoReturnDelay = 0xc60; // float32 m_flAutoReturnDelay; |  0xc60 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hDoorList = 0xc68; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePropDoor>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hDoorList = 0xc68; // server::CUtlVector<GlobalTypes::CHandle<server::CBasePropDoor>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nHardwareType = 0xc80; // int32_t m_nHardwareType; |  0xc80 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bNeedsHardware = 0xc84; // bool m_bNeedsHardware; |  0xc84 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_eDoorState = 0xc88; // client::DoorState_t  | Schema_DeclaredEnum | Size: 0x4

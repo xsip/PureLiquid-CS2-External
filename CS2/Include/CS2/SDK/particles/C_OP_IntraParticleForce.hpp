@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionForce.hpp"
+#include <SDK/particles/CParticleFunctionForce.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bUseAABB,bool, 0x1f8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_IntraParticleForce) == 0x200, "C_OP_IntraParticleForce size should be 0x200");
-
-#endif
 	}
 }

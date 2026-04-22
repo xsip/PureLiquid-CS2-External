@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_flWeight,GlobalTypes::CSmartPropAttributeFloat, 0x40);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::ColorChoice_t) == 0x80, "ColorChoice_t size should be 0x80");
-
-#endif
 	}
 }

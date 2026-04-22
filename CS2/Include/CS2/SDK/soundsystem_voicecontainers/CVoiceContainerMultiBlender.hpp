@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerBase.hpp"
-#include "CSoundContainerReferenceArray.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerBase.hpp>
+#include <SDK/soundsystem_voicecontainers/CSoundContainerReferenceArray.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerMultiBlender : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_soundsToPlay,IDENTITY(soundsystem_voicecontainers::CSoundContainerReferenceArray), 0xa8);
+			NESTED_PROPERTY(m_soundsToPlay,soundsystem_voicecontainers::CSoundContainerReferenceArray, 0xa8);
 			PROPERTY(m_flBlendFactor,float32, 0xe0);
 			PROPERTY(m_flCrossover,float32, 0xe4);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerMultiBlender) == 0xE8, "CVoiceContainerMultiBlender size should be 0xE8");
-
-#endif
 	}
 }

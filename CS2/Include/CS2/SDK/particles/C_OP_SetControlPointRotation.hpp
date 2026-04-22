@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointRotation : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_vecRotAxis,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d8);
-			NESTED_PROPERTY(m_flRotRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x890);
+			NESTED_PROPERTY(m_vecRotAxis,particleslib::CParticleCollectionVecInput, 0x1d8);
+			NESTED_PROPERTY(m_flRotRate,particleslib::CParticleCollectionFloatInput, 0x890);
 			PROPERTY(m_nCP,int32_t, 0xa00);
 			PROPERTY(m_nLocalCP,int32_t, 0xa04);
 			S2_PAD(0x830);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointRotation) == 0xA08, "C_OP_SetControlPointRotation size should be 0xA08");
-
-#endif
 	}
 }

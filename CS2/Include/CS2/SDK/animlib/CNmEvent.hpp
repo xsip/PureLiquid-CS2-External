@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "NmPercent_t.hpp"
+#include <SDK/animlib/NmPercent_t.hpp>
 
 
 
@@ -21,15 +21,12 @@ namespace CS2 {
 	namespace animlib {
 		class CNmEvent  {
 		public:
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(animlib::NmPercent_t), 0x8);
-			NESTED_PROPERTY(m_flDuration,IDENTITY(animlib::NmPercent_t), 0xc);
+			NESTED_PROPERTY(m_flStartTime,animlib::NmPercent_t, 0x8);
+			NESTED_PROPERTY(m_flDuration,animlib::NmPercent_t, 0xc);
 			PROPERTY(m_syncID,GlobalTypes::CGlobalSymbol, 0x10);
 			PROPERTY(m_bClientOnly,bool, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmEvent) == 0x20, "CNmEvent size should be 0x20");
-
-#endif
 	}
 }

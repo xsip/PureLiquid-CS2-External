@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,15 +20,12 @@ namespace CS2 {
 	namespace physicslib {
 		class FeSimdQuad_t  {
 		public:
-			// PROPERTY_ARRAY(nNode,uint16_t, 4[4] , 0x0);
+			PROPERTY_ARRAY(nNode,uint16_t, 4[4] , 0x0);
 			PROPERTY(f4Slack,GlobalTypes::fltx4, 0x20);
 			PROPERTY_ARRAY(vShape,GlobalTypes::FourVectors, 4 , 0x30);
 			PROPERTY_ARRAY(f4Weights,GlobalTypes::fltx4, 4 , 0xf0);
 			S2_PAD(0x130);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeSimdQuad_t) == 0x130, "FeSimdQuad_t size should be 0x130");
-
-#endif
 	}
 }

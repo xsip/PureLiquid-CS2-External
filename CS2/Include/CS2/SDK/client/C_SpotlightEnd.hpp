@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_Radius,float32, 0xe8c);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SpotlightEnd) == 0xE98, "C_SpotlightEnd size should be 0xE98");
-
-#endif
 	}
 }

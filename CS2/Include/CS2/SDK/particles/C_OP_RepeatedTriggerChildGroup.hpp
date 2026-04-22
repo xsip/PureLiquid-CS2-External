@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 		class C_OP_RepeatedTriggerChildGroup : public CS2::particles::CParticleFunctionPreEmission {
 		public:
 			PROPERTY(m_nChildGroupID,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_flClusterRefireTime,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_flClusterSize,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
-			NESTED_PROPERTY(m_flClusterCooldown,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4c0);
+			NESTED_PROPERTY(m_flClusterRefireTime,particleslib::CParticleCollectionFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_flClusterSize,particleslib::CParticleCollectionFloatInput, 0x350);
+			NESTED_PROPERTY(m_flClusterCooldown,particleslib::CParticleCollectionFloatInput, 0x4c0);
 			PROPERTY(m_bLimitChildCount,bool, 0x630);
 			S2_PAD(0x460);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RepeatedTriggerChildGroup) == 0x638, "C_OP_RepeatedTriggerChildGroup size should be 0x638");
-
-#endif
 	}
 }

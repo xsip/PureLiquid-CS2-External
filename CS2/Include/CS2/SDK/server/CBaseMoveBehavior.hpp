@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPathKeyFrame.hpp"
+#include <SDK/server/CPathKeyFrame.hpp>
 
 
 
@@ -26,17 +26,14 @@ namespace CS2 {
 			PROPERTY(m_flAnimStartTime,float32, 0x508);
 			PROPERTY(m_flAnimEndTime,float32, 0x50c);
 			PROPERTY(m_flAverageSpeedAcrossFrame,float32, 0x510);
-			PROPERTY(m_pCurrentKeyFrame,IDENTITY(server::CPathKeyFrame*), 0x518);
-			PROPERTY(m_pTargetKeyFrame,IDENTITY(server::CPathKeyFrame*), 0x520);
-			PROPERTY(m_pPreKeyFrame,IDENTITY(server::CPathKeyFrame*), 0x528);
-			PROPERTY(m_pPostKeyFrame,IDENTITY(server::CPathKeyFrame*), 0x530);
+			PROPERTY(m_pCurrentKeyFrame,server::CPathKeyFrame*, 0x518);
+			PROPERTY(m_pTargetKeyFrame,server::CPathKeyFrame*, 0x520);
+			PROPERTY(m_pPreKeyFrame,server::CPathKeyFrame*, 0x528);
+			PROPERTY(m_pPostKeyFrame,server::CPathKeyFrame*, 0x530);
 			PROPERTY(m_flTimeIntoFrame,float32, 0x538);
 			PROPERTY(m_iDirection,int32_t, 0x53c);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseMoveBehavior) == 0x540, "CBaseMoveBehavior size should be 0x540");
-
-#endif
 	}
 }

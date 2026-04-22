@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleInput.hpp"
-#include "ParticleModelType_t.hpp"
+#include <SDK/particleslib/CParticleInput.hpp>
+#include <SDK/particleslib/ParticleModelType_t.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleModelInput : public CS2::particleslib::CParticleInput {
 		public:
-			PROPERTY(m_nType,IDENTITY(particleslib::ParticleModelType_t), 0x10);
+			PROPERTY(m_nType,particleslib::ParticleModelType_t, 0x10);
 			PROPERTY(m_NamedValue,GlobalTypes::CParticleNamedValueRef, 0x18);
 			PROPERTY(m_nControlPoint,int32_t, 0x58);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleModelInput) == 0x60, "CParticleModelInput size should be 0x60");
-
-#endif
 	}
 }

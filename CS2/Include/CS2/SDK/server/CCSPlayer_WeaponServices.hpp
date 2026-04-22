@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayer_WeaponServices.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CPlayer_WeaponServices.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -27,10 +27,10 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_WeaponServices : public CS2::server::CPlayer_WeaponServices {
 		public:
-			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0xc0);
+			NESTED_PROPERTY(m_flNextAttack,entity2::GameTime_t, 0xc0);
 			PROPERTY(m_bIsLookingAtWeapon,bool, 0xc4);
 			PROPERTY(m_bIsHoldingLookAtWeapon,bool, 0xc5);
-			PROPERTY(m_hSavedWeapon,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerWeapon>), 0xc8);
+			PROPERTY(m_hSavedWeapon,GlobalTypes::CHandle<server::CBasePlayerWeapon>, 0xc8);
 			PROPERTY(m_nTimeToMelee,int32_t, 0xcc);
 			PROPERTY(m_nTimeToSecondary,int32_t, 0xd0);
 			PROPERTY(m_nTimeToPrimary,int32_t, 0xd4);
@@ -40,13 +40,10 @@ namespace CS2 {
 			PROPERTY(m_bPickedUpWeapon,bool, 0xde);
 			PROPERTY(m_bDisableAutoDeploy,bool, 0xdf);
 			PROPERTY(m_bIsPickingUpGroundWeapon,bool, 0xe0);
-			// PROPERTY(m_networkAnimTiming,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0x18b8);
+			PROPERTY(m_networkAnimTiming,GlobalTypes::CNetworkUtlVectorBase< uint8 >, 0x18b8);
 			PROPERTY(m_bBlockInspectUntilNextGraphUpdate,bool, 0x18d0);
 			S2_PAD(0x1828);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_WeaponServices) == 0x18D8, "CCSPlayer_WeaponServices size should be 0x18D8");
-
-#endif
 	}
 }

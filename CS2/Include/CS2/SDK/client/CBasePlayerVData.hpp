@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CEntitySubclassVDataBase.hpp"
-#include "../resourcesystem/InfoForResourceTypeCModel.hpp"
-#include "CSkillFloat.hpp"
+#include <SDK/client/CEntitySubclassVDataBase.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCModel.hpp>
+#include <SDK/client/CSkillFloat.hpp>
 
 
 
@@ -23,12 +23,12 @@ namespace CS2 {
 	namespace client {
 		class CBasePlayerVData : public CS2::client::CEntitySubclassVDataBase {
 		public:
-			PROPERTY(m_sModelName,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x28);
-			NESTED_PROPERTY(m_flHeadDamageMultiplier,IDENTITY(client::CSkillFloat), 0x108);
-			NESTED_PROPERTY(m_flChestDamageMultiplier,IDENTITY(client::CSkillFloat), 0x118);
-			NESTED_PROPERTY(m_flStomachDamageMultiplier,IDENTITY(client::CSkillFloat), 0x128);
-			NESTED_PROPERTY(m_flArmDamageMultiplier,IDENTITY(client::CSkillFloat), 0x138);
-			NESTED_PROPERTY(m_flLegDamageMultiplier,IDENTITY(client::CSkillFloat), 0x148);
+			PROPERTY(m_sModelName,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>, 0x28);
+			NESTED_PROPERTY(m_flHeadDamageMultiplier,client::CSkillFloat, 0x108);
+			NESTED_PROPERTY(m_flChestDamageMultiplier,client::CSkillFloat, 0x118);
+			NESTED_PROPERTY(m_flStomachDamageMultiplier,client::CSkillFloat, 0x128);
+			NESTED_PROPERTY(m_flArmDamageMultiplier,client::CSkillFloat, 0x138);
+			NESTED_PROPERTY(m_flLegDamageMultiplier,client::CSkillFloat, 0x148);
 			PROPERTY(m_flHoldBreathTime,float32, 0x158);
 			PROPERTY(m_flDrowningDamageInterval,float32, 0x15c);
 			PROPERTY(m_nDrowningDamageInitial,int32_t, 0x160);
@@ -39,9 +39,6 @@ namespace CS2 {
 			PROPERTY(m_flCrouchTime,float32, 0x174);
 			S2_PAD(0x150);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBasePlayerVData) == 0x178, "CBasePlayerVData size should be 0x178");
-
-#endif
 	}
 }

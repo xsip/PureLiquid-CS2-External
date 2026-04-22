@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseCombatCharacter.hpp"
-#include "ViewAngleServerChange_t.hpp"
-#include "sky3dparams_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../client/sndopvarlatchdata_t.hpp"
+#include <SDK/server/CBaseCombatCharacter.hpp>
+#include <SDK/server/ViewAngleServerChange_t.hpp>
+#include <SDK/server/sky3dparams_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/sndopvarlatchdata_t.hpp>
 
 
 
@@ -40,36 +40,33 @@ namespace CS2 {
 	namespace server {
 		class CBasePlayerPawn : public CS2::server::CBaseCombatCharacter {
 		public:
-			PROPERTY(m_pWeaponServices,IDENTITY(server::CPlayer_WeaponServices*), 0xb70);
-			PROPERTY(m_pItemServices,IDENTITY(server::CPlayer_ItemServices*), 0xb78);
-			PROPERTY(m_pAutoaimServices,IDENTITY(server::CPlayer_AutoaimServices*), 0xb80);
-			PROPERTY(m_pObserverServices,IDENTITY(server::CPlayer_ObserverServices*), 0xb88);
-			PROPERTY(m_pWaterServices,IDENTITY(server::CPlayer_WaterServices*), 0xb90);
-			PROPERTY(m_pUseServices,IDENTITY(server::CPlayer_UseServices*), 0xb98);
-			PROPERTY(m_pFlashlightServices,IDENTITY(server::CPlayer_FlashlightServices*), 0xba0);
-			PROPERTY(m_pCameraServices,IDENTITY(server::CPlayer_CameraServices*), 0xba8);
-			PROPERTY(m_pMovementServices,IDENTITY(server::CPlayer_MovementServices*), 0xbb0);
-			// PROPERTY(m_ServerViewAngleChanges,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::ViewAngleServerChange_t>), 0xbc0);
+			PROPERTY(m_pWeaponServices,server::CPlayer_WeaponServices*, 0xb70);
+			PROPERTY(m_pItemServices,server::CPlayer_ItemServices*, 0xb78);
+			PROPERTY(m_pAutoaimServices,server::CPlayer_AutoaimServices*, 0xb80);
+			PROPERTY(m_pObserverServices,server::CPlayer_ObserverServices*, 0xb88);
+			PROPERTY(m_pWaterServices,server::CPlayer_WaterServices*, 0xb90);
+			PROPERTY(m_pUseServices,server::CPlayer_UseServices*, 0xb98);
+			PROPERTY(m_pFlashlightServices,server::CPlayer_FlashlightServices*, 0xba0);
+			PROPERTY(m_pCameraServices,server::CPlayer_CameraServices*, 0xba8);
+			PROPERTY(m_pMovementServices,server::CPlayer_MovementServices*, 0xbb0);
+			PROPERTY(m_ServerViewAngleChanges,server::CUtlVectorEmbeddedNetworkVar<server::ViewAngleServerChange_t>, 0xbc0);
 			PROPERTY(v_angle,GlobalTypes::QAngle, 0xc28);
 			PROPERTY(v_anglePrevious,GlobalTypes::QAngle, 0xc34);
 			PROPERTY(m_iHideHUD,uint32_t, 0xc40);
-			NESTED_PROPERTY(m_skybox3d,IDENTITY(server::sky3dparams_t), 0xc48);
-			NESTED_PROPERTY(m_fTimeLastHurt,IDENTITY(entity2::GameTime_t), 0xcd8);
-			NESTED_PROPERTY(m_flDeathTime,IDENTITY(entity2::GameTime_t), 0xcdc);
-			NESTED_PROPERTY(m_fNextSuicideTime,IDENTITY(entity2::GameTime_t), 0xce0);
+			NESTED_PROPERTY(m_skybox3d,server::sky3dparams_t, 0xc48);
+			NESTED_PROPERTY(m_fTimeLastHurt,entity2::GameTime_t, 0xcd8);
+			NESTED_PROPERTY(m_flDeathTime,entity2::GameTime_t, 0xcdc);
+			NESTED_PROPERTY(m_fNextSuicideTime,entity2::GameTime_t, 0xce0);
 			PROPERTY(m_fInitHUD,bool, 0xce4);
-			PROPERTY(m_pExpresser,IDENTITY(server::CAI_Expresser*), 0xce8);
-			PROPERTY(m_hController,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0xcf0);
-			PROPERTY(m_hDefaultController,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0xcf4);
+			PROPERTY(m_pExpresser,server::CAI_Expresser*, 0xce8);
+			PROPERTY(m_hController,GlobalTypes::CHandle<server::CBasePlayerController>, 0xcf0);
+			PROPERTY(m_hDefaultController,GlobalTypes::CHandle<server::CBasePlayerController>, 0xcf4);
 			PROPERTY(m_fHltvReplayDelay,float32, 0xcfc);
 			PROPERTY(m_fHltvReplayEnd,float32, 0xd00);
 			PROPERTY(m_iHltvReplayEntity,GlobalTypes::CEntityIndex, 0xd04);
-			NESTED_PROPERTY(m_sndOpvarLatchData,IDENTITY(GlobalTypes::CUtlVector<client::sndopvarlatchdata_t>), 0xd08);
+			NESTED_PROPERTY(m_sndOpvarLatchData,GlobalTypes::CUtlVector<client::sndopvarlatchdata_t>, 0xd08);
 			S2_PAD(0x1B0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBasePlayerPawn) == 0xD20, "CBasePlayerPawn size should be 0xD20");
-
-#endif
 	}
 }

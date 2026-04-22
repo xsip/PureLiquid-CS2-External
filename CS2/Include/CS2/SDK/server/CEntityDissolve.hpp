@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../client/EntityDisolveType_t.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/EntityDisolveType_t.hpp>
 
 
 
@@ -29,15 +29,12 @@ namespace CS2 {
 			PROPERTY(m_flFadeOutModelLength,float32, 0x73c);
 			PROPERTY(m_flFadeOutStart,float32, 0x740);
 			PROPERTY(m_flFadeOutLength,float32, 0x744);
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x748);
-			PROPERTY(m_nDissolveType,IDENTITY(client::EntityDisolveType_t), 0x74c);
+			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x748);
+			PROPERTY(m_nDissolveType,client::EntityDisolveType_t, 0x74c);
 			PROPERTY(m_vDissolverOrigin,GlobalTypes::Vector, 0x750);
 			PROPERTY(m_nMagnitude,uint32_t, 0x75c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEntityDissolve) == 0x760, "CEntityDissolve size should be 0x760");
-
-#endif
 	}
 }

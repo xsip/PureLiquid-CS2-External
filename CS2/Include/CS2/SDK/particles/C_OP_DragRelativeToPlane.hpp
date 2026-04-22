@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DragRelativeToPlane : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flDragAtPlane,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d0);
-			NESTED_PROPERTY(m_flFalloff,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x340);
+			NESTED_PROPERTY(m_flDragAtPlane,particleslib::CParticleCollectionFloatInput, 0x1d0);
+			NESTED_PROPERTY(m_flFalloff,particleslib::CParticleCollectionFloatInput, 0x340);
 			PROPERTY(m_bDirectional,bool, 0x4b0);
-			NESTED_PROPERTY(m_vecPlaneNormal,IDENTITY(particleslib::CParticleCollectionVecInput), 0x4b8);
+			NESTED_PROPERTY(m_vecPlaneNormal,particleslib::CParticleCollectionVecInput, 0x4b8);
 			PROPERTY(m_nControlPointNumber,int32_t, 0xb70);
 			S2_PAD(0x9A8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_DragRelativeToPlane) == 0xB78, "C_OP_DragRelativeToPlane size should be 0xB78");
-
-#endif
 	}
 }

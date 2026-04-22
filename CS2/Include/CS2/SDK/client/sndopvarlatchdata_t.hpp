@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -27,9 +27,6 @@ namespace CS2 {
 			PROPERTY(m_vPos,GlobalTypes::Vector, 0x24);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::sndopvarlatchdata_t) == 0x30, "sndopvarlatchdata_t size should be 0x30");
-
-#endif
 	}
 }

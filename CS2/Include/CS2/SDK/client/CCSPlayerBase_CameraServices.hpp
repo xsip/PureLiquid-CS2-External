@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayer_CameraServices.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/client/CPlayer_CameraServices.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -29,15 +29,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_iFOV,uint32_t, 0x290);
 			PROPERTY(m_iFOVStart,uint32_t, 0x294);
-			NESTED_PROPERTY(m_flFOVTime,IDENTITY(entity2::GameTime_t), 0x298);
+			NESTED_PROPERTY(m_flFOVTime,entity2::GameTime_t, 0x298);
 			PROPERTY(m_flFOVRate,float32, 0x29c);
-			PROPERTY(m_hZoomOwner,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x2a0);
+			PROPERTY(m_hZoomOwner,GlobalTypes::CHandle<client::C_BaseEntity>, 0x2a0);
 			PROPERTY(m_flLastShotFOV,float32, 0x2a4);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayerBase_CameraServices) == 0x2A8, "CCSPlayerBase_CameraServices size should be 0x2A8");
-
-#endif
 	}
 }

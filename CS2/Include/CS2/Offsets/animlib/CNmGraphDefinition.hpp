@@ -18,9 +18,9 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_controlParameterIDs = 0x38; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_virtualParameterIDs = 0x50; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_virtualParameterNodeIndices = 0x68; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_referencedGraphSlots = 0x80; // GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ReferencedGraphSlot_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_externalGraphSlots = 0x98; // GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ExternalGraphSlot_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_externalPoseSlots = 0xb0; // GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ExternalPoseSlot_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_referencedGraphSlots = 0x80; // GlobalTypes::CUtlVector<animlib::ReferencedGraphSlot_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_externalGraphSlots = 0x98; // GlobalTypes::CUtlVector<animlib::ExternalGraphSlot_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_externalPoseSlots = 0xb0; // GlobalTypes::CUtlVector<animlib::ExternalPoseSlot_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nodePaths = 0x138; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_resources = 0x150; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>  | Schema_Atomic | Size: 0x18
 			}

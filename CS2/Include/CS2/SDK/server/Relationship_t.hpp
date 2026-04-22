@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/Disposition_t.hpp"
+#include <SDK/client/Disposition_t.hpp>
 
 
 
@@ -21,13 +21,10 @@ namespace CS2 {
 	namespace server {
 		class Relationship_t  {
 		public:
-			PROPERTY(disposition,IDENTITY(client::Disposition_t), 0x0);
+			PROPERTY(disposition,client::Disposition_t, 0x0);
 			PROPERTY(priority,int32_t, 0x4);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::Relationship_t) == 0x8, "Relationship_t size should be 0x8");
-
-#endif
 	}
 }

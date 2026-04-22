@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "Detail2Combo_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/Detail2Combo_t.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_StatusEffect : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nDetail2Combo,IDENTITY(particles::Detail2Combo_t), 0x1d8);
+			PROPERTY(m_nDetail2Combo,particles::Detail2Combo_t, 0x1d8);
 			PROPERTY(m_flDetail2Rotation,float32, 0x1dc);
 			PROPERTY(m_flDetail2Scale,float32, 0x1e0);
 			PROPERTY(m_flDetail2BlendFactor,float32, 0x1e4);
@@ -42,9 +42,6 @@ namespace CS2 {
 			PROPERTY(m_flSelfIllumBlendToFull,float32, 0x21c);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_StatusEffect) == 0x238, "C_INIT_StatusEffect size should be 0x238");
-
-#endif
 	}
 }

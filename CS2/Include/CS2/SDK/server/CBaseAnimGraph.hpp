@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../client/CAnimGraphControllerManager.hpp"
-#include "PhysicsRagdollPose_t.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/client/CAnimGraphControllerManager.hpp>
+#include <SDK/server/PhysicsRagdollPose_t.hpp>
 
 
 
@@ -29,10 +29,10 @@ namespace CS2 {
 	namespace server {
 		class CBaseAnimGraph : public CS2::server::CBaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_graphControllerManager,IDENTITY(client::CAnimGraphControllerManager), 0x730);
-			PROPERTY(m_pMainGraphController,IDENTITY(client::CAnimGraphControllerBase*), 0x7e0);
+			NESTED_PROPERTY(m_graphControllerManager,client::CAnimGraphControllerManager, 0x730);
+			PROPERTY(m_pMainGraphController,client::CAnimGraphControllerBase*, 0x7e0);
 			PROPERTY(m_bInitiallyPopulateInterpHistory,bool, 0x7e8);
-			PROPERTY(m_pChoreoServices,IDENTITY(client::IChoreoServices*), 0x7f0);
+			PROPERTY(m_pChoreoServices,client::IChoreoServices*, 0x7f0);
 			PROPERTY(m_bAnimGraphUpdateEnabled,bool, 0x7f8);
 			PROPERTY(m_flMaxSlopeDistance,float32, 0x7fc);
 			PROPERTY(m_vLastSlopeCheckPos,GlobalTypes::VectorWS, 0x800);
@@ -40,15 +40,12 @@ namespace CS2 {
 			PROPERTY(m_bAnimationUpdateScheduled,bool, 0x810);
 			PROPERTY(m_vecForce,GlobalTypes::Vector, 0x814);
 			PROPERTY(m_nForceBone,int32_t, 0x820);
-			NESTED_PROPERTY(m_RagdollPose,IDENTITY(server::PhysicsRagdollPose_t), 0x838);
+			NESTED_PROPERTY(m_RagdollPose,server::PhysicsRagdollPose_t, 0x838);
 			PROPERTY(m_bRagdollEnabled,bool, 0x860);
 			PROPERTY(m_bRagdollClientSide,bool, 0x861);
 			PROPERTY(m_xParentedRagdollRootInEntitySpace,GlobalTypes::CTransform, 0x870);
 			S2_PAD(0x2F0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseAnimGraph) == 0xA20, "CBaseAnimGraph size should be 0xA20");
-
-#endif
 	}
 }

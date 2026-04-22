@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -27,15 +27,12 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsEntitySolver : public CS2::server::CLogicalEntity {
 		public:
-			PROPERTY(m_hMovingEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c0);
-			PROPERTY(m_hPhysicsBlocker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c4);
+			PROPERTY(m_hMovingEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c0);
+			PROPERTY(m_hPhysicsBlocker,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c4);
 			PROPERTY(m_separationDuration,float32, 0x4c8);
-			NESTED_PROPERTY(m_cancelTime,IDENTITY(entity2::GameTime_t), 0x4cc);
+			NESTED_PROPERTY(m_cancelTime,entity2::GameTime_t, 0x4cc);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysicsEntitySolver) == 0x4D0, "CPhysicsEntitySolver size should be 0x4D0");
-
-#endif
 	}
 }

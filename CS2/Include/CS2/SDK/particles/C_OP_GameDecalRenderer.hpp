@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "EventTypeSelection_t.hpp"
-#include "ParticleCollisionMask_t.hpp"
-#include "ParticleCollisionGroup_t.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/EventTypeSelection_t.hpp>
+#include <SDK/particles/ParticleCollisionMask_t.hpp>
+#include <SDK/particles/ParticleCollisionGroup_t.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -27,16 +27,16 @@ namespace CS2 {
 		class C_OP_GameDecalRenderer : public CS2::particles::CParticleFunctionRenderer {
 		public:
 			PROPERTY(m_sDecalGroupName,GlobalTypes::CGlobalSymbol, 0x220);
-			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x228);
-			PROPERTY(m_nInteractionMask,IDENTITY(particles::ParticleCollisionMask_t), 0x230);
-			PROPERTY(m_nCollisionGroup,IDENTITY(particles::ParticleCollisionGroup_t), 0x238);
-			NESTED_PROPERTY(m_vecStartPos,IDENTITY(particleslib::CPerParticleVecInput), 0x240);
-			NESTED_PROPERTY(m_vecEndPos,IDENTITY(particleslib::CPerParticleVecInput), 0x8f8);
-			NESTED_PROPERTY(m_flTraceBloat,IDENTITY(particleslib::CPerParticleFloatInput), 0xfb0);
-			NESTED_PROPERTY(m_flDecalSize,IDENTITY(particleslib::CPerParticleFloatInput), 0x1120);
-			NESTED_PROPERTY(m_nDecalGroupIndex,IDENTITY(particleslib::CPerParticleFloatInput), 0x1290);
-			NESTED_PROPERTY(m_flDecalRotation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1400);
-			NESTED_PROPERTY(m_vModulationColor,IDENTITY(particleslib::CPerParticleVecInput), 0x1570);
+			PROPERTY(m_nEventType,particles::EventTypeSelection_t, 0x228);
+			PROPERTY(m_nInteractionMask,particles::ParticleCollisionMask_t, 0x230);
+			PROPERTY(m_nCollisionGroup,particles::ParticleCollisionGroup_t, 0x238);
+			NESTED_PROPERTY(m_vecStartPos,particleslib::CPerParticleVecInput, 0x240);
+			NESTED_PROPERTY(m_vecEndPos,particleslib::CPerParticleVecInput, 0x8f8);
+			NESTED_PROPERTY(m_flTraceBloat,particleslib::CPerParticleFloatInput, 0xfb0);
+			NESTED_PROPERTY(m_flDecalSize,particleslib::CPerParticleFloatInput, 0x1120);
+			NESTED_PROPERTY(m_nDecalGroupIndex,particleslib::CPerParticleFloatInput, 0x1290);
+			NESTED_PROPERTY(m_flDecalRotation,particleslib::CPerParticleFloatInput, 0x1400);
+			NESTED_PROPERTY(m_vModulationColor,particleslib::CPerParticleVecInput, 0x1570);
 			PROPERTY(m_bUseGameDefaultDecalSize,bool, 0x1c28);
 			PROPERTY(m_bRandomDecalRotation,bool, 0x1c29);
 			PROPERTY(m_bRandomlySelectDecalInGroup,bool, 0x1c2a);
@@ -44,9 +44,6 @@ namespace CS2 {
 			PROPERTY(m_bVisualizeTraces,bool, 0x1c2c);
 			S2_PAD(0x1A10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_GameDecalRenderer) == 0x1C30, "C_OP_GameDecalRenderer size should be 0x1C30");
-
-#endif
 	}
 }

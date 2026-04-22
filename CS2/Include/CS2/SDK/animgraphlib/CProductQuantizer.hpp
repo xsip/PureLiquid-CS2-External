@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVectorQuantizer.hpp"
+#include <SDK/animgraphlib/CVectorQuantizer.hpp>
 
 
 
@@ -21,13 +21,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CProductQuantizer  {
 		public:
-			NESTED_PROPERTY(m_subQuantizers,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CVectorQuantizer>), 0x0);
+			NESTED_PROPERTY(m_subQuantizers,GlobalTypes::CUtlVector<animgraphlib::CVectorQuantizer>, 0x0);
 			PROPERTY(m_nDimensions,int32_t, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CProductQuantizer) == 0x20, "CProductQuantizer size should be 0x20");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CEconEntity.hpp"
-#include "../entity2/GameTick_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CEconEntity.hpp>
+#include <SDK/entity2/GameTick_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -23,19 +23,16 @@ namespace CS2 {
 	namespace server {
 		class CBasePlayerWeapon : public CS2::server::CEconEntity {
 		public:
-			NESTED_PROPERTY(m_nNextPrimaryAttackTick,IDENTITY(entity2::GameTick_t), 0xde0);
+			NESTED_PROPERTY(m_nNextPrimaryAttackTick,entity2::GameTick_t, 0xde0);
 			PROPERTY(m_flNextPrimaryAttackTickRatio,float32, 0xde4);
-			NESTED_PROPERTY(m_nNextSecondaryAttackTick,IDENTITY(entity2::GameTick_t), 0xde8);
+			NESTED_PROPERTY(m_nNextSecondaryAttackTick,entity2::GameTick_t, 0xde8);
 			PROPERTY(m_flNextSecondaryAttackTickRatio,float32, 0xdec);
 			PROPERTY(m_iClip1,int32_t, 0xdf0);
 			PROPERTY(m_iClip2,int32_t, 0xdf4);
 			PROPERTY_ARRAY(m_pReserveAmmo,int32_t, 2 , 0xdf8);
-			NESTED_PROPERTY(m_OnPlayerUse,IDENTITY(entity2::CEntityIOOutput), 0xe00);
+			NESTED_PROPERTY(m_OnPlayerUse,entity2::CEntityIOOutput, 0xe00);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBasePlayerWeapon) == 0xE20, "CBasePlayerWeapon size should be 0xE20");
-
-#endif
 	}
 }

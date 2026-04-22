@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
 
 
 
@@ -26,16 +26,13 @@ namespace CS2 {
 	namespace server {
 		class CTriggerProximity : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_hMeasureTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x890);
+			PROPERTY(m_hMeasureTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x890);
 			PROPERTY(m_iszMeasureTarget,GlobalTypes::CUtlSymbolLarge*, 0x898);
 			PROPERTY(m_fRadius,float32, 0x8a0);
 			PROPERTY(m_nTouchers,int32_t, 0x8a4);
-			// PROPERTY(m_NearestEntityDistance,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32, float32 >), 0x8a8);
+			PROPERTY(m_NearestEntityDistance,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x8a8);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerProximity) == 0x8C8, "CTriggerProximity size should be 0x8C8");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace server {
 		class CInfoWorldLayer : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_pOutputOnEntitiesSpawned,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
+			NESTED_PROPERTY(m_pOutputOnEntitiesSpawned,entity2::CEntityIOOutput, 0x4a8);
 			PROPERTY(m_worldName,GlobalTypes::CUtlSymbolLarge*, 0x4c0);
 			PROPERTY(m_layerName,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
 			PROPERTY(m_bWorldLayerVisible,bool, 0x4d0);
@@ -31,9 +31,6 @@ namespace CS2 {
 			PROPERTY(m_hLayerSpawnGroup,uint32_t, 0x4d4);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoWorldLayer) == 0x4D8, "CInfoWorldLayer size should be 0x4D8");
-
-#endif
 	}
 }

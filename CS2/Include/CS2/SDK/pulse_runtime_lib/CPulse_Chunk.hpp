@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PGDInstruction_t.hpp"
-#include "CPulse_RegisterInfo.hpp"
-#include "CPulse_InstructionDebug.hpp"
+#include <SDK/pulse_runtime_lib/PGDInstruction_t.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_RegisterInfo.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_InstructionDebug.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulse_Chunk  {
 		public:
-			// PROPERTY(m_Instructions,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::PGDInstruction_t>), 0x0);
-			// PROPERTY(m_Registers,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulse_RegisterInfo>), 0x10);
-			// PROPERTY(m_InstructionDebugInfos,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulse_InstructionDebug>), 0x20);
+			PROPERTY(m_Instructions,GlobalTypes::CUtlLeanVector<pulse_runtime_lib::PGDInstruction_t>, 0x0);
+			PROPERTY(m_Registers,GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulse_RegisterInfo>, 0x10);
+			PROPERTY(m_InstructionDebugInfos,GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulse_InstructionDebug>, 0x20);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_Chunk) == 0x58, "CPulse_Chunk size should be 0x58");
-
-#endif
 	}
 }

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLeafUpdateNode.hpp"
-#include "CAnimActionUpdater.hpp"
-#include "CPoseHandle.hpp"
-#include "../animationsystem/HSequence.hpp"
+#include <SDK/animgraphlib/CLeafUpdateNode.hpp>
+#include <SDK/animgraphlib/CAnimActionUpdater.hpp>
+#include <SDK/animgraphlib/CPoseHandle.hpp>
+#include <SDK/animationsystem/HSequence.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSingleFrameUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			NESTED_PROPERTY(m_actions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimActionUpdater>>), 0x58);
-			NESTED_PROPERTY(m_hPoseCacheHandle,IDENTITY(animgraphlib::CPoseHandle), 0x70);
-			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x74);
+			NESTED_PROPERTY(m_actions,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimActionUpdater>>, 0x58);
+			NESTED_PROPERTY(m_hPoseCacheHandle,animgraphlib::CPoseHandle, 0x70);
+			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x74);
 			PROPERTY(m_flCycle,float32, 0x78);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSingleFrameUpdateNode) == 0x80, "CSingleFrameUpdateNode size should be 0x80");
-
-#endif
 	}
 }

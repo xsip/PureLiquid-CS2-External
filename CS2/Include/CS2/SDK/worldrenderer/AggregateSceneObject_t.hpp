@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ObjectTypeFlags_t.hpp"
-#include "AggregateMeshInfo_t.hpp"
-#include "AggregateLODSetup_t.hpp"
+#include <SDK/worldrenderer/ObjectTypeFlags_t.hpp>
+#include <SDK/worldrenderer/AggregateMeshInfo_t.hpp>
+#include <SDK/worldrenderer/AggregateLODSetup_t.hpp>
 
 
 
@@ -28,21 +28,18 @@ namespace CS2 {
 	namespace worldrenderer {
 		class AggregateSceneObject_t  {
 		public:
-			PROPERTY(m_allFlags,IDENTITY(worldrenderer::ObjectTypeFlags_t), 0x0);
-			PROPERTY(m_anyFlags,IDENTITY(worldrenderer::ObjectTypeFlags_t), 0x4);
+			PROPERTY(m_allFlags,worldrenderer::ObjectTypeFlags_t, 0x0);
+			PROPERTY(m_anyFlags,worldrenderer::ObjectTypeFlags_t, 0x4);
 			PROPERTY(m_nLayer,int16_t, 0x8);
 			PROPERTY(m_instanceStream,int16_t, 0xa);
 			PROPERTY(m_vertexAlbedoStream,int16_t, 0xc);
-			NESTED_PROPERTY(m_aggregateMeshes,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateMeshInfo_t>), 0x10);
-			NESTED_PROPERTY(m_lodSetups,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateLODSetup_t>), 0x28);
-			NESTED_PROPERTY(m_visClusterMembership,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x40);
-			NESTED_PROPERTY(m_fragmentTransforms,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::matrix3x4_t>), 0x58);
-			PROPERTY(m_renderableModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x70);
+			NESTED_PROPERTY(m_aggregateMeshes,GlobalTypes::CUtlVector<worldrenderer::AggregateMeshInfo_t>, 0x10);
+			NESTED_PROPERTY(m_lodSetups,GlobalTypes::CUtlVector<worldrenderer::AggregateLODSetup_t>, 0x28);
+			NESTED_PROPERTY(m_visClusterMembership,GlobalTypes::CUtlVector< uint16 >, 0x40);
+			NESTED_PROPERTY(m_fragmentTransforms,GlobalTypes::CUtlVector<GlobalTypes::matrix3x4_t>, 0x58);
+			PROPERTY(m_renderableModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x70);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::AggregateSceneObject_t) == 0x78, "AggregateSceneObject_t size should be 0x78");
-
-#endif
 	}
 }

@@ -13,20 +13,20 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nTotalElementCount = 0x0; // int32_t m_nTotalElementCount; |  0x0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_szChannelClass = 0x8; // GlobalTypes::CUtlVector<char*>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_szVariableName = 0x20; // GlobalTypes::CUtlVector<char*>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nType = 0x38; // GlobalTypes::CUtlVector<mathlib_extended::fieldtype_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nType = 0x38; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nFlags = 0x50; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_szGrouping = 0x68; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nCompressorIndex = 0x80; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_szElementNames = 0x98; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<char*>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nElementUniqueID = 0xb0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<int32>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_szElementNames = 0x98; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nElementUniqueID = 0xb0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nElementMask = 0xc8; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vectorCompressor = 0xf8; // GlobalTypes::CUtlVector<����::CCompressor*<Vector>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // GlobalTypes::CUtlVector<����::CCompressor*<QuaternionStorage>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_intCompressor = 0x128; // GlobalTypes::CUtlVector<����::CCompressor*<int32>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_boolCompressor = 0x140; // GlobalTypes::CUtlVector<����::CCompressor*<bool>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_colorCompressor = 0x158; // GlobalTypes::CUtlVector<����::CCompressor*<Color>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vector2DCompressor = 0x170; // GlobalTypes::CUtlVector<����::CCompressor*<Vector2D>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // GlobalTypes::CUtlVector<����::CCompressor*<Vector4D>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vectorCompressor = 0xf8; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_intCompressor = 0x128; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_boolCompressor = 0x140; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_colorCompressor = 0x158; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vector2DCompressor = 0x170; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // GlobalTypes::CUtlVector<�d�::CCompressor*>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

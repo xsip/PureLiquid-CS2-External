@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../navlib/Extent.hpp"
-#include "CountdownTimer.hpp"
-#include "IntervalTimer.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/navlib/Extent.hpp>
+#include <SDK/server/CountdownTimer.hpp>
+#include <SDK/server/IntervalTimer.hpp>
 
 
 
@@ -34,25 +34,22 @@ namespace CS2 {
 			PROPERTY(m_nFireLifetime,float32, 0x107c);
 			PROPERTY(m_bInPostEffectTime,bool, 0x1080);
 			PROPERTY(m_bWasCreatedInSmoke,bool, 0x1081);
-			NESTED_PROPERTY(m_extent,IDENTITY(navlib::Extent), 0x1288);
-			NESTED_PROPERTY(m_damageTimer,IDENTITY(server::CountdownTimer), 0x12a0);
-			NESTED_PROPERTY(m_damageRampTimer,IDENTITY(server::CountdownTimer), 0x12b8);
+			NESTED_PROPERTY(m_extent,navlib::Extent, 0x1288);
+			NESTED_PROPERTY(m_damageTimer,server::CountdownTimer, 0x12a0);
+			NESTED_PROPERTY(m_damageRampTimer,server::CountdownTimer, 0x12b8);
 			PROPERTY(m_splashVelocity,GlobalTypes::Vector, 0x12d0);
 			PROPERTY(m_InitialSplashVelocity,GlobalTypes::Vector, 0x12dc);
 			PROPERTY(m_startPos,GlobalTypes::Vector, 0x12e8);
 			PROPERTY(m_vecOriginalSpawnLocation,GlobalTypes::Vector, 0x12f4);
-			NESTED_PROPERTY(m_activeTimer,IDENTITY(server::IntervalTimer), 0x1300);
+			NESTED_PROPERTY(m_activeTimer,server::IntervalTimer, 0x1300);
 			PROPERTY(m_fireSpawnOffset,int32_t, 0x1310);
 			PROPERTY(m_nMaxFlames,int32_t, 0x1314);
 			PROPERTY(m_nSpreadCount,int32_t, 0x1318);
-			NESTED_PROPERTY(m_BookkeepingTimer,IDENTITY(server::CountdownTimer), 0x1320);
-			NESTED_PROPERTY(m_NextSpreadTimer,IDENTITY(server::CountdownTimer), 0x1338);
+			NESTED_PROPERTY(m_BookkeepingTimer,server::CountdownTimer, 0x1320);
+			NESTED_PROPERTY(m_NextSpreadTimer,server::CountdownTimer, 0x1338);
 			PROPERTY(m_nSourceItemDefIndex,uint16_t, 0x1350);
 			S2_PAD(0xC88);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInferno) == 0x13B8, "CInferno size should be 0x13B8");
-
-#endif
 	}
 }

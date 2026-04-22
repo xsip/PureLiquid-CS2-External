@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -26,22 +26,19 @@ namespace CS2 {
 	namespace server {
 		class CAI_Expresser  {
 		public:
-			NESTED_PROPERTY(m_flStopTalkTime,IDENTITY(entity2::GameTime_t), 0x60);
-			NESTED_PROPERTY(m_flStopTalkTimeWithoutDelay,IDENTITY(entity2::GameTime_t), 0x64);
-			NESTED_PROPERTY(m_flQueuedSpeechTime,IDENTITY(entity2::GameTime_t), 0x68);
-			NESTED_PROPERTY(m_flBlockedTalkTime,IDENTITY(entity2::GameTime_t), 0x6c);
+			NESTED_PROPERTY(m_flStopTalkTime,entity2::GameTime_t, 0x60);
+			NESTED_PROPERTY(m_flStopTalkTimeWithoutDelay,entity2::GameTime_t, 0x64);
+			NESTED_PROPERTY(m_flQueuedSpeechTime,entity2::GameTime_t, 0x68);
+			NESTED_PROPERTY(m_flBlockedTalkTime,entity2::GameTime_t, 0x6c);
 			PROPERTY(m_voicePitch,int32_t, 0x70);
-			NESTED_PROPERTY(m_flLastTimeAcceptedSpeak,IDENTITY(entity2::GameTime_t), 0x74);
+			NESTED_PROPERTY(m_flLastTimeAcceptedSpeak,entity2::GameTime_t, 0x74);
 			PROPERTY(m_bAllowSpeakingInterrupts,bool, 0x78);
 			PROPERTY(m_bConsiderSceneInvolvementAsSpeech,bool, 0x79);
 			PROPERTY(m_bSceneEntityDisabled,bool, 0x7a);
 			PROPERTY(m_nLastSpokenPriority,int32_t, 0x7c);
-			PROPERTY(m_pOuter,IDENTITY(server::CBaseFlex*), 0x98);
+			PROPERTY(m_pOuter,server::CBaseFlex*, 0x98);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CAI_Expresser) == 0xA0, "CAI_Expresser size should be 0xA0");
-
-#endif
 	}
 }

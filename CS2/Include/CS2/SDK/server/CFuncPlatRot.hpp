@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CFuncPlat.hpp"
+#include <SDK/server/CFuncPlat.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_start,GlobalTypes::QAngle, 0x7ec);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncPlatRot) == 0x7F8, "CFuncPlatRot size should be 0x7F8");
-
-#endif
 	}
 }

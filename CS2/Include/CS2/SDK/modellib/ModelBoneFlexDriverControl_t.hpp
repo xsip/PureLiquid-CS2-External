@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ModelBoneFlexComponent_t.hpp"
+#include <SDK/modellib/ModelBoneFlexComponent_t.hpp>
 
 
 
@@ -21,16 +21,13 @@ namespace CS2 {
 	namespace modellib {
 		class ModelBoneFlexDriverControl_t  {
 		public:
-			PROPERTY(m_nBoneComponent,IDENTITY(modellib::ModelBoneFlexComponent_t), 0x0);
+			PROPERTY(m_nBoneComponent,modellib::ModelBoneFlexComponent_t, 0x0);
 			PROPERTY(m_flexController,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_flexControllerToken,uint32_t, 0x10);
 			PROPERTY(m_flMin,float32, 0x14);
 			PROPERTY(m_flMax,float32, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::ModelBoneFlexDriverControl_t) == 0x20, "ModelBoneFlexDriverControl_t size should be 0x20");
-
-#endif
 	}
 }

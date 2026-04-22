@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
-#include "../pulse_runtime_lib/SignatureOutflow_Continue.hpp"
-#include "../pulse_runtime_lib/SignatureOutflow_Resume.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
+#include <SDK/pulse_runtime_lib/SignatureOutflow_Continue.hpp>
+#include <SDK/pulse_runtime_lib/SignatureOutflow_Resume.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 	namespace pulse_system {
 		class CPulseCell_Test_MultiOutflow_WithParams_Yielding : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_Out1,IDENTITY(pulse_runtime_lib::SignatureOutflow_Continue), 0x48);
-			NESTED_PROPERTY(m_AsyncChild1,IDENTITY(pulse_runtime_lib::SignatureOutflow_Continue), 0x90);
-			NESTED_PROPERTY(m_AsyncChild2,IDENTITY(pulse_runtime_lib::SignatureOutflow_Continue), 0xd8);
-			NESTED_PROPERTY(m_YieldResume1,IDENTITY(pulse_runtime_lib::SignatureOutflow_Resume), 0x120);
-			NESTED_PROPERTY(m_YieldResume2,IDENTITY(pulse_runtime_lib::SignatureOutflow_Resume), 0x168);
+			NESTED_PROPERTY(m_Out1,pulse_runtime_lib::SignatureOutflow_Continue, 0x48);
+			NESTED_PROPERTY(m_AsyncChild1,pulse_runtime_lib::SignatureOutflow_Continue, 0x90);
+			NESTED_PROPERTY(m_AsyncChild2,pulse_runtime_lib::SignatureOutflow_Continue, 0xd8);
+			NESTED_PROPERTY(m_YieldResume1,pulse_runtime_lib::SignatureOutflow_Resume, 0x120);
+			NESTED_PROPERTY(m_YieldResume2,pulse_runtime_lib::SignatureOutflow_Resume, 0x168);
 			S2_PAD(0x168);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_system::CPulseCell_Test_MultiOutflow_WithParams_Yielding) == 0x1B0, "CPulseCell_Test_MultiOutflow_WithParams_Yielding size should be 0x1B0");
-
-#endif
 	}
 }

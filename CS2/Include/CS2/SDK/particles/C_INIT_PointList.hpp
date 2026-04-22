@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "PointDefinition_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/PointDefinition_t.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PointList : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
-			NESTED_PROPERTY(m_pointList,IDENTITY(GlobalTypes::CUtlVector<particles::PointDefinition_t>), 0x1e0);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
+			NESTED_PROPERTY(m_pointList,GlobalTypes::CUtlVector<particles::PointDefinition_t>, 0x1e0);
 			PROPERTY(m_bPlaceAlongPath,bool, 0x1f8);
 			PROPERTY(m_bClosedLoop,bool, 0x1f9);
 			PROPERTY(m_nNumPointsAlongPath,int32_t, 0x1fc);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_PointList) == 0x200, "C_INIT_PointList size should be 0x200");
-
-#endif
 	}
 }

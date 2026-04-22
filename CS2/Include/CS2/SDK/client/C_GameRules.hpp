@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/CNetworkVarChainer.hpp"
+#include <SDK/entity2/CNetworkVarChainer.hpp>
 
 
 
@@ -21,15 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_GameRules  {
 		public:
-			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x8);
+			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x8);
 			PROPERTY(m_nTotalPausedTicks,int32_t, 0x30);
 			PROPERTY(m_nPauseStartTick,int32_t, 0x34);
 			PROPERTY(m_bGamePaused,bool, 0x38);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_GameRules) == 0x40, "C_GameRules size should be 0x40");
-
-#endif
 	}
 }

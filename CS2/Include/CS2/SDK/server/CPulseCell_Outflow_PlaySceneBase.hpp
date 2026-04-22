@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
-#include "../pulse_runtime_lib/CPulse_ResumePoint.hpp"
-#include "../pulse_runtime_lib/CPulse_OutflowConnection.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 	namespace server {
 		class CPulseCell_Outflow_PlaySceneBase : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x48);
-			NESTED_PROPERTY(m_OnCanceled,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x90);
-			NESTED_PROPERTY(m_Triggers,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>), 0xd8);
+			NESTED_PROPERTY(m_OnFinished,pulse_runtime_lib::CPulse_ResumePoint, 0x48);
+			NESTED_PROPERTY(m_OnCanceled,pulse_runtime_lib::CPulse_ResumePoint, 0x90);
+			NESTED_PROPERTY(m_Triggers,server::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>, 0xd8);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_PlaySceneBase) == 0xF0, "CPulseCell_Outflow_PlaySceneBase size should be 0xF0");
-
-#endif
 	}
 }

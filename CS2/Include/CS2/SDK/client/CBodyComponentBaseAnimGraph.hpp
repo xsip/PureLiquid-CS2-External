@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBodyComponentSkeletonInstance.hpp"
-#include "CBaseAnimGraphController.hpp"
+#include <SDK/client/CBodyComponentSkeletonInstance.hpp>
+#include <SDK/client/CBaseAnimGraphController.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace client {
 		class CBodyComponentBaseAnimGraph : public CS2::client::CBodyComponentSkeletonInstance {
 		public:
-			NESTED_PROPERTY(m_animationController,IDENTITY(client::CBaseAnimGraphController), 0x550);
+			NESTED_PROPERTY(m_animationController,client::CBaseAnimGraphController, 0x550);
 			S2_PAD(0x1B40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBodyComponentBaseAnimGraph) == 0x2090, "CBodyComponentBaseAnimGraph size should be 0x2090");
-
-#endif
 	}
 }

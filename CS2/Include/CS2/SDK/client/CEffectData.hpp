@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/AttachmentHandle_t.hpp"
+#include <SDK/modellib/AttachmentHandle_t.hpp>
 
 
 
@@ -36,22 +36,19 @@ namespace CS2 {
 			PROPERTY(m_flMagnitude,float32, 0x44);
 			PROPERTY(m_flRadius,float32, 0x48);
 			PROPERTY(m_nSurfaceProp,GlobalTypes::CUtlStringToken*, 0x4c);
-			PROPERTY(m_nEffectIndex,IDENTITY(GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x50);
+			PROPERTY(m_nEffectIndex,GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x50);
 			PROPERTY(m_nDamageType,uint32_t, 0x58);
 			PROPERTY(m_nPenetrate,uint8_t, 0x5c);
 			PROPERTY(m_nMaterial,uint16_t, 0x5e);
 			PROPERTY(m_nHitBox,int16_t, 0x60);
 			PROPERTY(m_nColor,uint8_t, 0x62);
 			PROPERTY(m_fFlags,uint8_t, 0x63);
-			NESTED_PROPERTY(m_nAttachmentIndex,IDENTITY(modellib::AttachmentHandle_t), 0x64);
+			NESTED_PROPERTY(m_nAttachmentIndex,modellib::AttachmentHandle_t, 0x64);
 			PROPERTY(m_nAttachmentName,GlobalTypes::CUtlStringToken*, 0x68);
 			PROPERTY(m_iEffectName,uint16_t, 0x6c);
 			PROPERTY(m_nExplosionType,uint8_t, 0x6e);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CEffectData) == 0x78, "CEffectData size should be 0x78");
-
-#endif
 	}
 }

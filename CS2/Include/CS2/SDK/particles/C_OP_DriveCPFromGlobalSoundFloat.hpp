@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
 
 
 
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_FieldName,GlobalTypes::CUtlString*, 0x200);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_DriveCPFromGlobalSoundFloat) == 0x210, "C_OP_DriveCPFromGlobalSoundFloat size should be 0x210");
-
-#endif
 	}
 }

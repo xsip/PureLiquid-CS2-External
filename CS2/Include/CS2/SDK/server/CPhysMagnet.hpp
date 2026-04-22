@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "magnetted_objects_t.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/magnetted_objects_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -24,23 +24,20 @@ namespace CS2 {
 	namespace server {
 		class CPhysMagnet : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_OnMagnetAttach,IDENTITY(entity2::CEntityIOOutput), 0xa20);
-			NESTED_PROPERTY(m_OnMagnetDetach,IDENTITY(entity2::CEntityIOOutput), 0xa38);
+			NESTED_PROPERTY(m_OnMagnetAttach,entity2::CEntityIOOutput, 0xa20);
+			NESTED_PROPERTY(m_OnMagnetDetach,entity2::CEntityIOOutput, 0xa38);
 			PROPERTY(m_massScale,float32, 0xa50);
 			PROPERTY(m_forceLimit,float32, 0xa54);
 			PROPERTY(m_torqueLimit,float32, 0xa58);
-			NESTED_PROPERTY(m_MagnettedEntities,IDENTITY(GlobalTypes::CUtlVector<server::magnetted_objects_t>), 0xa60);
+			NESTED_PROPERTY(m_MagnettedEntities,GlobalTypes::CUtlVector<server::magnetted_objects_t>, 0xa60);
 			PROPERTY(m_bActive,bool, 0xa78);
 			PROPERTY(m_bHasHitSomething,bool, 0xa79);
 			PROPERTY(m_flTotalMass,float32, 0xa7c);
 			PROPERTY(m_flRadius,float32, 0xa80);
-			NESTED_PROPERTY(m_flNextSuckTime,IDENTITY(entity2::GameTime_t), 0xa84);
+			NESTED_PROPERTY(m_flNextSuckTime,entity2::GameTime_t, 0xa84);
 			PROPERTY(m_iMaxObjectsAttached,int32_t, 0xa88);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysMagnet) == 0xA90, "CPhysMagnet size should be 0xA90");
-
-#endif
 	}
 }

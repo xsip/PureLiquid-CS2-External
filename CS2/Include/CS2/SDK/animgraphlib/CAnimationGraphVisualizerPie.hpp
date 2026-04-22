@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimationGraphVisualizerPrimitiveBase.hpp"
+#include <SDK/animgraphlib/CAnimationGraphVisualizerPrimitiveBase.hpp>
 
 
 
@@ -27,9 +27,6 @@ namespace CS2 {
 			PROPERTY(m_Color,GlobalTypes::Color, 0x70);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimationGraphVisualizerPie) == 0x80, "CAnimationGraphVisualizerPie size should be 0x80");
-
-#endif
 	}
 }

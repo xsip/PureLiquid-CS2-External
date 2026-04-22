@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLightRigLight.hpp"
+#include <SDK/toolscene/CLightRigLight.hpp>
 
 
 
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(m_bCastShadows,bool, 0x50);
 			S2_PAD(0x14);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigSunLight) == 0x54, "CLightRigSunLight size should be 0x54");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "IntervalTimer.hpp"
-#include "TimelineCompression_t.hpp"
+#include <SDK/client/IntervalTimer.hpp>
+#include <SDK/client/TimelineCompression_t.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 			PROPERTY(m_nBucketCount,int32_t, 0x210);
 			PROPERTY(m_flInterval,float32, 0x214);
 			PROPERTY(m_flFinalValue,float32, 0x218);
-			PROPERTY(m_nCompressionType,IDENTITY(client::TimelineCompression_t), 0x21c);
+			PROPERTY(m_nCompressionType,client::TimelineCompression_t, 0x21c);
 			PROPERTY(m_bStopped,bool, 0x220);
 			S2_PAD(0x218);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CTimeline) == 0x228, "CTimeline size should be 0x228");
-
-#endif
 	}
 }

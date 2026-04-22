@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "WorldBuilderParams_t.hpp"
-#include "NodeData_t.hpp"
-#include "BakedLightingInfo_t.hpp"
-#include "../resourcesystem/InfoForResourceTypeCEntityLump.hpp"
+#include <SDK/worldrenderer/WorldBuilderParams_t.hpp>
+#include <SDK/worldrenderer/NodeData_t.hpp>
+#include <SDK/worldrenderer/BakedLightingInfo_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCEntityLump.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 	namespace worldrenderer {
 		class World_t  {
 		public:
-			NESTED_PROPERTY(m_builderParams,IDENTITY(worldrenderer::WorldBuilderParams_t), 0x0);
-			NESTED_PROPERTY(m_worldNodes,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::NodeData_t>), 0x60);
-			NESTED_PROPERTY(m_worldLightingInfo,IDENTITY(worldrenderer::BakedLightingInfo_t), 0x78);
-			NESTED_PROPERTY(m_entityLumps,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeCEntityLump>>), 0xc0);
+			NESTED_PROPERTY(m_builderParams,worldrenderer::WorldBuilderParams_t, 0x0);
+			NESTED_PROPERTY(m_worldNodes,GlobalTypes::CUtlVector<worldrenderer::NodeData_t>, 0x60);
+			NESTED_PROPERTY(m_worldLightingInfo,worldrenderer::BakedLightingInfo_t, 0x78);
+			NESTED_PROPERTY(m_entityLumps,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeCEntityLump>>, 0xc0);
 			S2_PAD(0xD8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::World_t) == 0xD8, "World_t size should be 0xD8");
-
-#endif
 	}
 }

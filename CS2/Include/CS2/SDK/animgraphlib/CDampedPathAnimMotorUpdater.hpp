@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPathAnimMotorUpdaterBase.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CPathAnimMotorUpdaterBase.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -24,16 +24,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_flAnticipationTime,float32, 0x2c);
 			PROPERTY(m_flMinSpeedScale,float32, 0x30);
-			NESTED_PROPERTY(m_hAnticipationPosParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x34);
-			NESTED_PROPERTY(m_hAnticipationHeadingParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x36);
+			NESTED_PROPERTY(m_hAnticipationPosParam,animgraphlib::CAnimParamHandle, 0x34);
+			NESTED_PROPERTY(m_hAnticipationHeadingParam,animgraphlib::CAnimParamHandle, 0x36);
 			PROPERTY(m_flSpringConstant,float32, 0x38);
 			PROPERTY(m_flMinSpringTension,float32, 0x3c);
 			PROPERTY(m_flMaxSpringTension,float32, 0x40);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CDampedPathAnimMotorUpdater) == 0x48, "CDampedPathAnimMotorUpdater size should be 0x48");
-
-#endif
 	}
 }

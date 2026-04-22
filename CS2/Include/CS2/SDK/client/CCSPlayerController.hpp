@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBasePlayerController.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "QuestProgress_Reason.hpp"
+#include <SDK/client/CBasePlayerController.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/Reason.hpp>
 
 
 
@@ -33,19 +33,19 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayerController : public CS2::client::CBasePlayerController {
 		public:
-			PROPERTY(m_pInGameMoneyServices,IDENTITY(client::CCSPlayerController_InGameMoneyServices*), 0x808);
-			PROPERTY(m_pInventoryServices,IDENTITY(client::CCSPlayerController_InventoryServices*), 0x810);
-			PROPERTY(m_pActionTrackingServices,IDENTITY(client::CCSPlayerController_ActionTrackingServices*), 0x818);
-			PROPERTY(m_pDamageServices,IDENTITY(client::CCSPlayerController_DamageServices*), 0x820);
+			PROPERTY(m_pInGameMoneyServices,client::CCSPlayerController_InGameMoneyServices*, 0x808);
+			PROPERTY(m_pInventoryServices,client::CCSPlayerController_InventoryServices*, 0x810);
+			PROPERTY(m_pActionTrackingServices,client::CCSPlayerController_ActionTrackingServices*, 0x818);
+			PROPERTY(m_pDamageServices,client::CCSPlayerController_DamageServices*, 0x820);
 			PROPERTY(m_iPing,uint32_t, 0x828);
 			PROPERTY(m_bHasCommunicationAbuseMute,bool, 0x82c);
 			PROPERTY(m_uiCommunicationMuteFlags,uint32_t, 0x830);
 			PROPERTY(m_szCrosshairCodes,GlobalTypes::CUtlSymbolLarge*, 0x838);
 			PROPERTY(m_iPendingTeamNum,uint8_t, 0x840);
-			NESTED_PROPERTY(m_flForceTeamTime,IDENTITY(entity2::GameTime_t), 0x844);
+			NESTED_PROPERTY(m_flForceTeamTime,entity2::GameTime_t, 0x844);
 			PROPERTY(m_iCompTeammateColor,int32_t, 0x848);
 			PROPERTY(m_bEverPlayedOnTeam,bool, 0x84c);
-			NESTED_PROPERTY(m_flPreviousForceJoinTeamTime,IDENTITY(entity2::GameTime_t), 0x850);
+			NESTED_PROPERTY(m_flPreviousForceJoinTeamTime,entity2::GameTime_t, 0x850);
 			PROPERTY(m_szClan,GlobalTypes::CUtlSymbolLarge*, 0x858);
 			PROPERTY(m_sSanitizedPlayerName,GlobalTypes::CUtlString*, 0x860);
 			PROPERTY(m_iCoachingTeam,int32_t, 0x868);
@@ -60,7 +60,7 @@ namespace CS2 {
 			PROPERTY(m_nEndMatchNextMapVote,int32_t, 0x898);
 			PROPERTY(m_unActiveQuestId,uint16_t, 0x89c);
 			PROPERTY(m_rtActiveMissionPeriod,uint32_t, 0x8a0);
-			PROPERTY(m_nQuestProgressReason,IDENTITY(client::QuestProgress_Reason), 0x8a4);
+			PROPERTY(m_nQuestProgressReason,client::Reason, 0x8a4);
 			PROPERTY(m_unPlayerTvControlFlags,uint32_t, 0x8a8);
 			PROPERTY(m_iDraftIndex,int32_t, 0x8d8);
 			PROPERTY(m_msQueuedModeDisconnectionTimestamp,uint32_t, 0x8dc);
@@ -78,8 +78,8 @@ namespace CS2 {
 			PROPERTY(m_bHasBeenControlledByPlayerThisRound,bool, 0x902);
 			PROPERTY(m_nBotsControlledThisRound,int32_t, 0x904);
 			PROPERTY(m_bCanControlObservedBot,bool, 0x908);
-			PROPERTY(m_hPlayerPawn,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x90c);
-			PROPERTY(m_hObserverPawn,IDENTITY(GlobalTypes::CHandle<client::C_CSObserverPawn>), 0x910);
+			PROPERTY(m_hPlayerPawn,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x90c);
+			PROPERTY(m_hObserverPawn,GlobalTypes::CHandle<client::C_CSObserverPawn>, 0x910);
 			PROPERTY(m_bPawnIsAlive,bool, 0x914);
 			PROPERTY(m_iPawnHealth,uint32_t, 0x918);
 			PROPERTY(m_iPawnArmor,int32_t, 0x91c);
@@ -89,7 +89,7 @@ namespace CS2 {
 			PROPERTY(m_iPawnLifetimeStart,int32_t, 0x924);
 			PROPERTY(m_iPawnLifetimeEnd,int32_t, 0x928);
 			PROPERTY(m_iPawnBotDifficulty,int32_t, 0x92c);
-			PROPERTY(m_hOriginalControllerOfCurrentPawn,IDENTITY(GlobalTypes::CHandle<client::CCSPlayerController>), 0x930);
+			PROPERTY(m_hOriginalControllerOfCurrentPawn,GlobalTypes::CHandle<client::CCSPlayerController>, 0x930);
 			PROPERTY(m_iScore,int32_t, 0x934);
 			PROPERTY_ARRAY(m_recentKillQueue,uint8_t, 8 , 0x938);
 			PROPERTY(m_nFirstKill,uint8_t, 0x940);
@@ -103,9 +103,6 @@ namespace CS2 {
 			PROPERTY(m_bFireBulletsSeedSynchronized,bool, 0x955);
 			S2_PAD(0x160);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayerController) == 0x958, "CCSPlayerController size should be 0x958");
-
-#endif
 	}
 }

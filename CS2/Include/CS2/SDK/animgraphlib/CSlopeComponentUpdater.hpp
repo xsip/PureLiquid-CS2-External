@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimComponentUpdater.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -23,17 +23,14 @@ namespace CS2 {
 		class CSlopeComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
 			PROPERTY(m_flTraceDistance,float32, 0x34);
-			NESTED_PROPERTY(m_hSlopeAngle,IDENTITY(animgraphlib::CAnimParamHandle), 0x38);
-			NESTED_PROPERTY(m_hSlopeAngleFront,IDENTITY(animgraphlib::CAnimParamHandle), 0x3a);
-			NESTED_PROPERTY(m_hSlopeAngleSide,IDENTITY(animgraphlib::CAnimParamHandle), 0x3c);
-			NESTED_PROPERTY(m_hSlopeHeading,IDENTITY(animgraphlib::CAnimParamHandle), 0x3e);
-			NESTED_PROPERTY(m_hSlopeNormal,IDENTITY(animgraphlib::CAnimParamHandle), 0x40);
-			NESTED_PROPERTY(m_hSlopeNormal_WorldSpace,IDENTITY(animgraphlib::CAnimParamHandle), 0x42);
+			NESTED_PROPERTY(m_hSlopeAngle,animgraphlib::CAnimParamHandle, 0x38);
+			NESTED_PROPERTY(m_hSlopeAngleFront,animgraphlib::CAnimParamHandle, 0x3a);
+			NESTED_PROPERTY(m_hSlopeAngleSide,animgraphlib::CAnimParamHandle, 0x3c);
+			NESTED_PROPERTY(m_hSlopeHeading,animgraphlib::CAnimParamHandle, 0x3e);
+			NESTED_PROPERTY(m_hSlopeNormal,animgraphlib::CAnimParamHandle, 0x40);
+			NESTED_PROPERTY(m_hSlopeNormal_WorldSpace,animgraphlib::CAnimParamHandle, 0x42);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSlopeComponentUpdater) == 0x48, "CSlopeComponentUpdater size should be 0x48");
-
-#endif
 	}
 }

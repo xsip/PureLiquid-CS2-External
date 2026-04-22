@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -24,16 +24,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_sMapName,GlobalTypes::CUtlString*, 0x890);
 			PROPERTY(m_sLandmarkName,GlobalTypes::CUtlString*, 0x898);
-			NESTED_PROPERTY(m_OnChangeLevel,IDENTITY(entity2::CEntityIOOutput), 0x8a0);
+			NESTED_PROPERTY(m_OnChangeLevel,entity2::CEntityIOOutput, 0x8a0);
 			PROPERTY(m_bTouched,bool, 0x8b8);
 			PROPERTY(m_bNoTouch,bool, 0x8b9);
 			PROPERTY(m_bNewChapter,bool, 0x8ba);
 			PROPERTY(m_bOnChangeLevelFired,bool, 0x8bb);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CChangeLevel) == 0x8C0, "CChangeLevel size should be 0x8C0");
-
-#endif
 	}
 }

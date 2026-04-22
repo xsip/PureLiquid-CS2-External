@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CGeneralSpin.hpp"
+#include <SDK/particles/CGeneralSpin.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SpinYaw : public CS2::particles::CGeneralSpin {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SpinYaw) == 0x1E8, "C_OP_SpinYaw size should be 0x1E8");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "CLightEntity.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/server/CLightEntity.hpp>
 
 
 
@@ -29,12 +29,9 @@ namespace CS2 {
 			PROPERTY(m_bPerformScreenFade,bool, 0x4c0);
 			PROPERTY(m_flTargetBrightnessMultiplier,float32, 0x4c4);
 			PROPERTY(m_flCurrentBrightnessMultiplier,float32, 0x4c8);
-			NESTED_PROPERTY(m_vecLights,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CLightEntity>>), 0x4d0);
+			NESTED_PROPERTY(m_vecLights,server::CUtlVector<GlobalTypes::CHandle<server::CLightEntity>>, 0x4d0);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMultiLightProxy) == 0x4E8, "CMultiLightProxy size should be 0x4E8");
-
-#endif
 	}
 }

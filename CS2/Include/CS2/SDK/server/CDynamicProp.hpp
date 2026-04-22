@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBreakableProp.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "../client/AnimLoopMode_t.hpp"
+#include <SDK/server/CBreakableProp.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/client/AnimLoopMode_t.hpp>
 
 
 
@@ -27,13 +27,13 @@ namespace CS2 {
 			PROPERTY(m_bNavObstacleUpdatesOverridden,bool, 0xba9);
 			PROPERTY(m_bUseHitboxesForRenderBox,bool, 0xbaa);
 			PROPERTY(m_bUseAnimGraph,bool, 0xbab);
-			NESTED_PROPERTY(m_pOutputAnimBegun,IDENTITY(entity2::CEntityIOOutput), 0xbb0);
-			NESTED_PROPERTY(m_pOutputAnimOver,IDENTITY(entity2::CEntityIOOutput), 0xbc8);
-			NESTED_PROPERTY(m_pOutputAnimLoopCycleOver,IDENTITY(entity2::CEntityIOOutput), 0xbe0);
-			NESTED_PROPERTY(m_OnAnimReachedStart,IDENTITY(entity2::CEntityIOOutput), 0xbf8);
-			NESTED_PROPERTY(m_OnAnimReachedEnd,IDENTITY(entity2::CEntityIOOutput), 0xc10);
+			NESTED_PROPERTY(m_pOutputAnimBegun,entity2::CEntityIOOutput, 0xbb0);
+			NESTED_PROPERTY(m_pOutputAnimOver,entity2::CEntityIOOutput, 0xbc8);
+			NESTED_PROPERTY(m_pOutputAnimLoopCycleOver,entity2::CEntityIOOutput, 0xbe0);
+			NESTED_PROPERTY(m_OnAnimReachedStart,entity2::CEntityIOOutput, 0xbf8);
+			NESTED_PROPERTY(m_OnAnimReachedEnd,entity2::CEntityIOOutput, 0xc10);
 			PROPERTY(m_iszIdleAnim,GlobalTypes::CUtlSymbolLarge*, 0xc28);
-			PROPERTY(m_nIdleAnimLoopMode,IDENTITY(client::AnimLoopMode_t), 0xc30);
+			PROPERTY(m_nIdleAnimLoopMode,client::AnimLoopMode_t, 0xc30);
 			PROPERTY(m_bRandomizeCycle,bool, 0xc34);
 			PROPERTY(m_bStartDisabled,bool, 0xc35);
 			PROPERTY(m_bFiredStartEndOutput,bool, 0xc36);
@@ -47,9 +47,6 @@ namespace CS2 {
 			PROPERTY(m_nGlowTeam,int32_t, 0xc4c);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CDynamicProp) == 0xC50, "CDynamicProp size should be 0xC50");
-
-#endif
 	}
 }

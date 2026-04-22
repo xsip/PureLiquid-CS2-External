@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "Relationship_t.hpp"
-#include "../client/Class_T.hpp"
+#include <SDK/server/Relationship_t.hpp>
+#include <SDK/client/Class_T.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 	namespace server {
 		class RelationshipOverride_t : public CS2::server::Relationship_t {
 		public:
-			PROPERTY(entity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8);
-			PROPERTY(classType,IDENTITY(client::Class_T), 0xc);
+			PROPERTY(entity,GlobalTypes::CHandle<server::CBaseEntity>, 0x8);
+			PROPERTY(classType,client::Class_T, 0xc);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::RelationshipOverride_t) == 0x10, "RelationshipOverride_t size should be 0x10");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "SceneRequestHandle_t.hpp"
-#include "ESceneRequestState_t.hpp"
+#include <SDK/server/SceneRequestHandle_t.hpp>
+#include <SDK/server/ESceneRequestState_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		class CSceneRequest  {
 		public:
 			PROPERTY(m_szPayloadTypeName,GlobalTypes::CUtlSymbolLarge*, 0x0);
-			NESTED_PROPERTY(m_uHandle,IDENTITY(server::SceneRequestHandle_t), 0x8);
-			PROPERTY(m_state,IDENTITY(server::ESceneRequestState_t), 0xc);
+			NESTED_PROPERTY(m_uHandle,server::SceneRequestHandle_t, 0x8);
+			PROPERTY(m_state,server::ESceneRequestState_t, 0xc);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSceneRequest) == 0x20, "CSceneRequest size should be 0x20");
-
-#endif
 	}
 }

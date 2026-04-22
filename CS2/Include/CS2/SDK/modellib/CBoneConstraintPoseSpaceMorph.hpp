@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBoneConstraintBase.hpp"
-#include "CBoneConstraintPoseSpaceMorph_Input_t.hpp"
+#include <SDK/modellib/CBoneConstraintBase.hpp>
+#include <SDK/modellib/Input_t.hpp>
 
 
 
@@ -24,14 +24,11 @@ namespace CS2 {
 		public:
 			PROPERTY(m_sBoneName,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_sAttachmentName,GlobalTypes::CUtlString*, 0x28);
-			PROPERTY(m_outputMorph,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x30);
-			NESTED_PROPERTY(m_inputList,IDENTITY(GlobalTypes::CUtlVector<modellib::CBoneConstraintPoseSpaceMorph_Input_t>), 0x48);
+			PROPERTY(m_outputMorph,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x30);
+			NESTED_PROPERTY(m_inputList,GlobalTypes::CUtlVector<modellib::Input_t>, 0x48);
 			PROPERTY(m_bClamp,bool, 0x60);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CBoneConstraintPoseSpaceMorph) == 0xA0, "CBoneConstraintPoseSpaceMorph size should be 0xA0");
-
-#endif
 	}
 }

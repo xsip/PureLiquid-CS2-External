@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -27,9 +27,6 @@ namespace CS2 {
 			PROPERTY(soundEventHash,uint32_t, 0x74);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::audioparams_t) == 0x78, "audioparams_t size should be 0x78");
-
-#endif
 	}
 }

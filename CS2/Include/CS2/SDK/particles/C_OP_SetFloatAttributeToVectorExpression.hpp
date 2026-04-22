@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "VectorFloatExpressionType_t.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "../particleslib/CParticleRemapFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/VectorFloatExpressionType_t.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particleslib/CParticleRemapFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -26,17 +26,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetFloatAttributeToVectorExpression : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nExpression,IDENTITY(particles::VectorFloatExpressionType_t), 0x1d0);
-			NESTED_PROPERTY(m_vInput1,IDENTITY(particleslib::CPerParticleVecInput), 0x1d8);
-			NESTED_PROPERTY(m_vInput2,IDENTITY(particleslib::CPerParticleVecInput), 0x890);
-			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0xf48);
-			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x10b8);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x10bc);
+			PROPERTY(m_nExpression,particles::VectorFloatExpressionType_t, 0x1d0);
+			NESTED_PROPERTY(m_vInput1,particleslib::CPerParticleVecInput, 0x1d8);
+			NESTED_PROPERTY(m_vInput2,particleslib::CPerParticleVecInput, 0x890);
+			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0xf48);
+			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x10b8);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x10bc);
 			S2_PAD(0xEF0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetFloatAttributeToVectorExpression) == 0x10C0, "C_OP_SetFloatAttributeToVectorExpression size should be 0x10C0");
-
-#endif
 	}
 }

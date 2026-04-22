@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,9 +22,9 @@ namespace CS2 {
 	namespace server {
 		class CTimerEntity : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_OnTimer,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			NESTED_PROPERTY(m_OnTimerHigh,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
-			NESTED_PROPERTY(m_OnTimerLow,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
+			NESTED_PROPERTY(m_OnTimer,entity2::CEntityIOOutput, 0x4a8);
+			NESTED_PROPERTY(m_OnTimerHigh,entity2::CEntityIOOutput, 0x4c0);
+			NESTED_PROPERTY(m_OnTimerLow,entity2::CEntityIOOutput, 0x4d8);
 			PROPERTY(m_iDisabled,int32_t, 0x4f0);
 			PROPERTY(m_flInitialDelay,float32, 0x4f4);
 			PROPERTY(m_flRefireTime,float32, 0x4f8);
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_bPaused,bool, 0x514);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTimerEntity) == 0x518, "CTimerEntity size should be 0x518");
-
-#endif
 	}
 }

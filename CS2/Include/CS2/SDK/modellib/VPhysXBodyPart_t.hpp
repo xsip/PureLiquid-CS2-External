@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VPhysics2ShapeDef_t.hpp"
+#include <SDK/modellib/VPhysics2ShapeDef_t.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nFlags,uint32_t, 0x0);
 			PROPERTY(m_flMass,float32, 0x4);
-			NESTED_PROPERTY(m_rnShape,IDENTITY(modellib::VPhysics2ShapeDef_t), 0x8);
+			NESTED_PROPERTY(m_rnShape,modellib::VPhysics2ShapeDef_t, 0x8);
 			PROPERTY(m_nCollisionAttributeIndex,uint16_t, 0x80);
 			PROPERTY(m_nReserved,uint16_t, 0x82);
 			PROPERTY(m_flInertiaScale,float32, 0x84);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_vMassCenterOverride,GlobalTypes::Vector, 0x9c);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::VPhysXBodyPart_t) == 0xA8, "VPhysXBodyPart_t size should be 0xA8");
-
-#endif
 	}
 }

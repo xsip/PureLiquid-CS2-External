@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CEntityComponent.hpp"
+#include <SDK/entity2/CEntityComponent.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_scriptClassName,GlobalTypes::CUtlSymbolLarge*, 0x30);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::entity2::CScriptComponent) == 0x38, "CScriptComponent size should be 0x38");
-
-#endif
 	}
 }

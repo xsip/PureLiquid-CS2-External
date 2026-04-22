@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerAsyncGenerator.hpp"
-#include "../resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerAsyncGenerator.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp>
 
 
 
@@ -27,12 +27,9 @@ namespace CS2 {
 			PROPERTY(m_flTimeJitter,float32, 0xc0);
 			PROPERTY(m_flMaxLength,float32, 0xc4);
 			PROPERTY(m_nNumDelayVariations,int32_t, 0xc8);
-			NESTED_PROPERTY(m_grainResources,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>), 0xd0);
+			NESTED_PROPERTY(m_grainResources,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>, 0xd0);
 			S2_PAD(0x128);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerRandomSampler) == 0x1E0, "CVoiceContainerRandomSampler size should be 0x1E0");
-
-#endif
 	}
 }

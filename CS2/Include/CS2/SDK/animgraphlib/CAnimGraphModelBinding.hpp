@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimUpdateSharedData.hpp"
+#include <SDK/animgraphlib/CAnimUpdateSharedData.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 		class CAnimGraphModelBinding  {
 		public:
 			PROPERTY(m_modelName,GlobalTypes::CUtlString*, 0x8);
-			PROPERTY(m_pSharedData,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CAnimUpdateSharedData>), 0x10);
+			PROPERTY(m_pSharedData,GlobalTypes::CSmartPtr<animgraphlib::CAnimUpdateSharedData>, 0x10);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimGraphModelBinding) == 0x28, "CAnimGraphModelBinding size should be 0x28");
-
-#endif
 	}
 }

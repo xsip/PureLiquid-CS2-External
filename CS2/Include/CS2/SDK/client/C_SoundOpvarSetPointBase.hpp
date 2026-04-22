@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
 
 
 
@@ -29,9 +29,6 @@ namespace CS2 {
 			PROPERTY(m_bFastRefresh,bool, 0x625);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SoundOpvarSetPointBase) == 0x628, "C_SoundOpvarSetPointBase size should be 0x628");
-
-#endif
 	}
 }

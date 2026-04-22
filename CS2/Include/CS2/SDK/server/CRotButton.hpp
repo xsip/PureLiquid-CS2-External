@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseButton.hpp"
+#include <SDK/server/CBaseButton.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CRotButton : public CS2::server::CBaseButton {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CRotButton) == 0x8B0, "CRotButton size should be 0x8B0");
-
-#endif
 	}
 }

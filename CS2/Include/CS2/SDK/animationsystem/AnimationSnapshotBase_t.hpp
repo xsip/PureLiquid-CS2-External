@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "AnimationSnapshotType_t.hpp"
-#include "AnimationDecodeDebugDumpElement_t.hpp"
+#include <SDK/animationsystem/AnimationSnapshotType_t.hpp>
+#include <SDK/animationsystem/AnimationDecodeDebugDumpElement_t.hpp>
 
 
 
@@ -25,17 +25,14 @@ namespace CS2 {
 			PROPERTY(m_flRealTime,float32, 0x0);
 			PROPERTY(m_rootToWorld,GlobalTypes::matrix3x4a_t, 0x10);
 			PROPERTY(m_bBonesInWorldSpace,bool, 0x40);
-			NESTED_PROPERTY(m_boneSetupMask,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x48);
-			NESTED_PROPERTY(m_boneTransforms,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::matrix3x4a_t>), 0x60);
-			NESTED_PROPERTY(m_flexControllers,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x78);
-			PROPERTY(m_SnapshotType,IDENTITY(animationsystem::AnimationSnapshotType_t), 0x90);
+			NESTED_PROPERTY(m_boneSetupMask,GlobalTypes::CUtlVector< uint32 >, 0x48);
+			NESTED_PROPERTY(m_boneTransforms,GlobalTypes::CUtlVector<GlobalTypes::matrix3x4a_t>, 0x60);
+			NESTED_PROPERTY(m_flexControllers,GlobalTypes::CUtlVector< float32 >, 0x78);
+			PROPERTY(m_SnapshotType,animationsystem::AnimationSnapshotType_t, 0x90);
 			PROPERTY(m_bHasDecodeDump,bool, 0x94);
-			NESTED_PROPERTY(m_DecodeDump,IDENTITY(animationsystem::AnimationDecodeDebugDumpElement_t), 0x98);
+			NESTED_PROPERTY(m_DecodeDump,animationsystem::AnimationDecodeDebugDumpElement_t, 0x98);
 			S2_PAD(0x110);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::AnimationSnapshotBase_t) == 0x110, "AnimationSnapshotBase_t size should be 0x110");
-
-#endif
 	}
 }

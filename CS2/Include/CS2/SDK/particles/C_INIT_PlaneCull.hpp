@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		class C_INIT_PlaneCull : public CS2::particles::CParticleFunctionInitializer {
 		public:
 			PROPERTY(m_nControlPoint,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_flDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flDistance,particleslib::CParticleCollectionFloatInput, 0x1e0);
 			PROPERTY(m_bCullInside,bool, 0x350);
 			S2_PAD(0x180);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_PlaneCull) == 0x358, "C_INIT_PlaneCull size should be 0x358");
-
-#endif
 	}
 }

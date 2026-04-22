@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "ParticleHitboxBiasType_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particles/ParticleHitboxBiasType_t.hpp>
 
 
 
@@ -29,20 +29,17 @@ namespace CS2 {
 			PROPERTY(m_nControlPointNumber,int32_t, 0x1dc);
 			PROPERTY(m_nHeightCP,int32_t, 0x1e0);
 			PROPERTY(m_bUseWaterHeight,bool, 0x1e4);
-			NESTED_PROPERTY(m_flDesiredHeight,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
-			NESTED_PROPERTY(m_vecHitBoxScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x358);
-			NESTED_PROPERTY(m_vecDirectionBias,IDENTITY(particleslib::CParticleCollectionVecInput), 0xa10);
-			PROPERTY(m_nBiasType,IDENTITY(particles::ParticleHitboxBiasType_t), 0x10c8);
+			NESTED_PROPERTY(m_flDesiredHeight,particleslib::CParticleCollectionFloatInput, 0x1e8);
+			NESTED_PROPERTY(m_vecHitBoxScale,particleslib::CParticleCollectionVecInput, 0x358);
+			NESTED_PROPERTY(m_vecDirectionBias,particleslib::CParticleCollectionVecInput, 0xa10);
+			PROPERTY(m_nBiasType,particles::ParticleHitboxBiasType_t, 0x10c8);
 			PROPERTY(m_bLocalCoords,bool, 0x10cc);
 			PROPERTY(m_bPreferMovingBoxes,bool, 0x10cd);
 			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x10ce);
-			NESTED_PROPERTY(m_flHitboxVelocityScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1150);
-			NESTED_PROPERTY(m_flMaxBoneVelocity,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x12c0);
+			NESTED_PROPERTY(m_flHitboxVelocityScale,particleslib::CParticleCollectionFloatInput, 0x1150);
+			NESTED_PROPERTY(m_flMaxBoneVelocity,particleslib::CParticleCollectionFloatInput, 0x12c0);
 			S2_PAD(0x1258);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_CreateOnModelAtHeight) == 0x1430, "C_INIT_CreateOnModelAtHeight size should be 0x1430");
-
-#endif
 	}
 }

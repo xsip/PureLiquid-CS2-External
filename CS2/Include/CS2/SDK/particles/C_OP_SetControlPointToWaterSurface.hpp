@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 			PROPERTY(m_nFlowCP,int32_t, 0x1e0);
 			PROPERTY(m_nActiveCP,int32_t, 0x1e4);
 			PROPERTY(m_nActiveCPField,int32_t, 0x1e8);
-			NESTED_PROPERTY(m_flRetestRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f0);
+			NESTED_PROPERTY(m_flRetestRate,particleslib::CParticleCollectionFloatInput, 0x1f0);
 			PROPERTY(m_bAdaptiveThreshold,bool, 0x360);
 			S2_PAD(0x190);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToWaterSurface) == 0x368, "C_OP_SetControlPointToWaterSurface size should be 0x368");
-
-#endif
 	}
 }

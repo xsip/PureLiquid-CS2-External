@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimTagBase.hpp"
+#include <SDK/animgraphlib/CAnimTagBase.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_sequenceName,GlobalTypes::CUtlString*, 0x58);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSequenceFinishedAnimTag) == 0x60, "CSequenceFinishedAnimTag size should be 0x60");
-
-#endif
 	}
 }

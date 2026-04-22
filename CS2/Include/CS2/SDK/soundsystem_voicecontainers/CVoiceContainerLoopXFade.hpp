@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerBase.hpp"
-#include "CSoundContainerReference.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerBase.hpp>
+#include <SDK/soundsystem_voicecontainers/CSoundContainerReference.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerLoopXFade : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_sound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xa8);
+			NESTED_PROPERTY(m_sound,soundsystem_voicecontainers::CSoundContainerReference, 0xa8);
 			PROPERTY(m_flLoopEnd,float32, 0xc0);
 			PROPERTY(m_flLoopStart,float32, 0xc4);
 			PROPERTY(m_flFadeOut,float32, 0xc8);
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_bEqualPow,bool, 0xd2);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerLoopXFade) == 0xD8, "CVoiceContainerLoopXFade size should be 0xD8");
-
-#endif
 	}
 }

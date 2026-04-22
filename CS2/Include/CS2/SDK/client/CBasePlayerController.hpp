@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "C_CommandContext.hpp"
-#include "PlayerConnectedState.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/client/C_CommandContext.hpp>
+#include <SDK/client/PlayerConnectedState.hpp>
 
 
 
@@ -28,17 +28,17 @@ namespace CS2 {
 	namespace client {
 		class CBasePlayerController : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_CommandContext,IDENTITY(client::C_CommandContext), 0x610);
+			NESTED_PROPERTY(m_CommandContext,client::C_CommandContext, 0x610);
 			PROPERTY(m_nInButtonsWhichAreToggles,uint64_t, 0x6b8);
 			PROPERTY(m_nTickBase,uint32_t, 0x6c0);
-			PROPERTY(m_hPawn,IDENTITY(GlobalTypes::CHandle<client::C_BasePlayerPawn>), 0x6c4);
+			PROPERTY(m_hPawn,GlobalTypes::CHandle<client::C_BasePlayerPawn>, 0x6c4);
 			PROPERTY(m_bKnownTeamMismatch,bool, 0x6c8);
-			PROPERTY(m_hPredictedPawn,IDENTITY(GlobalTypes::CHandle<client::C_BasePlayerPawn>), 0x6cc);
+			PROPERTY(m_hPredictedPawn,GlobalTypes::CHandle<client::C_BasePlayerPawn>, 0x6cc);
 			PROPERTY(m_nSplitScreenSlot,GlobalTypes::CSplitScreenSlot, 0x6d0);
-			PROPERTY(m_hSplitOwner,IDENTITY(GlobalTypes::CHandle<client::CBasePlayerController>), 0x6d4);
-			NESTED_PROPERTY(m_hSplitScreenPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::CBasePlayerController>>), 0x6d8);
+			PROPERTY(m_hSplitOwner,GlobalTypes::CHandle<client::CBasePlayerController>, 0x6d4);
+			NESTED_PROPERTY(m_hSplitScreenPlayers,GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::CBasePlayerController>>, 0x6d8);
 			PROPERTY(m_bIsHLTV,bool, 0x6f0);
-			PROPERTY(m_iConnected,IDENTITY(client::PlayerConnectedState), 0x6f4);
+			PROPERTY(m_iConnected,client::PlayerConnectedState, 0x6f4);
 			PROPERTY_ARRAY(m_iszPlayerName,char, 128 , 0x6f8);
 			PROPERTY(m_steamID,uint64_t, 0x780);
 			PROPERTY(m_bIsLocalPlayerController,bool, 0x788);
@@ -46,9 +46,6 @@ namespace CS2 {
 			PROPERTY(m_iDesiredFOV,uint32_t, 0x78c);
 			S2_PAD(0x1F0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBasePlayerController) == 0x7F8, "CBasePlayerController size should be 0x7F8");
-
-#endif
 	}
 }

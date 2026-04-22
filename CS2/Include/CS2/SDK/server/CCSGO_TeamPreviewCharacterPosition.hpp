@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "CEconItemView.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/server/CEconItemView.hpp>
 
 
 
@@ -27,14 +27,11 @@ namespace CS2 {
 			PROPERTY(m_nOrdinal,int32_t, 0x4b0);
 			PROPERTY(m_sWeaponName,GlobalTypes::CUtlString*, 0x4b8);
 			PROPERTY(m_xuid,uint64_t, 0x4c0);
-			NESTED_PROPERTY(m_agentItem,IDENTITY(server::CEconItemView), 0x4c8);
-			NESTED_PROPERTY(m_glovesItem,IDENTITY(server::CEconItemView), 0x770);
-			NESTED_PROPERTY(m_weaponItem,IDENTITY(server::CEconItemView), 0xa18);
+			NESTED_PROPERTY(m_agentItem,server::CEconItemView, 0x4c8);
+			NESTED_PROPERTY(m_glovesItem,server::CEconItemView, 0x770);
+			NESTED_PROPERTY(m_weaponItem,server::CEconItemView, 0xa18);
 			S2_PAD(0x818);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSGO_TeamPreviewCharacterPosition) == 0xCC0, "CCSGO_TeamPreviewCharacterPosition size should be 0xCC0");
-
-#endif
 	}
 }

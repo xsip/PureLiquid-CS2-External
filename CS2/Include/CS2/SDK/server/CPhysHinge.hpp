@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPhysConstraint.hpp"
-#include "ConstraintSoundInfo.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "../vphysics2/constraint_hingeparams_t.hpp"
+#include <SDK/server/CPhysConstraint.hpp>
+#include <SDK/server/ConstraintSoundInfo.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/vphysics2/constraint_hingeparams_t.hpp>
 
 
 
@@ -24,12 +24,12 @@ namespace CS2 {
 	namespace server {
 		class CPhysHinge : public CS2::server::CPhysConstraint {
 		public:
-			NESTED_PROPERTY(m_soundInfo,IDENTITY(server::ConstraintSoundInfo), 0x510);
-			NESTED_PROPERTY(m_NotifyMinLimitReached,IDENTITY(entity2::CEntityIOOutput), 0x5a8);
-			NESTED_PROPERTY(m_NotifyMaxLimitReached,IDENTITY(entity2::CEntityIOOutput), 0x5c0);
+			NESTED_PROPERTY(m_soundInfo,server::ConstraintSoundInfo, 0x510);
+			NESTED_PROPERTY(m_NotifyMinLimitReached,entity2::CEntityIOOutput, 0x5a8);
+			NESTED_PROPERTY(m_NotifyMaxLimitReached,entity2::CEntityIOOutput, 0x5c0);
 			PROPERTY(m_bAtMinLimit,bool, 0x5d8);
 			PROPERTY(m_bAtMaxLimit,bool, 0x5d9);
-			NESTED_PROPERTY(m_hinge,IDENTITY(vphysics2::constraint_hingeparams_t), 0x5dc);
+			NESTED_PROPERTY(m_hinge,vphysics2::constraint_hingeparams_t, 0x5dc);
 			PROPERTY(m_hingeFriction,float32, 0x61c);
 			PROPERTY(m_systemLoadScale,float32, 0x620);
 			PROPERTY(m_bIsAxisLocal,bool, 0x624);
@@ -41,13 +41,10 @@ namespace CS2 {
 			PROPERTY(m_flAngleSpeed,float32, 0x63c);
 			PROPERTY(m_flAngleSpeedThreshold,float32, 0x640);
 			PROPERTY(m_flLimitsDebugVisRotation,float32, 0x644);
-			NESTED_PROPERTY(m_OnStartMoving,IDENTITY(entity2::CEntityIOOutput), 0x648);
-			NESTED_PROPERTY(m_OnStopMoving,IDENTITY(entity2::CEntityIOOutput), 0x660);
+			NESTED_PROPERTY(m_OnStartMoving,entity2::CEntityIOOutput, 0x648);
+			NESTED_PROPERTY(m_OnStopMoving,entity2::CEntityIOOutput, 0x660);
 			S2_PAD(0x170);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysHinge) == 0x678, "CPhysHinge size should be 0x678");
-
-#endif
 	}
 }

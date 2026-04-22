@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
-#include "CBuoyancyHelper.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
+#include <SDK/server/CBuoyancyHelper.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 	namespace server {
 		class CTriggerBuoyancy : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_BuoyancyHelper,IDENTITY(server::CBuoyancyHelper), 0x890);
+			NESTED_PROPERTY(m_BuoyancyHelper,server::CBuoyancyHelper, 0x890);
 			PROPERTY(m_flFluidDensity,float32, 0x9a8);
 			S2_PAD(0x120);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerBuoyancy) == 0x9B0, "CTriggerBuoyancy size should be 0x9B0");
-
-#endif
 	}
 }

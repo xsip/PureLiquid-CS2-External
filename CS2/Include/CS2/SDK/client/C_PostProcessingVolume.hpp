@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseTrigger.hpp"
+#include <SDK/client/C_BaseTrigger.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace client {
 		class C_PostProcessingVolume : public CS2::client::C_BaseTrigger {
 		public:
-			PROPERTY(m_hPostSettings,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0xf68);
+			PROPERTY(m_hPostSettings,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>, 0xf68);
 			PROPERTY(m_flFadeDuration,float32, 0xf70);
 			PROPERTY(m_flMinLogExposure,float32, 0xf74);
 			PROPERTY(m_flMaxLogExposure,float32, 0xf78);
@@ -40,9 +40,6 @@ namespace CS2 {
 			PROPERTY(m_bExposureControl,bool, 0xf95);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PostProcessingVolume) == 0xF98, "C_PostProcessingVolume size should be 0xF98");
-
-#endif
 	}
 }

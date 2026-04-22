@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPulseCell_BaseYieldingInflow.hpp"
-#include "CPulseCell_Timeline_TimelineEvent_t.hpp"
-#include "CPulse_ResumePoint.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
+#include <SDK/pulse_runtime_lib/TimelineEvent_t.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Timeline : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_TimelineEvents,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulseCell_Timeline_TimelineEvent_t>), 0x48);
+			NESTED_PROPERTY(m_TimelineEvents,server::CUtlVector<pulse_runtime_lib::TimelineEvent_t>, 0x48);
 			PROPERTY(m_bWaitForChildOutflows,bool, 0x60);
-			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x68);
-			NESTED_PROPERTY(m_OnCanceled,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xb0);
+			NESTED_PROPERTY(m_OnFinished,pulse_runtime_lib::CPulse_ResumePoint, 0x68);
+			NESTED_PROPERTY(m_OnCanceled,pulse_runtime_lib::CPulse_ResumePoint, 0xb0);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Timeline) == 0xF8, "CPulseCell_Timeline size should be 0xF8");
-
-#endif
 	}
 }

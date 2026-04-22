@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayerPawnComponent.hpp"
-#include "CInButtonState.hpp"
+#include <SDK/client/CPlayerPawnComponent.hpp>
+#include <SDK/client/CInButtonState.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		class CPlayer_MovementServices : public CS2::client::CPlayerPawnComponent {
 		public:
 			PROPERTY(m_nImpulse,int32_t, 0x48);
-			NESTED_PROPERTY(m_nButtons,IDENTITY(client::CInButtonState), 0x50);
+			NESTED_PROPERTY(m_nButtons,client::CInButtonState, 0x50);
 			PROPERTY(m_nQueuedButtonDownMask,uint64_t, 0x70);
 			PROPERTY(m_nQueuedButtonChangeMask,uint64_t, 0x78);
 			PROPERTY(m_nButtonDoublePressed,uint64_t, 0x80);
@@ -39,9 +39,6 @@ namespace CS2 {
 			PROPERTY(m_vecOldViewAngles,GlobalTypes::QAngle, 0x228);
 			S2_PAD(0x1F8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPlayer_MovementServices) == 0x240, "CPlayer_MovementServices size should be 0x240");
-
-#endif
 	}
 }

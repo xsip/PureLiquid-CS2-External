@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleTraceSet_t.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
 
 
 
@@ -26,20 +26,17 @@ namespace CS2 {
 			PROPERTY(m_nCPOut,int32_t, 0x1d8);
 			PROPERTY(m_nCPIn,int32_t, 0x1dc);
 			PROPERTY(m_flUpdateRate,float32, 0x1e0);
-			NESTED_PROPERTY(m_flTraceLength,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_flTraceLength,particleslib::CParticleCollectionFloatInput, 0x1e8);
 			PROPERTY(m_flStartOffset,float32, 0x358);
 			PROPERTY(m_flOffset,float32, 0x35c);
 			PROPERTY(m_vecTraceDir,GlobalTypes::Vector, 0x360);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x36c);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x3ec);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x3ec);
 			PROPERTY(m_bSetToEndpoint,bool, 0x3f0);
 			PROPERTY(m_bTraceToClosestSurface,bool, 0x3f1);
 			PROPERTY(m_bIncludeWater,bool, 0x3f2);
 			S2_PAD(0x220);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToImpactPoint) == 0x3F8, "C_OP_SetControlPointToImpactPoint size should be 0x3F8");
-
-#endif
 	}
 }

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "CAnimInputDamping.hpp"
-#include "AnimValueSource.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/CAnimInputDamping.hpp>
+#include <SDK/animgraphlib/AnimValueSource.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -24,11 +24,11 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMoverUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x78);
-			PROPERTY(m_facingTarget,IDENTITY(animgraphlib::AnimValueSource), 0x90);
-			NESTED_PROPERTY(m_hMoveVecParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x94);
-			NESTED_PROPERTY(m_hMoveHeadingParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x96);
-			NESTED_PROPERTY(m_hTurnToFaceParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x98);
+			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x78);
+			PROPERTY(m_facingTarget,animgraphlib::AnimValueSource, 0x90);
+			NESTED_PROPERTY(m_hMoveVecParam,animgraphlib::CAnimParamHandle, 0x94);
+			NESTED_PROPERTY(m_hMoveHeadingParam,animgraphlib::CAnimParamHandle, 0x96);
+			NESTED_PROPERTY(m_hTurnToFaceParam,animgraphlib::CAnimParamHandle, 0x98);
 			PROPERTY(m_flTurnToFaceOffset,float32, 0x9c);
 			PROPERTY(m_flTurnToFaceLimit,float32, 0xa0);
 			PROPERTY(m_bAdditive,bool, 0xa4);
@@ -38,9 +38,6 @@ namespace CS2 {
 			PROPERTY(m_bLimitOnly,bool, 0xa8);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMoverUpdateNode) == 0xB0, "CMoverUpdateNode size should be 0xB0");
-
-#endif
 	}
 }

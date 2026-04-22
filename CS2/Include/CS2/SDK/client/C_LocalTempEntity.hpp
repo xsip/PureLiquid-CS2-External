@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/client/CBaseAnimGraph.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		class C_LocalTempEntity : public CS2::client::CBaseAnimGraph {
 		public:
 			PROPERTY(flags,int32_t, 0x1168);
-			NESTED_PROPERTY(die,IDENTITY(entity2::GameTime_t), 0x116c);
+			NESTED_PROPERTY(die,entity2::GameTime_t, 0x116c);
 			PROPERTY(m_flFrameMax,float32, 0x1170);
 			PROPERTY(x,float32, 0x1174);
 			PROPERTY(y,float32, 0x1178);
@@ -49,9 +49,6 @@ namespace CS2 {
 			PROPERTY(m_vecTempEntAcceleration,GlobalTypes::Vector, 0x1204);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_LocalTempEntity) == 0x1210, "C_LocalTempEntity size should be 0x1210");
-
-#endif
 	}
 }

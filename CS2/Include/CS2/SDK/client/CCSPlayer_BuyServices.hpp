@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayerPawnComponent.hpp"
-#include "SellbackPurchaseEntry_t.hpp"
+#include <SDK/client/CPlayerPawnComponent.hpp>
+#include <SDK/client/SellbackPurchaseEntry_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayer_BuyServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			// PROPERTY(m_vecSellbackPurchaseEntries,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::SellbackPurchaseEntry_t>), 0x48);
+			PROPERTY(m_vecSellbackPurchaseEntries,GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::SellbackPurchaseEntry_t>, 0x48);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayer_BuyServices) == 0xB0, "CCSPlayer_BuyServices size should be 0xB0");
-
-#endif
 	}
 }

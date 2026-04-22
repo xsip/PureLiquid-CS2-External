@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPhysSurfacePropertiesPhysics.hpp"
-#include "CPhysSurfacePropertiesVehicle.hpp"
-#include "CPhysSurfacePropertiesSoundNames.hpp"
-#include "CPhysSurfacePropertiesAudio.hpp"
+#include <SDK/modellib/CPhysSurfacePropertiesPhysics.hpp>
+#include <SDK/modellib/CPhysSurfacePropertiesVehicle.hpp>
+#include <SDK/modellib/CPhysSurfacePropertiesSoundNames.hpp>
+#include <SDK/modellib/CPhysSurfacePropertiesAudio.hpp>
 
 
 
@@ -29,15 +29,12 @@ namespace CS2 {
 			PROPERTY(m_baseNameHash,uint32_t, 0xc);
 			PROPERTY(m_bHidden,bool, 0x18);
 			PROPERTY(m_description,GlobalTypes::CUtlString*, 0x20);
-			NESTED_PROPERTY(m_physics,IDENTITY(modellib::CPhysSurfacePropertiesPhysics), 0x28);
-			NESTED_PROPERTY(m_vehicleParams,IDENTITY(modellib::CPhysSurfacePropertiesVehicle), 0x40);
-			NESTED_PROPERTY(m_audioSounds,IDENTITY(modellib::CPhysSurfacePropertiesSoundNames), 0x48);
-			NESTED_PROPERTY(m_audioParams,IDENTITY(modellib::CPhysSurfacePropertiesAudio), 0xa8);
+			NESTED_PROPERTY(m_physics,modellib::CPhysSurfacePropertiesPhysics, 0x28);
+			NESTED_PROPERTY(m_vehicleParams,modellib::CPhysSurfacePropertiesVehicle, 0x40);
+			NESTED_PROPERTY(m_audioSounds,modellib::CPhysSurfacePropertiesSoundNames, 0x48);
+			NESTED_PROPERTY(m_audioParams,modellib::CPhysSurfacePropertiesAudio, 0xa8);
 			S2_PAD(0xC8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CPhysSurfaceProperties) == 0xC8, "CPhysSurfaceProperties size should be 0xC8");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CItem.hpp"
-#include "EntitySpottedState_t.hpp"
+#include <SDK/server/CItem.hpp>
+#include <SDK/server/EntitySpottedState_t.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 	namespace server {
 		class CItemDefuser : public CS2::server::CItem {
 		public:
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(server::EntitySpottedState_t), 0xac0);
+			NESTED_PROPERTY(m_entitySpottedState,server::EntitySpottedState_t, 0xac0);
 			PROPERTY(m_nSpotRules,int32_t, 0xad8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CItemDefuser) == 0xAE0, "CItemDefuser size should be 0xAE0");
-
-#endif
 	}
 }

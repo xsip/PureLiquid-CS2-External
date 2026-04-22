@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_FuncBrush.hpp"
-#include "ParticleIndex_t.hpp"
+#include <SDK/client/C_FuncBrush.hpp>
+#include <SDK/client/ParticleIndex_t.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace client {
 		class C_FuncElectrifiedVolume : public CS2::client::C_FuncBrush {
 		public:
-			NESTED_PROPERTY(m_nAmbientEffect,IDENTITY(client::ParticleIndex_t), 0xe88);
+			NESTED_PROPERTY(m_nAmbientEffect,client::ParticleIndex_t, 0xe88);
 			PROPERTY(m_EffectName,GlobalTypes::CUtlSymbolLarge*, 0xe90);
 			PROPERTY(m_bState,bool, 0xe98);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_FuncElectrifiedVolume) == 0xEA0, "C_FuncElectrifiedVolume size should be 0xEA0");
-
-#endif
 	}
 }

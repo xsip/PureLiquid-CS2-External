@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "ParticleTraceSet_t.hpp"
-#include "ParticleParentSetMode_t.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
+#include <SDK/particles/ParticleParentSetMode_t.hpp>
 
 
 
@@ -36,13 +36,10 @@ namespace CS2 {
 			PROPERTY(m_flLOSScale,float32, 0x200);
 			PROPERTY(m_bLOS,bool, 0x204);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x205);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x288);
-			PROPERTY(m_nSetParent,IDENTITY(particles::ParticleParentSetMode_t), 0x28c);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x288);
+			PROPERTY(m_nSetParent,particles::ParticleParentSetMode_t, 0x28c);
 			S2_PAD(0xB8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenCPsToCP) == 0x290, "C_OP_DistanceBetweenCPsToCP size should be 0x290");
-
-#endif
 	}
 }

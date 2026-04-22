@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace particles {
 		class CGeneralRandomRotation : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
 			PROPERTY(m_flDegrees,float32, 0x1dc);
 			PROPERTY(m_flDegreesMin,float32, 0x1e0);
 			PROPERTY(m_flDegreesMax,float32, 0x1e4);
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bRandomlyFlipDirection,bool, 0x1ec);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CGeneralRandomRotation) == 0x1F8, "CGeneralRandomRotation size should be 0x1F8");
-
-#endif
 	}
 }

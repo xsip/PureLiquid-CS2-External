@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(m_b2D_TRI,bool, 0x5);
 			S2_PAD(0x6);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqMultiFetchFlag) == 0x6, "CSeqMultiFetchFlag size should be 0x6");
-
-#endif
 	}
 }

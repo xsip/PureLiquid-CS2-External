@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "CRandomNumberGeneratorParameters.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particles/CRandomNumberGeneratorParameters.hpp>
 
 
 
@@ -24,17 +24,14 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PositionOffset : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_OffsetMin,IDENTITY(particleslib::CPerParticleVecInput), 0x1d8);
-			NESTED_PROPERTY(m_OffsetMax,IDENTITY(particleslib::CPerParticleVecInput), 0x890);
-			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0xf48);
+			NESTED_PROPERTY(m_OffsetMin,particleslib::CPerParticleVecInput, 0x1d8);
+			NESTED_PROPERTY(m_OffsetMax,particleslib::CPerParticleVecInput, 0x890);
+			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0xf48);
 			PROPERTY(m_bLocalCoords,bool, 0xfb0);
 			PROPERTY(m_bProportional,bool, 0xfb1);
-			NESTED_PROPERTY(m_randomnessParameters,IDENTITY(particles::CRandomNumberGeneratorParameters), 0xfb4);
+			NESTED_PROPERTY(m_randomnessParameters,particles::CRandomNumberGeneratorParameters, 0xfb4);
 			S2_PAD(0xDE8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_PositionOffset) == 0xFC0, "C_INIT_PositionOffset size should be 0xFC0");
-
-#endif
 	}
 }

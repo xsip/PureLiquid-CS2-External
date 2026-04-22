@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
-#include "CBaseEntity.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace server {
 		class CTriggerSndSosOpvar : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_hTouchingPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x890);
+			NESTED_PROPERTY(m_hTouchingPlayers,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x890);
 			PROPERTY(m_flPosition,GlobalTypes::Vector, 0x8a8);
 			PROPERTY(m_flCenterSize,float32, 0x8b4);
 			PROPERTY(m_flMinVal,float32, 0x8b8);
@@ -38,9 +38,6 @@ namespace CS2 {
 			PROPERTY(m_flNormCenterSize,float32, 0xbe8);
 			S2_PAD(0x360);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerSndSosOpvar) == 0xBF0, "CTriggerSndSosOpvar size should be 0xBF0");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunction.hpp"
-#include "CParticleVisibilityInputs.hpp"
+#include <SDK/particles/CParticleFunction.hpp>
+#include <SDK/particles/CParticleVisibilityInputs.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace particles {
 		class CParticleFunctionRenderer : public CS2::particles::CParticleFunction {
 		public:
-			NESTED_PROPERTY(VisibilityInputs,IDENTITY(particles::CParticleVisibilityInputs), 0x1d0);
+			NESTED_PROPERTY(VisibilityInputs,particles::CParticleVisibilityInputs, 0x1d0);
 			PROPERTY(m_bCannotBeRefracted,bool, 0x218);
 			PROPERTY(m_bSkipRenderingOnMobile,bool, 0x219);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CParticleFunctionRenderer) == 0x220, "CParticleFunctionRenderer size should be 0x220");
-
-#endif
 	}
 }

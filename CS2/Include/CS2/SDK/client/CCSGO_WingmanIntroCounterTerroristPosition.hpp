@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSGO_WingmanIntroCharacterPosition.hpp"
+#include <SDK/client/CCSGO_WingmanIntroCharacterPosition.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class CCSGO_WingmanIntroCounterTerroristPosition : public CS2::client::CCSGO_WingmanIntroCharacterPosition {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSGO_WingmanIntroCounterTerroristPosition) == 0x13A8, "CCSGO_WingmanIntroCounterTerroristPosition size should be 0x13A8");
-
-#endif
 	}
 }

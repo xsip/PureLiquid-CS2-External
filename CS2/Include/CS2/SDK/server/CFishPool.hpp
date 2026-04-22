@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "CFish.hpp"
-#include "CountdownTimer.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/server/CFish.hpp>
+#include <SDK/server/CountdownTimer.hpp>
 
 
 
@@ -28,13 +28,10 @@ namespace CS2 {
 			PROPERTY(m_swimDepth,float32, 0x4c0);
 			PROPERTY(m_waterLevel,float32, 0x4c4);
 			PROPERTY(m_isDormant,bool, 0x4c8);
-			NESTED_PROPERTY(m_fishes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFish>>), 0x4d0);
-			NESTED_PROPERTY(m_visTimer,IDENTITY(server::CountdownTimer), 0x4e8);
+			NESTED_PROPERTY(m_fishes,server::CUtlVector<GlobalTypes::CHandle<server::CFish>>, 0x4d0);
+			NESTED_PROPERTY(m_visTimer,server::CountdownTimer, 0x4e8);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFishPool) == 0x500, "CFishPool size should be 0x500");
-
-#endif
 	}
 }

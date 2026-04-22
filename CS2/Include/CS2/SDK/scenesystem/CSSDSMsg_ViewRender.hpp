@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "SceneViewId_t.hpp"
+#include <SDK/scenesystem/SceneViewId_t.hpp>
 
 
 
@@ -21,13 +21,10 @@ namespace CS2 {
 	namespace scenesystem {
 		class CSSDSMsg_ViewRender  {
 		public:
-			NESTED_PROPERTY(m_viewId,IDENTITY(scenesystem::SceneViewId_t), 0x0);
+			NESTED_PROPERTY(m_viewId,scenesystem::SceneViewId_t, 0x0);
 			PROPERTY(m_ViewName,GlobalTypes::CUtlString*, 0x10);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::scenesystem::CSSDSMsg_ViewRender) == 0x18, "CSSDSMsg_ViewRender size should be 0x18");
-
-#endif
 	}
 }

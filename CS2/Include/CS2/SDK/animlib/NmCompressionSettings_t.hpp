@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "NmCompressionSettings_t_QuantizationRange_t.hpp"
+#include <SDK/animlib/QuantizationRange_t.hpp>
 
 
 
@@ -21,19 +21,16 @@ namespace CS2 {
 	namespace animlib {
 		class NmCompressionSettings_t  {
 		public:
-			NESTED_PROPERTY(m_translationRangeX,IDENTITY(animlib::NmCompressionSettings_t_QuantizationRange_t), 0x0);
-			NESTED_PROPERTY(m_translationRangeY,IDENTITY(animlib::NmCompressionSettings_t_QuantizationRange_t), 0x8);
-			NESTED_PROPERTY(m_translationRangeZ,IDENTITY(animlib::NmCompressionSettings_t_QuantizationRange_t), 0x10);
-			NESTED_PROPERTY(m_scaleRange,IDENTITY(animlib::NmCompressionSettings_t_QuantizationRange_t), 0x18);
+			NESTED_PROPERTY(m_translationRangeX,animlib::QuantizationRange_t, 0x0);
+			NESTED_PROPERTY(m_translationRangeY,animlib::QuantizationRange_t, 0x8);
+			NESTED_PROPERTY(m_translationRangeZ,animlib::QuantizationRange_t, 0x10);
+			NESTED_PROPERTY(m_scaleRange,animlib::QuantizationRange_t, 0x18);
 			PROPERTY(m_constantRotation,GlobalTypes::Quaternion, 0x20);
 			PROPERTY(m_bIsRotationStatic,bool, 0x30);
 			PROPERTY(m_bIsTranslationStatic,bool, 0x31);
 			PROPERTY(m_bIsScaleStatic,bool, 0x32);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::NmCompressionSettings_t) == 0x40, "NmCompressionSettings_t size should be 0x40");
-
-#endif
 	}
 }

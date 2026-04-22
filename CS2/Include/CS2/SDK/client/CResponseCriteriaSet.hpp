@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_bOverrideOnAppend,bool, 0x34);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CResponseCriteriaSet) == 0x38, "CResponseCriteriaSet size should be 0x38");
-
-#endif
 	}
 }

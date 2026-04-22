@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPathWithDynamicNodes.hpp"
-#include "CFuncMover.hpp"
+#include <SDK/server/CPathWithDynamicNodes.hpp>
+#include <SDK/server/CFuncMover.hpp>
 
 
 
@@ -27,14 +27,11 @@ namespace CS2 {
 	namespace server {
 		class CPathMover : public CS2::server::CPathWithDynamicNodes {
 		public:
-			NESTED_PROPERTY(m_vecMovers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>), 0x5f0);
-			PROPERTY(m_hMoverSpawner,IDENTITY(GlobalTypes::CHandle<server::CPathMoverEntitySpawner>), 0x608);
+			NESTED_PROPERTY(m_vecMovers,server::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>, 0x5f0);
+			PROPERTY(m_hMoverSpawner,GlobalTypes::CHandle<server::CPathMoverEntitySpawner>, 0x608);
 			PROPERTY(m_iszMoverSpawnerName,GlobalTypes::CUtlSymbolLarge*, 0x610);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathMover) == 0x620, "CPathMover size should be 0x620");
-
-#endif
 	}
 }

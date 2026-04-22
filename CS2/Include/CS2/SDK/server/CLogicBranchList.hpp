@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "CBaseEntity.hpp"
-#include "CLogicBranchList_LogicBranchListenerLastState_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/server/LogicBranchListenerLastState_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -25,16 +25,13 @@ namespace CS2 {
 		class CLogicBranchList : public CS2::server::CLogicalEntity {
 		public:
 			PROPERTY_ARRAY(m_nLogicBranchNames,GlobalTypes::CUtlSymbolLarge*, 16 , 0x4a8);
-			NESTED_PROPERTY(m_LogicBranchList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x528);
-			PROPERTY(m_eLastState,IDENTITY(server::CLogicBranchList_LogicBranchListenerLastState_t), 0x540);
-			NESTED_PROPERTY(m_OnAllTrue,IDENTITY(entity2::CEntityIOOutput), 0x548);
-			NESTED_PROPERTY(m_OnAllFalse,IDENTITY(entity2::CEntityIOOutput), 0x560);
-			NESTED_PROPERTY(m_OnMixed,IDENTITY(entity2::CEntityIOOutput), 0x578);
+			NESTED_PROPERTY(m_LogicBranchList,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x528);
+			PROPERTY(m_eLastState,server::LogicBranchListenerLastState_t, 0x540);
+			NESTED_PROPERTY(m_OnAllTrue,entity2::CEntityIOOutput, 0x548);
+			NESTED_PROPERTY(m_OnAllFalse,entity2::CEntityIOOutput, 0x560);
+			NESTED_PROPERTY(m_OnMixed,entity2::CEntityIOOutput, 0x578);
 			S2_PAD(0xE8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicBranchList) == 0x590, "CLogicBranchList size should be 0x590");
-
-#endif
 	}
 }

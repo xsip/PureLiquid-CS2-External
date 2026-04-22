@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ReinitializeScalarEndCap : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d0);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
 			PROPERTY(m_flOutputMin,float32, 0x1d4);
 			PROPERTY(m_flOutputMax,float32, 0x1d8);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ReinitializeScalarEndCap) == 0x1E0, "C_OP_ReinitializeScalarEndCap size should be 0x1E0");
-
-#endif
 	}
 }

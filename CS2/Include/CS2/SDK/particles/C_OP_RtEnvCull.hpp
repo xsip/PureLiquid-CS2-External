@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_nComponent,int32_t, 0x270);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RtEnvCull) == 0x278, "C_OP_RtEnvCull size should be 0x278");
-
-#endif
 	}
 }

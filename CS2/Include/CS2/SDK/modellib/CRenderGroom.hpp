@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "RenderHairStrandInfo_t.hpp"
-#include "../resourcesystem/InfoForResourceTypeIMaterial2.hpp"
+#include <SDK/modellib/RenderHairStrandInfo_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeIMaterial2.hpp>
 
 
 
@@ -22,10 +22,10 @@ namespace CS2 {
 	namespace modellib {
 		class CRenderGroom  {
 		public:
-			NESTED_PROPERTY(m_hairs,IDENTITY(GlobalTypes::CUtlVector<modellib::RenderHairStrandInfo_t>), 0x0);
-			NESTED_PROPERTY(m_hairPositionOffsets,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x18);
-			PROPERTY(m_hSimParamsMat,IDENTITY(GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeIMaterial2>), 0x40);
-			NESTED_PROPERTY(m_strandSegmentCountHist,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x48);
+			NESTED_PROPERTY(m_hairs,GlobalTypes::CUtlVector<modellib::RenderHairStrandInfo_t>, 0x0);
+			NESTED_PROPERTY(m_hairPositionOffsets,GlobalTypes::CUtlVector< uint32 >, 0x18);
+			PROPERTY(m_hSimParamsMat,GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeIMaterial2>, 0x40);
+			NESTED_PROPERTY(m_strandSegmentCountHist,GlobalTypes::CUtlVector< int32 >, 0x48);
 			PROPERTY(m_nMaxSegmentsPerHairStrand,int32_t, 0x78);
 			PROPERTY(m_nGuideHairCount,int32_t, 0x7c);
 			PROPERTY(m_nHairCount,int32_t, 0x80);
@@ -38,9 +38,6 @@ namespace CS2 {
 			PROPERTY(m_bEnableSimulation,bool, 0x9c);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CRenderGroom) == 0xA0, "CRenderGroom size should be 0xA0");
-
-#endif
 	}
 }

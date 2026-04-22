@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "TagSpan_t.hpp"
+#include <SDK/animgraphlib/TagSpan_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 		class CDirectPlaybackTagData  {
 		public:
 			PROPERTY(m_sequenceName,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x8);
+			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CDirectPlaybackTagData) == 0x20, "CDirectPlaybackTagData size should be 0x20");
-
-#endif
 	}
 }

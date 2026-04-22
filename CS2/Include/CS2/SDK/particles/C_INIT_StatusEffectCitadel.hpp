@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "DetailCombo_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/DetailCombo_t.hpp>
 
 
 
@@ -34,7 +34,7 @@ namespace CS2 {
 			PROPERTY(m_flSFXSOffsetX,float32, 0x1fc);
 			PROPERTY(m_flSFXSOffsetY,float32, 0x200);
 			PROPERTY(m_flSFXSOffsetZ,float32, 0x204);
-			PROPERTY(m_nDetailCombo,IDENTITY(particles::DetailCombo_t), 0x208);
+			PROPERTY(m_nDetailCombo,particles::DetailCombo_t, 0x208);
 			PROPERTY(m_flSFXSDetailAmount,float32, 0x20c);
 			PROPERTY(m_flSFXSDetailScale,float32, 0x210);
 			PROPERTY(m_flSFXSDetailScrollX,float32, 0x214);
@@ -43,9 +43,6 @@ namespace CS2 {
 			PROPERTY(m_flSFXSUseModelUVs,float32, 0x220);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_StatusEffectCitadel) == 0x228, "C_INIT_StatusEffectCitadel size should be 0x228");
-
-#endif
 	}
 }

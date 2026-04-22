@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSeqAutoLayerFlag.hpp"
+#include <SDK/animationsystem/CSeqAutoLayerFlag.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nLocalReference,int16_t, 0x0);
 			PROPERTY(m_nLocalPose,int16_t, 0x2);
-			NESTED_PROPERTY(m_flags,IDENTITY(animationsystem::CSeqAutoLayerFlag), 0x4);
+			NESTED_PROPERTY(m_flags,animationsystem::CSeqAutoLayerFlag, 0x4);
 			PROPERTY(m_start,float32, 0xc);
 			PROPERTY(m_peak,float32, 0x10);
 			PROPERTY(m_tail,float32, 0x14);
 			PROPERTY(m_end,float32, 0x18);
 			S2_PAD(0x1C);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqAutoLayer) == 0x1C, "CSeqAutoLayer size should be 0x1C");
-
-#endif
 	}
 }

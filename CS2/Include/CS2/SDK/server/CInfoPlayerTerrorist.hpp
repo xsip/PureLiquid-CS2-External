@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "SpawnPoint.hpp"
+#include <SDK/server/SpawnPoint.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CInfoPlayerTerrorist : public CS2::server::SpawnPoint {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoPlayerTerrorist) == 0x4B8, "CInfoPlayerTerrorist size should be 0x4B8");
-
-#endif
 	}
 }

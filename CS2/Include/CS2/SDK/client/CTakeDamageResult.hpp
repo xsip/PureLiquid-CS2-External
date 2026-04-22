@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "HitGroup_t.hpp"
+#include <SDK/client/HitGroup_t.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace client {
 		class CTakeDamageResult  {
 		public:
-			PROPERTY(m_pOriginatingInfo,IDENTITY(client::CTakeDamageInfo*), 0x0);
+			PROPERTY(m_pOriginatingInfo,client::CTakeDamageInfo*, 0x0);
 			PROPERTY(m_nHealthLost,int32_t, 0x8);
 			PROPERTY(m_nHealthBefore,int32_t, 0xc);
 			PROPERTY(m_nDamageDealt,int32_t, 0x10);
@@ -36,12 +36,9 @@ namespace CS2 {
 			PROPERTY(m_flTotalledPreModifiedDamage,float32, 0x20);
 			PROPERTY(m_bWasDamageSuppressed,bool, 0x24);
 			PROPERTY(m_bSuppressFlinch,bool, 0x25);
-			PROPERTY(m_nOverrideFlinchHitGroup,IDENTITY(client::HitGroup_t), 0x28);
+			PROPERTY(m_nOverrideFlinchHitGroup,client::HitGroup_t, 0x28);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CTakeDamageResult) == 0x30, "CTakeDamageResult size should be 0x30");
-
-#endif
 	}
 }

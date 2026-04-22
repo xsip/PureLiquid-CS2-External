@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "C_EnvWindShared.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/client/C_EnvWindShared.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace client {
 		class C_EnvWindController : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_EnvWindShared,IDENTITY(client::C_EnvWindShared), 0x608);
+			NESTED_PROPERTY(m_EnvWindShared,client::C_EnvWindShared, 0x608);
 			PROPERTY(m_fDirectionVariation,float32, 0x700);
 			PROPERTY(m_fSpeedVariation,float32, 0x704);
 			PROPERTY(m_fTurbulence,float32, 0x708);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_bFirstTime,bool, 0x721);
 			S2_PAD(0x120);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvWindController) == 0x728, "C_EnvWindController size should be 0x728");
-
-#endif
 	}
 }

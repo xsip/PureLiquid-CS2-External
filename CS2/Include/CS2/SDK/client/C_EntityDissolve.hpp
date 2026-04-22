@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "EntityDisolveType_t.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/EntityDisolveType_t.hpp>
 
 
 
@@ -23,24 +23,21 @@ namespace CS2 {
 	namespace client {
 		class C_EntityDissolve : public CS2::client::C_BaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0xe90);
+			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0xe90);
 			PROPERTY(m_flFadeInStart,float32, 0xe94);
 			PROPERTY(m_flFadeInLength,float32, 0xe98);
 			PROPERTY(m_flFadeOutModelStart,float32, 0xe9c);
 			PROPERTY(m_flFadeOutModelLength,float32, 0xea0);
 			PROPERTY(m_flFadeOutStart,float32, 0xea4);
 			PROPERTY(m_flFadeOutLength,float32, 0xea8);
-			NESTED_PROPERTY(m_flNextSparkTime,IDENTITY(entity2::GameTime_t), 0xeac);
-			PROPERTY(m_nDissolveType,IDENTITY(client::EntityDisolveType_t), 0xeb0);
+			NESTED_PROPERTY(m_flNextSparkTime,entity2::GameTime_t, 0xeac);
+			PROPERTY(m_nDissolveType,client::EntityDisolveType_t, 0xeb0);
 			PROPERTY(m_vDissolverOrigin,GlobalTypes::Vector, 0xeb4);
 			PROPERTY(m_nMagnitude,uint32_t, 0xec0);
 			PROPERTY(m_bCoreExplode,bool, 0xec4);
 			PROPERTY(m_bLinkedToServerEnt,bool, 0xec5);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EntityDissolve) == 0xED0, "C_EntityDissolve size should be 0xED0");
-
-#endif
 	}
 }

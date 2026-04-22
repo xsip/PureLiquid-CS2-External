@@ -4,20 +4,20 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "RenderProjectedMaterial_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "MaterialVariable_t.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "ParticleColorBlendType_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/RenderProjectedMaterial_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/MaterialVariable_t.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particles/ParticleColorBlendType_t.hpp>
 
 
 
@@ -35,22 +35,19 @@ namespace CS2 {
 			PROPERTY(m_bEnableProjectedDepthControls,bool, 0x224);
 			PROPERTY(m_flMinProjectionDepth,float32, 0x228);
 			PROPERTY(m_flMaxProjectionDepth,float32, 0x22c);
-			NESTED_PROPERTY(m_vecProjectedMaterials,IDENTITY(GlobalTypes::CUtlVector<particles::RenderProjectedMaterial_t>), 0x230);
-			NESTED_PROPERTY(m_flMaterialSelection,IDENTITY(particleslib::CPerParticleFloatInput), 0x248);
+			NESTED_PROPERTY(m_vecProjectedMaterials,GlobalTypes::CUtlVector<particles::RenderProjectedMaterial_t>, 0x230);
+			NESTED_PROPERTY(m_flMaterialSelection,particleslib::CPerParticleFloatInput, 0x248);
 			PROPERTY(m_flAnimationTimeScale,float32, 0x3b8);
 			PROPERTY(m_bOrientToNormal,bool, 0x3bc);
-			NESTED_PROPERTY(m_MaterialVars,IDENTITY(GlobalTypes::CUtlVector<particles::MaterialVariable_t>), 0x3c0);
-			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x3d8);
-			NESTED_PROPERTY(m_flAlphaScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x548);
-			NESTED_PROPERTY(m_flRollScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x6b8);
-			NESTED_PROPERTY(m_nAlpha2Field,IDENTITY(particles::ParticleAttributeIndex_t), 0x828);
-			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x830);
-			PROPERTY(m_nColorBlendType,IDENTITY(particles::ParticleColorBlendType_t), 0xee8);
+			NESTED_PROPERTY(m_MaterialVars,GlobalTypes::CUtlVector<particles::MaterialVariable_t>, 0x3c0);
+			NESTED_PROPERTY(m_flRadiusScale,particleslib::CParticleCollectionFloatInput, 0x3d8);
+			NESTED_PROPERTY(m_flAlphaScale,particleslib::CParticleCollectionFloatInput, 0x548);
+			NESTED_PROPERTY(m_flRollScale,particleslib::CParticleCollectionFloatInput, 0x6b8);
+			NESTED_PROPERTY(m_nAlpha2Field,particles::ParticleAttributeIndex_t, 0x828);
+			NESTED_PROPERTY(m_vecColorScale,particleslib::CParticleCollectionVecInput, 0x830);
+			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0xee8);
 			S2_PAD(0xCE8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderProjected) == 0xF08, "C_OP_RenderProjected size should be 0xF08");
-
-#endif
 	}
 }

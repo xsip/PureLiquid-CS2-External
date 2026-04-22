@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../client/SceneEventId_t.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/SceneEventId_t.hpp>
 
 
 
@@ -23,17 +23,14 @@ namespace CS2 {
 	namespace server {
 		class CBaseFlex : public CS2::server::CBaseAnimGraph {
 		public:
-			// PROPERTY(m_flexWeight,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< float32 >), 0xa20);
+			PROPERTY(m_flexWeight,GlobalTypes::CNetworkUtlVectorBase< float32 >, 0xa20);
 			PROPERTY(m_vLookTargetPosition,GlobalTypes::VectorWS, 0xa38);
-			NESTED_PROPERTY(m_flAllowResponsesEndTime,IDENTITY(entity2::GameTime_t), 0xa98);
-			NESTED_PROPERTY(m_flLastFlexAnimationTime,IDENTITY(entity2::GameTime_t), 0xa9c);
-			NESTED_PROPERTY(m_nNextSceneEventId,IDENTITY(client::SceneEventId_t), 0xaa0);
+			NESTED_PROPERTY(m_flAllowResponsesEndTime,entity2::GameTime_t, 0xa98);
+			NESTED_PROPERTY(m_flLastFlexAnimationTime,entity2::GameTime_t, 0xa9c);
+			NESTED_PROPERTY(m_nNextSceneEventId,client::SceneEventId_t, 0xaa0);
 			PROPERTY(m_bUpdateLayerPriorities,bool, 0xaa4);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseFlex) == 0xAB0, "CBaseFlex size should be 0xAB0");
-
-#endif
 	}
 }

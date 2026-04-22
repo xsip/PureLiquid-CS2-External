@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -27,7 +27,7 @@ namespace CS2 {
 	namespace server {
 		class CEnvWindShared  {
 		public:
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x8);
+			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x8);
 			PROPERTY(m_iWindSeed,uint32_t, 0xc);
 			PROPERTY(m_iMinWind,uint16_t, 0x10);
 			PROPERTY(m_iMaxWind,uint16_t, 0x12);
@@ -41,14 +41,11 @@ namespace CS2 {
 			PROPERTY(m_iInitialWindDir,uint16_t, 0x2a);
 			PROPERTY(m_flInitialWindSpeed,float32, 0x2c);
 			PROPERTY(m_location,GlobalTypes::Vector, 0x30);
-			NESTED_PROPERTY(m_OnGustStart,IDENTITY(entity2::CEntityIOOutput), 0x40);
-			NESTED_PROPERTY(m_OnGustEnd,IDENTITY(entity2::CEntityIOOutput), 0x58);
-			PROPERTY(m_hEntOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x70);
+			NESTED_PROPERTY(m_OnGustStart,entity2::CEntityIOOutput, 0x40);
+			NESTED_PROPERTY(m_OnGustEnd,entity2::CEntityIOOutput, 0x58);
+			PROPERTY(m_hEntOwner,GlobalTypes::CHandle<server::CBaseEntity>, 0x70);
 			S2_PAD(0x130);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvWindShared) == 0x130, "CEnvWindShared size should be 0x130");
-
-#endif
 	}
 }

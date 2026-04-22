@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimScriptBase.hpp"
+#include <SDK/host/CAnimScriptBase.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace host {
 		class EmptyTestScript : public CS2::host::CAnimScriptBase {
 		public:
-			// PROPERTY(m_hTest,IDENTITY(GlobalTypes::CAnimScriptParam< float32 >), 0x10);
+			PROPERTY(m_hTest,GlobalTypes::CAnimScriptParam< float32 >, 0x10);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::host::EmptyTestScript) == 0x20, "EmptyTestScript size should be 0x20");
-
-#endif
 	}
 }

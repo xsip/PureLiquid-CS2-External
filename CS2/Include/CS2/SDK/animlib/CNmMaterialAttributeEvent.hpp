@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmEvent.hpp"
+#include <SDK/animlib/CNmEvent.hpp>
 
 
 
@@ -29,9 +29,6 @@ namespace CS2 {
 			PROPERTY(m_w,GlobalTypes::CPiecewiseCurve, 0xf0);
 			S2_PAD(0x110);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmMaterialAttributeEvent) == 0x130, "CNmMaterialAttributeEvent size should be 0x130");
-
-#endif
 	}
 }

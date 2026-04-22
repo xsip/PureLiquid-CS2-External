@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_SoundAreaEntityBase.hpp"
+#include <SDK/client/C_SoundAreaEntityBase.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_vMax,GlobalTypes::Vector, 0x63c);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SoundAreaEntityOrientedBox) == 0x648, "C_SoundAreaEntityOrientedBox size should be 0x648");
-
-#endif
 	}
 }

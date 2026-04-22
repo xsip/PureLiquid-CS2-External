@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmBoneWeightList.hpp"
+#include <SDK/animlib/CNmBoneWeightList.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 		class NmBoneMaskSetDefinition_t  {
 		public:
 			PROPERTY(m_ID,GlobalTypes::CGlobalSymbol, 0x0);
-			NESTED_PROPERTY(m_primaryWeightList,IDENTITY(animlib::CNmBoneWeightList), 0x8);
-			// PROPERTY(m_secondaryWeightLists,IDENTITY(GlobalTypes::CUtlLeanVector<animlib::CNmBoneWeightList>), 0x118);
+			NESTED_PROPERTY(m_primaryWeightList,animlib::CNmBoneWeightList, 0x8);
+			PROPERTY(m_secondaryWeightLists,GlobalTypes::CUtlLeanVector<animlib::CNmBoneWeightList>, 0x118);
 			S2_PAD(0x128);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::NmBoneMaskSetDefinition_t) == 0x128, "NmBoneMaskSetDefinition_t size should be 0x128");
-
-#endif
 	}
 }

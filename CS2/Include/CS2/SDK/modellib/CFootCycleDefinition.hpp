@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimCycle.hpp"
-#include "CFootCycle.hpp"
+#include <SDK/modellib/CAnimCycle.hpp>
+#include <SDK/modellib/CFootCycle.hpp>
 
 
 
@@ -26,16 +26,13 @@ namespace CS2 {
 			PROPERTY(m_vMidpointPositionMS,GlobalTypes::Vector, 0xc);
 			PROPERTY(m_flStanceDirectionMS,float32, 0x18);
 			PROPERTY(m_vToStrideStartPos,GlobalTypes::Vector, 0x1c);
-			NESTED_PROPERTY(m_stanceCycle,IDENTITY(modellib::CAnimCycle), 0x28);
-			NESTED_PROPERTY(m_footLiftCycle,IDENTITY(modellib::CFootCycle), 0x2c);
-			NESTED_PROPERTY(m_footOffCycle,IDENTITY(modellib::CFootCycle), 0x30);
-			NESTED_PROPERTY(m_footStrikeCycle,IDENTITY(modellib::CFootCycle), 0x34);
-			NESTED_PROPERTY(m_footLandCycle,IDENTITY(modellib::CFootCycle), 0x38);
+			NESTED_PROPERTY(m_stanceCycle,modellib::CAnimCycle, 0x28);
+			NESTED_PROPERTY(m_footLiftCycle,modellib::CFootCycle, 0x2c);
+			NESTED_PROPERTY(m_footOffCycle,modellib::CFootCycle, 0x30);
+			NESTED_PROPERTY(m_footStrikeCycle,modellib::CFootCycle, 0x34);
+			NESTED_PROPERTY(m_footLandCycle,modellib::CFootCycle, 0x38);
 			S2_PAD(0x3C);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFootCycleDefinition) == 0x3C, "CFootCycleDefinition size should be 0x3C");
-
-#endif
 	}
 }

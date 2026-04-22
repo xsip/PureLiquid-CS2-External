@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSAdditionalPerRoundStats_t.hpp"
+#include <SDK/server/CSAdditionalPerRoundStats_t.hpp>
 
 
 
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_flTeamDamage,float32, 0x124);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSAdditionalMatchStats_t) == 0x128, "CSAdditionalMatchStats_t size should be 0x128");
-
-#endif
 	}
 }

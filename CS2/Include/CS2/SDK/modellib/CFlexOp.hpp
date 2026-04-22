@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FlexOpCode_t.hpp"
+#include <SDK/modellib/FlexOpCode_t.hpp>
 
 
 
@@ -21,13 +21,10 @@ namespace CS2 {
 	namespace modellib {
 		class CFlexOp  {
 		public:
-			PROPERTY(m_OpCode,IDENTITY(modellib::FlexOpCode_t), 0x0);
+			PROPERTY(m_OpCode,modellib::FlexOpCode_t, 0x0);
 			PROPERTY(m_Data,int32_t, 0x4);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFlexOp) == 0x8, "CFlexOp size should be 0x8");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../client/attributeprovidertypes_t.hpp"
-#include "CAttributeManager_cached_attribute_float_t.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/client/attributeprovidertypes_t.hpp>
+#include <SDK/server/cached_attribute_float_t.hpp>
 
 
 
@@ -23,17 +23,14 @@ namespace CS2 {
 	namespace server {
 		class CAttributeManager  {
 		public:
-			NESTED_PROPERTY(m_Providers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x8);
+			NESTED_PROPERTY(m_Providers,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x8);
 			PROPERTY(m_iReapplyProvisionParity,int32_t, 0x20);
-			PROPERTY(m_hOuter,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x24);
+			PROPERTY(m_hOuter,GlobalTypes::CHandle<server::CBaseEntity>, 0x24);
 			PROPERTY(m_bPreventLoopback,bool, 0x28);
-			PROPERTY(m_ProviderType,IDENTITY(client::attributeprovidertypes_t), 0x2c);
-			NESTED_PROPERTY(m_CachedResults,IDENTITY(GlobalTypes::CUtlVector<server::CAttributeManager_cached_attribute_float_t>), 0x30);
+			PROPERTY(m_ProviderType,client::attributeprovidertypes_t, 0x2c);
+			NESTED_PROPERTY(m_CachedResults,server::CUtlVector<server::cached_attribute_float_t>, 0x30);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CAttributeManager) == 0x50, "CAttributeManager size should be 0x50");
-
-#endif
 	}
 }

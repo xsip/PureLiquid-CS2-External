@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionConstraint.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionConstraint.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_CollideWithSelf : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d0);
-			NESTED_PROPERTY(m_flMinimumSpeed,IDENTITY(particleslib::CPerParticleFloatInput), 0x340);
+			NESTED_PROPERTY(m_flRadiusScale,particleslib::CPerParticleFloatInput, 0x1d0);
+			NESTED_PROPERTY(m_flMinimumSpeed,particleslib::CPerParticleFloatInput, 0x340);
 			S2_PAD(0x2E0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_CollideWithSelf) == 0x4B0, "C_OP_CollideWithSelf size should be 0x4B0");
-
-#endif
 	}
 }

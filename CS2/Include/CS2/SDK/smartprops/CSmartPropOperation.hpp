@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropModifier.hpp"
+#include <SDK/smartprops/CSmartPropModifier.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropOperation : public CS2::smartprops::CSmartPropModifier {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation) == 0x50, "CSmartPropOperation size should be 0x50");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../animationsystem/HSequence.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "AnimLoopMode_t.hpp"
+#include <SDK/animationsystem/HSequence.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/AnimLoopMode_t.hpp>
 
 
 
@@ -23,17 +23,14 @@ namespace CS2 {
 	namespace client {
 		class SequenceHistory_t  {
 		public:
-			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x0);
-			NESTED_PROPERTY(m_flSeqStartTime,IDENTITY(entity2::GameTime_t), 0x4);
+			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x0);
+			NESTED_PROPERTY(m_flSeqStartTime,entity2::GameTime_t, 0x4);
 			PROPERTY(m_flSeqFixedCycle,float32, 0x8);
-			PROPERTY(m_nSeqLoopMode,IDENTITY(client::AnimLoopMode_t), 0xc);
+			PROPERTY(m_nSeqLoopMode,client::AnimLoopMode_t, 0xc);
 			PROPERTY(m_flPlaybackRate,float32, 0x10);
 			PROPERTY(m_flCyclesPerSecond,float32, 0x14);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::SequenceHistory_t) == 0x18, "SequenceHistory_t size should be 0x18");
-
-#endif
 	}
 }

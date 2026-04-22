@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropOperation_Trace.hpp"
-#include "CSmartPropAttributeCoordinateSpace.hpp"
+#include <SDK/smartprops/CSmartPropOperation_Trace.hpp>
+#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 		class CSmartPropOperation_TraceToLine : public CS2::smartprops::CSmartPropOperation_Trace {
 		public:
 			PROPERTY(m_EndPointA,GlobalTypes::CSmartPropAttributeVector, 0x350);
-			NESTED_PROPERTY(m_EndPointSpaceA,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x390);
+			NESTED_PROPERTY(m_EndPointSpaceA,smartprops::CSmartPropAttributeCoordinateSpace, 0x390);
 			PROPERTY(m_EndPointB,GlobalTypes::CSmartPropAttributeVector, 0x3d0);
-			NESTED_PROPERTY(m_EndPointSpaceB,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x410);
+			NESTED_PROPERTY(m_EndPointSpaceB,smartprops::CSmartPropAttributeCoordinateSpace, 0x410);
 			PROPERTY(m_bTraceAway,GlobalTypes::CSmartPropAttributeBool, 0x450);
 			PROPERTY(m_flTraceLength,GlobalTypes::CSmartPropAttributeFloat, 0x490);
 			S2_PAD(0x180);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_TraceToLine) == 0x4D0, "CSmartPropOperation_TraceToLine size should be 0x4D0");
-
-#endif
 	}
 }

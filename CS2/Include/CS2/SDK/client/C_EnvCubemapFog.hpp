@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
 
 
 
@@ -40,16 +40,13 @@ namespace CS2 {
 			PROPERTY(m_bStartDisabled,bool, 0x62d);
 			PROPERTY(m_flFogMaxOpacity,float32, 0x630);
 			PROPERTY(m_nCubemapSourceType,int32_t, 0x634);
-			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x638);
+			PROPERTY(m_hSkyMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x638);
 			PROPERTY(m_iszSkyEntity,GlobalTypes::CUtlSymbolLarge*, 0x640);
-			PROPERTY(m_hFogCubemapTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x648);
+			PROPERTY(m_hFogCubemapTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x648);
 			PROPERTY(m_bHasHeightFogEnd,bool, 0x650);
 			PROPERTY(m_bFirstTime,bool, 0x651);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvCubemapFog) == 0x658, "C_EnvCubemapFog size should be 0x658");
-
-#endif
 	}
 }

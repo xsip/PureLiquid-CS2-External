@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
 
 
 
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1df);
 			S2_PAD(0x88);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_ModelCull) == 0x260, "C_INIT_ModelCull size should be 0x260");
-
-#endif
 	}
 }

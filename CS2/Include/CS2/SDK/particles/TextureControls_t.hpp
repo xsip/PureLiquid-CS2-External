@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
-#include "SpriteCardPerParticleScale_t.hpp"
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
+#include <SDK/particles/SpriteCardPerParticleScale_t.hpp>
 
 
 
@@ -22,27 +22,24 @@ namespace CS2 {
 	namespace particles {
 		class TextureControls_t  {
 		public:
-			NESTED_PROPERTY(m_flFinalTextureScaleU,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x0);
-			NESTED_PROPERTY(m_flFinalTextureScaleV,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x170);
-			NESTED_PROPERTY(m_flFinalTextureOffsetU,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2e0);
-			NESTED_PROPERTY(m_flFinalTextureOffsetV,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x450);
-			NESTED_PROPERTY(m_flFinalTextureUVRotation,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x5c0);
-			NESTED_PROPERTY(m_flZoomScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x730);
-			NESTED_PROPERTY(m_flDistortion,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x8a0);
+			NESTED_PROPERTY(m_flFinalTextureScaleU,particleslib::CParticleCollectionRendererFloatInput, 0x0);
+			NESTED_PROPERTY(m_flFinalTextureScaleV,particleslib::CParticleCollectionRendererFloatInput, 0x170);
+			NESTED_PROPERTY(m_flFinalTextureOffsetU,particleslib::CParticleCollectionRendererFloatInput, 0x2e0);
+			NESTED_PROPERTY(m_flFinalTextureOffsetV,particleslib::CParticleCollectionRendererFloatInput, 0x450);
+			NESTED_PROPERTY(m_flFinalTextureUVRotation,particleslib::CParticleCollectionRendererFloatInput, 0x5c0);
+			NESTED_PROPERTY(m_flZoomScale,particleslib::CParticleCollectionRendererFloatInput, 0x730);
+			NESTED_PROPERTY(m_flDistortion,particleslib::CParticleCollectionRendererFloatInput, 0x8a0);
 			PROPERTY(m_bRandomizeOffsets,bool, 0xa10);
 			PROPERTY(m_bClampUVs,bool, 0xa11);
-			PROPERTY(m_nPerParticleBlend,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa14);
-			PROPERTY(m_nPerParticleScale,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa18);
-			PROPERTY(m_nPerParticleOffsetU,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa1c);
-			PROPERTY(m_nPerParticleOffsetV,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa20);
-			PROPERTY(m_nPerParticleRotation,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa24);
-			PROPERTY(m_nPerParticleZoom,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa28);
-			PROPERTY(m_nPerParticleDistortion,IDENTITY(particles::SpriteCardPerParticleScale_t), 0xa2c);
+			PROPERTY(m_nPerParticleBlend,particles::SpriteCardPerParticleScale_t, 0xa14);
+			PROPERTY(m_nPerParticleScale,particles::SpriteCardPerParticleScale_t, 0xa18);
+			PROPERTY(m_nPerParticleOffsetU,particles::SpriteCardPerParticleScale_t, 0xa1c);
+			PROPERTY(m_nPerParticleOffsetV,particles::SpriteCardPerParticleScale_t, 0xa20);
+			PROPERTY(m_nPerParticleRotation,particles::SpriteCardPerParticleScale_t, 0xa24);
+			PROPERTY(m_nPerParticleZoom,particles::SpriteCardPerParticleScale_t, 0xa28);
+			PROPERTY(m_nPerParticleDistortion,particles::SpriteCardPerParticleScale_t, 0xa2c);
 			S2_PAD(0xA30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::TextureControls_t) == 0xA30, "TextureControls_t size should be 0xA30");
-
-#endif
 	}
 }

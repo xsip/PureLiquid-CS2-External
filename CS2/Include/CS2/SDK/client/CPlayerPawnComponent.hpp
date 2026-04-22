@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/CNetworkVarChainer.hpp"
+#include <SDK/entity2/CNetworkVarChainer.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace client {
 		class CPlayerPawnComponent  {
 		public:
-			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x8);
+			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x8);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPlayerPawnComponent) == 0x48, "CPlayerPawnComponent size should be 0x48");
-
-#endif
 	}
 }

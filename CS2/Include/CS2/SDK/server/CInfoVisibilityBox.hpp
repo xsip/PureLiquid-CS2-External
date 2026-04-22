@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -26,9 +26,6 @@ namespace CS2 {
 			PROPERTY(m_bEnabled,bool, 0x4bc);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoVisibilityBox) == 0x4C0, "CInfoVisibilityBox size should be 0x4C0");
-
-#endif
 	}
 }

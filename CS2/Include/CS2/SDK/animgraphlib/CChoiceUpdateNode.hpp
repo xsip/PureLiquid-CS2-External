@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimUpdateNodeBase.hpp"
-#include "CAnimUpdateNodeRef.hpp"
-#include "ChoiceMethod.hpp"
-#include "ChoiceChangeMethod.hpp"
-#include "ChoiceBlendMethod.hpp"
+#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
+#include <SDK/animgraphlib/CAnimUpdateNodeRef.hpp>
+#include <SDK/animgraphlib/ChoiceMethod.hpp>
+#include <SDK/animgraphlib/ChoiceChangeMethod.hpp>
+#include <SDK/animgraphlib/ChoiceBlendMethod.hpp>
 
 
 
@@ -25,21 +25,18 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CChoiceUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_children,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>), 0x60);
-			NESTED_PROPERTY(m_weights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x78);
-			NESTED_PROPERTY(m_blendTimes,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x90);
-			PROPERTY(m_choiceMethod,IDENTITY(animgraphlib::ChoiceMethod), 0xa8);
-			PROPERTY(m_choiceChangeMethod,IDENTITY(animgraphlib::ChoiceChangeMethod), 0xac);
-			PROPERTY(m_blendMethod,IDENTITY(animgraphlib::ChoiceBlendMethod), 0xb0);
+			NESTED_PROPERTY(m_children,GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>, 0x60);
+			NESTED_PROPERTY(m_weights,GlobalTypes::CUtlVector< float32 >, 0x78);
+			NESTED_PROPERTY(m_blendTimes,GlobalTypes::CUtlVector< float32 >, 0x90);
+			PROPERTY(m_choiceMethod,animgraphlib::ChoiceMethod, 0xa8);
+			PROPERTY(m_choiceChangeMethod,animgraphlib::ChoiceChangeMethod, 0xac);
+			PROPERTY(m_blendMethod,animgraphlib::ChoiceBlendMethod, 0xb0);
 			PROPERTY(m_blendTime,float32, 0xb4);
 			PROPERTY(m_bCrossFade,bool, 0xb8);
 			PROPERTY(m_bResetChosen,bool, 0xb9);
 			PROPERTY(m_bDontResetSameSelection,bool, 0xba);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CChoiceUpdateNode) == 0xC0, "CChoiceUpdateNode size should be 0xC0");
-
-#endif
 	}
 }

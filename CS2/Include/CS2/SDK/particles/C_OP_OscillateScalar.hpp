@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 			PROPERTY(m_RateMax,float32, 0x1d4);
 			PROPERTY(m_FrequencyMin,float32, 0x1d8);
 			PROPERTY(m_FrequencyMax,float32, 0x1dc);
-			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x1e0);
 			PROPERTY(m_bProportional,bool, 0x1e4);
 			PROPERTY(m_bProportionalOp,bool, 0x1e5);
 			PROPERTY(m_flStartTime_min,float32, 0x1e8);
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_flOscAdd,float32, 0x1fc);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_OscillateScalar) == 0x200, "C_OP_OscillateScalar size should be 0x200");
-
-#endif
 	}
 }

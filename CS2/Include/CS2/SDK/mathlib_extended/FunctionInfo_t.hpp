@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FuseFunctionIndex_t.hpp"
+#include <SDK/mathlib_extended/FuseFunctionIndex_t.hpp>
 
 
 
@@ -24,13 +24,10 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_nameToken,GlobalTypes::CUtlStringToken*, 0x10);
 			PROPERTY(m_nParamCount,int32_t, 0x14);
-			NESTED_PROPERTY(m_nIndex,IDENTITY(mathlib_extended::FuseFunctionIndex_t), 0x18);
+			NESTED_PROPERTY(m_nIndex,mathlib_extended::FuseFunctionIndex_t, 0x18);
 			PROPERTY(m_bIsPure,bool, 0x1a);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::mathlib_extended::FunctionInfo_t) == 0x20, "FunctionInfo_t size should be 0x20");
-
-#endif
 	}
 }

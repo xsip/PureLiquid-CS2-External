@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCycleBase.hpp"
+#include <SDK/modellib/CCycleBase.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace modellib {
 		class CFootCycle : public CS2::modellib::CCycleBase {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFootCycle) == 0x4, "CFootCycle size should be 0x4");
-
-#endif
 	}
 }

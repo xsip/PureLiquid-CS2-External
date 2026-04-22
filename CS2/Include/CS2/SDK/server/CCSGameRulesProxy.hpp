@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CGameRulesProxy.hpp"
+#include <SDK/server/CGameRulesProxy.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 	namespace server {
 		class CCSGameRulesProxy : public CS2::server::CGameRulesProxy {
 		public:
-			PROPERTY(m_pGameRules,IDENTITY(server::CCSGameRules*), 0x4a8);
+			PROPERTY(m_pGameRules,server::CCSGameRules*, 0x4a8);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSGameRulesProxy) == 0x4B0, "CCSGameRulesProxy size should be 0x4B0");
-
-#endif
 	}
 }

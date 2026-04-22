@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CTonemapController2.hpp"
+#include <SDK/server/CTonemapController2.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CTonemapController2Alias_env_tonemap_controller2 : public CS2::server::CTonemapController2 {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTonemapController2Alias_env_tonemap_controller2) == 0x4C0, "CTonemapController2Alias_env_tonemap_controller2 size should be 0x4C0");
-
-#endif
 	}
 }

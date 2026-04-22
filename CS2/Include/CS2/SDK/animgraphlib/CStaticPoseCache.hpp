@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCachedPose.hpp"
+#include <SDK/animgraphlib/CCachedPose.hpp>
 
 
 
@@ -21,14 +21,11 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStaticPoseCache  {
 		public:
-			NESTED_PROPERTY(m_poses,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CCachedPose>), 0x10);
+			NESTED_PROPERTY(m_poses,GlobalTypes::CUtlVector<animgraphlib::CCachedPose>, 0x10);
 			PROPERTY(m_nBoneCount,int32_t, 0x28);
 			PROPERTY(m_nMorphCount,int32_t, 0x2c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStaticPoseCache) == 0x30, "CStaticPoseCache size should be 0x30");
-
-#endif
 	}
 }

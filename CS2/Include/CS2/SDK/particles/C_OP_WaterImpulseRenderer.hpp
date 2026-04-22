@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "EventTypeSelection_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/EventTypeSelection_t.hpp>
 
 
 
@@ -24,19 +24,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_WaterImpulseRenderer : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_vecPos,IDENTITY(particleslib::CPerParticleVecInput), 0x220);
-			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x8d8);
-			NESTED_PROPERTY(m_flMagnitude,IDENTITY(particleslib::CPerParticleFloatInput), 0xa48);
-			NESTED_PROPERTY(m_flShape,IDENTITY(particleslib::CPerParticleFloatInput), 0xbb8);
-			NESTED_PROPERTY(m_flWindSpeed,IDENTITY(particleslib::CPerParticleFloatInput), 0xd28);
-			NESTED_PROPERTY(m_flWobble,IDENTITY(particleslib::CPerParticleFloatInput), 0xe98);
+			NESTED_PROPERTY(m_vecPos,particleslib::CPerParticleVecInput, 0x220);
+			NESTED_PROPERTY(m_flRadius,particleslib::CPerParticleFloatInput, 0x8d8);
+			NESTED_PROPERTY(m_flMagnitude,particleslib::CPerParticleFloatInput, 0xa48);
+			NESTED_PROPERTY(m_flShape,particleslib::CPerParticleFloatInput, 0xbb8);
+			NESTED_PROPERTY(m_flWindSpeed,particleslib::CPerParticleFloatInput, 0xd28);
+			NESTED_PROPERTY(m_flWobble,particleslib::CPerParticleFloatInput, 0xe98);
 			PROPERTY(m_bIsRadialWind,bool, 0x1008);
-			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x100c);
+			PROPERTY(m_nEventType,particles::EventTypeSelection_t, 0x100c);
 			S2_PAD(0xDF0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_WaterImpulseRenderer) == 0x1010, "C_OP_WaterImpulseRenderer size should be 0x1010");
-
-#endif
 	}
 }

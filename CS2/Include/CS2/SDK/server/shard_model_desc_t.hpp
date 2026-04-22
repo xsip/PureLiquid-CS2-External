@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/ShardSolid_t.hpp"
+#include <SDK/client/ShardSolid_t.hpp>
 
 
 
@@ -27,23 +27,20 @@ namespace CS2 {
 		class shard_model_desc_t  {
 		public:
 			PROPERTY(m_nModelID,int32_t, 0x8);
-			PROPERTY(m_hMaterialBase,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x10);
-			PROPERTY(m_hMaterialDamageOverlay,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x18);
-			PROPERTY(m_solid,IDENTITY(client::ShardSolid_t), 0x20);
+			PROPERTY(m_hMaterialBase,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x10);
+			PROPERTY(m_hMaterialDamageOverlay,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x18);
+			PROPERTY(m_solid,client::ShardSolid_t, 0x20);
 			PROPERTY(m_vecPanelSize,GlobalTypes::Vector2D, 0x24);
 			PROPERTY(m_vecStressPositionA,GlobalTypes::Vector2D, 0x2c);
 			PROPERTY(m_vecStressPositionB,GlobalTypes::Vector2D, 0x34);
-			// PROPERTY(m_vecPanelVertices,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector2D>), 0x40);
-			// PROPERTY(m_vInitialPanelVertices,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector4D>), 0x58);
+			PROPERTY(m_vecPanelVertices,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector2D>, 0x40);
+			PROPERTY(m_vInitialPanelVertices,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector4D>, 0x58);
 			PROPERTY(m_flGlassHalfThickness,float32, 0x70);
 			PROPERTY(m_bHasParent,bool, 0x74);
 			PROPERTY(m_bParentFrozen,bool, 0x75);
 			PROPERTY(m_SurfacePropStringToken,GlobalTypes::CUtlStringToken*, 0x78);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::shard_model_desc_t) == 0x80, "shard_model_desc_t size should be 0x80");
-
-#endif
 	}
 }

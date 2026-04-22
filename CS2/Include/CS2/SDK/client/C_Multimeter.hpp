@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
+#include <SDK/client/CBaseAnimGraph.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 	namespace client {
 		class C_Multimeter : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_hTargetC4,IDENTITY(GlobalTypes::CHandle<client::C_PlantedC4>), 0x1170);
+			PROPERTY(m_hTargetC4,GlobalTypes::CHandle<client::C_PlantedC4>, 0x1170);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Multimeter) == 0x1178, "C_Multimeter size should be 0x1178");
-
-#endif
 	}
 }

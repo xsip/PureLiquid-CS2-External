@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayer_MovementServices.hpp"
+#include <SDK/server/CPlayer_MovementServices.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_vecSmoothedVelocity,GlobalTypes::Vector, 0x26c);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPlayer_MovementServices_Humanoid) == 0x278, "CPlayer_MovementServices_Humanoid size should be 0x278");
-
-#endif
 	}
 }

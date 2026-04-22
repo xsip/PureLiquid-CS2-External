@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreationNoise : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
 			PROPERTY(m_bAbsVal,bool, 0x1dc);
 			PROPERTY(m_bAbsValInv,bool, 0x1dd);
 			PROPERTY(m_flOffset,float32, 0x1e0);
@@ -34,9 +34,6 @@ namespace CS2 {
 			PROPERTY(m_flWorldTimeScale,float32, 0x200);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_CreationNoise) == 0x208, "C_INIT_CreationNoise size should be 0x208");
-
-#endif
 	}
 }

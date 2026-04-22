@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "CMotorController.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/server/CMotorController.hpp>
 
 
 
@@ -29,8 +29,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nameAttach,GlobalTypes::CUtlSymbolLarge*, 0x4a8);
 			PROPERTY(m_nameAnchor,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
-			PROPERTY(m_hAttachedObject,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4b8);
-			PROPERTY(m_hAnchorObject,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4bc);
+			PROPERTY(m_hAttachedObject,GlobalTypes::CHandle<server::CBaseEntity>, 0x4b8);
+			PROPERTY(m_hAnchorObject,GlobalTypes::CHandle<server::CBaseEntity>, 0x4bc);
 			PROPERTY(m_spinUp,float32, 0x4c0);
 			PROPERTY(m_spinDown,float32, 0x4c4);
 			PROPERTY(m_flMotorFriction,float32, 0x4c8);
@@ -39,12 +39,9 @@ namespace CS2 {
 			PROPERTY(m_flTorqueScale,float32, 0x4d4);
 			PROPERTY(m_flTargetSpeed,float32, 0x4d8);
 			PROPERTY(m_flSpeedWhenSpinUpOrSpinDownStarted,float32, 0x4dc);
-			NESTED_PROPERTY(m_motor,IDENTITY(server::CMotorController), 0x4f0);
+			NESTED_PROPERTY(m_motor,server::CMotorController, 0x4f0);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysMotor) == 0x510, "CPhysMotor size should be 0x510");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayer_WaterServices.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CPlayer_WaterServices.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -22,17 +22,14 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_WaterServices : public CS2::server::CPlayer_WaterServices {
 		public:
-			NESTED_PROPERTY(m_NextDrownDamageTime,IDENTITY(entity2::GameTime_t), 0x48);
+			NESTED_PROPERTY(m_NextDrownDamageTime,entity2::GameTime_t, 0x48);
 			PROPERTY(m_nDrownDmgRate,int32_t, 0x4c);
-			NESTED_PROPERTY(m_AirFinishedTime,IDENTITY(entity2::GameTime_t), 0x50);
+			NESTED_PROPERTY(m_AirFinishedTime,entity2::GameTime_t, 0x50);
 			PROPERTY(m_flWaterJumpTime,float32, 0x54);
 			PROPERTY(m_vecWaterJumpVel,GlobalTypes::Vector, 0x58);
 			PROPERTY(m_flSwimSoundTime,float32, 0x64);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_WaterServices) == 0x80, "CCSPlayer_WaterServices size should be 0x80");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PulseDomainValueType_t.hpp"
+#include <SDK/pulse_runtime_lib/PulseDomainValueType_t.hpp>
 
 
 
@@ -21,14 +21,11 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulse_DomainValue  {
 		public:
-			PROPERTY(m_nType,IDENTITY(pulse_runtime_lib::PulseDomainValueType_t), 0x0);
+			PROPERTY(m_nType,pulse_runtime_lib::PulseDomainValueType_t, 0x0);
 			PROPERTY(m_Value,GlobalTypes::CGlobalSymbolCaseSensitive, 0x8);
 			PROPERTY(m_RequiredRuntimeType,GlobalTypes::CPulseValueFullType, 0x10);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_DomainValue) == 0x30, "CPulse_DomainValue size should be 0x30");
-
-#endif
 	}
 }

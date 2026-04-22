@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
-#include "CBasePlayerPawn.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
+#include <SDK/server/CBasePlayerPawn.hpp>
 
 
 
@@ -27,14 +27,11 @@ namespace CS2 {
 	namespace server {
 		class CTriggerSoundscape : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_hSoundscape,IDENTITY(GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>), 0x890);
+			PROPERTY(m_hSoundscape,GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>, 0x890);
 			PROPERTY(m_SoundscapeName,GlobalTypes::CUtlSymbolLarge*, 0x898);
-			NESTED_PROPERTY(m_spectators,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerPawn>>), 0x8a0);
+			NESTED_PROPERTY(m_spectators,server::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerPawn>>, 0x8a0);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerSoundscape) == 0x8B8, "CTriggerSoundscape size should be 0x8B8");
-
-#endif
 	}
 }

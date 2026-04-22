@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
+#include <SDK/client/CBaseAnimGraph.hpp>
 
 
 
@@ -23,9 +23,6 @@ namespace CS2 {
 		public:
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_LateUpdatedAnimating) == 0x1200, "C_LateUpdatedAnimating size should be 0x1200");
-
-#endif
 	}
 }

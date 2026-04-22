@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ParticleDetailLevel_t.hpp"
+#include <SDK/particles/ParticleDetailLevel_t.hpp>
 
 
 
@@ -26,16 +26,13 @@ namespace CS2 {
 	namespace particles {
 		class ParticleChildrenInfo_t  {
 		public:
-			PROPERTY(m_ChildRef,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x0);
+			PROPERTY(m_ChildRef,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x0);
 			PROPERTY(m_flDelay,float32, 0x8);
 			PROPERTY(m_bEndCap,bool, 0xc);
 			PROPERTY(m_bDisableChild,bool, 0xd);
-			PROPERTY(m_nDetailLevel,IDENTITY(particles::ParticleDetailLevel_t), 0x10);
+			PROPERTY(m_nDetailLevel,particles::ParticleDetailLevel_t, 0x10);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::ParticleChildrenInfo_t) == 0x20, "ParticleChildrenInfo_t size should be 0x20");
-
-#endif
 	}
 }

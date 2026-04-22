@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
 
 
 
@@ -31,13 +31,10 @@ namespace CS2 {
 			PROPERTY(m_bTriggerOnStartTouch,bool, 0x8a8);
 			PROPERTY(m_bUsePathSimple,bool, 0x8a9);
 			PROPERTY(m_iszPathSimpleName,GlobalTypes::CUtlSymbolLarge*, 0x8b0);
-			PROPERTY(m_PathSimple,IDENTITY(server::CPathSimple*), 0x8b8);
+			PROPERTY(m_PathSimple,server::CPathSimple*, 0x8b8);
 			PROPERTY(m_splinePushType,uint32_t, 0x8c0);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerPush) == 0x8C8, "CTriggerPush size should be 0x8C8");
-
-#endif
 	}
 }

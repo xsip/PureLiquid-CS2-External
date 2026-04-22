@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace client {
 		class C_EnvCubemap : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_Entity_hCubemapTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x688);
+			PROPERTY(m_Entity_hCubemapTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x688);
 			PROPERTY(m_Entity_bCustomCubemapTexture,bool, 0x690);
 			PROPERTY(m_Entity_flInfluenceRadius,float32, 0x694);
 			PROPERTY(m_Entity_vBoxProjectMins,GlobalTypes::Vector, 0x698);
@@ -46,9 +46,6 @@ namespace CS2 {
 			PROPERTY(m_Entity_bEnabled,bool, 0x6e8);
 			S2_PAD(0xE8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvCubemap) == 0x6F0, "C_EnvCubemap size should be 0x6F0");
-
-#endif
 	}
 }

@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "MaterialProxyType_t.hpp"
-#include "MaterialVariable_t.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleColorBlendType_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/MaterialProxyType_t.hpp>
+#include <SDK/particles/MaterialVariable_t.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleColorBlendType_t.hpp>
 
 
 
@@ -33,18 +33,15 @@ namespace CS2 {
 		class C_OP_RenderMaterialProxy : public CS2::particles::CParticleFunctionRenderer {
 		public:
 			PROPERTY(m_nMaterialControlPoint,int32_t, 0x220);
-			PROPERTY(m_nProxyType,IDENTITY(particles::MaterialProxyType_t), 0x224);
-			NESTED_PROPERTY(m_MaterialVars,IDENTITY(GlobalTypes::CUtlVector<particles::MaterialVariable_t>), 0x228);
-			PROPERTY(m_hOverrideMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x240);
-			NESTED_PROPERTY(m_flMaterialOverrideEnabled,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x248);
-			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3b8);
-			NESTED_PROPERTY(m_flAlpha,IDENTITY(particleslib::CPerParticleFloatInput), 0xa70);
-			PROPERTY(m_nColorBlendType,IDENTITY(particles::ParticleColorBlendType_t), 0xbe0);
+			PROPERTY(m_nProxyType,particles::MaterialProxyType_t, 0x224);
+			NESTED_PROPERTY(m_MaterialVars,GlobalTypes::CUtlVector<particles::MaterialVariable_t>, 0x228);
+			PROPERTY(m_hOverrideMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x240);
+			NESTED_PROPERTY(m_flMaterialOverrideEnabled,particleslib::CParticleCollectionFloatInput, 0x248);
+			NESTED_PROPERTY(m_vecColorScale,particleslib::CParticleCollectionVecInput, 0x3b8);
+			NESTED_PROPERTY(m_flAlpha,particleslib::CPerParticleFloatInput, 0xa70);
+			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0xbe0);
 			S2_PAD(0x9E0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderMaterialProxy) == 0xC00, "C_OP_RenderMaterialProxy size should be 0xC00");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
 
 
 
@@ -24,12 +24,9 @@ namespace CS2 {
 			PROPERTY(m_strEventName,GlobalTypes::CUtlString*, 0x4b8);
 			PROPERTY(m_bIsEnabled,bool, 0x4c0);
 			PROPERTY(m_nTeam,int32_t, 0x4c4);
-			// PROPERTY(m_OnEventFired,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x4c8);
+			PROPERTY(m_OnEventFired,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x4c8);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicEventListener) == 0x4E8, "CLogicEventListener size should be 0x4E8");
-
-#endif
 	}
 }

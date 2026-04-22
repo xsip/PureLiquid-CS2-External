@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CTriggerOnce.hpp"
+#include <SDK/server/CTriggerOnce.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x8a8);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CScriptTriggerOnce) == 0x8B8, "CScriptTriggerOnce size should be 0x8B8");
-
-#endif
 	}
 }

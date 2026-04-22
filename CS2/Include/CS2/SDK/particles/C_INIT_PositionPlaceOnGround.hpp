@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleTraceSet_t.hpp"
-#include "ParticleTraceMissBehavior_t.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
+#include <SDK/particles/ParticleTraceMissBehavior_t.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -25,26 +25,23 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PositionPlaceOnGround : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_flOffset,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_flMaxTraceLength,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
+			NESTED_PROPERTY(m_flOffset,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_flMaxTraceLength,particleslib::CPerParticleFloatInput, 0x348);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x4b8);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x538);
-			PROPERTY(m_nTraceMissBehavior,IDENTITY(particles::ParticleTraceMissBehavior_t), 0x548);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x538);
+			PROPERTY(m_nTraceMissBehavior,particles::ParticleTraceMissBehavior_t, 0x548);
 			PROPERTY(m_bIncludeWater,bool, 0x54c);
 			PROPERTY(m_bSetNormal,bool, 0x54d);
-			NESTED_PROPERTY(m_nAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x550);
+			NESTED_PROPERTY(m_nAttribute,particles::ParticleAttributeIndex_t, 0x550);
 			PROPERTY(m_bSetPXYZOnly,bool, 0x554);
 			PROPERTY(m_bTraceAlongNormal,bool, 0x555);
-			NESTED_PROPERTY(m_nTraceDirectionAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x558);
+			NESTED_PROPERTY(m_nTraceDirectionAttribute,particles::ParticleAttributeIndex_t, 0x558);
 			PROPERTY(m_bOffsetonColOnly,bool, 0x55c);
 			PROPERTY(m_flOffsetByRadiusFactor,float32, 0x560);
 			PROPERTY(m_nPreserveOffsetCP,int32_t, 0x564);
 			PROPERTY(m_nIgnoreCP,int32_t, 0x568);
 			S2_PAD(0x398);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_PositionPlaceOnGround) == 0x570, "C_INIT_PositionPlaceOnGround size should be 0x570");
-
-#endif
 	}
 }

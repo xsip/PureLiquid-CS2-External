@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseToggle.hpp"
+#include <SDK/client/C_BaseToggle.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class C_FuncMoveLinear : public CS2::client::C_BaseToggle {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_FuncMoveLinear) == 0xE88, "C_FuncMoveLinear size should be 0xE88");
-
-#endif
 	}
 }

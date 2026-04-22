@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -26,13 +26,10 @@ namespace CS2 {
 			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1d4);
 			PROPERTY(m_bSetNormal,bool, 0x1d8);
 			PROPERTY(m_bSetRadius,bool, 0x1d9);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_flTValue,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_flTValue,particleslib::CPerParticleFloatInput, 0x350);
 			S2_PAD(0x2F0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_MovementMoveAlongSkinnedCPSnapshot) == 0x4C0, "C_OP_MovementMoveAlongSkinnedCPSnapshot size should be 0x4C0");
-
-#endif
 	}
 }

@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -23,9 +23,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_pValue,int32_t, 4 , 0x0);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSkillInt) == 0x10, "CSkillInt size should be 0x10");
-
-#endif
 	}
 }

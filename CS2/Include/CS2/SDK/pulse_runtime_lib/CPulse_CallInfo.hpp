@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PulseDocNodeID_t.hpp"
-#include "PulseRegisterMap_t.hpp"
-#include "PulseRuntimeChunkIndex_t.hpp"
+#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
+#include <SDK/pulse_runtime_lib/PulseRegisterMap_t.hpp>
+#include <SDK/pulse_runtime_lib/PulseRuntimeChunkIndex_t.hpp>
 
 
 
@@ -24,16 +24,13 @@ namespace CS2 {
 		class CPulse_CallInfo  {
 		public:
 			PROPERTY(m_PortName,GlobalTypes::PulseSymbol_t, 0x0);
-			NESTED_PROPERTY(m_nEditorNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x10);
-			NESTED_PROPERTY(m_RegisterMap,IDENTITY(pulse_runtime_lib::PulseRegisterMap_t), 0x18);
-			NESTED_PROPERTY(m_CallMethodID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x48);
-			NESTED_PROPERTY(m_nSrcChunk,IDENTITY(pulse_runtime_lib::PulseRuntimeChunkIndex_t), 0x4c);
+			NESTED_PROPERTY(m_nEditorNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x10);
+			NESTED_PROPERTY(m_RegisterMap,pulse_runtime_lib::PulseRegisterMap_t, 0x18);
+			NESTED_PROPERTY(m_CallMethodID,pulse_runtime_lib::PulseDocNodeID_t, 0x48);
+			NESTED_PROPERTY(m_nSrcChunk,pulse_runtime_lib::PulseRuntimeChunkIndex_t, 0x4c);
 			PROPERTY(m_nSrcInstruction,int32_t, 0x50);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_CallInfo) == 0x58, "CPulse_CallInfo size should be 0x58");
-
-#endif
 	}
 }

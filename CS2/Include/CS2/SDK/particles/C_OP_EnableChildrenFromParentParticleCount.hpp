@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nChildGroupID,int32_t, 0x1d8);
 			PROPERTY(m_nFirstChild,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_nNumChildrenToEnable,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_nNumChildrenToEnable,particleslib::CParticleCollectionFloatInput, 0x1e0);
 			PROPERTY(m_bDisableChildren,bool, 0x350);
 			PROPERTY(m_bPlayEndcapOnStop,bool, 0x351);
 			PROPERTY(m_bDestroyImmediately,bool, 0x352);
 			S2_PAD(0x180);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_EnableChildrenFromParentParticleCount) == 0x358, "C_OP_EnableChildrenFromParentParticleCount size should be 0x358");
-
-#endif
 	}
 }

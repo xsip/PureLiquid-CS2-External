@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CFuncLadder.hpp"
+#include <SDK/server/CFuncLadder.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CFuncLadderAlias_func_useableladder : public CS2::server::CFuncLadder {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncLadderAlias_func_useableladder) == 0x7C0, "CFuncLadderAlias_func_useableladder size should be 0x7C0");
-
-#endif
 	}
 }

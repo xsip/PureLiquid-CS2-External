@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "SceneViewId_t.hpp"
-#include "CSSDSMsg_ViewTarget.hpp"
+#include <SDK/scenesystem/SceneViewId_t.hpp>
+#include <SDK/scenesystem/CSSDSMsg_ViewTarget.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace scenesystem {
 		class CSSDSMsg_ViewTargetList  {
 		public:
-			NESTED_PROPERTY(m_viewId,IDENTITY(scenesystem::SceneViewId_t), 0x0);
+			NESTED_PROPERTY(m_viewId,scenesystem::SceneViewId_t, 0x0);
 			PROPERTY(m_ViewName,GlobalTypes::CUtlString*, 0x10);
-			NESTED_PROPERTY(m_Targets,IDENTITY(GlobalTypes::CUtlVector<scenesystem::CSSDSMsg_ViewTarget>), 0x18);
+			NESTED_PROPERTY(m_Targets,GlobalTypes::CUtlVector<scenesystem::CSSDSMsg_ViewTarget>, 0x18);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::scenesystem::CSSDSMsg_ViewTargetList) == 0x30, "CSSDSMsg_ViewTargetList size should be 0x30");
-
-#endif
 	}
 }

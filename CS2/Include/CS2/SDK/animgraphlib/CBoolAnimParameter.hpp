@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CConcreteAnimParameter.hpp"
+#include <SDK/animgraphlib/CConcreteAnimParameter.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_bDefaultValue,bool, 0x80);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBoolAnimParameter) == 0x88, "CBoolAnimParameter size should be 0x88");
-
-#endif
 	}
 }

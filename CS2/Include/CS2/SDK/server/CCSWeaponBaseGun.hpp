@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSWeaponBase.hpp"
+#include <SDK/server/CCSWeaponBase.hpp>
 
 
 
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY(m_bSkillBoltLiftedFireKey,bool, 0x114f);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSWeaponBaseGun) == 0x1150, "CCSWeaponBaseGun size should be 0x1150");
-
-#endif
 	}
 }

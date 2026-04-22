@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmEvent.hpp"
+#include <SDK/animlib/CNmEvent.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_secondaryID,GlobalTypes::CGlobalSymbol, 0x28);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmIDEvent) == 0x30, "CNmIDEvent size should be 0x30");
-
-#endif
 	}
 }

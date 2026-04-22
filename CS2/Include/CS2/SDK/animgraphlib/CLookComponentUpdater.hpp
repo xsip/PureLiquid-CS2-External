@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimComponentUpdater.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -22,20 +22,17 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CLookComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_hLookHeading,IDENTITY(animgraphlib::CAnimParamHandle), 0x34);
-			NESTED_PROPERTY(m_hLookHeadingNormalized,IDENTITY(animgraphlib::CAnimParamHandle), 0x36);
-			NESTED_PROPERTY(m_hLookHeadingVelocity,IDENTITY(animgraphlib::CAnimParamHandle), 0x38);
-			NESTED_PROPERTY(m_hLookPitch,IDENTITY(animgraphlib::CAnimParamHandle), 0x3a);
-			NESTED_PROPERTY(m_hLookDistance,IDENTITY(animgraphlib::CAnimParamHandle), 0x3c);
-			NESTED_PROPERTY(m_hLookDirection,IDENTITY(animgraphlib::CAnimParamHandle), 0x3e);
-			NESTED_PROPERTY(m_hLookTarget,IDENTITY(animgraphlib::CAnimParamHandle), 0x40);
-			NESTED_PROPERTY(m_hLookTargetWorldSpace,IDENTITY(animgraphlib::CAnimParamHandle), 0x42);
+			NESTED_PROPERTY(m_hLookHeading,animgraphlib::CAnimParamHandle, 0x34);
+			NESTED_PROPERTY(m_hLookHeadingNormalized,animgraphlib::CAnimParamHandle, 0x36);
+			NESTED_PROPERTY(m_hLookHeadingVelocity,animgraphlib::CAnimParamHandle, 0x38);
+			NESTED_PROPERTY(m_hLookPitch,animgraphlib::CAnimParamHandle, 0x3a);
+			NESTED_PROPERTY(m_hLookDistance,animgraphlib::CAnimParamHandle, 0x3c);
+			NESTED_PROPERTY(m_hLookDirection,animgraphlib::CAnimParamHandle, 0x3e);
+			NESTED_PROPERTY(m_hLookTarget,animgraphlib::CAnimParamHandle, 0x40);
+			NESTED_PROPERTY(m_hLookTargetWorldSpace,animgraphlib::CAnimParamHandle, 0x42);
 			PROPERTY(m_bNetworkLookTarget,bool, 0x44);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CLookComponentUpdater) == 0x48, "CLookComponentUpdater size should be 0x48");
-
-#endif
 	}
 }

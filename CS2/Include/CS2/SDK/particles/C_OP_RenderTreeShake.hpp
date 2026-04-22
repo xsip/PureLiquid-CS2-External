@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -23,9 +23,9 @@ namespace CS2 {
 		class C_OP_RenderTreeShake : public CS2::particles::CParticleFunctionRenderer {
 		public:
 			PROPERTY(m_flPeakStrength,float32, 0x220);
-			NESTED_PROPERTY(m_nPeakStrengthFieldOverride,IDENTITY(particles::ParticleAttributeIndex_t), 0x224);
+			NESTED_PROPERTY(m_nPeakStrengthFieldOverride,particles::ParticleAttributeIndex_t, 0x224);
 			PROPERTY(m_flRadius,float32, 0x228);
-			NESTED_PROPERTY(m_nRadiusFieldOverride,IDENTITY(particles::ParticleAttributeIndex_t), 0x22c);
+			NESTED_PROPERTY(m_nRadiusFieldOverride,particles::ParticleAttributeIndex_t, 0x22c);
 			PROPERTY(m_flShakeDuration,float32, 0x230);
 			PROPERTY(m_flTransitionTime,float32, 0x234);
 			PROPERTY(m_flTwistAmount,float32, 0x238);
@@ -34,9 +34,6 @@ namespace CS2 {
 			PROPERTY(m_nControlPointForLinearDirection,int32_t, 0x244);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderTreeShake) == 0x248, "C_OP_RenderTreeShake size should be 0x248");
-
-#endif
 	}
 }

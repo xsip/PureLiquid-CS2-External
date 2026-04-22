@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
 
 
 
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(m_nCPSSPosOut,int32_t, 0x1f0);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ControlPointToRadialScreenSpace) == 0x1F8, "C_OP_ControlPointToRadialScreenSpace size should be 0x1F8");
-
-#endif
 	}
 }

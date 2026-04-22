@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "JiggleBoneSimSpace.hpp"
+#include <SDK/animgraphlib/JiggleBoneSimSpace.hpp>
 
 
 
@@ -27,12 +27,9 @@ namespace CS2 {
 			PROPERTY(m_flDamping,float32, 0xc);
 			PROPERTY(m_vBoundsMaxLS,GlobalTypes::Vector, 0x10);
 			PROPERTY(m_vBoundsMinLS,GlobalTypes::Vector, 0x1c);
-			PROPERTY(m_eSimSpace,IDENTITY(animgraphlib::JiggleBoneSimSpace), 0x28);
+			PROPERTY(m_eSimSpace,animgraphlib::JiggleBoneSimSpace, 0x28);
 			S2_PAD(0x2C);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::JiggleBoneSettings_t) == 0x2C, "JiggleBoneSettings_t size should be 0x2C");
-
-#endif
 	}
 }

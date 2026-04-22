@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -68,9 +68,6 @@ namespace CS2 {
 			PROPERTY(m_projectionAngularTolerance,float32, 0xf4);
 			S2_PAD(0xF8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::VPhysXConstraintParams_t) == 0xF8, "VPhysXConstraintParams_t size should be 0xF8");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../tier2/CRangeInt.hpp"
-#include "AmmoFlags_t.hpp"
-#include "../tier2/CRangeFloat.hpp"
+#include <SDK/tier2/CRangeInt.hpp>
+#include <SDK/client/AmmoFlags_t.hpp>
+#include <SDK/tier2/CRangeFloat.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 		class AmmoTypeInfo_t  {
 		public:
 			PROPERTY(m_nMaxCarry,int32_t, 0x10);
-			NESTED_PROPERTY(m_nSplashSize,IDENTITY(tier2::CRangeInt), 0x1c);
-			PROPERTY(m_nFlags,IDENTITY(client::AmmoFlags_t), 0x24);
+			NESTED_PROPERTY(m_nSplashSize,tier2::CRangeInt, 0x1c);
+			PROPERTY(m_nFlags,client::AmmoFlags_t, 0x24);
 			PROPERTY(m_flMass,float32, 0x28);
-			NESTED_PROPERTY(m_flSpeed,IDENTITY(tier2::CRangeFloat), 0x2c);
+			NESTED_PROPERTY(m_flSpeed,tier2::CRangeFloat, 0x2c);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::AmmoTypeInfo_t) == 0x38, "AmmoTypeInfo_t size should be 0x38");
-
-#endif
 	}
 }

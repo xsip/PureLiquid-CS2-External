@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionConstraint.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionConstraint.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ConstrainDistance : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_fMinDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d0);
-			NESTED_PROPERTY(m_fMaxDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x340);
+			NESTED_PROPERTY(m_fMinDistance,particleslib::CParticleCollectionFloatInput, 0x1d0);
+			NESTED_PROPERTY(m_fMaxDistance,particleslib::CParticleCollectionFloatInput, 0x340);
 			PROPERTY(m_nControlPointNumber,int32_t, 0x4b0);
 			PROPERTY(m_CenterOffset,GlobalTypes::Vector, 0x4b4);
 			PROPERTY(m_bGlobalCenter,bool, 0x4c0);
 			S2_PAD(0x2F8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ConstrainDistance) == 0x4C8, "C_OP_ConstrainDistance size should be 0x4C8");
-
-#endif
 	}
 }

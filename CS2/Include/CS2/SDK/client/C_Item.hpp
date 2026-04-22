@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_EconEntity.hpp"
+#include <SDK/client/C_EconEntity.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_pReticleHintTextName,char, 256 , 0x18c0);
 			S2_PAD(0x100);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Item) == 0x19C0, "C_Item size should be 0x19C0");
-
-#endif
 	}
 }

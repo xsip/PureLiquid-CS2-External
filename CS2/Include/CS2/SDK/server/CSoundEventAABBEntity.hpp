@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSoundEventEntity.hpp"
+#include <SDK/server/CSoundEventEntity.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_vMaxs,GlobalTypes::Vector, 0x564);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundEventAABBEntity) == 0x570, "CSoundEventAABBEntity size should be 0x570");
-
-#endif
 	}
 }

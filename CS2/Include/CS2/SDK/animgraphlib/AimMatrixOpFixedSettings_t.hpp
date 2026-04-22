@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/CAnimAttachment.hpp"
-#include "CAnimInputDamping.hpp"
-#include "CPoseHandle.hpp"
-#include "AimMatrixBlendMode.hpp"
-#include "CBlendCurve.hpp"
+#include <SDK/modellib/CAnimAttachment.hpp>
+#include <SDK/animgraphlib/CAnimInputDamping.hpp>
+#include <SDK/animgraphlib/CPoseHandle.hpp>
+#include <SDK/animgraphlib/AimMatrixBlendMode.hpp>
+#include <SDK/animgraphlib/CBlendCurve.hpp>
 
 
 
@@ -25,10 +25,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class AimMatrixOpFixedSettings_t  {
 		public:
-			NESTED_PROPERTY(m_attachment,IDENTITY(modellib::CAnimAttachment), 0x0);
-			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x80);
-			PROPERTY_ARRAY(m_poseCacheHandles,IDENTITY(animgraphlib::CPoseHandle), 10 , 0x98);
-			PROPERTY(m_eBlendMode,IDENTITY(animgraphlib::AimMatrixBlendMode), 0xc0);
+			NESTED_PROPERTY(m_attachment,modellib::CAnimAttachment, 0x0);
+			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x80);
+			PROPERTY_ARRAY(m_poseCacheHandles,animgraphlib::CPoseHandle, 10 , 0x98);
+			PROPERTY(m_eBlendMode,animgraphlib::AimMatrixBlendMode, 0xc0);
 			PROPERTY(m_flMaxYawAngle,float32, 0xc4);
 			PROPERTY(m_flMaxPitchAngle,float32, 0xc8);
 			PROPERTY(m_nSequenceMaxFrame,int32_t, 0xcc);
@@ -37,12 +37,9 @@ namespace CS2 {
 			PROPERTY(m_bUseBiasAndClamp,bool, 0xd5);
 			PROPERTY(m_flBiasAndClampYawOffset,float32, 0xd8);
 			PROPERTY(m_flBiasAndClampPitchOffset,float32, 0xdc);
-			NESTED_PROPERTY(m_biasAndClampBlendCurve,IDENTITY(animgraphlib::CBlendCurve), 0xe0);
+			NESTED_PROPERTY(m_biasAndClampBlendCurve,animgraphlib::CBlendCurve, 0xe0);
 			S2_PAD(0xF0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::AimMatrixOpFixedSettings_t) == 0xF0, "AimMatrixOpFixedSettings_t size should be 0xF0");
-
-#endif
 	}
 }

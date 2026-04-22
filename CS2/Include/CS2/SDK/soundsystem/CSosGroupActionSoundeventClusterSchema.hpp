@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSosGroupActionSchema.hpp"
+#include <SDK/soundsystem/CSosGroupActionSchema.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_groupBoundingBoxMaxsOpvar,GlobalTypes::CUtlString*, 0x30);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CSosGroupActionSoundeventClusterSchema) == 0x50, "CSosGroupActionSoundeventClusterSchema size should be 0x50");
-
-#endif
 	}
 }

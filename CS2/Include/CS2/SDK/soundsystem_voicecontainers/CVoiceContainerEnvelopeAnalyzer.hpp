@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerAnalysisBase.hpp"
-#include "EMode_t.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerAnalysisBase.hpp>
+#include <SDK/soundsystem_voicecontainers/EMode_t.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerEnvelopeAnalyzer : public CS2::soundsystem_voicecontainers::CVoiceContainerAnalysisBase {
 		public:
-			PROPERTY(m_mode,IDENTITY(soundsystem_voicecontainers::EMode_t), 0x50);
+			PROPERTY(m_mode,soundsystem_voicecontainers::EMode_t, 0x50);
 			PROPERTY(m_fAnalysisWindowMs,float32, 0x54);
 			PROPERTY(m_flThreshold,float32, 0x58);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerEnvelopeAnalyzer) == 0x60, "CVoiceContainerEnvelopeAnalyzer size should be 0x60");
-
-#endif
 	}
 }

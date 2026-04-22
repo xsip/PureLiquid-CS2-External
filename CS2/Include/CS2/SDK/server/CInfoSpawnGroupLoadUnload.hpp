@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,10 +22,10 @@ namespace CS2 {
 	namespace server {
 		class CInfoSpawnGroupLoadUnload : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_OnSpawnGroupLoadStarted,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			NESTED_PROPERTY(m_OnSpawnGroupLoadFinished,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
-			NESTED_PROPERTY(m_OnSpawnGroupUnloadStarted,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
-			NESTED_PROPERTY(m_OnSpawnGroupUnloadFinished,IDENTITY(entity2::CEntityIOOutput), 0x4f0);
+			NESTED_PROPERTY(m_OnSpawnGroupLoadStarted,entity2::CEntityIOOutput, 0x4a8);
+			NESTED_PROPERTY(m_OnSpawnGroupLoadFinished,entity2::CEntityIOOutput, 0x4c0);
+			NESTED_PROPERTY(m_OnSpawnGroupUnloadStarted,entity2::CEntityIOOutput, 0x4d8);
+			NESTED_PROPERTY(m_OnSpawnGroupUnloadFinished,entity2::CEntityIOOutput, 0x4f0);
 			PROPERTY(m_iszSpawnGroupName,GlobalTypes::CUtlSymbolLarge*, 0x508);
 			PROPERTY(m_iszSpawnGroupFilterName,GlobalTypes::CUtlSymbolLarge*, 0x510);
 			PROPERTY(m_iszLandmarkName,GlobalTypes::CUtlSymbolLarge*, 0x518);
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_bQueueFinishLoading,bool, 0x52f);
 			S2_PAD(0xD8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoSpawnGroupLoadUnload) == 0x580, "CInfoSpawnGroupLoadUnload size should be 0x580");
-
-#endif
 	}
 }

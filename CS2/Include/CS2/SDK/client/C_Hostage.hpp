@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseCombatCharacter.hpp"
-#include "EntitySpottedState_t.hpp"
-#include "CountdownTimer.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../modellib/AttachmentHandle_t.hpp"
+#include <SDK/client/C_BaseCombatCharacter.hpp>
+#include <SDK/client/EntitySpottedState_t.hpp>
+#include <SDK/client/CountdownTimer.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/modellib/AttachmentHandle_t.hpp>
 
 
 
@@ -32,34 +32,31 @@ namespace CS2 {
 	namespace client {
 		class C_Hostage : public CS2::client::C_BaseCombatCharacter {
 		public:
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(client::EntitySpottedState_t), 0x13d8);
-			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x13f0);
-			NESTED_PROPERTY(m_reuseTimer,IDENTITY(client::CountdownTimer), 0x13f8);
+			NESTED_PROPERTY(m_entitySpottedState,client::EntitySpottedState_t, 0x13d8);
+			PROPERTY(m_leader,GlobalTypes::CHandle<client::C_BaseEntity>, 0x13f0);
+			NESTED_PROPERTY(m_reuseTimer,client::CountdownTimer, 0x13f8);
 			PROPERTY(m_vel,GlobalTypes::Vector, 0x1410);
 			PROPERTY(m_isRescued,bool, 0x141c);
 			PROPERTY(m_jumpedThisFrame,bool, 0x141d);
 			PROPERTY(m_nHostageState,int32_t, 0x1420);
 			PROPERTY(m_bHandsHaveBeenCut,bool, 0x1424);
-			PROPERTY(m_hHostageGrabber,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x1428);
-			NESTED_PROPERTY(m_fLastGrabTime,IDENTITY(entity2::GameTime_t), 0x142c);
+			PROPERTY(m_hHostageGrabber,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x1428);
+			NESTED_PROPERTY(m_fLastGrabTime,entity2::GameTime_t, 0x142c);
 			PROPERTY(m_vecGrabbedPos,GlobalTypes::Vector, 0x1430);
-			NESTED_PROPERTY(m_flRescueStartTime,IDENTITY(entity2::GameTime_t), 0x143c);
-			NESTED_PROPERTY(m_flGrabSuccessTime,IDENTITY(entity2::GameTime_t), 0x1440);
-			NESTED_PROPERTY(m_flDropStartTime,IDENTITY(entity2::GameTime_t), 0x1444);
-			NESTED_PROPERTY(m_flDeadOrRescuedTime,IDENTITY(entity2::GameTime_t), 0x1448);
-			NESTED_PROPERTY(m_blinkTimer,IDENTITY(client::CountdownTimer), 0x1450);
+			NESTED_PROPERTY(m_flRescueStartTime,entity2::GameTime_t, 0x143c);
+			NESTED_PROPERTY(m_flGrabSuccessTime,entity2::GameTime_t, 0x1440);
+			NESTED_PROPERTY(m_flDropStartTime,entity2::GameTime_t, 0x1444);
+			NESTED_PROPERTY(m_flDeadOrRescuedTime,entity2::GameTime_t, 0x1448);
+			NESTED_PROPERTY(m_blinkTimer,client::CountdownTimer, 0x1450);
 			PROPERTY(m_lookAt,GlobalTypes::Vector, 0x1468);
-			NESTED_PROPERTY(m_lookAroundTimer,IDENTITY(client::CountdownTimer), 0x1478);
+			NESTED_PROPERTY(m_lookAroundTimer,client::CountdownTimer, 0x1478);
 			PROPERTY(m_isInit,bool, 0x1490);
-			NESTED_PROPERTY(m_eyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1491);
-			NESTED_PROPERTY(m_chestAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1492);
-			PROPERTY(m_pPredictionOwner,IDENTITY(client::CBasePlayerController*), 0x1498);
-			NESTED_PROPERTY(m_fNewestAlphaThinkTime,IDENTITY(entity2::GameTime_t), 0x14a0);
+			NESTED_PROPERTY(m_eyeAttachment,modellib::AttachmentHandle_t, 0x1491);
+			NESTED_PROPERTY(m_chestAttachment,modellib::AttachmentHandle_t, 0x1492);
+			PROPERTY(m_pPredictionOwner,client::CBasePlayerController*, 0x1498);
+			NESTED_PROPERTY(m_fNewestAlphaThinkTime,entity2::GameTime_t, 0x14a0);
 			S2_PAD(0xD0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Hostage) == 0x14A8, "C_Hostage size should be 0x14A8");
-
-#endif
 	}
 }

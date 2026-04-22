@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
 
 
 
@@ -30,16 +30,13 @@ namespace CS2 {
 			PROPERTY(m_bUsePerParticleRadius,bool, 0x220);
 			PROPERTY(m_nVertexCountKb,uint32_t, 0x224);
 			PROPERTY(m_nIndexCountKb,uint32_t, 0x228);
-			NESTED_PROPERTY(m_fGridSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x230);
-			NESTED_PROPERTY(m_fRadiusScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3a0);
-			NESTED_PROPERTY(m_fIsosurfaceThreshold,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x510);
+			NESTED_PROPERTY(m_fGridSize,particleslib::CParticleCollectionRendererFloatInput, 0x230);
+			NESTED_PROPERTY(m_fRadiusScale,particleslib::CParticleCollectionRendererFloatInput, 0x3a0);
+			NESTED_PROPERTY(m_fIsosurfaceThreshold,particleslib::CParticleCollectionRendererFloatInput, 0x510);
 			PROPERTY(m_nScaleCP,int32_t, 0x680);
-			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x688);
+			PROPERTY(m_hMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x688);
 			S2_PAD(0x470);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderGpuImplicit) == 0x690, "C_OP_RenderGpuImplicit size should be 0x690");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerAsyncGenerator.hpp"
-#include "CVoiceContainerStaticAdditiveSynth_CTone.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerAsyncGenerator.hpp>
+#include <SDK/soundsystem_voicecontainers/CTone.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerStaticAdditiveSynth : public CS2::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator {
 		public:
-			NESTED_PROPERTY(m_tones,IDENTITY(GlobalTypes::CUtlVector<soundsystem_voicecontainers::CVoiceContainerStaticAdditiveSynth_CTone>), 0xb8);
+			NESTED_PROPERTY(m_tones,GlobalTypes::CUtlVector<soundsystem_voicecontainers::CTone>, 0xb8);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerStaticAdditiveSynth) == 0xE8, "CVoiceContainerStaticAdditiveSynth size should be 0xE8");
-
-#endif
 	}
 }

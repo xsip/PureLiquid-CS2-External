@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../resourcesystem/InfoForResourceTypeCChoreoSceneResource.hpp"
+#include <SDK/resourcesystem/InfoForResourceTypeCChoreoSceneResource.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace server {
 		class CScenePayloadVData  {
 		public:
-			PROPERTY(m_sSceneFile,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>>), 0x0);
+			PROPERTY(m_sSceneFile,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>>, 0x0);
 			S2_PAD(0xE0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CScenePayloadVData) == 0xE0, "CScenePayloadVData size should be 0xE0");
-
-#endif
 	}
 }

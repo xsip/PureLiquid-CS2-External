@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMotionMetricEvaluator.hpp"
+#include <SDK/animgraphlib/CMotionMetricEvaluator.hpp>
 
 
 
@@ -21,15 +21,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CPathMetricEvaluator : public CS2::animgraphlib::CMotionMetricEvaluator {
 		public:
-			NESTED_PROPERTY(m_pathTimeSamples,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x50);
+			NESTED_PROPERTY(m_pathTimeSamples,GlobalTypes::CUtlVector< float32 >, 0x50);
 			PROPERTY(m_flDistance,float32, 0x68);
 			PROPERTY(m_bExtrapolateMovement,bool, 0x6c);
 			PROPERTY(m_flMinExtrapolationSpeed,float32, 0x70);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CPathMetricEvaluator) == 0x78, "CPathMetricEvaluator size should be 0x78");
-
-#endif
 	}
 }

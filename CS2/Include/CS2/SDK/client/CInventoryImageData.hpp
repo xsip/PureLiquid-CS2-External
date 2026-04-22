@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "InventoryNodeType_t.hpp"
-#include "inv_image_data_t.hpp"
+#include <SDK/client/InventoryNodeType_t.hpp>
+#include <SDK/client/inv_image_data_t.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace client {
 		class CInventoryImageData  {
 		public:
-			PROPERTY(m_nNodeType,IDENTITY(client::InventoryNodeType_t), 0x0);
+			PROPERTY(m_nNodeType,client::InventoryNodeType_t, 0x0);
 			PROPERTY(name,GlobalTypes::CUtlString*, 0x8);
-			NESTED_PROPERTY(inventory_image_data,IDENTITY(client::inv_image_data_t), 0x10);
+			NESTED_PROPERTY(inventory_image_data,client::inv_image_data_t, 0x10);
 			S2_PAD(0xF8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CInventoryImageData) == 0xF8, "CInventoryImageData size should be 0xF8");
-
-#endif
 	}
 }

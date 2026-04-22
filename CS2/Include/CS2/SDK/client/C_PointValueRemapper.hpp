@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "ValueRemapperInputType_t.hpp"
-#include "ValueRemapperOutputType_t.hpp"
-#include "ValueRemapperHapticsType_t.hpp"
-#include "ValueRemapperMomentumType_t.hpp"
-#include "ValueRemapperRatchetType_t.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/client/ValueRemapperInputType_t.hpp>
+#include <SDK/client/ValueRemapperOutputType_t.hpp>
+#include <SDK/client/ValueRemapperHapticsType_t.hpp>
+#include <SDK/client/ValueRemapperMomentumType_t.hpp>
+#include <SDK/client/ValueRemapperRatchetType_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -30,33 +30,30 @@ namespace CS2 {
 			PROPERTY(m_bDisabled,bool, 0x608);
 			PROPERTY(m_bDisabledOld,bool, 0x609);
 			PROPERTY(m_bUpdateOnClient,bool, 0x60a);
-			PROPERTY(m_nInputType,IDENTITY(client::ValueRemapperInputType_t), 0x60c);
-			PROPERTY(m_hRemapLineStart,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x610);
-			PROPERTY(m_hRemapLineEnd,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x614);
+			PROPERTY(m_nInputType,client::ValueRemapperInputType_t, 0x60c);
+			PROPERTY(m_hRemapLineStart,GlobalTypes::CHandle<client::C_BaseEntity>, 0x610);
+			PROPERTY(m_hRemapLineEnd,GlobalTypes::CHandle<client::C_BaseEntity>, 0x614);
 			PROPERTY(m_flMaximumChangePerSecond,float32, 0x618);
 			PROPERTY(m_flDisengageDistance,float32, 0x61c);
 			PROPERTY(m_flEngageDistance,float32, 0x620);
 			PROPERTY(m_bRequiresUseKey,bool, 0x624);
-			PROPERTY(m_nOutputType,IDENTITY(client::ValueRemapperOutputType_t), 0x628);
-			// PROPERTY(m_hOutputEntities,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseEntity>>), 0x630);
-			PROPERTY(m_nHapticsType,IDENTITY(client::ValueRemapperHapticsType_t), 0x648);
-			PROPERTY(m_nMomentumType,IDENTITY(client::ValueRemapperMomentumType_t), 0x64c);
+			PROPERTY(m_nOutputType,client::ValueRemapperOutputType_t, 0x628);
+			PROPERTY(m_hOutputEntities,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseEntity>>, 0x630);
+			PROPERTY(m_nHapticsType,client::ValueRemapperHapticsType_t, 0x648);
+			PROPERTY(m_nMomentumType,client::ValueRemapperMomentumType_t, 0x64c);
 			PROPERTY(m_flMomentumModifier,float32, 0x650);
 			PROPERTY(m_flSnapValue,float32, 0x654);
 			PROPERTY(m_flCurrentMomentum,float32, 0x658);
-			PROPERTY(m_nRatchetType,IDENTITY(client::ValueRemapperRatchetType_t), 0x65c);
+			PROPERTY(m_nRatchetType,client::ValueRemapperRatchetType_t, 0x65c);
 			PROPERTY(m_flRatchetOffset,float32, 0x660);
 			PROPERTY(m_flInputOffset,float32, 0x664);
 			PROPERTY(m_bEngaged,bool, 0x668);
 			PROPERTY(m_bFirstUpdate,bool, 0x669);
 			PROPERTY(m_flPreviousValue,float32, 0x66c);
-			NESTED_PROPERTY(m_flPreviousUpdateTickTime,IDENTITY(entity2::GameTime_t), 0x670);
+			NESTED_PROPERTY(m_flPreviousUpdateTickTime,entity2::GameTime_t, 0x670);
 			PROPERTY(m_vecPreviousTestPoint,GlobalTypes::Vector, 0x674);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PointValueRemapper) == 0x680, "C_PointValueRemapper size should be 0x680");
-
-#endif
 	}
 }

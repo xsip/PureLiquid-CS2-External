@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FuseVariableIndex_t.hpp"
-#include "FuseVariableType_t.hpp"
-#include "FuseVariableAccess_t.hpp"
+#include <SDK/mathlib_extended/FuseVariableIndex_t.hpp>
+#include <SDK/mathlib_extended/FuseVariableType_t.hpp>
+#include <SDK/mathlib_extended/FuseVariableAccess_t.hpp>
 
 
 
@@ -25,15 +25,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_nameToken,GlobalTypes::CUtlStringToken*, 0x8);
-			NESTED_PROPERTY(m_nIndex,IDENTITY(mathlib_extended::FuseVariableIndex_t), 0xc);
+			NESTED_PROPERTY(m_nIndex,mathlib_extended::FuseVariableIndex_t, 0xc);
 			PROPERTY(m_nNumComponents,uint8_t, 0xe);
-			PROPERTY(m_eVarType,IDENTITY(mathlib_extended::FuseVariableType_t), 0xf);
-			PROPERTY(m_eAccess,IDENTITY(mathlib_extended::FuseVariableAccess_t), 0x10);
+			PROPERTY(m_eVarType,mathlib_extended::FuseVariableType_t, 0xf);
+			PROPERTY(m_eAccess,mathlib_extended::FuseVariableAccess_t, 0x10);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::mathlib_extended::VariableInfo_t) == 0x18, "VariableInfo_t size should be 0x18");
-
-#endif
 	}
 }

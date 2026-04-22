@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -26,13 +26,10 @@ namespace CS2 {
 			PROPERTY(m_nShuffleCases,int32_t, 0x5a8);
 			PROPERTY(m_nLastShuffleCase,int32_t, 0x5ac);
 			PROPERTY_ARRAY(m_uchShuffleCaseMap,uint8_t, 32 , 0x5b0);
-			PROPERTY_ARRAY(m_OnCase,IDENTITY(entity2::CEntityIOOutput), 32 , 0x5d0);
-			// PROPERTY(m_OnDefault,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x8d0);
+			PROPERTY_ARRAY(m_OnCase,entity2::CEntityIOOutput, 32 , 0x5d0);
+			PROPERTY(m_OnDefault,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x8d0);
 			S2_PAD(0x448);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicCase) == 0x8F0, "CLogicCase size should be 0x8F0");
-
-#endif
 	}
 }

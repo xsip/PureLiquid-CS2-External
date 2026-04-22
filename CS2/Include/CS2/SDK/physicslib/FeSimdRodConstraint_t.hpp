@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,16 +20,13 @@ namespace CS2 {
 	namespace physicslib {
 		class FeSimdRodConstraint_t  {
 		public:
-			// PROPERTY_ARRAY(nNode,uint16_t, 2[4] , 0x0);
+			PROPERTY_ARRAY(nNode,uint16_t, 2[4] , 0x0);
 			PROPERTY(f4MaxDist,GlobalTypes::fltx4, 0x10);
 			PROPERTY(f4MinDist,GlobalTypes::fltx4, 0x20);
 			PROPERTY(f4Weight0,GlobalTypes::fltx4, 0x30);
 			PROPERTY(f4RelaxationFactor,GlobalTypes::fltx4, 0x40);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeSimdRodConstraint_t) == 0x50, "FeSimdRodConstraint_t size should be 0x50");
-
-#endif
 	}
 }

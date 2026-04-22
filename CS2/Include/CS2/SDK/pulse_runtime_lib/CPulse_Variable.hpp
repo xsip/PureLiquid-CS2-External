@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PulseVariableKeysSource_t.hpp"
-#include "PulseDocNodeID_t.hpp"
+#include <SDK/pulse_runtime_lib/PulseVariableKeysSource_t.hpp>
+#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
 
 
 
@@ -26,15 +26,12 @@ namespace CS2 {
 			PROPERTY(m_Description,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(m_Type,GlobalTypes::CPulseValueFullType, 0x18);
 			PROPERTY(m_DefaultValue,GlobalTypes::KeyValues3, 0x30);
-			PROPERTY(m_nKeysSource,IDENTITY(pulse_runtime_lib::PulseVariableKeysSource_t), 0x44);
+			PROPERTY(m_nKeysSource,pulse_runtime_lib::PulseVariableKeysSource_t, 0x44);
 			PROPERTY(m_bIsPublicBlackboardVariable,bool, 0x48);
 			PROPERTY(m_bIsObservable,bool, 0x49);
-			NESTED_PROPERTY(m_nEditorNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x4c);
+			NESTED_PROPERTY(m_nEditorNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x4c);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_Variable) == 0x50, "CPulse_Variable size should be 0x50");
-
-#endif
 	}
 }

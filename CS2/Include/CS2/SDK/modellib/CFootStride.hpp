@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CFootCycleDefinition.hpp"
-#include "CFootTrajectories.hpp"
+#include <SDK/modellib/CFootCycleDefinition.hpp>
+#include <SDK/modellib/CFootTrajectories.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 	namespace modellib {
 		class CFootStride  {
 		public:
-			NESTED_PROPERTY(m_definition,IDENTITY(modellib::CFootCycleDefinition), 0x0);
-			NESTED_PROPERTY(m_trajectories,IDENTITY(modellib::CFootTrajectories), 0x40);
+			NESTED_PROPERTY(m_definition,modellib::CFootCycleDefinition, 0x0);
+			NESTED_PROPERTY(m_trajectories,modellib::CFootTrajectories, 0x40);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFootStride) == 0x58, "CFootStride size should be 0x58");
-
-#endif
 	}
 }

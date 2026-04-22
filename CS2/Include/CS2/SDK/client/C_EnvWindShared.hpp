@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace client {
 		class C_EnvWindShared  {
 		public:
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x8);
+			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x8);
 			PROPERTY(m_iWindSeed,uint32_t, 0xc);
 			PROPERTY(m_iMinWind,uint16_t, 0x10);
 			PROPERTY(m_iMaxWind,uint16_t, 0x12);
@@ -40,12 +40,9 @@ namespace CS2 {
 			PROPERTY(m_iInitialWindDir,uint16_t, 0x2a);
 			PROPERTY(m_flInitialWindSpeed,float32, 0x2c);
 			PROPERTY(m_location,GlobalTypes::Vector, 0x30);
-			PROPERTY(m_hEntOwner,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x3c);
+			PROPERTY(m_hEntOwner,GlobalTypes::CHandle<client::C_BaseEntity>, 0x3c);
 			S2_PAD(0xF8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvWindShared) == 0xF8, "C_EnvWindShared size should be 0xF8");
-
-#endif
 	}
 }

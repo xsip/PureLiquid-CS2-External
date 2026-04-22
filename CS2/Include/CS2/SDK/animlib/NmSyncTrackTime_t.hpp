@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "NmPercent_t.hpp"
+#include <SDK/animlib/NmPercent_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 		class NmSyncTrackTime_t  {
 		public:
 			PROPERTY(m_nEventIdx,int32_t, 0x0);
-			NESTED_PROPERTY(m_percentageThrough,IDENTITY(animlib::NmPercent_t), 0x4);
+			NESTED_PROPERTY(m_percentageThrough,animlib::NmPercent_t, 0x4);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::NmSyncTrackTime_t) == 0x8, "NmSyncTrackTime_t size should be 0x8");
-
-#endif
 	}
 }

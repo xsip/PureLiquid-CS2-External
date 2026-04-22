@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -27,20 +27,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapNamedModelElementOnceTimed : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x1d0);
-			PROPERTY(m_inNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x1d8);
-			PROPERTY(m_outNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x1f0);
-			PROPERTY(m_fallbackNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x208);
+			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x1d0);
+			PROPERTY(m_inNames,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x1d8);
+			PROPERTY(m_outNames,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x1f0);
+			PROPERTY(m_fallbackNames,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x208);
 			PROPERTY(m_bModelFromRenderer,bool, 0x220);
 			PROPERTY(m_bProportional,bool, 0x221);
-			NESTED_PROPERTY(m_nFieldInput,IDENTITY(particles::ParticleAttributeIndex_t), 0x224);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x228);
+			NESTED_PROPERTY(m_nFieldInput,particles::ParticleAttributeIndex_t, 0x224);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x228);
 			PROPERTY(m_flRemapTime,float32, 0x22c);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapNamedModelElementOnceTimed) == 0x230, "C_OP_RemapNamedModelElementOnceTimed size should be 0x230");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1dc);
 			PROPERTY(m_nWeightUpdateCP,int32_t, 0x1e0);
 			PROPERTY(m_bUseVerticalVelocity,bool, 0x1e4);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CPerParticleVecInput), 0x1e8);
+			NESTED_PROPERTY(m_vecScale,particleslib::CPerParticleVecInput, 0x1e8);
 			S2_PAD(0x6C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_InitFromVectorFieldSnapshot) == 0x8A0, "C_INIT_InitFromVectorFieldSnapshot size should be 0x8A0");
-
-#endif
 	}
 }

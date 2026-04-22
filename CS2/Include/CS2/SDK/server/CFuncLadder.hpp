@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "CInfoLadderDismount.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/server/CInfoLadderDismount.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 		class CFuncLadder : public CS2::server::CBaseModelEntity {
 		public:
 			PROPERTY(m_vecLadderDir,GlobalTypes::Vector, 0x730);
-			NESTED_PROPERTY(m_Dismounts,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CInfoLadderDismount>>), 0x740);
+			NESTED_PROPERTY(m_Dismounts,server::CUtlVector<GlobalTypes::CHandle<server::CInfoLadderDismount>>, 0x740);
 			PROPERTY(m_vecLocalTop,GlobalTypes::Vector, 0x758);
 			PROPERTY(m_vecPlayerMountPositionTop,GlobalTypes::VectorWS, 0x764);
 			PROPERTY(m_vecPlayerMountPositionBottom,GlobalTypes::VectorWS, 0x770);
@@ -33,13 +33,10 @@ namespace CS2 {
 			PROPERTY(m_bFakeLadder,bool, 0x781);
 			PROPERTY(m_bHasSlack,bool, 0x782);
 			PROPERTY(m_surfacePropName,GlobalTypes::CUtlSymbolLarge*, 0x788);
-			NESTED_PROPERTY(m_OnPlayerGotOnLadder,IDENTITY(entity2::CEntityIOOutput), 0x790);
-			NESTED_PROPERTY(m_OnPlayerGotOffLadder,IDENTITY(entity2::CEntityIOOutput), 0x7a8);
+			NESTED_PROPERTY(m_OnPlayerGotOnLadder,entity2::CEntityIOOutput, 0x790);
+			NESTED_PROPERTY(m_OnPlayerGotOffLadder,entity2::CEntityIOOutput, 0x7a8);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncLadder) == 0x7C0, "CFuncLadder size should be 0x7C0");
-
-#endif
 	}
 }

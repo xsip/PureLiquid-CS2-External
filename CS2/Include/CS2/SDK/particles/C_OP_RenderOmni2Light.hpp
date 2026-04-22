@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "ParticleOmni2LightTypeChoiceList_t.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "ParticleColorBlendType_t.hpp"
-#include "ParticleLightUnitChoiceList_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/ParticleOmni2LightTypeChoiceList_t.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particles/ParticleLightUnitChoiceList_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -31,27 +31,24 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderOmni2Light : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_nLightType,IDENTITY(particles::ParticleOmni2LightTypeChoiceList_t), 0x220);
-			NESTED_PROPERTY(m_vColorBlend,IDENTITY(particleslib::CParticleCollectionVecInput), 0x228);
-			PROPERTY(m_nColorBlendType,IDENTITY(particles::ParticleColorBlendType_t), 0x8e0);
-			PROPERTY(m_nBrightnessUnit,IDENTITY(particles::ParticleLightUnitChoiceList_t), 0x8e4);
-			NESTED_PROPERTY(m_flBrightnessLumens,IDENTITY(particleslib::CPerParticleFloatInput), 0x8e8);
-			NESTED_PROPERTY(m_flBrightnessCandelas,IDENTITY(particleslib::CPerParticleFloatInput), 0xa58);
+			PROPERTY(m_nLightType,particles::ParticleOmni2LightTypeChoiceList_t, 0x220);
+			NESTED_PROPERTY(m_vColorBlend,particleslib::CParticleCollectionVecInput, 0x228);
+			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0x8e0);
+			PROPERTY(m_nBrightnessUnit,particles::ParticleLightUnitChoiceList_t, 0x8e4);
+			NESTED_PROPERTY(m_flBrightnessLumens,particleslib::CPerParticleFloatInput, 0x8e8);
+			NESTED_PROPERTY(m_flBrightnessCandelas,particleslib::CPerParticleFloatInput, 0xa58);
 			PROPERTY(m_bCastShadows,bool, 0xbc8);
 			PROPERTY(m_bFog,bool, 0xbc9);
-			NESTED_PROPERTY(m_flFogScale,IDENTITY(particleslib::CPerParticleFloatInput), 0xbd0);
-			NESTED_PROPERTY(m_flLuminaireRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0xd40);
-			NESTED_PROPERTY(m_flSkirt,IDENTITY(particleslib::CPerParticleFloatInput), 0xeb0);
-			NESTED_PROPERTY(m_flRange,IDENTITY(particleslib::CPerParticleFloatInput), 0x1020);
-			NESTED_PROPERTY(m_flInnerConeAngle,IDENTITY(particleslib::CPerParticleFloatInput), 0x1190);
-			NESTED_PROPERTY(m_flOuterConeAngle,IDENTITY(particleslib::CPerParticleFloatInput), 0x1300);
-			PROPERTY(m_hLightCookie,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1470);
+			NESTED_PROPERTY(m_flFogScale,particleslib::CPerParticleFloatInput, 0xbd0);
+			NESTED_PROPERTY(m_flLuminaireRadius,particleslib::CPerParticleFloatInput, 0xd40);
+			NESTED_PROPERTY(m_flSkirt,particleslib::CPerParticleFloatInput, 0xeb0);
+			NESTED_PROPERTY(m_flRange,particleslib::CPerParticleFloatInput, 0x1020);
+			NESTED_PROPERTY(m_flInnerConeAngle,particleslib::CPerParticleFloatInput, 0x1190);
+			NESTED_PROPERTY(m_flOuterConeAngle,particleslib::CPerParticleFloatInput, 0x1300);
+			PROPERTY(m_hLightCookie,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1470);
 			PROPERTY(m_bSphericalCookie,bool, 0x1478);
 			S2_PAD(0x1268);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderOmni2Light) == 0x1488, "C_OP_RenderOmni2Light size should be 0x1488");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VMixLFOShape_t.hpp"
+#include <SDK/soundsystem_lowlevel/VMixLFOShape_t.hpp>
 
 
 
@@ -21,14 +21,11 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class VMixOscDesc_t  {
 		public:
-			PROPERTY(oscType,IDENTITY(soundsystem_lowlevel::VMixLFOShape_t), 0x0);
+			PROPERTY(oscType,soundsystem_lowlevel::VMixLFOShape_t, 0x0);
 			PROPERTY(m_freq,float32, 0x4);
 			PROPERTY(m_flPhase,float32, 0x8);
 			S2_PAD(0xC);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixOscDesc_t) == 0xC, "VMixOscDesc_t size should be 0xC");
-
-#endif
 	}
 }

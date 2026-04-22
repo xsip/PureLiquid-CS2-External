@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_nCount,uint16_t, 0x32);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::WeaponPurchaseCount_t) == 0x38, "WeaponPurchaseCount_t size should be 0x38");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CFlexOp.hpp"
+#include <SDK/modellib/CFlexOp.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 		class CFlexRule  {
 		public:
 			PROPERTY(m_nFlex,int32_t, 0x0);
-			NESTED_PROPERTY(m_FlexOps,IDENTITY(GlobalTypes::CUtlVector<modellib::CFlexOp>), 0x8);
+			NESTED_PROPERTY(m_FlexOps,GlobalTypes::CUtlVector<modellib::CFlexOp>, 0x8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFlexRule) == 0x20, "CFlexRule size should be 0x20");
-
-#endif
 	}
 }

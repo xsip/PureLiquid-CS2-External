@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBasePlatTrain.hpp"
+#include <SDK/server/CBasePlatTrain.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x7d8);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncPlat) == 0x7E0, "CFuncPlat size should be 0x7E0");
-
-#endif
 	}
 }

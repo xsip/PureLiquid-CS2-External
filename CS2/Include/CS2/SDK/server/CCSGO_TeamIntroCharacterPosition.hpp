@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSGO_TeamPreviewCharacterPosition.hpp"
+#include <SDK/server/CCSGO_TeamPreviewCharacterPosition.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CCSGO_TeamIntroCharacterPosition : public CS2::server::CCSGO_TeamPreviewCharacterPosition {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSGO_TeamIntroCharacterPosition) == 0xCC0, "CCSGO_TeamIntroCharacterPosition size should be 0xCC0");
-
-#endif
 	}
 }

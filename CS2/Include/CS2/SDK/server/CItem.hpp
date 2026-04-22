@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,19 +22,16 @@ namespace CS2 {
 	namespace server {
 		class CItem : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_OnPlayerTouch,IDENTITY(entity2::CEntityIOOutput), 0xa28);
-			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xa40);
+			NESTED_PROPERTY(m_OnPlayerTouch,entity2::CEntityIOOutput, 0xa28);
+			NESTED_PROPERTY(m_OnPlayerPickup,entity2::CEntityIOOutput, 0xa40);
 			PROPERTY(m_bActivateWhenAtRest,bool, 0xa58);
-			NESTED_PROPERTY(m_OnCacheInteraction,IDENTITY(entity2::CEntityIOOutput), 0xa60);
-			NESTED_PROPERTY(m_OnGlovePulled,IDENTITY(entity2::CEntityIOOutput), 0xa78);
+			NESTED_PROPERTY(m_OnCacheInteraction,entity2::CEntityIOOutput, 0xa60);
+			NESTED_PROPERTY(m_OnGlovePulled,entity2::CEntityIOOutput, 0xa78);
 			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0xa90);
 			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0xa9c);
 			PROPERTY(m_bPhysStartAsleep,bool, 0xaa8);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CItem) == 0xAC0, "CItem size should be 0xAC0");
-
-#endif
 	}
 }

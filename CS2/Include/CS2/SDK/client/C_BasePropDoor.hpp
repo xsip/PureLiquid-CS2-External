@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_DynamicProp.hpp"
-#include "DoorState_t.hpp"
+#include <SDK/client/C_DynamicProp.hpp>
+#include <SDK/client/DoorState_t.hpp>
 
 
 
@@ -22,19 +22,16 @@ namespace CS2 {
 	namespace client {
 		class C_BasePropDoor : public CS2::client::C_DynamicProp {
 		public:
-			PROPERTY(m_eDoorState,IDENTITY(client::DoorState_t), 0x13b0);
+			PROPERTY(m_eDoorState,client::DoorState_t, 0x13b0);
 			PROPERTY(m_modelChanged,bool, 0x13b4);
 			PROPERTY(m_bLocked,bool, 0x13b5);
 			PROPERTY(m_bNoNPCs,bool, 0x13b6);
 			PROPERTY(m_closedPosition,GlobalTypes::Vector, 0x13b8);
 			PROPERTY(m_closedAngles,GlobalTypes::QAngle, 0x13c4);
-			PROPERTY(m_hMaster,IDENTITY(GlobalTypes::CHandle<client::C_BasePropDoor>), 0x13d0);
+			PROPERTY(m_hMaster,GlobalTypes::CHandle<client::C_BasePropDoor>, 0x13d0);
 			PROPERTY(m_vWhereToSetLightingOrigin,GlobalTypes::Vector, 0x13d4);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_BasePropDoor) == 0x13E0, "C_BasePropDoor size should be 0x13E0");
-
-#endif
 	}
 }

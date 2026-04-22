@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBasePropDoor.hpp"
-#include "PropDoorRotatingSpawnPos_t.hpp"
-#include "PropDoorRotatingOpenDirection_e.hpp"
-#include "doorCheck_e.hpp"
+#include <SDK/server/CBasePropDoor.hpp>
+#include <SDK/server/PropDoorRotatingSpawnPos_t.hpp>
+#include <SDK/server/PropDoorRotatingOpenDirection_e.hpp>
+#include <SDK/server/doorCheck_e.hpp>
 
 
 
@@ -31,10 +31,10 @@ namespace CS2 {
 		public:
 			PROPERTY(m_vecAxis,GlobalTypes::Vector, 0xe50);
 			PROPERTY(m_flDistance,float32, 0xe5c);
-			PROPERTY(m_eSpawnPosition,IDENTITY(server::PropDoorRotatingSpawnPos_t), 0xe60);
-			PROPERTY(m_eOpenDirection,IDENTITY(server::PropDoorRotatingOpenDirection_e), 0xe64);
-			PROPERTY(m_eCurrentOpenDirection,IDENTITY(server::PropDoorRotatingOpenDirection_e), 0xe68);
-			PROPERTY(m_eDefaultCheckDirection,IDENTITY(server::doorCheck_e), 0xe6c);
+			PROPERTY(m_eSpawnPosition,server::PropDoorRotatingSpawnPos_t, 0xe60);
+			PROPERTY(m_eOpenDirection,server::PropDoorRotatingOpenDirection_e, 0xe64);
+			PROPERTY(m_eCurrentOpenDirection,server::PropDoorRotatingOpenDirection_e, 0xe68);
+			PROPERTY(m_eDefaultCheckDirection,server::doorCheck_e, 0xe6c);
 			PROPERTY(m_flAjarAngle,float32, 0xe70);
 			PROPERTY(m_angRotationAjarDeprecated,GlobalTypes::QAngle, 0xe74);
 			PROPERTY(m_angRotationClosed,GlobalTypes::QAngle, 0xe80);
@@ -46,12 +46,9 @@ namespace CS2 {
 			PROPERTY(m_vecBackBoundsMin,GlobalTypes::Vector, 0xec8);
 			PROPERTY(m_vecBackBoundsMax,GlobalTypes::Vector, 0xed4);
 			PROPERTY(m_bAjarDoorShouldntAlwaysOpen,bool, 0xee0);
-			PROPERTY(m_hEntityBlocker,IDENTITY(GlobalTypes::CHandle<server::CEntityBlocker>), 0xee4);
+			PROPERTY(m_hEntityBlocker,GlobalTypes::CHandle<server::CEntityBlocker>, 0xee4);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPropDoorRotating) == 0xEF0, "CPropDoorRotating size should be 0xEF0");
-
-#endif
 	}
 }

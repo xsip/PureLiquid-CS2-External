@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -22,8 +22,8 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PositionWarp : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_vecWarpMin,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d8);
-			NESTED_PROPERTY(m_vecWarpMax,IDENTITY(particleslib::CParticleCollectionVecInput), 0x890);
+			NESTED_PROPERTY(m_vecWarpMin,particleslib::CParticleCollectionVecInput, 0x1d8);
+			NESTED_PROPERTY(m_vecWarpMax,particleslib::CParticleCollectionVecInput, 0x890);
 			PROPERTY(m_nScaleControlPointNumber,int32_t, 0xf48);
 			PROPERTY(m_nControlPointNumber,int32_t, 0xf4c);
 			PROPERTY(m_nRadiusComponent,int32_t, 0xf50);
@@ -34,9 +34,6 @@ namespace CS2 {
 			PROPERTY(m_bUseCount,bool, 0xf61);
 			S2_PAD(0xD90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_PositionWarp) == 0xF68, "C_INIT_PositionWarp size should be 0xF68");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropTransformOperation.hpp"
-#include "CSmartPropAttributeCoordinateSpace.hpp"
+#include <SDK/smartprops/CSmartPropTransformOperation.hpp>
+#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
 
 
 
@@ -23,12 +23,9 @@ namespace CS2 {
 		class CSmartPropOperation_Translate : public CS2::smartprops::CSmartPropTransformOperation {
 		public:
 			PROPERTY(m_vPosition,GlobalTypes::CSmartPropAttributeVector, 0x50);
-			NESTED_PROPERTY(m_CoordinateSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x90);
+			NESTED_PROPERTY(m_CoordinateSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x90);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_Translate) == 0xD0, "CSmartPropOperation_Translate size should be 0xD0");
-
-#endif
 	}
 }

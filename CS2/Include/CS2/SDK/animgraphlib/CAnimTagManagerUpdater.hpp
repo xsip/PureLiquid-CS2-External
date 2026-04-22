@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimTagBase.hpp"
+#include <SDK/animgraphlib/CAnimTagBase.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimTagManagerUpdater  {
 		public:
-			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimTagBase>>), 0x38);
+			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimTagBase>>, 0x38);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimTagManagerUpdater) == 0x78, "CAnimTagManagerUpdater size should be 0x78");
-
-#endif
 	}
 }

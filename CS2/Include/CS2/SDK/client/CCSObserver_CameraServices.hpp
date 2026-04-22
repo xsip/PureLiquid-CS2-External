@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSPlayerBase_CameraServices.hpp"
+#include <SDK/client/CCSPlayerBase_CameraServices.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class CCSObserver_CameraServices : public CS2::client::CCSPlayerBase_CameraServices {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSObserver_CameraServices) == 0x2A8, "CCSObserver_CameraServices size should be 0x2A8");
-
-#endif
 	}
 }

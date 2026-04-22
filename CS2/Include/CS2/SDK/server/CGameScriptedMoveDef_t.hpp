@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/ForcedCrouchState_t.hpp"
+#include <SDK/client/ForcedCrouchState_t.hpp>
 
 
 
@@ -27,19 +27,16 @@ namespace CS2 {
 		class CGameScriptedMoveDef_t  {
 		public:
 			PROPERTY(m_vDestOffset,GlobalTypes::Vector, 0x0);
-			PROPERTY(m_hDestEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xc);
+			PROPERTY(m_hDestEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0xc);
 			PROPERTY(m_angDest,GlobalTypes::QAngle, 0x10);
 			PROPERTY(m_flDuration,float32, 0x1c);
 			PROPERTY(m_flAngRate,float32, 0x20);
 			PROPERTY(m_flMoveSpeed,float32, 0x24);
 			PROPERTY(m_bAimDisabled,bool, 0x28);
 			PROPERTY(m_bIgnoreRotation,bool, 0x29);
-			PROPERTY(m_nForcedCrouchState,IDENTITY(client::ForcedCrouchState_t), 0x2c);
+			PROPERTY(m_nForcedCrouchState,client::ForcedCrouchState_t, 0x2c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGameScriptedMoveDef_t) == 0x30, "CGameScriptedMoveDef_t size should be 0x30");
-
-#endif
 	}
 }

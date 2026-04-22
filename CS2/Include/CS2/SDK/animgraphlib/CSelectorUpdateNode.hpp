@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimUpdateNodeBase.hpp"
-#include "CAnimUpdateNodeRef.hpp"
-#include "CBlendCurve.hpp"
-#include "CAnimParamHandle.hpp"
-#include "SelectorTagBehavior_t.hpp"
+#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
+#include <SDK/animgraphlib/CAnimUpdateNodeRef.hpp>
+#include <SDK/animgraphlib/CBlendCurve.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include <SDK/animgraphlib/SelectorTagBehavior_t.hpp>
 
 
 
@@ -25,21 +25,18 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSelectorUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_children,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>), 0x60);
-			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector< int8 >), 0x78);
-			NESTED_PROPERTY(m_blendCurve,IDENTITY(animgraphlib::CBlendCurve), 0x94);
-			PROPERTY(m_flBlendTime,IDENTITY(GlobalTypes::CAnimValue< float32 >), 0x9c);
-			NESTED_PROPERTY(m_hParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0xa4);
+			NESTED_PROPERTY(m_children,GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>, 0x60);
+			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector< int8 >, 0x78);
+			NESTED_PROPERTY(m_blendCurve,animgraphlib::CBlendCurve, 0x94);
+			PROPERTY(m_flBlendTime,GlobalTypes::CAnimValue< float32 >, 0x9c);
+			NESTED_PROPERTY(m_hParameter,animgraphlib::CAnimParamHandle, 0xa4);
 			PROPERTY(m_nTagIndex,int32_t, 0xa8);
-			PROPERTY(m_eTagBehavior,IDENTITY(animgraphlib::SelectorTagBehavior_t), 0xac);
+			PROPERTY(m_eTagBehavior,animgraphlib::SelectorTagBehavior_t, 0xac);
 			PROPERTY(m_bResetOnChange,bool, 0xb0);
 			PROPERTY(m_bLockWhenWaning,bool, 0xb1);
 			PROPERTY(m_bSyncCyclesOnChange,bool, 0xb2);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSelectorUpdateNode) == 0xB8, "CSelectorUpdateNode size should be 0xB8");
-
-#endif
 	}
 }

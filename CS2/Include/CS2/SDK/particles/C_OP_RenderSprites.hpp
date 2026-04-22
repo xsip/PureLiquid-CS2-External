@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseRendererSource2.hpp"
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
-#include "ParticleOrientationChoiceList_t.hpp"
-#include "ParticleLightingQuality_t.hpp"
-#include "../particleslib/CParticleCollectionRendererVecInput.hpp"
-#include "CReplicationParameters.hpp"
+#include <SDK/particles/CBaseRendererSource2.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
+#include <SDK/particles/ParticleOrientationChoiceList_t.hpp>
+#include <SDK/particles/ParticleLightingQuality_t.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererVecInput.hpp>
+#include <SDK/particles/CReplicationParameters.hpp>
 
 
 
@@ -26,16 +26,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderSprites : public CS2::particles::CBaseRendererSource2 {
 		public:
-			NESTED_PROPERTY(m_nSequenceOverride,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2de8);
+			NESTED_PROPERTY(m_nSequenceOverride,particleslib::CParticleCollectionRendererFloatInput, 0x2de8);
 			PROPERTY(m_bSequenceNumbersAreRawSequenceIndices,bool, 0x2f58);
-			PROPERTY(m_nOrientationType,IDENTITY(particles::ParticleOrientationChoiceList_t), 0x2f5c);
+			PROPERTY(m_nOrientationType,particles::ParticleOrientationChoiceList_t, 0x2f5c);
 			PROPERTY(m_nOrientationControlPoint,int32_t, 0x2f60);
 			PROPERTY(m_bUseYawWithNormalAligned,bool, 0x2f64);
-			NESTED_PROPERTY(m_flMinSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f68);
-			NESTED_PROPERTY(m_flMaxSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x30d8);
-			NESTED_PROPERTY(m_flAlphaAdjustWithSizeAdjust,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3248);
-			NESTED_PROPERTY(m_flStartFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x33b8);
-			NESTED_PROPERTY(m_flEndFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3528);
+			NESTED_PROPERTY(m_flMinSize,particleslib::CParticleCollectionRendererFloatInput, 0x2f68);
+			NESTED_PROPERTY(m_flMaxSize,particleslib::CParticleCollectionRendererFloatInput, 0x30d8);
+			NESTED_PROPERTY(m_flAlphaAdjustWithSizeAdjust,particleslib::CParticleCollectionRendererFloatInput, 0x3248);
+			NESTED_PROPERTY(m_flStartFadeSize,particleslib::CParticleCollectionRendererFloatInput, 0x33b8);
+			NESTED_PROPERTY(m_flEndFadeSize,particleslib::CParticleCollectionRendererFloatInput, 0x3528);
 			PROPERTY(m_flStartFadeDot,float32, 0x3698);
 			PROPERTY(m_flEndFadeDot,float32, 0x369c);
 			PROPERTY(m_bDistanceAlpha,bool, 0x36a0);
@@ -49,18 +49,15 @@ namespace CS2 {
 			PROPERTY(m_flOutlineStart1,float32, 0x36bc);
 			PROPERTY(m_flOutlineEnd0,float32, 0x36c0);
 			PROPERTY(m_flOutlineEnd1,float32, 0x36c4);
-			PROPERTY(m_nLightingMode,IDENTITY(particles::ParticleLightingQuality_t), 0x36c8);
-			NESTED_PROPERTY(m_vecLightingOverride,IDENTITY(particleslib::CParticleCollectionRendererVecInput), 0x36d0);
-			NESTED_PROPERTY(m_flLightingTessellation,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3d88);
-			NESTED_PROPERTY(m_flLightingDirectionality,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3ef8);
+			PROPERTY(m_nLightingMode,particles::ParticleLightingQuality_t, 0x36c8);
+			NESTED_PROPERTY(m_vecLightingOverride,particleslib::CParticleCollectionRendererVecInput, 0x36d0);
+			NESTED_PROPERTY(m_flLightingTessellation,particleslib::CParticleCollectionRendererFloatInput, 0x3d88);
+			NESTED_PROPERTY(m_flLightingDirectionality,particleslib::CParticleCollectionRendererFloatInput, 0x3ef8);
 			PROPERTY(m_bParticleShadows,bool, 0x4068);
 			PROPERTY(m_flShadowDensity,float32, 0x406c);
-			NESTED_PROPERTY(m_replicationParameters,IDENTITY(particles::CReplicationParameters), 0x4070);
+			NESTED_PROPERTY(m_replicationParameters,particles::CReplicationParameters, 0x4070);
 			S2_PAD(0x2458);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderSprites) == 0x5240, "C_OP_RenderSprites size should be 0x5240");
-
-#endif
 	}
 }

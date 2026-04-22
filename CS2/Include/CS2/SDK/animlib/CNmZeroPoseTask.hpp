@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmPoseTask.hpp"
+#include <SDK/animlib/CNmPoseTask.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace animlib {
 		class CNmZeroPoseTask : public CS2::animlib::CNmPoseTask {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmZeroPoseTask) == 0x58, "CNmZeroPoseTask size should be 0x58");
-
-#endif
 	}
 }

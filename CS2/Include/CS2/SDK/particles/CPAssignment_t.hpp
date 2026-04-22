@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "ParticleOrientationSetMode_t.hpp"
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particles/ParticleOrientationSetMode_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		class CPAssignment_t  {
 		public:
 			PROPERTY(m_nCPNumber,int32_t, 0x0);
-			NESTED_PROPERTY(m_Pos,IDENTITY(particleslib::CPerParticleVecInput), 0x8);
-			PROPERTY(m_nOrientationMode,IDENTITY(particles::ParticleOrientationSetMode_t), 0x6c0);
+			NESTED_PROPERTY(m_Pos,particleslib::CPerParticleVecInput, 0x8);
+			PROPERTY(m_nOrientationMode,particles::ParticleOrientationSetMode_t, 0x6c0);
 			S2_PAD(0x6C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CPAssignment_t) == 0x6C8, "CPAssignment_t size should be 0x6C8");
-
-#endif
 	}
 }

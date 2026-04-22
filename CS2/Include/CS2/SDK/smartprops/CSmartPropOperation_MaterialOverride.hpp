@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropOperation.hpp"
-#include "CSmartPropMaterialReplacement.hpp"
+#include <SDK/smartprops/CSmartPropOperation.hpp>
+#include <SDK/smartprops/CSmartPropMaterialReplacement.hpp>
 
 
 
@@ -23,12 +23,9 @@ namespace CS2 {
 		class CSmartPropOperation_MaterialOverride : public CS2::smartprops::CSmartPropOperation {
 		public:
 			PROPERTY(m_bClearCurrentOverrides,GlobalTypes::CSmartPropAttributeBool, 0x50);
-			NESTED_PROPERTY(m_MaterialReplacements,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropMaterialReplacement>), 0x90);
+			NESTED_PROPERTY(m_MaterialReplacements,GlobalTypes::CUtlVector<smartprops::CSmartPropMaterialReplacement>, 0x90);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_MaterialOverride) == 0xA8, "CSmartPropOperation_MaterialOverride size should be 0xA8");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../client/PointTemplateClientOnlyEntityBehavior_t.hpp"
-#include "../client/PointTemplateOwnerSpawnGroupType_t.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/client/PointTemplateClientOnlyEntityBehavior_t.hpp>
+#include <SDK/client/PointTemplateOwnerSpawnGroupType_t.hpp>
 
 
 
@@ -28,17 +28,14 @@ namespace CS2 {
 			PROPERTY(m_iszEntityFilterName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
 			PROPERTY(m_flTimeoutInterval,float32, 0x4c0);
 			PROPERTY(m_bAsynchronouslySpawnEntities,bool, 0x4c4);
-			PROPERTY(m_clientOnlyEntityBehavior,IDENTITY(client::PointTemplateClientOnlyEntityBehavior_t), 0x4c8);
-			PROPERTY(m_ownerSpawnGroupType,IDENTITY(client::PointTemplateOwnerSpawnGroupType_t), 0x4cc);
-			NESTED_PROPERTY(m_createdSpawnGroupHandles,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x4d0);
-			NESTED_PROPERTY(m_SpawnedEntityHandles,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>), 0x4e8);
+			PROPERTY(m_clientOnlyEntityBehavior,client::PointTemplateClientOnlyEntityBehavior_t, 0x4c8);
+			PROPERTY(m_ownerSpawnGroupType,client::PointTemplateOwnerSpawnGroupType_t, 0x4cc);
+			NESTED_PROPERTY(m_createdSpawnGroupHandles,GlobalTypes::CUtlVector< uint32 >, 0x4d0);
+			NESTED_PROPERTY(m_SpawnedEntityHandles,GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>, 0x4e8);
 			PROPERTY(m_ScriptSpawnCallback,GlobalTypes::HSCRIPT, 0x500);
 			PROPERTY(m_ScriptCallbackScope,GlobalTypes::HSCRIPT, 0x508);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointTemplate) == 0x510, "CPointTemplate size should be 0x510");
-
-#endif
 	}
 }

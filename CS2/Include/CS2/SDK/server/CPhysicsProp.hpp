@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBreakableProp.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../physicslib/DynamicContinuousContactBehavior_t.hpp"
-#include "CPhysicsProp_CrateType_t.hpp"
+#include <SDK/server/CBreakableProp.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/physicslib/DynamicContinuousContactBehavior_t.hpp>
+#include <SDK/server/CrateType_t.hpp>
 
 
 
@@ -25,13 +25,13 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsProp : public CS2::server::CBreakableProp {
 		public:
-			NESTED_PROPERTY(m_MotionEnabled,IDENTITY(entity2::CEntityIOOutput), 0xbb0);
-			NESTED_PROPERTY(m_OnAwakened,IDENTITY(entity2::CEntityIOOutput), 0xbc8);
-			NESTED_PROPERTY(m_OnAwake,IDENTITY(entity2::CEntityIOOutput), 0xbe0);
-			NESTED_PROPERTY(m_OnAsleep,IDENTITY(entity2::CEntityIOOutput), 0xbf8);
-			NESTED_PROPERTY(m_OnPlayerUse,IDENTITY(entity2::CEntityIOOutput), 0xc10);
-			NESTED_PROPERTY(m_OnOutOfWorld,IDENTITY(entity2::CEntityIOOutput), 0xc28);
-			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xc40);
+			NESTED_PROPERTY(m_MotionEnabled,entity2::CEntityIOOutput, 0xbb0);
+			NESTED_PROPERTY(m_OnAwakened,entity2::CEntityIOOutput, 0xbc8);
+			NESTED_PROPERTY(m_OnAwake,entity2::CEntityIOOutput, 0xbe0);
+			NESTED_PROPERTY(m_OnAsleep,entity2::CEntityIOOutput, 0xbf8);
+			NESTED_PROPERTY(m_OnPlayerUse,entity2::CEntityIOOutput, 0xc10);
+			NESTED_PROPERTY(m_OnOutOfWorld,entity2::CEntityIOOutput, 0xc28);
+			NESTED_PROPERTY(m_OnPlayerPickup,entity2::CEntityIOOutput, 0xc40);
 			PROPERTY(m_bForceNavIgnore,bool, 0xc58);
 			PROPERTY(m_bNoNavmeshBlocker,bool, 0xc59);
 			PROPERTY(m_bForceNpcExclude,bool, 0xc5a);
@@ -46,9 +46,9 @@ namespace CS2 {
 			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xc73);
 			PROPERTY(m_bHasBeenAwakened,bool, 0xc74);
 			PROPERTY(m_bIsOverrideProp,bool, 0xc75);
-			NESTED_PROPERTY(m_flLastBurn,IDENTITY(entity2::GameTime_t), 0xc78);
-			PROPERTY(m_nDynamicContinuousContactBehavior,IDENTITY(physicslib::DynamicContinuousContactBehavior_t), 0xc7c);
-			NESTED_PROPERTY(m_fNextCheckDisableMotionContactsTime,IDENTITY(entity2::GameTime_t), 0xc80);
+			NESTED_PROPERTY(m_flLastBurn,entity2::GameTime_t, 0xc78);
+			PROPERTY(m_nDynamicContinuousContactBehavior,physicslib::DynamicContinuousContactBehavior_t, 0xc7c);
+			NESTED_PROPERTY(m_fNextCheckDisableMotionContactsTime,entity2::GameTime_t, 0xc80);
 			PROPERTY(m_iInitialGlowState,int32_t, 0xc84);
 			PROPERTY(m_nGlowRange,int32_t, 0xc88);
 			PROPERTY(m_nGlowRangeMin,int32_t, 0xc8c);
@@ -60,7 +60,7 @@ namespace CS2 {
 			PROPERTY(m_bAllowObstacleConvexHullMerging,bool, 0xc9e);
 			PROPERTY(m_bAcceptDamageFromHeldObjects,bool, 0xc9f);
 			PROPERTY(m_bEnableUseOutput,bool, 0xca0);
-			PROPERTY(m_CrateType,IDENTITY(server::CPhysicsProp_CrateType_t), 0xca4);
+			PROPERTY(m_CrateType,server::CrateType_t, 0xca4);
 			PROPERTY_ARRAY(m_strItemClass,GlobalTypes::CUtlSymbolLarge*, 4 , 0xca8);
 			PROPERTY_ARRAY(m_nItemCount,int32_t, 4 , 0xcc8);
 			PROPERTY(m_bRemovableForAmmoBalancing,bool, 0xcd8);
@@ -68,9 +68,6 @@ namespace CS2 {
 			PROPERTY(m_bAttachedToReferenceFrame,bool, 0xcda);
 			S2_PAD(0x140);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysicsProp) == 0xCE0, "CPhysicsProp size should be 0xCE0");
-
-#endif
 	}
 }

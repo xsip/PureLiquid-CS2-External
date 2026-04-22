@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "ParticleColorBlendMode_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/ParticleColorBlendMode_t.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 			PROPERTY(m_TintMin,GlobalTypes::Color, 0x1f8);
 			PROPERTY(m_TintMax,GlobalTypes::Color, 0x1fc);
 			PROPERTY(m_flTintPerc,float32, 0x200);
-			PROPERTY(m_nTintBlendMode,IDENTITY(particles::ParticleColorBlendMode_t), 0x204);
+			PROPERTY(m_nTintBlendMode,particles::ParticleColorBlendMode_t, 0x204);
 			PROPERTY(m_flLightAmplification,float32, 0x208);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_ColorLitPerParticle) == 0x210, "C_INIT_ColorLitPerParticle size should be 0x210");
-
-#endif
 	}
 }

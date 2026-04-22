@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMotionMetricEvaluator.hpp"
-#include "VelocityMetricMode.hpp"
+#include <SDK/animgraphlib/CMotionMetricEvaluator.hpp>
+#include <SDK/animgraphlib/VelocityMetricMode.hpp>
 
 
 
@@ -25,12 +25,9 @@ namespace CS2 {
 			PROPERTY(m_flDistance,float32, 0x50);
 			PROPERTY(m_flStoppingDistance,float32, 0x54);
 			PROPERTY(m_flTargetSpeed,float32, 0x58);
-			PROPERTY(m_eMode,IDENTITY(animgraphlib::VelocityMetricMode), 0x5c);
+			PROPERTY(m_eMode,animgraphlib::VelocityMetricMode, 0x5c);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFutureVelocityMetricEvaluator) == 0x60, "CFutureVelocityMetricEvaluator size should be 0x60");
-
-#endif
 	}
 }

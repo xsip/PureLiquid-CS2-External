@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
-#include "../pulse_runtime_lib/PulseSelectorOutflowList_t.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
+#include <SDK/pulse_runtime_lib/PulseSelectorOutflowList_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropPulse_FitOnLine : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
-			NESTED_PROPERTY(m_OutflowList,IDENTITY(pulse_runtime_lib::PulseSelectorOutflowList_t), 0x48);
+			NESTED_PROPERTY(m_OutflowList,pulse_runtime_lib::PulseSelectorOutflowList_t, 0x48);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropPulse_FitOnLine) == 0x60, "CSmartPropPulse_FitOnLine size should be 0x60");
-
-#endif
 	}
 }

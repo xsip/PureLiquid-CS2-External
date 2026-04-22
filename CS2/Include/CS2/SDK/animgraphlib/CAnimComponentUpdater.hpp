@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/AnimComponentID.hpp"
-#include "AnimNodeNetworkMode.hpp"
+#include <SDK/modellib/AnimComponentID.hpp>
+#include <SDK/animgraphlib/AnimNodeNetworkMode.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 		class CAnimComponentUpdater  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x18);
-			NESTED_PROPERTY(m_id,IDENTITY(modellib::AnimComponentID), 0x20);
-			PROPERTY(m_networkMode,IDENTITY(animgraphlib::AnimNodeNetworkMode), 0x24);
+			NESTED_PROPERTY(m_id,modellib::AnimComponentID, 0x20);
+			PROPERTY(m_networkMode,animgraphlib::AnimNodeNetworkMode, 0x24);
 			PROPERTY(m_bStartEnabled,bool, 0x28);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimComponentUpdater) == 0x30, "CAnimComponentUpdater size should be 0x30");
-
-#endif
 	}
 }

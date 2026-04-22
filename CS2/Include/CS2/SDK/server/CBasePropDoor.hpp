@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CDynamicProp.hpp"
-#include "../client/DoorState_t.hpp"
-#include "locksound_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CDynamicProp.hpp>
+#include <SDK/client/DoorState_t.hpp>
+#include <SDK/server/locksound_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -30,20 +30,20 @@ namespace CS2 {
 		class CBasePropDoor : public CS2::server::CDynamicProp {
 		public:
 			PROPERTY(m_flAutoReturnDelay,float32, 0xc60);
-			NESTED_PROPERTY(m_hDoorList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePropDoor>>), 0xc68);
+			NESTED_PROPERTY(m_hDoorList,server::CUtlVector<GlobalTypes::CHandle<server::CBasePropDoor>>, 0xc68);
 			PROPERTY(m_nHardwareType,int32_t, 0xc80);
 			PROPERTY(m_bNeedsHardware,bool, 0xc84);
-			PROPERTY(m_eDoorState,IDENTITY(client::DoorState_t), 0xc88);
+			PROPERTY(m_eDoorState,client::DoorState_t, 0xc88);
 			PROPERTY(m_bLocked,bool, 0xc8c);
 			PROPERTY(m_bNoNPCs,bool, 0xc8d);
 			PROPERTY(m_closedPosition,GlobalTypes::Vector, 0xc90);
 			PROPERTY(m_closedAngles,GlobalTypes::QAngle, 0xc9c);
-			PROPERTY(m_hBlocker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xca8);
+			PROPERTY(m_hBlocker,GlobalTypes::CHandle<server::CBaseEntity>, 0xca8);
 			PROPERTY(m_bFirstBlocked,bool, 0xcac);
-			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0xcb0);
+			NESTED_PROPERTY(m_ls,server::locksound_t, 0xcb0);
 			PROPERTY(m_bForceClosed,bool, 0xcd0);
 			PROPERTY(m_vecLatchWorldPosition,GlobalTypes::VectorWS, 0xcd4);
-			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xce0);
+			PROPERTY(m_hActivator,GlobalTypes::CHandle<server::CBaseEntity>, 0xce0);
 			PROPERTY(m_SoundMoving,GlobalTypes::CUtlSymbolLarge*, 0xcf8);
 			PROPERTY(m_SoundOpen,GlobalTypes::CUtlSymbolLarge*, 0xd00);
 			PROPERTY(m_SoundClose,GlobalTypes::CUtlSymbolLarge*, 0xd08);
@@ -56,22 +56,19 @@ namespace CS2 {
 			PROPERTY(m_numCloseAttempts,int32_t, 0xd40);
 			PROPERTY(m_nPhysicsMaterial,GlobalTypes::CUtlStringToken*, 0xd44);
 			PROPERTY(m_SlaveName,GlobalTypes::CUtlSymbolLarge*, 0xd48);
-			PROPERTY(m_hMaster,IDENTITY(GlobalTypes::CHandle<server::CBasePropDoor>), 0xd50);
-			NESTED_PROPERTY(m_OnBlockedClosing,IDENTITY(entity2::CEntityIOOutput), 0xd58);
-			NESTED_PROPERTY(m_OnBlockedOpening,IDENTITY(entity2::CEntityIOOutput), 0xd70);
-			NESTED_PROPERTY(m_OnUnblockedClosing,IDENTITY(entity2::CEntityIOOutput), 0xd88);
-			NESTED_PROPERTY(m_OnUnblockedOpening,IDENTITY(entity2::CEntityIOOutput), 0xda0);
-			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0xdb8);
-			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0xdd0);
-			NESTED_PROPERTY(m_OnClose,IDENTITY(entity2::CEntityIOOutput), 0xde8);
-			NESTED_PROPERTY(m_OnOpen,IDENTITY(entity2::CEntityIOOutput), 0xe00);
-			NESTED_PROPERTY(m_OnLockedUse,IDENTITY(entity2::CEntityIOOutput), 0xe18);
-			NESTED_PROPERTY(m_OnAjarOpen,IDENTITY(entity2::CEntityIOOutput), 0xe30);
+			PROPERTY(m_hMaster,GlobalTypes::CHandle<server::CBasePropDoor>, 0xd50);
+			NESTED_PROPERTY(m_OnBlockedClosing,entity2::CEntityIOOutput, 0xd58);
+			NESTED_PROPERTY(m_OnBlockedOpening,entity2::CEntityIOOutput, 0xd70);
+			NESTED_PROPERTY(m_OnUnblockedClosing,entity2::CEntityIOOutput, 0xd88);
+			NESTED_PROPERTY(m_OnUnblockedOpening,entity2::CEntityIOOutput, 0xda0);
+			NESTED_PROPERTY(m_OnFullyClosed,entity2::CEntityIOOutput, 0xdb8);
+			NESTED_PROPERTY(m_OnFullyOpen,entity2::CEntityIOOutput, 0xdd0);
+			NESTED_PROPERTY(m_OnClose,entity2::CEntityIOOutput, 0xde8);
+			NESTED_PROPERTY(m_OnOpen,entity2::CEntityIOOutput, 0xe00);
+			NESTED_PROPERTY(m_OnLockedUse,entity2::CEntityIOOutput, 0xe18);
+			NESTED_PROPERTY(m_OnAjarOpen,entity2::CEntityIOOutput, 0xe30);
 			S2_PAD(0x200);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBasePropDoor) == 0xE50, "CBasePropDoor size should be 0xE50");
-
-#endif
 	}
 }

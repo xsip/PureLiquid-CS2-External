@@ -50,7 +50,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bBreakOnNonIdle = 0x551; // bool m_bBreakOnNonIdle; |  0x551 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bSceneFinished = 0x552; // bool m_bSceneFinished; |  0x552 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_hActorList = 0x558; // server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseFlex>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_hRemoveActorList = 0x570; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hRemoveActorList = 0x570; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nSceneStringIndex = 0x5b8; // uint16_t m_nSceneStringIndex; |  0x5b8 | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_OnStart = 0x5c0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnCompletion = 0x5d8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
@@ -64,8 +64,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bCompletedEarly = 0x6d2; // bool m_bCompletedEarly; |  0x6d2 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bInterruptSceneFinished = 0x6d3; // bool m_bInterruptSceneFinished; |  0x6d3 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bRestoring = 0x6d4; // bool m_bRestoring; |  0x6d4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hNotifySceneCompletion = 0x6d8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CSceneEntity>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_hListManagers = 0x6f0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hNotifySceneCompletion = 0x6d8; // server::CUtlVector<GlobalTypes::CHandle<server::CSceneEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hListManagers = 0x6f0; // server::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_iszSoundName = 0x708; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_iszSequenceName = 0x710; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hActor = 0x718; // GlobalTypes::CHandle<server::CBaseFlex>  | Schema_Atomic | Size: 0x4

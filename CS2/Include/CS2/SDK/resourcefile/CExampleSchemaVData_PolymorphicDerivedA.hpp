@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CExampleSchemaVData_PolymorphicBase.hpp"
+#include <SDK/resourcefile/CExampleSchemaVData_PolymorphicBase.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_nDerivedA,int32_t, 0x10);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::resourcefile::CExampleSchemaVData_PolymorphicDerivedA) == 0x18, "CExampleSchemaVData_PolymorphicDerivedA size should be 0x18");
-
-#endif
 	}
 }

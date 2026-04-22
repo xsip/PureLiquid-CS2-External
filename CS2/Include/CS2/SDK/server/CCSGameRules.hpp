@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CTeamplayRules.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "SpawnPoint.hpp"
-#include "CRetakeGameRules.hpp"
+#include <SDK/server/CTeamplayRules.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/server/SpawnPoint.hpp>
+#include <SDK/server/CRetakeGameRules.hpp>
 
 
 
@@ -32,8 +32,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bFreezePeriod,bool, 0xd8);
 			PROPERTY(m_bWarmupPeriod,bool, 0xd9);
-			NESTED_PROPERTY(m_fWarmupPeriodEnd,IDENTITY(entity2::GameTime_t), 0xdc);
-			NESTED_PROPERTY(m_fWarmupPeriodStart,IDENTITY(entity2::GameTime_t), 0xe0);
+			NESTED_PROPERTY(m_fWarmupPeriodEnd,entity2::GameTime_t, 0xdc);
+			NESTED_PROPERTY(m_fWarmupPeriodStart,entity2::GameTime_t, 0xe0);
 			PROPERTY(m_bTerroristTimeOutActive,bool, 0xe4);
 			PROPERTY(m_bCTTimeOutActive,bool, 0xe5);
 			PROPERTY(m_flTerroristTimeOutRemaining,float32, 0xe8);
@@ -45,8 +45,8 @@ namespace CS2 {
 			PROPERTY(m_iFreezeTime,int32_t, 0xfc);
 			PROPERTY(m_iRoundTime,int32_t, 0x100);
 			PROPERTY(m_fMatchStartTime,float32, 0x104);
-			NESTED_PROPERTY(m_fRoundStartTime,IDENTITY(entity2::GameTime_t), 0x108);
-			NESTED_PROPERTY(m_flRestartRoundTime,IDENTITY(entity2::GameTime_t), 0x10c);
+			NESTED_PROPERTY(m_fRoundStartTime,entity2::GameTime_t, 0x108);
+			NESTED_PROPERTY(m_flRestartRoundTime,entity2::GameTime_t, 0x10c);
 			PROPERTY(m_bGameRestart,bool, 0x110);
 			PROPERTY(m_flGameStartTime,float32, 0x114);
 			PROPERTY(m_timeUntilNextPhaseStarts,float32, 0x118);
@@ -73,8 +73,8 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_szMatchStatTxt,char, 512 , 0x550);
 			PROPERTY_ARRAY(m_szTournamentPredictionsTxt,char, 512 , 0x750);
 			PROPERTY(m_nTournamentPredictionsPct,int32_t, 0x950);
-			NESTED_PROPERTY(m_flCMMItemDropRevealStartTime,IDENTITY(entity2::GameTime_t), 0x954);
-			NESTED_PROPERTY(m_flCMMItemDropRevealEndTime,IDENTITY(entity2::GameTime_t), 0x958);
+			NESTED_PROPERTY(m_flCMMItemDropRevealStartTime,entity2::GameTime_t, 0x954);
+			NESTED_PROPERTY(m_flCMMItemDropRevealEndTime,entity2::GameTime_t, 0x958);
 			PROPERTY(m_bIsDroppingItems,bool, 0x95c);
 			PROPERTY(m_bIsQuestEligible,bool, 0x95d);
 			PROPERTY(m_bIsHltvActive,bool, 0x95e);
@@ -92,7 +92,7 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_iMatchStats_PlayersAlive_CT,int32_t, 30 , 0xac8);
 			PROPERTY_ARRAY(m_iMatchStats_PlayersAlive_T,int32_t, 30 , 0xb40);
 			PROPERTY_ARRAY(m_TeamRespawnWaveTimes,float32, 32 , 0xbb8);
-			PROPERTY_ARRAY(m_flNextRespawnWave,IDENTITY(entity2::GameTime_t), 32 , 0xc38);
+			PROPERTY_ARRAY(m_flNextRespawnWave,entity2::GameTime_t, 32 , 0xc38);
 			PROPERTY(m_vMinimapMins,GlobalTypes::Vector, 0xcb8);
 			PROPERTY(m_vMinimapMaxs,GlobalTypes::Vector, 0xcc4);
 			PROPERTY_ARRAY(m_MinimapVerticalSectionHeights,float32, 8 , 0xcd0);
@@ -103,8 +103,8 @@ namespace CS2 {
 			PROPERTY(m_iNumConsecutiveCTLoses,int32_t, 0xd4c);
 			PROPERTY(m_iNumConsecutiveTerroristLoses,int32_t, 0xd50);
 			PROPERTY(m_bHasHostageBeenTouched,bool, 0xd70);
-			NESTED_PROPERTY(m_flIntermissionStartTime,IDENTITY(entity2::GameTime_t), 0xd74);
-			NESTED_PROPERTY(m_flIntermissionEndTime,IDENTITY(entity2::GameTime_t), 0xd78);
+			NESTED_PROPERTY(m_flIntermissionStartTime,entity2::GameTime_t, 0xd74);
+			NESTED_PROPERTY(m_flIntermissionEndTime,entity2::GameTime_t, 0xd78);
 			PROPERTY(m_bLevelInitialized,bool, 0xd7c);
 			PROPERTY(m_iTotalRoundsPlayed,int32_t, 0xd80);
 			PROPERTY(m_iUnBalancedRounds,int32_t, 0xd84);
@@ -114,14 +114,14 @@ namespace CS2 {
 			PROPERTY(m_iNumCT,int32_t, 0xd90);
 			PROPERTY(m_iNumSpawnableTerrorist,int32_t, 0xd94);
 			PROPERTY(m_iNumSpawnableCT,int32_t, 0xd98);
-			NESTED_PROPERTY(m_arrSelectedHostageSpawnIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0xda0);
+			NESTED_PROPERTY(m_arrSelectedHostageSpawnIndices,GlobalTypes::CUtlVector< int32 >, 0xda0);
 			PROPERTY(m_nSpawnPointsRandomSeed,int32_t, 0xdb8);
 			PROPERTY(m_bFirstConnected,bool, 0xdbc);
 			PROPERTY(m_bCompleteReset,bool, 0xdbd);
 			PROPERTY(m_bPickNewTeamsOnReset,bool, 0xdbe);
 			PROPERTY(m_bScrambleTeamsOnRestart,bool, 0xdbf);
 			PROPERTY(m_bSwapTeamsOnRestart,bool, 0xdc0);
-			NESTED_PROPERTY(m_nEndMatchTiedVotes,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0xdc8);
+			NESTED_PROPERTY(m_nEndMatchTiedVotes,GlobalTypes::CUtlVector< int32 >, 0xdc8);
 			PROPERTY(m_bNeedToAskPlayersForContinueVote,bool, 0xde4);
 			PROPERTY(m_numQueuedMatchmakingAccounts,uint32_t, 0xde8);
 			PROPERTY(m_fAvgPlayerRank,float32, 0xdec);
@@ -169,38 +169,38 @@ namespace CS2 {
 			PROPERTY(m_bBombDefused,bool, 0xf01);
 			PROPERTY(m_bMapHasBombZone,bool, 0xf02);
 			PROPERTY(m_vecMainCTSpawnPos,GlobalTypes::Vector, 0xf50);
-			NESTED_PROPERTY(m_CTSpawnPointsMasterList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>), 0xf60);
-			NESTED_PROPERTY(m_TerroristSpawnPointsMasterList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>), 0xf78);
+			NESTED_PROPERTY(m_CTSpawnPointsMasterList,server::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>, 0xf60);
+			NESTED_PROPERTY(m_TerroristSpawnPointsMasterList,server::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>, 0xf78);
 			PROPERTY(m_bRespawningAllRespawnablePlayers,bool, 0xf90);
 			PROPERTY(m_iNextCTSpawnPoint,int32_t, 0xf94);
 			PROPERTY(m_flCTSpawnPointUsedTime,float32, 0xf98);
 			PROPERTY(m_iNextTerroristSpawnPoint,int32_t, 0xf9c);
 			PROPERTY(m_flTerroristSpawnPointUsedTime,float32, 0xfa0);
-			NESTED_PROPERTY(m_CTSpawnPoints,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>), 0xfa8);
-			NESTED_PROPERTY(m_TerroristSpawnPoints,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>), 0xfc0);
+			NESTED_PROPERTY(m_CTSpawnPoints,server::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>, 0xfa8);
+			NESTED_PROPERTY(m_TerroristSpawnPoints,server::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>, 0xfc0);
 			PROPERTY(m_bIsUnreservedGameServer,bool, 0xfd8);
 			PROPERTY(m_fAutobalanceDisplayTime,float32, 0xfdc);
 			PROPERTY(m_bAllowWeaponSwitch,bool, 0x1018);
 			PROPERTY(m_bRoundTimeWarningTriggered,bool, 0x1019);
-			NESTED_PROPERTY(m_phaseChangeAnnouncementTime,IDENTITY(entity2::GameTime_t), 0x101c);
+			NESTED_PROPERTY(m_phaseChangeAnnouncementTime,entity2::GameTime_t, 0x101c);
 			PROPERTY(m_fNextUpdateTeamClanNamesTime,float32, 0x1020);
-			NESTED_PROPERTY(m_flLastThinkTime,IDENTITY(entity2::GameTime_t), 0x1024);
+			NESTED_PROPERTY(m_flLastThinkTime,entity2::GameTime_t, 0x1024);
 			PROPERTY(m_fAccumulatedRoundOffDamage,float32, 0x1028);
 			PROPERTY(m_nShorthandedBonusLastEvalRound,int32_t, 0x102c);
 			PROPERTY(m_nMatchAbortedEarlyReason,int32_t, 0x1078);
 			PROPERTY(m_bHasTriggeredRoundStartMusic,bool, 0x107c);
 			PROPERTY(m_bSwitchingTeamsAtRoundReset,bool, 0x107d);
-			PROPERTY(m_pGameModeRules,IDENTITY(server::CCSGameModeRules*), 0x1098);
+			PROPERTY(m_pGameModeRules,server::CCSGameModeRules*, 0x1098);
 			PROPERTY(m_BtGlobalBlackboard,GlobalTypes::KeyValues3, 0x10a0);
-			PROPERTY(m_hPlayerResource,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x1138);
-			NESTED_PROPERTY(m_RetakeRules,IDENTITY(server::CRetakeGameRules), 0x1140);
-			// PROPERTY_ARRAY(m_arrTeamUniqueKillWeaponsMatch,IDENTITY(GlobalTypes::CUtlVector< int32 >[4]), 4 , 0x1330);
+			PROPERTY(m_hPlayerResource,GlobalTypes::CHandle<server::CBaseEntity>, 0x1138);
+			NESTED_PROPERTY(m_RetakeRules,server::CRetakeGameRules, 0x1140);
+			PROPERTY_ARRAY(m_arrTeamUniqueKillWeaponsMatch,GlobalTypes::CUtlVector< int32 >[4], 4 , 0x1330);
 			PROPERTY_ARRAY(m_bTeamLastKillUsedUniqueWeaponMatch,bool, 4 , 0x1390);
 			PROPERTY(m_nMatchEndCount,uint8_t, 0x13b8);
 			PROPERTY(m_nTTeamIntroVariant,int32_t, 0x13bc);
 			PROPERTY(m_nCTTeamIntroVariant,int32_t, 0x13c0);
 			PROPERTY(m_bTeamIntroPeriod,bool, 0x13c4);
-			NESTED_PROPERTY(m_fTeamIntroPeriodEnd,IDENTITY(entity2::GameTime_t), 0x13c8);
+			NESTED_PROPERTY(m_fTeamIntroPeriodEnd,entity2::GameTime_t, 0x13c8);
 			PROPERTY(m_bPlayedTeamIntroVO,bool, 0x13cc);
 			PROPERTY(m_iRoundEndWinnerTeam,int32_t, 0x13d0);
 			PROPERTY(m_eRoundEndReason,int32_t, 0x13d4);
@@ -221,9 +221,6 @@ namespace CS2 {
 			PROPERTY(m_flLastPerfSampleTime,float64, 0x5420);
 			S2_PAD(0x11370);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSGameRules) == 0x11440, "CCSGameRules size should be 0x11440");
-
-#endif
 	}
 }

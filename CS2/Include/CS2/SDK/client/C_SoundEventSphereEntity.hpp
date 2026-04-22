@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_SoundEventEntity.hpp"
+#include <SDK/client/C_SoundEventEntity.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_flRadius,float32, 0x6b8);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SoundEventSphereEntity) == 0x6C0, "C_SoundEventSphereEntity size should be 0x6C0");
-
-#endif
 	}
 }

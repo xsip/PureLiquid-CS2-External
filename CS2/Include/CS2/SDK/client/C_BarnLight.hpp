@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -42,12 +42,12 @@ namespace CS2 {
 			PROPERTY(m_flLuminaireSize,float32, 0xeb4);
 			PROPERTY(m_flLuminaireAnisotropy,float32, 0xeb8);
 			PROPERTY(m_LightStyleString,GlobalTypes::CUtlString*, 0xec0);
-			NESTED_PROPERTY(m_flLightStyleStartTime,IDENTITY(entity2::GameTime_t), 0xec8);
-			// PROPERTY(m_QueuedLightStyleStrings,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0xed0);
-			// PROPERTY(m_LightStyleEvents,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0xee8);
-			// PROPERTY(m_LightStyleTargets,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseModelEntity>>), 0xf00);
-			PROPERTY_ARRAY(m_StyleEvent,IDENTITY(entity2::CEntityIOOutput), 4 , 0xf18);
-			PROPERTY(m_hLightCookie,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xf78);
+			NESTED_PROPERTY(m_flLightStyleStartTime,entity2::GameTime_t, 0xec8);
+			PROPERTY(m_QueuedLightStyleStrings,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>, 0xed0);
+			PROPERTY(m_LightStyleEvents,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>, 0xee8);
+			PROPERTY(m_LightStyleTargets,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseModelEntity>>, 0xf00);
+			PROPERTY_ARRAY(m_StyleEvent,entity2::CEntityIOOutput, 4 , 0xf18);
+			PROPERTY(m_hLightCookie,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0xf78);
 			PROPERTY(m_flShape,float32, 0xf80);
 			PROPERTY(m_flSoftX,float32, 0xf84);
 			PROPERTY(m_flSoftY,float32, 0xf88);
@@ -104,12 +104,9 @@ namespace CS2 {
 			PROPERTY(m_vPrecomputedOBBAngles5,GlobalTypes::QAngle, 0x1118);
 			PROPERTY(m_vPrecomputedOBBExtent5,GlobalTypes::Vector, 0x1124);
 			PROPERTY(m_bInitialBoneSetup,bool, 0x1170);
-			// PROPERTY(m_VisClusters,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< uint16 >), 0x1178);
+			PROPERTY(m_VisClusters,GlobalTypes::C_NetworkUtlVectorBase< uint16 >, 0x1178);
 			S2_PAD(0x310);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_BarnLight) == 0x1198, "C_BarnLight size should be 0x1198");
-
-#endif
 	}
 }

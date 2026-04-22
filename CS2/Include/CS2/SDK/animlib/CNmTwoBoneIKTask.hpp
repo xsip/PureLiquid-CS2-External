@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmPoseTask.hpp"
-#include "CNmTarget.hpp"
-#include "NmIKBlendMode_t.hpp"
+#include <SDK/animlib/CNmPoseTask.hpp>
+#include <SDK/animlib/CNmTarget.hpp>
+#include <SDK/animlib/NmIKBlendMode_t.hpp>
 
 
 
@@ -26,8 +26,8 @@ namespace CS2 {
 			PROPERTY(m_nEffectorBoneIdx,int32_t, 0x58);
 			PROPERTY(m_nEffectorTargetBoneIdx,int32_t, 0x5c);
 			PROPERTY(m_targetTransform,GlobalTypes::CTransform, 0x60);
-			NESTED_PROPERTY(m_effectorTarget,IDENTITY(animlib::CNmTarget), 0x80);
-			PROPERTY(m_blendMode,IDENTITY(animlib::NmIKBlendMode_t), 0xb0);
+			NESTED_PROPERTY(m_effectorTarget,animlib::CNmTarget, 0x80);
+			PROPERTY(m_blendMode,animlib::NmIKBlendMode_t, 0xb0);
 			PROPERTY(m_flBlendWeight,float32, 0xb4);
 			PROPERTY(m_bIsTargetInWorldSpace,bool, 0xb8);
 			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0xb9);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_debugEffectorBoneID,GlobalTypes::CGlobalSymbol, 0xc0);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmTwoBoneIKTask) == 0xD0, "CNmTwoBoneIKTask size should be 0xD0");
-
-#endif
 	}
 }

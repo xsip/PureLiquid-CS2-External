@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "CAttributeContainer.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "EntitySpottedState_t.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/server/CAttributeContainer.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/EntitySpottedState_t.hpp>
 
 
 
@@ -31,37 +31,34 @@ namespace CS2 {
 		class CPlantedC4 : public CS2::server::CBaseAnimGraph {
 		public:
 			PROPERTY(m_bBombTicking,bool, 0xa28);
-			NESTED_PROPERTY(m_flC4Blow,IDENTITY(entity2::GameTime_t), 0xa2c);
+			NESTED_PROPERTY(m_flC4Blow,entity2::GameTime_t, 0xa2c);
 			PROPERTY(m_nBombSite,int32_t, 0xa30);
 			PROPERTY(m_nSourceSoundscapeHash,int32_t, 0xa34);
 			PROPERTY(m_bAbortDetonationBecauseWorldIsFrozen,bool, 0xa38);
-			NESTED_PROPERTY(m_AttributeManager,IDENTITY(server::CAttributeContainer), 0xa40);
-			NESTED_PROPERTY(m_OnBombDefused,IDENTITY(entity2::CEntityIOOutput), 0xd38);
-			NESTED_PROPERTY(m_OnBombBeginDefuse,IDENTITY(entity2::CEntityIOOutput), 0xd50);
-			NESTED_PROPERTY(m_OnBombDefuseAborted,IDENTITY(entity2::CEntityIOOutput), 0xd68);
+			NESTED_PROPERTY(m_AttributeManager,server::CAttributeContainer, 0xa40);
+			NESTED_PROPERTY(m_OnBombDefused,entity2::CEntityIOOutput, 0xd38);
+			NESTED_PROPERTY(m_OnBombBeginDefuse,entity2::CEntityIOOutput, 0xd50);
+			NESTED_PROPERTY(m_OnBombDefuseAborted,entity2::CEntityIOOutput, 0xd68);
 			PROPERTY(m_bCannotBeDefused,bool, 0xd80);
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(server::EntitySpottedState_t), 0xd88);
+			NESTED_PROPERTY(m_entitySpottedState,server::EntitySpottedState_t, 0xd88);
 			PROPERTY(m_nSpotRules,int32_t, 0xda0);
 			PROPERTY(m_bHasExploded,bool, 0xda4);
 			PROPERTY(m_bBombDefused,bool, 0xda5);
 			PROPERTY(m_bTrainingPlacedByPlayer,bool, 0xda6);
 			PROPERTY(m_flTimerLength,float32, 0xda8);
 			PROPERTY(m_bBeingDefused,bool, 0xdac);
-			NESTED_PROPERTY(m_fLastDefuseTime,IDENTITY(entity2::GameTime_t), 0xdb4);
+			NESTED_PROPERTY(m_fLastDefuseTime,entity2::GameTime_t, 0xdb4);
 			PROPERTY(m_flDefuseLength,float32, 0xdbc);
-			NESTED_PROPERTY(m_flDefuseCountDown,IDENTITY(entity2::GameTime_t), 0xdc0);
-			PROPERTY(m_hBombDefuser,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0xdc4);
+			NESTED_PROPERTY(m_flDefuseCountDown,entity2::GameTime_t, 0xdc0);
+			PROPERTY(m_hBombDefuser,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0xdc4);
 			PROPERTY(m_iProgressBarTime,int32_t, 0xdc8);
 			PROPERTY(m_bVoiceAlertFired,bool, 0xdcc);
 			PROPERTY_ARRAY(m_bVoiceAlertPlayed,bool, 4 , 0xdcd);
-			NESTED_PROPERTY(m_flNextBotBeepTime,IDENTITY(entity2::GameTime_t), 0xdd4);
+			NESTED_PROPERTY(m_flNextBotBeepTime,entity2::GameTime_t, 0xdd4);
 			PROPERTY(m_angCatchUpToPlayerEye,GlobalTypes::QAngle, 0xddc);
-			NESTED_PROPERTY(m_flLastSpinDetectionTime,IDENTITY(entity2::GameTime_t), 0xde8);
+			NESTED_PROPERTY(m_flLastSpinDetectionTime,entity2::GameTime_t, 0xde8);
 			S2_PAD(0x3D0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPlantedC4) == 0xDF0, "CPlantedC4 size should be 0xDF0");
-
-#endif
 	}
 }

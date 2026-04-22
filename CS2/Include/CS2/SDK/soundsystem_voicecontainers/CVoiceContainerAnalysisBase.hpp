@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_curve,GlobalTypes::CPiecewiseCurve, 0x10);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerAnalysisBase) == 0x50, "CVoiceContainerAnalysisBase size should be 0x50");
-
-#endif
 	}
 }

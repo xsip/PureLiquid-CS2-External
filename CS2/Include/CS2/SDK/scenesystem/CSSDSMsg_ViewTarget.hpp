@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_nFormat,int32_t, 0x2c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::scenesystem::CSSDSMsg_ViewTarget) == 0x30, "CSSDSMsg_ViewTarget size should be 0x30");
-
-#endif
 	}
 }

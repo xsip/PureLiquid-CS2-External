@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseToggle.hpp"
+#include <SDK/client/C_BaseToggle.hpp>
 
 
 
@@ -26,14 +26,11 @@ namespace CS2 {
 	namespace client {
 		class C_BaseButton : public CS2::client::C_BaseToggle {
 		public:
-			PROPERTY(m_glowEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseModelEntity>), 0xe88);
+			PROPERTY(m_glowEntity,GlobalTypes::CHandle<client::C_BaseModelEntity>, 0xe88);
 			PROPERTY(m_usable,bool, 0xe8c);
 			PROPERTY(m_szDisplayText,GlobalTypes::CUtlSymbolLarge*, 0xe90);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_BaseButton) == 0xE98, "C_BaseButton size should be 0xE98");
-
-#endif
 	}
 }

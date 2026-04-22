@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMarkupVolumeTagged.hpp"
-#include "NavScopeFlags_t.hpp"
+#include <SDK/server/CMarkupVolumeTagged.hpp>
+#include <SDK/server/NavScopeFlags_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace server {
 		class CMarkupVolumeTagged_Nav : public CS2::server::CMarkupVolumeTagged {
 		public:
-			PROPERTY(m_nScopes,IDENTITY(server::NavScopeFlags_t), 0x770);
+			PROPERTY(m_nScopes,server::NavScopeFlags_t, 0x770);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMarkupVolumeTagged_Nav) == 0x778, "CMarkupVolumeTagged_Nav size should be 0x778");
-
-#endif
 	}
 }

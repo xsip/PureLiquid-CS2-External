@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropElement.hpp"
-#include "SmartPropDeformableAttachMode_t.hpp"
-#include "SmartPropDeformableOrientMode_t.hpp"
+#include <SDK/smartprops/CSmartPropElement.hpp>
+#include <SDK/smartprops/SmartPropDeformableAttachMode_t.hpp>
+#include <SDK/smartprops/SmartPropDeformableOrientMode_t.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 			PROPERTY(m_MaterialGroupName,GlobalTypes::CSmartPropAttributeMaterialGroup, 0xc8);
 			PROPERTY(m_bCastShadows,GlobalTypes::CSmartPropAttributeBool, 0x108);
 			PROPERTY(m_bForceStatic,GlobalTypes::CSmartPropAttributeBool, 0x148);
-			PROPERTY(m_nDeformableAttachmentMode,IDENTITY(smartprops::SmartPropDeformableAttachMode_t), 0x188);
-			PROPERTY(m_nDeformableOrientationMode,IDENTITY(smartprops::SmartPropDeformableOrientMode_t), 0x18c);
+			PROPERTY(m_nDeformableAttachmentMode,smartprops::SmartPropDeformableAttachMode_t, 0x188);
+			PROPERTY(m_nDeformableOrientationMode,smartprops::SmartPropDeformableOrientMode_t, 0x18c);
 			S2_PAD(0x108);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_ModelEntity) == 0x190, "CSmartPropElement_ModelEntity size should be 0x190");
-
-#endif
 	}
 }

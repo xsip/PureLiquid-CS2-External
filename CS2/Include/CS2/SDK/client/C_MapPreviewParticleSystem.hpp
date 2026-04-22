@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_ParticleSystem.hpp"
+#include <SDK/client/C_ParticleSystem.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class C_MapPreviewParticleSystem : public CS2::client::C_ParticleSystem {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_MapPreviewParticleSystem) == 0x1438, "C_MapPreviewParticleSystem size should be 0x1438");
-
-#endif
 	}
 }

@@ -4,15 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseFilter.hpp"
-#include "filter_t.hpp"
-#include "CHandle< C_BaseEntity >.hpp"
+#include <SDK/client/CBaseFilter.hpp>
+#include <SDK/client/filter_t.hpp>
 
 
 
@@ -23,14 +22,11 @@ namespace CS2 {
 	namespace client {
 		class CFilterMultiple : public CS2::client::CBaseFilter {
 		public:
-			PROPERTY(m_nFilterType,IDENTITY(client::filter_t), 0x640);
+			PROPERTY(m_nFilterType,client::filter_t, 0x640);
 			PROPERTY_ARRAY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 10 , 0x648);
-			// PROPERTY_ARRAY(m_hFilter,IDENTITY(GlobalTypes::CHandle< C_BaseEntity >[10]), 10 , 0x698);
+			PROPERTY_ARRAY(m_hFilter,client::CHandle< C_BaseEntity >, 10 , 0x698);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CFilterMultiple) == 0x6C0, "CFilterMultiple size should be 0x6C0");
-
-#endif
 	}
 }

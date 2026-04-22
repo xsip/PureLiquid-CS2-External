@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropElement_Group.hpp"
-#include "CSmartPropAttributeRadiusPlacementMode.hpp"
-#include "CSmartPropAttributeDistributionMode.hpp"
+#include <SDK/smartprops/CSmartPropElement_Group.hpp>
+#include <SDK/smartprops/CSmartPropAttributeRadiusPlacementMode.hpp>
+#include <SDK/smartprops/CSmartPropAttributeDistributionMode.hpp>
 
 
 
@@ -23,8 +23,8 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropElement_PlaceInSphere : public CS2::smartprops::CSmartPropElement_Group {
 		public:
-			NESTED_PROPERTY(m_PlacementMode,IDENTITY(smartprops::CSmartPropAttributeRadiusPlacementMode), 0xa0);
-			NESTED_PROPERTY(m_DistributionMode,IDENTITY(smartprops::CSmartPropAttributeDistributionMode), 0xe0);
+			NESTED_PROPERTY(m_PlacementMode,smartprops::CSmartPropAttributeRadiusPlacementMode, 0xa0);
+			NESTED_PROPERTY(m_DistributionMode,smartprops::CSmartPropAttributeDistributionMode, 0xe0);
 			PROPERTY(m_flRandomness,GlobalTypes::CSmartPropAttributeFloat, 0x120);
 			PROPERTY(m_vPlaneUpDirection,GlobalTypes::CSmartPropAttributeVector, 0x160);
 			PROPERTY(m_nCountMin,GlobalTypes::CSmartPropAttributeInt, 0x1a0);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_vAlignDirection,GlobalTypes::CSmartPropAttributeVector, 0x2e0);
 			S2_PAD(0x280);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_PlaceInSphere) == 0x320, "CSmartPropElement_PlaceInSphere size should be 0x320");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_ScaleVelocity : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d8);
+			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x1d8);
 			S2_PAD(0x6B8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_ScaleVelocity) == 0x890, "C_INIT_ScaleVelocity size should be 0x890");
-
-#endif
 	}
 }

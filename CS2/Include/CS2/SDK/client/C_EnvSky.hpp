@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
 
 
 
@@ -26,8 +26,8 @@ namespace CS2 {
 	namespace client {
 		class C_EnvSky : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xe88);
-			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xe90);
+			PROPERTY(m_hSkyMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xe88);
+			PROPERTY(m_hSkyMaterialLightingOnly,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xe90);
 			PROPERTY(m_bStartDisabled,bool, 0xe98);
 			PROPERTY(m_vTintColor,GlobalTypes::Color, 0xe99);
 			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0xe9d);
@@ -40,9 +40,6 @@ namespace CS2 {
 			PROPERTY(m_bEnabled,bool, 0xebc);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvSky) == 0xEE8, "C_EnvSky size should be 0xEE8");
-
-#endif
 	}
 }

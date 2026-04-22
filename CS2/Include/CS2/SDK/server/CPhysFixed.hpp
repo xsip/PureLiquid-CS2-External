@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPhysConstraint.hpp"
+#include <SDK/server/CPhysConstraint.hpp>
 
 
 
@@ -31,9 +31,6 @@ namespace CS2 {
 			PROPERTY(m_sBoneName2,GlobalTypes::CUtlSymbolLarge*, 0x528);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysFixed) == 0x530, "CPhysFixed size should be 0x530");
-
-#endif
 	}
 }

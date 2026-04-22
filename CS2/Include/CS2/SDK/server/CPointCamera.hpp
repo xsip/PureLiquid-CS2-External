@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -46,12 +46,9 @@ namespace CS2 {
 			PROPERTY(m_TargetFOV,float32, 0x4f4);
 			PROPERTY(m_DegreesPerSecond,float32, 0x4f8);
 			PROPERTY(m_bIsOn,bool, 0x4fc);
-			PROPERTY(m_pNext,IDENTITY(server::CPointCamera*), 0x500);
+			PROPERTY(m_pNext,server::CPointCamera*, 0x500);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointCamera) == 0x508, "CPointCamera size should be 0x508");
-
-#endif
 	}
 }

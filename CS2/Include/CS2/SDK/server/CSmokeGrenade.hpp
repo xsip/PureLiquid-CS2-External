@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseCSGrenade.hpp"
+#include <SDK/server/CBaseCSGrenade.hpp>
 
 
 
@@ -23,9 +23,6 @@ namespace CS2 {
 		public:
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSmokeGrenade) == 0x1180, "CSmokeGrenade size should be 0x1180");
-
-#endif
 	}
 }

@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayer_MovementServices_Humanoid.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "CCSPlayerLegacyJump.hpp"
-#include "CCSPlayerModernJump.hpp"
-#include "../entity2/GameTick_t.hpp"
+#include <SDK/server/CPlayer_MovementServices_Humanoid.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/server/CCSPlayerLegacyJump.hpp>
+#include <SDK/server/CCSPlayerModernJump.hpp>
+#include <SDK/entity2/GameTick_t.hpp>
 
 
 
@@ -53,7 +53,7 @@ namespace CS2 {
 			PROPERTY(m_nGameCodeHasMovedPlayerAfterCommand,int32_t, 0x508);
 			PROPERTY(m_bMadeFootstepNoise,bool, 0x50c);
 			PROPERTY(m_iFootsteps,int32_t, 0x510);
-			NESTED_PROPERTY(m_fStashGrenadeParameterWhen,IDENTITY(entity2::GameTime_t), 0x514);
+			NESTED_PROPERTY(m_fStashGrenadeParameterWhen,entity2::GameTime_t, 0x514);
 			PROPERTY(m_nButtonDownMaskPrev,uint64_t, 0x518);
 			PROPERTY(m_flOffsetTickCompleteTime,float32, 0x520);
 			PROPERTY(m_flOffsetTickStashedSpeed,float32, 0x524);
@@ -64,9 +64,9 @@ namespace CS2 {
 			PROPERTY(m_flStaminaAtJumpStart,float32, 0x538);
 			PROPERTY(m_flVelMulAtJumpStart,float32, 0x53c);
 			PROPERTY(m_flAccumulatedJumpError,float32, 0x540);
-			NESTED_PROPERTY(m_LegacyJump,IDENTITY(server::CCSPlayerLegacyJump), 0x548);
-			NESTED_PROPERTY(m_ModernJump,IDENTITY(server::CCSPlayerModernJump), 0x560);
-			NESTED_PROPERTY(m_nLastJumpTick,IDENTITY(entity2::GameTick_t), 0x598);
+			NESTED_PROPERTY(m_LegacyJump,server::CCSPlayerLegacyJump, 0x548);
+			NESTED_PROPERTY(m_ModernJump,server::CCSPlayerModernJump, 0x560);
+			NESTED_PROPERTY(m_nLastJumpTick,entity2::GameTick_t, 0x598);
 			PROPERTY(m_flLastJumpFrac,float32, 0x59c);
 			PROPERTY(m_flLastJumpVelocityZ,float32, 0x5a0);
 			PROPERTY(m_bJumpApexPending,bool, 0x5a4);
@@ -75,9 +75,6 @@ namespace CS2 {
 			PROPERTY(m_vecInputRotated,GlobalTypes::Vector, 0x63c);
 			S2_PAD(0xBF0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_MovementServices) == 0xE68, "CCSPlayer_MovementServices size should be 0xE68");
-
-#endif
 	}
 }

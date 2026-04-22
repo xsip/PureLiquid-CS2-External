@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropOperation.hpp"
-#include "CSmartPropAttributeChoiceSelectionMode.hpp"
-#include "MaterialGroupChoice_t.hpp"
+#include <SDK/smartprops/CSmartPropOperation.hpp>
+#include <SDK/smartprops/CSmartPropAttributeChoiceSelectionMode.hpp>
+#include <SDK/smartprops/MaterialGroupChoice_t.hpp>
 
 
 
@@ -24,14 +24,11 @@ namespace CS2 {
 		class CSmartPropOperation_SetMateraialGroupChoice : public CS2::smartprops::CSmartPropOperation {
 		public:
 			PROPERTY(m_VariableName,GlobalTypes::CUtlString*, 0x50);
-			NESTED_PROPERTY(m_SelectionMode,IDENTITY(smartprops::CSmartPropAttributeChoiceSelectionMode), 0x58);
+			NESTED_PROPERTY(m_SelectionMode,smartprops::CSmartPropAttributeChoiceSelectionMode, 0x58);
 			PROPERTY(m_ChoiceSelection,GlobalTypes::CSmartPropAttributeInt, 0x98);
-			NESTED_PROPERTY(m_MaterialGroupChoices,IDENTITY(GlobalTypes::CUtlVector<smartprops::MaterialGroupChoice_t>), 0xd8);
+			NESTED_PROPERTY(m_MaterialGroupChoices,GlobalTypes::CUtlVector<smartprops::MaterialGroupChoice_t>, 0xd8);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_SetMateraialGroupChoice) == 0xF0, "CSmartPropOperation_SetMateraialGroupChoice size should be 0xF0");
-
-#endif
 	}
 }

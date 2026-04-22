@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBot.hpp"
-#include "CountdownTimer.hpp"
-#include "IntervalTimer.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CBot.hpp>
+#include <SDK/server/CountdownTimer.hpp>
+#include <SDK/server/IntervalTimer.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -34,44 +34,44 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_name,char, 64 , 0x114);
 			PROPERTY(m_combatRange,float32, 0x154);
 			PROPERTY(m_isRogue,bool, 0x158);
-			NESTED_PROPERTY(m_rogueTimer,IDENTITY(server::CountdownTimer), 0x160);
+			NESTED_PROPERTY(m_rogueTimer,server::CountdownTimer, 0x160);
 			PROPERTY(m_diedLastRound,bool, 0x17c);
 			PROPERTY(m_safeTime,float32, 0x180);
 			PROPERTY(m_wasSafe,bool, 0x184);
 			PROPERTY(m_blindFire,bool, 0x18c);
-			NESTED_PROPERTY(m_surpriseTimer,IDENTITY(server::CountdownTimer), 0x190);
+			NESTED_PROPERTY(m_surpriseTimer,server::CountdownTimer, 0x190);
 			PROPERTY(m_bAllowActive,bool, 0x1a8);
 			PROPERTY(m_isFollowing,bool, 0x1a9);
-			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x1ac);
+			PROPERTY(m_leader,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x1ac);
 			PROPERTY(m_followTimestamp,float32, 0x1b0);
 			PROPERTY(m_allowAutoFollowTime,float32, 0x1b4);
-			NESTED_PROPERTY(m_hurryTimer,IDENTITY(server::CountdownTimer), 0x1b8);
-			NESTED_PROPERTY(m_alertTimer,IDENTITY(server::CountdownTimer), 0x1d0);
-			NESTED_PROPERTY(m_sneakTimer,IDENTITY(server::CountdownTimer), 0x1e8);
-			NESTED_PROPERTY(m_panicTimer,IDENTITY(server::CountdownTimer), 0x200);
+			NESTED_PROPERTY(m_hurryTimer,server::CountdownTimer, 0x1b8);
+			NESTED_PROPERTY(m_alertTimer,server::CountdownTimer, 0x1d0);
+			NESTED_PROPERTY(m_sneakTimer,server::CountdownTimer, 0x1e8);
+			NESTED_PROPERTY(m_panicTimer,server::CountdownTimer, 0x200);
 			PROPERTY(m_stateTimestamp,float32, 0x5a8);
 			PROPERTY(m_isAttacking,bool, 0x5ac);
 			PROPERTY(m_isOpeningDoor,bool, 0x5ad);
-			PROPERTY(m_taskEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x5b4);
+			PROPERTY(m_taskEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x5b4);
 			PROPERTY(m_goalPosition,GlobalTypes::VectorWS, 0x5c4);
-			PROPERTY(m_goalEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x5d0);
-			PROPERTY(m_avoid,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x5d4);
+			PROPERTY(m_goalEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x5d0);
+			PROPERTY(m_avoid,GlobalTypes::CHandle<server::CBaseEntity>, 0x5d4);
 			PROPERTY(m_avoidTimestamp,float32, 0x5d8);
 			PROPERTY(m_isStopping,bool, 0x5dc);
 			PROPERTY(m_hasVisitedEnemySpawn,bool, 0x5dd);
-			NESTED_PROPERTY(m_stillTimer,IDENTITY(server::IntervalTimer), 0x5e0);
+			NESTED_PROPERTY(m_stillTimer,server::IntervalTimer, 0x5e0);
 			PROPERTY(m_bEyeAnglesUnderPathFinderControl,bool, 0x5f0);
 			PROPERTY(m_pathIndex,int32_t, 0x5ef0);
-			NESTED_PROPERTY(m_areaEnteredTimestamp,IDENTITY(entity2::GameTime_t), 0x5ef4);
-			NESTED_PROPERTY(m_repathTimer,IDENTITY(server::CountdownTimer), 0x5ef8);
-			NESTED_PROPERTY(m_avoidFriendTimer,IDENTITY(server::CountdownTimer), 0x5f10);
+			NESTED_PROPERTY(m_areaEnteredTimestamp,entity2::GameTime_t, 0x5ef4);
+			NESTED_PROPERTY(m_repathTimer,server::CountdownTimer, 0x5ef8);
+			NESTED_PROPERTY(m_avoidFriendTimer,server::CountdownTimer, 0x5f10);
 			PROPERTY(m_isFriendInTheWay,bool, 0x5f28);
-			NESTED_PROPERTY(m_politeTimer,IDENTITY(server::CountdownTimer), 0x5f30);
+			NESTED_PROPERTY(m_politeTimer,server::CountdownTimer, 0x5f30);
 			PROPERTY(m_isWaitingBehindFriend,bool, 0x5f48);
 			PROPERTY(m_pathLadderEnd,float32, 0x5f74);
-			NESTED_PROPERTY(m_mustRunTimer,IDENTITY(server::CountdownTimer), 0x5fc0);
-			NESTED_PROPERTY(m_waitTimer,IDENTITY(server::CountdownTimer), 0x5fd8);
-			NESTED_PROPERTY(m_updateTravelDistanceTimer,IDENTITY(server::CountdownTimer), 0x5ff0);
+			NESTED_PROPERTY(m_mustRunTimer,server::CountdownTimer, 0x5fc0);
+			NESTED_PROPERTY(m_waitTimer,server::CountdownTimer, 0x5fd8);
+			NESTED_PROPERTY(m_updateTravelDistanceTimer,server::CountdownTimer, 0x5ff0);
 			PROPERTY_ARRAY(m_playerTravelDistance,float32, 64 , 0x6008);
 			PROPERTY(m_travelDistancePhase,uint8_t, 0x6108);
 			PROPERTY(m_hostageEscortCount,uint8_t, 0x62a0);
@@ -79,13 +79,13 @@ namespace CS2 {
 			PROPERTY(m_desiredTeam,int32_t, 0x62a8);
 			PROPERTY(m_hasJoined,bool, 0x62ac);
 			PROPERTY(m_isWaitingForHostage,bool, 0x62ad);
-			NESTED_PROPERTY(m_inhibitWaitingForHostageTimer,IDENTITY(server::CountdownTimer), 0x62b0);
-			NESTED_PROPERTY(m_waitForHostageTimer,IDENTITY(server::CountdownTimer), 0x62c8);
+			NESTED_PROPERTY(m_inhibitWaitingForHostageTimer,server::CountdownTimer, 0x62b0);
+			NESTED_PROPERTY(m_waitForHostageTimer,server::CountdownTimer, 0x62c8);
 			PROPERTY(m_noisePosition,GlobalTypes::Vector, 0x62e0);
 			PROPERTY(m_noiseTravelDistance,float32, 0x62ec);
 			PROPERTY(m_noiseTimestamp,float32, 0x62f0);
-			PROPERTY(m_noiseSource,IDENTITY(server::CCSPlayerPawn*), 0x62f8);
-			NESTED_PROPERTY(m_noiseBendTimer,IDENTITY(server::CountdownTimer), 0x6310);
+			PROPERTY(m_noiseSource,server::CCSPlayerPawn*, 0x62f8);
+			NESTED_PROPERTY(m_noiseBendTimer,server::CountdownTimer, 0x6310);
 			PROPERTY(m_bentNoisePosition,GlobalTypes::Vector, 0x6328);
 			PROPERTY(m_bendNoisePositionValid,bool, 0x6334);
 			PROPERTY(m_lookAroundStateTimestamp,float32, 0x6338);
@@ -103,9 +103,9 @@ namespace CS2 {
 			PROPERTY(m_peripheralTimestamp,float32, 0x6378);
 			PROPERTY(m_approachPointCount,uint8_t, 0x6500);
 			PROPERTY(m_approachPointViewPosition,GlobalTypes::Vector, 0x6504);
-			NESTED_PROPERTY(m_viewSteadyTimer,IDENTITY(server::IntervalTimer), 0x6510);
-			NESTED_PROPERTY(m_tossGrenadeTimer,IDENTITY(server::CountdownTimer), 0x6528);
-			NESTED_PROPERTY(m_isAvoidingGrenade,IDENTITY(server::CountdownTimer), 0x6548);
+			NESTED_PROPERTY(m_viewSteadyTimer,server::IntervalTimer, 0x6510);
+			NESTED_PROPERTY(m_tossGrenadeTimer,server::CountdownTimer, 0x6528);
+			NESTED_PROPERTY(m_isAvoidingGrenade,server::CountdownTimer, 0x6548);
 			PROPERTY(m_spotCheckTimestamp,float32, 0x6568);
 			PROPERTY(m_checkedHidingSpotCount,int32_t, 0x6970);
 			PROPERTY(m_lookPitch,float32, 0x6974);
@@ -117,12 +117,12 @@ namespace CS2 {
 			PROPERTY(m_targetSpotPredicted,GlobalTypes::Vector, 0x699c);
 			PROPERTY(m_aimError,GlobalTypes::QAngle, 0x69a8);
 			PROPERTY(m_aimGoal,GlobalTypes::QAngle, 0x69b4);
-			NESTED_PROPERTY(m_targetSpotTime,IDENTITY(entity2::GameTime_t), 0x69c0);
+			NESTED_PROPERTY(m_targetSpotTime,entity2::GameTime_t, 0x69c0);
 			PROPERTY(m_aimFocus,float32, 0x69c4);
 			PROPERTY(m_aimFocusInterval,float32, 0x69c8);
-			NESTED_PROPERTY(m_aimFocusNextUpdate,IDENTITY(entity2::GameTime_t), 0x69cc);
-			NESTED_PROPERTY(m_ignoreEnemiesTimer,IDENTITY(server::CountdownTimer), 0x69d8);
-			PROPERTY(m_enemy,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x69f0);
+			NESTED_PROPERTY(m_aimFocusNextUpdate,entity2::GameTime_t, 0x69cc);
+			NESTED_PROPERTY(m_ignoreEnemiesTimer,server::CountdownTimer, 0x69d8);
+			PROPERTY(m_enemy,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x69f0);
 			PROPERTY(m_isEnemyVisible,bool, 0x69f4);
 			PROPERTY(m_visibleEnemyParts,uint8_t, 0x69f5);
 			PROPERTY(m_lastEnemyPosition,GlobalTypes::Vector, 0x69f8);
@@ -133,48 +133,45 @@ namespace CS2 {
 			PROPERTY(m_friendDeathTimestamp,float32, 0x6a14);
 			PROPERTY(m_isLastEnemyDead,bool, 0x6a18);
 			PROPERTY(m_nearbyEnemyCount,int32_t, 0x6a1c);
-			PROPERTY(m_bomber,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x6c28);
+			PROPERTY(m_bomber,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x6c28);
 			PROPERTY(m_nearbyFriendCount,int32_t, 0x6c2c);
-			PROPERTY(m_closestVisibleFriend,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x6c30);
-			PROPERTY(m_closestVisibleHumanFriend,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x6c34);
-			NESTED_PROPERTY(m_attentionInterval,IDENTITY(server::IntervalTimer), 0x6c38);
-			PROPERTY(m_attacker,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x6c48);
+			PROPERTY(m_closestVisibleFriend,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x6c30);
+			PROPERTY(m_closestVisibleHumanFriend,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x6c34);
+			NESTED_PROPERTY(m_attentionInterval,server::IntervalTimer, 0x6c38);
+			PROPERTY(m_attacker,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x6c48);
 			PROPERTY(m_attackedTimestamp,float32, 0x6c4c);
-			NESTED_PROPERTY(m_burnedByFlamesTimer,IDENTITY(server::IntervalTimer), 0x6c50);
+			NESTED_PROPERTY(m_burnedByFlamesTimer,server::IntervalTimer, 0x6c50);
 			PROPERTY(m_lastVictimID,int32_t, 0x6c60);
 			PROPERTY(m_isAimingAtEnemy,bool, 0x6c64);
 			PROPERTY(m_isRapidFiring,bool, 0x6c65);
-			NESTED_PROPERTY(m_equipTimer,IDENTITY(server::IntervalTimer), 0x6c68);
-			NESTED_PROPERTY(m_zoomTimer,IDENTITY(server::CountdownTimer), 0x6c78);
-			NESTED_PROPERTY(m_fireWeaponTimestamp,IDENTITY(entity2::GameTime_t), 0x6c90);
-			NESTED_PROPERTY(m_lookForWeaponsOnGroundTimer,IDENTITY(server::CountdownTimer), 0x6c98);
+			NESTED_PROPERTY(m_equipTimer,server::IntervalTimer, 0x6c68);
+			NESTED_PROPERTY(m_zoomTimer,server::CountdownTimer, 0x6c78);
+			NESTED_PROPERTY(m_fireWeaponTimestamp,entity2::GameTime_t, 0x6c90);
+			NESTED_PROPERTY(m_lookForWeaponsOnGroundTimer,server::CountdownTimer, 0x6c98);
 			PROPERTY(m_bIsSleeping,bool, 0x6cb0);
 			PROPERTY(m_isEnemySniperVisible,bool, 0x6cb1);
-			NESTED_PROPERTY(m_sawEnemySniperTimer,IDENTITY(server::CountdownTimer), 0x6cb8);
+			NESTED_PROPERTY(m_sawEnemySniperTimer,server::CountdownTimer, 0x6cb8);
 			PROPERTY(m_enemyQueueIndex,uint8_t, 0x6d70);
 			PROPERTY(m_enemyQueueCount,uint8_t, 0x6d71);
 			PROPERTY(m_enemyQueueAttendIndex,uint8_t, 0x6d72);
 			PROPERTY(m_isStuck,bool, 0x6d73);
-			NESTED_PROPERTY(m_stuckTimestamp,IDENTITY(entity2::GameTime_t), 0x6d74);
+			NESTED_PROPERTY(m_stuckTimestamp,entity2::GameTime_t, 0x6d74);
 			PROPERTY(m_stuckSpot,GlobalTypes::Vector, 0x6d78);
-			NESTED_PROPERTY(m_wiggleTimer,IDENTITY(server::CountdownTimer), 0x6d88);
-			NESTED_PROPERTY(m_stuckJumpTimer,IDENTITY(server::CountdownTimer), 0x6da0);
-			NESTED_PROPERTY(m_nextCleanupCheckTimestamp,IDENTITY(entity2::GameTime_t), 0x6db8);
+			NESTED_PROPERTY(m_wiggleTimer,server::CountdownTimer, 0x6d88);
+			NESTED_PROPERTY(m_stuckJumpTimer,server::CountdownTimer, 0x6da0);
+			NESTED_PROPERTY(m_nextCleanupCheckTimestamp,entity2::GameTime_t, 0x6db8);
 			PROPERTY_ARRAY(m_avgVel,float32, 10 , 0x6dbc);
 			PROPERTY(m_avgVelIndex,int32_t, 0x6de4);
 			PROPERTY(m_avgVelCount,int32_t, 0x6de8);
 			PROPERTY(m_lastOrigin,GlobalTypes::Vector, 0x6dec);
 			PROPERTY(m_lastRadioRecievedTimestamp,float32, 0x6dfc);
 			PROPERTY(m_lastRadioSentTimestamp,float32, 0x6e00);
-			PROPERTY(m_radioSubject,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x6e04);
+			PROPERTY(m_radioSubject,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x6e04);
 			PROPERTY(m_radioPosition,GlobalTypes::Vector, 0x6e08);
 			PROPERTY(m_voiceEndTimestamp,float32, 0x6e14);
 			PROPERTY(m_lastValidReactionQueueFrame,int32_t, 0x6e20);
 			S2_PAD(0x6D28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSBot) == 0x6E28, "CCSBot size should be 0x6E28");
-
-#endif
 	}
 }

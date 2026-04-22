@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,12 +25,9 @@ namespace CS2 {
 			PROPERTY(m_Color,GlobalTypes::Color, 0xc);
 			PROPERTY(m_flVolumetricSolveStrength,float32, 0x10);
 			PROPERTY(m_nScaleSourceNode,int32_t, 0x14);
-			NESTED_PROPERTY(m_Weights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x18);
+			NESTED_PROPERTY(m_Weights,GlobalTypes::CUtlVector< float32 >, 0x18);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeVertexMapBuild_t) == 0x30, "FeVertexMapBuild_t size should be 0x30");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleCollectionVecInput.hpp"
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleCollectionRendererVecInput : public CS2::particleslib::CParticleCollectionVecInput {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleCollectionRendererVecInput) == 0x6B8, "CParticleCollectionRendererVecInput size should be 0x6B8");
-
-#endif
 	}
 }

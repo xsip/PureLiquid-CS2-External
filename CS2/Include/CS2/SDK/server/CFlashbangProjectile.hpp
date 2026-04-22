@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseCSGrenadeProjectile.hpp"
+#include <SDK/server/CBaseCSGrenadeProjectile.hpp>
 
 
 
@@ -26,9 +26,6 @@ namespace CS2 {
 			PROPERTY(m_numTeammatesHit,uint8_t, 0xbb5);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFlashbangProjectile) == 0xBC0, "CFlashbangProjectile size should be 0xBC0");
-
-#endif
 	}
 }

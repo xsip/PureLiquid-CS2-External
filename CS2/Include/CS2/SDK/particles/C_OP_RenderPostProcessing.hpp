@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticlePostProcessPriorityGroup_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticlePostProcessPriorityGroup_t.hpp>
 
 
 
@@ -28,14 +28,11 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderPostProcessing : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_flPostProcessStrength,IDENTITY(particleslib::CPerParticleFloatInput), 0x220);
-			PROPERTY(m_hPostTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0x390);
-			PROPERTY(m_nPriority,IDENTITY(particles::ParticlePostProcessPriorityGroup_t), 0x398);
+			NESTED_PROPERTY(m_flPostProcessStrength,particleslib::CPerParticleFloatInput, 0x220);
+			PROPERTY(m_hPostTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>, 0x390);
+			PROPERTY(m_nPriority,particles::ParticlePostProcessPriorityGroup_t, 0x398);
 			S2_PAD(0x180);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderPostProcessing) == 0x3A0, "C_OP_RenderPostProcessing size should be 0x3A0");
-
-#endif
 	}
 }

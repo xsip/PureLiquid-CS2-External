@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimTagBase.hpp"
-#include "../animationsystem/ParticleAttachment_t.hpp"
+#include <SDK/animgraphlib/CAnimTagBase.hpp>
+#include <SDK/animationsystem/ParticleAttachment_t.hpp>
 
 
 
@@ -27,7 +27,7 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CParticleAnimTag : public CS2::animgraphlib::CAnimTagBase {
 		public:
-			PROPERTY(m_hParticleSystem,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x58);
+			PROPERTY(m_hParticleSystem,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x58);
 			PROPERTY(m_particleSystemName,GlobalTypes::CUtlString*, 0x60);
 			PROPERTY(m_configName,GlobalTypes::CUtlString*, 0x68);
 			PROPERTY(m_bDetachFromOwner,bool, 0x70);
@@ -35,14 +35,11 @@ namespace CS2 {
 			PROPERTY(m_bStopWhenTagEnds,bool, 0x72);
 			PROPERTY(m_bTagEndStopIsInstant,bool, 0x73);
 			PROPERTY(m_attachmentName,GlobalTypes::CUtlString*, 0x78);
-			PROPERTY(m_attachmentType,IDENTITY(animationsystem::ParticleAttachment_t), 0x80);
+			PROPERTY(m_attachmentType,animationsystem::ParticleAttachment_t, 0x80);
 			PROPERTY(m_attachmentCP1Name,GlobalTypes::CUtlString*, 0x88);
-			PROPERTY(m_attachmentCP1Type,IDENTITY(animationsystem::ParticleAttachment_t), 0x90);
+			PROPERTY(m_attachmentCP1Type,animationsystem::ParticleAttachment_t, 0x90);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CParticleAnimTag) == 0x98, "CParticleAnimTag size should be 0x98");
-
-#endif
 	}
 }

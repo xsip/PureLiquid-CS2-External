@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/CPlayerPawnComponent.hpp"
+#include <SDK/client/CPlayerPawnComponent.hpp>
 
 
 
@@ -26,13 +26,10 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_HostageServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			PROPERTY(m_hCarriedHostage,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x48);
-			PROPERTY(m_hCarriedHostageProp,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c);
+			PROPERTY(m_hCarriedHostage,GlobalTypes::CHandle<server::CBaseEntity>, 0x48);
+			PROPERTY(m_hCarriedHostageProp,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_HostageServices) == 0x50, "CCSPlayer_HostageServices size should be 0x50");
-
-#endif
 	}
 }

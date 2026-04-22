@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseToggle.hpp"
-#include "locksound_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseToggle.hpp>
+#include <SDK/server/locksound_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -32,33 +32,30 @@ namespace CS2 {
 			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x7b0);
 			PROPERTY(m_fStayPushed,bool, 0x7bc);
 			PROPERTY(m_fRotating,bool, 0x7bd);
-			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0x7c0);
+			NESTED_PROPERTY(m_ls,server::locksound_t, 0x7c0);
 			PROPERTY(m_sUseSound,GlobalTypes::CUtlSymbolLarge*, 0x7e0);
 			PROPERTY(m_sLockedSound,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
 			PROPERTY(m_sUnlockedSound,GlobalTypes::CUtlSymbolLarge*, 0x7f0);
 			PROPERTY(m_sOverrideAnticipationName,GlobalTypes::CUtlSymbolLarge*, 0x7f8);
 			PROPERTY(m_bLocked,bool, 0x800);
 			PROPERTY(m_bDisabled,bool, 0x801);
-			NESTED_PROPERTY(m_flUseLockedTime,IDENTITY(entity2::GameTime_t), 0x804);
+			NESTED_PROPERTY(m_flUseLockedTime,entity2::GameTime_t, 0x804);
 			PROPERTY(m_bSolidBsp,bool, 0x808);
-			NESTED_PROPERTY(m_OnDamaged,IDENTITY(entity2::CEntityIOOutput), 0x810);
-			NESTED_PROPERTY(m_OnPressed,IDENTITY(entity2::CEntityIOOutput), 0x828);
-			NESTED_PROPERTY(m_OnUseLocked,IDENTITY(entity2::CEntityIOOutput), 0x840);
-			NESTED_PROPERTY(m_OnIn,IDENTITY(entity2::CEntityIOOutput), 0x858);
-			NESTED_PROPERTY(m_OnOut,IDENTITY(entity2::CEntityIOOutput), 0x870);
+			NESTED_PROPERTY(m_OnDamaged,entity2::CEntityIOOutput, 0x810);
+			NESTED_PROPERTY(m_OnPressed,entity2::CEntityIOOutput, 0x828);
+			NESTED_PROPERTY(m_OnUseLocked,entity2::CEntityIOOutput, 0x840);
+			NESTED_PROPERTY(m_OnIn,entity2::CEntityIOOutput, 0x858);
+			NESTED_PROPERTY(m_OnOut,entity2::CEntityIOOutput, 0x870);
 			PROPERTY(m_nState,int32_t, 0x888);
 			PROPERTY(m_hConstraint,GlobalTypes::CEntityHandle, 0x88c);
 			PROPERTY(m_hConstraintParent,GlobalTypes::CEntityHandle, 0x890);
 			PROPERTY(m_bForceNpcExclude,bool, 0x894);
 			PROPERTY(m_sGlowEntity,GlobalTypes::CUtlSymbolLarge*, 0x898);
-			PROPERTY(m_glowEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseModelEntity>), 0x8a0);
+			PROPERTY(m_glowEntity,GlobalTypes::CHandle<server::CBaseModelEntity>, 0x8a0);
 			PROPERTY(m_usable,bool, 0x8a4);
 			PROPERTY(m_szDisplayText,GlobalTypes::CUtlSymbolLarge*, 0x8a8);
 			S2_PAD(0x100);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseButton) == 0x8B0, "CBaseButton size should be 0x8B0");
-
-#endif
 	}
 }

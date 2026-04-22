@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropElement_Group.hpp"
-#include "CSmartPropAttributeChoiceSelectionMode.hpp"
-#include "ConfigurationHandleShape_t.hpp"
+#include <SDK/smartprops/CSmartPropElement_Group.hpp>
+#include <SDK/smartprops/CSmartPropAttributeChoiceSelectionMode.hpp>
+#include <SDK/smartprops/ConfigurationHandleShape_t.hpp>
 
 
 
@@ -23,19 +23,16 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropElement_PickOne : public CS2::smartprops::CSmartPropElement_Group {
 		public:
-			NESTED_PROPERTY(m_SelectionMode,IDENTITY(smartprops::CSmartPropAttributeChoiceSelectionMode), 0xa0);
+			NESTED_PROPERTY(m_SelectionMode,smartprops::CSmartPropAttributeChoiceSelectionMode, 0xa0);
 			PROPERTY(m_SpecificChildIndex,GlobalTypes::CSmartPropAttributeInt, 0xe0);
 			PROPERTY(m_OutputChoiceVariableName,GlobalTypes::CUtlString*, 0x120);
 			PROPERTY(m_bConfigurable,GlobalTypes::CSmartPropAttributeBool, 0x128);
 			PROPERTY(m_vHandleOffset,GlobalTypes::CSmartPropAttributeVector, 0x168);
 			PROPERTY(m_HandleColor,GlobalTypes::CSmartPropAttributeColor, 0x1a8);
 			PROPERTY(m_HandleSize,GlobalTypes::CSmartPropAttributeInt, 0x1e8);
-			PROPERTY(m_HandleShape,IDENTITY(smartprops::ConfigurationHandleShape_t), 0x228);
+			PROPERTY(m_HandleShape,smartprops::ConfigurationHandleShape_t, 0x228);
 			S2_PAD(0x190);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_PickOne) == 0x230, "CSmartPropElement_PickOne size should be 0x230");
-
-#endif
 	}
 }

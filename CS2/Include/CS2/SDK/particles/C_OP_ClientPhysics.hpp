@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleColorBlendType_t.hpp"
-#include "ParticleAttrBoxFlags_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particles/ParticleAttrBoxFlags_t.hpp>
 
 
 
@@ -26,8 +26,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_strPhysicsType,GlobalTypes::CUtlString*, 0x220);
 			PROPERTY(m_bStartAsleep,bool, 0x228);
-			NESTED_PROPERTY(m_flPlayerWakeRadius,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x230);
-			NESTED_PROPERTY(m_flVehicleWakeRadius,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x3a0);
+			NESTED_PROPERTY(m_flPlayerWakeRadius,particleslib::CParticleCollectionFloatInput, 0x230);
+			NESTED_PROPERTY(m_flVehicleWakeRadius,particleslib::CParticleCollectionFloatInput, 0x3a0);
 			PROPERTY(m_bUseHighQualitySimulation,bool, 0x510);
 			PROPERTY(m_nMaxParticleCount,int32_t, 0x514);
 			PROPERTY(m_bRespectExclusionVolumes,bool, 0x518);
@@ -35,13 +35,10 @@ namespace CS2 {
 			PROPERTY(m_bDeleteSim,bool, 0x51a);
 			PROPERTY(m_nControlPoint,int32_t, 0x51c);
 			PROPERTY(m_nForcedSimId,int32_t, 0x520);
-			PROPERTY(m_nColorBlendType,IDENTITY(particles::ParticleColorBlendType_t), 0x524);
-			PROPERTY(m_nForcedStatusEffects,IDENTITY(particles::ParticleAttrBoxFlags_t), 0x528);
+			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0x524);
+			PROPERTY(m_nForcedStatusEffects,particles::ParticleAttrBoxFlags_t, 0x528);
 			S2_PAD(0x310);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ClientPhysics) == 0x530, "C_OP_ClientPhysics size should be 0x530");
-
-#endif
 	}
 }

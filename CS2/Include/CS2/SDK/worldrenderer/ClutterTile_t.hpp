@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../mathlib_extended/AABB_t.hpp"
+#include <SDK/mathlib_extended/AABB_t.hpp>
 
 
 
@@ -23,12 +23,9 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nFirstInstance,uint32_t, 0x0);
 			PROPERTY(m_nLastInstance,uint32_t, 0x4);
-			NESTED_PROPERTY(m_BoundsWs,IDENTITY(mathlib_extended::AABB_t), 0x8);
+			NESTED_PROPERTY(m_BoundsWs,mathlib_extended::AABB_t, 0x8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::ClutterTile_t) == 0x20, "ClutterTile_t size should be 0x20");
-
-#endif
 	}
 }

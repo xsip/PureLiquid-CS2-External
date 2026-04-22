@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_fWindDirectionVariationMultiplier,float32, 0x4d8);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvWindVolume) == 0x4E0, "CEnvWindVolume size should be 0x4E0");
-
-#endif
 	}
 }

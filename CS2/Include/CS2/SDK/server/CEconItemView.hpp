@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/IEconItemInterface.hpp"
-#include "CAttributeList.hpp"
+#include <SDK/client/IEconItemInterface.hpp>
+#include <SDK/server/CAttributeList.hpp>
 
 
 
@@ -31,15 +31,12 @@ namespace CS2 {
 			PROPERTY(m_iAccountID,uint32_t, 0x58);
 			PROPERTY(m_iInventoryPosition,uint32_t, 0x5c);
 			PROPERTY(m_bInitialized,bool, 0x68);
-			NESTED_PROPERTY(m_AttributeList,IDENTITY(server::CAttributeList), 0x70);
-			NESTED_PROPERTY(m_NetworkedDynamicAttributes,IDENTITY(server::CAttributeList), 0xe8);
+			NESTED_PROPERTY(m_AttributeList,server::CAttributeList, 0x70);
+			NESTED_PROPERTY(m_NetworkedDynamicAttributes,server::CAttributeList, 0xe8);
 			PROPERTY_ARRAY(m_szCustomName,char, 161 , 0x160);
 			PROPERTY_ARRAY(m_szCustomNameOverride,char, 161 , 0x201);
 			S2_PAD(0x2A0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEconItemView) == 0x2A8, "CEconItemView size should be 0x2A8");
-
-#endif
 	}
 }

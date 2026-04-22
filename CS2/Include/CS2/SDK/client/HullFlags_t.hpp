@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_bHull_Small,bool, 0x9);
 			S2_PAD(0xA);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::HullFlags_t) == 0xA, "HullFlags_t size should be 0xA");
-
-#endif
 	}
 }

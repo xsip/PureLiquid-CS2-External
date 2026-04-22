@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
 
 
 
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_SpotRadius,float32, 0x744);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CDynamicLight) == 0x748, "CDynamicLight size should be 0x748");
-
-#endif
 	}
 }

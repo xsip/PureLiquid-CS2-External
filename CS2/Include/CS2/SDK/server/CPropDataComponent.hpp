@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/CEntityComponent.hpp"
+#include <SDK/entity2/CEntityComponent.hpp>
 
 
 
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY(m_nMotionDisabledSpawnFlag,int32_t, 0x3c);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPropDataComponent) == 0x40, "CPropDataComponent size should be 0x40");
-
-#endif
 	}
 }

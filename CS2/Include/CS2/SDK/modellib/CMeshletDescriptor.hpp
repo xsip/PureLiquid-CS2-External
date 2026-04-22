@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../mathlib_extended/PackedAABB_t.hpp"
-#include "CDrawCullingData.hpp"
+#include <SDK/mathlib_extended/PackedAABB_t.hpp>
+#include <SDK/modellib/CDrawCullingData.hpp>
 
 
 
@@ -22,17 +22,14 @@ namespace CS2 {
 	namespace modellib {
 		class CMeshletDescriptor  {
 		public:
-			NESTED_PROPERTY(m_PackedAABB,IDENTITY(mathlib_extended::PackedAABB_t), 0x0);
-			NESTED_PROPERTY(m_CullingData,IDENTITY(modellib::CDrawCullingData), 0x8);
+			NESTED_PROPERTY(m_PackedAABB,mathlib_extended::PackedAABB_t, 0x0);
+			NESTED_PROPERTY(m_CullingData,modellib::CDrawCullingData, 0x8);
 			PROPERTY(m_nVertexOffset,uint32_t, 0xc);
 			PROPERTY(m_nTriangleOffset,uint32_t, 0x10);
 			PROPERTY(m_nVertexCount,uint8_t, 0x14);
 			PROPERTY(m_nTriangleCount,uint8_t, 0x15);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CMeshletDescriptor) == 0x18, "CMeshletDescriptor size should be 0x18");
-
-#endif
 	}
 }

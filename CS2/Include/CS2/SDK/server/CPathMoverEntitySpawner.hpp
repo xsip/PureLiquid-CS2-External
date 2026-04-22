@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -29,18 +29,15 @@ namespace CS2 {
 		public:
 			PROPERTY_ARRAY(m_szSpawnTemplates,GlobalTypes::CUtlSymbolLarge*, 4 , 0x4a8);
 			PROPERTY(m_nSpawnIndex,int32_t, 0x4c8);
-			PROPERTY(m_hPathMover,IDENTITY(GlobalTypes::CHandle<server::CPathMover>), 0x4cc);
+			PROPERTY(m_hPathMover,GlobalTypes::CHandle<server::CPathMover>, 0x4cc);
 			PROPERTY(m_flSpawnFrequencySeconds,float32, 0x4d0);
 			PROPERTY(m_flSpawnFrequencyDistToNearestMover,float32, 0x4d4);
-			// PROPERTY(m_mapSpawnedMoverTemplates,IDENTITY(GlobalTypes::CUtlHashtable< CHandle< CFuncMover >, CPathMoverEntitySpawn >), 0x4d8);
+			PROPERTY(m_mapSpawnedMoverTemplates,server::CUtlHashtable< CHandle< CFuncMover >, CPathMoverEntitySpawn >, 0x4d8);
 			PROPERTY(m_nMaxActive,int32_t, 0x4f8);
-			NESTED_PROPERTY(m_flLastSpawnTime,IDENTITY(entity2::GameTime_t), 0x4fc);
+			NESTED_PROPERTY(m_flLastSpawnTime,entity2::GameTime_t, 0x4fc);
 			PROPERTY(m_bEnabled,bool, 0x500);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathMoverEntitySpawner) == 0x508, "CPathMoverEntitySpawner size should be 0x508");
-
-#endif
 	}
 }

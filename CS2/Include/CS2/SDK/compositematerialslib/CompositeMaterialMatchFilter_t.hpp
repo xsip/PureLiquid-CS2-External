@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CompositeMaterialMatchFilterType_t.hpp"
+#include <SDK/compositematerialslib/CompositeMaterialMatchFilterType_t.hpp>
 
 
 
@@ -21,15 +21,12 @@ namespace CS2 {
 	namespace compositematerialslib {
 		class CompositeMaterialMatchFilter_t  {
 		public:
-			PROPERTY(m_nCompositeMaterialMatchFilterType,IDENTITY(compositematerialslib::CompositeMaterialMatchFilterType_t), 0x0);
+			PROPERTY(m_nCompositeMaterialMatchFilterType,compositematerialslib::CompositeMaterialMatchFilterType_t, 0x0);
 			PROPERTY(m_strMatchFilter,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_strMatchValue,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(m_bPassWhenTrue,bool, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CompositeMaterialMatchFilter_t) == 0x20, "CompositeMaterialMatchFilter_t size should be 0x20");
-
-#endif
 	}
 }

@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_Outparams,GlobalTypes::KeyValues3, 0x20);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::PulseRegisterMap_t) == 0x30, "PulseRegisterMap_t size should be 0x30");
-
-#endif
 	}
 }

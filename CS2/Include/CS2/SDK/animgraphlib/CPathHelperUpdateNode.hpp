@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_flStoppingSpeedScale,float32, 0x74);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CPathHelperUpdateNode) == 0x78, "CPathHelperUpdateNode size should be 0x78");
-
-#endif
 	}
 }

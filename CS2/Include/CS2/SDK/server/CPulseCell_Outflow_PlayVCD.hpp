@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPulseCell_Outflow_PlaySceneBase.hpp"
-#include "../pulse_runtime_lib/CPulse_OutflowConnection.hpp"
+#include <SDK/server/CPulseCell_Outflow_PlaySceneBase.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
 
 
 
@@ -27,14 +27,11 @@ namespace CS2 {
 	namespace server {
 		class CPulseCell_Outflow_PlayVCD : public CS2::server::CPulseCell_Outflow_PlaySceneBase {
 		public:
-			PROPERTY(m_hChoreoScene,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>), 0xf0);
-			NESTED_PROPERTY(m_OnPaused,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0xf8);
-			NESTED_PROPERTY(m_OnResumed,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x140);
+			PROPERTY(m_hChoreoScene,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>, 0xf0);
+			NESTED_PROPERTY(m_OnPaused,pulse_runtime_lib::CPulse_OutflowConnection, 0xf8);
+			NESTED_PROPERTY(m_OnResumed,pulse_runtime_lib::CPulse_OutflowConnection, 0x140);
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_PlayVCD) == 0x188, "CPulseCell_Outflow_PlayVCD size should be 0x188");
-
-#endif
 	}
 }

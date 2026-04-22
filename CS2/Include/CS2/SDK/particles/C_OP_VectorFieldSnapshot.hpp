@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
 
 
 
@@ -25,19 +25,16 @@ namespace CS2 {
 		class C_OP_VectorFieldSnapshot : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_nAttributeToWrite,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d4);
+			NESTED_PROPERTY(m_nAttributeToWrite,particles::ParticleAttributeIndex_t, 0x1d4);
 			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CPerParticleVecInput), 0x350);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_vecScale,particleslib::CPerParticleVecInput, 0x350);
 			PROPERTY(m_flBoundaryDampening,float32, 0xa08);
 			PROPERTY(m_bSetVelocity,bool, 0xa0c);
 			PROPERTY(m_bLockToSurface,bool, 0xa0d);
 			PROPERTY(m_flGridSpacing,float32, 0xa10);
 			S2_PAD(0x848);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_VectorFieldSnapshot) == 0xA18, "C_OP_VectorFieldSnapshot size should be 0xA18");
-
-#endif
 	}
 }

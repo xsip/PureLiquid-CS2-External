@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "SnapshotIndexType_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/SnapshotIndexType_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -32,8 +32,8 @@ namespace CS2 {
 			PROPERTY(m_bIgnoreDt,bool, 0x1ea);
 			PROPERTY(m_flMinNormalVelocity,float32, 0x1ec);
 			PROPERTY(m_flMaxNormalVelocity,float32, 0x1f0);
-			PROPERTY(m_nIndexType,IDENTITY(particles::SnapshotIndexType_t), 0x1f4);
-			NESTED_PROPERTY(m_flReadIndex,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f8);
+			PROPERTY(m_nIndexType,particles::SnapshotIndexType_t, 0x1f4);
+			NESTED_PROPERTY(m_flReadIndex,particleslib::CPerParticleFloatInput, 0x1f8);
 			PROPERTY(m_flIncrement,float32, 0x368);
 			PROPERTY(m_nFullLoopIncrement,int32_t, 0x36c);
 			PROPERTY(m_nSnapShotStartPoint,int32_t, 0x370);
@@ -44,9 +44,6 @@ namespace CS2 {
 			PROPERTY(m_bSetRadius,bool, 0x37e);
 			S2_PAD(0x1A8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_InitSkinnedPositionFromCPSnapshot) == 0x380, "C_INIT_InitSkinnedPositionFromCPSnapshot size should be 0x380");
-
-#endif
 	}
 }

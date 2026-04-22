@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSGameModeRules.hpp"
+#include <SDK/client/CCSGameModeRules.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace client {
 		class CCSGameModeRules_ArmsRace : public CS2::client::CCSGameModeRules {
 		public:
-			// PROPERTY(m_WeaponSequence,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0x30);
+			PROPERTY(m_WeaponSequence,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>, 0x30);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSGameModeRules_ArmsRace) == 0x48, "CCSGameModeRules_ArmsRace size should be 0x48");
-
-#endif
 	}
 }

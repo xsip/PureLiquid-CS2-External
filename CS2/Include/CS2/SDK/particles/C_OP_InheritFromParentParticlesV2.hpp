@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "MissingParentInheritBehavior_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/MissingParentInheritBehavior_t.hpp>
 
 
 
@@ -24,18 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_InheritFromParentParticlesV2 : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x340);
-			NESTED_PROPERTY(m_nIncrement,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
+			NESTED_PROPERTY(m_flScale,particleslib::CPerParticleFloatInput, 0x1d0);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x340);
+			NESTED_PROPERTY(m_nIncrement,particleslib::CPerParticleFloatInput, 0x348);
 			PROPERTY(m_bRandomDistribution,bool, 0x4b8);
 			PROPERTY(m_bReverse,bool, 0x4b9);
-			PROPERTY(m_nMissingParentBehavior,IDENTITY(particles::MissingParentInheritBehavior_t), 0x4bc);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c0);
+			PROPERTY(m_nMissingParentBehavior,particles::MissingParentInheritBehavior_t, 0x4bc);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x4c0);
 			S2_PAD(0x460);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_InheritFromParentParticlesV2) == 0x630, "C_OP_InheritFromParentParticlesV2 size should be 0x630");
-
-#endif
 	}
 }

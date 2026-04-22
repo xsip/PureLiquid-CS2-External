@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../physicslib/RnSoftbodyParticle_t.hpp"
-#include "../physicslib/RnSoftbodySpring_t.hpp"
-#include "../physicslib/RnSoftbodyCapsule_t.hpp"
+#include <SDK/physicslib/RnSoftbodyParticle_t.hpp>
+#include <SDK/physicslib/RnSoftbodySpring_t.hpp>
+#include <SDK/physicslib/RnSoftbodyCapsule_t.hpp>
 
 
 
@@ -23,17 +23,14 @@ namespace CS2 {
 	namespace modellib {
 		class PhysSoftbodyDesc_t  {
 		public:
-			NESTED_PROPERTY(m_ParticleBoneHash,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x0);
-			NESTED_PROPERTY(m_Particles,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnSoftbodyParticle_t>), 0x18);
-			NESTED_PROPERTY(m_Springs,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnSoftbodySpring_t>), 0x30);
-			NESTED_PROPERTY(m_Capsules,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnSoftbodyCapsule_t>), 0x48);
-			NESTED_PROPERTY(m_InitPose,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CTransform>), 0x60);
-			PROPERTY(m_ParticleBoneName,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x78);
+			NESTED_PROPERTY(m_ParticleBoneHash,GlobalTypes::CUtlVector< uint32 >, 0x0);
+			NESTED_PROPERTY(m_Particles,GlobalTypes::CUtlVector<physicslib::RnSoftbodyParticle_t>, 0x18);
+			NESTED_PROPERTY(m_Springs,GlobalTypes::CUtlVector<physicslib::RnSoftbodySpring_t>, 0x30);
+			NESTED_PROPERTY(m_Capsules,GlobalTypes::CUtlVector<physicslib::RnSoftbodyCapsule_t>, 0x48);
+			NESTED_PROPERTY(m_InitPose,GlobalTypes::CUtlVector<GlobalTypes::CTransform>, 0x60);
+			PROPERTY(m_ParticleBoneName,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x78);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::PhysSoftbodyDesc_t) == 0x90, "PhysSoftbodyDesc_t size should be 0x90");
-
-#endif
 	}
 }

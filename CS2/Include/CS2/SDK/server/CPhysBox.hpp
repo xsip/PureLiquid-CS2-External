@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBreakable.hpp"
-#include "HoverPoseFlags_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBreakable.hpp>
+#include <SDK/server/HoverPoseFlags_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -35,19 +35,16 @@ namespace CS2 {
 			PROPERTY(m_angHoverPoseAngles,GlobalTypes::QAngle, 0x820);
 			PROPERTY(m_bNotSolidToWorld,bool, 0x82c);
 			PROPERTY(m_bEnableUseOutput,bool, 0x82d);
-			PROPERTY(m_nHoverPoseFlags,IDENTITY(server::HoverPoseFlags_t), 0x82e);
+			PROPERTY(m_nHoverPoseFlags,server::HoverPoseFlags_t, 0x82e);
 			PROPERTY(m_flTouchOutputPerEntityDelay,float32, 0x830);
-			NESTED_PROPERTY(m_OnDamaged,IDENTITY(entity2::CEntityIOOutput), 0x838);
-			NESTED_PROPERTY(m_OnAwakened,IDENTITY(entity2::CEntityIOOutput), 0x850);
-			NESTED_PROPERTY(m_OnMotionEnabled,IDENTITY(entity2::CEntityIOOutput), 0x868);
-			NESTED_PROPERTY(m_OnPlayerUse,IDENTITY(entity2::CEntityIOOutput), 0x880);
-			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0x898);
-			PROPERTY(m_hCarryingPlayer,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0x8b0);
+			NESTED_PROPERTY(m_OnDamaged,entity2::CEntityIOOutput, 0x838);
+			NESTED_PROPERTY(m_OnAwakened,entity2::CEntityIOOutput, 0x850);
+			NESTED_PROPERTY(m_OnMotionEnabled,entity2::CEntityIOOutput, 0x868);
+			NESTED_PROPERTY(m_OnPlayerUse,entity2::CEntityIOOutput, 0x880);
+			NESTED_PROPERTY(m_OnStartTouch,entity2::CEntityIOOutput, 0x898);
+			PROPERTY(m_hCarryingPlayer,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0x8b0);
 			S2_PAD(0xC8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysBox) == 0x8D0, "CPhysBox size should be 0x8D0");
-
-#endif
 	}
 }

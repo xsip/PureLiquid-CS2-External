@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/CPlayerPawnComponent.hpp"
-#include "../client/ObserverMode_t.hpp"
+#include <SDK/client/CPlayerPawnComponent.hpp>
+#include <SDK/client/ObserverMode_t.hpp>
 
 
 
@@ -28,14 +28,11 @@ namespace CS2 {
 		class CPlayer_ObserverServices : public CS2::client::CPlayerPawnComponent {
 		public:
 			PROPERTY(m_iObserverMode,uint8_t, 0x48);
-			PROPERTY(m_hObserverTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c);
-			PROPERTY(m_iObserverLastMode,IDENTITY(client::ObserverMode_t), 0x50);
+			PROPERTY(m_hObserverTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c);
+			PROPERTY(m_iObserverLastMode,client::ObserverMode_t, 0x50);
 			PROPERTY(m_bForcedObserverMode,bool, 0x54);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPlayer_ObserverServices) == 0x58, "CPlayer_ObserverServices size should be 0x58");
-
-#endif
 	}
 }

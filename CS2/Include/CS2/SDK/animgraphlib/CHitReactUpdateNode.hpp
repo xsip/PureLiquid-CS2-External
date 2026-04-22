@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "HitReactFixedSettings_t.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/HitReactFixedSettings_t.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -23,19 +23,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CHitReactUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_opFixedSettings,IDENTITY(animgraphlib::HitReactFixedSettings_t), 0x70);
-			NESTED_PROPERTY(m_triggerParam,IDENTITY(animgraphlib::CAnimParamHandle), 0xbc);
-			NESTED_PROPERTY(m_hitBoneParam,IDENTITY(animgraphlib::CAnimParamHandle), 0xbe);
-			NESTED_PROPERTY(m_hitOffsetParam,IDENTITY(animgraphlib::CAnimParamHandle), 0xc0);
-			NESTED_PROPERTY(m_hitDirectionParam,IDENTITY(animgraphlib::CAnimParamHandle), 0xc2);
-			NESTED_PROPERTY(m_hitStrengthParam,IDENTITY(animgraphlib::CAnimParamHandle), 0xc4);
+			NESTED_PROPERTY(m_opFixedSettings,animgraphlib::HitReactFixedSettings_t, 0x70);
+			NESTED_PROPERTY(m_triggerParam,animgraphlib::CAnimParamHandle, 0xbc);
+			NESTED_PROPERTY(m_hitBoneParam,animgraphlib::CAnimParamHandle, 0xbe);
+			NESTED_PROPERTY(m_hitOffsetParam,animgraphlib::CAnimParamHandle, 0xc0);
+			NESTED_PROPERTY(m_hitDirectionParam,animgraphlib::CAnimParamHandle, 0xc2);
+			NESTED_PROPERTY(m_hitStrengthParam,animgraphlib::CAnimParamHandle, 0xc4);
 			PROPERTY(m_flMinDelayBetweenHits,float32, 0xc8);
 			PROPERTY(m_bResetChild,bool, 0xcc);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CHitReactUpdateNode) == 0xD0, "CHitReactUpdateNode size should be 0xD0");
-
-#endif
 	}
 }

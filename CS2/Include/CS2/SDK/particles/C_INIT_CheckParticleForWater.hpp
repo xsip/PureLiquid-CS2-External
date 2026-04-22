@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleRemapFloatInput.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleRemapFloatInput.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -25,15 +25,12 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CheckParticleForWater : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x348);
-			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x350);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x4c0);
+			NESTED_PROPERTY(m_flRadius,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x348);
+			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0x350);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x4c0);
 			S2_PAD(0x2F0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_CheckParticleForWater) == 0x4C8, "C_INIT_CheckParticleForWater size should be 0x4C8");
-
-#endif
 	}
 }

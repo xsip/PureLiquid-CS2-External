@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "RTProxyBLAS_t.hpp"
-#include "RTProxyInstanceInfo_t.hpp"
+#include <SDK/worldrenderer/RTProxyBLAS_t.hpp>
+#include <SDK/worldrenderer/RTProxyInstanceInfo_t.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 		class AggregateRTProxySceneObject_t  {
 		public:
 			PROPERTY(m_nLayer,int16_t, 0x0);
-			NESTED_PROPERTY(m_BLASes,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::RTProxyBLAS_t>), 0x8);
-			NESTED_PROPERTY(m_Instances,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::RTProxyInstanceInfo_t>), 0x20);
+			NESTED_PROPERTY(m_BLASes,GlobalTypes::CUtlVector<worldrenderer::RTProxyBLAS_t>, 0x8);
+			NESTED_PROPERTY(m_Instances,GlobalTypes::CUtlVector<worldrenderer::RTProxyInstanceInfo_t>, 0x20);
 			PROPERTY(m_VBData,GlobalTypes::CUtlBinaryBlock, 0x38);
 			PROPERTY(m_IBData,GlobalTypes::CUtlBinaryBlock, 0x48);
 			PROPERTY(m_InstanceAlbedoData,GlobalTypes::CUtlBinaryBlock, 0x58);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::AggregateRTProxySceneObject_t) == 0x68, "AggregateRTProxySceneObject_t size should be 0x68");
-
-#endif
 	}
 }

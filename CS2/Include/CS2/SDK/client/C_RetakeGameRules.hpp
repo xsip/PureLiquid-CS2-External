@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -30,12 +30,9 @@ namespace CS2 {
 			PROPERTY(m_bRoundInProgress,bool, 0x13d);
 			PROPERTY(m_iFirstSecondHalfRound,int32_t, 0x140);
 			PROPERTY(m_iBombSite,int32_t, 0x144);
-			PROPERTY(m_hBombPlanter,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x148);
+			PROPERTY(m_hBombPlanter,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x148);
 			S2_PAD(0x158);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_RetakeGameRules) == 0x158, "C_RetakeGameRules size should be 0x158");
-
-#endif
 	}
 }

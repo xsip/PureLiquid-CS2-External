@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -23,12 +23,9 @@ namespace CS2 {
 		public:
 			PROPERTY(m_iszName,GlobalTypes::CUtlSymbolLarge*, 0x0);
 			PROPERTY(m_iszValue,GlobalTypes::CUtlSymbolLarge*, 0x8);
-			NESTED_PROPERTY(m_fExpirationTime,IDENTITY(entity2::GameTime_t), 0x10);
+			NESTED_PROPERTY(m_fExpirationTime,entity2::GameTime_t, 0x10);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::ResponseContext_t) == 0x18, "ResponseContext_t size should be 0x18");
-
-#endif
 	}
 }

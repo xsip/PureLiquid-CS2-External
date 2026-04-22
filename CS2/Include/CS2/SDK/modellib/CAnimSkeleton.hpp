@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimFoot.hpp"
+#include <SDK/modellib/CAnimFoot.hpp>
 
 
 
@@ -21,19 +21,16 @@ namespace CS2 {
 	namespace modellib {
 		class CAnimSkeleton  {
 		public:
-			NESTED_PROPERTY(m_localSpaceTransforms,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CTransform>), 0x10);
-			NESTED_PROPERTY(m_modelSpaceTransforms,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CTransform>), 0x28);
-			PROPERTY(m_boneNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x40);
-			NESTED_PROPERTY(m_children,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<int32>>), 0x58);
-			NESTED_PROPERTY(m_parents,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x70);
-			NESTED_PROPERTY(m_feet,IDENTITY(GlobalTypes::CUtlVector<modellib::CAnimFoot>), 0x88);
-			PROPERTY(m_morphNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0xa0);
-			NESTED_PROPERTY(m_lodBoneCounts,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0xb8);
+			NESTED_PROPERTY(m_localSpaceTransforms,GlobalTypes::CUtlVector<GlobalTypes::CTransform>, 0x10);
+			NESTED_PROPERTY(m_modelSpaceTransforms,GlobalTypes::CUtlVector<GlobalTypes::CTransform>, 0x28);
+			PROPERTY(m_boneNames,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x40);
+			NESTED_PROPERTY(m_children,GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>, 0x58);
+			NESTED_PROPERTY(m_parents,GlobalTypes::CUtlVector< int32 >, 0x70);
+			NESTED_PROPERTY(m_feet,GlobalTypes::CUtlVector<modellib::CAnimFoot>, 0x88);
+			PROPERTY(m_morphNames,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0xa0);
+			NESTED_PROPERTY(m_lodBoneCounts,GlobalTypes::CUtlVector< int32 >, 0xb8);
 			S2_PAD(0xD0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CAnimSkeleton) == 0xD0, "CAnimSkeleton size should be 0xD0");
-
-#endif
 	}
 }

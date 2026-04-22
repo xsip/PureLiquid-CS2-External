@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -27,17 +27,14 @@ namespace CS2 {
 			PROPERTY(m_nForceInModel,int32_t, 0x1dc);
 			PROPERTY(m_bEvenDistribution,bool, 0x1e0);
 			PROPERTY(m_nDesiredHitbox,int32_t, 0x1e4);
-			NESTED_PROPERTY(m_vecHitBoxScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e8);
+			NESTED_PROPERTY(m_vecHitBoxScale,particleslib::CParticleCollectionVecInput, 0x1e8);
 			PROPERTY(m_vecDirectionBias,GlobalTypes::Vector, 0x8a0);
 			PROPERTY(m_bMaintainHitbox,bool, 0x8ac);
 			PROPERTY(m_bUseBones,bool, 0x8ad);
 			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x8ae);
-			NESTED_PROPERTY(m_flShellSize,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x930);
+			NESTED_PROPERTY(m_flShellSize,particleslib::CParticleCollectionFloatInput, 0x930);
 			S2_PAD(0x8C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_SetHitboxToModel) == 0xAA0, "C_INIT_SetHitboxToModel size should be 0xAA0");
-
-#endif
 	}
 }

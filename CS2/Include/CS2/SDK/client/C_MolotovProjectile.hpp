@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseCSGrenadeProjectile.hpp"
+#include <SDK/client/C_BaseCSGrenadeProjectile.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_bIsIncGrenade,bool, 0x1438);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_MolotovProjectile) == 0x1460, "C_MolotovProjectile size should be 0x1460");
-
-#endif
 	}
 }

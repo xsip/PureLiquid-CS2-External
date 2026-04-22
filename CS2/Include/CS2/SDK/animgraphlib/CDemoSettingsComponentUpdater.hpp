@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimComponentUpdater.hpp"
-#include "CAnimDemoCaptureSettings.hpp"
+#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
+#include <SDK/animgraphlib/CAnimDemoCaptureSettings.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CDemoSettingsComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_settings,IDENTITY(animgraphlib::CAnimDemoCaptureSettings), 0x30);
+			NESTED_PROPERTY(m_settings,animgraphlib::CAnimDemoCaptureSettings, 0x30);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CDemoSettingsComponentUpdater) == 0xB0, "CDemoSettingsComponentUpdater size should be 0xB0");
-
-#endif
 	}
 }

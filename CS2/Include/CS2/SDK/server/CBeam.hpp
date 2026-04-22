@@ -4,18 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../client/BeamType_t.hpp"
-#include "CHandle< CBaseEntity >.hpp"
-#include "../modellib/AttachmentHandle_t.hpp"
-#include "../client/BeamClipStyle_t.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/BeamType_t.hpp>
+#include <SDK/modellib/AttachmentHandle_t.hpp>
+#include <SDK/client/BeamClipStyle_t.hpp>
 
 
 
@@ -36,15 +35,15 @@ namespace CS2 {
 		public:
 			PROPERTY(m_flFrameRate,float32, 0x730);
 			PROPERTY(m_flHDRColorScale,float32, 0x734);
-			NESTED_PROPERTY(m_flFireTime,IDENTITY(entity2::GameTime_t), 0x738);
+			NESTED_PROPERTY(m_flFireTime,entity2::GameTime_t, 0x738);
 			PROPERTY(m_flDamage,float32, 0x73c);
 			PROPERTY(m_nNumBeamEnts,uint8_t, 0x740);
-			PROPERTY(m_hBaseMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x748);
-			PROPERTY(m_nHaloIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x750);
-			PROPERTY(m_nBeamType,IDENTITY(client::BeamType_t), 0x758);
+			PROPERTY(m_hBaseMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x748);
+			PROPERTY(m_nHaloIndex,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x750);
+			PROPERTY(m_nBeamType,client::BeamType_t, 0x758);
 			PROPERTY(m_nBeamFlags,uint32_t, 0x75c);
-			// PROPERTY_ARRAY(m_hAttachEntity,IDENTITY(GlobalTypes::CHandle< CBaseEntity >[10]), 10 , 0x760);
-			PROPERTY_ARRAY(m_nAttachIndex,IDENTITY(modellib::AttachmentHandle_t), 10 , 0x788);
+			PROPERTY_ARRAY(m_hAttachEntity,server::CHandle< CBaseEntity >, 10 , 0x760);
+			PROPERTY_ARRAY(m_nAttachIndex,modellib::AttachmentHandle_t, 10 , 0x788);
 			PROPERTY(m_fWidth,float32, 0x794);
 			PROPERTY(m_fEndWidth,float32, 0x798);
 			PROPERTY(m_fFadeLength,float32, 0x79c);
@@ -53,16 +52,13 @@ namespace CS2 {
 			PROPERTY(m_fStartFrame,float32, 0x7a8);
 			PROPERTY(m_fSpeed,float32, 0x7ac);
 			PROPERTY(m_flFrame,float32, 0x7b0);
-			PROPERTY(m_nClipStyle,IDENTITY(client::BeamClipStyle_t), 0x7b4);
+			PROPERTY(m_nClipStyle,client::BeamClipStyle_t, 0x7b4);
 			PROPERTY(m_bTurnedOff,bool, 0x7b8);
 			PROPERTY(m_vecEndPos,GlobalTypes::VectorWS, 0x7bc);
-			PROPERTY(m_hEndEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7c8);
+			PROPERTY(m_hEndEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x7c8);
 			PROPERTY(m_nDissolveType,int32_t, 0x7cc);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBeam) == 0x7D0, "CBeam size should be 0x7D0");
-
-#endif
 	}
 }

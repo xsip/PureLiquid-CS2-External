@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimUpdateNodeBase.hpp"
-#include "CAnimStateMachineUpdater.hpp"
-#include "CStateNodeStateData.hpp"
-#include "CStateNodeTransitionData.hpp"
+#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
+#include <SDK/animgraphlib/CAnimStateMachineUpdater.hpp>
+#include <SDK/animgraphlib/CStateNodeStateData.hpp>
+#include <SDK/animgraphlib/CStateNodeTransitionData.hpp>
 
 
 
@@ -24,17 +24,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStateMachineUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_stateMachine,IDENTITY(animgraphlib::CAnimStateMachineUpdater), 0x70);
-			NESTED_PROPERTY(m_stateData,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CStateNodeStateData>), 0xc8);
-			NESTED_PROPERTY(m_transitionData,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CStateNodeTransitionData>), 0xe0);
+			NESTED_PROPERTY(m_stateMachine,animgraphlib::CAnimStateMachineUpdater, 0x70);
+			NESTED_PROPERTY(m_stateData,GlobalTypes::CUtlVector<animgraphlib::CStateNodeStateData>, 0xc8);
+			NESTED_PROPERTY(m_transitionData,GlobalTypes::CUtlVector<animgraphlib::CStateNodeTransitionData>, 0xe0);
 			PROPERTY(m_bBlockWaningTags,bool, 0xfc);
 			PROPERTY(m_bLockStateWhenWaning,bool, 0xfd);
 			PROPERTY(m_bResetWhenActivated,bool, 0xfe);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStateMachineUpdateNode) == 0x100, "CStateMachineUpdateNode size should be 0x100");
-
-#endif
 	}
 }

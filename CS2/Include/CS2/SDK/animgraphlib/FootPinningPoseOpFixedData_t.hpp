@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FootFixedData_t.hpp"
+#include <SDK/animgraphlib/FootFixedData_t.hpp>
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace animgraphlib {
 		class FootPinningPoseOpFixedData_t  {
 		public:
-			NESTED_PROPERTY(m_footInfo,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::FootFixedData_t>), 0x0);
+			NESTED_PROPERTY(m_footInfo,GlobalTypes::CUtlVector<animgraphlib::FootFixedData_t>, 0x0);
 			PROPERTY(m_flBlendTime,float32, 0x18);
 			PROPERTY(m_flLockBreakDistance,float32, 0x1c);
 			PROPERTY(m_flMaxLegTwist,float32, 0x20);
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bApplyFootRotationLimits,bool, 0x29);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FootPinningPoseOpFixedData_t) == 0x30, "FootPinningPoseOpFixedData_t size should be 0x30");
-
-#endif
 	}
 }

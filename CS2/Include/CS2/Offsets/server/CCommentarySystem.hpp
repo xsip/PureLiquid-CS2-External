@@ -19,7 +19,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hCurrentNode = 0x38; // GlobalTypes::CHandle<server::CPointCommentaryNode>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hActiveCommentaryNode = 0x3c; // GlobalTypes::CHandle<server::CPointCommentaryNode>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hLastCommentaryNode = 0x40; // GlobalTypes::CHandle<server::CPointCommentaryNode>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vecNodes = 0x48; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CPointCommentaryNode>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecNodes = 0x48; // server::CUtlVector<GlobalTypes::CHandle<server::CPointCommentaryNode>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

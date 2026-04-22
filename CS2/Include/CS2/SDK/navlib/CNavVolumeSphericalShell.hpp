@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNavVolumeSphere.hpp"
+#include <SDK/navlib/CNavVolumeSphere.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_flRadiusInner,float32, 0x88);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::navlib::CNavVolumeSphericalShell) == 0x90, "CNavVolumeSphericalShell size should be 0x90");
-
-#endif
 	}
 }

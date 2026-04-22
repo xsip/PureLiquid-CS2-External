@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_flowMapNodeMaxRadius,float32, 0x38);
 			S2_PAD(0x3C);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::navlib::CNavHullVData) == 0x3C, "CNavHullVData size should be 0x3C");
-
-#endif
 	}
 }

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleTraceSet_t.hpp"
-#include "ParticleTraceMissBehavior_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
+#include <SDK/particles/ParticleTraceMissBehavior_t.hpp>
 
 
 
@@ -24,17 +24,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_MovementPlaceOnGround : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flOffset,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d0);
+			NESTED_PROPERTY(m_flOffset,particleslib::CPerParticleFloatInput, 0x1d0);
 			PROPERTY(m_flMaxTraceLength,float32, 0x340);
 			PROPERTY(m_flTolerance,float32, 0x344);
 			PROPERTY(m_flTraceOffset,float32, 0x348);
 			PROPERTY(m_flLerpRate,float32, 0x34c);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x350);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x3d0);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x3d0);
 			PROPERTY(m_nRefCP1,int32_t, 0x3d4);
 			PROPERTY(m_nRefCP2,int32_t, 0x3d8);
 			PROPERTY(m_nLerpCP,int32_t, 0x3dc);
-			PROPERTY(m_nTraceMissBehavior,IDENTITY(particles::ParticleTraceMissBehavior_t), 0x3e8);
+			PROPERTY(m_nTraceMissBehavior,particles::ParticleTraceMissBehavior_t, 0x3e8);
 			PROPERTY(m_bIncludeShotHull,bool, 0x3ec);
 			PROPERTY(m_bIncludeWater,bool, 0x3ed);
 			PROPERTY(m_bSetNormal,bool, 0x3f0);
@@ -43,9 +43,6 @@ namespace CS2 {
 			PROPERTY(m_nIgnoreCP,int32_t, 0x3f8);
 			S2_PAD(0x230);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_MovementPlaceOnGround) == 0x400, "C_OP_MovementPlaceOnGround size should be 0x400");
-
-#endif
 	}
 }

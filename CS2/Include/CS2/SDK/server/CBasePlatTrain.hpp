@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseToggle.hpp"
+#include <SDK/server/CBaseToggle.hpp>
 
 
 
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(m_flTLength,float32, 0x7d0);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBasePlatTrain) == 0x7D8, "CBasePlatTrain size should be 0x7D8");
-
-#endif
 	}
 }

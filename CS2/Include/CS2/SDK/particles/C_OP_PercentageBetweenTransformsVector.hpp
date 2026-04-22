@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,21 +24,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PercentageBetweenTransformsVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d0);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
 			PROPERTY(m_flInputMin,float32, 0x1d4);
 			PROPERTY(m_flInputMax,float32, 0x1d8);
 			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1dc);
 			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1e8);
-			NESTED_PROPERTY(m_TransformStart,IDENTITY(particleslib::CParticleTransformInput), 0x1f8);
-			NESTED_PROPERTY(m_TransformEnd,IDENTITY(particleslib::CParticleTransformInput), 0x260);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x2c8);
+			NESTED_PROPERTY(m_TransformStart,particleslib::CParticleTransformInput, 0x1f8);
+			NESTED_PROPERTY(m_TransformEnd,particleslib::CParticleTransformInput, 0x260);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x2c8);
 			PROPERTY(m_bActiveRange,bool, 0x2cc);
 			PROPERTY(m_bRadialCheck,bool, 0x2cd);
 			S2_PAD(0x100);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_PercentageBetweenTransformsVector) == 0x2D0, "C_OP_PercentageBetweenTransformsVector size should be 0x2D0");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "EventTypeSelection_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/EventTypeSelection_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitFromParentKilled : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nAttributeToCopy,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
-			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x1dc);
+			NESTED_PROPERTY(m_nAttributeToCopy,particles::ParticleAttributeIndex_t, 0x1d8);
+			PROPERTY(m_nEventType,particles::EventTypeSelection_t, 0x1dc);
 			S2_PAD(0x88);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_InitFromParentKilled) == 0x260, "C_INIT_InitFromParentKilled size should be 0x260");
-
-#endif
 	}
 }

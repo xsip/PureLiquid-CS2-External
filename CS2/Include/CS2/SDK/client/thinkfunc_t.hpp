@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTick_t.hpp"
+#include <SDK/entity2/GameTick_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		public:
 			PROPERTY(m_hFn,GlobalTypes::HSCRIPT, 0x8);
 			PROPERTY(m_nContext,GlobalTypes::CUtlStringToken*, 0x10);
-			NESTED_PROPERTY(m_nNextThinkTick,IDENTITY(entity2::GameTick_t), 0x14);
-			NESTED_PROPERTY(m_nLastThinkTick,IDENTITY(entity2::GameTick_t), 0x18);
+			NESTED_PROPERTY(m_nNextThinkTick,entity2::GameTick_t, 0x14);
+			NESTED_PROPERTY(m_nLastThinkTick,entity2::GameTick_t, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::thinkfunc_t) == 0x20, "thinkfunc_t size should be 0x20");
-
-#endif
 	}
 }

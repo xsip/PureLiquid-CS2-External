@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_VelocityFromCP : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_velocityInput,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d8);
-			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x890);
+			NESTED_PROPERTY(m_velocityInput,particleslib::CParticleCollectionVecInput, 0x1d8);
+			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x890);
 			PROPERTY(m_flVelocityScale,float32, 0x8f8);
 			PROPERTY(m_bDirectionOnly,bool, 0x8fc);
 			S2_PAD(0x728);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_VelocityFromCP) == 0x900, "C_INIT_VelocityFromCP size should be 0x900");
-
-#endif
 	}
 }

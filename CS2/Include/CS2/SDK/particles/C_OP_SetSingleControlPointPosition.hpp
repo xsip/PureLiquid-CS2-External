@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
 
 
 
@@ -25,13 +25,10 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bSetOnce,bool, 0x1d8);
 			PROPERTY(m_nCP1,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_vecCP1Pos,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
-			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x898);
+			NESTED_PROPERTY(m_vecCP1Pos,particleslib::CParticleCollectionVecInput, 0x1e0);
+			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x898);
 			S2_PAD(0x728);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetSingleControlPointPosition) == 0x900, "C_OP_SetSingleControlPointPosition size should be 0x900");
-
-#endif
 	}
 }

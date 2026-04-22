@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PulseCursorID_t.hpp"
-#include "PulseDocNodeID_t.hpp"
+#include <SDK/pulse_runtime_lib/PulseCursorID_t.hpp>
+#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class PulseGraphExecutionHistoryCursorDesc_t  {
 		public:
-			NESTED_PROPERTY(vecAncestorCursorIDs,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::PulseCursorID_t>), 0x0);
-			NESTED_PROPERTY(nSpawnNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x18);
-			NESTED_PROPERTY(nRetiredAtNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x1c);
+			NESTED_PROPERTY(vecAncestorCursorIDs,GlobalTypes::CUtlVector<pulse_runtime_lib::PulseCursorID_t>, 0x0);
+			NESTED_PROPERTY(nSpawnNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x18);
+			NESTED_PROPERTY(nRetiredAtNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x1c);
 			PROPERTY(flLastReferenced,float32, 0x20);
 			PROPERTY(nLastValidEntryIdx,int32_t, 0x24);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::PulseGraphExecutionHistoryCursorDesc_t) == 0x28, "PulseGraphExecutionHistoryCursorDesc_t size should be 0x28");
-
-#endif
 	}
 }

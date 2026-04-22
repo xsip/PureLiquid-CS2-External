@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,14 +25,11 @@ namespace CS2 {
 	namespace client {
 		class PhysicsRagdollPose_t  {
 		public:
-			// PROPERTY(m_Transforms,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CTransform>), 0x8);
-			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x20);
+			PROPERTY(m_Transforms,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CTransform>, 0x8);
+			PROPERTY(m_hOwner,GlobalTypes::CHandle<client::C_BaseEntity>, 0x20);
 			PROPERTY(m_bSetFromDebugHistory,bool, 0x24);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::PhysicsRagdollPose_t) == 0x48, "PhysicsRagdollPose_t size should be 0x48");
-
-#endif
 	}
 }

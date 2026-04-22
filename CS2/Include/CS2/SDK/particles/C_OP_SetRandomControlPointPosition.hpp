@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -26,15 +26,12 @@ namespace CS2 {
 			PROPERTY(m_bOrient,bool, 0x1d9);
 			PROPERTY(m_nCP1,int32_t, 0x1dc);
 			PROPERTY(m_nHeadLocation,int32_t, 0x1e0);
-			NESTED_PROPERTY(m_flReRandomRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_flReRandomRate,particleslib::CParticleCollectionFloatInput, 0x1e8);
 			PROPERTY(m_vecCPMinPos,GlobalTypes::Vector, 0x358);
 			PROPERTY(m_vecCPMaxPos,GlobalTypes::Vector, 0x364);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x370);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CParticleCollectionFloatInput, 0x370);
 			S2_PAD(0x308);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetRandomControlPointPosition) == 0x4E0, "C_OP_SetRandomControlPointPosition size should be 0x4E0");
-
-#endif
 	}
 }

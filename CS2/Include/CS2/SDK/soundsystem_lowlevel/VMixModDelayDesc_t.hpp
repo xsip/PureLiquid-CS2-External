@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VMixFilterDesc_t.hpp"
+#include <SDK/soundsystem_lowlevel/VMixFilterDesc_t.hpp>
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class VMixModDelayDesc_t  {
 		public:
-			NESTED_PROPERTY(m_feedbackFilter,IDENTITY(soundsystem_lowlevel::VMixFilterDesc_t), 0x0);
+			NESTED_PROPERTY(m_feedbackFilter,soundsystem_lowlevel::VMixFilterDesc_t, 0x0);
 			PROPERTY(m_bPhaseInvert,bool, 0x10);
 			PROPERTY(m_flGlideTime,float32, 0x14);
 			PROPERTY(m_flDelay,float32, 0x18);
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_bApplyAntialiasing,bool, 0x2c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixModDelayDesc_t) == 0x30, "VMixModDelayDesc_t size should be 0x30");
-
-#endif
 	}
 }

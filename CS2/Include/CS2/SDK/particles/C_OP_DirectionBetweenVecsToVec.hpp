@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DirectionBetweenVecsToVec : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d0);
-			NESTED_PROPERTY(m_vecPoint1,IDENTITY(particleslib::CPerParticleVecInput), 0x1d8);
-			NESTED_PROPERTY(m_vecPoint2,IDENTITY(particleslib::CPerParticleVecInput), 0x890);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
+			NESTED_PROPERTY(m_vecPoint1,particleslib::CPerParticleVecInput, 0x1d8);
+			NESTED_PROPERTY(m_vecPoint2,particleslib::CPerParticleVecInput, 0x890);
 			S2_PAD(0xD78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_DirectionBetweenVecsToVec) == 0xF48, "C_OP_DirectionBetweenVecsToVec size should be 0xF48");
-
-#endif
 	}
 }

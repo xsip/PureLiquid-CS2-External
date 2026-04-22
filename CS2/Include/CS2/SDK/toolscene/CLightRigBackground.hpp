@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_Color,GlobalTypes::Color, 0x1);
 			S2_PAD(0x5);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigBackground) == 0x5, "CLightRigBackground size should be 0x5");
-
-#endif
 	}
 }

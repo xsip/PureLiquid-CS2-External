@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,18 +24,15 @@ namespace CS2 {
 		class C_OP_SequenceFromModel : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d4);
-			NESTED_PROPERTY(m_nFieldOutputAnim,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d4);
+			NESTED_PROPERTY(m_nFieldOutputAnim,particles::ParticleAttributeIndex_t, 0x1d8);
 			PROPERTY(m_flInputMin,float32, 0x1dc);
 			PROPERTY(m_flInputMax,float32, 0x1e0);
 			PROPERTY(m_flOutputMin,float32, 0x1e4);
 			PROPERTY(m_flOutputMax,float32, 0x1e8);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x1ec);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x1ec);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SequenceFromModel) == 0x1F0, "C_OP_SequenceFromModel size should be 0x1F0");
-
-#endif
 	}
 }

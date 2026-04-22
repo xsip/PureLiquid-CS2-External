@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerAsyncGenerator.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerAsyncGenerator.hpp>
 
 
 
@@ -31,12 +31,9 @@ namespace CS2 {
 			PROPERTY(m_flStartJitter,float32, 0xc0);
 			PROPERTY(m_flPlaybackJitter,float32, 0xc4);
 			PROPERTY(m_bShouldWraparound,bool, 0xc8);
-			PROPERTY(m_sourceAudio,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>), 0xd0);
+			PROPERTY(m_sourceAudio,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>, 0xd0);
 			S2_PAD(0xD8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerGranulator) == 0x190, "CVoiceContainerGranulator size should be 0x190");
-
-#endif
 	}
 }

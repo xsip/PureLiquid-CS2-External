@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -25,19 +25,16 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nComponent1,int32_t, 0x1d8);
 			PROPERTY(m_nComponent2,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
-			NESTED_PROPERTY(m_flParticleDensity,IDENTITY(particleslib::CPerParticleFloatInput), 0x248);
-			NESTED_PROPERTY(m_flOffset,IDENTITY(particleslib::CPerParticleFloatInput), 0x3b8);
-			NESTED_PROPERTY(m_flRadius1,IDENTITY(particleslib::CPerParticleFloatInput), 0x528);
-			NESTED_PROPERTY(m_flRadius2,IDENTITY(particleslib::CPerParticleFloatInput), 0x698);
+			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1e0);
+			NESTED_PROPERTY(m_flParticleDensity,particleslib::CPerParticleFloatInput, 0x248);
+			NESTED_PROPERTY(m_flOffset,particleslib::CPerParticleFloatInput, 0x3b8);
+			NESTED_PROPERTY(m_flRadius1,particleslib::CPerParticleFloatInput, 0x528);
+			NESTED_PROPERTY(m_flRadius2,particleslib::CPerParticleFloatInput, 0x698);
 			PROPERTY(m_bUseCount,bool, 0x808);
 			PROPERTY(m_bUseLocalCoords,bool, 0x809);
 			PROPERTY(m_bOffsetExistingPos,bool, 0x80a);
 			S2_PAD(0x638);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_CreateInEpitrochoid) == 0x810, "C_INIT_CreateInEpitrochoid size should be 0x810");
-
-#endif
 	}
 }

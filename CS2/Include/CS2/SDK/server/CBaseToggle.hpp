@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "TOGGLE_STATE.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/server/TOGGLE_STATE.hpp>
 
 
 
@@ -27,7 +27,7 @@ namespace CS2 {
 	namespace server {
 		class CBaseToggle : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_toggle_state,IDENTITY(server::TOGGLE_STATE), 0x730);
+			PROPERTY(m_toggle_state,server::TOGGLE_STATE, 0x730);
 			PROPERTY(m_flMoveDistance,float32, 0x734);
 			PROPERTY(m_flWait,float32, 0x738);
 			PROPERTY(m_flLip,float32, 0x73c);
@@ -38,16 +38,13 @@ namespace CS2 {
 			PROPERTY(m_vecAngle1,GlobalTypes::QAngle, 0x768);
 			PROPERTY(m_vecAngle2,GlobalTypes::QAngle, 0x774);
 			PROPERTY(m_flHeight,float32, 0x780);
-			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x784);
+			PROPERTY(m_hActivator,GlobalTypes::CHandle<server::CBaseEntity>, 0x784);
 			PROPERTY(m_vecFinalDest,GlobalTypes::Vector, 0x788);
 			PROPERTY(m_vecFinalAngle,GlobalTypes::QAngle, 0x794);
 			PROPERTY(m_movementType,int32_t, 0x7a0);
 			PROPERTY(m_sMaster,GlobalTypes::CUtlSymbolLarge*, 0x7a8);
 			S2_PAD(0x80);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseToggle) == 0x7B0, "CBaseToggle size should be 0x7B0");
-
-#endif
 	}
 }

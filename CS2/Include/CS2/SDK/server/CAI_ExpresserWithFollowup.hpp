@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAI_Expresser.hpp"
+#include <SDK/server/CAI_Expresser.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CAI_ExpresserWithFollowup : public CS2::server::CAI_Expresser {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CAI_ExpresserWithFollowup) == 0xA0, "CAI_ExpresserWithFollowup size should be 0xA0");
-
-#endif
 	}
 }

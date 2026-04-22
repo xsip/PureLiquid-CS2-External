@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
-#include "CAnimGraphControllerManager.hpp"
-#include "PhysicsRagdollPose_t.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
+#include <SDK/client/CAnimGraphControllerManager.hpp>
+#include <SDK/client/PhysicsRagdollPose_t.hpp>
 
 
 
@@ -28,8 +28,8 @@ namespace CS2 {
 	namespace client {
 		class CBaseAnimGraph : public CS2::client::C_BaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_graphControllerManager,IDENTITY(client::CAnimGraphControllerManager), 0xe88);
-			PROPERTY(m_pMainGraphController,IDENTITY(client::CAnimGraphControllerBase*), 0xf38);
+			NESTED_PROPERTY(m_graphControllerManager,client::CAnimGraphControllerManager, 0xe88);
+			PROPERTY(m_pMainGraphController,client::CAnimGraphControllerBase*, 0xf38);
 			PROPERTY(m_bInitiallyPopulateInterpHistory,bool, 0xf40);
 			PROPERTY(m_bSuppressAnimEventSounds,bool, 0xf42);
 			PROPERTY(m_bAnimGraphUpdateEnabled,bool, 0xf50);
@@ -39,17 +39,14 @@ namespace CS2 {
 			PROPERTY(m_bAnimationUpdateScheduled,bool, 0xf68);
 			PROPERTY(m_vecForce,GlobalTypes::Vector, 0xf6c);
 			PROPERTY(m_nForceBone,int32_t, 0xf78);
-			PROPERTY(m_pClientsideRagdoll,IDENTITY(client::CBaseAnimGraph*), 0xf80);
+			PROPERTY(m_pClientsideRagdoll,client::CBaseAnimGraph*, 0xf80);
 			PROPERTY(m_bBuiltRagdoll,bool, 0xf88);
-			NESTED_PROPERTY(m_RagdollPose,IDENTITY(client::PhysicsRagdollPose_t), 0xfa0);
+			NESTED_PROPERTY(m_RagdollPose,client::PhysicsRagdollPose_t, 0xfa0);
 			PROPERTY(m_bRagdollEnabled,bool, 0xfe8);
 			PROPERTY(m_bRagdollClientSide,bool, 0xfe9);
 			PROPERTY(m_bHasAnimatedMaterialAttributes,bool, 0xff8);
 			S2_PAD(0x2E0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBaseAnimGraph) == 0x1168, "CBaseAnimGraph size should be 0x1168");
-
-#endif
 	}
 }

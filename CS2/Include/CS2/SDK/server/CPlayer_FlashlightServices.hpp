@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/CPlayerPawnComponent.hpp"
+#include <SDK/client/CPlayerPawnComponent.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CPlayer_FlashlightServices : public CS2::client::CPlayerPawnComponent {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPlayer_FlashlightServices) == 0x48, "CPlayer_FlashlightServices size should be 0x48");
-
-#endif
 	}
 }

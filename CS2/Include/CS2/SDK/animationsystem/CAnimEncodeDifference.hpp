@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimBoneDifference.hpp"
-#include "CAnimMorphDifference.hpp"
-#include "CAnimUserDifference.hpp"
+#include <SDK/animationsystem/CAnimBoneDifference.hpp>
+#include <SDK/animationsystem/CAnimMorphDifference.hpp>
+#include <SDK/animationsystem/CAnimUserDifference.hpp>
 
 
 
@@ -23,18 +23,15 @@ namespace CS2 {
 	namespace animationsystem {
 		class CAnimEncodeDifference  {
 		public:
-			NESTED_PROPERTY(m_boneArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimBoneDifference>), 0x0);
-			NESTED_PROPERTY(m_morphArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimMorphDifference>), 0x18);
-			NESTED_PROPERTY(m_userArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimUserDifference>), 0x30);
-			NESTED_PROPERTY(m_bHasRotationBitArray,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x48);
-			NESTED_PROPERTY(m_bHasMovementBitArray,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x60);
-			NESTED_PROPERTY(m_bHasMorphBitArray,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x78);
-			NESTED_PROPERTY(m_bHasUserBitArray,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x90);
+			NESTED_PROPERTY(m_boneArray,GlobalTypes::CUtlVector<animationsystem::CAnimBoneDifference>, 0x0);
+			NESTED_PROPERTY(m_morphArray,GlobalTypes::CUtlVector<animationsystem::CAnimMorphDifference>, 0x18);
+			NESTED_PROPERTY(m_userArray,GlobalTypes::CUtlVector<animationsystem::CAnimUserDifference>, 0x30);
+			NESTED_PROPERTY(m_bHasRotationBitArray,GlobalTypes::CUtlVector< uint8 >, 0x48);
+			NESTED_PROPERTY(m_bHasMovementBitArray,GlobalTypes::CUtlVector< uint8 >, 0x60);
+			NESTED_PROPERTY(m_bHasMorphBitArray,GlobalTypes::CUtlVector< uint8 >, 0x78);
+			NESTED_PROPERTY(m_bHasUserBitArray,GlobalTypes::CUtlVector< uint8 >, 0x90);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimEncodeDifference) == 0xA8, "CAnimEncodeDifference size should be 0xA8");
-
-#endif
 	}
 }

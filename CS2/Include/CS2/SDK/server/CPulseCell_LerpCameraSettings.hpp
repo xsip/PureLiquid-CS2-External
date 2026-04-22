@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseLerp.hpp"
-#include "../client/PointCameraSettings_t.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseLerp.hpp>
+#include <SDK/client/PointCameraSettings_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		class CPulseCell_LerpCameraSettings : public CS2::pulse_runtime_lib::CPulseCell_BaseLerp {
 		public:
 			PROPERTY(m_flSeconds,float32, 0x90);
-			NESTED_PROPERTY(m_Start,IDENTITY(client::PointCameraSettings_t), 0x94);
-			NESTED_PROPERTY(m_End,IDENTITY(client::PointCameraSettings_t), 0xa4);
+			NESTED_PROPERTY(m_Start,client::PointCameraSettings_t, 0x94);
+			NESTED_PROPERTY(m_End,client::PointCameraSettings_t, 0xa4);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseCell_LerpCameraSettings) == 0xB8, "CPulseCell_LerpCameraSettings size should be 0xB8");
-
-#endif
 	}
 }

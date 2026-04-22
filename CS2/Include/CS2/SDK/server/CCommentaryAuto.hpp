@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace server {
 		class CCommentaryAuto : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_OnCommentaryNewGame,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			NESTED_PROPERTY(m_OnCommentaryMidGame,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
-			NESTED_PROPERTY(m_OnCommentaryMultiplayerSpawn,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
+			NESTED_PROPERTY(m_OnCommentaryNewGame,entity2::CEntityIOOutput, 0x4a8);
+			NESTED_PROPERTY(m_OnCommentaryMidGame,entity2::CEntityIOOutput, 0x4c0);
+			NESTED_PROPERTY(m_OnCommentaryMultiplayerSpawn,entity2::CEntityIOOutput, 0x4d8);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCommentaryAuto) == 0x4F0, "CCommentaryAuto size should be 0x4F0");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionEmitter.hpp"
+#include <SDK/particles/CParticleFunctionEmitter.hpp>
 
 
 
@@ -38,9 +38,6 @@ namespace CS2 {
 			PROPERTY(m_flWorldTimeScale,float32, 0x214);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_NoiseEmitter) == 0x218, "C_OP_NoiseEmitter size should be 0x218");
-
-#endif
 	}
 }

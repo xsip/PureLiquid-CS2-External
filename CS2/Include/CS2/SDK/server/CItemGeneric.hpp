@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CItem.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CItem.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -36,26 +36,26 @@ namespace CS2 {
 			PROPERTY(m_bHasPickupRadius,bool, 0xad5);
 			PROPERTY(m_flPickupRadiusSqr,float32, 0xad8);
 			PROPERTY(m_flTriggerRadiusSqr,float32, 0xadc);
-			NESTED_PROPERTY(m_flLastPickupCheck,IDENTITY(entity2::GameTime_t), 0xae0);
+			NESTED_PROPERTY(m_flLastPickupCheck,entity2::GameTime_t, 0xae0);
 			PROPERTY(m_bPlayerCounterListenerAdded,bool, 0xae4);
 			PROPERTY(m_bPlayerInTriggerRadius,bool, 0xae5);
-			PROPERTY(m_hSpawnParticleEffect,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0xae8);
+			PROPERTY(m_hSpawnParticleEffect,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0xae8);
 			PROPERTY(m_pAmbientSoundEffect,GlobalTypes::CUtlSymbolLarge*, 0xaf0);
 			PROPERTY(m_bAutoStartAmbientSound,bool, 0xaf8);
 			PROPERTY(m_pSpawnScriptFunction,GlobalTypes::CUtlSymbolLarge*, 0xb00);
-			PROPERTY(m_hPickupParticleEffect,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0xb08);
+			PROPERTY(m_hPickupParticleEffect,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0xb08);
 			PROPERTY(m_pPickupSoundEffect,GlobalTypes::CUtlSymbolLarge*, 0xb10);
 			PROPERTY(m_pPickupScriptFunction,GlobalTypes::CUtlSymbolLarge*, 0xb18);
-			PROPERTY(m_hTimeoutParticleEffect,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0xb20);
+			PROPERTY(m_hTimeoutParticleEffect,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0xb20);
 			PROPERTY(m_pTimeoutSoundEffect,GlobalTypes::CUtlSymbolLarge*, 0xb28);
 			PROPERTY(m_pTimeoutScriptFunction,GlobalTypes::CUtlSymbolLarge*, 0xb30);
 			PROPERTY(m_pPickupFilterName,GlobalTypes::CUtlSymbolLarge*, 0xb38);
-			PROPERTY(m_hPickupFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0xb40);
-			NESTED_PROPERTY(m_OnPickup,IDENTITY(entity2::CEntityIOOutput), 0xb48);
-			NESTED_PROPERTY(m_OnTimeout,IDENTITY(entity2::CEntityIOOutput), 0xb60);
-			NESTED_PROPERTY(m_OnTriggerStartTouch,IDENTITY(entity2::CEntityIOOutput), 0xb78);
-			NESTED_PROPERTY(m_OnTriggerTouch,IDENTITY(entity2::CEntityIOOutput), 0xb90);
-			NESTED_PROPERTY(m_OnTriggerEndTouch,IDENTITY(entity2::CEntityIOOutput), 0xba8);
+			PROPERTY(m_hPickupFilter,GlobalTypes::CHandle<server::CBaseFilter>, 0xb40);
+			NESTED_PROPERTY(m_OnPickup,entity2::CEntityIOOutput, 0xb48);
+			NESTED_PROPERTY(m_OnTimeout,entity2::CEntityIOOutput, 0xb60);
+			NESTED_PROPERTY(m_OnTriggerStartTouch,entity2::CEntityIOOutput, 0xb78);
+			NESTED_PROPERTY(m_OnTriggerTouch,entity2::CEntityIOOutput, 0xb90);
+			NESTED_PROPERTY(m_OnTriggerEndTouch,entity2::CEntityIOOutput, 0xba8);
 			PROPERTY(m_pAllowPickupScriptFunction,GlobalTypes::CUtlSymbolLarge*, 0xbc0);
 			PROPERTY(m_flPickupRadius,float32, 0xbc8);
 			PROPERTY(m_flTriggerRadius,float32, 0xbcc);
@@ -63,12 +63,9 @@ namespace CS2 {
 			PROPERTY(m_bGlowWhenInTrigger,bool, 0xbd8);
 			PROPERTY(m_glowColor,GlobalTypes::Color, 0xbd9);
 			PROPERTY(m_bUseable,bool, 0xbdd);
-			PROPERTY(m_hTriggerHelper,IDENTITY(GlobalTypes::CHandle<server::CItemGenericTriggerHelper>), 0xbe0);
+			PROPERTY(m_hTriggerHelper,GlobalTypes::CHandle<server::CItemGenericTriggerHelper>, 0xbe0);
 			S2_PAD(0x130);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CItemGeneric) == 0xBF0, "CItemGeneric size should be 0xBF0");
-
-#endif
 	}
 }

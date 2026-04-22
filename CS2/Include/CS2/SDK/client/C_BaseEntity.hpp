@@ -4,24 +4,24 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/CEntityInstance.hpp"
-#include "CNetworkTransmitComponent.hpp"
-#include "../entity2/GameTick_t.hpp"
-#include "TakeDamageFlags_t.hpp"
-#include "EntityPlatformTypes_t.hpp"
-#include "thinkfunc_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "CNetworkVelocityVector.hpp"
-#include "MoveCollide_t.hpp"
-#include "MoveType_t.hpp"
-#include "../particleslib/CParticleProperty.hpp"
-#include "BloodType.hpp"
+#include <SDK/entity2/CEntityInstance.hpp>
+#include <SDK/client/CNetworkTransmitComponent.hpp>
+#include <SDK/entity2/GameTick_t.hpp>
+#include <SDK/client/TakeDamageFlags_t.hpp>
+#include <SDK/client/EntityPlatformTypes_t.hpp>
+#include <SDK/client/thinkfunc_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/CNetworkVelocityVector.hpp>
+#include <SDK/client/MoveCollide_t.hpp>
+#include <SDK/client/MoveType_t.hpp>
+#include <SDK/particleslib/CParticleProperty.hpp>
+#include <SDK/client/BloodType.hpp>
 
 
 
@@ -40,21 +40,21 @@ namespace CS2 {
 	namespace client {
 		class C_BaseEntity : public CS2::entity2::CEntityInstance {
 		public:
-			PROPERTY(m_CBodyComponent,IDENTITY(client::CBodyComponent*), 0x38);
-			NESTED_PROPERTY(m_NetworkTransmitComponent,IDENTITY(client::CNetworkTransmitComponent), 0x40);
-			NESTED_PROPERTY(m_nLastThinkTick,IDENTITY(entity2::GameTick_t), 0x330);
-			PROPERTY(m_pGameSceneNode,IDENTITY(client::CGameSceneNode*), 0x338);
-			PROPERTY(m_pRenderComponent,IDENTITY(client::CRenderComponent*), 0x340);
-			PROPERTY(m_pCollision,IDENTITY(client::CCollisionProperty*), 0x348);
+			PROPERTY(m_CBodyComponent,client::CBodyComponent*, 0x38);
+			NESTED_PROPERTY(m_NetworkTransmitComponent,client::CNetworkTransmitComponent, 0x40);
+			NESTED_PROPERTY(m_nLastThinkTick,entity2::GameTick_t, 0x330);
+			PROPERTY(m_pGameSceneNode,client::CGameSceneNode*, 0x338);
+			PROPERTY(m_pRenderComponent,client::CRenderComponent*, 0x340);
+			PROPERTY(m_pCollision,client::CCollisionProperty*, 0x348);
 			PROPERTY(m_iMaxHealth,int32_t, 0x350);
 			PROPERTY(m_iHealth,int32_t, 0x354);
 			PROPERTY(m_flDamageAccumulator,float32, 0x358);
 			PROPERTY(m_lifeState,uint8_t, 0x35c);
 			PROPERTY(m_bTakesDamage,bool, 0x35d);
-			PROPERTY(m_nTakeDamageFlags,IDENTITY(client::TakeDamageFlags_t), 0x360);
-			PROPERTY(m_nPlatformType,IDENTITY(client::EntityPlatformTypes_t), 0x368);
+			PROPERTY(m_nTakeDamageFlags,client::TakeDamageFlags_t, 0x360);
+			PROPERTY(m_nPlatformType,client::EntityPlatformTypes_t, 0x368);
 			PROPERTY(m_ubInterpolationFrame,uint8_t, 0x369);
-			PROPERTY(m_hSceneObjectController,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x36c);
+			PROPERTY(m_hSceneObjectController,GlobalTypes::CHandle<client::C_BaseEntity>, 0x36c);
 			PROPERTY(m_nNoInterpolationTick,int32_t, 0x370);
 			PROPERTY(m_nVisibilityNoInterpolationTick,int32_t, 0x374);
 			PROPERTY(m_flProxyRandomValue,float32, 0x378);
@@ -67,7 +67,7 @@ namespace CS2 {
 			PROPERTY(m_nSubclassID,GlobalTypes::CUtlStringToken*, 0x388);
 			PROPERTY(m_nSimulationTick,int32_t, 0x398);
 			PROPERTY(m_iCurrentThinkContext,int32_t, 0x39c);
-			NESTED_PROPERTY(m_aThinkFunctions,IDENTITY(GlobalTypes::CUtlVector<client::thinkfunc_t>), 0x3a0);
+			NESTED_PROPERTY(m_aThinkFunctions,GlobalTypes::CUtlVector<client::thinkfunc_t>, 0x3a0);
 			PROPERTY(m_bDisabledContextThinks,bool, 0x3b8);
 			PROPERTY(m_flAnimTime,float32, 0x3bc);
 			PROPERTY(m_flSimulationTime,float32, 0x3c0);
@@ -77,26 +77,26 @@ namespace CS2 {
 			PROPERTY(m_bRenderEvenWhenNotSuccessfullyInterpolated,bool, 0x3c7);
 			PROPERTY_ARRAY(m_nInterpolationLatchDirtyFlags,int32_t, 2 , 0x3c8);
 			PROPERTY_ARRAY(m_ListEntry,uint16_t, 11 , 0x3d0);
-			NESTED_PROPERTY(m_flCreateTime,IDENTITY(entity2::GameTime_t), 0x3e8);
+			NESTED_PROPERTY(m_flCreateTime,entity2::GameTime_t, 0x3e8);
 			PROPERTY(m_flSpeed,float32, 0x3ec);
 			PROPERTY(m_EntClientFlags,uint16_t, 0x3f0);
 			PROPERTY(m_bClientSideRagdoll,bool, 0x3f2);
 			PROPERTY(m_iTeamNum,uint8_t, 0x3f3);
 			PROPERTY(m_spawnflags,uint32_t, 0x3f4);
-			NESTED_PROPERTY(m_nNextThinkTick,IDENTITY(entity2::GameTick_t), 0x3f8);
+			NESTED_PROPERTY(m_nNextThinkTick,entity2::GameTick_t, 0x3f8);
 			PROPERTY(m_fFlags,uint32_t, 0x400);
 			PROPERTY(m_vecAbsVelocity,GlobalTypes::Vector, 0x404);
-			NESTED_PROPERTY(m_vecServerVelocity,IDENTITY(client::CNetworkVelocityVector), 0x410);
-			NESTED_PROPERTY(m_vecVelocity,IDENTITY(client::CNetworkVelocityVector), 0x438);
+			NESTED_PROPERTY(m_vecServerVelocity,client::CNetworkVelocityVector, 0x410);
+			NESTED_PROPERTY(m_vecVelocity,client::CNetworkVelocityVector, 0x438);
 			PROPERTY(m_vecBaseVelocity,GlobalTypes::Vector, 0x518);
-			PROPERTY(m_hEffectEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x524);
-			PROPERTY(m_hOwnerEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x528);
-			PROPERTY(m_MoveCollide,IDENTITY(client::MoveCollide_t), 0x52c);
-			PROPERTY(m_MoveType,IDENTITY(client::MoveType_t), 0x52d);
-			PROPERTY(m_nActualMoveType,IDENTITY(client::MoveType_t), 0x52e);
+			PROPERTY(m_hEffectEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0x524);
+			PROPERTY(m_hOwnerEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0x528);
+			PROPERTY(m_MoveCollide,client::MoveCollide_t, 0x52c);
+			PROPERTY(m_MoveType,client::MoveType_t, 0x52d);
+			PROPERTY(m_nActualMoveType,client::MoveType_t, 0x52e);
 			PROPERTY(m_flWaterLevel,float32, 0x530);
 			PROPERTY(m_fEffects,uint32_t, 0x534);
-			PROPERTY(m_hGroundEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x538);
+			PROPERTY(m_hGroundEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0x538);
 			PROPERTY(m_nGroundBodyIndex,int32_t, 0x53c);
 			PROPERTY(m_flFriction,float32, 0x540);
 			PROPERTY(m_flElasticity,float32, 0x544);
@@ -104,7 +104,7 @@ namespace CS2 {
 			PROPERTY(m_flTimeScale,float32, 0x54c);
 			PROPERTY(m_bAnimatedEveryTick,bool, 0x550);
 			PROPERTY(m_bGravityDisabled,bool, 0x551);
-			NESTED_PROPERTY(m_flNavIgnoreUntilTime,IDENTITY(entity2::GameTime_t), 0x554);
+			NESTED_PROPERTY(m_flNavIgnoreUntilTime,entity2::GameTime_t, 0x554);
 			PROPERTY(m_hThink,uint16_t, 0x558);
 			PROPERTY(m_fBBoxVisFlags,uint8_t, 0x568);
 			PROPERTY(m_flActualGravityScale,float32, 0x56c);
@@ -113,21 +113,18 @@ namespace CS2 {
 			PROPERTY(m_bRenderWithViewModels,bool, 0x572);
 			PROPERTY(m_nFirstPredictableCommand,int32_t, 0x574);
 			PROPERTY(m_nLastPredictableCommand,int32_t, 0x578);
-			PROPERTY(m_hOldMoveParent,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x57c);
-			NESTED_PROPERTY(m_Particles,IDENTITY(particleslib::CParticleProperty), 0x580);
+			PROPERTY(m_hOldMoveParent,GlobalTypes::CHandle<client::C_BaseEntity>, 0x57c);
+			NESTED_PROPERTY(m_Particles,particleslib::CParticleProperty, 0x580);
 			PROPERTY(m_vecAngVelocity,GlobalTypes::QAngle, 0x5b0);
 			PROPERTY(m_DataChangeEventRef,int32_t, 0x5bc);
-			NESTED_PROPERTY(m_dependencies,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>), 0x5c0);
+			NESTED_PROPERTY(m_dependencies,GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>, 0x5c0);
 			PROPERTY(m_nCreationTick,int32_t, 0x5d8);
 			PROPERTY(m_bAnimTimeChanged,bool, 0x5e9);
 			PROPERTY(m_bSimulationTimeChanged,bool, 0x5ea);
 			PROPERTY(m_sUniqueHammerID,GlobalTypes::CUtlString*, 0x5f8);
-			PROPERTY(m_nBloodType,IDENTITY(client::BloodType), 0x600);
+			PROPERTY(m_nBloodType,client::BloodType, 0x600);
 			S2_PAD(0x5D0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_BaseEntity) == 0x608, "C_BaseEntity size should be 0x608");
-
-#endif
 	}
 }

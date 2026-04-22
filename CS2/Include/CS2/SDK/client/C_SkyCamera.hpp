@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "sky3dparams_t.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/client/sky3dparams_t.hpp>
 
 
 
@@ -22,15 +22,12 @@ namespace CS2 {
 	namespace client {
 		class C_SkyCamera : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_skyboxData,IDENTITY(client::sky3dparams_t), 0x608);
+			NESTED_PROPERTY(m_skyboxData,client::sky3dparams_t, 0x608);
 			PROPERTY(m_skyboxSlotToken,GlobalTypes::CUtlStringToken*, 0x698);
 			PROPERTY(m_bUseAngles,bool, 0x69c);
-			PROPERTY(m_pNext,IDENTITY(client::C_SkyCamera*), 0x6a0);
+			PROPERTY(m_pNext,client::C_SkyCamera*, 0x6a0);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SkyCamera) == 0x6A8, "C_SkyCamera size should be 0x6A8");
-
-#endif
 	}
 }

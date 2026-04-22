@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "EKillTypes_t.hpp"
+#include <SDK/client/EKillTypes_t.hpp>
 
 
 
@@ -27,10 +27,10 @@ namespace CS2 {
 	namespace client {
 		class CDamageRecord  {
 		public:
-			PROPERTY(m_PlayerDamager,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x30);
-			PROPERTY(m_PlayerRecipient,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x34);
-			PROPERTY(m_hPlayerControllerDamager,IDENTITY(GlobalTypes::CHandle<client::CCSPlayerController>), 0x38);
-			PROPERTY(m_hPlayerControllerRecipient,IDENTITY(GlobalTypes::CHandle<client::CCSPlayerController>), 0x3c);
+			PROPERTY(m_PlayerDamager,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x30);
+			PROPERTY(m_PlayerRecipient,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x34);
+			PROPERTY(m_hPlayerControllerDamager,GlobalTypes::CHandle<client::CCSPlayerController>, 0x38);
+			PROPERTY(m_hPlayerControllerRecipient,GlobalTypes::CHandle<client::CCSPlayerController>, 0x3c);
 			PROPERTY(m_szPlayerDamagerName,GlobalTypes::CUtlString*, 0x40);
 			PROPERTY(m_szPlayerRecipientName,GlobalTypes::CUtlString*, 0x48);
 			PROPERTY(m_DamagerXuid,uint64_t, 0x50);
@@ -41,12 +41,9 @@ namespace CS2 {
 			PROPERTY(m_iNumHits,int32_t, 0x6c);
 			PROPERTY(m_iLastBulletUpdate,int32_t, 0x70);
 			PROPERTY(m_bIsOtherEnemy,bool, 0x74);
-			PROPERTY(m_killType,IDENTITY(client::EKillTypes_t), 0x75);
+			PROPERTY(m_killType,client::EKillTypes_t, 0x75);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDamageRecord) == 0x78, "CDamageRecord size should be 0x78");
-
-#endif
 	}
 }

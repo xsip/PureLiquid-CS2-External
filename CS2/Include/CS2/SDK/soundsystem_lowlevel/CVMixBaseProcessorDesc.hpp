@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_flxfade,float32, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::CVMixBaseProcessorDesc) == 0x20, "CVMixBaseProcessorDesc size should be 0x20");
-
-#endif
 	}
 }

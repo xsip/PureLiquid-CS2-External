@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CPointEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -25,12 +25,9 @@ namespace CS2 {
 			PROPERTY(m_Duration,float32, 0x4a8);
 			PROPERTY(m_Radius,float32, 0x4ac);
 			PROPERTY(m_TiltTime,float32, 0x4b0);
-			NESTED_PROPERTY(m_stopTime,IDENTITY(entity2::GameTime_t), 0x4b4);
+			NESTED_PROPERTY(m_stopTime,entity2::GameTime_t, 0x4b4);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvTilt) == 0x4B8, "CEnvTilt size should be 0x4B8");
-
-#endif
 	}
 }

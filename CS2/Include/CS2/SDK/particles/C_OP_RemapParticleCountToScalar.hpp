@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,18 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapParticleCountToScalar : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d0);
-			NESTED_PROPERTY(m_nInputMin,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_nInputMax,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x348);
-			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4b8);
-			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x628);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
+			NESTED_PROPERTY(m_nInputMin,particleslib::CParticleCollectionFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_nInputMax,particleslib::CParticleCollectionFloatInput, 0x348);
+			NESTED_PROPERTY(m_flOutputMin,particleslib::CParticleCollectionFloatInput, 0x4b8);
+			NESTED_PROPERTY(m_flOutputMax,particleslib::CParticleCollectionFloatInput, 0x628);
 			PROPERTY(m_bActiveRange,bool, 0x798);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x79c);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x79c);
 			S2_PAD(0x5D0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapParticleCountToScalar) == 0x7A0, "C_OP_RemapParticleCountToScalar size should be 0x7A0");
-
-#endif
 	}
 }

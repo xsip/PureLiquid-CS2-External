@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmSyncTrack_Event_t.hpp"
+#include <SDK/animlib/Event_t.hpp>
 
 
 
@@ -21,13 +21,10 @@ namespace CS2 {
 	namespace animlib {
 		class CNmSyncTrack  {
 		public:
-			// PROPERTY(m_syncEvents,IDENTITY(GlobalTypes::CUtlLeanVectorFixedGrowable<animlib::CNmSyncTrack_Event_t>), 0x0);
+			PROPERTY(m_syncEvents,GlobalTypes::CUtlLeanVectorFixedGrowable<animlib::Event_t>, 0x0);
 			PROPERTY(m_nStartEventOffset,int32_t, 0xa8);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmSyncTrack) == 0xB0, "CNmSyncTrack size should be 0xB0");
-
-#endif
 	}
 }

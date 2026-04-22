@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CNmBlendTaskBase.hpp"
+#include <SDK/animlib/CNmBlendTaskBase.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace animlib {
 		class CNmBlendTask : public CS2::animlib::CNmBlendTaskBase {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmBlendTask) == 0xE0, "CNmBlendTask size should be 0xE0");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "ParticleControlPointAxis_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particles/ParticleControlPointAxis_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_NormalAlignToCP : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1d8);
-			PROPERTY(m_nControlPointAxis,IDENTITY(particles::ParticleControlPointAxis_t), 0x240);
+			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x1d8);
+			PROPERTY(m_nControlPointAxis,particles::ParticleControlPointAxis_t, 0x240);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_NormalAlignToCP) == 0x248, "C_INIT_NormalAlignToCP size should be 0x248");
-
-#endif
 	}
 }

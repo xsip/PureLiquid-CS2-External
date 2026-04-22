@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CConcreteAnimParameter.hpp"
+#include <SDK/animgraphlib/CConcreteAnimParameter.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 		class CEnumAnimParameter : public CS2::animgraphlib::CConcreteAnimParameter {
 		public:
 			PROPERTY(m_defaultValue,uint8_t, 0x88);
-			PROPERTY(m_enumOptions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x90);
-			NESTED_PROPERTY(m_vecEnumReferenced,IDENTITY(GlobalTypes::CUtlVector< uint64 >), 0xa8);
+			PROPERTY(m_enumOptions,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x90);
+			NESTED_PROPERTY(m_vecEnumReferenced,GlobalTypes::CUtlVector< uint64 >, 0xa8);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CEnumAnimParameter) == 0xD8, "CEnumAnimParameter size should be 0xD8");
-
-#endif
 	}
 }

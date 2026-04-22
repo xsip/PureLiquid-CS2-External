@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimUpdateNodeBase.hpp"
-#include "CAnimComponentUpdater.hpp"
-#include "CAnimParameterManagerUpdater.hpp"
-#include "CAnimTagManagerUpdater.hpp"
-#include "CAnimScriptManager.hpp"
-#include "CAnimGraphSettingsManager.hpp"
-#include "CStaticPoseCacheBuilder.hpp"
-#include "../modellib/CAnimSkeleton.hpp"
-#include "CAnimNodePath.hpp"
+#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
+#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
+#include <SDK/animgraphlib/CAnimParameterManagerUpdater.hpp>
+#include <SDK/animgraphlib/CAnimTagManagerUpdater.hpp>
+#include <SDK/animgraphlib/CAnimScriptManager.hpp>
+#include <SDK/animgraphlib/CAnimGraphSettingsManager.hpp>
+#include <SDK/animgraphlib/CStaticPoseCacheBuilder.hpp>
+#include <SDK/modellib/CAnimSkeleton.hpp>
+#include <SDK/animgraphlib/CAnimNodePath.hpp>
 
 
 
@@ -29,21 +29,18 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimUpdateSharedData  {
 		public:
-			NESTED_PROPERTY(m_nodes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimUpdateNodeBase>>), 0x10);
-			// PROPERTY(m_nodeIndexMap,IDENTITY(GlobalTypes::CUtlHashtable< CAnimNodePath, int32 >), 0x28);
-			NESTED_PROPERTY(m_components,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimComponentUpdater>>), 0x48);
-			PROPERTY(m_pParamListUpdater,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CAnimParameterManagerUpdater>), 0x60);
-			PROPERTY(m_pTagManagerUpdater,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CAnimTagManagerUpdater>), 0x68);
-			PROPERTY(m_scriptManager,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CAnimScriptManager>), 0x70);
-			NESTED_PROPERTY(m_settings,IDENTITY(animgraphlib::CAnimGraphSettingsManager), 0x78);
-			PROPERTY(m_pStaticPoseCache,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CStaticPoseCacheBuilder>), 0xa8);
-			PROPERTY(m_pSkeleton,IDENTITY(GlobalTypes::CSmartPtr<modellib::CAnimSkeleton>), 0xb0);
-			NESTED_PROPERTY(m_rootNodePath,IDENTITY(animgraphlib::CAnimNodePath), 0xb8);
+			NESTED_PROPERTY(m_nodes,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimUpdateNodeBase>>, 0x10);
+			PROPERTY(m_nodeIndexMap,GlobalTypes::CUtlHashtable< CAnimNodePath, int32 >, 0x28);
+			NESTED_PROPERTY(m_components,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimComponentUpdater>>, 0x48);
+			PROPERTY(m_pParamListUpdater,GlobalTypes::CSmartPtr<animgraphlib::CAnimParameterManagerUpdater>, 0x60);
+			PROPERTY(m_pTagManagerUpdater,GlobalTypes::CSmartPtr<animgraphlib::CAnimTagManagerUpdater>, 0x68);
+			PROPERTY(m_scriptManager,GlobalTypes::CSmartPtr<animgraphlib::CAnimScriptManager>, 0x70);
+			NESTED_PROPERTY(m_settings,animgraphlib::CAnimGraphSettingsManager, 0x78);
+			PROPERTY(m_pStaticPoseCache,GlobalTypes::CSmartPtr<animgraphlib::CStaticPoseCacheBuilder>, 0xa8);
+			PROPERTY(m_pSkeleton,GlobalTypes::CSmartPtr<modellib::CAnimSkeleton>, 0xb0);
+			NESTED_PROPERTY(m_rootNodePath,animgraphlib::CAnimNodePath, 0xb8);
 			S2_PAD(0x100);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimUpdateSharedData) == 0x100, "CAnimUpdateSharedData size should be 0x100");
-
-#endif
 	}
 }

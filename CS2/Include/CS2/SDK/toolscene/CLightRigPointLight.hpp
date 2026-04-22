@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLightRigLight.hpp"
+#include <SDK/toolscene/CLightRigLight.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace toolscene {
 		class CLightRigPointLight : public CS2::toolscene::CLightRigLight {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigPointLight) == 0x40, "CLightRigPointLight size should be 0x40");
-
-#endif
 	}
 }

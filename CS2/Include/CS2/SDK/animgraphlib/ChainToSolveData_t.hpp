@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "IKSolverSettings_t.hpp"
-#include "IKTargetSettings_t.hpp"
-#include "SolveIKChainAnimNodeDebugSetting.hpp"
+#include <SDK/animgraphlib/IKSolverSettings_t.hpp>
+#include <SDK/animgraphlib/IKTargetSettings_t.hpp>
+#include <SDK/animgraphlib/SolveIKChainAnimNodeDebugSetting.hpp>
 
 
 
@@ -24,16 +24,13 @@ namespace CS2 {
 		class ChainToSolveData_t  {
 		public:
 			PROPERTY(m_nChainIndex,int32_t, 0x0);
-			NESTED_PROPERTY(m_SolverSettings,IDENTITY(animgraphlib::IKSolverSettings_t), 0x4);
-			NESTED_PROPERTY(m_TargetSettings,IDENTITY(animgraphlib::IKTargetSettings_t), 0x10);
-			PROPERTY(m_DebugSetting,IDENTITY(animgraphlib::SolveIKChainAnimNodeDebugSetting), 0x38);
+			NESTED_PROPERTY(m_SolverSettings,animgraphlib::IKSolverSettings_t, 0x4);
+			NESTED_PROPERTY(m_TargetSettings,animgraphlib::IKTargetSettings_t, 0x10);
+			PROPERTY(m_DebugSetting,animgraphlib::SolveIKChainAnimNodeDebugSetting, 0x38);
 			PROPERTY(m_flDebugNormalizedValue,float32, 0x3c);
 			PROPERTY(m_vDebugOffset,GlobalTypes::VectorAligned, 0x40);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::ChainToSolveData_t) == 0x50, "ChainToSolveData_t size should be 0x50");
-
-#endif
 	}
 }

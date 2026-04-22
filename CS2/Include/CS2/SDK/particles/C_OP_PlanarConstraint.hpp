@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionConstraint.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionConstraint.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -28,14 +28,11 @@ namespace CS2 {
 			PROPERTY(m_nControlPointNumber,int32_t, 0x1e8);
 			PROPERTY(m_bGlobalOrigin,bool, 0x1ec);
 			PROPERTY(m_bGlobalNormal,bool, 0x1ed);
-			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f0);
-			NESTED_PROPERTY(m_flMaximumDistanceToCP,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x360);
+			NESTED_PROPERTY(m_flRadiusScale,particleslib::CPerParticleFloatInput, 0x1f0);
+			NESTED_PROPERTY(m_flMaximumDistanceToCP,particleslib::CParticleCollectionFloatInput, 0x360);
 			PROPERTY(m_bUseOldCode,bool, 0x4d0);
 			S2_PAD(0x308);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_PlanarConstraint) == 0x4D8, "C_OP_PlanarConstraint size should be 0x4D8");
-
-#endif
 	}
 }

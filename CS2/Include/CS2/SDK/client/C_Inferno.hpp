@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
-#include "ParticleIndex_t.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
+#include <SDK/client/ParticleIndex_t.hpp>
 
 
 
@@ -27,12 +27,12 @@ namespace CS2 {
 	namespace client {
 		class C_Inferno : public CS2::client::C_BaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_nfxFireDamageEffect,IDENTITY(client::ParticleIndex_t), 0xec8);
-			PROPERTY(m_hInfernoPointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xed0);
-			PROPERTY(m_hInfernoFillerPointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xed8);
-			PROPERTY(m_hInfernoOutlinePointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xee0);
-			PROPERTY(m_hInfernoClimbingOutlinePointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xee8);
-			PROPERTY(m_hInfernoDecalsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xef0);
+			NESTED_PROPERTY(m_nfxFireDamageEffect,client::ParticleIndex_t, 0xec8);
+			PROPERTY(m_hInfernoPointsSnapshot,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>, 0xed0);
+			PROPERTY(m_hInfernoFillerPointsSnapshot,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>, 0xed8);
+			PROPERTY(m_hInfernoOutlinePointsSnapshot,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>, 0xee0);
+			PROPERTY(m_hInfernoClimbingOutlinePointsSnapshot,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>, 0xee8);
+			PROPERTY(m_hInfernoDecalsSnapshot,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>, 0xef0);
 			PROPERTY_ARRAY(m_firePositions,GlobalTypes::Vector, 64 , 0xef8);
 			PROPERTY_ARRAY(m_fireParentPositions,GlobalTypes::Vector, 64 , 0x11f8);
 			PROPERTY_ARRAY(m_bFireIsBurning,bool, 64 , 0x14f8);
@@ -53,9 +53,6 @@ namespace CS2 {
 			PROPERTY(m_flLastGrassBurnThink,float32, 0x847c);
 			S2_PAD(0x7608);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Inferno) == 0x8490, "C_Inferno size should be 0x8490");
-
-#endif
 	}
 }

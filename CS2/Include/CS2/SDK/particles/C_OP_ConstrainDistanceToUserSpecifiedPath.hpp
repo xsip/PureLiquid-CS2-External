@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionConstraint.hpp"
-#include "PointDefinitionWithTimeValues_t.hpp"
+#include <SDK/particles/CParticleFunctionConstraint.hpp>
+#include <SDK/particles/PointDefinitionWithTimeValues_t.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 			PROPERTY(m_flMaxDistance,float32, 0x1d4);
 			PROPERTY(m_flTimeScale,float32, 0x1d8);
 			PROPERTY(m_bLoopedPath,bool, 0x1dc);
-			NESTED_PROPERTY(m_pointList,IDENTITY(GlobalTypes::CUtlVector<particles::PointDefinitionWithTimeValues_t>), 0x1e0);
+			NESTED_PROPERTY(m_pointList,GlobalTypes::CUtlVector<particles::PointDefinitionWithTimeValues_t>, 0x1e0);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ConstrainDistanceToUserSpecifiedPath) == 0x1F8, "C_OP_ConstrainDistanceToUserSpecifiedPath size should be 0x1F8");
-
-#endif
 	}
 }

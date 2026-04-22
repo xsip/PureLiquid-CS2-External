@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CHostageExpresserShim.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "EntitySpottedState_t.hpp"
-#include "CountdownTimer.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CHostageExpresserShim.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/EntitySpottedState_t.hpp>
+#include <SDK/server/CountdownTimer.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -32,11 +32,11 @@ namespace CS2 {
 	namespace server {
 		class CHostage : public CS2::server::CHostageExpresserShim {
 		public:
-			NESTED_PROPERTY(m_OnHostageBeginGrab,IDENTITY(entity2::CEntityIOOutput), 0xb98);
-			NESTED_PROPERTY(m_OnFirstPickedUp,IDENTITY(entity2::CEntityIOOutput), 0xbb0);
-			NESTED_PROPERTY(m_OnDroppedNotRescued,IDENTITY(entity2::CEntityIOOutput), 0xbc8);
-			NESTED_PROPERTY(m_OnRescued,IDENTITY(entity2::CEntityIOOutput), 0xbe0);
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(server::EntitySpottedState_t), 0xbf8);
+			NESTED_PROPERTY(m_OnHostageBeginGrab,entity2::CEntityIOOutput, 0xb98);
+			NESTED_PROPERTY(m_OnFirstPickedUp,entity2::CEntityIOOutput, 0xbb0);
+			NESTED_PROPERTY(m_OnDroppedNotRescued,entity2::CEntityIOOutput, 0xbc8);
+			NESTED_PROPERTY(m_OnRescued,entity2::CEntityIOOutput, 0xbe0);
+			NESTED_PROPERTY(m_entitySpottedState,server::EntitySpottedState_t, 0xbf8);
 			PROPERTY(m_nSpotRules,int32_t, 0xc10);
 			PROPERTY(m_uiHostageSpawnExclusionGroupMask,uint32_t, 0xc14);
 			PROPERTY(m_nHostageSpawnRandomFactor,uint32_t, 0xc18);
@@ -45,37 +45,34 @@ namespace CS2 {
 			PROPERTY(m_isRescued,bool, 0xc2c);
 			PROPERTY(m_jumpedThisFrame,bool, 0xc2d);
 			PROPERTY(m_nHostageState,int32_t, 0xc30);
-			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xc34);
-			PROPERTY(m_lastLeader,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawnBase>), 0xc38);
-			NESTED_PROPERTY(m_reuseTimer,IDENTITY(server::CountdownTimer), 0xc40);
+			PROPERTY(m_leader,GlobalTypes::CHandle<server::CBaseEntity>, 0xc34);
+			PROPERTY(m_lastLeader,GlobalTypes::CHandle<server::CCSPlayerPawnBase>, 0xc38);
+			NESTED_PROPERTY(m_reuseTimer,server::CountdownTimer, 0xc40);
 			PROPERTY(m_hasBeenUsed,bool, 0xc58);
 			PROPERTY(m_accel,GlobalTypes::Vector, 0xc5c);
 			PROPERTY(m_isRunning,bool, 0xc68);
 			PROPERTY(m_isCrouching,bool, 0xc69);
-			NESTED_PROPERTY(m_jumpTimer,IDENTITY(server::CountdownTimer), 0xc70);
+			NESTED_PROPERTY(m_jumpTimer,server::CountdownTimer, 0xc70);
 			PROPERTY(m_isWaitingForLeader,bool, 0xc88);
-			NESTED_PROPERTY(m_repathTimer,IDENTITY(server::CountdownTimer), 0x2c98);
-			NESTED_PROPERTY(m_inhibitDoorTimer,IDENTITY(server::CountdownTimer), 0x2cb0);
-			NESTED_PROPERTY(m_inhibitObstacleAvoidanceTimer,IDENTITY(server::CountdownTimer), 0x2d40);
-			NESTED_PROPERTY(m_wiggleTimer,IDENTITY(server::CountdownTimer), 0x2d60);
+			NESTED_PROPERTY(m_repathTimer,server::CountdownTimer, 0x2c98);
+			NESTED_PROPERTY(m_inhibitDoorTimer,server::CountdownTimer, 0x2cb0);
+			NESTED_PROPERTY(m_inhibitObstacleAvoidanceTimer,server::CountdownTimer, 0x2d40);
+			NESTED_PROPERTY(m_wiggleTimer,server::CountdownTimer, 0x2d60);
 			PROPERTY(m_isAdjusted,bool, 0x2d7c);
 			PROPERTY(m_bHandsHaveBeenCut,bool, 0x2d7d);
-			PROPERTY(m_hHostageGrabber,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x2d80);
-			NESTED_PROPERTY(m_fLastGrabTime,IDENTITY(entity2::GameTime_t), 0x2d84);
+			PROPERTY(m_hHostageGrabber,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x2d80);
+			NESTED_PROPERTY(m_fLastGrabTime,entity2::GameTime_t, 0x2d84);
 			PROPERTY(m_vecPositionWhenStartedDroppingToGround,GlobalTypes::Vector, 0x2d88);
 			PROPERTY(m_vecGrabbedPos,GlobalTypes::Vector, 0x2d94);
-			NESTED_PROPERTY(m_flRescueStartTime,IDENTITY(entity2::GameTime_t), 0x2da0);
-			NESTED_PROPERTY(m_flGrabSuccessTime,IDENTITY(entity2::GameTime_t), 0x2da4);
-			NESTED_PROPERTY(m_flDropStartTime,IDENTITY(entity2::GameTime_t), 0x2da8);
+			NESTED_PROPERTY(m_flRescueStartTime,entity2::GameTime_t, 0x2da0);
+			NESTED_PROPERTY(m_flGrabSuccessTime,entity2::GameTime_t, 0x2da4);
+			NESTED_PROPERTY(m_flDropStartTime,entity2::GameTime_t, 0x2da8);
 			PROPERTY(m_nApproachRewardPayouts,int32_t, 0x2dac);
 			PROPERTY(m_nPickupEventCount,int32_t, 0x2db0);
 			PROPERTY(m_vecSpawnGroundPos,GlobalTypes::Vector, 0x2db4);
 			PROPERTY(m_vecHostageResetPosition,GlobalTypes::VectorWS, 0x2dec);
 			S2_PAD(0x2280);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CHostage) == 0x2E00, "CHostage size should be 0x2E00");
-
-#endif
 	}
 }

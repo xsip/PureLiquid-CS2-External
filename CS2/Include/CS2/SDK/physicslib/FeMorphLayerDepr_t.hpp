@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -22,17 +22,14 @@ namespace CS2 {
 		public:
 			PROPERTY(m_Name,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_nNameHash,uint32_t, 0x8);
-			NESTED_PROPERTY(m_Nodes,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x10);
-			NESTED_PROPERTY(m_InitPos,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x28);
-			NESTED_PROPERTY(m_Gravity,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x40);
-			NESTED_PROPERTY(m_GoalStrength,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x58);
-			NESTED_PROPERTY(m_GoalDamping,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x70);
+			NESTED_PROPERTY(m_Nodes,GlobalTypes::CUtlVector< uint16 >, 0x10);
+			NESTED_PROPERTY(m_InitPos,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x28);
+			NESTED_PROPERTY(m_Gravity,GlobalTypes::CUtlVector< float32 >, 0x40);
+			NESTED_PROPERTY(m_GoalStrength,GlobalTypes::CUtlVector< float32 >, 0x58);
+			NESTED_PROPERTY(m_GoalDamping,GlobalTypes::CUtlVector< float32 >, 0x70);
 			PROPERTY(m_nFlags,uint32_t, 0x88);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeMorphLayerDepr_t) == 0x90, "FeMorphLayerDepr_t size should be 0x90");
-
-#endif
 	}
 }

@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "TargetWarpAngleMode_t.hpp"
-#include "CAnimParamHandle.hpp"
-#include "TargetWarpCorrectionMethod.hpp"
-#include "TargetWarpTimingMethod.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/TargetWarpAngleMode_t.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include <SDK/animgraphlib/TargetWarpCorrectionMethod.hpp>
+#include <SDK/animgraphlib/TargetWarpTimingMethod.hpp>
 
 
 
@@ -25,14 +25,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CTargetWarpUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			PROPERTY(m_eAngleMode,IDENTITY(animgraphlib::TargetWarpAngleMode_t), 0x74);
-			NESTED_PROPERTY(m_hTargetPositionParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x78);
-			NESTED_PROPERTY(m_hTargetUpVectorParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x7a);
-			NESTED_PROPERTY(m_hTargetFacePositionParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x7c);
-			NESTED_PROPERTY(m_hMoveHeadingParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x7e);
-			NESTED_PROPERTY(m_hDesiredMoveHeadingParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x80);
-			PROPERTY(m_eCorrectionMethod,IDENTITY(animgraphlib::TargetWarpCorrectionMethod), 0x84);
-			PROPERTY(m_eTargetWarpTimingMethod,IDENTITY(animgraphlib::TargetWarpTimingMethod), 0x88);
+			PROPERTY(m_eAngleMode,animgraphlib::TargetWarpAngleMode_t, 0x74);
+			NESTED_PROPERTY(m_hTargetPositionParameter,animgraphlib::CAnimParamHandle, 0x78);
+			NESTED_PROPERTY(m_hTargetUpVectorParameter,animgraphlib::CAnimParamHandle, 0x7a);
+			NESTED_PROPERTY(m_hTargetFacePositionParameter,animgraphlib::CAnimParamHandle, 0x7c);
+			NESTED_PROPERTY(m_hMoveHeadingParameter,animgraphlib::CAnimParamHandle, 0x7e);
+			NESTED_PROPERTY(m_hDesiredMoveHeadingParameter,animgraphlib::CAnimParamHandle, 0x80);
+			PROPERTY(m_eCorrectionMethod,animgraphlib::TargetWarpCorrectionMethod, 0x84);
+			PROPERTY(m_eTargetWarpTimingMethod,animgraphlib::TargetWarpTimingMethod, 0x88);
 			PROPERTY(m_bTargetFacePositionIsWorldSpace,bool, 0x8c);
 			PROPERTY(m_bTargetPositionIsWorldSpace,bool, 0x8d);
 			PROPERTY(m_bOnlyWarpWhenTagIsFound,bool, 0x8e);
@@ -41,9 +41,6 @@ namespace CS2 {
 			PROPERTY(m_flMaxAngle,float32, 0x94);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CTargetWarpUpdateNode) == 0x98, "CTargetWarpUpdateNode size should be 0x98");
-
-#endif
 	}
 }

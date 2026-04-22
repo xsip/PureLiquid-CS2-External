@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPulse_OutflowConnection.hpp"
+#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class SignatureOutflow_Continue : public CS2::pulse_runtime_lib::CPulse_OutflowConnection {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::SignatureOutflow_Continue) == 0x48, "SignatureOutflow_Continue size should be 0x48");
-
-#endif
 	}
 }

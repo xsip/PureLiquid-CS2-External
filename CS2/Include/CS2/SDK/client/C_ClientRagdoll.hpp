@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../modellib/AttachmentHandle_t.hpp"
+#include <SDK/client/CBaseAnimGraph.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/modellib/AttachmentHandle_t.hpp>
 
 
 
@@ -25,23 +25,20 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bFadeOut,bool, 0x1168);
 			PROPERTY(m_bImportant,bool, 0x1169);
-			NESTED_PROPERTY(m_flEffectTime,IDENTITY(entity2::GameTime_t), 0x116c);
-			NESTED_PROPERTY(m_gibDespawnTime,IDENTITY(entity2::GameTime_t), 0x1170);
+			NESTED_PROPERTY(m_flEffectTime,entity2::GameTime_t, 0x116c);
+			NESTED_PROPERTY(m_gibDespawnTime,entity2::GameTime_t, 0x1170);
 			PROPERTY(m_iCurrentFriction,int32_t, 0x1174);
 			PROPERTY(m_iMinFriction,int32_t, 0x1178);
 			PROPERTY(m_iMaxFriction,int32_t, 0x117c);
 			PROPERTY(m_iFrictionAnimState,int32_t, 0x1180);
 			PROPERTY(m_bReleaseRagdoll,bool, 0x1184);
-			NESTED_PROPERTY(m_iEyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1185);
+			NESTED_PROPERTY(m_iEyeAttachment,modellib::AttachmentHandle_t, 0x1185);
 			PROPERTY(m_bFadingOut,bool, 0x1186);
 			PROPERTY_ARRAY(m_flScaleEnd,float32, 10 , 0x1188);
-			PROPERTY_ARRAY(m_flScaleTimeStart,IDENTITY(entity2::GameTime_t), 10 , 0x11b0);
-			PROPERTY_ARRAY(m_flScaleTimeEnd,IDENTITY(entity2::GameTime_t), 10 , 0x11d8);
+			PROPERTY_ARRAY(m_flScaleTimeStart,entity2::GameTime_t, 10 , 0x11b0);
+			PROPERTY_ARRAY(m_flScaleTimeEnd,entity2::GameTime_t, 10 , 0x11d8);
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_ClientRagdoll) == 0x1200, "C_ClientRagdoll size should be 0x1200");
-
-#endif
 	}
 }

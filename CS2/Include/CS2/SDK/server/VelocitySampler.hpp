@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 		class VelocitySampler  {
 		public:
 			PROPERTY(m_prevSample,GlobalTypes::Vector, 0x0);
-			NESTED_PROPERTY(m_fPrevSampleTime,IDENTITY(entity2::GameTime_t), 0xc);
+			NESTED_PROPERTY(m_fPrevSampleTime,entity2::GameTime_t, 0xc);
 			PROPERTY(m_fIdealSampleRate,float32, 0x10);
 			S2_PAD(0x14);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::VelocitySampler) == 0x14, "VelocitySampler size should be 0x14");
-
-#endif
 	}
 }

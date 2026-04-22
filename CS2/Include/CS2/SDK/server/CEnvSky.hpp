@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
 
 
 
@@ -26,8 +26,8 @@ namespace CS2 {
 	namespace server {
 		class CEnvSky : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x730);
-			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x738);
+			PROPERTY(m_hSkyMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x730);
+			PROPERTY(m_hSkyMaterialLightingOnly,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x738);
 			PROPERTY(m_bStartDisabled,bool, 0x740);
 			PROPERTY(m_vTintColor,GlobalTypes::Color, 0x741);
 			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0x745);
@@ -40,9 +40,6 @@ namespace CS2 {
 			PROPERTY(m_bEnabled,bool, 0x764);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvSky) == 0x790, "CEnvSky size should be 0x790");
-
-#endif
 	}
 }

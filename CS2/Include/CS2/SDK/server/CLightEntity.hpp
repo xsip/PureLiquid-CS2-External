@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 	namespace server {
 		class CLightEntity : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_CLightComponent,IDENTITY(server::CLightComponent*), 0x730);
+			PROPERTY(m_CLightComponent,server::CLightComponent*, 0x730);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLightEntity) == 0x738, "CLightEntity size should be 0x738");
-
-#endif
 	}
 }

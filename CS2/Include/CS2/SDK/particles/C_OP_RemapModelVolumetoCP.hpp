@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "BBoxVolumeType_t.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particles/BBoxVolumeType_t.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapModelVolumetoCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nBBoxType,IDENTITY(particles::BBoxVolumeType_t), 0x1d8);
+			PROPERTY(m_nBBoxType,particles::BBoxVolumeType_t, 0x1d8);
 			PROPERTY(m_nInControlPointNumber,int32_t, 0x1dc);
 			PROPERTY(m_nOutControlPointNumber,int32_t, 0x1e0);
 			PROPERTY(m_nOutControlPointMaxNumber,int32_t, 0x1e4);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_bCubeRoot,bool, 0x1fd);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapModelVolumetoCP) == 0x200, "C_OP_RemapModelVolumetoCP size should be 0x200");
-
-#endif
 	}
 }

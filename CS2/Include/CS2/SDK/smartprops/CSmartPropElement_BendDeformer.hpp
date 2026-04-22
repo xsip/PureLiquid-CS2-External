@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropElement_Deformer.hpp"
+#include <SDK/smartprops/CSmartPropElement_Deformer.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_flBendRadius,GlobalTypes::CSmartPropAttributeFloat, 0x220);
 			S2_PAD(0x1C0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_BendDeformer) == 0x260, "CSmartPropElement_BendDeformer size should be 0x260");
-
-#endif
 	}
 }

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "IKTargetSource.hpp"
-#include "IKBoneNameAndIndex_t.hpp"
-#include "../modellib/AnimParamID.hpp"
-#include "IKTargetCoordinateSystem.hpp"
+#include <SDK/animgraphlib/IKTargetSource.hpp>
+#include <SDK/animgraphlib/IKBoneNameAndIndex_t.hpp>
+#include <SDK/modellib/AnimParamID.hpp>
+#include <SDK/animgraphlib/IKTargetCoordinateSystem.hpp>
 
 
 
@@ -24,16 +24,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class IKTargetSettings_t  {
 		public:
-			PROPERTY(m_TargetSource,IDENTITY(animgraphlib::IKTargetSource), 0x0);
-			NESTED_PROPERTY(m_Bone,IDENTITY(animgraphlib::IKBoneNameAndIndex_t), 0x8);
-			NESTED_PROPERTY(m_AnimgraphParameterNamePosition,IDENTITY(modellib::AnimParamID), 0x18);
-			NESTED_PROPERTY(m_AnimgraphParameterNameOrientation,IDENTITY(modellib::AnimParamID), 0x1c);
-			PROPERTY(m_TargetCoordSystem,IDENTITY(animgraphlib::IKTargetCoordinateSystem), 0x20);
+			PROPERTY(m_TargetSource,animgraphlib::IKTargetSource, 0x0);
+			NESTED_PROPERTY(m_Bone,animgraphlib::IKBoneNameAndIndex_t, 0x8);
+			NESTED_PROPERTY(m_AnimgraphParameterNamePosition,modellib::AnimParamID, 0x18);
+			NESTED_PROPERTY(m_AnimgraphParameterNameOrientation,modellib::AnimParamID, 0x1c);
+			PROPERTY(m_TargetCoordSystem,animgraphlib::IKTargetCoordinateSystem, 0x20);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::IKTargetSettings_t) == 0x28, "IKTargetSettings_t size should be 0x28");
-
-#endif
 	}
 }

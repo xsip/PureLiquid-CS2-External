@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../physicslib/RnBodyDesc_t.hpp"
+#include <SDK/physicslib/RnBodyDesc_t.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_nOldPointer,uint64_t, 0xe0);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::vphysics2::vphysics_save_cphysicsbody_t) == 0xE8, "vphysics_save_cphysicsbody_t size should be 0xE8");
-
-#endif
 	}
 }

@@ -4,14 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "CHandle< CBaseEntity >.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
 
 
 
@@ -22,14 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CSceneListManager : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_hListManagers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>), 0x4a8);
+			NESTED_PROPERTY(m_hListManagers,server::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>, 0x4a8);
 			PROPERTY_ARRAY(m_iszScenes,GlobalTypes::CUtlSymbolLarge*, 16 , 0x4c0);
-			// PROPERTY_ARRAY(m_hScenes,IDENTITY(GlobalTypes::CHandle< CBaseEntity >[16]), 16 , 0x540);
+			PROPERTY_ARRAY(m_hScenes,server::CHandle< CBaseEntity >, 16 , 0x540);
 			S2_PAD(0xD8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSceneListManager) == 0x580, "CSceneListManager size should be 0x580");
-
-#endif
 	}
 }

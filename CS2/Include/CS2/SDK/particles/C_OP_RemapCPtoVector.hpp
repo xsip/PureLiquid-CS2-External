@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 		class C_OP_RemapCPtoVector : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_nCPInput,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d4);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d4);
 			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1d8);
 			PROPERTY(m_vInputMin,GlobalTypes::Vector, 0x1dc);
 			PROPERTY(m_vInputMax,GlobalTypes::Vector, 0x1e8);
@@ -33,14 +33,11 @@ namespace CS2 {
 			PROPERTY(m_flStartTime,float32, 0x20c);
 			PROPERTY(m_flEndTime,float32, 0x210);
 			PROPERTY(m_flInterpRate,float32, 0x214);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x218);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x218);
 			PROPERTY(m_bOffset,bool, 0x21c);
 			PROPERTY(m_bAccelerate,bool, 0x21d);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapCPtoVector) == 0x220, "C_OP_RemapCPtoVector size should be 0x220");
-
-#endif
 	}
 }

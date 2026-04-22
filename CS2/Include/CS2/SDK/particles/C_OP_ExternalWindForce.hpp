@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionForce.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionForce.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -23,22 +23,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ExternalWindForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			NESTED_PROPERTY(m_vecSamplePosition,IDENTITY(particleslib::CPerParticleVecInput), 0x1e0);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CPerParticleVecInput), 0x898);
+			NESTED_PROPERTY(m_vecSamplePosition,particleslib::CPerParticleVecInput, 0x1e0);
+			NESTED_PROPERTY(m_vecScale,particleslib::CPerParticleVecInput, 0x898);
 			PROPERTY(m_bSampleWind,bool, 0xf50);
 			PROPERTY(m_bSampleWater,bool, 0xf51);
 			PROPERTY(m_bDampenNearWaterPlane,bool, 0xf52);
 			PROPERTY(m_bSampleGravity,bool, 0xf53);
-			NESTED_PROPERTY(m_vecGravityForce,IDENTITY(particleslib::CPerParticleVecInput), 0xf58);
+			NESTED_PROPERTY(m_vecGravityForce,particleslib::CPerParticleVecInput, 0xf58);
 			PROPERTY(m_bUseBasicMovementGravity,bool, 0x1610);
-			NESTED_PROPERTY(m_flLocalGravityScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1618);
-			NESTED_PROPERTY(m_flLocalBuoyancyScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1788);
-			NESTED_PROPERTY(m_vecBuoyancyForce,IDENTITY(particleslib::CPerParticleVecInput), 0x18f8);
+			NESTED_PROPERTY(m_flLocalGravityScale,particleslib::CPerParticleFloatInput, 0x1618);
+			NESTED_PROPERTY(m_flLocalBuoyancyScale,particleslib::CPerParticleFloatInput, 0x1788);
+			NESTED_PROPERTY(m_vecBuoyancyForce,particleslib::CPerParticleVecInput, 0x18f8);
 			S2_PAD(0x1DD0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ExternalWindForce) == 0x1FB0, "C_OP_ExternalWindForce size should be 0x1FB0");
-
-#endif
 	}
 }

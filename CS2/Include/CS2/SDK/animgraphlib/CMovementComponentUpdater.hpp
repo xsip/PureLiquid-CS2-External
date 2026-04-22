@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimComponentUpdater.hpp"
-#include "CAnimMotorUpdaterBase.hpp"
-#include "CAnimInputDamping.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
+#include <SDK/animgraphlib/CAnimMotorUpdaterBase.hpp>
+#include <SDK/animgraphlib/CAnimInputDamping.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -24,19 +24,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMovementComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_motors,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimMotorUpdaterBase>>), 0x30);
-			NESTED_PROPERTY(m_facingDamping,IDENTITY(animgraphlib::CAnimInputDamping), 0x48);
+			NESTED_PROPERTY(m_motors,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimMotorUpdaterBase>>, 0x30);
+			NESTED_PROPERTY(m_facingDamping,animgraphlib::CAnimInputDamping, 0x48);
 			PROPERTY(m_nDefaultMotorIndex,int32_t, 0x68);
 			PROPERTY(m_flDefaultRunSpeed,float32, 0x6c);
 			PROPERTY(m_bMoveVarsDisabled,bool, 0x70);
 			PROPERTY(m_bNetworkPath,bool, 0x71);
 			PROPERTY(m_bNetworkFacing,bool, 0x72);
-			PROPERTY_ARRAY(m_paramHandles,IDENTITY(animgraphlib::CAnimParamHandle), 34 , 0x73);
+			PROPERTY_ARRAY(m_paramHandles,animgraphlib::CAnimParamHandle, 34 , 0x73);
 			S2_PAD(0x88);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMovementComponentUpdater) == 0xB8, "CMovementComponentUpdater size should be 0xB8");
-
-#endif
 	}
 }

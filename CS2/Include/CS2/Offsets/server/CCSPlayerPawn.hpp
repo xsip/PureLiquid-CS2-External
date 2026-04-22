@@ -22,7 +22,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_szLastPlaceName = 0xeb8; // char m_szLastPlaceName[18]; |  0xeb8 | Schema_FixedArray | Size: 0x12
 				constexpr std::ptrdiff_t m_bInHostageResetZone = 0xfa8; // bool m_bInHostageResetZone; |  0xfa8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bInBuyZone = 0xfa9; // bool m_bInBuyZone; |  0xfa9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_TouchingBuyZones = 0xfb0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_TouchingBuyZones = 0xfb0; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bWasInBuyZone = 0xfc8; // bool m_bWasInBuyZone; |  0xfc8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bInHostageRescueZone = 0xfc9; // bool m_bInHostageRescueZone; |  0xfc9 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bInBombZone = 0xfca; // bool m_bInBombZone; |  0xfca | Schema_Builtin | Size: 0x1

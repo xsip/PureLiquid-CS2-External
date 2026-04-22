@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../modellib/ScriptedMoveTo_t.hpp"
-#include "../modellib/SharedMovementGait_t.hpp"
-#include "../modellib/ScriptedHeldWeaponBehavior_t.hpp"
-#include "../client/ForcedCrouchState_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../client/ScriptedOnDeath_t.hpp"
-#include "ScriptedConflictResponse_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/modellib/ScriptedMoveTo_t.hpp>
+#include <SDK/modellib/SharedMovementGait_t.hpp>
+#include <SDK/modellib/ScriptedHeldWeaponBehavior_t.hpp>
+#include <SDK/client/ForcedCrouchState_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/ScriptedOnDeath_t.hpp>
+#include <SDK/server/ScriptedConflictResponse_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -42,10 +42,10 @@ namespace CS2 {
 			PROPERTY(m_iszNextScript,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
 			PROPERTY(m_iszEntity,GlobalTypes::CUtlSymbolLarge*, 0x4d8);
 			PROPERTY(m_iszSyncGroup,GlobalTypes::CUtlSymbolLarge*, 0x4e0);
-			PROPERTY(m_nMoveTo,IDENTITY(modellib::ScriptedMoveTo_t), 0x4e8);
-			PROPERTY(m_nMoveToGait,IDENTITY(modellib::SharedMovementGait_t), 0x4ec);
-			PROPERTY(m_nHeldWeaponBehavior,IDENTITY(modellib::ScriptedHeldWeaponBehavior_t), 0x4f0);
-			PROPERTY(m_nForcedCrouchState,IDENTITY(client::ForcedCrouchState_t), 0x4f4);
+			PROPERTY(m_nMoveTo,modellib::ScriptedMoveTo_t, 0x4e8);
+			PROPERTY(m_nMoveToGait,modellib::SharedMovementGait_t, 0x4ec);
+			PROPERTY(m_nHeldWeaponBehavior,modellib::ScriptedHeldWeaponBehavior_t, 0x4f0);
+			PROPERTY(m_nForcedCrouchState,client::ForcedCrouchState_t, 0x4f4);
 			PROPERTY(m_bIsPlayingPreIdle,bool, 0x4f8);
 			PROPERTY(m_bIsPlayingEntry,bool, 0x4f9);
 			PROPERTY(m_bIsPlayingAction,bool, 0x4fa);
@@ -79,7 +79,7 @@ namespace CS2 {
 			PROPERTY(m_flMoveSpeed,float32, 0x528);
 			PROPERTY(m_bWaitUntilMoveCompletesToStartAnimation,bool, 0x52c);
 			PROPERTY(m_nNotReadySequenceCount,int32_t, 0x530);
-			NESTED_PROPERTY(m_startTime,IDENTITY(entity2::GameTime_t), 0x534);
+			NESTED_PROPERTY(m_startTime,entity2::GameTime_t, 0x534);
 			PROPERTY(m_bWaitForBeginSequence,bool, 0x538);
 			PROPERTY(m_saved_effects,int32_t, 0x53c);
 			PROPERTY(m_savedFlags,int32_t, 0x540);
@@ -87,35 +87,32 @@ namespace CS2 {
 			PROPERTY(m_bInterruptable,bool, 0x548);
 			PROPERTY(m_sequenceStarted,bool, 0x549);
 			PROPERTY(m_bPositionRelativeToOtherEntity,bool, 0x54a);
-			PROPERTY(m_hTargetEnt,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x54c);
-			PROPERTY(m_hNextCine,IDENTITY(GlobalTypes::CHandle<server::CScriptedSequence>), 0x550);
+			PROPERTY(m_hTargetEnt,GlobalTypes::CHandle<server::CBaseEntity>, 0x54c);
+			PROPERTY(m_hNextCine,GlobalTypes::CHandle<server::CScriptedSequence>, 0x550);
 			PROPERTY(m_bThinking,bool, 0x554);
 			PROPERTY(m_bInitiatedSelfDelete,bool, 0x555);
 			PROPERTY(m_bIsTeleportingDueToMoveTo,bool, 0x556);
 			PROPERTY(m_bAllowCustomInterruptConditions,bool, 0x557);
-			PROPERTY(m_hForcedTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseAnimGraph>), 0x558);
+			PROPERTY(m_hForcedTarget,GlobalTypes::CHandle<server::CBaseAnimGraph>, 0x558);
 			PROPERTY(m_bDontCancelOtherSequences,bool, 0x55c);
 			PROPERTY(m_bForceSynch,bool, 0x55d);
 			PROPERTY(m_bPreventUpdateYawOnFinish,bool, 0x55e);
 			PROPERTY(m_bEnsureOnNavmeshOnFinish,bool, 0x55f);
-			PROPERTY(m_onDeathBehavior,IDENTITY(client::ScriptedOnDeath_t), 0x560);
-			PROPERTY(m_ConflictResponse,IDENTITY(server::ScriptedConflictResponse_t), 0x564);
-			NESTED_PROPERTY(m_OnBeginSequence,IDENTITY(entity2::CEntityIOOutput), 0x568);
-			NESTED_PROPERTY(m_OnActionStartOrLoop,IDENTITY(entity2::CEntityIOOutput), 0x580);
-			NESTED_PROPERTY(m_OnEndSequence,IDENTITY(entity2::CEntityIOOutput), 0x598);
-			NESTED_PROPERTY(m_OnPostIdleEndSequence,IDENTITY(entity2::CEntityIOOutput), 0x5b0);
-			NESTED_PROPERTY(m_OnCancelSequence,IDENTITY(entity2::CEntityIOOutput), 0x5c8);
-			NESTED_PROPERTY(m_OnCancelFailedSequence,IDENTITY(entity2::CEntityIOOutput), 0x5e0);
-			PROPERTY_ARRAY(m_OnScriptEvent,IDENTITY(entity2::CEntityIOOutput), 8 , 0x5f8);
+			PROPERTY(m_onDeathBehavior,client::ScriptedOnDeath_t, 0x560);
+			PROPERTY(m_ConflictResponse,server::ScriptedConflictResponse_t, 0x564);
+			NESTED_PROPERTY(m_OnBeginSequence,entity2::CEntityIOOutput, 0x568);
+			NESTED_PROPERTY(m_OnActionStartOrLoop,entity2::CEntityIOOutput, 0x580);
+			NESTED_PROPERTY(m_OnEndSequence,entity2::CEntityIOOutput, 0x598);
+			NESTED_PROPERTY(m_OnPostIdleEndSequence,entity2::CEntityIOOutput, 0x5b0);
+			NESTED_PROPERTY(m_OnCancelSequence,entity2::CEntityIOOutput, 0x5c8);
+			NESTED_PROPERTY(m_OnCancelFailedSequence,entity2::CEntityIOOutput, 0x5e0);
+			PROPERTY_ARRAY(m_OnScriptEvent,entity2::CEntityIOOutput, 8 , 0x5f8);
 			PROPERTY(m_matOtherToMain,GlobalTypes::CTransform, 0x6c0);
-			PROPERTY(m_hInteractionMainEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x6e0);
+			PROPERTY(m_hInteractionMainEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x6e0);
 			PROPERTY(m_iPlayerDeathBehavior,int32_t, 0x6e4);
 			PROPERTY(m_bSkipFadeIn,bool, 0x6e8);
 			S2_PAD(0x248);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CScriptedSequence) == 0x6F0, "CScriptedSequence size should be 0x6F0");
-
-#endif
 	}
 }

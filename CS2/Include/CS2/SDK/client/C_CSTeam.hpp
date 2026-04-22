@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_Team.hpp"
+#include <SDK/client/C_Team.hpp>
 
 
 
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_szTeamLogoImage,char, 8 , 0x964);
 			S2_PAD(0x2B0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSTeam) == 0x970, "C_CSTeam size should be 0x970");
-
-#endif
 	}
 }

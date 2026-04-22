@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "StanceInfo_t.hpp"
-#include "CAnimUpdateNodeRef.hpp"
-#include "CAnimParamHandle.hpp"
-#include "StanceOverrideMode.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/StanceInfo_t.hpp>
+#include <SDK/animgraphlib/CAnimUpdateNodeRef.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include <SDK/animgraphlib/StanceOverrideMode.hpp>
 
 
 
@@ -25,15 +25,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStanceOverrideUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_footStanceInfo,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::StanceInfo_t>), 0x70);
-			NESTED_PROPERTY(m_pStanceSourceNode,IDENTITY(animgraphlib::CAnimUpdateNodeRef), 0x88);
-			NESTED_PROPERTY(m_hParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x98);
-			PROPERTY(m_eMode,IDENTITY(animgraphlib::StanceOverrideMode), 0x9c);
+			NESTED_PROPERTY(m_footStanceInfo,GlobalTypes::CUtlVector<animgraphlib::StanceInfo_t>, 0x70);
+			NESTED_PROPERTY(m_pStanceSourceNode,animgraphlib::CAnimUpdateNodeRef, 0x88);
+			NESTED_PROPERTY(m_hParameter,animgraphlib::CAnimParamHandle, 0x98);
+			PROPERTY(m_eMode,animgraphlib::StanceOverrideMode, 0x9c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStanceOverrideUpdateNode) == 0xA0, "CStanceOverrideUpdateNode size should be 0xA0");
-
-#endif
 	}
 }

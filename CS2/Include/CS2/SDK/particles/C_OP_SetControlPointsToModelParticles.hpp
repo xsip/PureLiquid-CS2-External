@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bAttachment,bool, 0x2dd);
 			S2_PAD(0x110);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointsToModelParticles) == 0x2E0, "C_OP_SetControlPointsToModelParticles size should be 0x2E0");
-
-#endif
 	}
 }

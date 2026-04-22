@@ -4,20 +4,20 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "CFuncRotator_Rotate_t.hpp"
-#include "RotatorTargetSpace_t.hpp"
-#include "RotatorHistoryEntry_t.hpp"
-#include "RotatorQueueEntry_t.hpp"
-#include "../client/SolidType_t.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/Rotate_t.hpp>
+#include <SDK/server/RotatorTargetSpace_t.hpp>
+#include <SDK/server/RotatorHistoryEntry_t.hpp>
+#include <SDK/server/RotatorQueueEntry_t.hpp>
+#include <SDK/client/SolidType_t.hpp>
 
 
 
@@ -34,52 +34,49 @@ namespace CS2 {
 	namespace server {
 		class CFuncRotator : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_hRotatorTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x730);
+			PROPERTY(m_hRotatorTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x730);
 			PROPERTY(m_bIsRotating,bool, 0x734);
 			PROPERTY(m_bIsReversing,bool, 0x735);
 			PROPERTY(m_flTimeToReachMaxSpeed,float32, 0x738);
 			PROPERTY(m_flTimeToReachZeroSpeed,float32, 0x73c);
 			PROPERTY(m_flDistanceAlongArcTraveled,float32, 0x740);
 			PROPERTY(m_flTimeToWaitOscillate,float32, 0x744);
-			NESTED_PROPERTY(m_flTimeRotationStart,IDENTITY(entity2::GameTime_t), 0x748);
+			NESTED_PROPERTY(m_flTimeRotationStart,entity2::GameTime_t, 0x748);
 			PROPERTY(m_qLSPrevChange,GlobalTypes::Quaternion, 0x750);
 			PROPERTY(m_qWSPrev,GlobalTypes::Quaternion, 0x760);
 			PROPERTY(m_qWSInit,GlobalTypes::Quaternion, 0x770);
 			PROPERTY(m_qLSInit,GlobalTypes::Quaternion, 0x780);
 			PROPERTY(m_qLSOrientation,GlobalTypes::Quaternion, 0x790);
-			NESTED_PROPERTY(m_OnRotationStarted,IDENTITY(entity2::CEntityIOOutput), 0x7a0);
-			NESTED_PROPERTY(m_OnRotationCompleted,IDENTITY(entity2::CEntityIOOutput), 0x7b8);
-			NESTED_PROPERTY(m_OnOscillate,IDENTITY(entity2::CEntityIOOutput), 0x7d0);
-			NESTED_PROPERTY(m_OnOscillateStartArrive,IDENTITY(entity2::CEntityIOOutput), 0x7e8);
-			NESTED_PROPERTY(m_OnOscillateStartDepart,IDENTITY(entity2::CEntityIOOutput), 0x800);
-			NESTED_PROPERTY(m_OnOscillateEndArrive,IDENTITY(entity2::CEntityIOOutput), 0x818);
-			NESTED_PROPERTY(m_OnOscillateEndDepart,IDENTITY(entity2::CEntityIOOutput), 0x830);
+			NESTED_PROPERTY(m_OnRotationStarted,entity2::CEntityIOOutput, 0x7a0);
+			NESTED_PROPERTY(m_OnRotationCompleted,entity2::CEntityIOOutput, 0x7b8);
+			NESTED_PROPERTY(m_OnOscillate,entity2::CEntityIOOutput, 0x7d0);
+			NESTED_PROPERTY(m_OnOscillateStartArrive,entity2::CEntityIOOutput, 0x7e8);
+			NESTED_PROPERTY(m_OnOscillateStartDepart,entity2::CEntityIOOutput, 0x800);
+			NESTED_PROPERTY(m_OnOscillateEndArrive,entity2::CEntityIOOutput, 0x818);
+			NESTED_PROPERTY(m_OnOscillateEndDepart,entity2::CEntityIOOutput, 0x830);
 			PROPERTY(m_bOscillateDepart,bool, 0x848);
 			PROPERTY(m_nOscillateCount,int32_t, 0x84c);
-			PROPERTY(m_eRotateType,IDENTITY(server::CFuncRotator_Rotate_t), 0x850);
-			PROPERTY(m_ePrevRotateType,IDENTITY(server::CFuncRotator_Rotate_t), 0x854);
+			PROPERTY(m_eRotateType,server::Rotate_t, 0x850);
+			PROPERTY(m_ePrevRotateType,server::Rotate_t, 0x854);
 			PROPERTY(m_bHasTargetOverride,bool, 0x858);
 			PROPERTY(m_qOrientationOverride,GlobalTypes::Quaternion, 0x860);
-			PROPERTY(m_eSpaceOverride,IDENTITY(server::RotatorTargetSpace_t), 0x870);
+			PROPERTY(m_eSpaceOverride,server::RotatorTargetSpace_t, 0x870);
 			PROPERTY(m_qAngularVelocity,GlobalTypes::QAngle, 0x874);
 			PROPERTY(m_vLookAtForcedUp,GlobalTypes::Vector, 0x880);
 			PROPERTY(m_strRotatorTarget,GlobalTypes::CUtlSymbolLarge*, 0x890);
 			PROPERTY(m_bRecordHistory,bool, 0x898);
-			NESTED_PROPERTY(m_vecRotatorHistory,IDENTITY(GlobalTypes::CUtlVector<server::RotatorHistoryEntry_t>), 0x8a0);
+			NESTED_PROPERTY(m_vecRotatorHistory,GlobalTypes::CUtlVector<server::RotatorHistoryEntry_t>, 0x8a0);
 			PROPERTY(m_bReturningToPreviousOrientation,bool, 0x8b8);
-			NESTED_PROPERTY(m_vecRotatorQueue,IDENTITY(GlobalTypes::CUtlVector<server::RotatorQueueEntry_t>), 0x8c0);
-			NESTED_PROPERTY(m_vecRotatorQueueHistory,IDENTITY(GlobalTypes::CUtlVector<server::RotatorHistoryEntry_t>), 0x8d8);
-			PROPERTY(m_eSolidType,IDENTITY(client::SolidType_t), 0x8f0);
-			PROPERTY(m_hSpeedFromMover,IDENTITY(GlobalTypes::CHandle<server::CFuncMover>), 0x8f4);
+			NESTED_PROPERTY(m_vecRotatorQueue,GlobalTypes::CUtlVector<server::RotatorQueueEntry_t>, 0x8c0);
+			NESTED_PROPERTY(m_vecRotatorQueueHistory,GlobalTypes::CUtlVector<server::RotatorHistoryEntry_t>, 0x8d8);
+			PROPERTY(m_eSolidType,client::SolidType_t, 0x8f0);
+			PROPERTY(m_hSpeedFromMover,GlobalTypes::CHandle<server::CFuncMover>, 0x8f4);
 			PROPERTY(m_iszSpeedFromMover,GlobalTypes::CUtlSymbolLarge*, 0x8f8);
 			PROPERTY(m_flSpeedScale,float32, 0x900);
 			PROPERTY(m_flMinYawRotation,float32, 0x904);
 			PROPERTY(m_flMaxYawRotation,float32, 0x908);
 			S2_PAD(0x1E0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncRotator) == 0x910, "CFuncRotator size should be 0x910");
-
-#endif
 	}
 }

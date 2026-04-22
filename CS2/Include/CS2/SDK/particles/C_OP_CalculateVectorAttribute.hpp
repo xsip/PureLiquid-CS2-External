@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ControlPointReference_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ControlPointReference_t.hpp>
 
 
 
@@ -24,21 +24,18 @@ namespace CS2 {
 		class C_OP_CalculateVectorAttribute : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_vStartValue,GlobalTypes::Vector, 0x1d0);
-			NESTED_PROPERTY(m_nFieldInput1,IDENTITY(particles::ParticleAttributeIndex_t), 0x1dc);
+			NESTED_PROPERTY(m_nFieldInput1,particles::ParticleAttributeIndex_t, 0x1dc);
 			PROPERTY(m_flInputScale1,float32, 0x1e0);
-			NESTED_PROPERTY(m_nFieldInput2,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e4);
+			NESTED_PROPERTY(m_nFieldInput2,particles::ParticleAttributeIndex_t, 0x1e4);
 			PROPERTY(m_flInputScale2,float32, 0x1e8);
-			NESTED_PROPERTY(m_nControlPointInput1,IDENTITY(particles::ControlPointReference_t), 0x1ec);
+			NESTED_PROPERTY(m_nControlPointInput1,particles::ControlPointReference_t, 0x1ec);
 			PROPERTY(m_flControlPointScale1,float32, 0x200);
-			NESTED_PROPERTY(m_nControlPointInput2,IDENTITY(particles::ControlPointReference_t), 0x204);
+			NESTED_PROPERTY(m_nControlPointInput2,particles::ControlPointReference_t, 0x204);
 			PROPERTY(m_flControlPointScale2,float32, 0x218);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x21c);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x21c);
 			PROPERTY(m_vFinalOutputScale,GlobalTypes::Vector, 0x220);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_CalculateVectorAttribute) == 0x230, "C_OP_CalculateVectorAttribute size should be 0x230");
-
-#endif
 	}
 }

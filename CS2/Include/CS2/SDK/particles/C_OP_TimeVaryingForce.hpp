@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionForce.hpp"
+#include <SDK/particles/CParticleFunctionForce.hpp>
 
 
 
@@ -27,9 +27,6 @@ namespace CS2 {
 			PROPERTY(m_EndingForce,GlobalTypes::Vector, 0x1f4);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_TimeVaryingForce) == 0x200, "C_OP_TimeVaryingForce size should be 0x200");
-
-#endif
 	}
 }

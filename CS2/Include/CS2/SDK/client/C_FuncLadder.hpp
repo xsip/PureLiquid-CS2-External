@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
-#include "C_InfoLadderDismount.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
+#include <SDK/client/C_InfoLadderDismount.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		class C_FuncLadder : public CS2::client::C_BaseModelEntity {
 		public:
 			PROPERTY(m_vecLadderDir,GlobalTypes::Vector, 0xe88);
-			NESTED_PROPERTY(m_Dismounts,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_InfoLadderDismount>>), 0xe98);
+			NESTED_PROPERTY(m_Dismounts,GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_InfoLadderDismount>>, 0xe98);
 			PROPERTY(m_vecLocalTop,GlobalTypes::Vector, 0xeb0);
 			PROPERTY(m_vecPlayerMountPositionTop,GlobalTypes::VectorWS, 0xebc);
 			PROPERTY(m_vecPlayerMountPositionBottom,GlobalTypes::VectorWS, 0xec8);
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY(m_bHasSlack,bool, 0xeda);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_FuncLadder) == 0xEE0, "C_FuncLadder size should be 0xEE0");
-
-#endif
 	}
 }

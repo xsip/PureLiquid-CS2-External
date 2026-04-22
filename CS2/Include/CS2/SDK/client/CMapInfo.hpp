@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_PointEntity.hpp"
+#include <SDK/client/C_PointEntity.hpp>
 
 
 
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_flEnvWetnessDryingAmount,float32, 0x634);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CMapInfo) == 0x638, "CMapInfo size should be 0x638");
-
-#endif
 	}
 }

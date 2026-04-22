@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY(m_bGlowing,bool, 0x51);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGlowProperty) == 0x58, "CGlowProperty size should be 0x58");
-
-#endif
 	}
 }

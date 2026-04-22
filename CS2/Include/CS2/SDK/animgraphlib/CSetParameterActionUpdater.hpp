@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimActionUpdater.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CAnimActionUpdater.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -22,13 +22,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSetParameterActionUpdater : public CS2::animgraphlib::CAnimActionUpdater {
 		public:
-			NESTED_PROPERTY(m_hParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x18);
+			NESTED_PROPERTY(m_hParam,animgraphlib::CAnimParamHandle, 0x18);
 			PROPERTY(m_value,GlobalTypes::CAnimVariant, 0x1a);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSetParameterActionUpdater) == 0x30, "CSetParameterActionUpdater size should be 0x30");
-
-#endif
 	}
 }

@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,13 +20,10 @@ namespace CS2 {
 	namespace entity2 {
 		class CEntityAttributeTable  {
 		public:
-			// PROPERTY(m_Attributes,IDENTITY(GlobalTypes::CUtlOrderedMap< CUtlStringToken, Attribute_t >*), 0x0);
-			// PROPERTY(m_Names,IDENTITY(GlobalTypes::CUtlOrderedMap< CUtlStringToken, CUtlString >*), 0x28);
+			PROPERTY(m_Attributes,GlobalTypes::CUtlOrderedMap< CUtlStringToken, Attribute_t >*, 0x0);
+			PROPERTY(m_Names,GlobalTypes::CUtlOrderedMap< CUtlStringToken, CUtlString >*, 0x28);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::entity2::CEntityAttributeTable) == 0x50, "CEntityAttributeTable size should be 0x50");
-
-#endif
 	}
 }

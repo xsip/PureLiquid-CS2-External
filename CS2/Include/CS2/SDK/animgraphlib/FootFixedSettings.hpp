@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "TraceSettings_t.hpp"
+#include <SDK/animgraphlib/TraceSettings_t.hpp>
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace animgraphlib {
 		class FootFixedSettings  {
 		public:
-			NESTED_PROPERTY(m_traceSettings,IDENTITY(animgraphlib::TraceSettings_t), 0x0);
+			NESTED_PROPERTY(m_traceSettings,animgraphlib::TraceSettings_t, 0x0);
 			PROPERTY(m_vFootBaseBindPosePositionMS,GlobalTypes::VectorAligned, 0x10);
 			PROPERTY(m_flFootBaseLength,float32, 0x20);
 			PROPERTY(m_flMaxRotationLeft,float32, 0x24);
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY(m_nFootIndex,int32_t, 0x3c);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FootFixedSettings) == 0x40, "FootFixedSettings size should be 0x40");
-
-#endif
 	}
 }

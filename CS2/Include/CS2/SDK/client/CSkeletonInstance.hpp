@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CGameSceneNode.hpp"
-#include "CModelState.hpp"
+#include <SDK/client/CGameSceneNode.hpp>
+#include <SDK/client/CModelState.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace client {
 		class CSkeletonInstance : public CS2::client::CGameSceneNode {
 		public:
-			NESTED_PROPERTY(m_modelState,IDENTITY(client::CModelState), 0x160);
+			NESTED_PROPERTY(m_modelState,client::CModelState, 0x160);
 			PROPERTY(m_bIsAnimationEnabled,bool, 0x430);
 			PROPERTY(m_bUseParentRenderBounds,bool, 0x431);
 			PROPERTY(m_bDisableSolidCollisionsForHierarchy,bool, 0x432);
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_nHitboxSet,uint8_t, 0x438);
 			S2_PAD(0x380);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSkeletonInstance) == 0x4D0, "CSkeletonInstance size should be 0x4D0");
-
-#endif
 	}
 }

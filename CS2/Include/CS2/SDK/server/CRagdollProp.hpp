@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../client/ragdoll_t.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
+#include <SDK/client/ragdoll_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -29,37 +29,34 @@ namespace CS2 {
 	namespace server {
 		class CRagdollProp : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_ragdoll,IDENTITY(client::ragdoll_t), 0xa30);
+			NESTED_PROPERTY(m_ragdoll,client::ragdoll_t, 0xa30);
 			PROPERTY(m_bStartDisabled,bool, 0xa80);
-			// PROPERTY(m_ragEnabled,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< bool >), 0xa88);
-			// PROPERTY(m_ragPos,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0xaa0);
-			// PROPERTY(m_ragAngles,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::QAngle>), 0xab8);
+			PROPERTY(m_ragEnabled,GlobalTypes::CNetworkUtlVectorBase< bool >, 0xa88);
+			PROPERTY(m_ragPos,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0xaa0);
+			PROPERTY(m_ragAngles,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::QAngle>, 0xab8);
 			PROPERTY(m_lastUpdateTickCount,uint32_t, 0xad0);
 			PROPERTY(m_allAsleep,bool, 0xad4);
 			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xad5);
-			PROPERTY(m_hDamageEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xad8);
-			PROPERTY(m_hKiller,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xadc);
-			PROPERTY(m_hPhysicsAttacker,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0xae0);
-			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,IDENTITY(entity2::GameTime_t), 0xae4);
-			NESTED_PROPERTY(m_flFadeOutStartTime,IDENTITY(entity2::GameTime_t), 0xae8);
+			PROPERTY(m_hDamageEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0xad8);
+			PROPERTY(m_hKiller,GlobalTypes::CHandle<server::CBaseEntity>, 0xadc);
+			PROPERTY(m_hPhysicsAttacker,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0xae0);
+			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,entity2::GameTime_t, 0xae4);
+			NESTED_PROPERTY(m_flFadeOutStartTime,entity2::GameTime_t, 0xae8);
 			PROPERTY(m_flFadeTime,float32, 0xaec);
 			PROPERTY(m_vecLastOrigin,GlobalTypes::VectorWS, 0xaf0);
-			NESTED_PROPERTY(m_flAwakeTime,IDENTITY(entity2::GameTime_t), 0xafc);
-			NESTED_PROPERTY(m_flLastOriginChangeTime,IDENTITY(entity2::GameTime_t), 0xb00);
+			NESTED_PROPERTY(m_flAwakeTime,entity2::GameTime_t, 0xafc);
+			NESTED_PROPERTY(m_flLastOriginChangeTime,entity2::GameTime_t, 0xb00);
 			PROPERTY(m_strOriginClassName,GlobalTypes::CUtlSymbolLarge*, 0xb08);
 			PROPERTY(m_strSourceClassName,GlobalTypes::CUtlSymbolLarge*, 0xb10);
 			PROPERTY(m_bHasBeenPhysgunned,bool, 0xb18);
 			PROPERTY(m_bAllowStretch,bool, 0xb19);
 			PROPERTY(m_flBlendWeight,float32, 0xb1c);
 			PROPERTY(m_flDefaultFadeScale,float32, 0xb20);
-			NESTED_PROPERTY(m_ragdollMins,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0xb28);
-			NESTED_PROPERTY(m_ragdollMaxs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0xb40);
+			NESTED_PROPERTY(m_ragdollMins,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0xb28);
+			NESTED_PROPERTY(m_ragdollMaxs,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0xb40);
 			PROPERTY(m_bShouldDeleteActivationRecord,bool, 0xb58);
 			S2_PAD(0x150);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CRagdollProp) == 0xB70, "CRagdollProp size should be 0xB70");
-
-#endif
 	}
 }

@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSeqSeqDescFlag.hpp"
-#include "CSeqTransition.hpp"
-#include "CSeqCmdLayer.hpp"
-#include "CAnimEventDefinition.hpp"
-#include "CAnimActivity.hpp"
-#include "CSeqPoseSetting.hpp"
+#include <SDK/animationsystem/CSeqSeqDescFlag.hpp>
+#include <SDK/animationsystem/CSeqTransition.hpp>
+#include <SDK/animationsystem/CSeqCmdLayer.hpp>
+#include <SDK/animationsystem/CAnimEventDefinition.hpp>
+#include <SDK/animationsystem/CAnimActivity.hpp>
+#include <SDK/animationsystem/CSeqPoseSetting.hpp>
 
 
 
@@ -27,22 +27,19 @@ namespace CS2 {
 		class CSeqCmdSeqDesc  {
 		public:
 			PROPERTY(m_sName,GlobalTypes::CBufferString, 0x0);
-			NESTED_PROPERTY(m_flags,IDENTITY(animationsystem::CSeqSeqDescFlag), 0x10);
-			NESTED_PROPERTY(m_transition,IDENTITY(animationsystem::CSeqTransition), 0x1c);
+			NESTED_PROPERTY(m_flags,animationsystem::CSeqSeqDescFlag, 0x10);
+			NESTED_PROPERTY(m_transition,animationsystem::CSeqTransition, 0x1c);
 			PROPERTY(m_nFrameRangeSequence,int16_t, 0x24);
 			PROPERTY(m_nFrameCount,int16_t, 0x26);
 			PROPERTY(m_flFPS,float32, 0x28);
 			PROPERTY(m_nSubCycles,int16_t, 0x2c);
 			PROPERTY(m_numLocalResults,int16_t, 0x2e);
-			NESTED_PROPERTY(m_cmdLayerArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqCmdLayer>), 0x30);
-			NESTED_PROPERTY(m_eventArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimEventDefinition>), 0x48);
-			NESTED_PROPERTY(m_activityArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimActivity>), 0x60);
-			NESTED_PROPERTY(m_poseSettingArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqPoseSetting>), 0x78);
+			NESTED_PROPERTY(m_cmdLayerArray,GlobalTypes::CUtlVector<animationsystem::CSeqCmdLayer>, 0x30);
+			NESTED_PROPERTY(m_eventArray,GlobalTypes::CUtlVector<animationsystem::CAnimEventDefinition>, 0x48);
+			NESTED_PROPERTY(m_activityArray,GlobalTypes::CUtlVector<animationsystem::CAnimActivity>, 0x60);
+			NESTED_PROPERTY(m_poseSettingArray,GlobalTypes::CUtlVector<animationsystem::CSeqPoseSetting>, 0x78);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqCmdSeqDesc) == 0x90, "CSeqCmdSeqDesc size should be 0x90");
-
-#endif
 	}
 }

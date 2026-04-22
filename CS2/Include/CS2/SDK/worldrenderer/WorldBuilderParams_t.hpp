@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "BakedLightingInfo_t.hpp"
+#include <SDK/worldrenderer/BakedLightingInfo_t.hpp>
 
 
 
@@ -24,14 +24,11 @@ namespace CS2 {
 			PROPERTY(m_flMinDrawVolumeSize,float32, 0x0);
 			PROPERTY(m_bBuildBakedLighting,bool, 0x4);
 			PROPERTY(m_bAggregateInstanceStreams,bool, 0x5);
-			NESTED_PROPERTY(m_bakedLightingInfo,IDENTITY(worldrenderer::BakedLightingInfo_t), 0x8);
+			NESTED_PROPERTY(m_bakedLightingInfo,worldrenderer::BakedLightingInfo_t, 0x8);
 			PROPERTY(m_nCompileTimestamp,uint64_t, 0x50);
 			PROPERTY(m_nCompileFingerprint,uint64_t, 0x58);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::WorldBuilderParams_t) == 0x60, "WorldBuilderParams_t size should be 0x60");
-
-#endif
 	}
 }

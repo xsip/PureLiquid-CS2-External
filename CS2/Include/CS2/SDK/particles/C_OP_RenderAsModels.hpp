@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "ModelReference_t.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/ModelReference_t.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -23,19 +23,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderAsModels : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_ModelList,IDENTITY(GlobalTypes::CUtlVector<particles::ModelReference_t>), 0x220);
+			NESTED_PROPERTY(m_ModelList,GlobalTypes::CUtlVector<particles::ModelReference_t>, 0x220);
 			PROPERTY(m_flModelScale,float32, 0x23c);
 			PROPERTY(m_bFitToModelSize,bool, 0x240);
 			PROPERTY(m_bNonUniformScaling,bool, 0x241);
-			NESTED_PROPERTY(m_nXAxisScalingAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x244);
-			NESTED_PROPERTY(m_nYAxisScalingAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x248);
-			NESTED_PROPERTY(m_nZAxisScalingAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x24c);
+			NESTED_PROPERTY(m_nXAxisScalingAttribute,particles::ParticleAttributeIndex_t, 0x244);
+			NESTED_PROPERTY(m_nYAxisScalingAttribute,particles::ParticleAttributeIndex_t, 0x248);
+			NESTED_PROPERTY(m_nZAxisScalingAttribute,particles::ParticleAttributeIndex_t, 0x24c);
 			PROPERTY(m_nSizeCullBloat,int32_t, 0x250);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderAsModels) == 0x258, "C_OP_RenderAsModels size should be 0x258");
-
-#endif
 	}
 }

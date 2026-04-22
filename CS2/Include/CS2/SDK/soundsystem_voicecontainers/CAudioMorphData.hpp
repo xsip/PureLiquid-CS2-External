@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,17 +20,14 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CAudioMorphData  {
 		public:
-			NESTED_PROPERTY(m_times,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x0);
-			NESTED_PROPERTY(m_nameHashCodes,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x18);
-			PROPERTY(m_nameStrings,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x30);
-			NESTED_PROPERTY(m_samples,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<float32>>), 0x48);
+			NESTED_PROPERTY(m_times,GlobalTypes::CUtlVector< float32 >, 0x0);
+			NESTED_PROPERTY(m_nameHashCodes,GlobalTypes::CUtlVector< uint32 >, 0x18);
+			PROPERTY(m_nameStrings,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x30);
+			NESTED_PROPERTY(m_samples,GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>, 0x48);
 			PROPERTY(m_flEaseIn,float32, 0x60);
 			PROPERTY(m_flEaseOut,float32, 0x64);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CAudioMorphData) == 0x68, "CAudioMorphData size should be 0x68");
-
-#endif
 	}
 }

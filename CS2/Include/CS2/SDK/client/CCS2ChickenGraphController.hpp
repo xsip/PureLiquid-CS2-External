@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimGraphControllerBase.hpp"
+#include <SDK/client/CAnimGraphControllerBase.hpp>
 
 
 
@@ -21,21 +21,18 @@ namespace CS2 {
 	namespace client {
 		class CCS2ChickenGraphController : public CS2::client::CAnimGraphControllerBase {
 		public:
-			// PROPERTY(m_action,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x90);
-			// PROPERTY(m_actionSubtype,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0xa8);
+			PROPERTY(m_action,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x90);
+			PROPERTY(m_actionSubtype,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0xa8);
 			PROPERTY(m_bActionReset,GlobalTypes::CAnimGraph2ParamAutoResetOptionalRef, 0xc0);
-			// PROPERTY(m_idleVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xe0);
-			// PROPERTY(m_runVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xf8);
-			// PROPERTY(m_panicVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x110);
-			// PROPERTY(m_squatVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x128);
-			// PROPERTY(m_bInWater,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x140);
+			PROPERTY(m_idleVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0xe0);
+			PROPERTY(m_runVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0xf8);
+			PROPERTY(m_panicVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x110);
+			PROPERTY(m_squatVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x128);
+			PROPERTY(m_bInWater,GlobalTypes::CAnimGraph2ParamOptionalRef< bool >, 0x140);
 			PROPERTY(m_bHasActionCompletedEvent,bool, 0x158);
 			PROPERTY(m_bWaitingForCompletedEvent,bool, 0x159);
 			S2_PAD(0xD0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCS2ChickenGraphController) == 0x160, "CCS2ChickenGraphController size should be 0x160");
-
-#endif
 	}
 }

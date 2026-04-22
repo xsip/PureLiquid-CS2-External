@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ExternalAnimGraphHandle_t.hpp"
+#include <SDK/client/ExternalAnimGraphHandle_t.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace client {
 		class CAnimGraphControllerBase  {
 		public:
-			NESTED_PROPERTY(m_hExternalGraph,IDENTITY(client::ExternalAnimGraphHandle_t), 0x18);
+			NESTED_PROPERTY(m_hExternalGraph,client::ExternalAnimGraphHandle_t, 0x18);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CAnimGraphControllerBase) == 0x90, "CAnimGraphControllerBase size should be 0x90");
-
-#endif
 	}
 }

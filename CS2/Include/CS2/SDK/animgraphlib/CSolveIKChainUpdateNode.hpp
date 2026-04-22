@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "CSolveIKTargetHandle_t.hpp"
-#include "SolveIKChainPoseOpFixedSettings_t.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/CSolveIKTargetHandle_t.hpp>
+#include <SDK/animgraphlib/SolveIKChainPoseOpFixedSettings_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSolveIKChainUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_targetHandles,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CSolveIKTargetHandle_t>), 0x70);
-			NESTED_PROPERTY(m_opFixedData,IDENTITY(animgraphlib::SolveIKChainPoseOpFixedSettings_t), 0x88);
+			NESTED_PROPERTY(m_targetHandles,GlobalTypes::CUtlVector<animgraphlib::CSolveIKTargetHandle_t>, 0x70);
+			NESTED_PROPERTY(m_opFixedData,animgraphlib::SolveIKChainPoseOpFixedSettings_t, 0x88);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSolveIKChainUpdateNode) == 0xA8, "CSolveIKChainUpdateNode size should be 0xA8");
-
-#endif
 	}
 }

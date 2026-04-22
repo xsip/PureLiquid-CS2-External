@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
 
 
 
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(m_bUseBones,bool, 0x264);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_InitialVelocityFromHitbox) == 0x268, "C_INIT_InitialVelocityFromHitbox size should be 0x268");
-
-#endif
 	}
 }

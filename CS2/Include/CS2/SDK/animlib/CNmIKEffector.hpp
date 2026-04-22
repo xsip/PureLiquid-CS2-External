@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -27,9 +27,6 @@ namespace CS2 {
 			PROPERTY(m_flWeight,float32, 0x30);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmIKEffector) == 0x40, "CNmIKEffector size should be 0x40");
-
-#endif
 	}
 }

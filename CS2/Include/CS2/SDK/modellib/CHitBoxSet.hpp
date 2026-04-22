@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CHitBox.hpp"
+#include <SDK/modellib/CHitBox.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_nNameHash,uint32_t, 0x8);
-			NESTED_PROPERTY(m_HitBoxes,IDENTITY(GlobalTypes::CUtlVector<modellib::CHitBox>), 0x10);
+			NESTED_PROPERTY(m_HitBoxes,GlobalTypes::CUtlVector<modellib::CHitBox>, 0x10);
 			PROPERTY(m_SourceFilename,GlobalTypes::CUtlString*, 0x28);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CHitBoxSet) == 0x30, "CHitBoxSet size should be 0x30");
-
-#endif
 	}
 }

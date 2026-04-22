@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "RnShapeDesc_t.hpp"
-#include "RnCapsule_t.hpp"
+#include <SDK/physicslib/RnShapeDesc_t.hpp>
+#include <SDK/physicslib/RnCapsule_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace physicslib {
 		class RnCapsuleDesc_t : public CS2::physicslib::RnShapeDesc_t {
 		public:
-			NESTED_PROPERTY(m_Capsule,IDENTITY(physicslib::RnCapsule_t), 0x18);
+			NESTED_PROPERTY(m_Capsule,physicslib::RnCapsule_t, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnCapsuleDesc_t) == 0x38, "RnCapsuleDesc_t size should be 0x38");
-
-#endif
 	}
 }

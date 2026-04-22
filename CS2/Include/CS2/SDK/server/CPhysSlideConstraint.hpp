@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPhysConstraint.hpp"
-#include "ConstraintSoundInfo.hpp"
+#include <SDK/server/CPhysConstraint.hpp>
+#include <SDK/server/ConstraintSoundInfo.hpp>
 
 
 
@@ -31,12 +31,9 @@ namespace CS2 {
 			PROPERTY(m_flMotorFrequency,float32, 0x52c);
 			PROPERTY(m_flMotorDampingRatio,float32, 0x530);
 			PROPERTY(m_bUseEntityPivot,bool, 0x534);
-			NESTED_PROPERTY(m_soundInfo,IDENTITY(server::ConstraintSoundInfo), 0x538);
+			NESTED_PROPERTY(m_soundInfo,server::ConstraintSoundInfo, 0x538);
 			S2_PAD(0xC8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysSlideConstraint) == 0x5D0, "CPhysSlideConstraint size should be 0x5D0");
-
-#endif
 	}
 }

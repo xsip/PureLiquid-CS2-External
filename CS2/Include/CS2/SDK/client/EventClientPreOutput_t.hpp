@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "EngineLoopState_t.hpp"
+#include <SDK/client/EngineLoopState_t.hpp>
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace client {
 		class EventClientPreOutput_t  {
 		public:
-			NESTED_PROPERTY(m_LoopState,IDENTITY(client::EngineLoopState_t), 0x0);
+			NESTED_PROPERTY(m_LoopState,client::EngineLoopState_t, 0x0);
 			PROPERTY(m_flRenderTime,float64, 0x28);
 			PROPERTY(m_flRenderFrameTime,float64, 0x30);
 			PROPERTY(m_flRenderFrameTimeUnbounded,float64, 0x38);
@@ -29,9 +29,6 @@ namespace CS2 {
 			PROPERTY(m_bRenderOnly,bool, 0x44);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::EventClientPreOutput_t) == 0x48, "EventClientPreOutput_t size should be 0x48");
-
-#endif
 	}
 }

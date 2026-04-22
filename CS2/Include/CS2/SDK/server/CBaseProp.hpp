@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
+#include <SDK/server/CBaseAnimGraph.hpp>
 
 
 
@@ -27,9 +27,6 @@ namespace CS2 {
 			PROPERTY(m_mPreferredCatchTransform,GlobalTypes::CTransform, 0xa30);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseProp) == 0xA50, "CBaseProp size should be 0xA50");
-
-#endif
 	}
 }

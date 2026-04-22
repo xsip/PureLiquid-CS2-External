@@ -4,17 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "MorphBundleType_t.hpp"
-#include "CMorphData.hpp"
-#include "CFlexDesc.hpp"
-#include "CFlexController.hpp"
-#include "CFlexRule.hpp"
+#include <SDK/modellib/CMorphData.hpp>
+#include <SDK/modellib/CFlexDesc.hpp>
+#include <SDK/modellib/CFlexController.hpp>
+#include <SDK/modellib/CFlexRule.hpp>
 
 
 
@@ -32,17 +31,14 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nWidth,int32_t, 0x10);
 			PROPERTY(m_nHeight,int32_t, 0x14);
-			NESTED_PROPERTY(m_bundleTypes,IDENTITY(GlobalTypes::CUtlVector<modellib::MorphBundleType_t>), 0x18);
-			NESTED_PROPERTY(m_morphDatas,IDENTITY(GlobalTypes::CUtlVector<modellib::CMorphData>), 0x30);
-			PROPERTY(m_pTextureAtlas,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x48);
-			NESTED_PROPERTY(m_FlexDesc,IDENTITY(GlobalTypes::CUtlVector<modellib::CFlexDesc>), 0x50);
-			NESTED_PROPERTY(m_FlexControllers,IDENTITY(GlobalTypes::CUtlVector<modellib::CFlexController>), 0x68);
-			NESTED_PROPERTY(m_FlexRules,IDENTITY(GlobalTypes::CUtlVector<modellib::CFlexRule>), 0x80);
+			NESTED_PROPERTY(m_bundleTypes,GlobalTypes::CUtlVector< MorphBundleType_t >, 0x18);
+			NESTED_PROPERTY(m_morphDatas,GlobalTypes::CUtlVector<modellib::CMorphData>, 0x30);
+			PROPERTY(m_pTextureAtlas,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x48);
+			NESTED_PROPERTY(m_FlexDesc,GlobalTypes::CUtlVector<modellib::CFlexDesc>, 0x50);
+			NESTED_PROPERTY(m_FlexControllers,GlobalTypes::CUtlVector<modellib::CFlexController>, 0x68);
+			NESTED_PROPERTY(m_FlexRules,GlobalTypes::CUtlVector<modellib::CFlexRule>, 0x80);
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CMorphSetData) == 0x98, "CMorphSetData size should be 0x98");
-
-#endif
 	}
 }

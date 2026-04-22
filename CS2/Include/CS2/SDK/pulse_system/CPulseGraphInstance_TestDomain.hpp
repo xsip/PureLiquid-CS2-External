@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CBasePulseGraphInstance.hpp"
+#include <SDK/pulse_runtime_lib/CBasePulseGraphInstance.hpp>
 
 
 
@@ -28,13 +28,10 @@ namespace CS2 {
 			PROPERTY(m_bExpectingCursorTerminatedDueToMaxInstructions,bool, 0x134);
 			PROPERTY(m_nCursorsTerminatedDueToMaxInstructions,int32_t, 0x138);
 			PROPERTY(m_nNextValidateIndex,int32_t, 0x13c);
-			PROPERTY(m_Tracepoints,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x140);
+			PROPERTY(m_Tracepoints,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x140);
 			PROPERTY(m_bTestYesOrNoPath,bool, 0x158);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain) == 0x160, "CPulseGraphInstance_TestDomain size should be 0x160");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,22 +22,19 @@ namespace CS2 {
 	namespace server {
 		class CLogicAuto : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_OnMapSpawn,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			NESTED_PROPERTY(m_OnDemoMapSpawn,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
-			NESTED_PROPERTY(m_OnNewGame,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
-			NESTED_PROPERTY(m_OnLoadGame,IDENTITY(entity2::CEntityIOOutput), 0x4f0);
-			NESTED_PROPERTY(m_OnMapTransition,IDENTITY(entity2::CEntityIOOutput), 0x508);
-			NESTED_PROPERTY(m_OnBackgroundMap,IDENTITY(entity2::CEntityIOOutput), 0x520);
-			NESTED_PROPERTY(m_OnMultiNewMap,IDENTITY(entity2::CEntityIOOutput), 0x538);
-			NESTED_PROPERTY(m_OnMultiNewRound,IDENTITY(entity2::CEntityIOOutput), 0x550);
-			NESTED_PROPERTY(m_OnVREnabled,IDENTITY(entity2::CEntityIOOutput), 0x568);
-			NESTED_PROPERTY(m_OnVRNotEnabled,IDENTITY(entity2::CEntityIOOutput), 0x580);
+			NESTED_PROPERTY(m_OnMapSpawn,entity2::CEntityIOOutput, 0x4a8);
+			NESTED_PROPERTY(m_OnDemoMapSpawn,entity2::CEntityIOOutput, 0x4c0);
+			NESTED_PROPERTY(m_OnNewGame,entity2::CEntityIOOutput, 0x4d8);
+			NESTED_PROPERTY(m_OnLoadGame,entity2::CEntityIOOutput, 0x4f0);
+			NESTED_PROPERTY(m_OnMapTransition,entity2::CEntityIOOutput, 0x508);
+			NESTED_PROPERTY(m_OnBackgroundMap,entity2::CEntityIOOutput, 0x520);
+			NESTED_PROPERTY(m_OnMultiNewMap,entity2::CEntityIOOutput, 0x538);
+			NESTED_PROPERTY(m_OnMultiNewRound,entity2::CEntityIOOutput, 0x550);
+			NESTED_PROPERTY(m_OnVREnabled,entity2::CEntityIOOutput, 0x568);
+			NESTED_PROPERTY(m_OnVRNotEnabled,entity2::CEntityIOOutput, 0x580);
 			PROPERTY(m_globalstate,GlobalTypes::CUtlSymbolLarge*, 0x598);
 			S2_PAD(0xF8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicAuto) == 0x5A0, "CLogicAuto size should be 0x5A0");
-
-#endif
 	}
 }

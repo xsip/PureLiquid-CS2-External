@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace server {
 		class CEnvDecal : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_hDecalMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x730);
+			PROPERTY(m_hDecalMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x730);
 			PROPERTY(m_flWidth,float32, 0x738);
 			PROPERTY(m_flHeight,float32, 0x73c);
 			PROPERTY(m_flDepth,float32, 0x740);
@@ -37,9 +37,6 @@ namespace CS2 {
 			PROPERTY(m_flDepthSortBias,float32, 0x74c);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvDecal) == 0x750, "CEnvDecal size should be 0x750");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "RenderInputLayoutField_t.hpp"
+#include <SDK/modellib/RenderInputLayoutField_t.hpp>
 
 
 
@@ -32,12 +32,9 @@ namespace CS2 {
 			PROPERTY(m_bCreateRawBuffer,bool, 0x11);
 			PROPERTY(m_bCreatePooledBuffer,bool, 0x12);
 			PROPERTY(m_nBufferUsage,uint8_t, 0x13);
-			NESTED_PROPERTY(m_inputLayoutFields,IDENTITY(GlobalTypes::CUtlVector<modellib::RenderInputLayoutField_t>), 0x18);
+			NESTED_PROPERTY(m_inputLayoutFields,GlobalTypes::CUtlVector<modellib::RenderInputLayoutField_t>, 0x18);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::ModelMeshBufferData_t) == 0x30, "ModelMeshBufferData_t size should be 0x30");
-
-#endif
 	}
 }

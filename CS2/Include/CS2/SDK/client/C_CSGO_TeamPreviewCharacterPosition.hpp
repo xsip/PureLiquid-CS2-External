@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "C_EconItemView.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/client/C_EconItemView.hpp>
 
 
 
@@ -27,14 +27,11 @@ namespace CS2 {
 			PROPERTY(m_nOrdinal,int32_t, 0x610);
 			PROPERTY(m_sWeaponName,GlobalTypes::CUtlString*, 0x618);
 			PROPERTY(m_xuid,uint64_t, 0x620);
-			NESTED_PROPERTY(m_agentItem,IDENTITY(client::C_EconItemView), 0x628);
-			NESTED_PROPERTY(m_glovesItem,IDENTITY(client::C_EconItemView), 0xa98);
-			NESTED_PROPERTY(m_weaponItem,IDENTITY(client::C_EconItemView), 0xf08);
+			NESTED_PROPERTY(m_agentItem,client::C_EconItemView, 0x628);
+			NESTED_PROPERTY(m_glovesItem,client::C_EconItemView, 0xa98);
+			NESTED_PROPERTY(m_weaponItem,client::C_EconItemView, 0xf08);
 			S2_PAD(0xDA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGO_TeamPreviewCharacterPosition) == 0x13A8, "C_CSGO_TeamPreviewCharacterPosition size should be 0x13A8");
-
-#endif
 	}
 }

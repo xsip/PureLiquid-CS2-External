@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp"
+#include <SDK/resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp>
 
 
 
@@ -27,13 +27,10 @@ namespace CS2 {
 		class CSoundContainerReferenceArray  {
 		public:
 			PROPERTY(m_bUseReference,bool, 0x0);
-			NESTED_PROPERTY(m_sounds,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>), 0x8);
-			NESTED_PROPERTY(m_pSounds,IDENTITY(GlobalTypes::CUtlVector<soundsystem_voicecontainers::CVoiceContainerBase*>), 0x20);
+			NESTED_PROPERTY(m_sounds,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>, 0x8);
+			NESTED_PROPERTY(m_pSounds,GlobalTypes::CUtlVector<soundsystem_voicecontainers::CVoiceContainerBase*>, 0x20);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CSoundContainerReferenceArray) == 0x38, "CSoundContainerReferenceArray size should be 0x38");
-
-#endif
 	}
 }

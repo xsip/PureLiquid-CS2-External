@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseValue.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseValue.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace pulse_system {
 		class CPulseCell_Val_TestDomainGetEntityName : public CS2::pulse_runtime_lib::CPulseCell_BaseValue {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_system::CPulseCell_Val_TestDomainGetEntityName) == 0x48, "CPulseCell_Val_TestDomainGetEntityName size should be 0x48");
-
-#endif
 	}
 }

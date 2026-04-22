@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CFuncTrackTrain.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CFuncTrackTrain.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace server {
 		class CFuncTankTrain : public CS2::server::CFuncTrackTrain {
 		public:
-			NESTED_PROPERTY(m_OnDeath,IDENTITY(entity2::CEntityIOOutput), 0x858);
+			NESTED_PROPERTY(m_OnDeath,entity2::CEntityIOOutput, 0x858);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncTankTrain) == 0x870, "CFuncTankTrain size should be 0x870");
-
-#endif
 	}
 }

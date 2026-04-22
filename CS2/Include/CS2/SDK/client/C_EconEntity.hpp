@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseFlex.hpp"
-#include "C_AttributeContainer.hpp"
-#include "C_EconEntity_AttachedModelData_t.hpp"
+#include <SDK/client/C_BaseFlex.hpp>
+#include <SDK/client/C_AttributeContainer.hpp>
+#include <SDK/client/AttachedModelData_t.hpp>
 
 
 
@@ -32,7 +32,7 @@ namespace CS2 {
 			PROPERTY(m_flFlexDelayTime,float32, 0x1360);
 			PROPERTY(m_flFlexDelayedWeight,float32*, 0x1368);
 			PROPERTY(m_bAttributesInitialized,bool, 0x1370);
-			NESTED_PROPERTY(m_AttributeManager,IDENTITY(client::C_AttributeContainer), 0x1378);
+			NESTED_PROPERTY(m_AttributeManager,client::C_AttributeContainer, 0x1378);
 			PROPERTY(m_OriginalOwnerXuidLow,uint32_t, 0x1848);
 			PROPERTY(m_OriginalOwnerXuidHigh,uint32_t, 0x184c);
 			PROPERTY(m_nFallbackPaintKit,int32_t, 0x1850);
@@ -41,19 +41,16 @@ namespace CS2 {
 			PROPERTY(m_nFallbackStatTrak,int32_t, 0x185c);
 			PROPERTY(m_bClientside,bool, 0x1860);
 			PROPERTY(m_bParticleSystemsCreated,bool, 0x1861);
-			NESTED_PROPERTY(m_vecAttachedParticles,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x1868);
-			PROPERTY(m_hViewmodelAttachment,IDENTITY(GlobalTypes::CHandle<client::CBaseAnimGraph>), 0x1880);
+			NESTED_PROPERTY(m_vecAttachedParticles,GlobalTypes::CUtlVector< int32 >, 0x1868);
+			PROPERTY(m_hViewmodelAttachment,GlobalTypes::CHandle<client::CBaseAnimGraph>, 0x1880);
 			PROPERTY(m_iOldTeam,int32_t, 0x1884);
 			PROPERTY(m_bAttachmentDirty,bool, 0x1888);
 			PROPERTY(m_nUnloadedModelIndex,int32_t, 0x188c);
 			PROPERTY(m_iNumOwnerValidationRetries,int32_t, 0x1890);
-			PROPERTY(m_hOldProvidee,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x18a0);
-			NESTED_PROPERTY(m_vecAttachedModels,IDENTITY(GlobalTypes::CUtlVector<client::C_EconEntity_AttachedModelData_t>), 0x18a8);
+			PROPERTY(m_hOldProvidee,GlobalTypes::CHandle<client::C_BaseEntity>, 0x18a0);
+			NESTED_PROPERTY(m_vecAttachedModels,GlobalTypes::CUtlVector<client::AttachedModelData_t>, 0x18a8);
 			S2_PAD(0x570);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EconEntity) == 0x18C0, "C_EconEntity size should be 0x18C0");
-
-#endif
 	}
 }

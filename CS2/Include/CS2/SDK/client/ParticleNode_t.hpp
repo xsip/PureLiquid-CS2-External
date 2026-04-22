@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ParticleIndex_t.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/client/ParticleIndex_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -27,18 +27,15 @@ namespace CS2 {
 	namespace client {
 		class ParticleNode_t  {
 		public:
-			PROPERTY(m_hEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x0);
-			NESTED_PROPERTY(m_iIndex,IDENTITY(client::ParticleIndex_t), 0x4);
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x8);
+			PROPERTY(m_hEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0x0);
+			NESTED_PROPERTY(m_iIndex,client::ParticleIndex_t, 0x4);
+			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x8);
 			PROPERTY(m_flGrowthDuration,float32, 0xc);
 			PROPERTY(m_vecGrowthOrigin,GlobalTypes::Vector, 0x10);
 			PROPERTY(m_flEndcapTime,float32, 0x1c);
 			PROPERTY(m_bMarkedForDelete,bool, 0x20);
 			S2_PAD(0x24);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ParticleNode_t) == 0x24, "ParticleNode_t size should be 0x24");
-
-#endif
 	}
 }

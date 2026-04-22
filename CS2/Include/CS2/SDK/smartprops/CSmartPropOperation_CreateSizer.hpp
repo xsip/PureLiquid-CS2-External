@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropTransformOperation.hpp"
+#include <SDK/smartprops/CSmartPropTransformOperation.hpp>
 
 
 
@@ -43,9 +43,6 @@ namespace CS2 {
 			PROPERTY(m_OutputVariableMaxZ,GlobalTypes::CUtlString*, 0x3c0);
 			S2_PAD(0x378);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_CreateSizer) == 0x3C8, "CSmartPropOperation_CreateSizer size should be 0x3C8");
-
-#endif
 	}
 }

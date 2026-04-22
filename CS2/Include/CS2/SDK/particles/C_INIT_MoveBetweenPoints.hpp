@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -22,18 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_MoveBetweenPoints : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_flSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_flSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
-			NESTED_PROPERTY(m_flEndSpread,IDENTITY(particleslib::CPerParticleFloatInput), 0x4b8);
-			NESTED_PROPERTY(m_flStartOffset,IDENTITY(particleslib::CPerParticleFloatInput), 0x628);
-			NESTED_PROPERTY(m_flEndOffset,IDENTITY(particleslib::CPerParticleFloatInput), 0x798);
+			NESTED_PROPERTY(m_flSpeedMin,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_flSpeedMax,particleslib::CPerParticleFloatInput, 0x348);
+			NESTED_PROPERTY(m_flEndSpread,particleslib::CPerParticleFloatInput, 0x4b8);
+			NESTED_PROPERTY(m_flStartOffset,particleslib::CPerParticleFloatInput, 0x628);
+			NESTED_PROPERTY(m_flEndOffset,particleslib::CPerParticleFloatInput, 0x798);
 			PROPERTY(m_nEndControlPointNumber,int32_t, 0x908);
 			PROPERTY(m_bTrailBias,bool, 0x90c);
 			S2_PAD(0x738);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_MoveBetweenPoints) == 0x910, "C_INIT_MoveBetweenPoints size should be 0x910");
-
-#endif
 	}
 }

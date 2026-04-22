@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -27,16 +27,13 @@ namespace CS2 {
 	namespace server {
 		class CLogicPlayerProxy : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_PlayerHasAmmo,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			NESTED_PROPERTY(m_PlayerHasNoAmmo,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
-			NESTED_PROPERTY(m_PlayerDied,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
-			// PROPERTY(m_RequestedPlayerHealth,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32, int32 >), 0x4f0);
-			PROPERTY(m_hPlayer,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x510);
+			NESTED_PROPERTY(m_PlayerHasAmmo,entity2::CEntityIOOutput, 0x4a8);
+			NESTED_PROPERTY(m_PlayerHasNoAmmo,entity2::CEntityIOOutput, 0x4c0);
+			NESTED_PROPERTY(m_PlayerDied,entity2::CEntityIOOutput, 0x4d8);
+			PROPERTY(m_RequestedPlayerHealth,GlobalTypes::CEntityOutputTemplate< int32, int32 >, 0x4f0);
+			PROPERTY(m_hPlayer,GlobalTypes::CHandle<server::CBaseEntity>, 0x510);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicPlayerProxy) == 0x518, "CLogicPlayerProxy size should be 0x518");
-
-#endif
 	}
 }

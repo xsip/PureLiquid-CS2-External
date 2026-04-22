@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseCSGrenadeProjectile.hpp"
+#include <SDK/client/C_BaseCSGrenadeProjectile.hpp>
 
 
 
@@ -26,16 +26,13 @@ namespace CS2 {
 			PROPERTY(m_nRandomSeed,int32_t, 0x1458);
 			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0x145c);
 			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::Vector, 0x1468);
-			// PROPERTY(m_VoxelFrameData,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< uint8 >), 0x1478);
+			PROPERTY(m_VoxelFrameData,GlobalTypes::C_NetworkUtlVectorBase< uint8 >, 0x1478);
 			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0x1490);
 			PROPERTY(m_nVoxelUpdate,int32_t, 0x1494);
 			PROPERTY(m_bSmokeVolumeDataReceived,bool, 0x1498);
 			PROPERTY(m_bSmokeEffectSpawned,bool, 0x1499);
 			S2_PAD(0x1B8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SmokeGrenadeProjectile) == 0x15F0, "C_SmokeGrenadeProjectile size should be 0x15F0");
-
-#endif
 	}
 }

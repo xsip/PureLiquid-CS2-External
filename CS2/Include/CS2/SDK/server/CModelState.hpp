@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,19 +25,16 @@ namespace CS2 {
 	namespace server {
 		class CModelState  {
 		public:
-			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0xa0);
+			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0xa0);
 			PROPERTY(m_ModelName,GlobalTypes::CUtlSymbolLarge*, 0xa8);
 			PROPERTY(m_bClientClothCreationSuppressed,bool, 0xf5);
 			PROPERTY(m_MeshGroupMask,uint64_t, 0x1a0);
-			// PROPERTY(m_nBodyGroupChoices,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< int32 >), 0x1f0);
+			PROPERTY(m_nBodyGroupChoices,GlobalTypes::CNetworkUtlVectorBase< int32 >, 0x1f0);
 			PROPERTY(m_nIdealMotionType,int8_t, 0x23a);
 			PROPERTY(m_nForceLOD,int8_t, 0x23b);
 			PROPERTY(m_nClothUpdateFlags,int8_t, 0x23c);
 			S2_PAD(0x250);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CModelState) == 0x250, "CModelState size should be 0x250");
-
-#endif
 	}
 }

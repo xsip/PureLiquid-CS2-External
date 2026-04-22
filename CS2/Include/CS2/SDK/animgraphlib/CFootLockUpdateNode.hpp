@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "FootLockPoseOpFixedSettings.hpp"
-#include "FootFixedSettings.hpp"
-#include "CAnimInputDamping.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/FootLockPoseOpFixedSettings.hpp>
+#include <SDK/animgraphlib/FootFixedSettings.hpp>
+#include <SDK/animgraphlib/CAnimInputDamping.hpp>
 
 
 
@@ -24,10 +24,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CFootLockUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_opFixedSettings,IDENTITY(animgraphlib::FootLockPoseOpFixedSettings), 0x70);
-			NESTED_PROPERTY(m_footSettings,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::FootFixedSettings>), 0xe0);
-			NESTED_PROPERTY(m_hipShiftDamping,IDENTITY(animgraphlib::CAnimInputDamping), 0xf8);
-			NESTED_PROPERTY(m_rootHeightDamping,IDENTITY(animgraphlib::CAnimInputDamping), 0x110);
+			NESTED_PROPERTY(m_opFixedSettings,animgraphlib::FootLockPoseOpFixedSettings, 0x70);
+			NESTED_PROPERTY(m_footSettings,GlobalTypes::CUtlVector<animgraphlib::FootFixedSettings>, 0xe0);
+			NESTED_PROPERTY(m_hipShiftDamping,animgraphlib::CAnimInputDamping, 0xf8);
+			NESTED_PROPERTY(m_rootHeightDamping,animgraphlib::CAnimInputDamping, 0x110);
 			PROPERTY(m_flStrideCurveScale,float32, 0x128);
 			PROPERTY(m_flStrideCurveLimitScale,float32, 0x12c);
 			PROPERTY(m_flStepHeightIncreaseScale,float32, 0x130);
@@ -46,9 +46,6 @@ namespace CS2 {
 			PROPERTY(m_bEnableRootHeightDamping,bool, 0x155);
 			S2_PAD(0xE8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFootLockUpdateNode) == 0x158, "CFootLockUpdateNode size should be 0x158");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../modellib/AttachmentHandle_t.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/modellib/AttachmentHandle_t.hpp>
 
 
 
@@ -38,7 +38,7 @@ namespace CS2 {
 			PROPERTY(m_nSegments,uint8_t, 0x754);
 			PROPERTY(m_bConstrainBetweenEndpoints,bool, 0x755);
 			PROPERTY(m_strRopeMaterialModel,GlobalTypes::CUtlSymbolLarge*, 0x758);
-			PROPERTY(m_iRopeMaterialModelIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x760);
+			PROPERTY(m_iRopeMaterialModelIndex,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x760);
 			PROPERTY(m_Subdiv,uint8_t, 0x768);
 			PROPERTY(m_nChangeCount,uint8_t, 0x769);
 			PROPERTY(m_RopeLength,int16_t, 0x76a);
@@ -47,15 +47,12 @@ namespace CS2 {
 			PROPERTY(m_flScrollSpeed,float32, 0x770);
 			PROPERTY(m_bStartPointValid,bool, 0x774);
 			PROPERTY(m_bEndPointValid,bool, 0x775);
-			PROPERTY(m_hStartPoint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x778);
-			PROPERTY(m_hEndPoint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x77c);
-			NESTED_PROPERTY(m_iStartAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x780);
-			NESTED_PROPERTY(m_iEndAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x781);
+			PROPERTY(m_hStartPoint,GlobalTypes::CHandle<server::CBaseEntity>, 0x778);
+			PROPERTY(m_hEndPoint,GlobalTypes::CHandle<server::CBaseEntity>, 0x77c);
+			NESTED_PROPERTY(m_iStartAttachment,modellib::AttachmentHandle_t, 0x780);
+			NESTED_PROPERTY(m_iEndAttachment,modellib::AttachmentHandle_t, 0x781);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CRopeKeyframe) == 0x788, "CRopeKeyframe size should be 0x788");
-
-#endif
 	}
 }

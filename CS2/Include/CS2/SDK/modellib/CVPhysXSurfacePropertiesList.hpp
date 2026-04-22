@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,12 +25,9 @@ namespace CS2 {
 	namespace modellib {
 		class CVPhysXSurfacePropertiesList  {
 		public:
-			NESTED_PROPERTY(m_surfacePropertiesList,IDENTITY(GlobalTypes::CUtlVector<modellib::CPhysSurfaceProperties*>), 0x0);
+			NESTED_PROPERTY(m_surfacePropertiesList,GlobalTypes::CUtlVector<modellib::CPhysSurfaceProperties*>, 0x0);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CVPhysXSurfacePropertiesList) == 0x18, "CVPhysXSurfacePropertiesList size should be 0x18");
-
-#endif
 	}
 }

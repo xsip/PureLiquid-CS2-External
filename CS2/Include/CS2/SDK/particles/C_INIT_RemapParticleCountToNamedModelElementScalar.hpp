@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_INIT_RemapParticleCountToScalar.hpp"
+#include <SDK/particles/C_INIT_RemapParticleCountToScalar.hpp>
 
 
 
@@ -26,15 +26,12 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapParticleCountToNamedModelElementScalar : public CS2::particles::C_INIT_RemapParticleCountToScalar {
 		public:
-			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x208);
+			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x208);
 			PROPERTY(m_outputMinName,GlobalTypes::CUtlString*, 0x210);
 			PROPERTY(m_outputMaxName,GlobalTypes::CUtlString*, 0x218);
 			PROPERTY(m_bModelFromRenderer,bool, 0x220);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_RemapParticleCountToNamedModelElementScalar) == 0x228, "C_INIT_RemapParticleCountToNamedModelElementScalar size should be 0x228");
-
-#endif
 	}
 }

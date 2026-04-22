@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
-#include "MaterialVariable_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
+#include <SDK/particles/MaterialVariable_t.hpp>
 
 
 
@@ -28,19 +28,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderBlobs : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_cubeWidth,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x220);
-			NESTED_PROPERTY(m_cutoffRadius,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x390);
-			NESTED_PROPERTY(m_renderRadius,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x500);
+			NESTED_PROPERTY(m_cubeWidth,particleslib::CParticleCollectionRendererFloatInput, 0x220);
+			NESTED_PROPERTY(m_cutoffRadius,particleslib::CParticleCollectionRendererFloatInput, 0x390);
+			NESTED_PROPERTY(m_renderRadius,particleslib::CParticleCollectionRendererFloatInput, 0x500);
 			PROPERTY(m_nVertexCountKb,uint32_t, 0x670);
 			PROPERTY(m_nIndexCountKb,uint32_t, 0x674);
 			PROPERTY(m_nScaleCP,int32_t, 0x678);
-			NESTED_PROPERTY(m_MaterialVars,IDENTITY(GlobalTypes::CUtlVector<particles::MaterialVariable_t>), 0x680);
-			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x6b0);
+			NESTED_PROPERTY(m_MaterialVars,GlobalTypes::CUtlVector<particles::MaterialVariable_t>, 0x680);
+			PROPERTY(m_hMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x6b0);
 			S2_PAD(0x498);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderBlobs) == 0x6B8, "C_OP_RenderBlobs size should be 0x6B8");
-
-#endif
 	}
 }

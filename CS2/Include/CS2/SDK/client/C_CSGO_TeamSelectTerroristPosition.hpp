@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_CSGO_TeamSelectCharacterPosition.hpp"
+#include <SDK/client/C_CSGO_TeamSelectCharacterPosition.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_TeamSelectTerroristPosition : public CS2::client::C_CSGO_TeamSelectCharacterPosition {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGO_TeamSelectTerroristPosition) == 0x13A8, "C_CSGO_TeamSelectTerroristPosition size should be 0x13A8");
-
-#endif
 	}
 }

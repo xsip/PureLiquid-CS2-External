@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseClientUIEntity.hpp"
+#include <SDK/server/CBaseClientUIEntity.hpp>
 
 
 
@@ -34,7 +34,7 @@ namespace CS2 {
 			PROPERTY(m_unVerticalAlign,uint32_t, 0x8b0);
 			PROPERTY(m_unOrientation,uint32_t, 0x8b4);
 			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x8b8);
-			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x8c0);
+			PROPERTY(m_vecCSSClasses,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>, 0x8c0);
 			PROPERTY(m_bOpaque,bool, 0x8d8);
 			PROPERTY(m_bNoDepth,bool, 0x8d9);
 			PROPERTY(m_bVisibleWhenParentNoDraw,bool, 0x8da);
@@ -47,9 +47,6 @@ namespace CS2 {
 			PROPERTY(m_nExplicitImageLayout,int32_t, 0x8e4);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointClientUIWorldPanel) == 0x8E8, "CPointClientUIWorldPanel size should be 0x8E8");
-
-#endif
 	}
 }

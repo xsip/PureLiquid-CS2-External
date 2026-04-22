@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_GameLiquidSpill : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_flLiquidContentsField,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x220);
-			NESTED_PROPERTY(m_flExpirationTime,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x390);
-			NESTED_PROPERTY(m_nAmountAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x500);
+			NESTED_PROPERTY(m_flLiquidContentsField,particleslib::CParticleCollectionFloatInput, 0x220);
+			NESTED_PROPERTY(m_flExpirationTime,particleslib::CParticleCollectionFloatInput, 0x390);
+			NESTED_PROPERTY(m_nAmountAttribute,particles::ParticleAttributeIndex_t, 0x500);
 			S2_PAD(0x2E8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_GameLiquidSpill) == 0x508, "C_OP_GameLiquidSpill size should be 0x508");
-
-#endif
 	}
 }

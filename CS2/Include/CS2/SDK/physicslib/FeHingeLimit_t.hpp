@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(flAngleExtents,float32, 0x1c);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeHingeLimit_t) == 0x20, "FeHingeLimit_t size should be 0x20");
-
-#endif
 	}
 }

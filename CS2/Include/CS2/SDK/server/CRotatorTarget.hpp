@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "RotatorTargetSpace_t.hpp"
+#include <SDK/server/CPointEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/RotatorTargetSpace_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 	namespace server {
 		class CRotatorTarget : public CS2::server::CPointEntity {
 		public:
-			NESTED_PROPERTY(m_OnArrivedAt,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			PROPERTY(m_eSpace,IDENTITY(server::RotatorTargetSpace_t), 0x4c0);
+			NESTED_PROPERTY(m_OnArrivedAt,entity2::CEntityIOOutput, 0x4a8);
+			PROPERTY(m_eSpace,server::RotatorTargetSpace_t, 0x4c0);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CRotatorTarget) == 0x4C8, "CRotatorTarget size should be 0x4C8");
-
-#endif
 	}
 }

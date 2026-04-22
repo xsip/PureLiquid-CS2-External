@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../animationsystem/HSequence.hpp"
+#include <SDK/animationsystem/HSequence.hpp>
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace server {
 		class CNetworkedSequenceOperation  {
 		public:
-			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x8);
+			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x8);
 			PROPERTY(m_flPrevCycle,float32, 0xc);
 			PROPERTY(m_flCycle,float32, 0x10);
 			PROPERTY(m_flWeight,GlobalTypes::CNetworkedQuantizedFloat, 0x14);
@@ -31,9 +31,6 @@ namespace CS2 {
 			PROPERTY(m_flPrevCycleForAnimEventDetection,float32, 0x24);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CNetworkedSequenceOperation) == 0x28, "CNetworkedSequenceOperation size should be 0x28");
-
-#endif
 	}
 }

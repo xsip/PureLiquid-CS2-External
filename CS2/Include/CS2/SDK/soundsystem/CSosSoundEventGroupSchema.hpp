@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "SosGroupType_t.hpp"
-#include "SosGroupFieldBehavior_t.hpp"
+#include <SDK/soundsystem/SosGroupType_t.hpp>
+#include <SDK/soundsystem/SosGroupFieldBehavior_t.hpp>
 
 
 
@@ -27,27 +27,24 @@ namespace CS2 {
 	namespace soundsystem {
 		class CSosSoundEventGroupSchema  {
 		public:
-			PROPERTY(m_nGroupType,IDENTITY(soundsystem::SosGroupType_t), 0x8);
+			PROPERTY(m_nGroupType,soundsystem::SosGroupType_t, 0x8);
 			PROPERTY(m_bBlocksEvents,bool, 0xc);
 			PROPERTY(m_nBlockMaxCount,int32_t, 0x10);
 			PROPERTY(m_flMemberLifespanTime,float32, 0x14);
 			PROPERTY(m_bInvertMatch,bool, 0x18);
-			PROPERTY(m_Behavior_EventName,IDENTITY(soundsystem::SosGroupFieldBehavior_t), 0x1c);
+			PROPERTY(m_Behavior_EventName,soundsystem::SosGroupFieldBehavior_t, 0x1c);
 			PROPERTY(m_matchSoundEventName,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_bMatchEventSubString,bool, 0x28);
 			PROPERTY(m_matchSoundEventSubString,GlobalTypes::CUtlString*, 0x30);
-			PROPERTY(m_Behavior_EntIndex,IDENTITY(soundsystem::SosGroupFieldBehavior_t), 0x38);
+			PROPERTY(m_Behavior_EntIndex,soundsystem::SosGroupFieldBehavior_t, 0x38);
 			PROPERTY(m_flEntIndex,float32, 0x3c);
-			PROPERTY(m_Behavior_Opvar,IDENTITY(soundsystem::SosGroupFieldBehavior_t), 0x40);
+			PROPERTY(m_Behavior_Opvar,soundsystem::SosGroupFieldBehavior_t, 0x40);
 			PROPERTY(m_flOpvar,float32, 0x44);
-			PROPERTY(m_Behavior_String,IDENTITY(soundsystem::SosGroupFieldBehavior_t), 0x48);
+			PROPERTY(m_Behavior_String,soundsystem::SosGroupFieldBehavior_t, 0x48);
 			PROPERTY(m_opvarString,GlobalTypes::CUtlString*, 0x50);
-			NESTED_PROPERTY(m_vActions,IDENTITY(GlobalTypes::CUtlVector<soundsystem::CSosGroupActionSchema*>), 0x58);
+			NESTED_PROPERTY(m_vActions,GlobalTypes::CUtlVector<soundsystem::CSosGroupActionSchema*>, 0x58);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CSosSoundEventGroupSchema) == 0x70, "CSosSoundEventGroupSchema size should be 0x70");
-
-#endif
 	}
 }

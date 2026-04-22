@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropOperation_Trace.hpp"
-#include "CSmartPropAttributeCoordinateSpace.hpp"
+#include <SDK/smartprops/CSmartPropOperation_Trace.hpp>
+#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 		class CSmartPropOperation_TraceToPoint : public CS2::smartprops::CSmartPropOperation_Trace {
 		public:
 			PROPERTY(m_TargetPoint,GlobalTypes::CSmartPropAttributeVector, 0x350);
-			NESTED_PROPERTY(m_TargetPointSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x390);
+			NESTED_PROPERTY(m_TargetPointSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x390);
 			PROPERTY(m_bTraceAway,GlobalTypes::CSmartPropAttributeBool, 0x3d0);
 			PROPERTY(m_flTraceLength,GlobalTypes::CSmartPropAttributeFloat, 0x410);
 			S2_PAD(0x100);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_TraceToPoint) == 0x450, "CSmartPropOperation_TraceToPoint size should be 0x450");
-
-#endif
 	}
 }

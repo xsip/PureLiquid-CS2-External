@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVMixBaseProcessorDesc.hpp"
+#include <SDK/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class CVMixStereoDelayProcessorDesc : public CS2::soundsystem_lowlevel::CVMixBaseProcessorDesc {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::CVMixStereoDelayProcessorDesc) == 0x20, "CVMixStereoDelayProcessorDesc size should be 0x20");
-
-#endif
 	}
 }

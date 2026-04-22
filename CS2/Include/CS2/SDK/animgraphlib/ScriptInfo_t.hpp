@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimParamHandle.hpp"
-#include "AnimScriptType.hpp"
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include <SDK/animgraphlib/AnimScriptType.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 		class ScriptInfo_t  {
 		public:
 			PROPERTY(m_code,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_paramsModified,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimParamHandle>), 0x8);
-			NESTED_PROPERTY(m_proxyReadParams,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x20);
-			NESTED_PROPERTY(m_proxyWriteParams,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x38);
-			PROPERTY(m_eScriptType,IDENTITY(animgraphlib::AnimScriptType), 0x50);
+			NESTED_PROPERTY(m_paramsModified,GlobalTypes::CUtlVector<animgraphlib::CAnimParamHandle>, 0x8);
+			NESTED_PROPERTY(m_proxyReadParams,GlobalTypes::CUtlVector< int32 >, 0x20);
+			NESTED_PROPERTY(m_proxyWriteParams,GlobalTypes::CUtlVector< int32 >, 0x38);
+			PROPERTY(m_eScriptType,animgraphlib::AnimScriptType, 0x50);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::ScriptInfo_t) == 0x58, "ScriptInfo_t size should be 0x58");
-
-#endif
 	}
 }

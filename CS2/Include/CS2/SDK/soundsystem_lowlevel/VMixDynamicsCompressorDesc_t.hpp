@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -31,9 +31,6 @@ namespace CS2 {
 			PROPERTY(m_bPeakMode,bool, 0x20);
 			S2_PAD(0x24);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixDynamicsCompressorDesc_t) == 0x24, "VMixDynamicsCompressorDesc_t size should be 0x24");
-
-#endif
 	}
 }

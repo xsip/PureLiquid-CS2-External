@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "../animationsystem/HSequence.hpp"
-#include "CPoseHandle.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animationsystem/HSequence.hpp>
+#include <SDK/animgraphlib/CPoseHandle.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -24,9 +24,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CFootAdjustmentUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_clips,IDENTITY(GlobalTypes::CUtlVector<animationsystem::HSequence>), 0x78);
-			NESTED_PROPERTY(m_hBasePoseCacheHandle,IDENTITY(animgraphlib::CPoseHandle), 0x90);
-			NESTED_PROPERTY(m_facingTarget,IDENTITY(animgraphlib::CAnimParamHandle), 0x94);
+			NESTED_PROPERTY(m_clips,GlobalTypes::CUtlVector<animationsystem::HSequence>, 0x78);
+			NESTED_PROPERTY(m_hBasePoseCacheHandle,animgraphlib::CPoseHandle, 0x90);
+			NESTED_PROPERTY(m_facingTarget,animgraphlib::CAnimParamHandle, 0x94);
 			PROPERTY(m_flTurnTimeMin,float32, 0x98);
 			PROPERTY(m_flTurnTimeMax,float32, 0x9c);
 			PROPERTY(m_flStepHeightMax,float32, 0xa0);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_bAnimationDriven,bool, 0xa9);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFootAdjustmentUpdateNode) == 0xB0, "CFootAdjustmentUpdateNode size should be 0xB0");
-
-#endif
 	}
 }

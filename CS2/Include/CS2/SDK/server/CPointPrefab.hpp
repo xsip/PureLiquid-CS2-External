@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CServerOnlyPointEntity.hpp"
+#include <SDK/server/CServerOnlyPointEntity.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 			PROPERTY(m_associatedRelayTargetName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
 			PROPERTY(m_fixupNames,bool, 0x4c0);
 			PROPERTY(m_bLoadDynamic,bool, 0x4c1);
-			PROPERTY(m_associatedRelayEntity,IDENTITY(GlobalTypes::CHandle<server::CPointPrefab>), 0x4c4);
+			PROPERTY(m_associatedRelayEntity,GlobalTypes::CHandle<server::CPointPrefab>, 0x4c4);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointPrefab) == 0x510, "CPointPrefab size should be 0x510");
-
-#endif
 	}
 }

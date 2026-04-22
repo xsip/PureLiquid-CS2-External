@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -57,9 +57,6 @@ namespace CS2 {
 			PROPERTY(m_nCollisionMask,uint16_t, 0x98);
 			S2_PAD(0x9C);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::CFeJiggleBone) == 0x9C, "CFeJiggleBone size should be 0x9C");
-
-#endif
 	}
 }

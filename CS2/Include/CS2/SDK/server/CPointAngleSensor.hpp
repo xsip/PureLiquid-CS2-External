@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CPointEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -30,21 +30,18 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bDisabled,bool, 0x4a8);
 			PROPERTY(m_nLookAtName,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
-			PROPERTY(m_hTargetEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4b8);
-			PROPERTY(m_hLookAtEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4bc);
+			PROPERTY(m_hTargetEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4b8);
+			PROPERTY(m_hLookAtEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4bc);
 			PROPERTY(m_flDuration,float32, 0x4c0);
 			PROPERTY(m_flDotTolerance,float32, 0x4c4);
-			NESTED_PROPERTY(m_flFacingTime,IDENTITY(entity2::GameTime_t), 0x4c8);
+			NESTED_PROPERTY(m_flFacingTime,entity2::GameTime_t, 0x4c8);
 			PROPERTY(m_bFired,bool, 0x4cc);
-			NESTED_PROPERTY(m_OnFacingLookat,IDENTITY(entity2::CEntityIOOutput), 0x4d0);
-			NESTED_PROPERTY(m_OnNotFacingLookat,IDENTITY(entity2::CEntityIOOutput), 0x4e8);
-			// PROPERTY(m_TargetDir,IDENTITY(GlobalTypes::CEntityOutputTemplate< Vector, Vector >), 0x500);
-			// PROPERTY(m_FacingPercentage,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32, float32 >), 0x528);
+			NESTED_PROPERTY(m_OnFacingLookat,entity2::CEntityIOOutput, 0x4d0);
+			NESTED_PROPERTY(m_OnNotFacingLookat,entity2::CEntityIOOutput, 0x4e8);
+			PROPERTY(m_TargetDir,GlobalTypes::CEntityOutputTemplate< Vector, Vector >, 0x500);
+			PROPERTY(m_FacingPercentage,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x528);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointAngleSensor) == 0x548, "CPointAngleSensor size should be 0x548");
-
-#endif
 	}
 }

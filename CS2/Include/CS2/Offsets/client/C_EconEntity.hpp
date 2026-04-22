@@ -29,7 +29,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nUnloadedModelIndex = 0x188c; // int32_t m_nUnloadedModelIndex; |  0x188c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_iNumOwnerValidationRetries = 0x1890; // int32_t m_iNumOwnerValidationRetries; |  0x1890 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_hOldProvidee = 0x18a0; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vecAttachedModels = 0x18a8; // GlobalTypes::CUtlVector<client::C_EconEntity_AttachedModelData_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecAttachedModels = 0x18a8; // GlobalTypes::CUtlVector<client::AttachedModelData_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

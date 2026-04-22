@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_nTargetIndex,uint16_t, 0xe);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnBlendVertex_t) == 0x10, "RnBlendVertex_t size should be 0x10");
-
-#endif
 	}
 }

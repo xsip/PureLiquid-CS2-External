@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -27,14 +27,11 @@ namespace CS2 {
 			PROPERTY(m_Weight,float32, 0x898);
 			PROPERTY_ARRAY(m_lookupFilename,char, 512 , 0x89c);
 			PROPERTY(m_LastEnterWeight,float32, 0xa9c);
-			NESTED_PROPERTY(m_LastEnterTime,IDENTITY(entity2::GameTime_t), 0xaa0);
+			NESTED_PROPERTY(m_LastEnterTime,entity2::GameTime_t, 0xaa0);
 			PROPERTY(m_LastExitWeight,float32, 0xaa4);
-			NESTED_PROPERTY(m_LastExitTime,IDENTITY(entity2::GameTime_t), 0xaa8);
+			NESTED_PROPERTY(m_LastExitTime,entity2::GameTime_t, 0xaa8);
 			S2_PAD(0x220);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CColorCorrectionVolume) == 0xAB0, "CColorCorrectionVolume size should be 0xAB0");
-
-#endif
 	}
 }

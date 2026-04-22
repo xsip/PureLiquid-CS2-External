@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
+#include <SDK/server/CPointEntity.hpp>
 
 
 
@@ -26,17 +26,14 @@ namespace CS2 {
 	namespace server {
 		class CPointVelocitySensor : public CS2::server::CPointEntity {
 		public:
-			PROPERTY(m_hTargetEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4a8);
+			PROPERTY(m_hTargetEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4a8);
 			PROPERTY(m_vecAxis,GlobalTypes::Vector, 0x4ac);
 			PROPERTY(m_bEnabled,bool, 0x4b8);
 			PROPERTY(m_fPrevVelocity,float32, 0x4bc);
 			PROPERTY(m_flAvgInterval,float32, 0x4c0);
-			// PROPERTY(m_Velocity,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32, float32 >), 0x4c8);
+			PROPERTY(m_Velocity,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4c8);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointVelocitySensor) == 0x4E8, "CPointVelocitySensor size should be 0x4E8");
-
-#endif
 	}
 }

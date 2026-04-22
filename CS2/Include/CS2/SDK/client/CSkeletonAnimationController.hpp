@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "ISkeletonAnimationController.hpp"
+#include <SDK/client/ISkeletonAnimationController.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 	namespace client {
 		class CSkeletonAnimationController : public CS2::client::ISkeletonAnimationController {
 		public:
-			PROPERTY(m_pSkeletonInstance,IDENTITY(client::CSkeletonInstance*), 0x8);
+			PROPERTY(m_pSkeletonInstance,client::CSkeletonInstance*, 0x8);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSkeletonAnimationController) == 0x10, "CSkeletonAnimationController size should be 0x10");
-
-#endif
 	}
 }

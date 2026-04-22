@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapInitialTransformDirectionToRotation : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1d8);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x240);
+			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x240);
 			PROPERTY(m_flOffsetRot,float32, 0x244);
 			PROPERTY(m_nComponent,int32_t, 0x248);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_RemapInitialTransformDirectionToRotation) == 0x250, "C_INIT_RemapInitialTransformDirectionToRotation size should be 0x250");
-
-#endif
 	}
 }

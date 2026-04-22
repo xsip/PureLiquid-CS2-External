@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -29,12 +29,9 @@ namespace CS2 {
 			PROPERTY(m_nHeadLocation,int32_t, 0x1e0);
 			PROPERTY(m_vecRotation,GlobalTypes::QAngle, 0x1e4);
 			PROPERTY(m_vecRotationB,GlobalTypes::QAngle, 0x1f0);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x200);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CParticleCollectionFloatInput, 0x200);
 			S2_PAD(0x198);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointOrientation) == 0x370, "C_OP_SetControlPointOrientation size should be 0x370");
-
-#endif
 	}
 }

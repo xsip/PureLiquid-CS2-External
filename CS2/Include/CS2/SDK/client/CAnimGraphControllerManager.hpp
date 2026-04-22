@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,13 +25,10 @@ namespace CS2 {
 	namespace client {
 		class CAnimGraphControllerManager  {
 		public:
-			NESTED_PROPERTY(m_controllers,IDENTITY(GlobalTypes::CUtlVector<client::CAnimGraphControllerBase*>), 0x0);
+			NESTED_PROPERTY(m_controllers,GlobalTypes::CUtlVector<client::CAnimGraphControllerBase*>, 0x0);
 			PROPERTY(m_bGraphBindingsCreated,bool, 0xa8);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CAnimGraphControllerManager) == 0xB0, "CAnimGraphControllerManager size should be 0xB0");
-
-#endif
 	}
 }

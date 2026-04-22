@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "DecalFlags_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "DecalRtEncoding_t.hpp"
+#include <SDK/client/DecalFlags_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/DecalRtEncoding_t.hpp>
 
 
 
@@ -32,15 +32,15 @@ namespace CS2 {
 		class CDecalInstance  {
 		public:
 			PROPERTY(m_sDecalGroup,GlobalTypes::CGlobalSymbol, 0x0);
-			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x8);
+			PROPERTY(m_hMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x8);
 			PROPERTY(m_sSequenceName,GlobalTypes::CUtlStringToken*, 0x10);
-			PROPERTY(m_hEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x14);
+			PROPERTY(m_hEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0x14);
 			PROPERTY(m_nBoneIndex,int32_t, 0x18);
 			PROPERTY(m_nTriangleIndex,int32_t, 0x1c);
 			PROPERTY(m_vPositionLS,GlobalTypes::Vector, 0x20);
 			PROPERTY(m_vNormalLS,GlobalTypes::Vector, 0x2c);
 			PROPERTY(m_vSAxisLS,GlobalTypes::Vector, 0x38);
-			PROPERTY(m_nFlags,IDENTITY(client::DecalFlags_t), 0x44);
+			PROPERTY(m_nFlags,client::DecalFlags_t, 0x44);
 			PROPERTY(m_Color,GlobalTypes::Color, 0x48);
 			PROPERTY(m_flWidth,float32, 0x4c);
 			PROPERTY(m_flHeight,float32, 0x50);
@@ -48,7 +48,7 @@ namespace CS2 {
 			PROPERTY(m_transform,GlobalTypes::CTransformWS, 0x60);
 			PROPERTY(m_flAnimationScale,float32, 0x80);
 			PROPERTY(m_flAnimationStartTime,float32, 0x84);
-			NESTED_PROPERTY(m_flPlaceTime,IDENTITY(entity2::GameTime_t), 0x88);
+			NESTED_PROPERTY(m_flPlaceTime,entity2::GameTime_t, 0x88);
 			PROPERTY(m_flFadeStartTime,float32, 0x8c);
 			PROPERTY(m_flFadeDuration,float32, 0x90);
 			PROPERTY(m_flLightingOriginOffset,float32, 0x94);
@@ -56,13 +56,10 @@ namespace CS2 {
 			PROPERTY(m_nSequenceIndex,int16_t, 0xa4);
 			PROPERTY(m_bIsAdjacent,bool, 0xa6);
 			PROPERTY(m_bDoDecalLightmapping,bool, 0xa7);
-			PROPERTY(m_nDecalRtEncoding,IDENTITY(client::DecalRtEncoding_t), 0xa8);
+			PROPERTY(m_nDecalRtEncoding,client::DecalRtEncoding_t, 0xa8);
 			PROPERTY(m_bProjectToBackfaces,bool, 0xa9);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDecalInstance) == 0xB0, "CDecalInstance size should be 0xB0");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -25,12 +25,9 @@ namespace CS2 {
 			PROPERTY(m_nCP1,int32_t, 0x1d8);
 			PROPERTY(m_nHeadLocationMin,int32_t, 0x1dc);
 			PROPERTY(m_nHeadLocationMax,int32_t, 0x1e0);
-			NESTED_PROPERTY(m_flResetRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_flResetRate,particleslib::CParticleCollectionFloatInput, 0x1e8);
 			S2_PAD(0x180);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositionToRandomActiveCP) == 0x358, "C_OP_SetControlPointPositionToRandomActiveCP size should be 0x358");
-
-#endif
 	}
 }

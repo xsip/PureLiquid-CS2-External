@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -33,9 +33,6 @@ namespace CS2 {
 			PROPERTY(m_flMaxRotationRight,float32, 0x40);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FootFixedData_t) == 0x50, "FootFixedData_t size should be 0x50");
-
-#endif
 	}
 }

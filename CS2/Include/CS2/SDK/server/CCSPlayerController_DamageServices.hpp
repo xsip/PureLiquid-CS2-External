@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/CPlayerControllerComponent.hpp"
-#include "CDamageRecord.hpp"
+#include <SDK/client/CPlayerControllerComponent.hpp>
+#include <SDK/server/CDamageRecord.hpp>
 
 
 
@@ -23,12 +23,9 @@ namespace CS2 {
 		class CCSPlayerController_DamageServices : public CS2::client::CPlayerControllerComponent {
 		public:
 			PROPERTY(m_nSendUpdate,int32_t, 0x40);
-			// PROPERTY(m_DamageList,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::CDamageRecord>), 0x48);
+			PROPERTY(m_DamageList,server::CUtlVectorEmbeddedNetworkVar<server::CDamageRecord>, 0x48);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerController_DamageServices) == 0xD0, "CCSPlayerController_DamageServices size should be 0xD0");
-
-#endif
 	}
 }

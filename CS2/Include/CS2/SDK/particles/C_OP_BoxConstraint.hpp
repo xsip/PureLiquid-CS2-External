@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionConstraint.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionConstraint.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_BoxConstraint : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_vecMin,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d0);
-			NESTED_PROPERTY(m_vecMax,IDENTITY(particleslib::CParticleCollectionVecInput), 0x888);
+			NESTED_PROPERTY(m_vecMin,particleslib::CParticleCollectionVecInput, 0x1d0);
+			NESTED_PROPERTY(m_vecMax,particleslib::CParticleCollectionVecInput, 0x888);
 			PROPERTY(m_nCP,int32_t, 0xf40);
 			PROPERTY(m_bLocalSpace,bool, 0xf44);
 			PROPERTY(m_bAccountForRadius,bool, 0xf45);
 			S2_PAD(0xD78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_BoxConstraint) == 0xF48, "C_OP_BoxConstraint size should be 0xF48");
-
-#endif
 	}
 }

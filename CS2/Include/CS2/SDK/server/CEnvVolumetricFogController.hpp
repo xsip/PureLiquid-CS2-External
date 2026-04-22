@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -43,9 +43,9 @@ namespace CS2 {
 			PROPERTY(m_vBoxMins,GlobalTypes::Vector, 0x4dc);
 			PROPERTY(m_vBoxMaxs,GlobalTypes::Vector, 0x4e8);
 			PROPERTY(m_bActive,bool, 0x4f4);
-			NESTED_PROPERTY(m_flStartAnisoTime,IDENTITY(entity2::GameTime_t), 0x4f8);
-			NESTED_PROPERTY(m_flStartScatterTime,IDENTITY(entity2::GameTime_t), 0x4fc);
-			NESTED_PROPERTY(m_flStartDrawDistanceTime,IDENTITY(entity2::GameTime_t), 0x500);
+			NESTED_PROPERTY(m_flStartAnisoTime,entity2::GameTime_t, 0x4f8);
+			NESTED_PROPERTY(m_flStartScatterTime,entity2::GameTime_t, 0x4fc);
+			NESTED_PROPERTY(m_flStartDrawDistanceTime,entity2::GameTime_t, 0x500);
 			PROPERTY(m_flStartAnisotropy,float32, 0x504);
 			PROPERTY(m_flStartScattering,float32, 0x508);
 			PROPERTY(m_flStartDrawDistance,float32, 0x50c);
@@ -55,7 +55,7 @@ namespace CS2 {
 			PROPERTY(m_bStartDisabled,bool, 0x51c);
 			PROPERTY(m_bEnableIndirect,bool, 0x51d);
 			PROPERTY(m_bIsMaster,bool, 0x51e);
-			PROPERTY(m_hFogIndirectTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x520);
+			PROPERTY(m_hFogIndirectTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x520);
 			PROPERTY(m_nForceRefreshCount,int32_t, 0x528);
 			PROPERTY(m_fNoiseSpeed,float32, 0x52c);
 			PROPERTY(m_fNoiseStrength,float32, 0x530);
@@ -65,9 +65,6 @@ namespace CS2 {
 			PROPERTY(m_bFirstTime,bool, 0x550);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvVolumetricFogController) == 0x558, "CEnvVolumetricFogController size should be 0x558");
-
-#endif
 	}
 }

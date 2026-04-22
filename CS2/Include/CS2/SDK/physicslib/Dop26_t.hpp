@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -23,9 +23,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_flSupport,float32, 26 , 0x0);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::Dop26_t) == 0x68, "Dop26_t size should be 0x68");
-
-#endif
 	}
 }

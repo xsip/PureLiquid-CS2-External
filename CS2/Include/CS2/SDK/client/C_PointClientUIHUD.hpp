@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseClientUIEntity.hpp"
+#include <SDK/client/C_BaseClientUIEntity.hpp>
 
 
 
@@ -33,12 +33,9 @@ namespace CS2 {
 			PROPERTY(m_unVerticalAlign,uint32_t, 0x1058);
 			PROPERTY(m_unOrientation,uint32_t, 0x105c);
 			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x1060);
-			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x1068);
+			PROPERTY(m_vecCSSClasses,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>, 0x1068);
 			S2_PAD(0x1C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PointClientUIHUD) == 0x1080, "C_PointClientUIHUD size should be 0x1080");
-
-#endif
 	}
 }

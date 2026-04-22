@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropElement.hpp"
-#include "SmartPropDetailFadeLevel_t.hpp"
+#include <SDK/smartprops/CSmartPropElement.hpp>
+#include <SDK/smartprops/SmartPropDetailFadeLevel_t.hpp>
 
 
 
@@ -29,15 +29,12 @@ namespace CS2 {
 			PROPERTY(m_flUniformModelScale,GlobalTypes::CSmartPropAttributeFloat, 0x188);
 			PROPERTY(m_nLodLevel,GlobalTypes::CSmartPropAttributeInt, 0x1c8);
 			PROPERTY(m_SurfacePropertyOverride,GlobalTypes::CSmartPropAttributeSurfaceProperty, 0x208);
-			PROPERTY(m_nDetailObjectFadeLevel,IDENTITY(smartprops::SmartPropDetailFadeLevel_t), 0x248);
+			PROPERTY(m_nDetailObjectFadeLevel,smartprops::SmartPropDetailFadeLevel_t, 0x248);
 			PROPERTY(m_bCastShadows,GlobalTypes::CSmartPropAttributeBool, 0x250);
 			PROPERTY(m_bRigidDeformation,GlobalTypes::CSmartPropAttributeBool, 0x290);
 			PROPERTY(m_bDisableDynamicDeformable,GlobalTypes::CSmartPropAttributeBool, 0x2d0);
 			S2_PAD(0x288);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_Model) == 0x310, "CSmartPropElement_Model size should be 0x310");
-
-#endif
 	}
 }

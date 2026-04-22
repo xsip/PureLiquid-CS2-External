@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../resourcesystem/InfoForResourceTypeCAnimData.hpp"
-#include "../resourcesystem/InfoForResourceTypeCAnimationGroup.hpp"
-#include "CAnimKeyData.hpp"
+#include <SDK/resourcesystem/InfoForResourceTypeCAnimData.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCAnimationGroup.hpp>
+#include <SDK/animationsystem/CAnimKeyData.hpp>
 
 
 
@@ -30,17 +30,14 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nFlags,uint32_t, 0x10);
 			PROPERTY(m_name,GlobalTypes::CBufferString, 0x18);
-			NESTED_PROPERTY(m_localHAnimArray_Handle,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCAnimData>>), 0x60);
-			NESTED_PROPERTY(m_includedGroupArray_Handle,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCAnimationGroup>>), 0x78);
-			PROPERTY(m_directHSeqGroup_Handle,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCSequenceGroupData>), 0x90);
-			NESTED_PROPERTY(m_decodeKey,IDENTITY(animationsystem::CAnimKeyData), 0x98);
-			NESTED_PROPERTY(m_szScripts,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CBufferString>), 0x110);
-			NESTED_PROPERTY(m_AdditionalExtRefs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>), 0x128);
+			NESTED_PROPERTY(m_localHAnimArray_Handle,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCAnimData>>, 0x60);
+			NESTED_PROPERTY(m_includedGroupArray_Handle,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCAnimationGroup>>, 0x78);
+			PROPERTY(m_directHSeqGroup_Handle,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCSequenceGroupData>, 0x90);
+			NESTED_PROPERTY(m_decodeKey,animationsystem::CAnimKeyData, 0x98);
+			NESTED_PROPERTY(m_szScripts,GlobalTypes::CUtlVector<GlobalTypes::CBufferString>, 0x110);
+			NESTED_PROPERTY(m_AdditionalExtRefs,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>, 0x128);
 			S2_PAD(0x148);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimationGroup) == 0x148, "CAnimationGroup size should be 0x148");
-
-#endif
 	}
 }

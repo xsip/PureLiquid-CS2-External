@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -22,12 +22,9 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nStartFrame,int32_t, 0x0);
 			PROPERTY(m_nEndFrame,int32_t, 0x4);
-			NESTED_PROPERTY(m_segmentIndexArray,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x8);
+			NESTED_PROPERTY(m_segmentIndexArray,GlobalTypes::CUtlVector< int32 >, 0x8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimFrameBlockAnim) == 0x20, "CAnimFrameBlockAnim size should be 0x20");
-
-#endif
 	}
 }

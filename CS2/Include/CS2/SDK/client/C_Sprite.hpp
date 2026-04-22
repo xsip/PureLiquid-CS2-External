@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseModelEntity.hpp"
-#include "../modellib/AttachmentHandle_t.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/client/C_BaseModelEntity.hpp>
+#include <SDK/modellib/AttachmentHandle_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -31,12 +31,12 @@ namespace CS2 {
 	namespace client {
 		class C_Sprite : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_hSpriteMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xe88);
-			PROPERTY(m_hAttachedToEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xe90);
-			NESTED_PROPERTY(m_nAttachment,IDENTITY(modellib::AttachmentHandle_t), 0xe94);
+			PROPERTY(m_hSpriteMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xe88);
+			PROPERTY(m_hAttachedToEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0xe90);
+			NESTED_PROPERTY(m_nAttachment,modellib::AttachmentHandle_t, 0xe94);
 			PROPERTY(m_flSpriteFramerate,float32, 0xe98);
 			PROPERTY(m_flFrame,float32, 0xe9c);
-			NESTED_PROPERTY(m_flDieTime,IDENTITY(entity2::GameTime_t), 0xea0);
+			NESTED_PROPERTY(m_flDieTime,entity2::GameTime_t, 0xea0);
 			PROPERTY(m_nBrightness,uint32_t, 0xeb0);
 			PROPERTY(m_flBrightnessDuration,float32, 0xeb4);
 			PROPERTY(m_flSpriteScale,float32, 0xeb8);
@@ -44,21 +44,18 @@ namespace CS2 {
 			PROPERTY(m_bWorldSpaceScale,bool, 0xec0);
 			PROPERTY(m_flGlowProxySize,float32, 0xec4);
 			PROPERTY(m_flHDRColorScale,float32, 0xec8);
-			NESTED_PROPERTY(m_flLastTime,IDENTITY(entity2::GameTime_t), 0xecc);
+			NESTED_PROPERTY(m_flLastTime,entity2::GameTime_t, 0xecc);
 			PROPERTY(m_flMaxFrame,float32, 0xed0);
 			PROPERTY(m_flStartScale,float32, 0xed4);
 			PROPERTY(m_flDestScale,float32, 0xed8);
-			NESTED_PROPERTY(m_flScaleTimeStart,IDENTITY(entity2::GameTime_t), 0xedc);
+			NESTED_PROPERTY(m_flScaleTimeStart,entity2::GameTime_t, 0xedc);
 			PROPERTY(m_nStartBrightness,int32_t, 0xee0);
 			PROPERTY(m_nDestBrightness,int32_t, 0xee4);
-			NESTED_PROPERTY(m_flBrightnessTimeStart,IDENTITY(entity2::GameTime_t), 0xee8);
+			NESTED_PROPERTY(m_flBrightnessTimeStart,entity2::GameTime_t, 0xee8);
 			PROPERTY(m_nSpriteWidth,int32_t, 0xef8);
 			PROPERTY(m_nSpriteHeight,int32_t, 0xefc);
 			S2_PAD(0x78);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Sprite) == 0xF00, "C_Sprite size should be 0xF00");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/CAnimAttachment.hpp"
-#include "CAnimInputDamping.hpp"
-#include "LookAtBone_t.hpp"
+#include <SDK/modellib/CAnimAttachment.hpp>
+#include <SDK/animgraphlib/CAnimInputDamping.hpp>
+#include <SDK/animgraphlib/LookAtBone_t.hpp>
 
 
 
@@ -23,9 +23,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class LookAtOpFixedSettings_t  {
 		public:
-			NESTED_PROPERTY(m_attachment,IDENTITY(modellib::CAnimAttachment), 0x0);
-			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x80);
-			NESTED_PROPERTY(m_bones,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::LookAtBone_t>), 0x98);
+			NESTED_PROPERTY(m_attachment,modellib::CAnimAttachment, 0x0);
+			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x80);
+			NESTED_PROPERTY(m_bones,GlobalTypes::CUtlVector<animgraphlib::LookAtBone_t>, 0x98);
 			PROPERTY(m_flYawLimit,float32, 0xb0);
 			PROPERTY(m_flPitchLimit,float32, 0xb4);
 			PROPERTY(m_flHysteresisInnerAngle,float32, 0xb8);
@@ -36,9 +36,6 @@ namespace CS2 {
 			PROPERTY(m_bUseHysteresis,bool, 0xc3);
 			S2_PAD(0xD0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::LookAtOpFixedSettings_t) == 0xD0, "LookAtOpFixedSettings_t size should be 0xD0");
-
-#endif
 	}
 }

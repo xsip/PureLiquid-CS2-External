@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderPoints : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x220);
+			PROPERTY(m_hMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x220);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderPoints) == 0x228, "C_OP_RenderPoints size should be 0x228");
-
-#endif
 	}
 }

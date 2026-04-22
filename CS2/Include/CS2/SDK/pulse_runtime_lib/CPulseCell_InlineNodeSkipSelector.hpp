@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPulseCell_BaseFlow.hpp"
-#include "PulseDocNodeID_t.hpp"
-#include "PulseSelectorOutflowList_t.hpp"
-#include "CPulse_OutflowConnection.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
+#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
+#include <SDK/pulse_runtime_lib/PulseSelectorOutflowList_t.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_InlineNodeSkipSelector : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
-			NESTED_PROPERTY(m_nFlowNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x48);
+			NESTED_PROPERTY(m_nFlowNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x48);
 			PROPERTY(m_bAnd,bool, 0x4c);
-			NESTED_PROPERTY(m_PassOutflow,IDENTITY(pulse_runtime_lib::PulseSelectorOutflowList_t), 0x50);
-			NESTED_PROPERTY(m_FailOutflow,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x68);
+			NESTED_PROPERTY(m_PassOutflow,pulse_runtime_lib::PulseSelectorOutflowList_t, 0x50);
+			NESTED_PROPERTY(m_FailOutflow,pulse_runtime_lib::CPulse_OutflowConnection, 0x68);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_InlineNodeSkipSelector) == 0xB0, "CPulseCell_InlineNodeSkipSelector size should be 0xB0");
-
-#endif
 	}
 }

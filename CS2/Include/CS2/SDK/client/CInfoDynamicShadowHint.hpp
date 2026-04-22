@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_PointEntity.hpp"
+#include <SDK/client/C_PointEntity.hpp>
 
 
 
@@ -30,12 +30,9 @@ namespace CS2 {
 			PROPERTY(m_flRange,float32, 0x60c);
 			PROPERTY(m_nImportance,int32_t, 0x610);
 			PROPERTY(m_nLightChoice,int32_t, 0x614);
-			PROPERTY(m_hLight,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x618);
+			PROPERTY(m_hLight,GlobalTypes::CHandle<client::C_BaseEntity>, 0x618);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CInfoDynamicShadowHint) == 0x620, "CInfoDynamicShadowHint size should be 0x620");
-
-#endif
 	}
 }

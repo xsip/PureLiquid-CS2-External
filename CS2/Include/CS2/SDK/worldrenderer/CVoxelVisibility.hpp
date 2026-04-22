@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VoxelVisBlockOffset_t.hpp"
+#include <SDK/worldrenderer/VoxelVisBlockOffset_t.hpp>
 
 
 
@@ -28,17 +28,14 @@ namespace CS2 {
 			PROPERTY(m_flGridSize,float32, 0x60);
 			PROPERTY(m_nSkyVisibilityCluster,uint32_t, 0x64);
 			PROPERTY(m_nSunVisibilityCluster,uint32_t, 0x68);
-			NESTED_PROPERTY(m_NodeBlock,IDENTITY(worldrenderer::VoxelVisBlockOffset_t), 0x6c);
-			NESTED_PROPERTY(m_RegionBlock,IDENTITY(worldrenderer::VoxelVisBlockOffset_t), 0x74);
-			NESTED_PROPERTY(m_EnclosedClusterListBlock,IDENTITY(worldrenderer::VoxelVisBlockOffset_t), 0x7c);
-			NESTED_PROPERTY(m_EnclosedClustersBlock,IDENTITY(worldrenderer::VoxelVisBlockOffset_t), 0x84);
-			NESTED_PROPERTY(m_MasksBlock,IDENTITY(worldrenderer::VoxelVisBlockOffset_t), 0x8c);
-			NESTED_PROPERTY(m_nVisBlocks,IDENTITY(worldrenderer::VoxelVisBlockOffset_t), 0x94);
+			NESTED_PROPERTY(m_NodeBlock,worldrenderer::VoxelVisBlockOffset_t, 0x6c);
+			NESTED_PROPERTY(m_RegionBlock,worldrenderer::VoxelVisBlockOffset_t, 0x74);
+			NESTED_PROPERTY(m_EnclosedClusterListBlock,worldrenderer::VoxelVisBlockOffset_t, 0x7c);
+			NESTED_PROPERTY(m_EnclosedClustersBlock,worldrenderer::VoxelVisBlockOffset_t, 0x84);
+			NESTED_PROPERTY(m_MasksBlock,worldrenderer::VoxelVisBlockOffset_t, 0x8c);
+			NESTED_PROPERTY(m_nVisBlocks,worldrenderer::VoxelVisBlockOffset_t, 0x94);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::CVoxelVisibility) == 0xA0, "CVoxelVisibility size should be 0xA0");
-
-#endif
 	}
 }

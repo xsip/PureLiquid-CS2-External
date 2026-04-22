@@ -4,23 +4,23 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "CHitboxComponent.hpp"
-#include "../client/HitGroup_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
-#include "../client/RenderMode_t.hpp"
-#include "../client/RenderFx_t.hpp"
-#include "EntityRenderAttribute_t.hpp"
-#include "CCollisionProperty.hpp"
-#include "CGlowProperty.hpp"
-#include "../client/CNetworkViewOffsetVector.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/server/CHitboxComponent.hpp>
+#include <SDK/client/HitGroup_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/client/RenderMode_t.hpp>
+#include <SDK/client/RenderFx_t.hpp>
+#include <SDK/server/EntityRenderAttribute_t.hpp>
+#include <SDK/server/CCollisionProperty.hpp>
+#include <SDK/server/CGlowProperty.hpp>
+#include <SDK/client/CNetworkViewOffsetVector.hpp>
 
 
 
@@ -37,43 +37,40 @@ namespace CS2 {
 	namespace server {
 		class CBaseModelEntity : public CS2::server::CBaseEntity {
 		public:
-			PROPERTY(m_CRenderComponent,IDENTITY(server::CRenderComponent*), 0x4a8);
-			NESTED_PROPERTY(m_CHitboxComponent,IDENTITY(server::CHitboxComponent), 0x4b0);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed0,IDENTITY(client::HitGroup_t), 0x4c8);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed1,IDENTITY(client::HitGroup_t), 0x4cc);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed2,IDENTITY(client::HitGroup_t), 0x4d0);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed3,IDENTITY(client::HitGroup_t), 0x4d4);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed4,IDENTITY(client::HitGroup_t), 0x4d8);
+			PROPERTY(m_CRenderComponent,server::CRenderComponent*, 0x4a8);
+			NESTED_PROPERTY(m_CHitboxComponent,server::CHitboxComponent, 0x4b0);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed0,client::HitGroup_t, 0x4c8);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed1,client::HitGroup_t, 0x4cc);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed2,client::HitGroup_t, 0x4d0);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed3,client::HitGroup_t, 0x4d4);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed4,client::HitGroup_t, 0x4d8);
 			PROPERTY(m_nDestructiblePartInitialStateDestructed0_PartIndex,int32_t, 0x4dc);
 			PROPERTY(m_nDestructiblePartInitialStateDestructed1_PartIndex,int32_t, 0x4e0);
 			PROPERTY(m_nDestructiblePartInitialStateDestructed2_PartIndex,int32_t, 0x4e4);
 			PROPERTY(m_nDestructiblePartInitialStateDestructed3_PartIndex,int32_t, 0x4e8);
 			PROPERTY(m_nDestructiblePartInitialStateDestructed4_PartIndex,int32_t, 0x4ec);
-			PROPERTY(m_pDestructiblePartsSystemComponent,IDENTITY(server::CDestructiblePartsComponent*), 0x4f0);
-			NESTED_PROPERTY(m_flDissolveStartTime,IDENTITY(entity2::GameTime_t), 0x4f8);
-			NESTED_PROPERTY(m_OnIgnite,IDENTITY(entity2::CEntityIOOutput), 0x500);
-			PROPERTY(m_nRenderMode,IDENTITY(client::RenderMode_t), 0x518);
-			PROPERTY(m_nRenderFX,IDENTITY(client::RenderFx_t), 0x519);
+			PROPERTY(m_pDestructiblePartsSystemComponent,server::CDestructiblePartsComponent*, 0x4f0);
+			NESTED_PROPERTY(m_flDissolveStartTime,entity2::GameTime_t, 0x4f8);
+			NESTED_PROPERTY(m_OnIgnite,entity2::CEntityIOOutput, 0x500);
+			PROPERTY(m_nRenderMode,client::RenderMode_t, 0x518);
+			PROPERTY(m_nRenderFX,client::RenderFx_t, 0x519);
 			PROPERTY(m_bAllowFadeInView,bool, 0x51a);
 			PROPERTY(m_clrRender,GlobalTypes::Color, 0x538);
-			// PROPERTY(m_vecRenderAttributes,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::EntityRenderAttribute_t>), 0x540);
+			PROPERTY(m_vecRenderAttributes,server::CUtlVectorEmbeddedNetworkVar<server::EntityRenderAttribute_t>, 0x540);
 			PROPERTY(m_bRenderToCubemaps,bool, 0x5a8);
 			PROPERTY(m_bNoInterpolate,bool, 0x5a9);
-			NESTED_PROPERTY(m_Collision,IDENTITY(server::CCollisionProperty), 0x5b0);
-			NESTED_PROPERTY(m_Glow,IDENTITY(server::CGlowProperty), 0x660);
+			NESTED_PROPERTY(m_Collision,server::CCollisionProperty, 0x5b0);
+			NESTED_PROPERTY(m_Glow,server::CGlowProperty, 0x660);
 			PROPERTY(m_flGlowBackfaceMult,float32, 0x6b8);
 			PROPERTY(m_fadeMinDist,float32, 0x6bc);
 			PROPERTY(m_fadeMaxDist,float32, 0x6c0);
 			PROPERTY(m_flFadeScale,float32, 0x6c4);
 			PROPERTY(m_flShadowStrength,float32, 0x6c8);
 			PROPERTY(m_nObjectCulling,uint8_t, 0x6cc);
-			NESTED_PROPERTY(m_vecViewOffset,IDENTITY(client::CNetworkViewOffsetVector), 0x6f8);
+			NESTED_PROPERTY(m_vecViewOffset,client::CNetworkViewOffsetVector, 0x6f8);
 			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0x728);
 			S2_PAD(0x288);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseModelEntity) == 0x730, "CBaseModelEntity size should be 0x730");
-
-#endif
 	}
 }

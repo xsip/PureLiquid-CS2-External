@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CompMatPropertyMutatorType_t.hpp"
-#include "CompositeMaterialInputLooseVariable_t.hpp"
-#include "CompMatMutatorCondition_t.hpp"
+#include <SDK/compositematerialslib/CompMatPropertyMutatorType_t.hpp>
+#include <SDK/compositematerialslib/CompositeMaterialInputLooseVariable_t.hpp>
+#include <SDK/compositematerialslib/CompMatMutatorCondition_t.hpp>
 
 
 
@@ -24,18 +24,18 @@ namespace CS2 {
 		class CompMatPropertyMutator_t  {
 		public:
 			PROPERTY(m_bEnabled,bool, 0x0);
-			PROPERTY(m_nMutatorCommandType,IDENTITY(compositematerialslib::CompMatPropertyMutatorType_t), 0x4);
+			PROPERTY(m_nMutatorCommandType,compositematerialslib::CompMatPropertyMutatorType_t, 0x4);
 			PROPERTY(m_strInitWith_Container,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_strCopyProperty_InputContainerSrc,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(m_strCopyProperty_InputContainerProperty,GlobalTypes::CUtlString*, 0x18);
 			PROPERTY(m_strCopyProperty_TargetProperty,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_strRandomRollInputVars_SeedInputVar,GlobalTypes::CUtlString*, 0x28);
-			PROPERTY(m_vecRandomRollInputVars_InputVarsToRoll,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x30);
+			PROPERTY(m_vecRandomRollInputVars_InputVarsToRoll,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x30);
 			PROPERTY(m_strCopyMatchingKeys_InputContainerSrc,GlobalTypes::CUtlString*, 0x48);
 			PROPERTY(m_strCopyKeysWithSuffix_InputContainerSrc,GlobalTypes::CUtlString*, 0x50);
 			PROPERTY(m_strCopyKeysWithSuffix_FindSuffix,GlobalTypes::CUtlString*, 0x58);
 			PROPERTY(m_strCopyKeysWithSuffix_ReplaceSuffix,GlobalTypes::CUtlString*, 0x60);
-			NESTED_PROPERTY(m_nSetValue_Value,IDENTITY(compositematerialslib::CompositeMaterialInputLooseVariable_t), 0x68);
+			NESTED_PROPERTY(m_nSetValue_Value,compositematerialslib::CompositeMaterialInputLooseVariable_t, 0x68);
 			PROPERTY(m_strGenerateTexture_TargetParam,GlobalTypes::CUtlString*, 0x2f0);
 			PROPERTY(m_strGenerateTexture_InitialContainer,GlobalTypes::CUtlString*, 0x2f8);
 			PROPERTY(m_nResolution,int32_t, 0x300);
@@ -43,20 +43,17 @@ namespace CS2 {
 			PROPERTY(m_strCompressionFormat,GlobalTypes::CUtlString*, 0x308);
 			PROPERTY(m_bSplatDebugInfo,bool, 0x310);
 			PROPERTY(m_bCaptureInRenderDoc,bool, 0x311);
-			NESTED_PROPERTY(m_vecTexGenInstructions,IDENTITY(GlobalTypes::CUtlVector<compositematerialslib::CompMatPropertyMutator_t>), 0x318);
-			NESTED_PROPERTY(m_vecConditionalMutators,IDENTITY(GlobalTypes::CUtlVector<compositematerialslib::CompMatPropertyMutator_t>), 0x330);
+			NESTED_PROPERTY(m_vecTexGenInstructions,GlobalTypes::CUtlVector<compositematerialslib::CompMatPropertyMutator_t>, 0x318);
+			NESTED_PROPERTY(m_vecConditionalMutators,GlobalTypes::CUtlVector<compositematerialslib::CompMatPropertyMutator_t>, 0x330);
 			PROPERTY(m_strPopInputQueue_Container,GlobalTypes::CUtlString*, 0x348);
 			PROPERTY(m_strDrawText_InputContainerSrc,GlobalTypes::CUtlString*, 0x350);
 			PROPERTY(m_strDrawText_InputContainerProperty,GlobalTypes::CUtlString*, 0x358);
 			PROPERTY(m_vecDrawText_Position,GlobalTypes::Vector2D, 0x360);
 			PROPERTY(m_colDrawText_Color,GlobalTypes::Color, 0x368);
 			PROPERTY(m_strDrawText_Font,GlobalTypes::CUtlString*, 0x370);
-			NESTED_PROPERTY(m_vecConditions,IDENTITY(GlobalTypes::CUtlVector<compositematerialslib::CompMatMutatorCondition_t>), 0x378);
+			NESTED_PROPERTY(m_vecConditions,GlobalTypes::CUtlVector<compositematerialslib::CompMatMutatorCondition_t>, 0x378);
 			S2_PAD(0x390);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CompMatPropertyMutator_t) == 0x390, "CompMatPropertyMutator_t size should be 0x390");
-
-#endif
 	}
 }

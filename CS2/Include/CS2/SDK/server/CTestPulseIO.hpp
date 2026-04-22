@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,19 +22,16 @@ namespace CS2 {
 	namespace server {
 		class CTestPulseIO : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_OnVariantVoid,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
-			// PROPERTY(m_OnVariantBool,IDENTITY(GlobalTypes::CEntityOutputTemplate< bool, bool >), 0x4c0);
-			// PROPERTY(m_OnVariantInt,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32, int32 >), 0x4e0);
-			// PROPERTY(m_OnVariantFloat,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32, float32 >), 0x500);
-			// PROPERTY(m_OnVariantString,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge >*), 0x520);
-			// PROPERTY(m_OnVariantColor,IDENTITY(GlobalTypes::CEntityOutputTemplate< Color, Color >), 0x540);
-			// PROPERTY(m_OnVariantVector,IDENTITY(GlobalTypes::CEntityOutputTemplate< Vector, Vector >), 0x560);
+			NESTED_PROPERTY(m_OnVariantVoid,entity2::CEntityIOOutput, 0x4a8);
+			PROPERTY(m_OnVariantBool,GlobalTypes::CEntityOutputTemplate< bool, bool >, 0x4c0);
+			PROPERTY(m_OnVariantInt,GlobalTypes::CEntityOutputTemplate< int32, int32 >, 0x4e0);
+			PROPERTY(m_OnVariantFloat,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x500);
+			PROPERTY(m_OnVariantString,GlobalTypes::CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge >*, 0x520);
+			PROPERTY(m_OnVariantColor,GlobalTypes::CEntityOutputTemplate< Color, Color >, 0x540);
+			PROPERTY(m_OnVariantVector,GlobalTypes::CEntityOutputTemplate< Vector, Vector >, 0x560);
 			PROPERTY(m_bAllowEmptyInputs,bool, 0x588);
 			S2_PAD(0xE8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTestPulseIO) == 0x590, "CTestPulseIO size should be 0x590");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSosGroupActionSchema.hpp"
-#include "SosActionSetParamSortType_t.hpp"
+#include <SDK/soundsystem/CSosGroupActionSchema.hpp>
+#include <SDK/soundsystem/SosActionSetParamSortType_t.hpp>
 
 
 
@@ -26,12 +26,9 @@ namespace CS2 {
 			PROPERTY(m_flMinValue,float32, 0xc);
 			PROPERTY(m_flMaxValue,float32, 0x10);
 			PROPERTY(m_opvarName,GlobalTypes::CUtlString*, 0x18);
-			PROPERTY(m_nSortType,IDENTITY(soundsystem::SosActionSetParamSortType_t), 0x20);
+			PROPERTY(m_nSortType,soundsystem::SosActionSetParamSortType_t, 0x20);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CSosGroupActionSetSoundeventParameterSchema) == 0x28, "CSosGroupActionSetSoundeventParameterSchema size should be 0x28");
-
-#endif
 	}
 }

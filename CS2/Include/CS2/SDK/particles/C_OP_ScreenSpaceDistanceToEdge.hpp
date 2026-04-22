@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CParticleRemapFloatInput.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CParticleRemapFloatInput.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -25,15 +25,12 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ScreenSpaceDistanceToEdge : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d0);
-			NESTED_PROPERTY(m_flMaxDistFromEdge,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x348);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x4b8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
+			NESTED_PROPERTY(m_flMaxDistFromEdge,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0x348);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x4b8);
 			S2_PAD(0x310);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ScreenSpaceDistanceToEdge) == 0x4E0, "C_OP_ScreenSpaceDistanceToEdge size should be 0x4E0");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -27,12 +27,9 @@ namespace CS2 {
 			PROPERTY(m_bNormalize,bool, 0x1e0);
 			PROPERTY(m_nCPOutputMag,int32_t, 0x1e4);
 			PROPERTY(m_nCPField,int32_t, 0x1e8);
-			NESTED_PROPERTY(m_vecComparisonVelocity,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1f0);
+			NESTED_PROPERTY(m_vecComparisonVelocity,particleslib::CParticleCollectionVecInput, 0x1f0);
 			S2_PAD(0x6D0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToCPVelocity) == 0x8A8, "C_OP_SetControlPointToCPVelocity size should be 0x8A8");
-
-#endif
 	}
 }

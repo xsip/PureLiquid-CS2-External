@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapGravityToVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_vInput1,IDENTITY(particleslib::CPerParticleVecInput), 0x1d0);
-			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x888);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x88c);
+			NESTED_PROPERTY(m_vInput1,particleslib::CPerParticleVecInput, 0x1d0);
+			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x888);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x88c);
 			PROPERTY(m_bNormalizedOutput,bool, 0x890);
 			S2_PAD(0x730);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapGravityToVector) == 0x900, "C_OP_RemapGravityToVector size should be 0x900");
-
-#endif
 	}
 }

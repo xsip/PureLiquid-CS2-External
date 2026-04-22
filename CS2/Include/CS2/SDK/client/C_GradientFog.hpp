@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace client {
 		class C_GradientFog : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_hGradientFogTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x608);
+			PROPERTY(m_hGradientFogTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x608);
 			PROPERTY(m_flFogStartDistance,float32, 0x610);
 			PROPERTY(m_flFogEndDistance,float32, 0x614);
 			PROPERTY(m_bHeightFogEnabled,bool, 0x618);
@@ -44,9 +44,6 @@ namespace CS2 {
 			PROPERTY(m_bGradientFogNeedsTextures,bool, 0x642);
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_GradientFog) == 0x6A0, "C_GradientFog size should be 0x6A0");
-
-#endif
 	}
 }

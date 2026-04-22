@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_FuncBrush.hpp"
+#include <SDK/client/C_FuncBrush.hpp>
 
 
 
@@ -31,14 +31,11 @@ namespace CS2 {
 			PROPERTY(m_bRenderShadows,bool, 0xe94);
 			PROPERTY(m_bUseUniqueColorTarget,bool, 0xe95);
 			PROPERTY(m_brushModelName,GlobalTypes::CUtlString*, 0xe98);
-			PROPERTY(m_hTargetCamera,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xea0);
+			PROPERTY(m_hTargetCamera,GlobalTypes::CHandle<client::C_BaseEntity>, 0xea0);
 			PROPERTY(m_bEnabled,bool, 0xea4);
 			PROPERTY(m_bDraw3DSkybox,bool, 0xea5);
 			S2_PAD(0x478);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_FuncMonitor) == 0x1300, "C_FuncMonitor size should be 0x1300");
-
-#endif
 	}
 }

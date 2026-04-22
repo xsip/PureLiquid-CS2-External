@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -22,9 +22,9 @@ namespace CS2 {
 	namespace server {
 		class CFuncRotating : public CS2::server::CBaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_OnStopped,IDENTITY(entity2::CEntityIOOutput), 0x730);
-			NESTED_PROPERTY(m_OnStarted,IDENTITY(entity2::CEntityIOOutput), 0x748);
-			NESTED_PROPERTY(m_OnReachedStart,IDENTITY(entity2::CEntityIOOutput), 0x760);
+			NESTED_PROPERTY(m_OnStopped,entity2::CEntityIOOutput, 0x730);
+			NESTED_PROPERTY(m_OnStarted,entity2::CEntityIOOutput, 0x748);
+			NESTED_PROPERTY(m_OnReachedStart,entity2::CEntityIOOutput, 0x760);
 			PROPERTY(m_localRotationVector,GlobalTypes::RotationVector, 0x778);
 			PROPERTY(m_flFanFriction,float32, 0x784);
 			PROPERTY(m_flAttenuation,float32, 0x788);
@@ -42,9 +42,6 @@ namespace CS2 {
 			PROPERTY(m_vecClientAngles,GlobalTypes::QAngle, 0x7e8);
 			S2_PAD(0xC8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncRotating) == 0x7F8, "CFuncRotating size should be 0x7F8");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPhysicsProp.hpp"
-#include "shard_model_desc_t.hpp"
+#include <SDK/server/CPhysicsProp.hpp>
+#include <SDK/server/shard_model_desc_t.hpp>
 
 
 
@@ -24,12 +24,9 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bDebris,bool, 0xce0);
 			PROPERTY(m_hParentShard,uint32_t, 0xce4);
-			NESTED_PROPERTY(m_ShardDesc,IDENTITY(server::shard_model_desc_t), 0xce8);
+			NESTED_PROPERTY(m_ShardDesc,server::shard_model_desc_t, 0xce8);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CShatterGlassShardPhysics) == 0xD70, "CShatterGlassShardPhysics size should be 0xD70");
-
-#endif
 	}
 }

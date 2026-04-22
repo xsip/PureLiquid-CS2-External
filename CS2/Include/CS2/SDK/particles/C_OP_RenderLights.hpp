@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_OP_RenderPoints.hpp"
-#include "AnimationType_t.hpp"
+#include <SDK/particles/C_OP_RenderPoints.hpp>
+#include <SDK/particles/AnimationType_t.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		class C_OP_RenderLights : public CS2::particles::C_OP_RenderPoints {
 		public:
 			PROPERTY(m_flAnimationRate,float32, 0x228);
-			PROPERTY(m_nAnimationType,IDENTITY(particles::AnimationType_t), 0x22c);
+			PROPERTY(m_nAnimationType,particles::AnimationType_t, 0x22c);
 			PROPERTY(m_bAnimateInFPS,bool, 0x230);
 			PROPERTY(m_flMinSize,float32, 0x234);
 			PROPERTY(m_flMaxSize,float32, 0x238);
@@ -31,9 +31,6 @@ namespace CS2 {
 			PROPERTY(m_flEndFadeSize,float32, 0x240);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderLights) == 0x248, "C_OP_RenderLights size should be 0x248");
-
-#endif
 	}
 }

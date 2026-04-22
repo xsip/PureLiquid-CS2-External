@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
 
 
 
@@ -25,21 +25,18 @@ namespace CS2 {
 			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0x738);
 			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0x740);
 			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0x748);
-			// PROPERTY(m_CustomOutput0,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x750);
-			// PROPERTY(m_CustomOutput1,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x770);
-			// PROPERTY(m_CustomOutput2,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x790);
-			// PROPERTY(m_CustomOutput3,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x7b0);
-			// PROPERTY(m_CustomOutput4,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x7d0);
-			// PROPERTY(m_CustomOutput5,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x7f0);
-			// PROPERTY(m_CustomOutput6,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x810);
-			// PROPERTY(m_CustomOutput7,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x830);
-			// PROPERTY(m_CustomOutput8,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x850);
-			// PROPERTY(m_CustomOutput9,IDENTITY(GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*), 0x870);
+			PROPERTY(m_CustomOutput0,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x750);
+			PROPERTY(m_CustomOutput1,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x770);
+			PROPERTY(m_CustomOutput2,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x790);
+			PROPERTY(m_CustomOutput3,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x7b0);
+			PROPERTY(m_CustomOutput4,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x7d0);
+			PROPERTY(m_CustomOutput5,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x7f0);
+			PROPERTY(m_CustomOutput6,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x810);
+			PROPERTY(m_CustomOutput7,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x830);
+			PROPERTY(m_CustomOutput8,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x850);
+			PROPERTY(m_CustomOutput9,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x870);
 			S2_PAD(0x160);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseClientUIEntity) == 0x890, "CBaseClientUIEntity size should be 0x890");
-
-#endif
 	}
 }

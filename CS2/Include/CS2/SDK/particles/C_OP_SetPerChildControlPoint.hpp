@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -26,16 +26,13 @@ namespace CS2 {
 			PROPERTY(m_nChildGroupID,int32_t, 0x1d0);
 			PROPERTY(m_nFirstControlPoint,int32_t, 0x1d4);
 			PROPERTY(m_nNumControlPoints,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_nParticleIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_nFirstSourcePoint,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
+			NESTED_PROPERTY(m_nParticleIncrement,particleslib::CParticleCollectionFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_nFirstSourcePoint,particleslib::CParticleCollectionFloatInput, 0x350);
 			PROPERTY(m_bSetOrientation,bool, 0x4c0);
-			NESTED_PROPERTY(m_nOrientationField,IDENTITY(particles::ParticleAttributeIndex_t), 0x4c4);
+			NESTED_PROPERTY(m_nOrientationField,particles::ParticleAttributeIndex_t, 0x4c4);
 			PROPERTY(m_bNumBasedOnParticleCount,bool, 0x4c8);
 			S2_PAD(0x300);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetPerChildControlPoint) == 0x4D0, "C_OP_SetPerChildControlPoint size should be 0x4D0");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -28,13 +28,10 @@ namespace CS2 {
 			PROPERTY(m_flStartTime_max,float32, 0x1dc);
 			PROPERTY(m_flEndTime_min,float32, 0x1e0);
 			PROPERTY(m_flEndTime_max,float32, 0x1e4);
-			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x210);
+			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x210);
 			PROPERTY(m_bProportionalOp,bool, 0x214);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RampScalarLinear) == 0x220, "C_OP_RampScalarLinear size should be 0x220");
-
-#endif
 	}
 }

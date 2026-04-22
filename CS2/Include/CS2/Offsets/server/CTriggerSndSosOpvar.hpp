@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0xBF0
 			namespace CTriggerSndSosOpvar /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_hTouchingPlayers = 0x890; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hTouchingPlayers = 0x890; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_flPosition = 0x8a8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_flCenterSize = 0x8b4; // float32 m_flCenterSize; |  0x8b4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flMinVal = 0x8b8; // float32 m_flMinVal; |  0x8b8 | Schema_Builtin | Size: 0x4

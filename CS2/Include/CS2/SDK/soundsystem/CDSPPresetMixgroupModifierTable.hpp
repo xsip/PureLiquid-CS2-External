@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CDspPresetModifierList.hpp"
+#include <SDK/soundsystem/CDspPresetModifierList.hpp>
 
 
 
@@ -21,12 +21,9 @@ namespace CS2 {
 	namespace soundsystem {
 		class CDSPPresetMixgroupModifierTable  {
 		public:
-			NESTED_PROPERTY(m_table,IDENTITY(GlobalTypes::CUtlVector<soundsystem::CDspPresetModifierList>), 0x0);
+			NESTED_PROPERTY(m_table,GlobalTypes::CUtlVector<soundsystem::CDspPresetModifierList>, 0x0);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CDSPPresetMixgroupModifierTable) == 0x18, "CDSPPresetMixgroupModifierTable size should be 0x18");
-
-#endif
 	}
 }

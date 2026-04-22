@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleModelInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleModelInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
 
@@ -24,20 +24,17 @@ namespace CS2 {
 		class C_OP_ModelSurfaceSnapshotGenerator : public CS2::particles::CParticleFunctionPreEmission {
 		public:
 			PROPERTY(m_nCPSnapshot,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x1e0);
-			NESTED_PROPERTY(m_flRecalcRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x240);
-			NESTED_PROPERTY(m_flUSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x3b0);
-			NESTED_PROPERTY(m_flVSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x520);
-			NESTED_PROPERTY(m_flSurfaceOffset,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x690);
+			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x1e0);
+			NESTED_PROPERTY(m_flRecalcRate,particleslib::CParticleCollectionFloatInput, 0x240);
+			NESTED_PROPERTY(m_flUSpacing,particleslib::CParticleCollectionFloatInput, 0x3b0);
+			NESTED_PROPERTY(m_flVSpacing,particleslib::CParticleCollectionFloatInput, 0x520);
+			NESTED_PROPERTY(m_flSurfaceOffset,particleslib::CParticleCollectionFloatInput, 0x690);
 			PROPERTY(m_bSetNormal,bool, 0x800);
 			PROPERTY(m_bSetUp,bool, 0x801);
 			PROPERTY(m_bSetGravity,bool, 0x802);
 			PROPERTY(m_bSetUV,bool, 0x803);
 			S2_PAD(0x630);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ModelSurfaceSnapshotGenerator) == 0x808, "C_OP_ModelSurfaceSnapshotGenerator size should be 0x808");
-
-#endif
 	}
 }

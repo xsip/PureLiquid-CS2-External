@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
 
 
 
@@ -26,9 +26,6 @@ namespace CS2 {
 			PROPERTY(m_flScale,float32, 0x1d8);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_DampenToCP) == 0x1E0, "C_OP_DampenToCP size should be 0x1E0");
-
-#endif
 	}
 }

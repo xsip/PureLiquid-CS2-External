@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -25,14 +25,11 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nControlPoint,int32_t, 0x1d0);
 			PROPERTY(m_vecPointOffset,GlobalTypes::Vector, 0x1d4);
-			NESTED_PROPERTY(m_flDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flDistance,particleslib::CParticleCollectionFloatInput, 0x1e0);
 			PROPERTY(m_bCullInside,bool, 0x350);
-			NESTED_PROPERTY(m_nAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x354);
+			NESTED_PROPERTY(m_nAttribute,particles::ParticleAttributeIndex_t, 0x354);
 			S2_PAD(0x188);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_DistanceCull) == 0x358, "C_OP_DistanceCull size should be 0x358");
-
-#endif
 	}
 }

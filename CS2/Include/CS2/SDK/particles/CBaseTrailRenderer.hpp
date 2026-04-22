@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseRendererSource2.hpp"
-#include "ParticleOrientationChoiceList_t.hpp"
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
+#include <SDK/particles/CBaseRendererSource2.hpp>
+#include <SDK/particles/ParticleOrientationChoiceList_t.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
 
 
 
@@ -23,18 +23,15 @@ namespace CS2 {
 	namespace particles {
 		class CBaseTrailRenderer : public CS2::particles::CBaseRendererSource2 {
 		public:
-			PROPERTY(m_nOrientationType,IDENTITY(particles::ParticleOrientationChoiceList_t), 0x2de8);
+			PROPERTY(m_nOrientationType,particles::ParticleOrientationChoiceList_t, 0x2de8);
 			PROPERTY(m_nOrientationControlPoint,int32_t, 0x2dec);
 			PROPERTY(m_flMinSize,float32, 0x2df0);
 			PROPERTY(m_flMaxSize,float32, 0x2df4);
-			NESTED_PROPERTY(m_flStartFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2df8);
-			NESTED_PROPERTY(m_flEndFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f68);
+			NESTED_PROPERTY(m_flStartFadeSize,particleslib::CParticleCollectionRendererFloatInput, 0x2df8);
+			NESTED_PROPERTY(m_flEndFadeSize,particleslib::CParticleCollectionRendererFloatInput, 0x2f68);
 			PROPERTY(m_bClampV,bool, 0x30d8);
 			S2_PAD(0x2F8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CBaseTrailRenderer) == 0x30E0, "CBaseTrailRenderer size should be 0x30E0");
-
-#endif
 	}
 }

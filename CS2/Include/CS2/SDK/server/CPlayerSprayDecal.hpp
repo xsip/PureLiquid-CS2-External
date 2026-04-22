@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CModelPointEntity.hpp"
+#include <SDK/server/CModelPointEntity.hpp>
 
 
 
@@ -38,9 +38,6 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_ubSignature,uint8_t, 128 , 0x785);
 			S2_PAD(0xD8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPlayerSprayDecal) == 0x808, "CPlayerSprayDecal size should be 0x808");
-
-#endif
 	}
 }

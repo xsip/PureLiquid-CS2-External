@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -37,7 +37,7 @@ namespace CS2 {
 			PROPERTY(startLerpTo,float32, 0x44);
 			PROPERTY(endLerpTo,float32, 0x48);
 			PROPERTY(maxdensityLerpTo,float32, 0x4c);
-			NESTED_PROPERTY(lerptime,IDENTITY(entity2::GameTime_t), 0x50);
+			NESTED_PROPERTY(lerptime,entity2::GameTime_t, 0x50);
 			PROPERTY(duration,float32, 0x54);
 			PROPERTY(blendtobackground,float32, 0x58);
 			PROPERTY(scattering,float32, 0x5c);
@@ -48,9 +48,6 @@ namespace CS2 {
 			PROPERTY(m_bPadding,bool, 0x67);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::fogparams_t) == 0x68, "fogparams_t size should be 0x68");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimComponentUpdater.hpp"
-#include "../modellib/AnimScriptHandle.hpp"
+#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
+#include <SDK/modellib/AnimScriptHandle.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimScriptComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_hScript,IDENTITY(modellib::AnimScriptHandle), 0x30);
+			NESTED_PROPERTY(m_hScript,modellib::AnimScriptHandle, 0x30);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimScriptComponentUpdater) == 0x38, "CAnimScriptComponentUpdater size should be 0x38");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VMixSubgraphSwitchInterpolationType_t.hpp"
+#include <SDK/soundsystem_lowlevel/VMixSubgraphSwitchInterpolationType_t.hpp>
 
 
 
@@ -23,15 +23,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_effectName,GlobalTypes::CUtlString*, 0x8);
-			PROPERTY(m_subgraphs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x10);
-			PROPERTY(m_interpolationMode,IDENTITY(soundsystem_lowlevel::VMixSubgraphSwitchInterpolationType_t), 0x28);
+			PROPERTY(m_subgraphs,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x10);
+			PROPERTY(m_interpolationMode,soundsystem_lowlevel::VMixSubgraphSwitchInterpolationType_t, 0x28);
 			PROPERTY(m_bOnlyTailsOnFadeOut,bool, 0x2c);
 			PROPERTY(m_flInterpolationTime,float32, 0x30);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixSubgraphSwitchDesc_t) == 0x38, "VMixSubgraphSwitchDesc_t size should be 0x38");
-
-#endif
 	}
 }

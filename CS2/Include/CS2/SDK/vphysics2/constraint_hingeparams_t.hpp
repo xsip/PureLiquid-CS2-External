@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "constraint_axislimit_t.hpp"
-#include "constraint_breakableparams_t.hpp"
+#include <SDK/vphysics2/constraint_axislimit_t.hpp>
+#include <SDK/vphysics2/constraint_breakableparams_t.hpp>
 
 
 
@@ -24,13 +24,10 @@ namespace CS2 {
 		public:
 			PROPERTY(worldPosition,GlobalTypes::Vector, 0x0);
 			PROPERTY(worldAxisDirection,GlobalTypes::Vector, 0xc);
-			NESTED_PROPERTY(hingeAxis,IDENTITY(vphysics2::constraint_axislimit_t), 0x18);
-			NESTED_PROPERTY(constraint,IDENTITY(vphysics2::constraint_breakableparams_t), 0x28);
+			NESTED_PROPERTY(hingeAxis,vphysics2::constraint_axislimit_t, 0x18);
+			NESTED_PROPERTY(constraint,vphysics2::constraint_breakableparams_t, 0x28);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::vphysics2::constraint_hingeparams_t) == 0x40, "constraint_hingeparams_t size should be 0x40");
-
-#endif
 	}
 }

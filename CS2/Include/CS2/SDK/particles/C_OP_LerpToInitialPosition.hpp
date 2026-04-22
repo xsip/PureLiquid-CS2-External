@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -26,15 +26,12 @@ namespace CS2 {
 		class C_OP_LerpToInitialPosition : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_nCacheField,IDENTITY(particles::ParticleAttributeIndex_t), 0x348);
-			NESTED_PROPERTY(m_flScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x4c0);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_nCacheField,particles::ParticleAttributeIndex_t, 0x348);
+			NESTED_PROPERTY(m_flScale,particleslib::CParticleCollectionFloatInput, 0x350);
+			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x4c0);
 			S2_PAD(0x9A8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_LerpToInitialPosition) == 0xB78, "C_OP_LerpToInitialPosition size should be 0xB78");
-
-#endif
 	}
 }

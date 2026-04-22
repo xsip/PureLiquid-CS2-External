@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CompositeMaterialInputLooseVariableType_t.hpp"
-#include "CompositeMaterialVarSystemVar_t.hpp"
-#include "../resourcesystem/InfoForResourceTypeIMaterial2.hpp"
-#include "../resourcesystem/InfoForResourceTypeCTextureBase.hpp"
-#include "CompositeMaterialInputTextureType_t.hpp"
+#include <SDK/compositematerialslib/CompositeMaterialInputLooseVariableType_t.hpp>
+#include <SDK/compositematerialslib/CompositeMaterialVarSystemVar_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeIMaterial2.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCTextureBase.hpp>
+#include <SDK/compositematerialslib/CompositeMaterialInputTextureType_t.hpp>
 
 
 
@@ -33,7 +33,7 @@ namespace CS2 {
 			PROPERTY(m_strExposedVisibleWhenTrue,GlobalTypes::CUtlString*, 0x28);
 			PROPERTY(m_strExposedHiddenWhenTrue,GlobalTypes::CUtlString*, 0x30);
 			PROPERTY(m_strExposedValueList,GlobalTypes::CUtlString*, 0x38);
-			PROPERTY(m_nVariableType,IDENTITY(compositematerialslib::CompositeMaterialInputLooseVariableType_t), 0x40);
+			PROPERTY(m_nVariableType,compositematerialslib::CompositeMaterialInputLooseVariableType_t, 0x40);
 			PROPERTY(m_bValueBoolean,bool, 0x44);
 			PROPERTY(m_nValueIntX,int32_t, 0x48);
 			PROPERTY(m_nValueIntY,int32_t, 0x4c);
@@ -53,20 +53,17 @@ namespace CS2 {
 			PROPERTY(m_flValueFloatW_Min,float32, 0x84);
 			PROPERTY(m_flValueFloatW_Max,float32, 0x88);
 			PROPERTY(m_cValueColor4,GlobalTypes::Color, 0x8c);
-			PROPERTY(m_nValueSystemVar,IDENTITY(compositematerialslib::CompositeMaterialVarSystemVar_t), 0x90);
-			PROPERTY(m_strResourceMaterial,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIMaterial2>>), 0x98);
+			PROPERTY(m_nValueSystemVar,compositematerialslib::CompositeMaterialVarSystemVar_t, 0x90);
+			PROPERTY(m_strResourceMaterial,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIMaterial2>>, 0x98);
 			PROPERTY(m_strTextureContentAssetPath,GlobalTypes::CUtlString*, 0x178);
-			PROPERTY(m_strTextureRuntimeResourcePath,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCTextureBase>>), 0x180);
+			PROPERTY(m_strTextureRuntimeResourcePath,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCTextureBase>>, 0x180);
 			PROPERTY(m_strTextureCompilationVtexTemplate,GlobalTypes::CUtlString*, 0x260);
-			PROPERTY(m_nTextureType,IDENTITY(compositematerialslib::CompositeMaterialInputTextureType_t), 0x268);
+			PROPERTY(m_nTextureType,compositematerialslib::CompositeMaterialInputTextureType_t, 0x268);
 			PROPERTY(m_strString,GlobalTypes::CUtlString*, 0x270);
 			PROPERTY(m_strPanoramaPanelPath,GlobalTypes::CUtlString*, 0x278);
 			PROPERTY(m_nPanoramaRenderRes,int32_t, 0x280);
 			S2_PAD(0x288);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CompositeMaterialInputLooseVariable_t) == 0x288, "CompositeMaterialInputLooseVariable_t size should be 0x288");
-
-#endif
 	}
 }

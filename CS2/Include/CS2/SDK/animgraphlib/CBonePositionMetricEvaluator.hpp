@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMotionMetricEvaluator.hpp"
+#include <SDK/animgraphlib/CMotionMetricEvaluator.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_nBoneIndex,int32_t, 0x50);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBonePositionMetricEvaluator) == 0x58, "CBonePositionMetricEvaluator size should be 0x58");
-
-#endif
 	}
 }

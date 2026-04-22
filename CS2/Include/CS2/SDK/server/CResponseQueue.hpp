@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,12 +25,9 @@ namespace CS2 {
 	namespace server {
 		class CResponseQueue  {
 		public:
-			NESTED_PROPERTY(m_ExpresserTargets,IDENTITY(GlobalTypes::CUtlVector<server::CAI_Expresser*>), 0x38);
+			NESTED_PROPERTY(m_ExpresserTargets,GlobalTypes::CUtlVector<server::CAI_Expresser*>, 0x38);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CResponseQueue) == 0x50, "CResponseQueue size should be 0x50");
-
-#endif
 	}
 }

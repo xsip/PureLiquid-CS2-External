@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimMotorUpdaterBase.hpp"
+#include <SDK/animgraphlib/CAnimMotorUpdaterBase.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_bLockToPath,bool, 0x20);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CPathAnimMotorUpdaterBase) == 0x28, "CPathAnimMotorUpdaterBase size should be 0x28");
-
-#endif
 	}
 }

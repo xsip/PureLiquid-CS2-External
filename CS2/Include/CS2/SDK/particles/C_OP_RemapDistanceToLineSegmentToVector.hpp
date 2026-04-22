@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_OP_RemapDistanceToLineSegmentBase.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/C_OP_RemapDistanceToLineSegmentBase.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapDistanceToLineSegmentToVector : public CS2::particles::C_OP_RemapDistanceToLineSegmentBase {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1e8);
 			PROPERTY(m_vMinOutputValue,GlobalTypes::Vector, 0x1ec);
 			PROPERTY(m_vMaxOutputValue,GlobalTypes::Vector, 0x1f8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapDistanceToLineSegmentToVector) == 0x208, "C_OP_RemapDistanceToLineSegmentToVector size should be 0x208");
-
-#endif
 	}
 }

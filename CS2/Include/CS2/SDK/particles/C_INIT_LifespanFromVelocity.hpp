@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "ParticleTraceSet_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particles/ParticleTraceSet_t.hpp>
 
 
 
@@ -28,13 +28,10 @@ namespace CS2 {
 			PROPERTY(m_flTraceTolerance,float32, 0x1ec);
 			PROPERTY(m_nMaxPlanes,int32_t, 0x1f0);
 			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1f8);
-			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x278);
+			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x278);
 			PROPERTY(m_bIncludeWater,bool, 0x288);
 			S2_PAD(0xB8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_LifespanFromVelocity) == 0x290, "C_INIT_LifespanFromVelocity size should be 0x290");
-
-#endif
 	}
 }

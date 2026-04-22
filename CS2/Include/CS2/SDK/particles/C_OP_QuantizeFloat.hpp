@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_QuantizeFloat : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_InputValue,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d0);
-			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x340);
+			NESTED_PROPERTY(m_InputValue,particleslib::CPerParticleFloatInput, 0x1d0);
+			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x340);
 			S2_PAD(0x1A0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_QuantizeFloat) == 0x370, "C_OP_QuantizeFloat size should be 0x370");
-
-#endif
 	}
 }

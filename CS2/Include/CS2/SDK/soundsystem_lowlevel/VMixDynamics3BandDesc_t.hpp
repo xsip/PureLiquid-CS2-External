@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "VMixDynamicsBand_t.hpp"
+#include <SDK/soundsystem_lowlevel/VMixDynamicsBand_t.hpp>
 
 
 
@@ -30,12 +30,9 @@ namespace CS2 {
 			PROPERTY(m_flLowCutoffFreq,float32, 0x18);
 			PROPERTY(m_flHighCutoffFreq,float32, 0x1c);
 			PROPERTY(m_bPeakMode,bool, 0x20);
-			PROPERTY_ARRAY(m_bandDesc,IDENTITY(soundsystem_lowlevel::VMixDynamicsBand_t), 3 , 0x24);
+			PROPERTY_ARRAY(m_bandDesc,soundsystem_lowlevel::VMixDynamicsBand_t, 3 , 0x24);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixDynamics3BandDesc_t) == 0x90, "VMixDynamics3BandDesc_t size should be 0x90");
-
-#endif
 	}
 }

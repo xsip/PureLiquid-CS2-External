@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -25,7 +25,7 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PositionLock : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1d0);
+			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1d0);
 			PROPERTY(m_flStartTime_min,float32, 0x238);
 			PROPERTY(m_flStartTime_max,float32, 0x23c);
 			PROPERTY(m_flStartTime_exp,float32, 0x240);
@@ -33,18 +33,15 @@ namespace CS2 {
 			PROPERTY(m_flEndTime_max,float32, 0x248);
 			PROPERTY(m_flEndTime_exp,float32, 0x24c);
 			PROPERTY(m_flRange,float32, 0x250);
-			NESTED_PROPERTY(m_flRangeBias,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x258);
+			NESTED_PROPERTY(m_flRangeBias,particleslib::CParticleCollectionFloatInput, 0x258);
 			PROPERTY(m_flJumpThreshold,float32, 0x3c8);
 			PROPERTY(m_flPrevPosScale,float32, 0x3cc);
 			PROPERTY(m_bLockRot,bool, 0x3d0);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3d8);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0xa90);
-			NESTED_PROPERTY(m_nFieldOutputPrev,IDENTITY(particles::ParticleAttributeIndex_t), 0xa94);
+			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x3d8);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0xa90);
+			NESTED_PROPERTY(m_nFieldOutputPrev,particles::ParticleAttributeIndex_t, 0xa94);
 			S2_PAD(0x8C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_PositionLock) == 0xA98, "C_OP_PositionLock size should be 0xA98");
-
-#endif
 	}
 }

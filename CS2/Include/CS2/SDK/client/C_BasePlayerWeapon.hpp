@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_EconEntity.hpp"
-#include "../entity2/GameTick_t.hpp"
+#include <SDK/client/C_EconEntity.hpp>
+#include <SDK/entity2/GameTick_t.hpp>
 
 
 
@@ -22,18 +22,15 @@ namespace CS2 {
 	namespace client {
 		class C_BasePlayerWeapon : public CS2::client::C_EconEntity {
 		public:
-			PROPERTY(m_nNextPrimaryAttackTick,IDENTITY(uint32), 0x18c0);
+			PROPERTY(m_nNextPrimaryAttackTick,uint32_t, 0x18c0);
 			PROPERTY(m_flNextPrimaryAttackTickRatio,float32, 0x18c4);
-			NESTED_PROPERTY(m_nNextSecondaryAttackTick,IDENTITY(entity2::GameTick_t), 0x18c8);
+			NESTED_PROPERTY(m_nNextSecondaryAttackTick,entity2::GameTick_t, 0x18c8);
 			PROPERTY(m_flNextSecondaryAttackTickRatio,float32, 0x18cc);
 			PROPERTY(m_iClip1,int32_t, 0x18d0);
 			PROPERTY(m_iClip2,int32_t, 0x18d4);
 			PROPERTY_ARRAY(m_pReserveAmmo,int32_t, 2 , 0x18d8);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_BasePlayerWeapon) == 0x18F8, "C_BasePlayerWeapon size should be 0x18F8");
-
-#endif
 	}
 }

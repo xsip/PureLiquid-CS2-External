@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_INIT_RemapNamedModelElementToScalar.hpp"
+#include <SDK/particles/C_INIT_RemapNamedModelElementToScalar.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapNamedModelMeshGroupToScalar : public CS2::particles::C_INIT_RemapNamedModelElementToScalar {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_RemapNamedModelMeshGroupToScalar) == 0x220, "C_INIT_RemapNamedModelMeshGroupToScalar size should be 0x220");
-
-#endif
 	}
 }

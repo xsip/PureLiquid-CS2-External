@@ -17,7 +17,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_OnTouching = 0x810; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnTouchingEachEntity = 0x828; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnNotTouching = 0x840; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_hTouchingEntities = 0x858; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hTouchingEntities = 0x858; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_iFilterName = 0x870; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hFilter = 0x878; // GlobalTypes::CHandle<server::CBaseFilter>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_bDisabled = 0x87c; // bool m_bDisabled; |  0x87c | Schema_Builtin | Size: 0x1

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseClientUIEntity.hpp"
+#include <SDK/client/C_BaseClientUIEntity.hpp>
 
 
 
@@ -30,7 +30,7 @@ namespace CS2 {
 			PROPERTY(m_bMoveViewToPlayerNextThink,bool, 0xec1);
 			PROPERTY(m_bCheckCSSClasses,bool, 0xec2);
 			PROPERTY(m_anchorDeltaTransform,GlobalTypes::CTransform, 0xed0);
-			PROPERTY(m_pOffScreenIndicator,IDENTITY(client::CPointOffScreenIndicatorUi*), 0x1060);
+			PROPERTY(m_pOffScreenIndicator,client::CPointOffScreenIndicatorUi*, 0x1060);
 			PROPERTY(m_bIgnoreInput,bool, 0x1088);
 			PROPERTY(m_bLit,bool, 0x1089);
 			PROPERTY(m_bFollowPlayerAcrossTeleport,bool, 0x108a);
@@ -44,7 +44,7 @@ namespace CS2 {
 			PROPERTY(m_unVerticalAlign,uint32_t, 0x10a8);
 			PROPERTY(m_unOrientation,uint32_t, 0x10ac);
 			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x10b0);
-			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x10b8);
+			PROPERTY(m_vecCSSClasses,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>, 0x10b8);
 			PROPERTY(m_bOpaque,bool, 0x10d0);
 			PROPERTY(m_bNoDepth,bool, 0x10d1);
 			PROPERTY(m_bVisibleWhenParentNoDraw,bool, 0x10d2);
@@ -57,9 +57,6 @@ namespace CS2 {
 			PROPERTY(m_nExplicitImageLayout,int32_t, 0x10dc);
 			S2_PAD(0x228);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PointClientUIWorldPanel) == 0x10E0, "C_PointClientUIWorldPanel size should be 0x10E0");
-
-#endif
 	}
 }

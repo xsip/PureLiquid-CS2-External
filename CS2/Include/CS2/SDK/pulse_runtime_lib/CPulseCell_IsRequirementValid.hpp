@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPulseCell_BaseRequirement.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseRequirement.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_IsRequirementValid : public CS2::pulse_runtime_lib::CPulseCell_BaseRequirement {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_IsRequirementValid) == 0x48, "CPulseCell_IsRequirementValid size should be 0x48");
-
-#endif
 	}
 }

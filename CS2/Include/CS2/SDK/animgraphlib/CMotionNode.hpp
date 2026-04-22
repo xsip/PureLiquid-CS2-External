@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/AnimNodeID.hpp"
+#include <SDK/modellib/AnimNodeID.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 		class CMotionNode  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x18);
-			NESTED_PROPERTY(m_id,IDENTITY(modellib::AnimNodeID), 0x20);
+			NESTED_PROPERTY(m_id,modellib::AnimNodeID, 0x20);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionNode) == 0x28, "CMotionNode size should be 0x28");
-
-#endif
 	}
 }

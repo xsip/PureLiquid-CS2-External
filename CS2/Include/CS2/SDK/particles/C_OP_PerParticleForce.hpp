@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionForce.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
+#include <SDK/particles/CParticleFunctionForce.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PerParticleForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			NESTED_PROPERTY(m_flForceScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_vForce,IDENTITY(particleslib::CPerParticleVecInput), 0x350);
+			NESTED_PROPERTY(m_flForceScale,particleslib::CPerParticleFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_vForce,particleslib::CPerParticleVecInput, 0x350);
 			PROPERTY(m_nCP,int32_t, 0xa08);
 			S2_PAD(0x830);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_PerParticleForce) == 0xA10, "C_OP_PerParticleForce size should be 0xA10");
-
-#endif
 	}
 }

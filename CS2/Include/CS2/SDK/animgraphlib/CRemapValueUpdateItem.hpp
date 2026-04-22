@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -21,17 +21,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CRemapValueUpdateItem  {
 		public:
-			NESTED_PROPERTY(m_hParamIn,IDENTITY(animgraphlib::CAnimParamHandle), 0x0);
-			NESTED_PROPERTY(m_hParamOut,IDENTITY(animgraphlib::CAnimParamHandle), 0x2);
+			NESTED_PROPERTY(m_hParamIn,animgraphlib::CAnimParamHandle, 0x0);
+			NESTED_PROPERTY(m_hParamOut,animgraphlib::CAnimParamHandle, 0x2);
 			PROPERTY(m_flMinInputValue,float32, 0x4);
 			PROPERTY(m_flMaxInputValue,float32, 0x8);
 			PROPERTY(m_flMinOutputValue,float32, 0xc);
 			PROPERTY(m_flMaxOutputValue,float32, 0x10);
 			S2_PAD(0x14);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CRemapValueUpdateItem) == 0x14, "CRemapValueUpdateItem size should be 0x14");
-
-#endif
 	}
 }

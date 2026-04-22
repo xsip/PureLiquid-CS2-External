@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FuseVariableIndex_t.hpp"
+#include <SDK/mathlib_extended/FuseVariableIndex_t.hpp>
 
 
 
@@ -21,15 +21,12 @@ namespace CS2 {
 	namespace mathlib_extended {
 		class CFuseProgram  {
 		public:
-			NESTED_PROPERTY(m_programBuffer,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x0);
-			NESTED_PROPERTY(m_variablesRead,IDENTITY(GlobalTypes::CUtlVector<mathlib_extended::FuseVariableIndex_t>), 0x18);
-			NESTED_PROPERTY(m_variablesWritten,IDENTITY(GlobalTypes::CUtlVector<mathlib_extended::FuseVariableIndex_t>), 0x30);
+			NESTED_PROPERTY(m_programBuffer,GlobalTypes::CUtlVector< uint8 >, 0x0);
+			NESTED_PROPERTY(m_variablesRead,GlobalTypes::CUtlVector<mathlib_extended::FuseVariableIndex_t>, 0x18);
+			NESTED_PROPERTY(m_variablesWritten,GlobalTypes::CUtlVector<mathlib_extended::FuseVariableIndex_t>, 0x30);
 			PROPERTY(m_nMaxTempVarsUsed,int32_t, 0x48);
 			S2_PAD(0x50);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::mathlib_extended::CFuseProgram) == 0x50, "CFuseProgram size should be 0x50");
-
-#endif
 	}
 }

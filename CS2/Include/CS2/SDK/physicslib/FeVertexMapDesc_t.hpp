@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -34,9 +34,6 @@ namespace CS2 {
 			PROPERTY(nNodeListCount,uint16_t, 0x32);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeVertexMapDesc_t) == 0x38, "FeVertexMapDesc_t size should be 0x38");
-
-#endif
 	}
 }

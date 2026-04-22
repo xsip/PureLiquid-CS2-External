@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "ScalarExpressionType_t.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleRemapFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particles/ScalarExpressionType_t.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleRemapFloatInput.hpp>
 
 
 
@@ -24,18 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointFieldToScalarExpression : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nExpression,IDENTITY(particles::ScalarExpressionType_t), 0x1d8);
-			NESTED_PROPERTY(m_flInput1,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_flInput2,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
-			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x4c0);
+			PROPERTY(m_nExpression,particles::ScalarExpressionType_t, 0x1d8);
+			NESTED_PROPERTY(m_flInput1,particleslib::CParticleCollectionFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_flInput2,particleslib::CParticleCollectionFloatInput, 0x350);
+			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0x4c0);
 			PROPERTY(m_nOutputCP,int32_t, 0x630);
 			PROPERTY(m_nOutVectorField,int32_t, 0x634);
-			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x638);
+			NESTED_PROPERTY(m_flInterpolation,particleslib::CParticleCollectionFloatInput, 0x638);
 			S2_PAD(0x5D0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointFieldToScalarExpression) == 0x7A8, "C_OP_SetControlPointFieldToScalarExpression size should be 0x7A8");
-
-#endif
 	}
 }

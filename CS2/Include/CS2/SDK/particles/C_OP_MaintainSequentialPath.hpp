@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "CPathParameters.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/CPathParameters.hpp>
 
 
 
@@ -28,12 +28,9 @@ namespace CS2 {
 			PROPERTY(m_flTolerance,float32, 0x1dc);
 			PROPERTY(m_bLoop,bool, 0x1e0);
 			PROPERTY(m_bUseParticleCount,bool, 0x1e1);
-			NESTED_PROPERTY(m_PathParams,IDENTITY(particles::CPathParameters), 0x1f0);
+			NESTED_PROPERTY(m_PathParams,particles::CPathParameters, 0x1f0);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_MaintainSequentialPath) == 0x230, "C_OP_MaintainSequentialPath size should be 0x230");
-
-#endif
 	}
 }

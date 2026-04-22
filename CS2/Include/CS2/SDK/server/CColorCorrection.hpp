@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -26,8 +26,8 @@ namespace CS2 {
 			PROPERTY(m_flFadeOutDuration,float32, 0x4ac);
 			PROPERTY(m_flStartFadeInWeight,float32, 0x4b0);
 			PROPERTY(m_flStartFadeOutWeight,float32, 0x4b4);
-			NESTED_PROPERTY(m_flTimeStartFadeIn,IDENTITY(entity2::GameTime_t), 0x4b8);
-			NESTED_PROPERTY(m_flTimeStartFadeOut,IDENTITY(entity2::GameTime_t), 0x4bc);
+			NESTED_PROPERTY(m_flTimeStartFadeIn,entity2::GameTime_t, 0x4b8);
+			NESTED_PROPERTY(m_flTimeStartFadeOut,entity2::GameTime_t, 0x4bc);
 			PROPERTY(m_flMaxWeight,float32, 0x4c0);
 			PROPERTY(m_bStartDisabled,bool, 0x4c4);
 			PROPERTY(m_bEnabled,bool, 0x4c5);
@@ -41,9 +41,6 @@ namespace CS2 {
 			PROPERTY(m_lookupFilename,GlobalTypes::CUtlSymbolLarge*, 0x6d8);
 			S2_PAD(0x238);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CColorCorrection) == 0x6E0, "CColorCorrection size should be 0x6E0");
-
-#endif
 	}
 }

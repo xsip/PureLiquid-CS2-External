@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
 
 
 
@@ -27,12 +27,9 @@ namespace CS2 {
 		class CTriggerVolume : public CS2::server::CBaseModelEntity {
 		public:
 			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x730);
-			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0x738);
+			PROPERTY(m_hFilter,GlobalTypes::CHandle<server::CBaseFilter>, 0x738);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerVolume) == 0x740, "CTriggerVolume size should be 0x740");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
 
 
 
@@ -24,14 +24,11 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nCP,int32_t, 0x1d8);
 			PROPERTY(m_nCPOutput,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x1e0);
 			PROPERTY(m_bSetMagnitude,bool, 0x898);
 			PROPERTY(m_nOutVectorField,int32_t, 0x89c);
 			S2_PAD(0x6C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RemapExternalWindToCP) == 0x8A0, "C_OP_RemapExternalWindToCP size should be 0x8A0");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -28,16 +28,13 @@ namespace CS2 {
 			PROPERTY(m_flOut2,float32, 0x4b4);
 			PROPERTY(m_flOldInValue,float32, 0x4b8);
 			PROPERTY(m_bEnabled,bool, 0x4bc);
-			// PROPERTY(m_OutValue,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32, float32 >), 0x4c0);
-			NESTED_PROPERTY(m_OnRoseAboveMin,IDENTITY(entity2::CEntityIOOutput), 0x4e0);
-			NESTED_PROPERTY(m_OnRoseAboveMax,IDENTITY(entity2::CEntityIOOutput), 0x4f8);
-			NESTED_PROPERTY(m_OnFellBelowMin,IDENTITY(entity2::CEntityIOOutput), 0x510);
-			NESTED_PROPERTY(m_OnFellBelowMax,IDENTITY(entity2::CEntityIOOutput), 0x528);
+			PROPERTY(m_OutValue,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4c0);
+			NESTED_PROPERTY(m_OnRoseAboveMin,entity2::CEntityIOOutput, 0x4e0);
+			NESTED_PROPERTY(m_OnRoseAboveMax,entity2::CEntityIOOutput, 0x4f8);
+			NESTED_PROPERTY(m_OnFellBelowMin,entity2::CEntityIOOutput, 0x510);
+			NESTED_PROPERTY(m_OnFellBelowMax,entity2::CEntityIOOutput, 0x528);
 			S2_PAD(0x98);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMathRemap) == 0x540, "CMathRemap size should be 0x540");
-
-#endif
 	}
 }

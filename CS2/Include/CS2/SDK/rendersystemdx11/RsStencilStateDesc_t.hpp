@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_nStencilWriteMask,uint8_t, 0x5);
 			S2_PAD(0x6);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::rendersystemdx11::RsStencilStateDesc_t) == 0x6, "RsStencilStateDesc_t size should be 0x6");
-
-#endif
 	}
 }

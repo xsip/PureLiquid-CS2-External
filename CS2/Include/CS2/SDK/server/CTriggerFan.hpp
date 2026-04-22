@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseTrigger.hpp"
-#include "CountdownTimer.hpp"
+#include <SDK/server/CBaseTrigger.hpp>
+#include <SDK/server/CountdownTimer.hpp>
 
 
 
@@ -32,10 +32,10 @@ namespace CS2 {
 			PROPERTY(m_bPushTowardsInfoTarget,bool, 0x8a8);
 			PROPERTY(m_bPushAwayFromInfoTarget,bool, 0x8a9);
 			PROPERTY(m_qNoiseDelta,GlobalTypes::Quaternion, 0x8b0);
-			PROPERTY(m_hInfoFan,IDENTITY(GlobalTypes::CHandle<server::CInfoFan>), 0x8c0);
+			PROPERTY(m_hInfoFan,GlobalTypes::CHandle<server::CInfoFan>, 0x8c0);
 			PROPERTY(m_flForce,float32, 0x8c4);
 			PROPERTY(m_bFalloff,bool, 0x8c8);
-			NESTED_PROPERTY(m_RampTimer,IDENTITY(server::CountdownTimer), 0x8d0);
+			NESTED_PROPERTY(m_RampTimer,server::CountdownTimer, 0x8d0);
 			PROPERTY(m_vFanOriginWS,GlobalTypes::VectorWS, 0x8e8);
 			PROPERTY(m_vFanOriginLS,GlobalTypes::Vector, 0x8f4);
 			PROPERTY(m_vFanEndLS,GlobalTypes::Vector, 0x900);
@@ -54,9 +54,6 @@ namespace CS2 {
 			PROPERTY(m_nManagerFanIdx,int32_t, 0x944);
 			S2_PAD(0xC0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTriggerFan) == 0x950, "CTriggerFan size should be 0x950");
-
-#endif
 	}
 }

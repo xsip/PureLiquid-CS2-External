@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -23,12 +23,9 @@ namespace CS2 {
 		public:
 			PROPERTY(sLockedSound,GlobalTypes::CUtlSymbolLarge*, 0x8);
 			PROPERTY(sUnlockedSound,GlobalTypes::CUtlSymbolLarge*, 0x10);
-			NESTED_PROPERTY(flwaitSound,IDENTITY(entity2::GameTime_t), 0x18);
+			NESTED_PROPERTY(flwaitSound,entity2::GameTime_t, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::locksound_t) == 0x20, "locksound_t size should be 0x20");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseAnimGraph.hpp"
-#include "../entity2/GameTime_t.hpp"
+#include <SDK/client/CBaseAnimGraph.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
 
 
 
@@ -30,8 +30,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bActive,bool, 0x1180);
 			PROPERTY(m_bWasActive,bool, 0x1181);
-			NESTED_PROPERTY(m_flEndTime,IDENTITY(entity2::GameTime_t), 0x1184);
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x1188);
+			NESTED_PROPERTY(m_flEndTime,entity2::GameTime_t, 0x1184);
+			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x1188);
 			PROPERTY(m_flStartTimeInCommentary,float32, 0x118c);
 			PROPERTY(m_iszCommentaryFile,GlobalTypes::CUtlSymbolLarge*, 0x1190);
 			PROPERTY(m_iszTitle,GlobalTypes::CUtlSymbolLarge*, 0x1198);
@@ -39,14 +39,11 @@ namespace CS2 {
 			PROPERTY(m_iNodeNumber,int32_t, 0x11a8);
 			PROPERTY(m_iNodeNumberMax,int32_t, 0x11ac);
 			PROPERTY(m_bListenedTo,bool, 0x11b0);
-			PROPERTY(m_sndCommentary,IDENTITY(client::CSoundPatch*), 0x11b8);
-			PROPERTY(m_hViewPosition,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x11c0);
+			PROPERTY(m_sndCommentary,client::CSoundPatch*, 0x11b8);
+			PROPERTY(m_hViewPosition,GlobalTypes::CHandle<client::C_BaseEntity>, 0x11c0);
 			PROPERTY(m_bRestartAfterRestore,bool, 0x11c4);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PointCommentaryNode) == 0x11C8, "C_PointCommentaryNode size should be 0x11C8");
-
-#endif
 	}
 }

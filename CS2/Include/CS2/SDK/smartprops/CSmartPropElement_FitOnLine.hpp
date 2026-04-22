@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropElement_Group.hpp"
-#include "CSmartPropAttributeCoordinateSpace.hpp"
-#include "CSmartPropAttributeScaleMode.hpp"
-#include "CSmartPropAttributePickMode.hpp"
+#include <SDK/smartprops/CSmartPropElement_Group.hpp>
+#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
+#include <SDK/smartprops/CSmartPropAttributeScaleMode.hpp>
+#include <SDK/smartprops/CSmartPropAttributePickMode.hpp>
 
 
 
@@ -26,18 +26,15 @@ namespace CS2 {
 		public:
 			PROPERTY(m_vStart,GlobalTypes::CSmartPropAttributeVector, 0xa0);
 			PROPERTY(m_vEnd,GlobalTypes::CSmartPropAttributeVector, 0xe0);
-			NESTED_PROPERTY(m_PointSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x120);
+			NESTED_PROPERTY(m_PointSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x120);
 			PROPERTY(m_bOrientAlongLine,GlobalTypes::CSmartPropAttributeBool, 0x160);
 			PROPERTY(m_vUpDirection,GlobalTypes::CSmartPropAttributeVector, 0x1a0);
-			NESTED_PROPERTY(m_UpDirectionSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x1e0);
+			NESTED_PROPERTY(m_UpDirectionSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x1e0);
 			PROPERTY(m_bPrioritizeUp,GlobalTypes::CSmartPropAttributeBool, 0x220);
-			NESTED_PROPERTY(m_nScaleMode,IDENTITY(smartprops::CSmartPropAttributeScaleMode), 0x260);
-			NESTED_PROPERTY(m_nPickMode,IDENTITY(smartprops::CSmartPropAttributePickMode), 0x2a0);
+			NESTED_PROPERTY(m_nScaleMode,smartprops::CSmartPropAttributeScaleMode, 0x260);
+			NESTED_PROPERTY(m_nPickMode,smartprops::CSmartPropAttributePickMode, 0x2a0);
 			S2_PAD(0x240);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_FitOnLine) == 0x2E0, "CSmartPropElement_FitOnLine size should be 0x2E0");
-
-#endif
 	}
 }

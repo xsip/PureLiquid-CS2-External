@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CModelPointEntity.hpp"
-#include "../client/PointWorldTextJustifyHorizontal_t.hpp"
-#include "../client/PointWorldTextJustifyVertical_t.hpp"
-#include "../client/PointWorldTextReorientMode_t.hpp"
+#include <SDK/server/CModelPointEntity.hpp>
+#include <SDK/client/PointWorldTextJustifyHorizontal_t.hpp>
+#include <SDK/client/PointWorldTextJustifyVertical_t.hpp>
+#include <SDK/client/PointWorldTextReorientMode_t.hpp>
 
 
 
@@ -37,14 +37,11 @@ namespace CS2 {
 			PROPERTY(m_flBackgroundBorderHeight,float32, 0x9c8);
 			PROPERTY(m_flBackgroundWorldToUV,float32, 0x9cc);
 			PROPERTY(m_Color,GlobalTypes::Color, 0x9d0);
-			PROPERTY(m_nJustifyHorizontal,IDENTITY(client::PointWorldTextJustifyHorizontal_t), 0x9d4);
-			PROPERTY(m_nJustifyVertical,IDENTITY(client::PointWorldTextJustifyVertical_t), 0x9d8);
-			PROPERTY(m_nReorientMode,IDENTITY(client::PointWorldTextReorientMode_t), 0x9dc);
+			PROPERTY(m_nJustifyHorizontal,client::PointWorldTextJustifyHorizontal_t, 0x9d4);
+			PROPERTY(m_nJustifyVertical,client::PointWorldTextJustifyVertical_t, 0x9d8);
+			PROPERTY(m_nReorientMode,client::PointWorldTextReorientMode_t, 0x9dc);
 			S2_PAD(0x2B0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointWorldText) == 0x9E0, "CPointWorldText size should be 0x9E0");
-
-#endif
 	}
 }

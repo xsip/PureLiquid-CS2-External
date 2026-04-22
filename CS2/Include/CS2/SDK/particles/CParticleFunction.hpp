@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "ParticleEndcapMode_t.hpp"
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/ParticleEndcapMode_t.hpp>
 
 
 
@@ -22,8 +22,8 @@ namespace CS2 {
 	namespace particles {
 		class CParticleFunction  {
 		public:
-			NESTED_PROPERTY(m_flOpStrength,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x8);
-			PROPERTY(m_nOpEndCapState,IDENTITY(particles::ParticleEndcapMode_t), 0x178);
+			NESTED_PROPERTY(m_flOpStrength,particleslib::CParticleCollectionFloatInput, 0x8);
+			PROPERTY(m_nOpEndCapState,particles::ParticleEndcapMode_t, 0x178);
 			PROPERTY(m_flOpStartFadeInTime,float32, 0x17c);
 			PROPERTY(m_flOpEndFadeInTime,float32, 0x180);
 			PROPERTY(m_flOpStartFadeOutTime,float32, 0x184);
@@ -40,9 +40,6 @@ namespace CS2 {
 			PROPERTY(m_Notes,GlobalTypes::CUtlString*, 0x1b0);
 			S2_PAD(0x1D0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CParticleFunction) == 0x1D0, "CParticleFunction size should be 0x1D0");
-
-#endif
 	}
 }

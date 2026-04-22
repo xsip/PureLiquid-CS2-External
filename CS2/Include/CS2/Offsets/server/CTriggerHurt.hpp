@@ -23,7 +23,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hurtThinkPeriod = 0x8c0; // float32 m_hurtThinkPeriod; |  0x8c0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_OnHurt = 0x8c8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnHurtPlayer = 0x8e0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_hurtEntities = 0x8f8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hurtEntities = 0x8f8; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

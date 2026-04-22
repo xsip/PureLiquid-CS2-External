@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CGameSceneNodeHandle.hpp"
-#include "../client/CNetworkOriginCellCoordQuantizedVector.hpp"
+#include <SDK/server/CGameSceneNodeHandle.hpp>
+#include <SDK/client/CNetworkOriginCellCoordQuantizedVector.hpp>
 
 
 
@@ -28,12 +28,12 @@ namespace CS2 {
 		class CGameSceneNode  {
 		public:
 			PROPERTY(m_nodeToWorld,GlobalTypes::CTransformWS, 0x10);
-			PROPERTY(m_pOwner,IDENTITY(entity2::CEntityInstance*), 0x30);
-			PROPERTY(m_pParent,IDENTITY(server::CGameSceneNode*), 0x38);
-			PROPERTY(m_pChild,IDENTITY(server::CGameSceneNode*), 0x40);
-			PROPERTY(m_pNextSibling,IDENTITY(server::CGameSceneNode*), 0x48);
-			NESTED_PROPERTY(m_hParent,IDENTITY(server::CGameSceneNodeHandle), 0x78);
-			NESTED_PROPERTY(m_vecOrigin,IDENTITY(client::CNetworkOriginCellCoordQuantizedVector), 0x88);
+			PROPERTY(m_pOwner,entity2::CEntityInstance*, 0x30);
+			PROPERTY(m_pParent,server::CGameSceneNode*, 0x38);
+			PROPERTY(m_pChild,server::CGameSceneNode*, 0x40);
+			PROPERTY(m_pNextSibling,server::CGameSceneNode*, 0x48);
+			NESTED_PROPERTY(m_hParent,server::CGameSceneNodeHandle, 0x78);
+			NESTED_PROPERTY(m_vecOrigin,client::CNetworkOriginCellCoordQuantizedVector, 0x88);
 			PROPERTY(m_angRotation,GlobalTypes::QAngle, 0xc0);
 			PROPERTY(m_flScale,float32, 0xcc);
 			PROPERTY(m_vecAbsOrigin,GlobalTypes::VectorWS, 0xd0);
@@ -53,9 +53,6 @@ namespace CS2 {
 			PROPERTY(m_vRenderOrigin,GlobalTypes::Vector, 0x118);
 			S2_PAD(0x130);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGameSceneNode) == 0x130, "CGameSceneNode size should be 0x130");
-
-#endif
 	}
 }

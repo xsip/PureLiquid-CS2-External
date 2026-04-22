@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -23,9 +23,6 @@ namespace CS2 {
 			PROPERTY(unused,int32_t, 0x0);
 			S2_PAD(0x4);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::PARTICLE_EHANDLE__) == 0x4, "PARTICLE_EHANDLE__ size should be 0x4");
-
-#endif
 	}
 }

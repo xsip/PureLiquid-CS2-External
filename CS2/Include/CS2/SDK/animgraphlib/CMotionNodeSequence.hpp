@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMotionNode.hpp"
-#include "TagSpan_t.hpp"
-#include "../animationsystem/HSequence.hpp"
+#include <SDK/animgraphlib/CMotionNode.hpp>
+#include <SDK/animgraphlib/TagSpan_t.hpp>
+#include <SDK/animationsystem/HSequence.hpp>
 
 
 
@@ -23,14 +23,11 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionNodeSequence : public CS2::animgraphlib::CMotionNode {
 		public:
-			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x28);
-			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x40);
+			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x28);
+			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x40);
 			PROPERTY(m_flPlaybackSpeed,float32, 0x44);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionNodeSequence) == 0x48, "CMotionNodeSequence size should be 0x48");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
 
 
 
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bHACK_ProvideResultMaxZ,bool, 0x55);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropPulse_CreateSizer) == 0x58, "CSmartPropPulse_CreateSizer size should be 0x58");
-
-#endif
 	}
 }

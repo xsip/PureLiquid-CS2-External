@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "FootPinningPoseOpFixedData_t.hpp"
-#include "FootPinningTimingSource.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/FootPinningPoseOpFixedData_t.hpp>
+#include <SDK/animgraphlib/FootPinningTimingSource.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CFootPinningUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_poseOpFixedData,IDENTITY(animgraphlib::FootPinningPoseOpFixedData_t), 0x78);
-			PROPERTY(m_eTimingSource,IDENTITY(animgraphlib::FootPinningTimingSource), 0xa8);
-			NESTED_PROPERTY(m_params,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimParamHandle>), 0xb0);
+			NESTED_PROPERTY(m_poseOpFixedData,animgraphlib::FootPinningPoseOpFixedData_t, 0x78);
+			PROPERTY(m_eTimingSource,animgraphlib::FootPinningTimingSource, 0xa8);
+			NESTED_PROPERTY(m_params,GlobalTypes::CUtlVector<animgraphlib::CAnimParamHandle>, 0xb0);
 			PROPERTY(m_bResetChild,bool, 0xc8);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFootPinningUpdateNode) == 0xD0, "CFootPinningUpdateNode size should be 0xD0");
-
-#endif
 	}
 }

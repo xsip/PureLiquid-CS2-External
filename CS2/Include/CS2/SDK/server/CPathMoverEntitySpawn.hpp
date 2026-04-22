@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseEntity.hpp"
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -26,13 +26,10 @@ namespace CS2 {
 	namespace server {
 		class CPathMoverEntitySpawn  {
 		public:
-			PROPERTY(hMover,IDENTITY(GlobalTypes::CHandle<server::CFuncMover>), 0x0);
-			NESTED_PROPERTY(vecOtherEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x8);
+			PROPERTY(hMover,GlobalTypes::CHandle<server::CFuncMover>, 0x0);
+			NESTED_PROPERTY(vecOtherEntities,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathMoverEntitySpawn) == 0x20, "CPathMoverEntitySpawn size should be 0x20");
-
-#endif
 	}
 }

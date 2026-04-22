@@ -4,22 +4,22 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBasePlayerWeaponVData.hpp"
-#include "../client/CSWeaponType.hpp"
-#include "../client/CSWeaponCategory.hpp"
-#include "../resourcesystem/InfoForResourceTypeCNmSkeleton.hpp"
-#include "../resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
-#include "../client/gear_slot_t.hpp"
-#include "../client/loadout_slot_t.hpp"
-#include "../client/CSWeaponSilencerType.hpp"
-#include "../client/CFiringModeFloat.hpp"
-#include "../client/CFiringModeInt.hpp"
+#include <SDK/server/CBasePlayerWeaponVData.hpp>
+#include <SDK/client/CSWeaponType.hpp>
+#include <SDK/client/CSWeaponCategory.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCNmSkeleton.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp>
+#include <SDK/client/gear_slot_t.hpp>
+#include <SDK/client/loadout_slot_t.hpp>
+#include <SDK/client/CSWeaponSilencerType.hpp>
+#include <SDK/client/CFiringModeFloat.hpp>
+#include <SDK/client/CFiringModeInt.hpp>
 
 
 
@@ -30,15 +30,15 @@ namespace CS2 {
 	namespace server {
 		class CCSWeaponBaseVData : public CS2::server::CBasePlayerWeaponVData {
 		public:
-			PROPERTY(m_WeaponType,IDENTITY(client::CSWeaponType), 0x440);
-			PROPERTY(m_WeaponCategory,IDENTITY(client::CSWeaponCategory), 0x444);
-			PROPERTY(m_szAnimSkeleton,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>>), 0x448);
+			PROPERTY(m_WeaponType,client::CSWeaponType, 0x440);
+			PROPERTY(m_WeaponCategory,client::CSWeaponCategory, 0x444);
+			PROPERTY(m_szAnimSkeleton,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>>, 0x448);
 			PROPERTY(m_vecMuzzlePos0,GlobalTypes::Vector, 0x528);
 			PROPERTY(m_vecMuzzlePos1,GlobalTypes::Vector, 0x534);
-			PROPERTY(m_szTracerParticle,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>), 0x540);
-			PROPERTY(m_GearSlot,IDENTITY(client::gear_slot_t), 0x620);
+			PROPERTY(m_szTracerParticle,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>, 0x540);
+			PROPERTY(m_GearSlot,client::gear_slot_t, 0x620);
 			PROPERTY(m_GearSlotPosition,int32_t, 0x624);
-			PROPERTY(m_DefaultLoadoutSlot,IDENTITY(client::loadout_slot_t), 0x628);
+			PROPERTY(m_DefaultLoadoutSlot,client::loadout_slot_t, 0x628);
 			PROPERTY(m_nPrice,int32_t, 0x62c);
 			PROPERTY(m_nKillAward,int32_t, 0x630);
 			PROPERTY(m_nPrimaryReserveAmmoMax,int32_t, 0x634);
@@ -48,27 +48,27 @@ namespace CS2 {
 			PROPERTY(m_bIsRevolver,bool, 0x63e);
 			PROPERTY(m_bCannotShootUnderwater,bool, 0x63f);
 			PROPERTY(m_szName,GlobalTypes::CGlobalSymbol, 0x640);
-			PROPERTY(m_eSilencerType,IDENTITY(client::CSWeaponSilencerType), 0x648);
+			PROPERTY(m_eSilencerType,client::CSWeaponSilencerType, 0x648);
 			PROPERTY(m_nCrosshairMinDistance,int32_t, 0x64c);
 			PROPERTY(m_nCrosshairDeltaDistance,int32_t, 0x650);
 			PROPERTY(m_bIsFullAuto,bool, 0x654);
 			PROPERTY(m_nNumBullets,int32_t, 0x658);
 			PROPERTY(m_bReloadsSingleShells,bool, 0x65c);
-			NESTED_PROPERTY(m_flCycleTime,IDENTITY(client::CFiringModeFloat), 0x660);
-			NESTED_PROPERTY(m_flMaxSpeed,IDENTITY(client::CFiringModeFloat), 0x668);
-			NESTED_PROPERTY(m_flSpread,IDENTITY(client::CFiringModeFloat), 0x670);
-			NESTED_PROPERTY(m_flInaccuracyCrouch,IDENTITY(client::CFiringModeFloat), 0x678);
-			NESTED_PROPERTY(m_flInaccuracyStand,IDENTITY(client::CFiringModeFloat), 0x680);
-			NESTED_PROPERTY(m_flInaccuracyJump,IDENTITY(client::CFiringModeFloat), 0x688);
-			NESTED_PROPERTY(m_flInaccuracyLand,IDENTITY(client::CFiringModeFloat), 0x690);
-			NESTED_PROPERTY(m_flInaccuracyLadder,IDENTITY(client::CFiringModeFloat), 0x698);
-			NESTED_PROPERTY(m_flInaccuracyFire,IDENTITY(client::CFiringModeFloat), 0x6a0);
-			NESTED_PROPERTY(m_flInaccuracyMove,IDENTITY(client::CFiringModeFloat), 0x6a8);
-			NESTED_PROPERTY(m_flRecoilAngle,IDENTITY(client::CFiringModeFloat), 0x6b0);
-			NESTED_PROPERTY(m_flRecoilAngleVariance,IDENTITY(client::CFiringModeFloat), 0x6b8);
-			NESTED_PROPERTY(m_flRecoilMagnitude,IDENTITY(client::CFiringModeFloat), 0x6c0);
-			NESTED_PROPERTY(m_flRecoilMagnitudeVariance,IDENTITY(client::CFiringModeFloat), 0x6c8);
-			NESTED_PROPERTY(m_nTracerFrequency,IDENTITY(client::CFiringModeInt), 0x6d0);
+			NESTED_PROPERTY(m_flCycleTime,client::CFiringModeFloat, 0x660);
+			NESTED_PROPERTY(m_flMaxSpeed,client::CFiringModeFloat, 0x668);
+			NESTED_PROPERTY(m_flSpread,client::CFiringModeFloat, 0x670);
+			NESTED_PROPERTY(m_flInaccuracyCrouch,client::CFiringModeFloat, 0x678);
+			NESTED_PROPERTY(m_flInaccuracyStand,client::CFiringModeFloat, 0x680);
+			NESTED_PROPERTY(m_flInaccuracyJump,client::CFiringModeFloat, 0x688);
+			NESTED_PROPERTY(m_flInaccuracyLand,client::CFiringModeFloat, 0x690);
+			NESTED_PROPERTY(m_flInaccuracyLadder,client::CFiringModeFloat, 0x698);
+			NESTED_PROPERTY(m_flInaccuracyFire,client::CFiringModeFloat, 0x6a0);
+			NESTED_PROPERTY(m_flInaccuracyMove,client::CFiringModeFloat, 0x6a8);
+			NESTED_PROPERTY(m_flRecoilAngle,client::CFiringModeFloat, 0x6b0);
+			NESTED_PROPERTY(m_flRecoilAngleVariance,client::CFiringModeFloat, 0x6b8);
+			NESTED_PROPERTY(m_flRecoilMagnitude,client::CFiringModeFloat, 0x6c0);
+			NESTED_PROPERTY(m_flRecoilMagnitudeVariance,client::CFiringModeFloat, 0x6c8);
+			NESTED_PROPERTY(m_nTracerFrequency,client::CFiringModeInt, 0x6d0);
 			PROPERTY(m_flInaccuracyJumpInitial,float32, 0x6d8);
 			PROPERTY(m_flInaccuracyJumpApex,float32, 0x6dc);
 			PROPERTY(m_flInaccuracyReload,float32, 0x6e0);
@@ -114,9 +114,6 @@ namespace CS2 {
 			PROPERTY(m_szAnimClass,GlobalTypes::CGlobalSymbol, 0x788);
 			S2_PAD(0x380);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSWeaponBaseVData) == 0x7C0, "CCSWeaponBaseVData size should be 0x7C0");
-
-#endif
 	}
 }

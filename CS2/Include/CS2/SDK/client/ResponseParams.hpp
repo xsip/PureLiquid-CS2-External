@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -27,12 +27,9 @@ namespace CS2 {
 		public:
 			PROPERTY(odds,int16_t, 0x10);
 			PROPERTY(flags,int16_t, 0x12);
-			PROPERTY(m_pFollowup,IDENTITY(client::ResponseFollowup*), 0x18);
+			PROPERTY(m_pFollowup,client::ResponseFollowup*, 0x18);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ResponseParams) == 0x20, "ResponseParams size should be 0x20");
-
-#endif
 	}
 }

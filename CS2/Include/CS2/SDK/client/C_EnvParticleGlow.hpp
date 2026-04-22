@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_ParticleSystem.hpp"
+#include <SDK/client/C_ParticleSystem.hpp>
 
 
 
@@ -30,12 +30,9 @@ namespace CS2 {
 			PROPERTY(m_flRadiusScale,float32, 0x143c);
 			PROPERTY(m_flSelfIllumScale,float32, 0x1440);
 			PROPERTY(m_ColorTint,GlobalTypes::Color, 0x1444);
-			PROPERTY(m_hTextureOverride,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1448);
+			PROPERTY(m_hTextureOverride,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1448);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvParticleGlow) == 0x1450, "C_EnvParticleGlow size should be 0x1450");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
-#include "../pulse_runtime_lib/SignatureOutflow_Resume.hpp"
-#include "../pulse_runtime_lib/CPulse_ResumePoint.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
+#include <SDK/pulse_runtime_lib/SignatureOutflow_Resume.hpp>
+#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 	namespace server {
 		class CPulseCell_Outflow_ListenForEntityOutput : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_OnFired,IDENTITY(pulse_runtime_lib::SignatureOutflow_Resume), 0x48);
-			NESTED_PROPERTY(m_OnCanceled,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x90);
+			NESTED_PROPERTY(m_OnFired,pulse_runtime_lib::SignatureOutflow_Resume, 0x48);
+			NESTED_PROPERTY(m_OnCanceled,pulse_runtime_lib::CPulse_ResumePoint, 0x90);
 			PROPERTY(m_strEntityOutput,GlobalTypes::CGlobalSymbol, 0xd8);
 			PROPERTY(m_strEntityOutputParam,GlobalTypes::CUtlString*, 0xe0);
 			PROPERTY(m_bListenUntilCanceled,bool, 0xe8);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_ListenForEntityOutput) == 0xF0, "CPulseCell_Outflow_ListenForEntityOutput size should be 0xF0");
-
-#endif
 	}
 }

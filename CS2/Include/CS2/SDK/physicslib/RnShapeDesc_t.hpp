@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -28,9 +28,6 @@ namespace CS2 {
 			PROPERTY(m_nToolMaterialHash,uint32_t, 0x14);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnShapeDesc_t) == 0x18, "RnShapeDesc_t size should be 0x18");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace pulse_system {
 		class CPulseCell_Test_MultiInflow_NoDefault : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_system::CPulseCell_Test_MultiInflow_NoDefault) == 0x48, "CPulseCell_Test_MultiInflow_NoDefault size should be 0x48");
-
-#endif
 	}
 }

@@ -4,25 +4,25 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PermModelInfo_t.hpp"
-#include "PermModelExtPart_t.hpp"
-#include "../resourcesystem/InfoForResourceTypeCRenderMesh.hpp"
-#include "../resourcesystem/InfoForResourceTypeCPhysAggregateData.hpp"
-#include "../resourcesystem/InfoForResourceTypeCAnimationGroup.hpp"
-#include "../resourcesystem/InfoForResourceTypeCSequenceGroupData.hpp"
-#include "MaterialGroup_t.hpp"
-#include "ModelSkeletonData_t.hpp"
-#include "ModelBoneFlexDriver_t.hpp"
-#include "../resourcesystem/InfoForResourceTypeCModel.hpp"
-#include "PermModelDataAnimatedMaterialAttribute_t.hpp"
-#include "ModelAnimGraph2Ref_t.hpp"
-#include "../resourcesystem/InfoForResourceTypeCNmSkeleton.hpp"
+#include <SDK/modellib/PermModelInfo_t.hpp>
+#include <SDK/modellib/PermModelExtPart_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCRenderMesh.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCPhysAggregateData.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCAnimationGroup.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCSequenceGroupData.hpp>
+#include <SDK/modellib/MaterialGroup_t.hpp>
+#include <SDK/modellib/ModelSkeletonData_t.hpp>
+#include <SDK/modellib/ModelBoneFlexDriver_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCModel.hpp>
+#include <SDK/modellib/PermModelDataAnimatedMaterialAttribute_t.hpp>
+#include <SDK/modellib/ModelAnimGraph2Ref_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCNmSkeleton.hpp>
 
 
 
@@ -39,35 +39,32 @@ namespace CS2 {
 		class PermModelData_t  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_modelInfo,IDENTITY(modellib::PermModelInfo_t), 0x8);
-			NESTED_PROPERTY(m_ExtParts,IDENTITY(GlobalTypes::CUtlVector<modellib::PermModelExtPart_t>), 0x60);
-			NESTED_PROPERTY(m_refMeshes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCRenderMesh>>), 0x78);
-			NESTED_PROPERTY(m_refMeshGroupMasks,IDENTITY(GlobalTypes::CUtlVector< uint64 >), 0x90);
-			NESTED_PROPERTY(m_refPhysGroupMasks,IDENTITY(GlobalTypes::CUtlVector< uint64 >), 0xa8);
-			NESTED_PROPERTY(m_refLODGroupMasks,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0xc0);
-			NESTED_PROPERTY(m_lodGroupSwitchDistances,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0xd8);
-			NESTED_PROPERTY(m_refPhysicsData,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPhysAggregateData>>), 0xf0);
-			NESTED_PROPERTY(m_refPhysicsHitboxData,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPhysAggregateData>>), 0x108);
-			NESTED_PROPERTY(m_refAnimGroups,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCAnimationGroup>>), 0x120);
-			NESTED_PROPERTY(m_refSequenceGroups,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCSequenceGroupData>>), 0x138);
-			PROPERTY(m_meshGroups,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x150);
-			NESTED_PROPERTY(m_materialGroups,IDENTITY(GlobalTypes::CUtlVector<modellib::MaterialGroup_t>), 0x168);
+			NESTED_PROPERTY(m_modelInfo,modellib::PermModelInfo_t, 0x8);
+			NESTED_PROPERTY(m_ExtParts,GlobalTypes::CUtlVector<modellib::PermModelExtPart_t>, 0x60);
+			NESTED_PROPERTY(m_refMeshes,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCRenderMesh>>, 0x78);
+			NESTED_PROPERTY(m_refMeshGroupMasks,GlobalTypes::CUtlVector< uint64 >, 0x90);
+			NESTED_PROPERTY(m_refPhysGroupMasks,GlobalTypes::CUtlVector< uint64 >, 0xa8);
+			NESTED_PROPERTY(m_refLODGroupMasks,GlobalTypes::CUtlVector< uint8 >, 0xc0);
+			NESTED_PROPERTY(m_lodGroupSwitchDistances,GlobalTypes::CUtlVector< float32 >, 0xd8);
+			NESTED_PROPERTY(m_refPhysicsData,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPhysAggregateData>>, 0xf0);
+			NESTED_PROPERTY(m_refPhysicsHitboxData,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPhysAggregateData>>, 0x108);
+			NESTED_PROPERTY(m_refAnimGroups,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCAnimationGroup>>, 0x120);
+			NESTED_PROPERTY(m_refSequenceGroups,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCSequenceGroupData>>, 0x138);
+			PROPERTY(m_meshGroups,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x150);
+			NESTED_PROPERTY(m_materialGroups,GlobalTypes::CUtlVector<modellib::MaterialGroup_t>, 0x168);
 			PROPERTY(m_nDefaultMeshGroupMask,uint64_t, 0x180);
-			NESTED_PROPERTY(m_modelSkeleton,IDENTITY(modellib::ModelSkeletonData_t), 0x188);
-			NESTED_PROPERTY(m_remappingTable,IDENTITY(GlobalTypes::CUtlVector< int16 >), 0x230);
-			NESTED_PROPERTY(m_remappingTableStarts,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x248);
-			NESTED_PROPERTY(m_boneFlexDrivers,IDENTITY(GlobalTypes::CUtlVector<modellib::ModelBoneFlexDriver_t>), 0x260);
-			PROPERTY(m_pModelConfigList,IDENTITY(modellib::CModelConfigList*), 0x278);
-			PROPERTY(m_BodyGroupsHiddenInTools,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x280);
-			NESTED_PROPERTY(m_refAnimIncludeModels,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x298);
-			NESTED_PROPERTY(m_AnimatedMaterialAttributes,IDENTITY(GlobalTypes::CUtlVector<modellib::PermModelDataAnimatedMaterialAttribute_t>), 0x2b0);
-			NESTED_PROPERTY(m_animGraph2Refs,IDENTITY(GlobalTypes::CUtlVector<modellib::ModelAnimGraph2Ref_t>), 0x2c8);
-			NESTED_PROPERTY(m_vecNmSkeletonRefs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>>), 0x2e0);
+			NESTED_PROPERTY(m_modelSkeleton,modellib::ModelSkeletonData_t, 0x188);
+			NESTED_PROPERTY(m_remappingTable,GlobalTypes::CUtlVector< int16 >, 0x230);
+			NESTED_PROPERTY(m_remappingTableStarts,GlobalTypes::CUtlVector< uint16 >, 0x248);
+			NESTED_PROPERTY(m_boneFlexDrivers,GlobalTypes::CUtlVector<modellib::ModelBoneFlexDriver_t>, 0x260);
+			PROPERTY(m_pModelConfigList,modellib::CModelConfigList*, 0x278);
+			PROPERTY(m_BodyGroupsHiddenInTools,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x280);
+			NESTED_PROPERTY(m_refAnimIncludeModels,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>>, 0x298);
+			NESTED_PROPERTY(m_AnimatedMaterialAttributes,GlobalTypes::CUtlVector<modellib::PermModelDataAnimatedMaterialAttribute_t>, 0x2b0);
+			NESTED_PROPERTY(m_animGraph2Refs,GlobalTypes::CUtlVector<modellib::ModelAnimGraph2Ref_t>, 0x2c8);
+			NESTED_PROPERTY(m_vecNmSkeletonRefs,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>>, 0x2e0);
 			S2_PAD(0x2F8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::PermModelData_t) == 0x2F8, "PermModelData_t size should be 0x2F8");
-
-#endif
 	}
 }

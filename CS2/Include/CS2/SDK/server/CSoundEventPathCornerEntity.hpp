@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSoundEventEntity.hpp"
-#include "../client/SoundeventPathCornerPairNetworked_t.hpp"
+#include <SDK/server/CSoundEventEntity.hpp>
+#include <SDK/client/SoundeventPathCornerPairNetworked_t.hpp>
 
 
 
@@ -28,12 +28,9 @@ namespace CS2 {
 			PROPERTY(m_flDistMaxSqr,float32, 0x568);
 			PROPERTY(m_flDotProductMax,float32, 0x56c);
 			PROPERTY(m_bPlaying,bool, 0x570);
-			// PROPERTY(m_vecCornerPairsNetworked,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<client::SoundeventPathCornerPairNetworked_t>), 0x598);
+			PROPERTY(m_vecCornerPairsNetworked,GlobalTypes::CNetworkUtlVectorBase<client::SoundeventPathCornerPairNetworked_t>, 0x598);
 			S2_PAD(0xA0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundEventPathCornerEntity) == 0x5F8, "CSoundEventPathCornerEntity size should be 0x5F8");
-
-#endif
 	}
 }

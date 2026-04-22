@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_ModelPointEntity.hpp"
-#include "CPlayerSprayDecalRenderHelper.hpp"
+#include <SDK/client/C_ModelPointEntity.hpp>
+#include <SDK/client/CPlayerSprayDecalRenderHelper.hpp>
 
 
 
@@ -37,12 +37,9 @@ namespace CS2 {
 			PROPERTY(m_nTintID,int32_t, 0xed8);
 			PROPERTY(m_nVersion,uint8_t, 0xedc);
 			PROPERTY_ARRAY(m_ubSignature,uint8_t, 128 , 0xedd);
-			NESTED_PROPERTY(m_SprayRenderHelper,IDENTITY(client::CPlayerSprayDecalRenderHelper), 0xf68);
+			NESTED_PROPERTY(m_SprayRenderHelper,client::CPlayerSprayDecalRenderHelper, 0xf68);
 			S2_PAD(0x110);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PlayerSprayDecal) == 0xF98, "C_PlayerSprayDecal size should be 0xF98");
-
-#endif
 	}
 }

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
-#include "TrackOrientationType_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CPointEntity.hpp>
+#include <SDK/server/TrackOrientationType_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -23,20 +23,17 @@ namespace CS2 {
 	namespace server {
 		class CPathTrack : public CS2::server::CPointEntity {
 		public:
-			PROPERTY(m_pnext,IDENTITY(server::CPathTrack*), 0x4a8);
-			PROPERTY(m_pprevious,IDENTITY(server::CPathTrack*), 0x4b0);
-			PROPERTY(m_paltpath,IDENTITY(server::CPathTrack*), 0x4b8);
+			PROPERTY(m_pnext,server::CPathTrack*, 0x4a8);
+			PROPERTY(m_pprevious,server::CPathTrack*, 0x4b0);
+			PROPERTY(m_paltpath,server::CPathTrack*, 0x4b8);
 			PROPERTY(m_flRadius,float32, 0x4c0);
 			PROPERTY(m_length,float32, 0x4c4);
 			PROPERTY(m_altName,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
 			PROPERTY(m_nIterVal,int32_t, 0x4d0);
-			PROPERTY(m_eOrientationType,IDENTITY(server::TrackOrientationType_t), 0x4d4);
-			NESTED_PROPERTY(m_OnPass,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
+			PROPERTY(m_eOrientationType,server::TrackOrientationType_t, 0x4d4);
+			NESTED_PROPERTY(m_OnPass,entity2::CEntityIOOutput, 0x4d8);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathTrack) == 0x4F0, "CPathTrack size should be 0x4F0");
-
-#endif
 	}
 }

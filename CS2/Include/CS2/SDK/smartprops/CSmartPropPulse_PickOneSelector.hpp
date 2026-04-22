@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
-#include "ConfigurationHandleShape_t.hpp"
-#include "../pulse_runtime_lib/PulseSelectorOutflowList_t.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
+#include <SDK/smartprops/ConfigurationHandleShape_t.hpp>
+#include <SDK/pulse_runtime_lib/PulseSelectorOutflowList_t.hpp>
 
 
 
@@ -23,13 +23,10 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropPulse_PickOneSelector : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
-			PROPERTY(m_HandleShape,IDENTITY(smartprops::ConfigurationHandleShape_t), 0x48);
-			NESTED_PROPERTY(m_OutflowList,IDENTITY(pulse_runtime_lib::PulseSelectorOutflowList_t), 0x50);
+			PROPERTY(m_HandleShape,smartprops::ConfigurationHandleShape_t, 0x48);
+			NESTED_PROPERTY(m_OutflowList,pulse_runtime_lib::PulseSelectorOutflowList_t, 0x50);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropPulse_PickOneSelector) == 0x68, "CSmartPropPulse_PickOneSelector size should be 0x68");
-
-#endif
 	}
 }

@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -26,12 +26,9 @@ namespace CS2 {
 		class ManifestTestResource_t  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
-			PROPERTY(m_child,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeManifestTestResource_t>), 0x8);
+			PROPERTY(m_child,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeManifestTestResource_t>, 0x8);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::resourcesystem::ManifestTestResource_t) == 0x10, "ManifestTestResource_t size should be 0x10");
-
-#endif
 	}
 }

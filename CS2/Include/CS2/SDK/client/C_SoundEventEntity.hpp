@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -30,17 +30,14 @@ namespace CS2 {
 			PROPERTY(m_flSavedElapsedTime,float32, 0x610);
 			PROPERTY(m_iszSourceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x618);
 			PROPERTY(m_iszAttachmentName,GlobalTypes::CUtlSymbolLarge*, 0x620);
-			// PROPERTY(m_onGUIDChanged,IDENTITY(GlobalTypes::CEntityOutputTemplate< uint64, uint64 >), 0x628);
-			NESTED_PROPERTY(m_onSoundFinished,IDENTITY(entity2::CEntityIOOutput), 0x648);
+			PROPERTY(m_onGUIDChanged,GlobalTypes::CEntityOutputTemplate< uint64, uint64 >, 0x628);
+			NESTED_PROPERTY(m_onSoundFinished,entity2::CEntityIOOutput, 0x648);
 			PROPERTY(m_flClientCullRadius,float32, 0x660);
 			PROPERTY(m_iszSoundName,GlobalTypes::CUtlSymbolLarge*, 0x690);
 			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x6ac);
 			PROPERTY(m_nEntityIndexSelection,int32_t, 0x6b0);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_SoundEventEntity) == 0x6B8, "C_SoundEventEntity size should be 0x6B8");
-
-#endif
 	}
 }

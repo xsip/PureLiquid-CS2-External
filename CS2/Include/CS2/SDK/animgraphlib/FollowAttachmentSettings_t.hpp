@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/CAnimAttachment.hpp"
-#include "../modellib/AttachmentHandle_t.hpp"
+#include <SDK/modellib/CAnimAttachment.hpp>
+#include <SDK/modellib/AttachmentHandle_t.hpp>
 
 
 
@@ -22,16 +22,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class FollowAttachmentSettings_t  {
 		public:
-			NESTED_PROPERTY(m_attachment,IDENTITY(modellib::CAnimAttachment), 0x0);
+			NESTED_PROPERTY(m_attachment,modellib::CAnimAttachment, 0x0);
 			PROPERTY(m_boneIndex,int32_t, 0x80);
-			NESTED_PROPERTY(m_attachmentHandle,IDENTITY(modellib::AttachmentHandle_t), 0x84);
+			NESTED_PROPERTY(m_attachmentHandle,modellib::AttachmentHandle_t, 0x84);
 			PROPERTY(m_bMatchTranslation,bool, 0x85);
 			PROPERTY(m_bMatchRotation,bool, 0x86);
 			S2_PAD(0x90);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FollowAttachmentSettings_t) == 0x90, "FollowAttachmentSettings_t size should be 0x90");
-
-#endif
 	}
 }

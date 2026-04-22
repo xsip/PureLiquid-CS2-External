@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
-#include "SoundEventStartType_t.hpp"
+#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
+#include <SDK/server/SoundEventStartType_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace server {
 		class CPulseCell_SoundEventStart : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
-			PROPERTY(m_Type,IDENTITY(server::SoundEventStartType_t), 0x48);
+			PROPERTY(m_Type,server::SoundEventStartType_t, 0x48);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseCell_SoundEventStart) == 0x50, "CPulseCell_SoundEventStart size should be 0x50");
-
-#endif
 	}
 }

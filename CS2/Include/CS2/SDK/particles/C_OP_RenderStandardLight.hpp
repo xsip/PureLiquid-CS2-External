@@ -4,23 +4,23 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "ParticleLightTypeChoiceList_t.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "ParticleColorBlendType_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "StandardLightingAttenuationStyle_t.hpp"
-#include "ParticleLightFogLightingMode_t.hpp"
-#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
-#include "ParticleLightBehaviorChoiceList_t.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/ParticleLightTypeChoiceList_t.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particles/StandardLightingAttenuationStyle_t.hpp>
+#include <SDK/particles/ParticleLightFogLightingMode_t.hpp>
+#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
+#include <SDK/particles/ParticleLightBehaviorChoiceList_t.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -31,29 +31,29 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderStandardLight : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_nLightType,IDENTITY(particles::ParticleLightTypeChoiceList_t), 0x220);
-			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x228);
-			PROPERTY(m_nColorBlendType,IDENTITY(particles::ParticleColorBlendType_t), 0x8e0);
-			NESTED_PROPERTY(m_flIntensity,IDENTITY(particleslib::CPerParticleFloatInput), 0x8e8);
+			PROPERTY(m_nLightType,particles::ParticleLightTypeChoiceList_t, 0x220);
+			NESTED_PROPERTY(m_vecColorScale,particleslib::CParticleCollectionVecInput, 0x228);
+			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0x8e0);
+			NESTED_PROPERTY(m_flIntensity,particleslib::CPerParticleFloatInput, 0x8e8);
 			PROPERTY(m_bCastShadows,bool, 0xa58);
-			NESTED_PROPERTY(m_flTheta,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa60);
-			NESTED_PROPERTY(m_flPhi,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xbd0);
-			NESTED_PROPERTY(m_flRadiusMultiplier,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd40);
-			PROPERTY(m_nAttenuationStyle,IDENTITY(particles::StandardLightingAttenuationStyle_t), 0xeb0);
-			NESTED_PROPERTY(m_flFalloffLinearity,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xeb8);
-			NESTED_PROPERTY(m_flFiftyPercentFalloff,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1028);
-			NESTED_PROPERTY(m_flZeroPercentFalloff,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1198);
+			NESTED_PROPERTY(m_flTheta,particleslib::CParticleCollectionFloatInput, 0xa60);
+			NESTED_PROPERTY(m_flPhi,particleslib::CParticleCollectionFloatInput, 0xbd0);
+			NESTED_PROPERTY(m_flRadiusMultiplier,particleslib::CParticleCollectionFloatInput, 0xd40);
+			PROPERTY(m_nAttenuationStyle,particles::StandardLightingAttenuationStyle_t, 0xeb0);
+			NESTED_PROPERTY(m_flFalloffLinearity,particleslib::CParticleCollectionFloatInput, 0xeb8);
+			NESTED_PROPERTY(m_flFiftyPercentFalloff,particleslib::CParticleCollectionFloatInput, 0x1028);
+			NESTED_PROPERTY(m_flZeroPercentFalloff,particleslib::CParticleCollectionFloatInput, 0x1198);
 			PROPERTY(m_bRenderDiffuse,bool, 0x1308);
 			PROPERTY(m_bRenderSpecular,bool, 0x1309);
 			PROPERTY(m_lightCookie,GlobalTypes::CUtlString*, 0x1310);
 			PROPERTY(m_nPriority,int32_t, 0x1318);
-			PROPERTY(m_nFogLightingMode,IDENTITY(particles::ParticleLightFogLightingMode_t), 0x131c);
-			NESTED_PROPERTY(m_flFogContribution,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1320);
-			PROPERTY(m_nCapsuleLightBehavior,IDENTITY(particles::ParticleLightBehaviorChoiceList_t), 0x1490);
+			PROPERTY(m_nFogLightingMode,particles::ParticleLightFogLightingMode_t, 0x131c);
+			NESTED_PROPERTY(m_flFogContribution,particleslib::CParticleCollectionRendererFloatInput, 0x1320);
+			PROPERTY(m_nCapsuleLightBehavior,particles::ParticleLightBehaviorChoiceList_t, 0x1490);
 			PROPERTY(m_flCapsuleLength,float32, 0x1494);
 			PROPERTY(m_bReverseOrder,bool, 0x1498);
 			PROPERTY(m_bClosedLoop,bool, 0x1499);
-			NESTED_PROPERTY(m_nPrevPntSource,IDENTITY(particles::ParticleAttributeIndex_t), 0x149c);
+			NESTED_PROPERTY(m_nPrevPntSource,particles::ParticleAttributeIndex_t, 0x149c);
 			PROPERTY(m_flMaxLength,float32, 0x14a0);
 			PROPERTY(m_flMinLength,float32, 0x14a4);
 			PROPERTY(m_bIgnoreDT,bool, 0x14a8);
@@ -62,9 +62,6 @@ namespace CS2 {
 			PROPERTY(m_flLengthFadeInTime,float32, 0x14b4);
 			S2_PAD(0x12A0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderStandardLight) == 0x14C0, "C_OP_RenderStandardLight size should be 0x14C0");
-
-#endif
 	}
 }

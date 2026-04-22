@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../client/BrushSolidities_e.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/client/BrushSolidities_e.hpp>
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace server {
 		class CFuncBrush : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_iSolidity,IDENTITY(client::BrushSolidities_e), 0x730);
+			PROPERTY(m_iSolidity,client::BrushSolidities_e, 0x730);
 			PROPERTY(m_iDisabled,int32_t, 0x734);
 			PROPERTY(m_bSolidBsp,bool, 0x738);
 			PROPERTY(m_iszExcludedClass,GlobalTypes::CUtlSymbolLarge*, 0x740);
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bScriptedMovement,bool, 0x749);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncBrush) == 0x750, "CFuncBrush size should be 0x750");
-
-#endif
 	}
 }

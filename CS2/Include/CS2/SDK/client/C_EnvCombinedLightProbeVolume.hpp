@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
 
 
 
@@ -28,17 +28,17 @@ namespace CS2 {
 		public:
 			PROPERTY(m_Entity_Color,GlobalTypes::Color, 0x1680);
 			PROPERTY(m_Entity_flBrightness,float32, 0x1684);
-			PROPERTY(m_Entity_hCubemapTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1688);
+			PROPERTY(m_Entity_hCubemapTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1688);
 			PROPERTY(m_Entity_bCustomCubemapTexture,bool, 0x1690);
-			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1698);
-			PROPERTY(m_Entity_hLightProbeTexture_SDF,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16a0);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16a8);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16b0);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16b8);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16c0);
-			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16c8);
-			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16d0);
-			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16d8);
+			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1698);
+			PROPERTY(m_Entity_hLightProbeTexture_SDF,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16a0);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16a8);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16b0);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16b8);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16c0);
+			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16c8);
+			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16d0);
+			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16d8);
 			PROPERTY(m_Entity_vBoxMins,GlobalTypes::Vector, 0x16e0);
 			PROPERTY(m_Entity_vBoxMaxs,GlobalTypes::Vector, 0x16ec);
 			PROPERTY(m_Entity_bMoveable,bool, 0x16f8);
@@ -57,9 +57,6 @@ namespace CS2 {
 			PROPERTY(m_Entity_bEnabled,bool, 0x1749);
 			S2_PAD(0x1148);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EnvCombinedLightProbeVolume) == 0x1750, "C_EnvCombinedLightProbeVolume size should be 0x1750");
-
-#endif
 	}
 }

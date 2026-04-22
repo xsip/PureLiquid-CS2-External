@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_CSPlayerPawn.hpp"
+#include <SDK/client/C_CSPlayerPawn.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_flInitialModelScale,float32, 0x3ef8);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayer) == 0x3FA0, "C_CSGO_PreviewPlayer size should be 0x3FA0");
-
-#endif
 	}
 }

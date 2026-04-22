@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimNodePath.hpp"
-#include "AnimNodeNetworkMode.hpp"
+#include <SDK/animgraphlib/CAnimNodePath.hpp>
+#include <SDK/animgraphlib/AnimNodeNetworkMode.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimUpdateNodeBase  {
 		public:
-			NESTED_PROPERTY(m_nodePath,IDENTITY(animgraphlib::CAnimNodePath), 0x18);
-			PROPERTY(m_networkMode,IDENTITY(animgraphlib::AnimNodeNetworkMode), 0x48);
+			NESTED_PROPERTY(m_nodePath,animgraphlib::CAnimNodePath, 0x18);
+			PROPERTY(m_networkMode,animgraphlib::AnimNodeNetworkMode, 0x48);
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x50);
 			S2_PAD(0x58);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimUpdateNodeBase) == 0x58, "CAnimUpdateNodeBase size should be 0x58");
-
-#endif
 	}
 }

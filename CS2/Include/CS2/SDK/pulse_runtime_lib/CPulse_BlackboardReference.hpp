@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "PulseDocNodeID_t.hpp"
+#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
 
 
 
@@ -26,15 +26,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulse_BlackboardReference  {
 		public:
-			PROPERTY(m_hBlackboardResource,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIPulseGraphDef>), 0x0);
+			PROPERTY(m_hBlackboardResource,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIPulseGraphDef>, 0x0);
 			PROPERTY(m_BlackboardResource,GlobalTypes::PulseSymbol_t, 0x8);
-			NESTED_PROPERTY(m_nNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x18);
+			NESTED_PROPERTY(m_nNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x18);
 			PROPERTY(m_NodeName,GlobalTypes::CGlobalSymbol, 0x20);
 			S2_PAD(0x28);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_BlackboardReference) == 0x28, "CPulse_BlackboardReference size should be 0x28");
-
-#endif
 	}
 }

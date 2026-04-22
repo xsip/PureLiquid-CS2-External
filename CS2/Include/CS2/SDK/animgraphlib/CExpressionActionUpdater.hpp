@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimActionUpdater.hpp"
-#include "CAnimParamHandle.hpp"
-#include "AnimParamType_t.hpp"
-#include "../modellib/AnimScriptHandle.hpp"
+#include <SDK/animgraphlib/CAnimActionUpdater.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include <SDK/animgraphlib/AnimParamType_t.hpp>
+#include <SDK/modellib/AnimScriptHandle.hpp>
 
 
 
@@ -24,14 +24,11 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CExpressionActionUpdater : public CS2::animgraphlib::CAnimActionUpdater {
 		public:
-			NESTED_PROPERTY(m_hParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x18);
-			PROPERTY(m_eParamType,IDENTITY(animgraphlib::AnimParamType_t), 0x1a);
-			NESTED_PROPERTY(m_hScript,IDENTITY(modellib::AnimScriptHandle), 0x1c);
+			NESTED_PROPERTY(m_hParam,animgraphlib::CAnimParamHandle, 0x18);
+			PROPERTY(m_eParamType,animgraphlib::AnimParamType_t, 0x1a);
+			NESTED_PROPERTY(m_hScript,modellib::AnimScriptHandle, 0x1c);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CExpressionActionUpdater) == 0x20, "CExpressionActionUpdater size should be 0x20");
-
-#endif
 	}
 }

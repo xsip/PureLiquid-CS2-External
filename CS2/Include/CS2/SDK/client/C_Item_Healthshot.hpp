@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_WeaponBaseItem.hpp"
+#include <SDK/client/C_WeaponBaseItem.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class C_Item_Healthshot : public CS2::client::C_WeaponBaseItem {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Item_Healthshot) == 0x1F50, "C_Item_Healthshot size should be 0x1F50");
-
-#endif
 	}
 }

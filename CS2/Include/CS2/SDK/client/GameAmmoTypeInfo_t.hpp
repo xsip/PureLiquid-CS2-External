@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "AmmoTypeInfo_t.hpp"
+#include <SDK/client/AmmoTypeInfo_t.hpp>
 
 
 
@@ -25,9 +25,6 @@ namespace CS2 {
 			PROPERTY(m_nCost,int32_t, 0x3c);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::GameAmmoTypeInfo_t) == 0x50, "GameAmmoTypeInfo_t size should be 0x50");
-
-#endif
 	}
 }

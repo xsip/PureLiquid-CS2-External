@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSPlayerPawnBase.hpp"
-#include "CBaseEntity.hpp"
-#include "../client/loadout_slot_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/GameTick_t.hpp"
-#include "CEconItemView.hpp"
-#include "EntitySpottedState_t.hpp"
-#include "../client/CSPlayerBlockingUseAction_t.hpp"
-#include "PredictedDamageTag_t.hpp"
+#include <SDK/server/CCSPlayerPawnBase.hpp>
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/client/loadout_slot_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/GameTick_t.hpp>
+#include <SDK/server/CEconItemView.hpp>
+#include <SDK/server/EntitySpottedState_t.hpp>
+#include <SDK/client/CSPlayerBlockingUseAction_t.hpp>
+#include <SDK/server/PredictedDamageTag_t.hpp>
 
 
 
@@ -40,19 +40,19 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayerPawn : public CS2::server::CCSPlayerPawnBase {
 		public:
-			PROPERTY(m_pBulletServices,IDENTITY(server::CCSPlayer_BulletServices*), 0xe78);
-			PROPERTY(m_pHostageServices,IDENTITY(server::CCSPlayer_HostageServices*), 0xe80);
-			PROPERTY(m_pBuyServices,IDENTITY(server::CCSPlayer_BuyServices*), 0xe88);
-			PROPERTY(m_pActionTrackingServices,IDENTITY(server::CCSPlayer_ActionTrackingServices*), 0xe90);
-			PROPERTY(m_pRadioServices,IDENTITY(server::CCSPlayer_RadioServices*), 0xe98);
-			PROPERTY(m_pDamageReactServices,IDENTITY(server::CCSPlayer_DamageReactServices*), 0xea0);
+			PROPERTY(m_pBulletServices,server::CCSPlayer_BulletServices*, 0xe78);
+			PROPERTY(m_pHostageServices,server::CCSPlayer_HostageServices*, 0xe80);
+			PROPERTY(m_pBuyServices,server::CCSPlayer_BuyServices*, 0xe88);
+			PROPERTY(m_pActionTrackingServices,server::CCSPlayer_ActionTrackingServices*, 0xe90);
+			PROPERTY(m_pRadioServices,server::CCSPlayer_RadioServices*, 0xe98);
+			PROPERTY(m_pDamageReactServices,server::CCSPlayer_DamageReactServices*, 0xea0);
 			PROPERTY(m_nCharacterDefIndex,uint16_t, 0xea8);
 			PROPERTY(m_bHasFemaleVoice,bool, 0xeaa);
 			PROPERTY(m_strVOPrefix,GlobalTypes::CUtlString*, 0xeb0);
 			PROPERTY_ARRAY(m_szLastPlaceName,char, 18 , 0xeb8);
 			PROPERTY(m_bInHostageResetZone,bool, 0xfa8);
 			PROPERTY(m_bInBuyZone,bool, 0xfa9);
-			NESTED_PROPERTY(m_TouchingBuyZones,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0xfb0);
+			NESTED_PROPERTY(m_TouchingBuyZones,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0xfb0);
 			PROPERTY(m_bWasInBuyZone,bool, 0xfc8);
 			PROPERTY(m_bInHostageRescueZone,bool, 0xfc9);
 			PROPERTY(m_bInBombZone,bool, 0xfca);
@@ -62,20 +62,20 @@ namespace CS2 {
 			PROPERTY(m_bRetakesHasDefuseKit,bool, 0xfd4);
 			PROPERTY(m_bRetakesMVPLastRound,bool, 0xfd5);
 			PROPERTY(m_iRetakesMVPBoostItem,int32_t, 0xfd8);
-			PROPERTY(m_RetakesMVPBoostExtraUtility,IDENTITY(client::loadout_slot_t), 0xfdc);
-			NESTED_PROPERTY(m_flHealthShotBoostExpirationTime,IDENTITY(entity2::GameTime_t), 0xfe0);
+			PROPERTY(m_RetakesMVPBoostExtraUtility,client::loadout_slot_t, 0xfdc);
+			NESTED_PROPERTY(m_flHealthShotBoostExpirationTime,entity2::GameTime_t, 0xfe0);
 			PROPERTY(m_flLandingTimeSeconds,float32, 0xfe4);
 			PROPERTY(m_aimPunchAngle,GlobalTypes::QAngle, 0xfe8);
 			PROPERTY(m_aimPunchAngleVel,GlobalTypes::QAngle, 0xff4);
-			NESTED_PROPERTY(m_aimPunchTickBase,IDENTITY(entity2::GameTick_t), 0x1000);
+			NESTED_PROPERTY(m_aimPunchTickBase,entity2::GameTick_t, 0x1000);
 			PROPERTY(m_aimPunchTickFraction,float32, 0x1004);
-			NESTED_PROPERTY(m_aimPunchCache,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::QAngle>), 0x1008);
+			NESTED_PROPERTY(m_aimPunchCache,GlobalTypes::CUtlVector<GlobalTypes::QAngle>, 0x1008);
 			PROPERTY(m_bIsBuyMenuOpen,bool, 0x1020);
-			NESTED_PROPERTY(m_lastLandTime,IDENTITY(entity2::GameTime_t), 0x16c0);
+			NESTED_PROPERTY(m_lastLandTime,entity2::GameTime_t, 0x16c0);
 			PROPERTY(m_bOnGroundLastTick,bool, 0x16c4);
 			PROPERTY(m_iPlayerLocked,int32_t, 0x16c8);
-			NESTED_PROPERTY(m_flTimeOfLastInjury,IDENTITY(entity2::GameTime_t), 0x16d0);
-			NESTED_PROPERTY(m_flNextSprayDecalTime,IDENTITY(entity2::GameTime_t), 0x16d4);
+			NESTED_PROPERTY(m_flTimeOfLastInjury,entity2::GameTime_t, 0x16d0);
+			NESTED_PROPERTY(m_flNextSprayDecalTime,entity2::GameTime_t, 0x16d4);
 			PROPERTY(m_bNextSprayDecalTimeExpedited,bool, 0x16d8);
 			PROPERTY(m_nRagdollDamageBone,int32_t, 0x16dc);
 			PROPERTY(m_vRagdollDamageForce,GlobalTypes::Vector, 0x16e0);
@@ -83,12 +83,12 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_szRagdollDamageWeaponName,char, 64 , 0x16f8);
 			PROPERTY(m_bRagdollDamageHeadshot,bool, 0x1738);
 			PROPERTY(m_vRagdollServerOrigin,GlobalTypes::Vector, 0x173c);
-			NESTED_PROPERTY(m_EconGloves,IDENTITY(server::CEconItemView), 0x1748);
+			NESTED_PROPERTY(m_EconGloves,server::CEconItemView, 0x1748);
 			PROPERTY(m_nEconGlovesChanged,uint8_t, 0x19f0);
 			PROPERTY(m_qDeathEyeAngles,GlobalTypes::QAngle, 0x19f4);
 			PROPERTY(m_bSkipOneHeadConstraintUpdate,bool, 0x1a00);
 			PROPERTY(m_bLeftHanded,bool, 0x1a01);
-			NESTED_PROPERTY(m_fSwitchedHandednessTime,IDENTITY(entity2::GameTime_t), 0x1a04);
+			NESTED_PROPERTY(m_fSwitchedHandednessTime,entity2::GameTime_t, 0x1a04);
 			PROPERTY(m_flViewmodelOffsetX,float32, 0x1a08);
 			PROPERTY(m_flViewmodelOffsetY,float32, 0x1a0c);
 			PROPERTY(m_flViewmodelOffsetZ,float32, 0x1a10);
@@ -99,17 +99,17 @@ namespace CS2 {
 			PROPERTY(m_flDealtDamageToEnemyMostRecentTimestamp,float32, 0x1a24);
 			PROPERTY(m_iDisplayHistoryBits,uint32_t, 0x1a28);
 			PROPERTY(m_flLastAttackedTeammate,float32, 0x1a2c);
-			NESTED_PROPERTY(m_allowAutoFollowTime,IDENTITY(entity2::GameTime_t), 0x1a30);
+			NESTED_PROPERTY(m_allowAutoFollowTime,entity2::GameTime_t, 0x1a30);
 			PROPERTY(m_bResetArmorNextSpawn,bool, 0x1a34);
 			PROPERTY(m_nLastKillerIndex,GlobalTypes::CEntityIndex, 0x1a38);
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(server::EntitySpottedState_t), 0x1a40);
+			NESTED_PROPERTY(m_entitySpottedState,server::EntitySpottedState_t, 0x1a40);
 			PROPERTY(m_nSpotRules,int32_t, 0x1a58);
 			PROPERTY(m_bIsScoped,bool, 0x1a5c);
 			PROPERTY(m_bResumeZoom,bool, 0x1a5d);
 			PROPERTY(m_bIsDefusing,bool, 0x1a5e);
 			PROPERTY(m_bIsGrabbingHostage,bool, 0x1a5f);
-			PROPERTY(m_iBlockingUseActionInProgress,IDENTITY(client::CSPlayerBlockingUseAction_t), 0x1a60);
-			NESTED_PROPERTY(m_flEmitSoundTime,IDENTITY(entity2::GameTime_t), 0x1a64);
+			PROPERTY(m_iBlockingUseActionInProgress,client::CSPlayerBlockingUseAction_t, 0x1a60);
+			NESTED_PROPERTY(m_flEmitSoundTime,entity2::GameTime_t, 0x1a64);
 			PROPERTY(m_bInNoDefuseArea,bool, 0x1a68);
 			PROPERTY(m_iBombSiteIndex,GlobalTypes::CEntityIndex, 0x1a6c);
 			PROPERTY(m_nWhichBombZone,int32_t, 0x1a70);
@@ -125,7 +125,7 @@ namespace CS2 {
 			PROPERTY(m_ignoreLadderJumpTime,float32, 0x1a9c);
 			PROPERTY(m_bKilledByHeadshot,bool, 0x1aa0);
 			PROPERTY(m_LastHitBox,int32_t, 0x1aa4);
-			PROPERTY(m_pBot,IDENTITY(server::CCSBot*), 0x1aa8);
+			PROPERTY(m_pBot,server::CCSBot*, 0x1aa8);
 			PROPERTY(m_bBotAllowActive,bool, 0x1ab0);
 			PROPERTY(m_thirdPersonHeading,GlobalTypes::QAngle, 0x1ab4);
 			PROPERTY(m_flSlopeDropOffset,float32, 0x1ac0);
@@ -145,7 +145,7 @@ namespace CS2 {
 			PROPERTY(m_vecDeathInfoOrigin,GlobalTypes::Vector, 0x1b04);
 			PROPERTY_ARRAY(m_vecPlayerPatchEconIndices,uint32_t, 5 , 0x1b10);
 			PROPERTY(m_GunGameImmunityColor,GlobalTypes::Color, 0x1b24);
-			NESTED_PROPERTY(m_grenadeParameterStashTime,IDENTITY(entity2::GameTime_t), 0x1b28);
+			NESTED_PROPERTY(m_grenadeParameterStashTime,entity2::GameTime_t, 0x1b28);
 			PROPERTY(m_bGrenadeParametersStashed,bool, 0x1b2c);
 			PROPERTY(m_angStashedShootAngles,GlobalTypes::QAngle, 0x1b30);
 			PROPERTY(m_vecStashedGrenadeThrowPosition,GlobalTypes::Vector, 0x1b3c);
@@ -153,19 +153,16 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_angShootAngleHistory,GlobalTypes::QAngle, 2 , 0x1b54);
 			PROPERTY_ARRAY(m_vecThrowPositionHistory,GlobalTypes::Vector, 2 , 0x1b6c);
 			PROPERTY_ARRAY(m_vecVelocityHistory,GlobalTypes::Vector, 2 , 0x1b84);
-			// PROPERTY(m_PredictedDamageTags,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::PredictedDamageTag_t>), 0x1ba0);
+			PROPERTY(m_PredictedDamageTags,server::CUtlVectorEmbeddedNetworkVar<server::PredictedDamageTag_t>, 0x1ba0);
 			PROPERTY(m_nHighestAppliedDamageTagTick,int32_t, 0x1c08);
 			PROPERTY(m_bCommittingSuicideOnTeamChange,bool, 0x1c0c);
 			PROPERTY(m_wasNotKilledNaturally,bool, 0x1c0d);
-			NESTED_PROPERTY(m_fImmuneToGunGameDamageTime,IDENTITY(entity2::GameTime_t), 0x1c10);
+			NESTED_PROPERTY(m_fImmuneToGunGameDamageTime,entity2::GameTime_t, 0x1c10);
 			PROPERTY(m_bGunGameImmunity,bool, 0x1c14);
 			PROPERTY(m_fMolotovDamageTime,float32, 0x1c18);
 			PROPERTY(m_angEyeAngles,GlobalTypes::QAngle, 0x1c1c);
 			S2_PAD(0xDC0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerPawn) == 0x1C30, "CCSPlayerPawn size should be 0x1C30");
-
-#endif
 	}
 }

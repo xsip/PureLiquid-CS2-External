@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionPreEmission.hpp"
-#include "ParticleParentSetMode_t.hpp"
+#include <SDK/particles/CParticleFunctionPreEmission.hpp>
+#include <SDK/particles/ParticleParentSetMode_t.hpp>
 
 
 
@@ -25,12 +25,9 @@ namespace CS2 {
 			PROPERTY(m_nCP1,int32_t, 0x1d8);
 			PROPERTY(m_vecCP1Pos,GlobalTypes::Vector, 0x1dc);
 			PROPERTY(m_bUseAvgParticlePos,bool, 0x1e8);
-			PROPERTY(m_nSetParent,IDENTITY(particles::ParticleParentSetMode_t), 0x1ec);
+			PROPERTY(m_nSetParent,particles::ParticleParentSetMode_t, 0x1ec);
 			S2_PAD(0x18);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToCenter) == 0x1F0, "C_OP_SetControlPointToCenter size should be 0x1F0");
-
-#endif
 	}
 }

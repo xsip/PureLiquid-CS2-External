@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleCollectionFloatInput.hpp"
-#include "../particleslib/CParticleCollectionVecInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -25,14 +25,11 @@ namespace CS2 {
 		class C_OP_MovementLoopInsideSphere : public CS2::particles::CParticleFunctionOperator {
 		public:
 			PROPERTY(m_nCP,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_flDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d8);
-			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x348);
-			NESTED_PROPERTY(m_nDistSqrAttr,IDENTITY(particles::ParticleAttributeIndex_t), 0xa00);
+			NESTED_PROPERTY(m_flDistance,particleslib::CParticleCollectionFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x348);
+			NESTED_PROPERTY(m_nDistSqrAttr,particles::ParticleAttributeIndex_t, 0xa00);
 			S2_PAD(0x838);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_MovementLoopInsideSphere) == 0xA08, "C_OP_MovementLoopInsideSphere size should be 0xA08");
-
-#endif
 	}
 }

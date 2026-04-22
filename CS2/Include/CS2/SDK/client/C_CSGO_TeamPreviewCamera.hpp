@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_CSGO_MapPreviewCameraPath.hpp"
+#include <SDK/client/C_CSGO_MapPreviewCameraPath.hpp>
 
 
 
@@ -24,9 +24,6 @@ namespace CS2 {
 			PROPERTY(m_nVariant,int32_t, 0x690);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGO_TeamPreviewCamera) == 0x698, "C_CSGO_TeamPreviewCamera size should be 0x698");
-
-#endif
 	}
 }

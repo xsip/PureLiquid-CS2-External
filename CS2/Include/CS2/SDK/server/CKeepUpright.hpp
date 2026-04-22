@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPointEntity.hpp"
+#include <SDK/server/CPointEntity.hpp>
 
 
 
@@ -29,15 +29,12 @@ namespace CS2 {
 			PROPERTY(m_worldGoalAxis,GlobalTypes::Vector, 0x4b0);
 			PROPERTY(m_localTestAxis,GlobalTypes::Vector, 0x4bc);
 			PROPERTY(m_nameAttach,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
-			PROPERTY(m_attachedObject,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4d8);
+			PROPERTY(m_attachedObject,GlobalTypes::CHandle<server::CBaseEntity>, 0x4d8);
 			PROPERTY(m_angularLimit,float32, 0x4dc);
 			PROPERTY(m_bActive,bool, 0x4e0);
 			PROPERTY(m_bDampAllRotation,bool, 0x4e1);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CKeepUpright) == 0x4E8, "CKeepUpright size should be 0x4E8");
-
-#endif
 	}
 }

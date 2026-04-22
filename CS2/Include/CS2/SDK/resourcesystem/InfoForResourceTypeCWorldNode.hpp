@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -22,9 +22,6 @@ namespace CS2 {
 		public:
 			S2_PAD(0x1);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::resourcesystem::InfoForResourceTypeCWorldNode) == 0x1, "InfoForResourceTypeCWorldNode size should be 0x1");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CSmartPropVariable.hpp"
-#include "TraceNoHitResult_t.hpp"
+#include <SDK/smartprops/CSmartPropVariable.hpp>
+#include <SDK/smartprops/TraceNoHitResult_t.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropVariable_TraceNoHit : public CS2::smartprops::CSmartPropVariable {
 		public:
-			PROPERTY(m_DefaultValue,IDENTITY(smartprops::TraceNoHitResult_t), 0x38);
+			PROPERTY(m_DefaultValue,smartprops::TraceNoHitResult_t, 0x38);
 			S2_PAD(0x8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_TraceNoHit) == 0x40, "CSmartPropVariable_TraceNoHit size should be 0x40");
-
-#endif
 	}
 }

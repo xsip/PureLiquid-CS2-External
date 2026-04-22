@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FixAngleSet_t.hpp"
+#include <SDK/client/FixAngleSet_t.hpp>
 
 
 
@@ -21,14 +21,11 @@ namespace CS2 {
 	namespace client {
 		class ViewAngleServerChange_t  {
 		public:
-			PROPERTY(nType,IDENTITY(client::FixAngleSet_t), 0x30);
+			PROPERTY(nType,client::FixAngleSet_t, 0x30);
 			PROPERTY(qAngle,GlobalTypes::QAngle, 0x34);
 			PROPERTY(nIndex,uint32_t, 0x40);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ViewAngleServerChange_t) == 0x48, "ViewAngleServerChange_t size should be 0x48");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVoiceContainerBase.hpp"
-#include "CSoundContainerReference.hpp"
+#include <SDK/soundsystem_voicecontainers/CVoiceContainerBase.hpp>
+#include <SDK/soundsystem_voicecontainers/CSoundContainerReference.hpp>
 
 
 
@@ -22,8 +22,8 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerParameterBlender : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_firstSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xa8);
-			NESTED_PROPERTY(m_secondSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xc0);
+			NESTED_PROPERTY(m_firstSound,soundsystem_voicecontainers::CSoundContainerReference, 0xa8);
+			NESTED_PROPERTY(m_secondSound,soundsystem_voicecontainers::CSoundContainerReference, 0xc0);
 			PROPERTY(m_bEnableOcclusionBlend,bool, 0xd8);
 			PROPERTY(m_curve1,GlobalTypes::CPiecewiseCurve, 0xe0);
 			PROPERTY(m_curve2,GlobalTypes::CPiecewiseCurve, 0x120);
@@ -32,9 +32,6 @@ namespace CS2 {
 			PROPERTY(m_curve4,GlobalTypes::CPiecewiseCurve, 0x1a8);
 			S2_PAD(0x140);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerParameterBlender) == 0x1E8, "CVoiceContainerParameterBlender size should be 0x1E8");
-
-#endif
 	}
 }

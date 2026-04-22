@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CBaseModelEntity.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CBaseModelEntity.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -30,11 +30,11 @@ namespace CS2 {
 		public:
 			PROPERTY(m_matPanelTransform,GlobalTypes::matrix3x4_t, 0x730);
 			PROPERTY(m_matPanelTransformWsTemp,GlobalTypes::matrix3x4_t, 0x760);
-			NESTED_PROPERTY(m_vecShatterGlassShards,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x790);
+			NESTED_PROPERTY(m_vecShatterGlassShards,GlobalTypes::CUtlVector< uint32 >, 0x790);
 			PROPERTY(m_PanelSize,GlobalTypes::Vector2D, 0x7a8);
-			NESTED_PROPERTY(m_flLastShatterSoundEmitTime,IDENTITY(entity2::GameTime_t), 0x7b0);
-			NESTED_PROPERTY(m_flLastCleanupTime,IDENTITY(entity2::GameTime_t), 0x7b4);
-			NESTED_PROPERTY(m_flInitAtTime,IDENTITY(entity2::GameTime_t), 0x7b8);
+			NESTED_PROPERTY(m_flLastShatterSoundEmitTime,entity2::GameTime_t, 0x7b0);
+			NESTED_PROPERTY(m_flLastCleanupTime,entity2::GameTime_t, 0x7b4);
+			NESTED_PROPERTY(m_flInitAtTime,entity2::GameTime_t, 0x7b8);
 			PROPERTY(m_flGlassThickness,float32, 0x7bc);
 			PROPERTY(m_flSpawnInvulnerability,float32, 0x7c0);
 			PROPERTY(m_bBreakSilent,bool, 0x7c4);
@@ -48,17 +48,14 @@ namespace CS2 {
 			PROPERTY(m_szDamagePositioningEntityName02,GlobalTypes::CUtlSymbolLarge*, 0x7d8);
 			PROPERTY(m_szDamagePositioningEntityName03,GlobalTypes::CUtlSymbolLarge*, 0x7e0);
 			PROPERTY(m_szDamagePositioningEntityName04,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
-			NESTED_PROPERTY(m_vInitialDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x7f0);
-			NESTED_PROPERTY(m_vExtraDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x808);
-			NESTED_PROPERTY(m_vInitialPanelVertices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector4D>), 0x820);
-			NESTED_PROPERTY(m_OnBroken,IDENTITY(entity2::CEntityIOOutput), 0x838);
+			NESTED_PROPERTY(m_vInitialDamagePositions,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x7f0);
+			NESTED_PROPERTY(m_vExtraDamagePositions,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x808);
+			NESTED_PROPERTY(m_vInitialPanelVertices,GlobalTypes::CUtlVector<GlobalTypes::Vector4D>, 0x820);
+			NESTED_PROPERTY(m_OnBroken,entity2::CEntityIOOutput, 0x838);
 			PROPERTY(m_iSurfaceType,uint8_t, 0x850);
-			PROPERTY(m_hMaterialDamageBase,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x858);
+			PROPERTY(m_hMaterialDamageBase,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x858);
 			S2_PAD(0x130);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncShatterglass) == 0x860, "CFuncShatterglass size should be 0x860");
-
-#endif
 	}
 }

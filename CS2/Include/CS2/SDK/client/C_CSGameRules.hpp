@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_TeamplayRules.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "C_RetakeGameRules.hpp"
+#include <SDK/client/C_TeamplayRules.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/client/C_RetakeGameRules.hpp>
 
 
 
@@ -30,8 +30,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bFreezePeriod,bool, 0x40);
 			PROPERTY(m_bWarmupPeriod,bool, 0x41);
-			NESTED_PROPERTY(m_fWarmupPeriodEnd,IDENTITY(entity2::GameTime_t), 0x44);
-			NESTED_PROPERTY(m_fWarmupPeriodStart,IDENTITY(entity2::GameTime_t), 0x48);
+			NESTED_PROPERTY(m_fWarmupPeriodEnd,entity2::GameTime_t, 0x44);
+			NESTED_PROPERTY(m_fWarmupPeriodStart,entity2::GameTime_t, 0x48);
 			PROPERTY(m_bTerroristTimeOutActive,bool, 0x4c);
 			PROPERTY(m_bCTTimeOutActive,bool, 0x4d);
 			PROPERTY(m_flTerroristTimeOutRemaining,float32, 0x50);
@@ -43,8 +43,8 @@ namespace CS2 {
 			PROPERTY(m_iFreezeTime,int32_t, 0x64);
 			PROPERTY(m_iRoundTime,int32_t, 0x68);
 			PROPERTY(m_fMatchStartTime,float32, 0x6c);
-			NESTED_PROPERTY(m_fRoundStartTime,IDENTITY(entity2::GameTime_t), 0x70);
-			NESTED_PROPERTY(m_flRestartRoundTime,IDENTITY(entity2::GameTime_t), 0x74);
+			NESTED_PROPERTY(m_fRoundStartTime,entity2::GameTime_t, 0x70);
+			NESTED_PROPERTY(m_flRestartRoundTime,entity2::GameTime_t, 0x74);
 			PROPERTY(m_bGameRestart,bool, 0x78);
 			PROPERTY(m_flGameStartTime,float32, 0x7c);
 			PROPERTY(m_timeUntilNextPhaseStarts,float32, 0x80);
@@ -71,8 +71,8 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_szMatchStatTxt,char, 512 , 0x4b8);
 			PROPERTY_ARRAY(m_szTournamentPredictionsTxt,char, 512 , 0x6b8);
 			PROPERTY(m_nTournamentPredictionsPct,int32_t, 0x8b8);
-			NESTED_PROPERTY(m_flCMMItemDropRevealStartTime,IDENTITY(entity2::GameTime_t), 0x8bc);
-			NESTED_PROPERTY(m_flCMMItemDropRevealEndTime,IDENTITY(entity2::GameTime_t), 0x8c0);
+			NESTED_PROPERTY(m_flCMMItemDropRevealStartTime,entity2::GameTime_t, 0x8bc);
+			NESTED_PROPERTY(m_flCMMItemDropRevealEndTime,entity2::GameTime_t, 0x8c0);
 			PROPERTY(m_bIsDroppingItems,bool, 0x8c4);
 			PROPERTY(m_bIsQuestEligible,bool, 0x8c5);
 			PROPERTY(m_bIsHltvActive,bool, 0x8c6);
@@ -90,7 +90,7 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_iMatchStats_PlayersAlive_CT,int32_t, 30 , 0xa30);
 			PROPERTY_ARRAY(m_iMatchStats_PlayersAlive_T,int32_t, 30 , 0xaa8);
 			PROPERTY_ARRAY(m_TeamRespawnWaveTimes,float32, 32 , 0xb20);
-			PROPERTY_ARRAY(m_flNextRespawnWave,IDENTITY(entity2::GameTime_t), 32 , 0xba0);
+			PROPERTY_ARRAY(m_flNextRespawnWave,entity2::GameTime_t, 32 , 0xba0);
 			PROPERTY(m_vMinimapMins,GlobalTypes::Vector, 0xc20);
 			PROPERTY(m_vMinimapMaxs,GlobalTypes::Vector, 0xc2c);
 			PROPERTY_ARRAY(m_MinimapVerticalSectionHeights,float32, 8 , 0xc38);
@@ -103,8 +103,8 @@ namespace CS2 {
 			PROPERTY(m_nMatchAbortedEarlyReason,int32_t, 0xd78);
 			PROPERTY(m_bHasTriggeredRoundStartMusic,bool, 0xd7c);
 			PROPERTY(m_bSwitchingTeamsAtRoundReset,bool, 0xd7d);
-			PROPERTY(m_pGameModeRules,IDENTITY(client::CCSGameModeRules*), 0xd98);
-			NESTED_PROPERTY(m_RetakeRules,IDENTITY(client::C_RetakeGameRules), 0xda0);
+			PROPERTY(m_pGameModeRules,client::CCSGameModeRules*, 0xd98);
+			NESTED_PROPERTY(m_RetakeRules,client::C_RetakeGameRules, 0xda0);
 			PROPERTY(m_nMatchEndCount,uint8_t, 0xef8);
 			PROPERTY(m_nTTeamIntroVariant,int32_t, 0xefc);
 			PROPERTY(m_nCTTeamIntroVariant,int32_t, 0xf00);
@@ -128,9 +128,6 @@ namespace CS2 {
 			PROPERTY(m_flLastPerfSampleTime,float64, 0x4f58);
 			S2_PAD(0x4F20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGameRules) == 0x4F60, "C_CSGameRules size should be 0x4F60");
-
-#endif
 	}
 }

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_CSGO_PreviewPlayer.hpp"
+#include <SDK/client/C_CSGO_PreviewPlayer.hpp>
 
 
 
@@ -21,10 +21,8 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel : public CS2::client::C_CSGO_PreviewPlayer {
 		public:
+			S2_PAD(0x0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel) == 0x3FA0, "C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel size should be 0x3FA0");
-
-#endif
 	}
 }

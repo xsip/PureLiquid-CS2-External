@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -25,8 +25,8 @@ namespace CS2 {
 	namespace server {
 		class DynamicVolumeDef_t  {
 		public:
-			PROPERTY(m_source,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x0);
-			PROPERTY(m_target,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4);
+			PROPERTY(m_source,GlobalTypes::CHandle<server::CBaseEntity>, 0x0);
+			PROPERTY(m_target,GlobalTypes::CHandle<server::CBaseEntity>, 0x4);
 			PROPERTY(m_nHullIdx,int32_t, 0x8);
 			PROPERTY(m_vSourceAnchorPos,GlobalTypes::Vector, 0xc);
 			PROPERTY(m_vTargetAnchorPos,GlobalTypes::Vector, 0x18);
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_bAttached,bool, 0x2c);
 			S2_PAD(0x30);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::DynamicVolumeDef_t) == 0x30, "DynamicVolumeDef_t size should be 0x30");
-
-#endif
 	}
 }

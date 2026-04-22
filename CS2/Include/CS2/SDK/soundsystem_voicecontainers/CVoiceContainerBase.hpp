@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CVSound.hpp"
+#include <SDK/soundsystem_voicecontainers/CVSound.hpp>
 
 
 
@@ -26,13 +26,10 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerBase  {
 		public:
-			NESTED_PROPERTY(m_vSound,IDENTITY(soundsystem_voicecontainers::CVSound), 0x28);
-			PROPERTY(m_pEnvelopeAnalyzer,IDENTITY(soundsystem_voicecontainers::CVoiceContainerAnalysisBase*), 0xa0);
+			NESTED_PROPERTY(m_vSound,soundsystem_voicecontainers::CVSound, 0x28);
+			PROPERTY(m_pEnvelopeAnalyzer,soundsystem_voicecontainers::CVoiceContainerAnalysisBase*, 0xa0);
 			S2_PAD(0xA8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerBase) == 0xA8, "CVoiceContainerBase size should be 0xA8");
-
-#endif
 	}
 }

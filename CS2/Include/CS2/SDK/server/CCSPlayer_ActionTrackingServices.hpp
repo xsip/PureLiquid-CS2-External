@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../client/CPlayerPawnComponent.hpp"
-#include "WeaponPurchaseTracker_t.hpp"
+#include <SDK/client/CPlayerPawnComponent.hpp>
+#include <SDK/server/WeaponPurchaseTracker_t.hpp>
 
 
 
@@ -27,15 +27,12 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_ActionTrackingServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			PROPERTY(m_hLastWeaponBeforeC4AutoSwitch,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerWeapon>), 0x1f8);
+			PROPERTY(m_hLastWeaponBeforeC4AutoSwitch,GlobalTypes::CHandle<server::CBasePlayerWeapon>, 0x1f8);
 			PROPERTY(m_bIsRescuing,bool, 0x224);
-			NESTED_PROPERTY(m_weaponPurchasesThisMatch,IDENTITY(server::WeaponPurchaseTracker_t), 0x228);
-			NESTED_PROPERTY(m_weaponPurchasesThisRound,IDENTITY(server::WeaponPurchaseTracker_t), 0x298);
+			NESTED_PROPERTY(m_weaponPurchasesThisMatch,server::WeaponPurchaseTracker_t, 0x228);
+			NESTED_PROPERTY(m_weaponPurchasesThisRound,server::WeaponPurchaseTracker_t, 0x298);
 			S2_PAD(0x2C8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_ActionTrackingServices) == 0x310, "CCSPlayer_ActionTrackingServices size should be 0x310");
-
-#endif
 	}
 }

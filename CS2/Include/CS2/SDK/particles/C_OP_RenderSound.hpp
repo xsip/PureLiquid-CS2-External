@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionRenderer.hpp"
-#include "ParticleAttributeIndex_t.hpp"
+#include <SDK/particles/CParticleFunctionRenderer.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
 
 
@@ -26,19 +26,16 @@ namespace CS2 {
 			PROPERTY(m_flSndLvlScale,float32, 0x224);
 			PROPERTY(m_flPitchScale,float32, 0x228);
 			PROPERTY(m_flVolumeScale,float32, 0x22c);
-			NESTED_PROPERTY(m_nSndLvlField,IDENTITY(particles::ParticleAttributeIndex_t), 0x230);
-			NESTED_PROPERTY(m_nDurationField,IDENTITY(particles::ParticleAttributeIndex_t), 0x234);
-			NESTED_PROPERTY(m_nPitchField,IDENTITY(particles::ParticleAttributeIndex_t), 0x238);
-			NESTED_PROPERTY(m_nVolumeField,IDENTITY(particles::ParticleAttributeIndex_t), 0x23c);
+			NESTED_PROPERTY(m_nSndLvlField,particles::ParticleAttributeIndex_t, 0x230);
+			NESTED_PROPERTY(m_nDurationField,particles::ParticleAttributeIndex_t, 0x234);
+			NESTED_PROPERTY(m_nPitchField,particles::ParticleAttributeIndex_t, 0x238);
+			NESTED_PROPERTY(m_nVolumeField,particles::ParticleAttributeIndex_t, 0x23c);
 			PROPERTY(m_nChannel,int32_t, 0x240);
 			PROPERTY(m_nCPReference,int32_t, 0x244);
 			PROPERTY_ARRAY(m_pszSoundName,char, 256 , 0x248);
 			PROPERTY(m_bSuppressStopSoundEvent,bool, 0x348);
 			S2_PAD(0x130);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_RenderSound) == 0x350, "C_OP_RenderSound size should be 0x350");
-
-#endif
 	}
 }

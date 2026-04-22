@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPhysConstraint.hpp"
-#include "../physicslib/JointMotion_t.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CPhysConstraint.hpp>
+#include <SDK/physicslib/JointMotion_t.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -24,9 +24,9 @@ namespace CS2 {
 	namespace server {
 		class CGenericConstraint : public CS2::server::CPhysConstraint {
 		public:
-			PROPERTY(m_nLinearMotionX,IDENTITY(physicslib::JointMotion_t), 0x510);
-			PROPERTY(m_nLinearMotionY,IDENTITY(physicslib::JointMotion_t), 0x514);
-			PROPERTY(m_nLinearMotionZ,IDENTITY(physicslib::JointMotion_t), 0x518);
+			PROPERTY(m_nLinearMotionX,physicslib::JointMotion_t, 0x510);
+			PROPERTY(m_nLinearMotionY,physicslib::JointMotion_t, 0x514);
+			PROPERTY(m_nLinearMotionZ,physicslib::JointMotion_t, 0x518);
 			PROPERTY(m_flLinearFrequencyX,float32, 0x51c);
 			PROPERTY(m_flLinearFrequencyY,float32, 0x520);
 			PROPERTY(m_flLinearFrequencyZ,float32, 0x524);
@@ -39,9 +39,9 @@ namespace CS2 {
 			PROPERTY(m_flBreakAfterTimeX,float32, 0x540);
 			PROPERTY(m_flBreakAfterTimeY,float32, 0x544);
 			PROPERTY(m_flBreakAfterTimeZ,float32, 0x548);
-			NESTED_PROPERTY(m_flBreakAfterTimeStartTimeX,IDENTITY(entity2::GameTime_t), 0x54c);
-			NESTED_PROPERTY(m_flBreakAfterTimeStartTimeY,IDENTITY(entity2::GameTime_t), 0x550);
-			NESTED_PROPERTY(m_flBreakAfterTimeStartTimeZ,IDENTITY(entity2::GameTime_t), 0x554);
+			NESTED_PROPERTY(m_flBreakAfterTimeStartTimeX,entity2::GameTime_t, 0x54c);
+			NESTED_PROPERTY(m_flBreakAfterTimeStartTimeY,entity2::GameTime_t, 0x550);
+			NESTED_PROPERTY(m_flBreakAfterTimeStartTimeZ,entity2::GameTime_t, 0x554);
 			PROPERTY(m_flBreakAfterTimeThresholdX,float32, 0x558);
 			PROPERTY(m_flBreakAfterTimeThresholdY,float32, 0x55c);
 			PROPERTY(m_flBreakAfterTimeThresholdZ,float32, 0x560);
@@ -51,15 +51,15 @@ namespace CS2 {
 			PROPERTY(m_flNotifyForceMinTimeX,float32, 0x570);
 			PROPERTY(m_flNotifyForceMinTimeY,float32, 0x574);
 			PROPERTY(m_flNotifyForceMinTimeZ,float32, 0x578);
-			NESTED_PROPERTY(m_flNotifyForceLastTimeX,IDENTITY(entity2::GameTime_t), 0x57c);
-			NESTED_PROPERTY(m_flNotifyForceLastTimeY,IDENTITY(entity2::GameTime_t), 0x580);
-			NESTED_PROPERTY(m_flNotifyForceLastTimeZ,IDENTITY(entity2::GameTime_t), 0x584);
+			NESTED_PROPERTY(m_flNotifyForceLastTimeX,entity2::GameTime_t, 0x57c);
+			NESTED_PROPERTY(m_flNotifyForceLastTimeY,entity2::GameTime_t, 0x580);
+			NESTED_PROPERTY(m_flNotifyForceLastTimeZ,entity2::GameTime_t, 0x584);
 			PROPERTY(m_bAxisNotifiedX,bool, 0x588);
 			PROPERTY(m_bAxisNotifiedY,bool, 0x589);
 			PROPERTY(m_bAxisNotifiedZ,bool, 0x58a);
-			PROPERTY(m_nAngularMotionX,IDENTITY(physicslib::JointMotion_t), 0x58c);
-			PROPERTY(m_nAngularMotionY,IDENTITY(physicslib::JointMotion_t), 0x590);
-			PROPERTY(m_nAngularMotionZ,IDENTITY(physicslib::JointMotion_t), 0x594);
+			PROPERTY(m_nAngularMotionX,physicslib::JointMotion_t, 0x58c);
+			PROPERTY(m_nAngularMotionY,physicslib::JointMotion_t, 0x590);
+			PROPERTY(m_nAngularMotionZ,physicslib::JointMotion_t, 0x594);
 			PROPERTY(m_flAngularFrequencyX,float32, 0x598);
 			PROPERTY(m_flAngularFrequencyY,float32, 0x59c);
 			PROPERTY(m_flAngularFrequencyZ,float32, 0x5a0);
@@ -69,14 +69,11 @@ namespace CS2 {
 			PROPERTY(m_flMaxAngularImpulseX,float32, 0x5b0);
 			PROPERTY(m_flMaxAngularImpulseY,float32, 0x5b4);
 			PROPERTY(m_flMaxAngularImpulseZ,float32, 0x5b8);
-			NESTED_PROPERTY(m_NotifyForceReachedX,IDENTITY(entity2::CEntityIOOutput), 0x5c0);
-			NESTED_PROPERTY(m_NotifyForceReachedY,IDENTITY(entity2::CEntityIOOutput), 0x5d8);
-			NESTED_PROPERTY(m_NotifyForceReachedZ,IDENTITY(entity2::CEntityIOOutput), 0x5f0);
+			NESTED_PROPERTY(m_NotifyForceReachedX,entity2::CEntityIOOutput, 0x5c0);
+			NESTED_PROPERTY(m_NotifyForceReachedY,entity2::CEntityIOOutput, 0x5d8);
+			NESTED_PROPERTY(m_NotifyForceReachedZ,entity2::CEntityIOOutput, 0x5f0);
 			S2_PAD(0x100);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGenericConstraint) == 0x608, "CGenericConstraint size should be 0x608");
-
-#endif
 	}
 }

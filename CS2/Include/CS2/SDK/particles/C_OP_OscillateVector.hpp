@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -27,7 +27,7 @@ namespace CS2 {
 			PROPERTY(m_RateMax,GlobalTypes::Vector, 0x1dc);
 			PROPERTY(m_FrequencyMin,GlobalTypes::Vector, 0x1e8);
 			PROPERTY(m_FrequencyMax,GlobalTypes::Vector, 0x1f4);
-			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x200);
+			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x200);
 			PROPERTY(m_bProportional,bool, 0x204);
 			PROPERTY(m_bProportionalOp,bool, 0x205);
 			PROPERTY(m_bOffset,bool, 0x206);
@@ -35,14 +35,11 @@ namespace CS2 {
 			PROPERTY(m_flStartTime_max,float32, 0x20c);
 			PROPERTY(m_flEndTime_min,float32, 0x210);
 			PROPERTY(m_flEndTime_max,float32, 0x214);
-			NESTED_PROPERTY(m_flOscMult,IDENTITY(particleslib::CPerParticleFloatInput), 0x218);
-			NESTED_PROPERTY(m_flOscAdd,IDENTITY(particleslib::CPerParticleFloatInput), 0x388);
-			NESTED_PROPERTY(m_flRateScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x4f8);
+			NESTED_PROPERTY(m_flOscMult,particleslib::CPerParticleFloatInput, 0x218);
+			NESTED_PROPERTY(m_flOscAdd,particleslib::CPerParticleFloatInput, 0x388);
+			NESTED_PROPERTY(m_flRateScale,particleslib::CPerParticleFloatInput, 0x4f8);
 			S2_PAD(0x498);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_OscillateVector) == 0x668, "C_OP_OscillateVector size should be 0x668");
-
-#endif
 	}
 }

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLogicalEntity.hpp"
-#include "../entity2/CEntityIOOutput.hpp"
+#include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -29,8 +29,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nameAttach1,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
 			PROPERTY(m_nameAttach2,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
-			PROPERTY(m_hAttach1,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c0);
-			PROPERTY(m_hAttach2,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c4);
+			PROPERTY(m_hAttach1,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c0);
+			PROPERTY(m_hAttach2,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c4);
 			PROPERTY(m_nameAttachment1,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
 			PROPERTY(m_nameAttachment2,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
 			PROPERTY(m_breakSound,GlobalTypes::CUtlSymbolLarge*, 0x4d8);
@@ -39,12 +39,9 @@ namespace CS2 {
 			PROPERTY(m_minTeleportDistance,float32, 0x4e8);
 			PROPERTY(m_bSnapObjectPositions,bool, 0x4ec);
 			PROPERTY(m_bTreatEntity1AsInfiniteMass,bool, 0x4ed);
-			NESTED_PROPERTY(m_OnBreak,IDENTITY(entity2::CEntityIOOutput), 0x4f0);
+			NESTED_PROPERTY(m_OnBreak,entity2::CEntityIOOutput, 0x4f0);
 			S2_PAD(0x60);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysConstraint) == 0x508, "CPhysConstraint size should be 0x508");
-
-#endif
 	}
 }

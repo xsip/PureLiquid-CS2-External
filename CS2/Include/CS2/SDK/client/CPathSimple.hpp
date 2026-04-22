@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "C_BaseEntity.hpp"
-#include "CPathQueryComponent.hpp"
+#include <SDK/client/C_BaseEntity.hpp>
+#include <SDK/client/CPathQueryComponent.hpp>
 
 
 
@@ -22,14 +22,11 @@ namespace CS2 {
 	namespace client {
 		class CPathSimple : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_CPathQueryComponent,IDENTITY(client::CPathQueryComponent), 0x610);
+			NESTED_PROPERTY(m_CPathQueryComponent,client::CPathQueryComponent, 0x610);
 			PROPERTY(m_pathString,GlobalTypes::CUtlString*, 0x700);
 			PROPERTY(m_bClosedLoop,bool, 0x708);
 			S2_PAD(0x108);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPathSimple) == 0x710, "CPathSimple size should be 0x710");
-
-#endif
 	}
 }

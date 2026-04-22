@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CAnimFrameBlockAnim.hpp"
-#include "CAnimEncodeDifference.hpp"
+#include <SDK/animationsystem/CAnimFrameBlockAnim.hpp>
+#include <SDK/animationsystem/CAnimEncodeDifference.hpp>
 
 
 
@@ -25,13 +25,10 @@ namespace CS2 {
 			PROPERTY(m_fileName,GlobalTypes::CBufferString, 0x0);
 			PROPERTY(m_nFrames,int32_t, 0x10);
 			PROPERTY(m_nFramesPerBlock,int32_t, 0x14);
-			NESTED_PROPERTY(m_frameblockArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimFrameBlockAnim>), 0x18);
-			NESTED_PROPERTY(m_usageDifferences,IDENTITY(animationsystem::CAnimEncodeDifference), 0x30);
+			NESTED_PROPERTY(m_frameblockArray,GlobalTypes::CUtlVector<animationsystem::CAnimFrameBlockAnim>, 0x18);
+			NESTED_PROPERTY(m_usageDifferences,animationsystem::CAnimEncodeDifference, 0x30);
 			S2_PAD(0xD8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimEncodedFrames) == 0xD8, "CAnimEncodedFrames size should be 0xD8");
-
-#endif
 	}
 }

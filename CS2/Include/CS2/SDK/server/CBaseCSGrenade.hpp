@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CCSWeaponBase.hpp"
-#include "../entity2/GameTime_t.hpp"
-#include "../entity2/GameTick_t.hpp"
+#include <SDK/server/CCSWeaponBase.hpp>
+#include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/entity2/GameTick_t.hpp>
 
 
 
@@ -28,19 +28,16 @@ namespace CS2 {
 			PROPERTY(m_bPinPulled,bool, 0x1132);
 			PROPERTY(m_bJumpThrow,bool, 0x1133);
 			PROPERTY(m_bThrowAnimating,bool, 0x1134);
-			NESTED_PROPERTY(m_fThrowTime,IDENTITY(entity2::GameTime_t), 0x1138);
+			NESTED_PROPERTY(m_fThrowTime,entity2::GameTime_t, 0x1138);
 			PROPERTY(m_flThrowStrength,float32, 0x113c);
-			NESTED_PROPERTY(m_fDropTime,IDENTITY(entity2::GameTime_t), 0x1140);
-			NESTED_PROPERTY(m_fPinPullTime,IDENTITY(entity2::GameTime_t), 0x1144);
+			NESTED_PROPERTY(m_fDropTime,entity2::GameTime_t, 0x1140);
+			NESTED_PROPERTY(m_fPinPullTime,entity2::GameTime_t, 0x1144);
 			PROPERTY(m_bJustPulledPin,bool, 0x1148);
-			NESTED_PROPERTY(m_nNextHoldTick,IDENTITY(entity2::GameTick_t), 0x114c);
+			NESTED_PROPERTY(m_nNextHoldTick,entity2::GameTick_t, 0x114c);
 			PROPERTY(m_flNextHoldFrac,float32, 0x1150);
-			PROPERTY(m_hSwitchToWeaponAfterThrow,IDENTITY(GlobalTypes::CHandle<server::CCSWeaponBase>), 0x1154);
+			PROPERTY(m_hSwitchToWeaponAfterThrow,GlobalTypes::CHandle<server::CCSWeaponBase>, 0x1154);
 			S2_PAD(0x40);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseCSGrenade) == 0x1170, "CBaseCSGrenade size should be 0x1170");
-
-#endif
 	}
 }

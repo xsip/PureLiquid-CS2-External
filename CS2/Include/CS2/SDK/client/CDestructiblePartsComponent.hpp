@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../entity2/CNetworkVarChainer.hpp"
+#include <SDK/entity2/CNetworkVarChainer.hpp>
 
 
 
@@ -26,14 +26,11 @@ namespace CS2 {
 	namespace client {
 		class CDestructiblePartsComponent  {
 		public:
-			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x0);
-			NESTED_PROPERTY(m_vecDamageTakenByHitGroup,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x48);
-			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<client::C_BaseModelEntity>), 0x60);
+			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x0);
+			NESTED_PROPERTY(m_vecDamageTakenByHitGroup,GlobalTypes::CUtlVector< uint16 >, 0x48);
+			PROPERTY(m_hOwner,GlobalTypes::CHandle<client::C_BaseModelEntity>, 0x60);
 			S2_PAD(0x70);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDestructiblePartsComponent) == 0x70, "CDestructiblePartsComponent size should be 0x70");
-
-#endif
 	}
 }

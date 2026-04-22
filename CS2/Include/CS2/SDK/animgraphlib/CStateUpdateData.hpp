@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "../modellib/AnimScriptHandle.hpp"
-#include "CStateActionUpdater.hpp"
-#include "../modellib/AnimStateID.hpp"
+#include <SDK/modellib/AnimScriptHandle.hpp>
+#include <SDK/animgraphlib/CStateActionUpdater.hpp>
+#include <SDK/modellib/AnimStateID.hpp>
 
 
 
@@ -24,15 +24,12 @@ namespace CS2 {
 		class CStateUpdateData  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_hScript,IDENTITY(modellib::AnimScriptHandle), 0x8);
-			NESTED_PROPERTY(m_transitionIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x10);
-			NESTED_PROPERTY(m_actions,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CStateActionUpdater>), 0x28);
-			NESTED_PROPERTY(m_stateID,IDENTITY(modellib::AnimStateID), 0x40);
+			NESTED_PROPERTY(m_hScript,modellib::AnimScriptHandle, 0x8);
+			NESTED_PROPERTY(m_transitionIndices,GlobalTypes::CUtlVector< int32 >, 0x10);
+			NESTED_PROPERTY(m_actions,GlobalTypes::CUtlVector<animgraphlib::CStateActionUpdater>, 0x28);
+			NESTED_PROPERTY(m_stateID,modellib::AnimStateID, 0x40);
 			S2_PAD(0x48);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStateUpdateData) == 0x48, "CStateUpdateData size should be 0x48");
-
-#endif
 	}
 }

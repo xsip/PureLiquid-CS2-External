@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0x7C0
 			namespace CFuncLadder /*: public CS2::server::CBaseModelEntity*/ {
 				constexpr std::ptrdiff_t m_vecLadderDir = 0x730; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_Dismounts = 0x740; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CInfoLadderDismount>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Dismounts = 0x740; // server::CUtlVector<GlobalTypes::CHandle<server::CInfoLadderDismount>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_vecLocalTop = 0x758; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vecPlayerMountPositionTop = 0x764; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vecPlayerMountPositionBottom = 0x770; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc

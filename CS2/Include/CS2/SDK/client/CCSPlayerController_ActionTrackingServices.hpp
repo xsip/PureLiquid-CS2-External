@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CPlayerControllerComponent.hpp"
-#include "CSPerRoundStats_t.hpp"
-#include "CSMatchStats_t.hpp"
+#include <SDK/client/CPlayerControllerComponent.hpp>
+#include <SDK/client/CSPerRoundStats_t.hpp>
+#include <SDK/client/CSMatchStats_t.hpp>
 
 
 
@@ -23,16 +23,13 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayerController_ActionTrackingServices : public CS2::client::CPlayerControllerComponent {
 		public:
-			// PROPERTY(m_perRoundStats,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::CSPerRoundStats_t>), 0x40);
-			NESTED_PROPERTY(m_matchStats,IDENTITY(client::CSMatchStats_t), 0xa8);
+			PROPERTY(m_perRoundStats,GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::CSPerRoundStats_t>, 0x40);
+			NESTED_PROPERTY(m_matchStats,client::CSMatchStats_t, 0xa8);
 			PROPERTY(m_iNumRoundKills,int32_t, 0x128);
 			PROPERTY(m_iNumRoundKillsHeadshots,int32_t, 0x12c);
 			PROPERTY(m_flTotalRoundDamageDealt,float32, 0x130);
 			S2_PAD(0xF8);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayerController_ActionTrackingServices) == 0x138, "CCSPlayerController_ActionTrackingServices size should be 0x138");
-
-#endif
 	}
 }

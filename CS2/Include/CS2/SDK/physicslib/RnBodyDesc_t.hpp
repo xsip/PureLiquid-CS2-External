@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "DynamicContinuousContactBehavior_t.hpp"
+#include <SDK/physicslib/DynamicContinuousContactBehavior_t.hpp>
 
 
 
@@ -56,12 +56,9 @@ namespace CS2 {
 			PROPERTY(m_vGravity,GlobalTypes::Vector, 0xcc);
 			PROPERTY(m_bSpeculativeEnabled,bool, 0xd8);
 			PROPERTY(m_bHasShadowController,bool, 0xd9);
-			PROPERTY(m_nDynamicContinuousContactBehavior,IDENTITY(physicslib::DynamicContinuousContactBehavior_t), 0xda);
+			PROPERTY(m_nDynamicContinuousContactBehavior,physicslib::DynamicContinuousContactBehavior_t, 0xda);
 			S2_PAD(0xE0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnBodyDesc_t) == 0xE0, "RnBodyDesc_t size should be 0xE0");
-
-#endif
 	}
 }

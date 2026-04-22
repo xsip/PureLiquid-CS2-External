@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "../particleslib/CParticleModelInput.hpp"
-#include "../particleslib/CParticleTransformInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ParticleRotationLockType_t.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particleslib/CParticleModelInput.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ParticleRotationLockType_t.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -27,8 +27,8 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_LockToBone : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x1d0);
-			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x230);
+			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x1d0);
+			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x230);
 			PROPERTY(m_flLifeTimeFadeStart,float32, 0x298);
 			PROPERTY(m_flLifeTimeFadeEnd,float32, 0x29c);
 			PROPERTY(m_flJumpThreshold,float32, 0x2a0);
@@ -36,17 +36,14 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x2a8);
 			PROPERTY(m_bRigid,bool, 0x328);
 			PROPERTY(m_bUseBones,bool, 0x329);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x32c);
-			NESTED_PROPERTY(m_nFieldOutputPrev,IDENTITY(particles::ParticleAttributeIndex_t), 0x330);
-			PROPERTY(m_nRotationSetType,IDENTITY(particles::ParticleRotationLockType_t), 0x334);
+			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x32c);
+			NESTED_PROPERTY(m_nFieldOutputPrev,particles::ParticleAttributeIndex_t, 0x330);
+			PROPERTY(m_nRotationSetType,particles::ParticleRotationLockType_t, 0x334);
 			PROPERTY(m_bRigidRotationLock,bool, 0x338);
-			NESTED_PROPERTY(m_vecRotation,IDENTITY(particleslib::CPerParticleVecInput), 0x340);
-			NESTED_PROPERTY(m_flRotLerp,IDENTITY(particleslib::CPerParticleFloatInput), 0x9f8);
+			NESTED_PROPERTY(m_vecRotation,particleslib::CPerParticleVecInput, 0x340);
+			NESTED_PROPERTY(m_flRotLerp,particleslib::CPerParticleFloatInput, 0x9f8);
 			S2_PAD(0x998);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_LockToBone) == 0xB68, "C_OP_LockToBone size should be 0xB68");
-
-#endif
 	}
 }

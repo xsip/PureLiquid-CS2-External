@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -35,9 +35,6 @@ namespace CS2 {
 			PROPERTY(m_flSpeedRatio,float32, 0xa8);
 			S2_PAD(0xB0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_IronSightController) == 0xB0, "C_IronSightController size should be 0xB0");
-
-#endif
 	}
 }

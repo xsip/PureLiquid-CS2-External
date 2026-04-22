@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "BaseSceneObjectOverride_t.hpp"
-#include "../modellib/MeshDrawPrimitiveFlags_t.hpp"
-#include "../modellib/CRenderBufferBinding.hpp"
+#include <SDK/worldrenderer/BaseSceneObjectOverride_t.hpp>
+#include <SDK/modellib/MeshDrawPrimitiveFlags_t.hpp>
+#include <SDK/modellib/CRenderBufferBinding.hpp>
 
 
 
@@ -25,13 +25,10 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nSubSceneObject,uint32_t, 0x4);
 			PROPERTY(m_nDrawCallIndex,uint32_t, 0x8);
-			PROPERTY(m_nAdditionalMeshDrawPrimitiveFlags,IDENTITY(modellib::MeshDrawPrimitiveFlags_t), 0xc);
-			NESTED_PROPERTY(m_extraBufferBinding,IDENTITY(modellib::CRenderBufferBinding), 0x10);
+			PROPERTY(m_nAdditionalMeshDrawPrimitiveFlags,modellib::MeshDrawPrimitiveFlags_t, 0xc);
+			NESTED_PROPERTY(m_extraBufferBinding,modellib::CRenderBufferBinding, 0x10);
 			S2_PAD(0x2C);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::ExtraVertexStreamOverride_t) == 0x30, "ExtraVertexStreamOverride_t size should be 0x30");
-
-#endif
 	}
 }

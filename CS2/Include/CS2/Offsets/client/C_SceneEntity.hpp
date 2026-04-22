@@ -20,7 +20,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hOwner = 0x61c; // GlobalTypes::CHandle<client::C_BaseFlex>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hActorList = 0x620; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseFlex>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bWasPlaying = 0x638; // bool m_bWasPlaying; |  0x638 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_QueuedEvents = 0x648; // GlobalTypes::CUtlVector<client::C_SceneEntity_QueuedEvents_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_QueuedEvents = 0x648; // GlobalTypes::CUtlVector<client::QueuedEvents_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_flCurrentTime = 0x660; // float32 m_flCurrentTime; |  0x660 | Schema_Builtin | Size: 0x4
 			}
 		}

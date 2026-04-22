@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CTriggerMultiple.hpp"
-#include "DynamicVolumeDef_t.hpp"
+#include <SDK/server/CTriggerMultiple.hpp>
+#include <SDK/server/DynamicVolumeDef_t.hpp>
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		class CDynamicNavConnectionsVolume : public CS2::server::CTriggerMultiple {
 		public:
 			PROPERTY(m_iszConnectionTarget,GlobalTypes::CUtlSymbolLarge*, 0x8a8);
-			NESTED_PROPERTY(m_vecConnections,IDENTITY(GlobalTypes::CUtlVector<server::DynamicVolumeDef_t>), 0x8b0);
+			NESTED_PROPERTY(m_vecConnections,GlobalTypes::CUtlVector<server::DynamicVolumeDef_t>, 0x8b0);
 			PROPERTY(m_sTransitionType,GlobalTypes::CGlobalSymbol, 0x8c8);
 			PROPERTY(m_bConnectionsEnabled,bool, 0x8d0);
 			PROPERTY(m_flTargetAreaSearchRadius,float32, 0x8d4);
@@ -31,9 +31,6 @@ namespace CS2 {
 			PROPERTY(m_flMaxConnectionDistance,float32, 0x8dc);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CDynamicNavConnectionsVolume) == 0x8E0, "CDynamicNavConnectionsVolume size should be 0x8E0");
-
-#endif
 	}
 }

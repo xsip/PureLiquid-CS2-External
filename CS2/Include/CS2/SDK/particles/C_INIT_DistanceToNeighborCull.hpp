@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "ParticleAttributeIndex_t.hpp"
-#include "ParticleSetMethod_t.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include <SDK/particles/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,18 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_DistanceToNeighborCull : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_flDistance,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flDistance,particleslib::CPerParticleFloatInput, 0x1d8);
 			PROPERTY(m_bIncludeRadii,bool, 0x348);
-			NESTED_PROPERTY(m_flLifespanOverlap,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
-			NESTED_PROPERTY(m_nFieldModify,IDENTITY(particles::ParticleAttributeIndex_t), 0x4c0);
-			NESTED_PROPERTY(m_flModify,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c8);
-			PROPERTY(m_nSetMethod,IDENTITY(particles::ParticleSetMethod_t), 0x638);
+			NESTED_PROPERTY(m_flLifespanOverlap,particleslib::CPerParticleFloatInput, 0x350);
+			NESTED_PROPERTY(m_nFieldModify,particles::ParticleAttributeIndex_t, 0x4c0);
+			NESTED_PROPERTY(m_flModify,particleslib::CPerParticleFloatInput, 0x4c8);
+			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x638);
 			PROPERTY(m_bUseNeighbor,bool, 0x63c);
 			S2_PAD(0x468);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_DistanceToNeighborCull) == 0x640, "C_INIT_DistanceToNeighborCull size should be 0x640");
-
-#endif
 	}
 }

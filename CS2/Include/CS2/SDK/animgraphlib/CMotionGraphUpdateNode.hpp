@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CLeafUpdateNode.hpp"
-#include "CMotionGraph.hpp"
+#include <SDK/animgraphlib/CLeafUpdateNode.hpp>
+#include <SDK/animgraphlib/CMotionGraph.hpp>
 
 
 
@@ -22,12 +22,9 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionGraphUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			PROPERTY(m_pMotionGraph,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CMotionGraph>), 0x58);
+			PROPERTY(m_pMotionGraph,GlobalTypes::CSmartPtr<animgraphlib::CMotionGraph>, 0x58);
 			S2_PAD(0x10);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionGraphUpdateNode) == 0x68, "CMotionGraphUpdateNode size should be 0x68");
-
-#endif
 	}
 }

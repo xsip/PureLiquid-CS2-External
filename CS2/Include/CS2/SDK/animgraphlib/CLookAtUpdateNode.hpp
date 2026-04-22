@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CUnaryUpdateNode.hpp"
-#include "LookAtOpFixedSettings_t.hpp"
-#include "AnimVectorSource.hpp"
-#include "CAnimParamHandle.hpp"
+#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
+#include <SDK/animgraphlib/LookAtOpFixedSettings_t.hpp>
+#include <SDK/animgraphlib/AnimVectorSource.hpp>
+#include <SDK/animgraphlib/CAnimParamHandle.hpp>
 
 
 
@@ -24,17 +24,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CLookAtUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_opFixedSettings,IDENTITY(animgraphlib::LookAtOpFixedSettings_t), 0x70);
-			PROPERTY(m_target,IDENTITY(animgraphlib::AnimVectorSource), 0x148);
-			NESTED_PROPERTY(m_paramIndex,IDENTITY(animgraphlib::CAnimParamHandle), 0x14c);
-			NESTED_PROPERTY(m_weightParamIndex,IDENTITY(animgraphlib::CAnimParamHandle), 0x14e);
+			NESTED_PROPERTY(m_opFixedSettings,animgraphlib::LookAtOpFixedSettings_t, 0x70);
+			PROPERTY(m_target,animgraphlib::AnimVectorSource, 0x148);
+			NESTED_PROPERTY(m_paramIndex,animgraphlib::CAnimParamHandle, 0x14c);
+			NESTED_PROPERTY(m_weightParamIndex,animgraphlib::CAnimParamHandle, 0x14e);
 			PROPERTY(m_bResetChild,bool, 0x150);
 			PROPERTY(m_bLockWhenWaning,bool, 0x151);
 			S2_PAD(0xF0);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CLookAtUpdateNode) == 0x160, "CLookAtUpdateNode size should be 0x160");
-
-#endif
 	}
 }

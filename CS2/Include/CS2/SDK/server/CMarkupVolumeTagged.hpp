@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CMarkupVolume.hpp"
+#include <SDK/server/CMarkupVolume.hpp>
 
 
 
@@ -21,8 +21,8 @@ namespace CS2 {
 	namespace server {
 		class CMarkupVolumeTagged : public CS2::server::CMarkupVolume {
 		public:
-			NESTED_PROPERTY(m_GroupNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x738);
-			NESTED_PROPERTY(m_Tags,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x750);
+			NESTED_PROPERTY(m_GroupNames,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x738);
+			NESTED_PROPERTY(m_Tags,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x750);
 			PROPERTY(m_bIsGroup,bool, 0x768);
 			PROPERTY(m_bGroupByPrefab,bool, 0x769);
 			PROPERTY(m_bGroupByVolume,bool, 0x76a);
@@ -30,9 +30,6 @@ namespace CS2 {
 			PROPERTY(m_bIsInGroup,bool, 0x76c);
 			S2_PAD(0x38);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMarkupVolumeTagged) == 0x770, "CMarkupVolumeTagged size should be 0x770");
-
-#endif
 	}
 }

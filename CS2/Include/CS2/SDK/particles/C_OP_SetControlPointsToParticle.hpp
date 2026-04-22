@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionOperator.hpp"
-#include "ParticleOrientationSetMode_t.hpp"
-#include "ParticleParentSetMode_t.hpp"
+#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include <SDK/particles/ParticleOrientationSetMode_t.hpp>
+#include <SDK/particles/ParticleParentSetMode_t.hpp>
 
 
 
@@ -29,13 +29,10 @@ namespace CS2 {
 			PROPERTY(m_nFirstSourcePoint,int32_t, 0x1dc);
 			PROPERTY(m_bReverse,bool, 0x1e0);
 			PROPERTY(m_bSetOrientation,bool, 0x1e1);
-			PROPERTY(m_nOrientationMode,IDENTITY(particles::ParticleOrientationSetMode_t), 0x1e4);
-			PROPERTY(m_nSetParent,IDENTITY(particles::ParticleParentSetMode_t), 0x1e8);
+			PROPERTY(m_nOrientationMode,particles::ParticleOrientationSetMode_t, 0x1e4);
+			PROPERTY(m_nSetParent,particles::ParticleParentSetMode_t, 0x1e8);
 			S2_PAD(0x20);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointsToParticle) == 0x1F0, "C_OP_SetControlPointsToParticle size should be 0x1F0");
-
-#endif
 	}
 }

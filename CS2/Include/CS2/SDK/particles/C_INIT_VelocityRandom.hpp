@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "CParticleFunctionInitializer.hpp"
-#include "../particleslib/CPerParticleFloatInput.hpp"
-#include "../particleslib/CPerParticleVecInput.hpp"
-#include "CRandomNumberGeneratorParameters.hpp"
+#include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include <SDK/particles/CRandomNumberGeneratorParameters.hpp>
 
 
 
@@ -25,17 +25,14 @@ namespace CS2 {
 		class C_INIT_VelocityRandom : public CS2::particles::CParticleFunctionInitializer {
 		public:
 			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_fSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
-			NESTED_PROPERTY(m_fSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
-			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMin,IDENTITY(particleslib::CPerParticleVecInput), 0x4c0);
-			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMax,IDENTITY(particleslib::CPerParticleVecInput), 0xb78);
+			NESTED_PROPERTY(m_fSpeedMin,particleslib::CPerParticleFloatInput, 0x1e0);
+			NESTED_PROPERTY(m_fSpeedMax,particleslib::CPerParticleFloatInput, 0x350);
+			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMin,particleslib::CPerParticleVecInput, 0x4c0);
+			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMax,particleslib::CPerParticleVecInput, 0xb78);
 			PROPERTY(m_bIgnoreDT,bool, 0x1230);
-			NESTED_PROPERTY(m_randomnessParameters,IDENTITY(particles::CRandomNumberGeneratorParameters), 0x1234);
+			NESTED_PROPERTY(m_randomnessParameters,particles::CRandomNumberGeneratorParameters, 0x1234);
 			S2_PAD(0x1068);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_VelocityRandom) == 0x1240, "C_INIT_VelocityRandom size should be 0x1240");
-
-#endif
 	}
 }

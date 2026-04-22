@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include "../GlobalTypes.hpp"
+	#include <SDK/GlobalTypes.hpp>
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include "FootFixedData_t.hpp"
-#include "CAnimInputDamping.hpp"
-#include "IKSolverType.hpp"
+#include <SDK/animgraphlib/FootFixedData_t.hpp>
+#include <SDK/animgraphlib/CAnimInputDamping.hpp>
+#include <SDK/animgraphlib/IKSolverType.hpp>
 
 
 
@@ -23,10 +23,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class FootLockPoseOpFixedSettings  {
 		public:
-			NESTED_PROPERTY(m_footInfo,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::FootFixedData_t>), 0x0);
-			NESTED_PROPERTY(m_hipDampingSettings,IDENTITY(animgraphlib::CAnimInputDamping), 0x18);
+			NESTED_PROPERTY(m_footInfo,GlobalTypes::CUtlVector<animgraphlib::FootFixedData_t>, 0x0);
+			NESTED_PROPERTY(m_hipDampingSettings,animgraphlib::CAnimInputDamping, 0x18);
 			PROPERTY(m_nHipBoneIndex,int32_t, 0x30);
-			PROPERTY(m_ikSolverType,IDENTITY(animgraphlib::IKSolverType), 0x34);
+			PROPERTY(m_ikSolverType,animgraphlib::IKSolverType, 0x34);
 			PROPERTY(m_bApplyTilt,bool, 0x38);
 			PROPERTY(m_bApplyHipDrop,bool, 0x39);
 			PROPERTY(m_bAlwaysUseFallbackHinge,bool, 0x3a);
@@ -43,9 +43,6 @@ namespace CS2 {
 			PROPERTY(m_flStretchExtensionScale,float32, 0x60);
 			S2_PAD(0x68);
 		};
-#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FootLockPoseOpFixedSettings) == 0x68, "FootLockPoseOpFixedSettings size should be 0x68");
-
-#endif
 	}
 }
