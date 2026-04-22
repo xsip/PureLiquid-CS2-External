@@ -1,3 +1,4 @@
+# Currently broken after update - no time to update right now.
 # Pure Liquid CS2 [Watch Preview on YouTube](https://www.youtube.com/watch?v=S9A8UnHnU7Y)
 
 ## *Advanced External Base For Counter Strike 2 Including TraceShape visibility check, CreateMove Hook for autofire, Silentaim and Chams*
