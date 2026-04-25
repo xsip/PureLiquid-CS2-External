@@ -194,7 +194,7 @@ text:000000000003BE30                 mov     [rsp+arg_0], rbx
 .text:000000000003BE7B                 mov     eax, 1
 .text:000000000003BE80                 mov     dword ptr [rbx+0Ch], 0FFFFFFFFh
 */
-#define CREATE_MATERIAL_FN_PATTERN "48 89 5C 24 ?? 48 89 6C 24 ?? 56 57 41 56 48 81 EC ?? ?? ?? ?? 48 8B 05"
+#define CREATE_MATERIAL_FN_PATTERN "48 89 5C 24 08 48 89 6C 24 10 48 89 74 24 18 48 89 7C 24 20 41 56 48 81 EC 10 01 00 00 48 8B 05 ?? ?? ?? ?? 48"
 
 
 // tier0.dll => exported function.
