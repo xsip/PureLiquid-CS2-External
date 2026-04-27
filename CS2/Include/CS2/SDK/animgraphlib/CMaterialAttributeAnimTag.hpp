@@ -23,11 +23,14 @@ namespace CS2 {
 		class CMaterialAttributeAnimTag : public CS2::animgraphlib::CAnimTagBase {
 		public:
 			PROPERTY(m_AttributeName,GlobalTypes::CUtlString*, 0x58);
-			PROPERTY(m_AttributeType,animgraphlib::MatterialAttributeTagType_t, 0x60);
+			PROPERTY(m_AttributeType,IDENTITY(animgraphlib::MatterialAttributeTagType_t), 0x60);
 			PROPERTY(m_flValue,float32, 0x64);
 			PROPERTY(m_Color,GlobalTypes::Color, 0x68);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMaterialAttributeAnimTag) == 0x70, "CMaterialAttributeAnimTag size should be 0x70");
+
+#endif
 	}
 }

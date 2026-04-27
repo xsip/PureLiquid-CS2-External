@@ -19,6 +19,9 @@ namespace CS2 {
 	namespace server {
 		class CBaseEntity;
 	}
+	namespace vphysics2 {
+		class IPhysicsBody;
+	}
 }
 
 
@@ -28,7 +31,8 @@ namespace CS2 {
 		class CSplineConstraint : public CS2::server::CPhysConstraint {
 		public:
 			PROPERTY(m_vAnchorOffsetRestore,GlobalTypes::Vector, 0x558);
-			PROPERTY(m_hSplineEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x564);
+			PROPERTY(m_hSplineEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x564);
+			PROPERTY(m_pSplineBody,IDENTITY(vphysics2::IPhysicsBody*), 0x568);
 			PROPERTY(m_bEnableLateralConstraint,bool, 0x570);
 			PROPERTY(m_bEnableVerticalConstraint,bool, 0x571);
 			PROPERTY(m_bEnableAngularConstraint,bool, 0x572);
@@ -39,10 +43,13 @@ namespace CS2 {
 			PROPERTY(m_flJointFriction,float32, 0x580);
 			PROPERTY(m_flTransitionTime,float32, 0x584);
 			PROPERTY(m_vPreSolveAnchorPos,GlobalTypes::VectorWS, 0x598);
-			NESTED_PROPERTY(m_StartTransitionTime,entity2::GameTime_t, 0x5a4);
+			NESTED_PROPERTY(m_StartTransitionTime,IDENTITY(entity2::GameTime_t), 0x5a4);
 			PROPERTY(m_vTangentSpaceAnchorAtTransitionStart,GlobalTypes::Vector, 0x5a8);
 			S2_PAD(0xB0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSplineConstraint) == 0x5B8, "CSplineConstraint size should be 0x5B8");
+
+#endif
 	}
 }

@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RopeSpringConstraint : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_flRestLength,particleslib::CParticleCollectionFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_flMinDistance,particleslib::CParticleCollectionFloatInput, 0x340);
-			NESTED_PROPERTY(m_flMaxDistance,particleslib::CParticleCollectionFloatInput, 0x4b0);
-			PROPERTY(m_flAdjustmentScale,float32, 0x620);
-			NESTED_PROPERTY(m_flInitialRestingLength,particleslib::CParticleCollectionFloatInput, 0x628);
+			NESTED_PROPERTY(m_flRestLength,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flMinDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x348);
+			NESTED_PROPERTY(m_flMaxDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4b8);
+			PROPERTY(m_flAdjustmentScale,float32, 0x628);
+			NESTED_PROPERTY(m_flInitialRestingLength,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x630);
 			S2_PAD(0x5C8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RopeSpringConstraint) == 0x798, "C_OP_RopeSpringConstraint size should be 0x798");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RopeSpringConstraint) == 0x7A0, "C_OP_RopeSpringConstraint size should be 0x7A0");
+
+#endif
 	}
 }

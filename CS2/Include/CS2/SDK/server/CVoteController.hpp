@@ -32,17 +32,20 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_nVoteOptionCount,int32_t, 5 , 0x4b0);
 			PROPERTY(m_nPotentialVotes,int32_t, 0x4c4);
 			PROPERTY(m_bIsYesNoVote,bool, 0x4c8);
-			NESTED_PROPERTY(m_acceptingVotesTimer,server::CountdownTimer, 0x4d0);
-			NESTED_PROPERTY(m_executeCommandTimer,server::CountdownTimer, 0x4e8);
-			NESTED_PROPERTY(m_resetVoteTimer,server::CountdownTimer, 0x500);
+			NESTED_PROPERTY(m_acceptingVotesTimer,IDENTITY(server::CountdownTimer), 0x4d0);
+			NESTED_PROPERTY(m_executeCommandTimer,IDENTITY(server::CountdownTimer), 0x4e8);
+			NESTED_PROPERTY(m_resetVoteTimer,IDENTITY(server::CountdownTimer), 0x500);
 			PROPERTY_ARRAY(m_nVotesCast,int32_t, 64 , 0x518);
 			PROPERTY(m_playerHoldingVote,GlobalTypes::CPlayerSlot, 0x618);
 			PROPERTY(m_playerOverrideForVote,GlobalTypes::CPlayerSlot, 0x61c);
 			PROPERTY(m_nHighestCountIndex,int32_t, 0x620);
-			NESTED_PROPERTY(m_potentialIssues,GlobalTypes::CUtlVector<server::CBaseIssue*>, 0x628);
-			NESTED_PROPERTY(m_VoteOptions,GlobalTypes::CUtlVector<char*>, 0x640);
+			NESTED_PROPERTY(m_potentialIssues,IDENTITY(GlobalTypes::CUtlVector<server::CBaseIssue*>), 0x628);
+			NESTED_PROPERTY(m_VoteOptions,IDENTITY(GlobalTypes::CUtlVector<char*>), 0x640);
 			S2_PAD(0x1B0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CVoteController) == 0x658, "CVoteController size should be 0x658");
+
+#endif
 	}
 }

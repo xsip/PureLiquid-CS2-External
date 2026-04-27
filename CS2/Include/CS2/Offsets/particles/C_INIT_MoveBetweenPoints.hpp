@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x910
+			// Class size: 0x918
 			namespace C_INIT_MoveBetweenPoints /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_flSpeedMin = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flSpeedMax = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flEndSpread = 0x4b8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flStartOffset = 0x628; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flEndOffset = 0x798; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nEndControlPointNumber = 0x908; // int32_t m_nEndControlPointNumber; |  0x908 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bTrailBias = 0x90c; // bool m_bTrailBias; |  0x90c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flSpeedMin = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flSpeedMax = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flEndSpread = 0x4c0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flStartOffset = 0x630; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flEndOffset = 0x7a0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nEndControlPointNumber = 0x910; // int32_t m_nEndControlPointNumber; |  0x910 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bTrailBias = 0x914; // bool m_bTrailBias; |  0x914 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

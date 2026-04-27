@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CBaseAnimGraphVariationUserData : public CS2::animlib::CNmGraphVariationUserData {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBaseAnimGraphVariationUserData) == 0x8, "CBaseAnimGraphVariationUserData size should be 0x8");
+
+#endif
 	}
 }

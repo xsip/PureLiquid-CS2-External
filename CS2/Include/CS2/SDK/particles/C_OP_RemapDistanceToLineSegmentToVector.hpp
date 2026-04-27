@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapDistanceToLineSegmentToVector : public CS2::particles::C_OP_RemapDistanceToLineSegmentBase {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1e8);
-			PROPERTY(m_vMinOutputValue,GlobalTypes::Vector, 0x1ec);
-			PROPERTY(m_vMaxOutputValue,GlobalTypes::Vector, 0x1f8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1f0);
+			PROPERTY(m_vMinOutputValue,GlobalTypes::Vector, 0x1f4);
+			PROPERTY(m_vMaxOutputValue,GlobalTypes::Vector, 0x200);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapDistanceToLineSegmentToVector) == 0x208, "C_OP_RemapDistanceToLineSegmentToVector size should be 0x208");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapDistanceToLineSegmentToVector) == 0x210, "C_OP_RemapDistanceToLineSegmentToVector size should be 0x210");
+
+#endif
 	}
 }

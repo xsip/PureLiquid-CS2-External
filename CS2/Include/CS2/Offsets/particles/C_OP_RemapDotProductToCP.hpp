@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x7A8
+			// Class size: 0x7B0
 			namespace C_OP_RemapDotProductToCP /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nInputCP1 = 0x1d8; // int32_t m_nInputCP1; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nInputCP2 = 0x1dc; // int32_t m_nInputCP2; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputCP = 0x1e0; // int32_t m_nOutputCP; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutVectorField = 0x1e4; // int32_t m_nOutVectorField; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMin = 0x1e8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInputMax = 0x358; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMin = 0x4c8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMax = 0x638; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nInputCP1 = 0x1e0; // int32_t m_nInputCP1; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nInputCP2 = 0x1e4; // int32_t m_nInputCP2; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputCP = 0x1e8; // int32_t m_nOutputCP; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutVectorField = 0x1ec; // int32_t m_nOutVectorField; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMin = 0x1f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInputMax = 0x360; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMin = 0x4d0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMax = 0x640; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

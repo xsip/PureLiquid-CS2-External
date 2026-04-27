@@ -26,10 +26,13 @@ namespace CS2 {
 	namespace server {
 		class CPulseServerCursor : public CS2::pulse_runtime_lib::CPulseExecCursor {
 		public:
-			PROPERTY(m_hActivator,GlobalTypes::CHandle<server::CBaseEntity>, 0xd8);
-			PROPERTY(m_hCaller,GlobalTypes::CHandle<server::CBaseEntity>, 0xdc);
-			S2_PAD(0x10);
+			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xe8);
+			PROPERTY(m_hCaller,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xec);
+			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::server::CPulseServerCursor) == 0xE0, "CPulseServerCursor size should be 0xE0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPulseServerCursor) == 0xF0, "CPulseServerCursor size should be 0xF0");
+
+#endif
 	}
 }

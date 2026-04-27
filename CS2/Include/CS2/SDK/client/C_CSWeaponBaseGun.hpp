@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace client {
 		class C_CSWeaponBaseGun : public CS2::client::C_CSWeaponBase {
 		public:
-			PROPERTY(m_zoomLevel,int32_t, 0x1f40);
-			PROPERTY(m_iBurstShotsRemaining,int32_t, 0x1f44);
-			PROPERTY(m_iSilencerBodygroup,int32_t, 0x1f48);
-			PROPERTY(m_silencedModelIndex,int32_t, 0x1f58);
-			PROPERTY(m_inPrecache,bool, 0x1f5c);
-			PROPERTY(m_bNeedsBoltAction,bool, 0x1f5d);
-			PROPERTY(m_nRevolverCylinderIdx,int32_t, 0x1f60);
+			PROPERTY(m_zoomLevel,int32_t, 0x1cb0);
+			PROPERTY(m_iBurstShotsRemaining,int32_t, 0x1cb4);
+			PROPERTY(m_iSilencerBodygroup,int32_t, 0x1cb8);
+			PROPERTY(m_silencedModelIndex,int32_t, 0x1cc8);
+			PROPERTY(m_inPrecache,bool, 0x1ccc);
+			PROPERTY(m_bNeedsBoltAction,bool, 0x1ccd);
+			PROPERTY(m_nRevolverCylinderIdx,int32_t, 0x1cd0);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::client::C_CSWeaponBaseGun) == 0x1F70, "C_CSWeaponBaseGun size should be 0x1F70");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSWeaponBaseGun) == 0x1CE0, "C_CSWeaponBaseGun size should be 0x1CE0");
+
+#endif
 	}
 }

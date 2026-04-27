@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x268
+			// Class size: 0x270
 			namespace C_INIT_InitialVelocityFromHitbox /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_flVelocityMin = 0x1d8; // float32 m_flVelocityMin; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flVelocityMax = 0x1dc; // float32 m_flVelocityMax; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e0; // int32_t m_nControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_HitboxSetName = 0x1e4; // char m_HitboxSetName[128]; |  0x1e4 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_bUseBones = 0x264; // bool m_bUseBones; |  0x264 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flVelocityMin = 0x1e0; // float32 m_flVelocityMin; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flVelocityMax = 0x1e4; // float32 m_flVelocityMax; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e8; // int32_t m_nControlPointNumber; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_HitboxSetName = 0x1ec; // char m_HitboxSetName[128]; |  0x1ec | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_bUseBones = 0x26c; // bool m_bUseBones; |  0x26c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

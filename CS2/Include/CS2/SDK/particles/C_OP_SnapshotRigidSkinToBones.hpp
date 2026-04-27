@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SnapshotRigidSkinToBones : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_bTransformNormals,bool, 0x1d0);
-			PROPERTY(m_bTransformRadii,bool, 0x1d1);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d4);
+			PROPERTY(m_bTransformNormals,bool, 0x1d8);
+			PROPERTY(m_bTransformRadii,bool, 0x1d9);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1dc);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SnapshotRigidSkinToBones) == 0x1D8, "C_OP_SnapshotRigidSkinToBones size should be 0x1D8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SnapshotRigidSkinToBones) == 0x1E0, "C_OP_SnapshotRigidSkinToBones size should be 0x1E0");
+
+#endif
 	}
 }

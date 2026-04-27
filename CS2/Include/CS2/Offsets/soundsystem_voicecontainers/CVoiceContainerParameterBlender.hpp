@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x1E8
+			// Class size: 0x1F8
 			namespace CVoiceContainerParameterBlender /*: public CS2::soundsystem_voicecontainers::CVoiceContainerBase*/ {
-				constexpr std::ptrdiff_t m_firstSound = 0xa8; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_secondSound = 0xc0; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_bEnableOcclusionBlend = 0xd8; // bool m_bEnableOcclusionBlend; |  0xd8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_curve1 = 0xe0; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
-				constexpr std::ptrdiff_t m_curve2 = 0x120; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
-				constexpr std::ptrdiff_t m_bEnableDistanceBlend = 0x160; // bool m_bEnableDistanceBlend; |  0x160 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_curve3 = 0x168; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
-				constexpr std::ptrdiff_t m_curve4 = 0x1a8; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
+				constexpr std::ptrdiff_t m_firstSound = 0xa8; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_secondSound = 0xc8; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_bEnableOcclusionBlend = 0xe8; // bool m_bEnableOcclusionBlend; |  0xe8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_curve1 = 0xf0; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
+				constexpr std::ptrdiff_t m_curve2 = 0x130; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
+				constexpr std::ptrdiff_t m_bEnableDistanceBlend = 0x170; // bool m_bEnableDistanceBlend; |  0x170 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_curve3 = 0x178; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
+				constexpr std::ptrdiff_t m_curve4 = 0x1b8; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
 			}
 		}
 	}

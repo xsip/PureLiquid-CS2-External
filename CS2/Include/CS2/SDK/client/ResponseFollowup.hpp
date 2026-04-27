@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(bFired,bool, 0x30);
 			S2_PAD(0x31);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ResponseFollowup) == 0x31, "ResponseFollowup size should be 0x31");
+
+#endif
 	}
 }

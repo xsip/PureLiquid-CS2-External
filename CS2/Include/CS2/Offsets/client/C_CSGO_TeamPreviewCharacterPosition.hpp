@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x13A8
+			// Class size: 0x13A0
 			namespace C_CSGO_TeamPreviewCharacterPosition /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_nVariant = 0x608; // int32_t m_nVariant; |  0x608 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRandom = 0x60c; // int32_t m_nRandom; |  0x60c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOrdinal = 0x610; // int32_t m_nOrdinal; |  0x610 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_sWeaponName = 0x618; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_xuid = 0x620; // uint64_t m_xuid; |  0x620 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_agentItem = 0x628; // client::C_EconItemView  | Schema_DeclaredClass | Size: 0x470
-				constexpr std::ptrdiff_t m_glovesItem = 0xa98; // client::C_EconItemView  | Schema_DeclaredClass | Size: 0x470
-				constexpr std::ptrdiff_t m_weaponItem = 0xf08; // client::C_EconItemView  | Schema_DeclaredClass | Size: 0x470
+				constexpr std::ptrdiff_t m_nVariant = 0x600; // int32_t m_nVariant; |  0x600 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRandom = 0x604; // int32_t m_nRandom; |  0x604 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOrdinal = 0x608; // int32_t m_nOrdinal; |  0x608 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_sWeaponName = 0x610; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_xuid = 0x618; // uint64_t m_xuid; |  0x618 | Schema_Builtin | Size: 0x8
+				constexpr std::ptrdiff_t m_agentItem = 0x620; // client::C_EconItemView  | Schema_DeclaredClass | Size: 0x470
+				constexpr std::ptrdiff_t m_glovesItem = 0xa90; // client::C_EconItemView  | Schema_DeclaredClass | Size: 0x470
+				constexpr std::ptrdiff_t m_weaponItem = 0xf00; // client::C_EconItemView  | Schema_DeclaredClass | Size: 0x470
 			}
 		}
 	}

@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_CollideWithParentParticles : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_flParentRadiusScale,particleslib::CPerParticleFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_flRadiusScale,particleslib::CPerParticleFloatInput, 0x340);
+			NESTED_PROPERTY(m_flParentRadiusScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
 			S2_PAD(0x2E0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_CollideWithParentParticles) == 0x4B0, "C_OP_CollideWithParentParticles size should be 0x4B0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_CollideWithParentParticles) == 0x4B8, "C_OP_CollideWithParentParticles size should be 0x4B8");
+
+#endif
 	}
 }

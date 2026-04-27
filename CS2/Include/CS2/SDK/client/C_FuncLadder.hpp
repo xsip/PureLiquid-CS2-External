@@ -22,17 +22,20 @@ namespace CS2 {
 	namespace client {
 		class C_FuncLadder : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_vecLadderDir,GlobalTypes::Vector, 0xe88);
-			NESTED_PROPERTY(m_Dismounts,GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_InfoLadderDismount>>, 0xe98);
-			PROPERTY(m_vecLocalTop,GlobalTypes::Vector, 0xeb0);
-			PROPERTY(m_vecPlayerMountPositionTop,GlobalTypes::VectorWS, 0xebc);
-			PROPERTY(m_vecPlayerMountPositionBottom,GlobalTypes::VectorWS, 0xec8);
-			PROPERTY(m_flAutoRideSpeed,float32, 0xed4);
-			PROPERTY(m_bDisabled,bool, 0xed8);
-			PROPERTY(m_bFakeLadder,bool, 0xed9);
-			PROPERTY(m_bHasSlack,bool, 0xeda);
+			PROPERTY(m_vecLadderDir,GlobalTypes::Vector, 0xfa8);
+			NESTED_PROPERTY(m_Dismounts,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_InfoLadderDismount>>), 0xfb8);
+			PROPERTY(m_vecLocalTop,GlobalTypes::Vector, 0xfd0);
+			PROPERTY(m_vecPlayerMountPositionTop,GlobalTypes::VectorWS, 0xfdc);
+			PROPERTY(m_vecPlayerMountPositionBottom,GlobalTypes::VectorWS, 0xfe8);
+			PROPERTY(m_flAutoRideSpeed,float32, 0xff4);
+			PROPERTY(m_bDisabled,bool, 0xff8);
+			PROPERTY(m_bFakeLadder,bool, 0xff9);
+			PROPERTY(m_bHasSlack,bool, 0xffa);
 			S2_PAD(0x58);
 		};
-		//static_assert(sizeof(CS2::client::C_FuncLadder) == 0xEE0, "C_FuncLadder size should be 0xEE0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_FuncLadder) == 0x1000, "C_FuncLadder size should be 0x1000");
+
+#endif
 	}
 }

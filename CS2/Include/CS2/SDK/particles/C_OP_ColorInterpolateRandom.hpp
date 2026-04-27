@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ColorInterpolateRandom : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_ColorFadeMin,GlobalTypes::Color, 0x1d0);
-			PROPERTY(m_ColorFadeMax,GlobalTypes::Color, 0x1ec);
-			PROPERTY(m_flFadeStartTime,float32, 0x1fc);
-			PROPERTY(m_flFadeEndTime,float32, 0x200);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x204);
-			PROPERTY(m_bEaseInOut,bool, 0x208);
+			PROPERTY(m_ColorFadeMin,GlobalTypes::Color, 0x1d8);
+			PROPERTY(m_ColorFadeMax,GlobalTypes::Color, 0x1f4);
+			PROPERTY(m_flFadeStartTime,float32, 0x204);
+			PROPERTY(m_flFadeEndTime,float32, 0x208);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x20c);
+			PROPERTY(m_bEaseInOut,bool, 0x210);
 			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ColorInterpolateRandom) == 0x210, "C_OP_ColorInterpolateRandom size should be 0x210");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ColorInterpolateRandom) == 0x218, "C_OP_ColorInterpolateRandom size should be 0x218");
+
+#endif
 	}
 }

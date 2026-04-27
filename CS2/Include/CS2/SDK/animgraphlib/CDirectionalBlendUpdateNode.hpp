@@ -25,16 +25,19 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CDirectionalBlendUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			PROPERTY_ARRAY(m_hSequences,animationsystem::HSequence, 8 , 0x5c);
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x80);
-			PROPERTY(m_blendValueSource,animgraphlib::AnimValueSource, 0x98);
-			NESTED_PROPERTY(m_paramIndex,animgraphlib::CAnimParamHandle, 0x9c);
+			PROPERTY_ARRAY(m_hSequences,IDENTITY(animationsystem::HSequence), 8 , 0x5c);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x80);
+			PROPERTY(m_blendValueSource,IDENTITY(animgraphlib::AnimValueSource), 0x98);
+			NESTED_PROPERTY(m_paramIndex,IDENTITY(animgraphlib::CAnimParamHandle), 0x9c);
 			PROPERTY(m_playbackSpeed,float32, 0xa0);
 			PROPERTY(m_duration,float32, 0xa4);
 			PROPERTY(m_bLoop,bool, 0xa8);
 			PROPERTY(m_bLockBlendOnReset,bool, 0xa9);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CDirectionalBlendUpdateNode) == 0xB0, "CDirectionalBlendUpdateNode size should be 0xB0");
+
+#endif
 	}
 }

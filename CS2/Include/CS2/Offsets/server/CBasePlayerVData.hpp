@@ -8,22 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x178
+			// Class size: 0x258
 			namespace CBasePlayerVData /*: public CS2::client::CEntitySubclassVDataBase*/ {
 				constexpr std::ptrdiff_t m_sModelName = 0x28; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>  | Schema_Atomic | Size: 0xe0
-				constexpr std::ptrdiff_t m_flHeadDamageMultiplier = 0x108; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_flChestDamageMultiplier = 0x118; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_flStomachDamageMultiplier = 0x128; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_flArmDamageMultiplier = 0x138; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_flLegDamageMultiplier = 0x148; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_flHoldBreathTime = 0x158; // float32 m_flHoldBreathTime; |  0x158 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDrowningDamageInterval = 0x15c; // float32 m_flDrowningDamageInterval; |  0x15c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDrowningDamageInitial = 0x160; // int32_t m_nDrowningDamageInitial; |  0x160 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDrowningDamageMax = 0x164; // int32_t m_nDrowningDamageMax; |  0x164 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nWaterSpeed = 0x168; // int32_t m_nWaterSpeed; |  0x168 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flUseRange = 0x16c; // float32 m_flUseRange; |  0x16c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flUseAngleTolerance = 0x170; // float32 m_flUseAngleTolerance; |  0x170 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flCrouchTime = 0x174; // float32 m_flCrouchTime; |  0x174 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_sModelNameAg2Override = 0x108; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_flHeadDamageMultiplier = 0x1e8; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_flChestDamageMultiplier = 0x1f8; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_flStomachDamageMultiplier = 0x208; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_flArmDamageMultiplier = 0x218; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_flLegDamageMultiplier = 0x228; // client::CSkillFloat  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_flHoldBreathTime = 0x238; // float32 m_flHoldBreathTime; |  0x238 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDrowningDamageInterval = 0x23c; // float32 m_flDrowningDamageInterval; |  0x23c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDrowningDamageInitial = 0x240; // int32_t m_nDrowningDamageInitial; |  0x240 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDrowningDamageMax = 0x244; // int32_t m_nDrowningDamageMax; |  0x244 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nWaterSpeed = 0x248; // int32_t m_nWaterSpeed; |  0x248 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flUseRange = 0x24c; // float32 m_flUseRange; |  0x24c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flUseAngleTolerance = 0x250; // float32 m_flUseAngleTolerance; |  0x250 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCrouchTime = 0x254; // float32 m_flCrouchTime; |  0x254 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

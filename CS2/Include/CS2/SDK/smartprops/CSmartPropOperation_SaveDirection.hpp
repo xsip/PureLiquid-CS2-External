@@ -23,11 +23,14 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropOperation_SaveDirection : public CS2::smartprops::CSmartPropOperation {
 		public:
-			NESTED_PROPERTY(m_DirectionVector,smartprops::CSmartPropAttributeDirection, 0x50);
-			NESTED_PROPERTY(m_CoordinateSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x90);
+			NESTED_PROPERTY(m_DirectionVector,IDENTITY(smartprops::CSmartPropAttributeDirection), 0x50);
+			NESTED_PROPERTY(m_CoordinateSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x90);
 			PROPERTY(m_VariableName,GlobalTypes::CUtlString*, 0xd0);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_SaveDirection) == 0xD8, "CSmartPropOperation_SaveDirection size should be 0xD8");
+
+#endif
 	}
 }

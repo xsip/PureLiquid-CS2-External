@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PointList : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
-			NESTED_PROPERTY(m_pointList,GlobalTypes::CUtlVector<particles::PointDefinition_t>, 0x1e0);
-			PROPERTY(m_bPlaceAlongPath,bool, 0x1f8);
-			PROPERTY(m_bClosedLoop,bool, 0x1f9);
-			PROPERTY(m_nNumPointsAlongPath,int32_t, 0x1fc);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			NESTED_PROPERTY(m_pointList,IDENTITY(GlobalTypes::CUtlVector<particles::PointDefinition_t>), 0x1e8);
+			PROPERTY(m_bPlaceAlongPath,bool, 0x200);
+			PROPERTY(m_bClosedLoop,bool, 0x201);
+			PROPERTY(m_nNumPointsAlongPath,int32_t, 0x204);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_PointList) == 0x200, "C_INIT_PointList size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_PointList) == 0x208, "C_INIT_PointList size should be 0x208");
+
+#endif
 	}
 }

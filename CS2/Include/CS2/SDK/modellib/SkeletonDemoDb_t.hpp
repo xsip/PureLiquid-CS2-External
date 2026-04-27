@@ -10,7 +10,7 @@
 #endif
 
 
-#include <SDK/modellib/Camera_t.hpp>
+#include <SDK/modellib/SkeletonAnimCapture_t_Camera_t.hpp>
 
 
 
@@ -26,11 +26,14 @@ namespace CS2 {
 	namespace modellib {
 		class SkeletonDemoDb_t  {
 		public:
-			NESTED_PROPERTY(m_AnimCaptures,GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t*>, 0x0);
-			NESTED_PROPERTY(m_CameraTrack,GlobalTypes::CUtlVector<modellib::Camera_t>, 0x18);
+			NESTED_PROPERTY(m_AnimCaptures,IDENTITY(GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t*>), 0x0);
+			NESTED_PROPERTY(m_CameraTrack,IDENTITY(GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t_Camera_t>), 0x18);
 			PROPERTY(m_flRecordingTime,float32, 0x30);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::SkeletonDemoDb_t) == 0x38, "SkeletonDemoDb_t size should be 0x38");
+
+#endif
 	}
 }

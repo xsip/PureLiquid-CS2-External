@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4C0
+			// Class size: 0x4C8
 			namespace C_OP_ConnectParentParticleToNearest /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nFirstControlPoint = 0x1d0; // int32_t m_nFirstControlPoint; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSecondControlPoint = 0x1d4; // int32_t m_nSecondControlPoint; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseRadius = 0x1d8; // bool m_bUseRadius; |  0x1d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flRadiusScale = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flParentRadiusScale = 0x350; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nFirstControlPoint = 0x1d8; // int32_t m_nFirstControlPoint; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSecondControlPoint = 0x1dc; // int32_t m_nSecondControlPoint; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseRadius = 0x1e0; // bool m_bUseRadius; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flRadiusScale = 0x1e8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flParentRadiusScale = 0x358; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

@@ -27,21 +27,24 @@ namespace CS2 {
 	namespace client {
 		class CSoundPatch  {
 		public:
-			NESTED_PROPERTY(m_pitch,client::CSoundEnvelope, 0x8);
-			NESTED_PROPERTY(m_volume,client::CSoundEnvelope, 0x18);
+			NESTED_PROPERTY(m_pitch,IDENTITY(client::CSoundEnvelope), 0x8);
+			NESTED_PROPERTY(m_volume,IDENTITY(client::CSoundEnvelope), 0x18);
 			PROPERTY(m_shutdownTime,float32, 0x3c);
 			PROPERTY(m_flLastTime,float32, 0x40);
 			PROPERTY(m_iszSoundScriptName,GlobalTypes::CUtlSymbolLarge*, 0x48);
-			PROPERTY(m_hEnt,GlobalTypes::CHandle<client::C_BaseEntity>, 0x50);
+			PROPERTY(m_hEnt,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x50);
 			PROPERTY(m_soundEntityIndex,GlobalTypes::CEntityIndex, 0x54);
-			PROPERTY(m_soundOrigin,GlobalTypes::Vector, 0x58);
+			PROPERTY(m_soundOrigin,GlobalTypes::VectorWS, 0x58);
 			PROPERTY(m_isPlaying,int32_t, 0x64);
-			NESTED_PROPERTY(m_Filter,client::CCopyRecipientFilter, 0x68);
+			NESTED_PROPERTY(m_Filter,IDENTITY(client::CCopyRecipientFilter), 0x68);
 			PROPERTY(m_flCloseCaptionDuration,float32, 0xa0);
 			PROPERTY(m_bUpdatedSoundOrigin,bool, 0xa4);
 			PROPERTY(m_iszClassName,GlobalTypes::CUtlSymbolLarge*, 0xa8);
 			S2_PAD(0xB0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSoundPatch) == 0xB0, "CSoundPatch size should be 0xB0");
+
+#endif
 	}
 }

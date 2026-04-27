@@ -22,26 +22,29 @@ namespace CS2 {
 	namespace server {
 		class CFuncRotating : public CS2::server::CBaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_OnStopped,entity2::CEntityIOOutput, 0x730);
-			NESTED_PROPERTY(m_OnStarted,entity2::CEntityIOOutput, 0x748);
-			NESTED_PROPERTY(m_OnReachedStart,entity2::CEntityIOOutput, 0x760);
-			PROPERTY(m_localRotationVector,GlobalTypes::RotationVector, 0x778);
-			PROPERTY(m_flFanFriction,float32, 0x784);
-			PROPERTY(m_flAttenuation,float32, 0x788);
-			PROPERTY(m_flVolume,float32, 0x78c);
-			PROPERTY(m_flTargetSpeed,float32, 0x790);
-			PROPERTY(m_flMaxSpeed,float32, 0x794);
-			PROPERTY(m_flBlockDamage,float32, 0x798);
-			PROPERTY(m_NoiseRunning,GlobalTypes::CUtlSymbolLarge*, 0x7a0);
-			PROPERTY(m_bReversed,bool, 0x7a8);
-			PROPERTY(m_bAccelDecel,bool, 0x7a9);
-			PROPERTY(m_prevLocalAngles,GlobalTypes::QAngle, 0x7c0);
-			PROPERTY(m_angStart,GlobalTypes::QAngle, 0x7cc);
-			PROPERTY(m_bStopAtStartPos,bool, 0x7d8);
-			PROPERTY(m_vecClientOrigin,GlobalTypes::Vector, 0x7dc);
-			PROPERTY(m_vecClientAngles,GlobalTypes::QAngle, 0x7e8);
+			NESTED_PROPERTY(m_OnStopped,IDENTITY(entity2::CEntityIOOutput), 0x768);
+			NESTED_PROPERTY(m_OnStarted,IDENTITY(entity2::CEntityIOOutput), 0x780);
+			NESTED_PROPERTY(m_OnReachedStart,IDENTITY(entity2::CEntityIOOutput), 0x798);
+			PROPERTY(m_localRotationVector,GlobalTypes::RotationVector, 0x7b0);
+			PROPERTY(m_flFanFriction,float32, 0x7bc);
+			PROPERTY(m_flAttenuation,float32, 0x7c0);
+			PROPERTY(m_flVolume,float32, 0x7c4);
+			PROPERTY(m_flTargetSpeed,float32, 0x7c8);
+			PROPERTY(m_flMaxSpeed,float32, 0x7cc);
+			PROPERTY(m_flBlockDamage,float32, 0x7d0);
+			PROPERTY(m_NoiseRunning,GlobalTypes::CUtlSymbolLarge*, 0x7d8);
+			PROPERTY(m_bReversed,bool, 0x7e0);
+			PROPERTY(m_bAccelDecel,bool, 0x7e1);
+			PROPERTY(m_prevLocalAngles,GlobalTypes::QAngle, 0x7f8);
+			PROPERTY(m_angStart,GlobalTypes::QAngle, 0x804);
+			PROPERTY(m_bStopAtStartPos,bool, 0x810);
+			PROPERTY(m_vecClientOrigin,GlobalTypes::Vector, 0x814);
+			PROPERTY(m_vecClientAngles,GlobalTypes::QAngle, 0x820);
 			S2_PAD(0xC8);
 		};
-		//static_assert(sizeof(CS2::server::CFuncRotating) == 0x7F8, "CFuncRotating size should be 0x7F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncRotating) == 0x830, "CFuncRotating size should be 0x830");
+
+#endif
 	}
 }

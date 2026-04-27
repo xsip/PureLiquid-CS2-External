@@ -8,24 +8,25 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1D0
+			// Class size: 0x1D8
 			namespace CParticleFunction /**/ {
 				constexpr std::ptrdiff_t m_flOpStrength = 0x8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_nOpEndCapState = 0x178; // particles::ParticleEndcapMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpStartFadeInTime = 0x17c; // float32 m_flOpStartFadeInTime; |  0x17c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpEndFadeInTime = 0x180; // float32 m_flOpEndFadeInTime; |  0x180 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpStartFadeOutTime = 0x184; // float32 m_flOpStartFadeOutTime; |  0x184 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpEndFadeOutTime = 0x188; // float32 m_flOpEndFadeOutTime; |  0x188 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpFadeOscillatePeriod = 0x18c; // float32 m_flOpFadeOscillatePeriod; |  0x18c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bNormalizeToStopTime = 0x190; // bool m_bNormalizeToStopTime; |  0x190 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flOpTimeOffsetMin = 0x194; // float32 m_flOpTimeOffsetMin; |  0x194 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpTimeOffsetMax = 0x198; // float32 m_flOpTimeOffsetMax; |  0x198 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOpTimeOffsetSeed = 0x19c; // int32_t m_nOpTimeOffsetSeed; |  0x19c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOpTimeScaleSeed = 0x1a0; // int32_t m_nOpTimeScaleSeed; |  0x1a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpTimeScaleMin = 0x1a4; // float32 m_flOpTimeScaleMin; |  0x1a4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOpTimeScaleMax = 0x1a8; // float32 m_flOpTimeScaleMax; |  0x1a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bDisableOperator = 0x1ae; // bool m_bDisableOperator; |  0x1ae | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_Notes = 0x1b0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nToolsState = 0x17c; // particles::ParticleToolsState_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpStartFadeInTime = 0x180; // float32 m_flOpStartFadeInTime; |  0x180 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpEndFadeInTime = 0x184; // float32 m_flOpEndFadeInTime; |  0x184 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpStartFadeOutTime = 0x188; // float32 m_flOpStartFadeOutTime; |  0x188 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpEndFadeOutTime = 0x18c; // float32 m_flOpEndFadeOutTime; |  0x18c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpFadeOscillatePeriod = 0x190; // float32 m_flOpFadeOscillatePeriod; |  0x190 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bNormalizeToStopTime = 0x194; // bool m_bNormalizeToStopTime; |  0x194 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flOpTimeOffsetMin = 0x198; // float32 m_flOpTimeOffsetMin; |  0x198 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpTimeOffsetMax = 0x19c; // float32 m_flOpTimeOffsetMax; |  0x19c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOpTimeOffsetSeed = 0x1a0; // int32_t m_nOpTimeOffsetSeed; |  0x1a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOpTimeScaleSeed = 0x1a4; // int32_t m_nOpTimeScaleSeed; |  0x1a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpTimeScaleMin = 0x1a8; // float32 m_flOpTimeScaleMin; |  0x1a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOpTimeScaleMax = 0x1ac; // float32 m_flOpTimeScaleMax; |  0x1ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bDisableOperator = 0x1b2; // bool m_bDisableOperator; |  0x1b2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_Notes = 0x1b8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

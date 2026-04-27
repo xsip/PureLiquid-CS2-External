@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class WeaponPurchaseTracker_t  {
 		public:
-			PROPERTY(m_weaponPurchases,server::CUtlVectorEmbeddedNetworkVar<server::WeaponPurchaseCount_t>, 0x8);
+			// PROPERTY(m_weaponPurchases,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::WeaponPurchaseCount_t>), 0x8);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::WeaponPurchaseTracker_t) == 0x70, "WeaponPurchaseTracker_t size should be 0x70");
+
+#endif
 	}
 }

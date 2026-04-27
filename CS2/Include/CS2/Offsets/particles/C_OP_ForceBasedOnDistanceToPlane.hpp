@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x218
+			// Class size: 0x220
 			namespace C_OP_ForceBasedOnDistanceToPlane /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_flMinDist = 0x1e0; // float32 m_flMinDist; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecForceAtMinDist = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flMaxDist = 0x1f0; // float32 m_flMaxDist; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecForceAtMaxDist = 0x1f4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecPlaneNormal = 0x200; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x20c; // int32_t m_nControlPointNumber; |  0x20c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flExponent = 0x210; // float32 m_flExponent; |  0x210 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinDist = 0x1e8; // float32 m_flMinDist; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecForceAtMinDist = 0x1ec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flMaxDist = 0x1f8; // float32 m_flMaxDist; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecForceAtMaxDist = 0x1fc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecPlaneNormal = 0x208; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x214; // int32_t m_nControlPointNumber; |  0x214 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flExponent = 0x218; // float32 m_flExponent; |  0x218 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

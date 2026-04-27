@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace physicslib {
 		class RnHullDesc_t : public CS2::physicslib::RnShapeDesc_t {
 		public:
-			NESTED_PROPERTY(m_Hull,physicslib::RnHull_t, 0x18);
+			NESTED_PROPERTY(m_Hull,IDENTITY(physicslib::RnHull_t), 0x18);
 			S2_PAD(0xF8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnHullDesc_t) == 0x110, "RnHullDesc_t size should be 0x110");
+
+#endif
 	}
 }

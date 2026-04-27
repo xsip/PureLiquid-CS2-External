@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class VMixDelayDesc_t  {
 		public:
-			NESTED_PROPERTY(m_feedbackFilter,soundsystem_lowlevel::VMixFilterDesc_t, 0x0);
+			NESTED_PROPERTY(m_feedbackFilter,IDENTITY(soundsystem_lowlevel::VMixFilterDesc_t), 0x0);
 			PROPERTY(m_bEnableFilter,bool, 0x10);
 			PROPERTY(m_flDelay,float32, 0x14);
 			PROPERTY(m_flDirectGain,float32, 0x18);
@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_flWidth,float32, 0x24);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixDelayDesc_t) == 0x28, "VMixDelayDesc_t size should be 0x28");
+
+#endif
 	}
 }

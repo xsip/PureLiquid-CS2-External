@@ -24,10 +24,13 @@ namespace CS2 {
 			PROPERTY(m_boneName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_parentName,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_invBindPose,GlobalTypes::matrix3x4_t, 0x10);
-			NESTED_PROPERTY(m_bbox,modellib::SkeletonBoneBounds_t, 0x40);
+			NESTED_PROPERTY(m_bbox,IDENTITY(modellib::SkeletonBoneBounds_t), 0x40);
 			PROPERTY(m_flSphereRadius,float32, 0x58);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::RenderSkeletonBone_t) == 0x60, "RenderSkeletonBone_t size should be 0x60");
+
+#endif
 	}
 }

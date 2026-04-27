@@ -25,10 +25,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_vUpVector,GlobalTypes::Vector, 0x28);
-			PROPERTY(m_slaves,GlobalTypes::CUtlLeanVector<modellib::CConstraintSlave>, 0x38);
-			NESTED_PROPERTY(m_targets,GlobalTypes::CUtlVector<modellib::CConstraintTarget>, 0x48);
+			// PROPERTY(m_slaves,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CConstraintSlave>), 0x38);
+			NESTED_PROPERTY(m_targets,IDENTITY(GlobalTypes::CUtlVector<modellib::CConstraintTarget>), 0x48);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CBaseConstraint) == 0x60, "CBaseConstraint size should be 0x60");
+
+#endif
 	}
 }

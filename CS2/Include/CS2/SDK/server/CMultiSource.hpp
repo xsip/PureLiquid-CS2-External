@@ -11,6 +11,7 @@
 
 
 #include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/server/CHandle< CBaseEntity >.hpp>
 #include <SDK/entity2/CEntityIOOutput.hpp>
 
 
@@ -22,13 +23,16 @@ namespace CS2 {
 	namespace server {
 		class CMultiSource : public CS2::server::CLogicalEntity {
 		public:
-			PROPERTY_ARRAY(m_rgEntities,server::CHandle< CBaseEntity >, 32 , 0x4a8);
+			// PROPERTY_ARRAY(m_rgEntities,IDENTITY(GlobalTypes::CHandle< CBaseEntity >[32]), 32 , 0x4a8);
 			PROPERTY_ARRAY(m_rgTriggered,int32_t, 32 , 0x528);
-			NESTED_PROPERTY(m_OnTrigger,entity2::CEntityIOOutput, 0x5a8);
+			NESTED_PROPERTY(m_OnTrigger,IDENTITY(entity2::CEntityIOOutput), 0x5a8);
 			PROPERTY(m_iTotal,int32_t, 0x5c0);
 			PROPERTY(m_globalstate,GlobalTypes::CUtlSymbolLarge*, 0x5c8);
 			S2_PAD(0x128);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMultiSource) == 0x5D0, "CMultiSource size should be 0x5D0");
+
+#endif
 	}
 }

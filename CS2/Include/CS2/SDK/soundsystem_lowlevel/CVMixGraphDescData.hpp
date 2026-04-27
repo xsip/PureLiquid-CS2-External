@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_bIsMainGraph,bool, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::CVMixGraphDescData) == 0x10, "CVMixGraphDescData size should be 0x10");
+
+#endif
 	}
 }

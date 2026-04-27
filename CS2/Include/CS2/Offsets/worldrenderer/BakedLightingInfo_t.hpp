@@ -20,7 +20,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nChartPackIterations = 0x14; // uint8_t m_nChartPackIterations; |  0x14 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nVradQuality = 0x15; // uint8_t m_nVradQuality; |  0x15 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_lightMaps = 0x18; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bakedShadows = 0x30; // GlobalTypes::CUtlVector<worldrenderer::BakedShadowAssignment_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bakedShadows = 0x30; // GlobalTypes::CUtlVector<worldrenderer::BakedLightingInfo_t_BakedShadowAssignment_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

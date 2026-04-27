@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x58);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmScaleTask) == 0xB0, "CNmScaleTask size should be 0xB0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmScaleTask) == 0xA0, "CNmScaleTask size should be 0xA0");
+
+#endif
 	}
 }

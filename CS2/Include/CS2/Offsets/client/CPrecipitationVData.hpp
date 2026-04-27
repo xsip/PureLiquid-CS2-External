@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x128
+			// Class size: 0x130
 			namespace CPrecipitationVData /*: public CS2::client::CEntitySubclassVDataBase*/ {
 				constexpr std::ptrdiff_t m_szParticlePrecipitationEffect = 0x28; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
 				constexpr std::ptrdiff_t m_flInnerDistance = 0x108; // float32 m_flInnerDistance; |  0x108 | Schema_Builtin | Size: 0x4
@@ -17,6 +17,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nRTEnvCP = 0x114; // int32_t m_nRTEnvCP; |  0x114 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nRTEnvCPComponent = 0x118; // int32_t m_nRTEnvCPComponent; |  0x118 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_szModifier = 0x120; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nUseSnapshotFromSurfaceGraph = 0x128; // int32_t m_nUseSnapshotFromSurfaceGraph; |  0x128 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_snapshotFilter = 0x12c; // client::PrecipitationFilter_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

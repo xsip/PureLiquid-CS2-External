@@ -25,13 +25,16 @@ namespace CS2 {
 		public:
 			PROPERTY(m_iFOV,uint32_t, 0x178);
 			PROPERTY(m_iFOVStart,uint32_t, 0x17c);
-			NESTED_PROPERTY(m_flFOVTime,entity2::GameTime_t, 0x180);
+			NESTED_PROPERTY(m_flFOVTime,IDENTITY(entity2::GameTime_t), 0x180);
 			PROPERTY(m_flFOVRate,float32, 0x184);
-			PROPERTY(m_hZoomOwner,GlobalTypes::CHandle<server::CBaseEntity>, 0x188);
-			NESTED_PROPERTY(m_hTriggerFogList,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x190);
-			PROPERTY(m_hLastFogTrigger,GlobalTypes::CHandle<server::CBaseEntity>, 0x1a8);
+			PROPERTY(m_hZoomOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x188);
+			NESTED_PROPERTY(m_hTriggerFogList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x190);
+			PROPERTY(m_hLastFogTrigger,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x1a8);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerBase_CameraServices) == 0x1B0, "CCSPlayerBase_CameraServices size should be 0x1B0");
+
+#endif
 	}
 }

@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x898
+			// Class size: 0x8A0
 			namespace C_INIT_InitVecCollection /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_InputValue = 0x1d8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_nOutputField = 0x890; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_InputValue = 0x1e0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nOutputField = 0x898; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

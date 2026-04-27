@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_IntraParticleForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_flAttractionMinDistance,float32, 0x1e0);
-			PROPERTY(m_flAttractionMaxDistance,float32, 0x1e4);
-			PROPERTY(m_flAttractionMaxStrength,float32, 0x1e8);
-			PROPERTY(m_flRepulsionMinDistance,float32, 0x1ec);
-			PROPERTY(m_flRepulsionMaxDistance,float32, 0x1f0);
-			PROPERTY(m_flRepulsionMaxStrength,float32, 0x1f4);
-			PROPERTY(m_bUseAABB,bool, 0x1f8);
+			PROPERTY(m_flAttractionMinDistance,float32, 0x1e8);
+			PROPERTY(m_flAttractionMaxDistance,float32, 0x1ec);
+			PROPERTY(m_flAttractionMaxStrength,float32, 0x1f0);
+			PROPERTY(m_flRepulsionMinDistance,float32, 0x1f4);
+			PROPERTY(m_flRepulsionMaxDistance,float32, 0x1f8);
+			PROPERTY(m_flRepulsionMaxStrength,float32, 0x1fc);
+			PROPERTY(m_bUseAABB,bool, 0x200);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_IntraParticleForce) == 0x200, "C_OP_IntraParticleForce size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_IntraParticleForce) == 0x208, "C_OP_IntraParticleForce size should be 0x208");
+
+#endif
 	}
 }

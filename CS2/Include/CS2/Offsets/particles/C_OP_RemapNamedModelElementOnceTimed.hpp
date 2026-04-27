@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x230
+			// Class size: 0x238
 			namespace C_OP_RemapNamedModelElementOnceTimed /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_hModel = 0x1d0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_inNames = 0x1d8; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_outNames = 0x1f0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_fallbackNames = 0x208; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bModelFromRenderer = 0x220; // bool m_bModelFromRenderer; |  0x220 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bProportional = 0x221; // bool m_bProportional; |  0x221 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nFieldInput = 0x224; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x228; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flRemapTime = 0x22c; // float32 m_flRemapTime; |  0x22c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hModel = 0x1d8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_inNames = 0x1e0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_outNames = 0x1f8; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_fallbackNames = 0x210; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bModelFromRenderer = 0x228; // bool m_bModelFromRenderer; |  0x228 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bProportional = 0x229; // bool m_bProportional; |  0x229 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nFieldInput = 0x22c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x230; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flRemapTime = 0x234; // float32 m_flRemapTime; |  0x234 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

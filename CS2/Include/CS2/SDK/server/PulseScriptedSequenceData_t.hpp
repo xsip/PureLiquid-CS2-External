@@ -28,15 +28,18 @@ namespace CS2 {
 			PROPERTY(m_szEntrySequence,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(m_szSequence,GlobalTypes::CUtlString*, 0x18);
 			PROPERTY(m_szExitSequence,GlobalTypes::CUtlString*, 0x20);
-			PROPERTY(m_nMoveTo,modellib::ScriptedMoveTo_t, 0x28);
-			PROPERTY(m_nMoveToGait,modellib::SharedMovementGait_t, 0x2c);
-			PROPERTY(m_nHeldWeaponBehavior,modellib::ScriptedHeldWeaponBehavior_t, 0x30);
+			PROPERTY(m_nMoveTo,IDENTITY(modellib::ScriptedMoveTo_t), 0x28);
+			PROPERTY(m_nMoveToGait,IDENTITY(modellib::SharedMovementGait_t), 0x2c);
+			PROPERTY(m_nHeldWeaponBehavior,IDENTITY(modellib::ScriptedHeldWeaponBehavior_t), 0x30);
 			PROPERTY(m_bLoopPreIdleSequence,bool, 0x34);
 			PROPERTY(m_bLoopActionSequence,bool, 0x35);
 			PROPERTY(m_bLoopPostIdleSequence,bool, 0x36);
 			PROPERTY(m_bIgnoreLookAt,bool, 0x37);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::PulseScriptedSequenceData_t) == 0x38, "PulseScriptedSequenceData_t size should be 0x38");
+
+#endif
 	}
 }

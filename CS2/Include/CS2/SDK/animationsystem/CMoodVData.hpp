@@ -23,11 +23,14 @@ namespace CS2 {
 	namespace animationsystem {
 		class CMoodVData  {
 		public:
-			PROPERTY(m_sModelName,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>, 0x0);
-			PROPERTY(m_nMoodType,animationsystem::MoodType_t, 0xe0);
-			NESTED_PROPERTY(m_animationLayers,GlobalTypes::CUtlVector<animationsystem::MoodAnimationLayer_t>, 0xe8);
+			PROPERTY(m_sModelName,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x0);
+			PROPERTY(m_nMoodType,IDENTITY(animationsystem::MoodType_t), 0xe0);
+			NESTED_PROPERTY(m_animationLayers,IDENTITY(GlobalTypes::CUtlVector<animationsystem::MoodAnimationLayer_t>), 0xe8);
 			S2_PAD(0x100);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CMoodVData) == 0x100, "CMoodVData size should be 0x100");
+
+#endif
 	}
 }

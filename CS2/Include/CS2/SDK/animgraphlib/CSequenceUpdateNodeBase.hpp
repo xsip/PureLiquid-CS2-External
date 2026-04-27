@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_bLoop,bool, 0x70);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSequenceUpdateNodeBase) == 0x78, "CSequenceUpdateNodeBase size should be 0x78");
+
+#endif
 	}
 }

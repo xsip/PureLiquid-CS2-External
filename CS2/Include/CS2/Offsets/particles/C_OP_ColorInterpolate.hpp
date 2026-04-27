@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_OP_ColorInterpolate /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_ColorFade = 0x1d0; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeStartTime = 0x1e0; // float32 m_flFadeStartTime; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeEndTime = 0x1e4; // float32 m_flFadeEndTime; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1e8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bEaseInOut = 0x1ec; // bool m_bEaseInOut; |  0x1ec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_ColorFade = 0x1d8; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeStartTime = 0x1e8; // float32 m_flFadeStartTime; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeEndTime = 0x1ec; // float32 m_flFadeEndTime; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1f0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bEaseInOut = 0x1f4; // bool m_bEaseInOut; |  0x1f4 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

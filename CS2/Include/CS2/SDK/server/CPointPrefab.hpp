@@ -11,6 +11,7 @@
 
 
 #include <SDK/server/CServerOnlyPointEntity.hpp>
+#include <SDK/server/CBaseEntity.hpp>
 
 
 
@@ -26,9 +27,13 @@ namespace CS2 {
 			PROPERTY(m_associatedRelayTargetName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
 			PROPERTY(m_fixupNames,bool, 0x4c0);
 			PROPERTY(m_bLoadDynamic,bool, 0x4c1);
-			PROPERTY(m_associatedRelayEntity,GlobalTypes::CHandle<server::CPointPrefab>, 0x4c4);
-			S2_PAD(0x68);
+			PROPERTY(m_associatedRelayEntity,IDENTITY(GlobalTypes::CHandle<server::CPointPrefab>), 0x4c4);
+			NESTED_PROPERTY(m_ProceduralRelaySources,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x4c8);
+			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::server::CPointPrefab) == 0x510, "CPointPrefab size should be 0x510");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPointPrefab) == 0x530, "CPointPrefab size should be 0x530");
+
+#endif
 	}
 }

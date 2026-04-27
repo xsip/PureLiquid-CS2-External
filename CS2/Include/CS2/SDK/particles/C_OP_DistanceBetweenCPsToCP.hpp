@@ -23,23 +23,26 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DistanceBetweenCPsToCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nStartCP,int32_t, 0x1d8);
-			PROPERTY(m_nEndCP,int32_t, 0x1dc);
-			PROPERTY(m_nOutputCP,int32_t, 0x1e0);
-			PROPERTY(m_nOutputCPField,int32_t, 0x1e4);
-			PROPERTY(m_bSetOnce,bool, 0x1e8);
-			PROPERTY(m_flInputMin,float32, 0x1ec);
-			PROPERTY(m_flInputMax,float32, 0x1f0);
-			PROPERTY(m_flOutputMin,float32, 0x1f4);
-			PROPERTY(m_flOutputMax,float32, 0x1f8);
-			PROPERTY(m_flMaxTraceLength,float32, 0x1fc);
-			PROPERTY(m_flLOSScale,float32, 0x200);
-			PROPERTY(m_bLOS,bool, 0x204);
-			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x205);
-			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x288);
-			PROPERTY(m_nSetParent,particles::ParticleParentSetMode_t, 0x28c);
+			PROPERTY(m_nStartCP,int32_t, 0x1e0);
+			PROPERTY(m_nEndCP,int32_t, 0x1e4);
+			PROPERTY(m_nOutputCP,int32_t, 0x1e8);
+			PROPERTY(m_nOutputCPField,int32_t, 0x1ec);
+			PROPERTY(m_bSetOnce,bool, 0x1f0);
+			PROPERTY(m_flInputMin,float32, 0x1f4);
+			PROPERTY(m_flInputMax,float32, 0x1f8);
+			PROPERTY(m_flOutputMin,float32, 0x1fc);
+			PROPERTY(m_flOutputMax,float32, 0x200);
+			PROPERTY(m_flMaxTraceLength,float32, 0x204);
+			PROPERTY(m_flLOSScale,float32, 0x208);
+			PROPERTY(m_bLOS,bool, 0x20c);
+			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x20d);
+			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x290);
+			PROPERTY(m_nSetParent,IDENTITY(particles::ParticleParentSetMode_t), 0x294);
 			S2_PAD(0xB8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenCPsToCP) == 0x290, "C_OP_DistanceBetweenCPsToCP size should be 0x290");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenCPsToCP) == 0x298, "C_OP_DistanceBetweenCPsToCP size should be 0x298");
+
+#endif
 	}
 }

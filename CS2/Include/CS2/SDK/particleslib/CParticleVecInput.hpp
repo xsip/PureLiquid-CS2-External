@@ -24,22 +24,22 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleVecInput : public CS2::particleslib::CParticleInput {
 		public:
-			PROPERTY(m_nType,particleslib::ParticleVecType_t, 0x10);
+			PROPERTY(m_nType,IDENTITY(particleslib::ParticleVecType_t), 0x10);
 			PROPERTY(m_vLiteralValue,GlobalTypes::Vector, 0x14);
 			PROPERTY(m_LiteralColor,GlobalTypes::Color, 0x20);
 			PROPERTY(m_NamedValue,GlobalTypes::CParticleNamedValueRef, 0x28);
 			PROPERTY(m_bFollowNamedValue,bool, 0x68);
-			NESTED_PROPERTY(m_nVectorAttribute,particles::ParticleAttributeIndex_t, 0x6c);
+			NESTED_PROPERTY(m_nVectorAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x6c);
 			PROPERTY(m_vVectorAttributeScale,GlobalTypes::Vector, 0x70);
 			PROPERTY(m_nControlPoint,int32_t, 0x7c);
 			PROPERTY(m_nDeltaControlPoint,int32_t, 0x80);
 			PROPERTY(m_vCPValueScale,GlobalTypes::Vector, 0x84);
 			PROPERTY(m_vCPRelativePosition,GlobalTypes::Vector, 0x90);
 			PROPERTY(m_vCPRelativeDir,GlobalTypes::Vector, 0x9c);
-			NESTED_PROPERTY(m_FloatComponentX,particleslib::CParticleFloatInput, 0xa8);
-			NESTED_PROPERTY(m_FloatComponentY,particleslib::CParticleFloatInput, 0x218);
-			NESTED_PROPERTY(m_FloatComponentZ,particleslib::CParticleFloatInput, 0x388);
-			NESTED_PROPERTY(m_FloatInterp,particleslib::CParticleFloatInput, 0x4f8);
+			NESTED_PROPERTY(m_FloatComponentX,IDENTITY(particleslib::CParticleFloatInput), 0xa8);
+			NESTED_PROPERTY(m_FloatComponentY,IDENTITY(particleslib::CParticleFloatInput), 0x218);
+			NESTED_PROPERTY(m_FloatComponentZ,IDENTITY(particleslib::CParticleFloatInput), 0x388);
+			NESTED_PROPERTY(m_FloatInterp,IDENTITY(particleslib::CParticleFloatInput), 0x4f8);
 			PROPERTY(m_flInterpInput0,float32, 0x668);
 			PROPERTY(m_flInterpInput1,float32, 0x66c);
 			PROPERTY(m_vInterpOutput0,GlobalTypes::Vector, 0x670);
@@ -49,6 +49,9 @@ namespace CS2 {
 			PROPERTY(m_vRandomMax,GlobalTypes::Vector, 0x6ac);
 			S2_PAD(0x6A8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleVecInput) == 0x6B8, "CParticleVecInput size should be 0x6B8");
+
+#endif
 	}
 }

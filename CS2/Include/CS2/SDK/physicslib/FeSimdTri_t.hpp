@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace physicslib {
 		class FeSimdTri_t  {
 		public:
-			PROPERTY_ARRAY(nNode,uint32_t, 3[4] , 0x0);
+			// PROPERTY_ARRAY(nNode,uint32_t, 3[4] , 0x0);
 			PROPERTY(w1,GlobalTypes::fltx4, 0x30);
 			PROPERTY(w2,GlobalTypes::fltx4, 0x40);
 			PROPERTY(v1x,GlobalTypes::fltx4, 0x50);
-			NESTED_PROPERTY(v2,physicslib::FourVectors2D, 0x60);
+			NESTED_PROPERTY(v2,IDENTITY(physicslib::FourVectors2D), 0x60);
 			S2_PAD(0x80);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeSimdTri_t) == 0x80, "FeSimdTri_t size should be 0x80");
+
+#endif
 	}
 }

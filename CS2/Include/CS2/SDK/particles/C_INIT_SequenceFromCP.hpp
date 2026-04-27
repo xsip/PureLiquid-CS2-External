@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_SequenceFromCP : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_bKillUnused,bool, 0x1d8);
-			PROPERTY(m_bRadiusScale,bool, 0x1d9);
-			PROPERTY(m_nCP,int32_t, 0x1dc);
-			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x1e0);
+			PROPERTY(m_bKillUnused,bool, 0x1e0);
+			PROPERTY(m_bRadiusScale,bool, 0x1e1);
+			PROPERTY(m_nCP,int32_t, 0x1e4);
+			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x1e8);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_SequenceFromCP) == 0x1F0, "C_INIT_SequenceFromCP size should be 0x1F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_SequenceFromCP) == 0x1F8, "C_INIT_SequenceFromCP size should be 0x1F8");
+
+#endif
 	}
 }

@@ -23,9 +23,12 @@ namespace CS2 {
 		class CBodyGroupAnimTag : public CS2::animgraphlib::CAnimTagBase {
 		public:
 			PROPERTY(m_nPriority,int32_t, 0x58);
-			NESTED_PROPERTY(m_bodyGroupSettings,GlobalTypes::CUtlVector<animgraphlib::CBodyGroupSetting>, 0x60);
+			NESTED_PROPERTY(m_bodyGroupSettings,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CBodyGroupSetting>), 0x60);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBodyGroupAnimTag) == 0x78, "CBodyGroupAnimTag size should be 0x78");
+
+#endif
 	}
 }

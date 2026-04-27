@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0xD8
+			// Class size: 0xE0
 			namespace CTestDomainDerived_Cursor /*: public CS2::pulse_runtime_lib::CPulseExecCursor*/ {
-				constexpr std::ptrdiff_t m_nCursorValueA = 0xd0; // int32_t m_nCursorValueA; |  0xd0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCursorValueB = 0xd4; // int32_t m_nCursorValueB; |  0xd4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCursorValueA = 0xd8; // int32_t m_nCursorValueA; |  0xd8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCursorValueB = 0xdc; // int32_t m_nCursorValueB; |  0xdc | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

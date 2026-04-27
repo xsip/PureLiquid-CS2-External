@@ -22,18 +22,21 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreationNoise : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
-			PROPERTY(m_bAbsVal,bool, 0x1dc);
-			PROPERTY(m_bAbsValInv,bool, 0x1dd);
-			PROPERTY(m_flOffset,float32, 0x1e0);
-			PROPERTY(m_flOutputMin,float32, 0x1e4);
-			PROPERTY(m_flOutputMax,float32, 0x1e8);
-			PROPERTY(m_flNoiseScale,float32, 0x1ec);
-			PROPERTY(m_flNoiseScaleLoc,float32, 0x1f0);
-			PROPERTY(m_vecOffsetLoc,GlobalTypes::Vector, 0x1f4);
-			PROPERTY(m_flWorldTimeScale,float32, 0x200);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			PROPERTY(m_bAbsVal,bool, 0x1e4);
+			PROPERTY(m_bAbsValInv,bool, 0x1e5);
+			PROPERTY(m_flOffset,float32, 0x1e8);
+			PROPERTY(m_flOutputMin,float32, 0x1ec);
+			PROPERTY(m_flOutputMax,float32, 0x1f0);
+			PROPERTY(m_flNoiseScale,float32, 0x1f4);
+			PROPERTY(m_flNoiseScaleLoc,float32, 0x1f8);
+			PROPERTY(m_vecOffsetLoc,GlobalTypes::Vector, 0x1fc);
+			PROPERTY(m_flWorldTimeScale,float32, 0x208);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreationNoise) == 0x208, "C_INIT_CreationNoise size should be 0x208");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreationNoise) == 0x210, "C_INIT_CreationNoise size should be 0x210");
+
+#endif
 	}
 }

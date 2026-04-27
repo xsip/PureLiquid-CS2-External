@@ -15,12 +15,13 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nElementSizeInBytes = 0x8; // uint32_t m_nElementSizeInBytes; |  0x8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bMeshoptCompressed = 0xc; // bool m_bMeshoptCompressed; |  0xc | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bMeshoptIndexSequence = 0xd; // bool m_bMeshoptIndexSequence; |  0xd | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCompressedZSTD = 0xe; // bool m_bCompressedZSTD; |  0xe | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreateBufferSRV = 0xf; // bool m_bCreateBufferSRV; |  0xf | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreateBufferUAV = 0x10; // bool m_bCreateBufferUAV; |  0x10 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreateRawBuffer = 0x11; // bool m_bCreateRawBuffer; |  0x11 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreatePooledBuffer = 0x12; // bool m_bCreatePooledBuffer; |  0x12 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nBufferUsage = 0x13; // uint8_t m_nBufferUsage; |  0x13 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nMeshoptMeshletEncodeVersion = 0xe; // int8_t m_nMeshoptMeshletEncodeVersion; |  0xe | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCompressedZSTD = 0xf; // bool m_bCompressedZSTD; |  0xf | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreateBufferSRV = 0x10; // bool m_bCreateBufferSRV; |  0x10 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreateBufferUAV = 0x11; // bool m_bCreateBufferUAV; |  0x11 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreateRawBuffer = 0x12; // bool m_bCreateRawBuffer; |  0x12 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreatePooledBuffer = 0x13; // bool m_bCreatePooledBuffer; |  0x13 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nBufferUsage = 0x14; // uint8_t m_nBufferUsage; |  0x14 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_inputLayoutFields = 0x18; // GlobalTypes::CUtlVector<modellib::RenderInputLayoutField_t>  | Schema_Atomic | Size: 0x18
 			}
 		}

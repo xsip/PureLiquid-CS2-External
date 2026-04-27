@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1D8
+			// Class size: 0x1E0
 			namespace C_OP_SetCPtoVector /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nCPInput = 0x1d0; // int32_t m_nCPInput; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nCPInput = 0x1d8; // int32_t m_nCPInput; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1dc; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

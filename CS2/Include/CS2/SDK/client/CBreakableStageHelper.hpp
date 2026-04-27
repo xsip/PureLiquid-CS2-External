@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nStageCount,int32_t, 0xc);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBreakableStageHelper) == 0x18, "CBreakableStageHelper size should be 0x18");
+
+#endif
 	}
 }

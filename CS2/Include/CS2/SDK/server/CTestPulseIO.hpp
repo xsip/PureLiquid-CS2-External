@@ -12,6 +12,13 @@
 
 #include <SDK/server/CLogicalEntity.hpp>
 #include <SDK/entity2/CEntityIOOutput.hpp>
+#include <SDK/server/CTestPulseIOComponent_Derived.hpp>
+#include <SDK/server/CBaseEntity.hpp>
+#include <SDK/server/TestInputOutputCombinationsEnum_t.hpp>
+#include <SDK/server/CTestPulseIO_FloatStringArgs_t.hpp>
+#include <SDK/server/CTestPulseIO_EntityNameStringArgs_t.hpp>
+#include <SDK/server/CTestPulseIO_EntityHandleIntArgs_t.hpp>
+#include <SDK/server/CTestPulseIO_ThreeStringArgs_t.hpp>
 
 
 
@@ -22,16 +29,34 @@ namespace CS2 {
 	namespace server {
 		class CTestPulseIO : public CS2::server::CLogicalEntity {
 		public:
-			NESTED_PROPERTY(m_OnVariantVoid,entity2::CEntityIOOutput, 0x4a8);
-			PROPERTY(m_OnVariantBool,GlobalTypes::CEntityOutputTemplate< bool, bool >, 0x4c0);
-			PROPERTY(m_OnVariantInt,GlobalTypes::CEntityOutputTemplate< int32, int32 >, 0x4e0);
-			PROPERTY(m_OnVariantFloat,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x500);
-			PROPERTY(m_OnVariantString,GlobalTypes::CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge >*, 0x520);
-			PROPERTY(m_OnVariantColor,GlobalTypes::CEntityOutputTemplate< Color, Color >, 0x540);
-			PROPERTY(m_OnVariantVector,GlobalTypes::CEntityOutputTemplate< Vector, Vector >, 0x560);
+			NESTED_PROPERTY(m_OnVariantVoid,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
+			// PROPERTY(m_OnVariantBool,IDENTITY(GlobalTypes::CEntityOutputTemplate< bool >), 0x4c0);
+			// PROPERTY(m_OnVariantInt,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0x4e0);
+			// PROPERTY(m_OnVariantFloat,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x500);
+			// PROPERTY(m_OnVariantString,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>), 0x520);
+			// PROPERTY(m_OnVariantColor,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Color>), 0x540);
+			// PROPERTY(m_OnVariantVector,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>), 0x560);
 			PROPERTY(m_bAllowEmptyInputs,bool, 0x588);
-			S2_PAD(0xE8);
+			NESTED_PROPERTY(m_TestComponent,IDENTITY(server::CTestPulseIOComponent_Derived), 0x590);
+			NESTED_PROPERTY(m_OnInternalTestVoid,IDENTITY(entity2::CEntityIOOutput), 0x5c0);
+			// PROPERTY(m_OnInternalTestBool,IDENTITY(GlobalTypes::CEntityOutputTemplate< bool >), 0x5d8);
+			// PROPERTY(m_OnInternalTestInt,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0x5f8);
+			// PROPERTY(m_OnInternalTestFloat,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x618);
+			// PROPERTY(m_OnInternalTestString,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>), 0x638);
+			// PROPERTY(m_OnInternalTestColor,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Color>), 0x658);
+			// PROPERTY(m_OnInternalTestVector,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>), 0x678);
+			// PROPERTY(m_OnInternalTestEntityName,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CEntityNameString>), 0x6a0);
+			// PROPERTY(m_OnInternalTestEntityHandle,IDENTITY(server::CEntityOutputTemplate<GlobalTypes::CHandle<server::CBaseEntity>>), 0x6c0);
+			// PROPERTY(m_OnInternalTestSchemaEnum,IDENTITY(GlobalTypes::CEntityOutputTemplate<server::TestInputOutputCombinationsEnum_t>), 0x6e0);
+			// PROPERTY(m_OnInternalTestFloatString,IDENTITY(server::CEntityOutputTemplate<server::CTestPulseIO_FloatStringArgs_t>), 0x700);
+			// PROPERTY(m_OnInternalTestEntityNameString,IDENTITY(server::CEntityOutputTemplate<server::CTestPulseIO_EntityNameStringArgs_t>), 0x728);
+			// PROPERTY(m_OnInternalTestEntityHandleInt,IDENTITY(server::CEntityOutputTemplate<server::CTestPulseIO_EntityHandleIntArgs_t>), 0x750);
+			// PROPERTY(m_OnInternalTestStringStringString,IDENTITY(server::CEntityOutputTemplate<server::CTestPulseIO_ThreeStringArgs_t>), 0x770);
+			S2_PAD(0x2F8);
 		};
-		//static_assert(sizeof(CS2::server::CTestPulseIO) == 0x590, "CTestPulseIO size should be 0x590");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTestPulseIO) == 0x7A0, "CTestPulseIO size should be 0x7A0");
+
+#endif
 	}
 }

@@ -21,18 +21,21 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_MapPreviewCameraPathNode : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_szParentPathUniqueID,GlobalTypes::CUtlSymbolLarge*, 0x608);
-			PROPERTY(m_nPathIndex,int32_t, 0x610);
-			PROPERTY(m_vInTangentLocal,GlobalTypes::Vector, 0x614);
-			PROPERTY(m_vOutTangentLocal,GlobalTypes::Vector, 0x620);
-			PROPERTY(m_flFOV,float32, 0x62c);
-			PROPERTY(m_flCameraSpeed,float32, 0x630);
-			PROPERTY(m_flEaseIn,float32, 0x634);
-			PROPERTY(m_flEaseOut,float32, 0x638);
-			PROPERTY(m_vInTangentWorld,GlobalTypes::Vector, 0x63c);
-			PROPERTY(m_vOutTangentWorld,GlobalTypes::Vector, 0x648);
+			PROPERTY(m_szParentPathUniqueID,GlobalTypes::CUtlSymbolLarge*, 0x600);
+			PROPERTY(m_nPathIndex,int32_t, 0x608);
+			PROPERTY(m_vInTangentLocal,GlobalTypes::Vector, 0x60c);
+			PROPERTY(m_vOutTangentLocal,GlobalTypes::Vector, 0x618);
+			PROPERTY(m_flFOV,float32, 0x624);
+			PROPERTY(m_flCameraSpeed,float32, 0x628);
+			PROPERTY(m_flEaseIn,float32, 0x62c);
+			PROPERTY(m_flEaseOut,float32, 0x630);
+			PROPERTY(m_vInTangentWorld,GlobalTypes::Vector, 0x634);
+			PROPERTY(m_vOutTangentWorld,GlobalTypes::Vector, 0x640);
 			S2_PAD(0x50);
 		};
-		//static_assert(sizeof(CS2::client::C_CSGO_MapPreviewCameraPathNode) == 0x658, "C_CSGO_MapPreviewCameraPathNode size should be 0x658");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSGO_MapPreviewCameraPathNode) == 0x650, "C_CSGO_MapPreviewCameraPathNode size should be 0x650");
+
+#endif
 	}
 }

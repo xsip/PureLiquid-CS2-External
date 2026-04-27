@@ -8,26 +8,26 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x238
+			// Class size: 0x240
 			namespace C_INIT_StatusEffect /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nDetail2Combo = 0x1d8; // particles::Detail2Combo_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flDetail2Rotation = 0x1dc; // float32 m_flDetail2Rotation; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDetail2Scale = 0x1e0; // float32 m_flDetail2Scale; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDetail2BlendFactor = 0x1e4; // float32 m_flDetail2BlendFactor; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flColorWarpIntensity = 0x1e8; // float32 m_flColorWarpIntensity; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDiffuseWarpBlendToFull = 0x1ec; // float32 m_flDiffuseWarpBlendToFull; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEnvMapIntensity = 0x1f0; // float32 m_flEnvMapIntensity; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAmbientScale = 0x1f4; // float32 m_flAmbientScale; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_specularColor = 0x1f8; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpecularScale = 0x1fc; // float32 m_flSpecularScale; |  0x1fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpecularExponent = 0x200; // float32 m_flSpecularExponent; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpecularExponentBlendToFull = 0x204; // float32 m_flSpecularExponentBlendToFull; |  0x204 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpecularBlendToFull = 0x208; // float32 m_flSpecularBlendToFull; |  0x208 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_rimLightColor = 0x20c; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flRimLightScale = 0x210; // float32 m_flRimLightScale; |  0x210 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flReflectionsTintByBaseBlendToNone = 0x214; // float32 m_flReflectionsTintByBaseBlendToNone; |  0x214 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMetalnessBlendToFull = 0x218; // float32 m_flMetalnessBlendToFull; |  0x218 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSelfIllumBlendToFull = 0x21c; // float32 m_flSelfIllumBlendToFull; |  0x21c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDetail2Combo = 0x1e0; // particles::Detail2Combo_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flDetail2Rotation = 0x1e4; // float32 m_flDetail2Rotation; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDetail2Scale = 0x1e8; // float32 m_flDetail2Scale; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDetail2BlendFactor = 0x1ec; // float32 m_flDetail2BlendFactor; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flColorWarpIntensity = 0x1f0; // float32 m_flColorWarpIntensity; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDiffuseWarpBlendToFull = 0x1f4; // float32 m_flDiffuseWarpBlendToFull; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEnvMapIntensity = 0x1f8; // float32 m_flEnvMapIntensity; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAmbientScale = 0x1fc; // float32 m_flAmbientScale; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_specularColor = 0x200; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpecularScale = 0x204; // float32 m_flSpecularScale; |  0x204 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpecularExponent = 0x208; // float32 m_flSpecularExponent; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpecularExponentBlendToFull = 0x20c; // float32 m_flSpecularExponentBlendToFull; |  0x20c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpecularBlendToFull = 0x210; // float32 m_flSpecularBlendToFull; |  0x210 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_rimLightColor = 0x214; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flRimLightScale = 0x218; // float32 m_flRimLightScale; |  0x218 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flReflectionsTintByBaseBlendToNone = 0x21c; // float32 m_flReflectionsTintByBaseBlendToNone; |  0x21c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMetalnessBlendToFull = 0x220; // float32 m_flMetalnessBlendToFull; |  0x220 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSelfIllumBlendToFull = 0x224; // float32 m_flSelfIllumBlendToFull; |  0x224 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x218
+			// Class size: 0x220
 			namespace C_OP_NoiseEmitter /*: public CS2::particles::CParticleFunctionEmitter*/ {
-				constexpr std::ptrdiff_t m_flEmissionDuration = 0x1d8; // float32 m_flEmissionDuration; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime = 0x1dc; // float32 m_flStartTime; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEmissionScale = 0x1e0; // float32 m_flEmissionScale; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nScaleControlPoint = 0x1e4; // int32_t m_nScaleControlPoint; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nScaleControlPointField = 0x1e8; // int32_t m_nScaleControlPointField; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nWorldNoisePoint = 0x1ec; // int32_t m_nWorldNoisePoint; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAbsVal = 0x1f0; // bool m_bAbsVal; |  0x1f0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAbsValInv = 0x1f1; // bool m_bAbsValInv; |  0x1f1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flOffset = 0x1f4; // float32 m_flOffset; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMin = 0x1f8; // float32 m_flOutputMin; |  0x1f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMax = 0x1fc; // float32 m_flOutputMax; |  0x1fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNoiseScale = 0x200; // float32 m_flNoiseScale; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flWorldNoiseScale = 0x204; // float32 m_flWorldNoiseScale; |  0x204 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecOffsetLoc = 0x208; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flWorldTimeScale = 0x214; // float32 m_flWorldTimeScale; |  0x214 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEmissionDuration = 0x1e0; // float32 m_flEmissionDuration; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime = 0x1e4; // float32 m_flStartTime; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEmissionScale = 0x1e8; // float32 m_flEmissionScale; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nScaleControlPoint = 0x1ec; // int32_t m_nScaleControlPoint; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nScaleControlPointField = 0x1f0; // int32_t m_nScaleControlPointField; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nWorldNoisePoint = 0x1f4; // int32_t m_nWorldNoisePoint; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAbsVal = 0x1f8; // bool m_bAbsVal; |  0x1f8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAbsValInv = 0x1f9; // bool m_bAbsValInv; |  0x1f9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flOffset = 0x1fc; // float32 m_flOffset; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMin = 0x200; // float32 m_flOutputMin; |  0x200 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMax = 0x204; // float32 m_flOutputMax; |  0x204 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNoiseScale = 0x208; // float32 m_flNoiseScale; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flWorldNoiseScale = 0x20c; // float32 m_flWorldNoiseScale; |  0x20c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecOffsetLoc = 0x210; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flWorldTimeScale = 0x21c; // float32 m_flWorldTimeScale; |  0x21c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace server {
 		class CDecoyProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nDecoyShotTick,int32_t, 0xbc8);
-			PROPERTY(m_shotsRemaining,int32_t, 0xbcc);
-			NESTED_PROPERTY(m_fExpireTime,entity2::GameTime_t, 0xbd0);
-			PROPERTY(m_decoyWeaponDefIndex,uint16_t, 0xbe0);
+			PROPERTY(m_nDecoyShotTick,int32_t, 0xa48);
+			PROPERTY(m_shotsRemaining,int32_t, 0xa4c);
+			NESTED_PROPERTY(m_fExpireTime,IDENTITY(entity2::GameTime_t), 0xa50);
+			PROPERTY(m_decoyWeaponDefIndex,uint16_t, 0xa60);
 			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::server::CDecoyProjectile) == 0xBF0, "CDecoyProjectile size should be 0xBF0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CDecoyProjectile) == 0xA70, "CDecoyProjectile size should be 0xA70");
+
+#endif
 	}
 }

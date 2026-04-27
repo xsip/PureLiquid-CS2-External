@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::client::C_LateUpdatedAnimating) == 0x1200, "C_LateUpdatedAnimating size should be 0x1200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_LateUpdatedAnimating) == 0x11F0, "C_LateUpdatedAnimating size should be 0x11F0");
+
+#endif
 	}
 }

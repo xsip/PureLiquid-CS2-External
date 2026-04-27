@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x580
 			namespace CSceneListManager /*: public CS2::server::CLogicalEntity*/ {
-				constexpr std::ptrdiff_t m_hListManagers = 0x4a8; // server::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hListManagers = 0x4a8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CSceneListManager>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_iszScenes = 0x4c0; // GlobalTypes::CUtlSymbolLarge[16]  | Schema_FixedArray | Size: 0x80
 				constexpr std::ptrdiff_t m_hScenes = 0x540; // GlobalTypes::CHandle  | Schema_FixedArray | Size: 0x40
 			}

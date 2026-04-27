@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xB0
+			// Class size: 0xC0
 			namespace CDecalInstance /**/ {
 				constexpr std::ptrdiff_t m_sDecalGroup = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hMaterial = 0x8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
@@ -17,26 +17,25 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nBoneIndex = 0x18; // int32_t m_nBoneIndex; |  0x18 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nTriangleIndex = 0x1c; // int32_t m_nTriangleIndex; |  0x1c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_vPositionLS = 0x20; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vNormalLS = 0x2c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vSAxisLS = 0x38; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nFlags = 0x44; // client::DecalFlags_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_Color = 0x48; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flWidth = 0x4c; // float32 m_flWidth; |  0x4c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flHeight = 0x50; // float32 m_flHeight; |  0x50 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDepth = 0x54; // float32 m_flDepth; |  0x54 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_transform = 0x60; // GlobalTypes::CTransformWS  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_flAnimationScale = 0x80; // float32 m_flAnimationScale; |  0x80 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAnimationStartTime = 0x84; // float32 m_flAnimationStartTime; |  0x84 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flPlaceTime = 0x88; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeStartTime = 0x8c; // float32 m_flFadeStartTime; |  0x8c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeDuration = 0x90; // float32 m_flFadeDuration; |  0x90 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLightingOriginOffset = 0x94; // float32 m_flLightingOriginOffset; |  0x94 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBoundingRadiusSqr = 0xa0; // float32 m_flBoundingRadiusSqr; |  0xa0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSequenceIndex = 0xa4; // int16_t m_nSequenceIndex; |  0xa4 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_bIsAdjacent = 0xa6; // bool m_bIsAdjacent; |  0xa6 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDoDecalLightmapping = 0xa7; // bool m_bDoDecalLightmapping; |  0xa7 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nDecalRtEncoding = 0xa8; // client::DecalRtEncoding_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_bProjectToBackfaces = 0xa9; // bool m_bProjectToBackfaces; |  0xa9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vPositionOS = 0x2c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vNormalLS = 0x38; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vSAxisLS = 0x44; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nFlags = 0x50; // client::DecalFlags_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_Color = 0x54; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flWidth = 0x58; // float32 m_flWidth; |  0x58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flHeight = 0x5c; // float32 m_flHeight; |  0x5c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDepth = 0x60; // float32 m_flDepth; |  0x60 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_transform = 0x70; // GlobalTypes::CTransformWS  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_flAnimationScale = 0x90; // float32 m_flAnimationScale; |  0x90 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAnimationStartTime = 0x94; // float32 m_flAnimationStartTime; |  0x94 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flPlaceTime = 0x98; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeStartTime = 0x9c; // float32 m_flFadeStartTime; |  0x9c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeDuration = 0xa0; // float32 m_flFadeDuration; |  0xa0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLightingOriginOffset = 0xa4; // float32 m_flLightingOriginOffset; |  0xa4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBoundingRadiusSqr = 0xb0; // float32 m_flBoundingRadiusSqr; |  0xb0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSequenceIndex = 0xb4; // int16_t m_nSequenceIndex; |  0xb4 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_bIsAdjacent = 0xb6; // bool m_bIsAdjacent; |  0xb6 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDoDecalLightmapping = 0xb7; // bool m_bDoDecalLightmapping; |  0xb7 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

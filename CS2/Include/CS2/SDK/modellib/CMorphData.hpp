@@ -22,9 +22,12 @@ namespace CS2 {
 		class CMorphData  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_morphRectDatas,GlobalTypes::CUtlVector<modellib::CMorphRectData>, 0x8);
+			NESTED_PROPERTY(m_morphRectDatas,IDENTITY(GlobalTypes::CUtlVector<modellib::CMorphRectData>), 0x8);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CMorphData) == 0x20, "CMorphData size should be 0x20");
+
+#endif
 	}
 }

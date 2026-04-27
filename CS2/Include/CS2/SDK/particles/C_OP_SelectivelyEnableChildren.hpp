@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SelectivelyEnableChildren : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_nChildGroupID,particleslib::CParticleCollectionFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_nFirstChild,particleslib::CParticleCollectionFloatInput, 0x348);
-			NESTED_PROPERTY(m_nNumChildrenToEnable,particleslib::CParticleCollectionFloatInput, 0x4b8);
-			PROPERTY(m_bPlayEndcapOnStop,bool, 0x628);
-			PROPERTY(m_bDestroyImmediately,bool, 0x629);
+			NESTED_PROPERTY(m_nChildGroupID,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_nFirstChild,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
+			NESTED_PROPERTY(m_nNumChildrenToEnable,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4c0);
+			PROPERTY(m_bPlayEndcapOnStop,bool, 0x630);
+			PROPERTY(m_bDestroyImmediately,bool, 0x631);
 			S2_PAD(0x458);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SelectivelyEnableChildren) == 0x630, "C_OP_SelectivelyEnableChildren size should be 0x630");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SelectivelyEnableChildren) == 0x638, "C_OP_SelectivelyEnableChildren size should be 0x638");
+
+#endif
 	}
 }

@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x910
+			// Class size: 0x950
 			namespace CTriggerHurt /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_flOriginalDamage = 0x890; // float32 m_flOriginalDamage; |  0x890 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDamage = 0x894; // float32 m_flDamage; |  0x894 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDamageCap = 0x898; // float32 m_flDamageCap; |  0x898 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastDmgTime = 0x89c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flForgivenessDelay = 0x8a0; // float32 m_flForgivenessDelay; |  0x8a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bitsDamageInflict = 0x8a4; // client::DamageTypes_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_damageModel = 0x8a8; // int32_t m_damageModel; |  0x8a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bNoDmgForce = 0x8ac; // bool m_bNoDmgForce; |  0x8ac | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vDamageForce = 0x8b0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_thinkAlways = 0x8bc; // bool m_thinkAlways; |  0x8bc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hurtThinkPeriod = 0x8c0; // float32 m_hurtThinkPeriod; |  0x8c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OnHurt = 0x8c8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnHurtPlayer = 0x8e0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_hurtEntities = 0x8f8; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flOriginalDamage = 0x8c8; // float32 m_flOriginalDamage; |  0x8c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDamage = 0x8cc; // float32 m_flDamage; |  0x8cc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDamageCap = 0x8d0; // float32 m_flDamageCap; |  0x8d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastDmgTime = 0x8d4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flForgivenessDelay = 0x8d8; // float32 m_flForgivenessDelay; |  0x8d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bitsDamageInflict = 0x8dc; // client::DamageTypes_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_damageModel = 0x8e0; // int32_t m_damageModel; |  0x8e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bNoDmgForce = 0x8e4; // bool m_bNoDmgForce; |  0x8e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vDamageForce = 0x8e8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_thinkAlways = 0x8f4; // bool m_thinkAlways; |  0x8f4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hurtThinkPeriod = 0x8f8; // float32 m_hurtThinkPeriod; |  0x8f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnHurt = 0x900; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnHurtPlayer = 0x918; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_hurtEntities = 0x930; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x358
+			// Class size: 0x360
 			namespace C_OP_SetCPOrientationToPointAtCP /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nInputCP = 0x1d8; // int32_t m_nInputCP; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputCP = 0x1dc; // int32_t m_nOutputCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInterpolation = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_b2DOrientation = 0x350; // bool m_b2DOrientation; |  0x350 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAvoidSingularity = 0x351; // bool m_bAvoidSingularity; |  0x351 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bPointAway = 0x352; // bool m_bPointAway; |  0x352 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nInputCP = 0x1e0; // int32_t m_nInputCP; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputCP = 0x1e4; // int32_t m_nOutputCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInterpolation = 0x1e8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_b2DOrientation = 0x358; // bool m_b2DOrientation; |  0x358 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAvoidSingularity = 0x359; // bool m_bAvoidSingularity; |  0x359 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bPointAway = 0x35a; // bool m_bPointAway; |  0x35a | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

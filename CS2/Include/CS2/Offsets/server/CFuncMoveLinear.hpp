@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x838
+			// Class size: 0x870
 			namespace CFuncMoveLinear /*: public CS2::server::CBaseToggle*/ {
-				constexpr std::ptrdiff_t m_authoredPosition = 0x7b0; // server::MoveLinearAuthoredPos_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7b4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecMoveDirParentSpace = 0x7c0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_soundStart = 0x7d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_soundStop = 0x7d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_currentSound = 0x7e0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flBlockDamage = 0x7e8; // float32 m_flBlockDamage; |  0x7e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartPosition = 0x7ec; // float32 m_flStartPosition; |  0x7ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OnFullyOpen = 0x7f8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnFullyClosed = 0x810; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_bCreateMovableNavMesh = 0x828; // bool m_bCreateMovableNavMesh; |  0x828 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAllowMovableNavMeshDockingOnEntireEntity = 0x829; // bool m_bAllowMovableNavMeshDockingOnEntireEntity; |  0x829 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreateNavObstacle = 0x82a; // bool m_bCreateNavObstacle; |  0x82a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_authoredPosition = 0x7e8; // server::MoveLinearAuthoredPos_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7ec; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecMoveDirParentSpace = 0x7f8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_soundStart = 0x808; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_soundStop = 0x810; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_currentSound = 0x818; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flBlockDamage = 0x820; // float32 m_flBlockDamage; |  0x820 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartPosition = 0x824; // float32 m_flStartPosition; |  0x824 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnFullyOpen = 0x830; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnFullyClosed = 0x848; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_bCreateMovableNavMesh = 0x860; // bool m_bCreateMovableNavMesh; |  0x860 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAllowMovableNavMeshDockingOnEntireEntity = 0x861; // bool m_bAllowMovableNavMeshDockingOnEntireEntity; |  0x861 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreateNavObstacle = 0x862; // bool m_bCreateNavObstacle; |  0x862 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

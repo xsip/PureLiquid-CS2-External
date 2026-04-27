@@ -21,18 +21,21 @@ namespace CS2 {
 	namespace client {
 		class C_CSPlayerResource : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY_ARRAY(m_bHostageAlive,bool, 12 , 0x608);
-			PROPERTY_ARRAY(m_isHostageFollowingSomeone,bool, 12 , 0x614);
-			PROPERTY_ARRAY(m_iHostageEntityIDs,GlobalTypes::CEntityIndex, 12 , 0x620);
-			PROPERTY(m_bombsiteCenterA,GlobalTypes::Vector, 0x650);
-			PROPERTY(m_bombsiteCenterB,GlobalTypes::Vector, 0x65c);
-			PROPERTY_ARRAY(m_hostageRescueX,int32_t, 4 , 0x668);
-			PROPERTY_ARRAY(m_hostageRescueY,int32_t, 4 , 0x678);
-			PROPERTY_ARRAY(m_hostageRescueZ,int32_t, 4 , 0x688);
-			PROPERTY(m_bEndMatchNextMapAllVoted,bool, 0x698);
-			PROPERTY(m_foundGoalPositions,bool, 0x699);
+			PROPERTY_ARRAY(m_bHostageAlive,bool, 12 , 0x600);
+			PROPERTY_ARRAY(m_isHostageFollowingSomeone,bool, 12 , 0x60c);
+			PROPERTY_ARRAY(m_iHostageEntityIDs,GlobalTypes::CEntityIndex, 12 , 0x618);
+			PROPERTY(m_bombsiteCenterA,GlobalTypes::Vector, 0x648);
+			PROPERTY(m_bombsiteCenterB,GlobalTypes::Vector, 0x654);
+			PROPERTY_ARRAY(m_hostageRescueX,int32_t, 4 , 0x660);
+			PROPERTY_ARRAY(m_hostageRescueY,int32_t, 4 , 0x670);
+			PROPERTY_ARRAY(m_hostageRescueZ,int32_t, 4 , 0x680);
+			PROPERTY(m_bEndMatchNextMapAllVoted,bool, 0x690);
+			PROPERTY(m_foundGoalPositions,bool, 0x691);
 			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::client::C_CSPlayerResource) == 0x6A0, "C_CSPlayerResource size should be 0x6A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSPlayerResource) == 0x698, "C_CSPlayerResource size should be 0x698");
+
+#endif
 	}
 }

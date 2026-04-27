@@ -8,18 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x808
+			// Class size: 0x810
 			namespace C_OP_ModelSurfaceSnapshotGenerator /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nCPSnapshot = 0x1d8; // int32_t m_nCPSnapshot; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_modelInput = 0x1e0; // particleslib::CParticleModelInput  | Schema_DeclaredClass | Size: 0x60
-				constexpr std::ptrdiff_t m_flRecalcRate = 0x240; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flUSpacing = 0x3b0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flVSpacing = 0x520; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flSurfaceOffset = 0x690; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bSetNormal = 0x800; // bool m_bSetNormal; |  0x800 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetUp = 0x801; // bool m_bSetUp; |  0x801 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetGravity = 0x802; // bool m_bSetGravity; |  0x802 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetUV = 0x803; // bool m_bSetUV; |  0x803 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCPSnapshot = 0x1e0; // int32_t m_nCPSnapshot; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_modelInput = 0x1e8; // particleslib::CParticleModelInput  | Schema_DeclaredClass | Size: 0x60
+				constexpr std::ptrdiff_t m_flRecalcRate = 0x248; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flUSpacing = 0x3b8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flVSpacing = 0x528; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flSurfaceOffset = 0x698; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bSetNormal = 0x808; // bool m_bSetNormal; |  0x808 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetUp = 0x809; // bool m_bSetUp; |  0x809 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetGravity = 0x80a; // bool m_bSetGravity; |  0x80a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetUV = 0x80b; // bool m_bSetUV; |  0x80b | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

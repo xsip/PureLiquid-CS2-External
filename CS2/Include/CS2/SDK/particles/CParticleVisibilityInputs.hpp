@@ -41,6 +41,9 @@ namespace CS2 {
 			PROPERTY(m_bRightEye,bool, 0x44);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CParticleVisibilityInputs) == 0x48, "CParticleVisibilityInputs size should be 0x48");
+
+#endif
 	}
 }

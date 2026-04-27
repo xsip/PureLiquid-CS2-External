@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x14);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CFloatExponentialMovingAverage) == 0x14, "CFloatExponentialMovingAverage size should be 0x14");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_Spin : public CS2::particles::CGeneralSpin {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_Spin) == 0x1E8, "C_OP_Spin size should be 0x1E8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_Spin) == 0x1F0, "C_OP_Spin size should be 0x1F0");
+
+#endif
 	}
 }

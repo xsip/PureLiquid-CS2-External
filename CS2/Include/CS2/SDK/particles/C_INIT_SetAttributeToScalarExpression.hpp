@@ -15,7 +15,7 @@
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particleslib/CParticleRemapFloatInput.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -26,14 +26,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_SetAttributeToScalarExpression : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nExpression,particles::ScalarExpressionType_t, 0x1d8);
-			NESTED_PROPERTY(m_flInput1,particleslib::CPerParticleFloatInput, 0x1e0);
-			NESTED_PROPERTY(m_flInput2,particleslib::CPerParticleFloatInput, 0x350);
-			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0x4c0);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x630);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x634);
-			S2_PAD(0x488);
+			PROPERTY(m_nExpression,IDENTITY(particles::ScalarExpressionType_t), 0x1e0);
+			NESTED_PROPERTY(m_flInput1,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_flInput2,IDENTITY(particleslib::CPerParticleFloatInput), 0x358);
+			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x4c8);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x638);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x63c);
+			S2_PAD(0x480);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_SetAttributeToScalarExpression) == 0x660, "C_INIT_SetAttributeToScalarExpression size should be 0x660");
+
+#endif
 	}
 }

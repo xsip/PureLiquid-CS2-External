@@ -56,25 +56,26 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flMinimumSimTime = 0x328; // float32 m_flMinimumSimTime; |  0x328 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flMinimumTimeStep = 0x32c; // float32 m_flMinimumTimeStep; |  0x32c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nMinimumFrames = 0x330; // int32_t m_nMinimumFrames; |  0x330 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nMinCPULevel = 0x334; // int32_t m_nMinCPULevel; |  0x334 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nMinGPULevel = 0x338; // int32_t m_nMinGPULevel; |  0x338 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNoDrawTimeToGoToSleep = 0x33c; // float32 m_flNoDrawTimeToGoToSleep; |  0x33c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxDrawDistance = 0x340; // float32 m_flMaxDrawDistance; |  0x340 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartFadeDistance = 0x344; // float32 m_flStartFadeDistance; |  0x344 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxCreationDistance = 0x348; // float32 m_flMaxCreationDistance; |  0x348 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nAggregationMinAvailableParticles = 0x34c; // int32_t m_nAggregationMinAvailableParticles; |  0x34c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAggregateRadius = 0x350; // float32 m_flAggregateRadius; |  0x350 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bShouldBatch = 0x354; // bool m_bShouldBatch; |  0x354 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bShouldHitboxesFallbackToRenderBounds = 0x355; // bool m_bShouldHitboxesFallbackToRenderBounds; |  0x355 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bShouldHitboxesFallbackToSnapshot = 0x356; // bool m_bShouldHitboxesFallbackToSnapshot; |  0x356 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bShouldHitboxesFallbackToCollisionHulls = 0x357; // bool m_bShouldHitboxesFallbackToCollisionHulls; |  0x357 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nViewModelEffect = 0x358; // particles::InheritableBoolType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bScreenSpaceEffect = 0x35c; // bool m_bScreenSpaceEffect; |  0x35c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_pszTargetLayerID = 0x360; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nSkipRenderControlPoint = 0x368; // int32_t m_nSkipRenderControlPoint; |  0x368 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nAllowRenderControlPoint = 0x36c; // int32_t m_nAllowRenderControlPoint; |  0x36c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bShouldSort = 0x370; // bool m_bShouldSort; |  0x370 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_controlPointConfigurations = 0x3b8; // GlobalTypes::CUtlVector<particles::ParticleControlPointConfiguration_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bIsGPUParticleSystem = 0x334; // bool m_bIsGPUParticleSystem; |  0x334 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nMinCPULevel = 0x338; // int32_t m_nMinCPULevel; |  0x338 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nMinGPULevel = 0x33c; // int32_t m_nMinGPULevel; |  0x33c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNoDrawTimeToGoToSleep = 0x340; // float32 m_flNoDrawTimeToGoToSleep; |  0x340 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxDrawDistance = 0x344; // float32 m_flMaxDrawDistance; |  0x344 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartFadeDistance = 0x348; // float32 m_flStartFadeDistance; |  0x348 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxCreationDistance = 0x34c; // float32 m_flMaxCreationDistance; |  0x34c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nAggregationMinAvailableParticles = 0x350; // int32_t m_nAggregationMinAvailableParticles; |  0x350 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAggregateRadius = 0x354; // float32 m_flAggregateRadius; |  0x354 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bShouldBatch = 0x358; // bool m_bShouldBatch; |  0x358 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bShouldHitboxesFallbackToRenderBounds = 0x359; // bool m_bShouldHitboxesFallbackToRenderBounds; |  0x359 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bShouldHitboxesFallbackToSnapshot = 0x35a; // bool m_bShouldHitboxesFallbackToSnapshot; |  0x35a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bShouldHitboxesFallbackToCollisionHulls = 0x35b; // bool m_bShouldHitboxesFallbackToCollisionHulls; |  0x35b | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nViewModelEffect = 0x35c; // particles::InheritableBoolType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bScreenSpaceEffect = 0x360; // bool m_bScreenSpaceEffect; |  0x360 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pszTargetLayerID = 0x368; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nSkipRenderControlPoint = 0x370; // int32_t m_nSkipRenderControlPoint; |  0x370 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nAllowRenderControlPoint = 0x374; // int32_t m_nAllowRenderControlPoint; |  0x374 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bShouldSort = 0x378; // bool m_bShouldSort; |  0x378 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_controlPointConfigurations = 0x3c0; // GlobalTypes::CUtlVector<particles::ParticleControlPointConfiguration_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

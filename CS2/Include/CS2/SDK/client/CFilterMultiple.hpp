@@ -12,6 +12,7 @@
 
 #include <SDK/client/CBaseFilter.hpp>
 #include <SDK/client/filter_t.hpp>
+#include <SDK/client/CHandle< C_BaseEntity >.hpp>
 
 
 
@@ -22,11 +23,14 @@ namespace CS2 {
 	namespace client {
 		class CFilterMultiple : public CS2::client::CBaseFilter {
 		public:
-			PROPERTY(m_nFilterType,client::filter_t, 0x640);
-			PROPERTY_ARRAY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 10 , 0x648);
-			PROPERTY_ARRAY(m_hFilter,client::CHandle< C_BaseEntity >, 10 , 0x698);
+			PROPERTY(m_nFilterType,IDENTITY(client::filter_t), 0x638);
+			PROPERTY_ARRAY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 10 , 0x640);
+			// PROPERTY_ARRAY(m_hFilter,IDENTITY(GlobalTypes::CHandle< C_BaseEntity >[10]), 10 , 0x690);
 			S2_PAD(0x80);
 		};
-		//static_assert(sizeof(CS2::client::CFilterMultiple) == 0x6C0, "CFilterMultiple size should be 0x6C0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CFilterMultiple) == 0x6B8, "CFilterMultiple size should be 0x6B8");
+
+#endif
 	}
 }

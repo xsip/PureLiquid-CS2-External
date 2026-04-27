@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_flSwimSoundTime,float32, 0x58);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayer_WaterServices) == 0x70, "CCSPlayer_WaterServices size should be 0x70");
+
+#endif
 	}
 }

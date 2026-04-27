@@ -25,12 +25,15 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStanceOverrideUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_footStanceInfo,GlobalTypes::CUtlVector<animgraphlib::StanceInfo_t>, 0x70);
-			NESTED_PROPERTY(m_pStanceSourceNode,animgraphlib::CAnimUpdateNodeRef, 0x88);
-			NESTED_PROPERTY(m_hParameter,animgraphlib::CAnimParamHandle, 0x98);
-			PROPERTY(m_eMode,animgraphlib::StanceOverrideMode, 0x9c);
+			NESTED_PROPERTY(m_footStanceInfo,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::StanceInfo_t>), 0x70);
+			NESTED_PROPERTY(m_pStanceSourceNode,IDENTITY(animgraphlib::CAnimUpdateNodeRef), 0x88);
+			NESTED_PROPERTY(m_hParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x98);
+			PROPERTY(m_eMode,IDENTITY(animgraphlib::StanceOverrideMode), 0x9c);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStanceOverrideUpdateNode) == 0xA0, "CStanceOverrideUpdateNode size should be 0xA0");
+
+#endif
 	}
 }

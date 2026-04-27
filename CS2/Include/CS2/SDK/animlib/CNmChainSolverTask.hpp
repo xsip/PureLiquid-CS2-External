@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPoseTask.hpp>
-#include <SDK/animlib/CNmTarget.hpp>
-#include <SDK/animlib/NmIKBlendMode_t.hpp>
+#include "CNmPoseTask.hpp"
+#include "CNmTarget.hpp"
+#include "NmIKBlendMode_t.hpp"
 
 
 
@@ -27,8 +27,8 @@ namespace CS2 {
 			PROPERTY(m_nEffectorTargetBoneIdx,int32_t, 0x5c);
 			PROPERTY(m_targetTransform,GlobalTypes::CTransform, 0x60);
 			PROPERTY(m_nNumBonesInChain,int32_t, 0x80);
-			NESTED_PROPERTY(m_effectorTarget,animlib::CNmTarget, 0x90);
-			PROPERTY(m_blendMode,animlib::NmIKBlendMode_t, 0xc0);
+			NESTED_PROPERTY(m_effectorTarget,IDENTITY(animlib::CNmTarget), 0x90);
+			PROPERTY(m_blendMode,IDENTITY(animlib::NmIKBlendMode_t), 0xc0);
 			PROPERTY(m_flBlendWeight,float32, 0xc4);
 			PROPERTY(m_bIsTargetInWorldSpace,bool, 0xc8);
 			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0xc9);
@@ -38,6 +38,9 @@ namespace CS2 {
 			PROPERTY(m_debugTotalChainLength,float32, 0x120);
 			S2_PAD(0xD8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmChainSolverTask) == 0x130, "CNmChainSolverTask size should be 0x130");
+
+#endif
 	}
 }

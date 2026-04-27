@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flDefaultValue,float32, 0x10);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::CVMixControlOutput) == 0x18, "CVMixControlOutput size should be 0x18");
+
+#endif
 	}
 }

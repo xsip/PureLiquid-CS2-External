@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CEnvSoundscapeTriggerable : public CS2::client::CEnvSoundscape {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::CEnvSoundscapeTriggerable) == 0x698, "CEnvSoundscapeTriggerable size should be 0x698");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CEnvSoundscapeTriggerable) == 0x690, "CEnvSoundscapeTriggerable size should be 0x690");
+
+#endif
 	}
 }

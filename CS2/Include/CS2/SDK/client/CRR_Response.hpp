@@ -25,15 +25,18 @@ namespace CS2 {
 			PROPERTY(m_Type,uint8_t, 0x0);
 			PROPERTY_ARRAY(m_szResponseName,char, 192 , 0x1);
 			PROPERTY_ARRAY(m_szMatchingRule,char, 128 , 0xc1);
-			NESTED_PROPERTY(m_Params,client::ResponseParams, 0x160);
+			NESTED_PROPERTY(m_Params,IDENTITY(client::ResponseParams), 0x160);
 			PROPERTY(m_fMatchScore,float32, 0x180);
 			PROPERTY(m_bAnyMatchingRulesInCooldown,bool, 0x184);
 			PROPERTY(m_szSpeakerContext,char*, 0x188);
 			PROPERTY(m_szWorldContext,char*, 0x190);
-			NESTED_PROPERTY(m_Followup,client::ResponseFollowup, 0x198);
+			NESTED_PROPERTY(m_Followup,IDENTITY(client::ResponseFollowup), 0x198);
 			PROPERTY(m_recipientFilter,GlobalTypes::CUtlSymbol, 0x1ca);
 			S2_PAD(0x1D0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CRR_Response) == 0x1D0, "CRR_Response size should be 0x1D0");
+
+#endif
 	}
 }

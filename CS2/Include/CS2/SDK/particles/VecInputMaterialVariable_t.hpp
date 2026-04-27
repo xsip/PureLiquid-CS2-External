@@ -22,9 +22,12 @@ namespace CS2 {
 		class VecInputMaterialVariable_t  {
 		public:
 			PROPERTY(m_strVariable,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_vecInput,particleslib::CParticleCollectionVecInput, 0x8);
+			NESTED_PROPERTY(m_vecInput,IDENTITY(particleslib::CParticleCollectionVecInput), 0x8);
 			S2_PAD(0x6C0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::VecInputMaterialVariable_t) == 0x6C0, "VecInputMaterialVariable_t size should be 0x6C0");
+
+#endif
 	}
 }

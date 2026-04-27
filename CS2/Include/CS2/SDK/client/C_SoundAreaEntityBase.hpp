@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace client {
 		class C_SoundAreaEntityBase : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_bDisabled,bool, 0x608);
-			PROPERTY(m_bWasEnabled,bool, 0x610);
-			PROPERTY(m_iszSoundAreaType,GlobalTypes::CUtlSymbolLarge*, 0x618);
-			PROPERTY(m_vPos,GlobalTypes::Vector, 0x620);
+			PROPERTY(m_bDisabled,bool, 0x600);
+			PROPERTY(m_bWasEnabled,bool, 0x608);
+			PROPERTY(m_iszSoundAreaType,GlobalTypes::CUtlSymbolLarge*, 0x610);
+			PROPERTY(m_vPos,GlobalTypes::Vector, 0x618);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundAreaEntityBase) == 0x630, "C_SoundAreaEntityBase size should be 0x630");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundAreaEntityBase) == 0x628, "C_SoundAreaEntityBase size should be 0x628");
+
+#endif
 	}
 }

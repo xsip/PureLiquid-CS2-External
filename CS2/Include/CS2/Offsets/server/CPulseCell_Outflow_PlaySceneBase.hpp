@@ -12,7 +12,7 @@ namespace CS2 {
 			namespace CPulseCell_Outflow_PlaySceneBase /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
 				constexpr std::ptrdiff_t m_OnFinished = 0x48; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
 				constexpr std::ptrdiff_t m_OnCanceled = 0x90; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_Triggers = 0xd8; // server::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Triggers = 0xd8; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

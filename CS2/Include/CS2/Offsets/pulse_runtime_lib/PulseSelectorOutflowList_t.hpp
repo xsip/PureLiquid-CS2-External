@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace pulse_runtime_lib {
 			// Class size: 0x18
 			namespace PulseSelectorOutflowList_t /**/ {
-				constexpr std::ptrdiff_t m_Outflows = 0x0; // server::CUtlVector<pulse_runtime_lib::OutflowWithRequirements_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Outflows = 0x0; // GlobalTypes::CUtlVector<pulse_runtime_lib::OutflowWithRequirements_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

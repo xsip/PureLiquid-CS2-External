@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace physicslib {
 		class RnSphereDesc_t : public CS2::physicslib::RnShapeDesc_t {
 		public:
-			PROPERTY(m_Sphere,GlobalTypes::SphereBase_t< float32 >, 0x18);
+			PROPERTY(m_Sphere,IDENTITY(GlobalTypes::SphereBase_t< float32 >), 0x18);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnSphereDesc_t) == 0x28, "RnSphereDesc_t size should be 0x28");
+
+#endif
 	}
 }

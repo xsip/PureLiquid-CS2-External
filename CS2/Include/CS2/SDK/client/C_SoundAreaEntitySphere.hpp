@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_SoundAreaEntitySphere : public CS2::client::C_SoundAreaEntityBase {
 		public:
-			PROPERTY(m_flRadius,float32, 0x630);
+			PROPERTY(m_flRadius,float32, 0x628);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundAreaEntitySphere) == 0x638, "C_SoundAreaEntitySphere size should be 0x638");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundAreaEntitySphere) == 0x630, "C_SoundAreaEntitySphere size should be 0x630");
+
+#endif
 	}
 }

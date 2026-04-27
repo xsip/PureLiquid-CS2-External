@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nCursorsAllowedToRunParallel,int32_t, 0x98);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_CursorQueue) == 0xA0, "CPulseCell_CursorQueue size should be 0xA0");
+
+#endif
 	}
 }

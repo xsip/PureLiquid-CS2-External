@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xEB8
+			// Class size: 0xFD8
 			namespace C_BaseClientUIEntity /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_bEnabled = 0xe90; // bool m_bEnabled; |  0xe90 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_DialogXMLName = 0xe98; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_PanelClassName = 0xea0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_PanelID = 0xea8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bEnabled = 0xfb0; // bool m_bEnabled; |  0xfb0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_DialogXMLName = 0xfb8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_PanelClassName = 0xfc0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_PanelID = 0xfc8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerSet : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_soundsToPlay,GlobalTypes::CUtlVector<soundsystem_voicecontainers::CVoiceContainerSetElement>, 0xa8);
-			S2_PAD(0x18);
+			NESTED_PROPERTY(m_soundsToPlay,IDENTITY(GlobalTypes::CUtlVector<soundsystem_voicecontainers::CVoiceContainerSetElement>), 0xa8);
+			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerSet) == 0xC0, "CVoiceContainerSet size should be 0xC0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerSet) == 0xD8, "CVoiceContainerSet size should be 0xD8");
+
+#endif
 	}
 }

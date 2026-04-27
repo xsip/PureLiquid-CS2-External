@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTouchExpansionComponent) == 0x50, "CTouchExpansionComponent size should be 0x50");
+
+#endif
 	}
 }

@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ModelDampenMovement : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			PROPERTY(m_bBoundBox,bool, 0x1d4);
-			PROPERTY(m_bOutside,bool, 0x1d5);
-			PROPERTY(m_bUseBones,bool, 0x1d6);
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1d7);
-			NESTED_PROPERTY(m_vecPosOffset,particleslib::CPerParticleVecInput, 0x258);
-			PROPERTY(m_fDrag,float32, 0x910);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
+			PROPERTY(m_bBoundBox,bool, 0x1dc);
+			PROPERTY(m_bOutside,bool, 0x1dd);
+			PROPERTY(m_bUseBones,bool, 0x1de);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1df);
+			NESTED_PROPERTY(m_vecPosOffset,IDENTITY(particleslib::CPerParticleVecInput), 0x260);
+			PROPERTY(m_fDrag,float32, 0x918);
 			S2_PAD(0x748);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ModelDampenMovement) == 0x918, "C_OP_ModelDampenMovement size should be 0x918");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ModelDampenMovement) == 0x920, "C_OP_ModelDampenMovement size should be 0x920");
+
+#endif
 	}
 }

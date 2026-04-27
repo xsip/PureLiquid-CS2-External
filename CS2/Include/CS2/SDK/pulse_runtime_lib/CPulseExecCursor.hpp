@@ -20,8 +20,11 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseExecCursor  {
 		public:
-			S2_PAD(0xD0);
+			S2_PAD(0xD8);
 		};
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseExecCursor) == 0xD0, "CPulseExecCursor size should be 0xD0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseExecCursor) == 0xD8, "CPulseExecCursor size should be 0xD8");
+
+#endif
 	}
 }

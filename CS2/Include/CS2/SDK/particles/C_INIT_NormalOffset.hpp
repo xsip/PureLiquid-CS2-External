@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_NormalOffset : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_OffsetMin,GlobalTypes::Vector, 0x1d8);
-			PROPERTY(m_OffsetMax,GlobalTypes::Vector, 0x1e4);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1f0);
-			PROPERTY(m_bLocalCoords,bool, 0x1f4);
-			PROPERTY(m_bNormalize,bool, 0x1f5);
+			PROPERTY(m_OffsetMin,GlobalTypes::Vector, 0x1e0);
+			PROPERTY(m_OffsetMax,GlobalTypes::Vector, 0x1ec);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1f8);
+			PROPERTY(m_bLocalCoords,bool, 0x1fc);
+			PROPERTY(m_bNormalize,bool, 0x1fd);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_NormalOffset) == 0x1F8, "C_INIT_NormalOffset size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_NormalOffset) == 0x200, "C_INIT_NormalOffset size should be 0x200");
+
+#endif
 	}
 }

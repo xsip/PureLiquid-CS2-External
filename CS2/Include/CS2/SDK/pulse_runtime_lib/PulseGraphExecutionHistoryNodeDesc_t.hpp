@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(strBindingName,GlobalTypes::PulseSymbol_t, 0x10);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::PulseGraphExecutionHistoryNodeDesc_t) == 0x20, "PulseGraphExecutionHistoryNodeDesc_t size should be 0x20");
+
+#endif
 	}
 }

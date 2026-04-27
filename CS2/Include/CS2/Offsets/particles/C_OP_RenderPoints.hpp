@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x228
+			// Class size: 0x230
 			namespace C_OP_RenderPoints /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_hMaterial = 0x220; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hMaterial = 0x228; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

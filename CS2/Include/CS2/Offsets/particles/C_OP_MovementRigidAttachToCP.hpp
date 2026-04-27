@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E8
+			// Class size: 0x1F0
 			namespace C_OP_MovementRigidAttachToCP /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d0; // int32_t m_nControlPointNumber; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nScaleControlPoint = 0x1d4; // int32_t m_nScaleControlPoint; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nScaleCPField = 0x1d8; // int32_t m_nScaleCPField; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldInput = 0x1dc; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1e0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bOffsetLocal = 0x1e4; // bool m_bOffsetLocal; |  0x1e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nScaleControlPoint = 0x1dc; // int32_t m_nScaleControlPoint; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nScaleCPField = 0x1e0; // int32_t m_nScaleCPField; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldInput = 0x1e4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1e8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bOffsetLocal = 0x1ec; // bool m_bOffsetLocal; |  0x1ec | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

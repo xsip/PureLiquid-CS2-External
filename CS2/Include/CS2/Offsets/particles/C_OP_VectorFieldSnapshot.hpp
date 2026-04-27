@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xA18
+			// Class size: 0xA20
 			namespace C_OP_VectorFieldSnapshot /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d0; // int32_t m_nControlPointNumber; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nAttributeToWrite = 0x1d4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1d8; // int32_t m_nLocalSpaceCP; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInterpolation = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_vecScale = 0x350; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flBoundaryDampening = 0xa08; // float32 m_flBoundaryDampening; |  0xa08 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSetVelocity = 0xa0c; // bool m_bSetVelocity; |  0xa0c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLockToSurface = 0xa0d; // bool m_bLockToSurface; |  0xa0d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flGridSpacing = 0xa10; // float32 m_flGridSpacing; |  0xa10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nAttributeToWrite = 0x1dc; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1e0; // int32_t m_nLocalSpaceCP; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInterpolation = 0x1e8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_vecScale = 0x358; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flBoundaryDampening = 0xa10; // float32 m_flBoundaryDampening; |  0xa10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSetVelocity = 0xa14; // bool m_bSetVelocity; |  0xa14 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLockToSurface = 0xa15; // bool m_bLockToSurface; |  0xa15 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flGridSpacing = 0xa18; // float32 m_flGridSpacing; |  0xa18 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

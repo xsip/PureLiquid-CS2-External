@@ -22,9 +22,12 @@ namespace CS2 {
 		class CMovementStatsProperty  {
 		public:
 			PROPERTY(m_nUseCounter,int32_t, 0x10);
-			NESTED_PROPERTY(m_emaMovementDirection,client::CVectorExponentialMovingAverage, 0x14);
+			NESTED_PROPERTY(m_emaMovementDirection,IDENTITY(client::CVectorExponentialMovingAverage), 0x14);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMovementStatsProperty) == 0x40, "CMovementStatsProperty size should be 0x40");
+
+#endif
 	}
 }

@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x690
+			// Class size: 0x698
 			namespace C_OP_RenderGpuImplicit /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_bUsePerParticleRadius = 0x220; // bool m_bUsePerParticleRadius; |  0x220 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nVertexCountKb = 0x224; // uint32_t m_nVertexCountKb; |  0x224 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nIndexCountKb = 0x228; // uint32_t m_nIndexCountKb; |  0x228 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fGridSize = 0x230; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_fRadiusScale = 0x3a0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_fIsosurfaceThreshold = 0x510; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nScaleCP = 0x680; // int32_t m_nScaleCP; |  0x680 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hMaterial = 0x688; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bUsePerParticleRadius = 0x228; // bool m_bUsePerParticleRadius; |  0x228 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nVertexCountKb = 0x22c; // uint32_t m_nVertexCountKb; |  0x22c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nIndexCountKb = 0x230; // uint32_t m_nIndexCountKb; |  0x230 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fGridSize = 0x238; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_fRadiusScale = 0x3a8; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_fIsosurfaceThreshold = 0x518; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nScaleCP = 0x688; // int32_t m_nScaleCP; |  0x688 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hMaterial = 0x690; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

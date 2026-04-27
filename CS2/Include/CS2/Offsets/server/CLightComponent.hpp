@@ -54,8 +54,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bRenderToCubemaps = 0x120; // bool m_bRenderToCubemaps; |  0x120 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bAllowSSTGeneration = 0x121; // bool m_bAllowSSTGeneration; |  0x121 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nDirectLight = 0x124; // int32_t m_nDirectLight; |  0x124 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nIndirectLight = 0x128; // int32_t m_nIndirectLight; |  0x128 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bDynamicBounce = 0x12c; // bool m_bDynamicBounce; |  0x12c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nBounceLight = 0x128; // int32_t m_nBounceLight; |  0x128 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBounceScale = 0x12c; // float32 m_flBounceScale; |  0x12c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flFadeMinDist = 0x130; // float32 m_flFadeMinDist; |  0x130 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flFadeMaxDist = 0x134; // float32 m_flFadeMaxDist; |  0x134 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flShadowFadeMinDist = 0x138; // float32 m_flShadowFadeMinDist; |  0x138 | Schema_Builtin | Size: 0x4

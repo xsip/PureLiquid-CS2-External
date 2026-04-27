@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_bFilterGoalOvershoot,bool, 0x62);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CDistanceRemainingMetricEvaluator) == 0x68, "CDistanceRemainingMetricEvaluator size should be 0x68");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1168
+			// Class size: 0x1158
 			namespace C_WaterBullet /*: public CS2::client::CBaseAnimGraph*/ {
 				// NO SCHEMA DATA FOUND!
 			}

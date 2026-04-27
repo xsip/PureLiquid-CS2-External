@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace particles {
 		class CParticleFunctionRenderer : public CS2::particles::CParticleFunction {
 		public:
-			NESTED_PROPERTY(VisibilityInputs,particles::CParticleVisibilityInputs, 0x1d0);
-			PROPERTY(m_bCannotBeRefracted,bool, 0x218);
-			PROPERTY(m_bSkipRenderingOnMobile,bool, 0x219);
+			NESTED_PROPERTY(VisibilityInputs,IDENTITY(particles::CParticleVisibilityInputs), 0x1d8);
+			PROPERTY(m_bCannotBeRefracted,bool, 0x220);
+			PROPERTY(m_bSkipRenderingOnMobile,bool, 0x221);
 			S2_PAD(0x50);
 		};
-		//static_assert(sizeof(CS2::particles::CParticleFunctionRenderer) == 0x220, "CParticleFunctionRenderer size should be 0x220");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::CParticleFunctionRenderer) == 0x228, "CParticleFunctionRenderer size should be 0x228");
+
+#endif
 	}
 }

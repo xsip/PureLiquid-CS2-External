@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x398);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoData) == 0x840, "CInfoData size should be 0x840");
+
+#endif
 	}
 }

@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x250
+			// Class size: 0x258
 			namespace C_INIT_RemapTransformOrientationToRotations /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_TransformInput = 0x1d8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_vecRotation = 0x240; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bUseQuat = 0x24c; // bool m_bUseQuat; |  0x24c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bWriteNormal = 0x24d; // bool m_bWriteNormal; |  0x24d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_TransformInput = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_vecRotation = 0x248; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bUseQuat = 0x254; // bool m_bUseQuat; |  0x254 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bWriteNormal = 0x255; // bool m_bWriteNormal; |  0x255 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

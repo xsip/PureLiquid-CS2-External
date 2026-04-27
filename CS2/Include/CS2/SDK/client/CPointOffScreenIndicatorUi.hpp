@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace client {
 		class CPointOffScreenIndicatorUi : public CS2::client::C_PointClientUIWorldPanel {
 		public:
-			PROPERTY(m_bBeenEnabled,bool, 0x10e0);
-			PROPERTY(m_bHide,bool, 0x10e1);
-			PROPERTY(m_flSeenTargetTime,float32, 0x10e4);
-			PROPERTY(m_pTargetPanel,client::C_PointClientUIWorldPanel*, 0x10e8);
+			PROPERTY(m_bBeenEnabled,bool, 0x1200);
+			PROPERTY(m_bHide,bool, 0x1201);
+			PROPERTY(m_flSeenTargetTime,float32, 0x1204);
+			PROPERTY(m_pTargetPanel,IDENTITY(client::C_PointClientUIWorldPanel*), 0x1208);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::client::CPointOffScreenIndicatorUi) == 0x10F0, "CPointOffScreenIndicatorUi size should be 0x10F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPointOffScreenIndicatorUi) == 0x1210, "CPointOffScreenIndicatorUi size should be 0x1210");
+
+#endif
 	}
 }

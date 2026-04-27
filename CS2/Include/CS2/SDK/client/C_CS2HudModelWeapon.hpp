@@ -21,8 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_CS2HudModelWeapon : public CS2::client::C_CS2HudModelBase {
 		public:
-			S2_PAD(0x50);
+			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::client::C_CS2HudModelWeapon) == 0x1280, "C_CS2HudModelWeapon size should be 0x1280");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CS2HudModelWeapon) == 0x1260, "C_CS2HudModelWeapon size should be 0x1260");
+
+#endif
 	}
 }

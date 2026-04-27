@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x200
+			// Class size: 0x208
 			namespace C_INIT_RandomNamedModelElement /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_hModel = 0x1d8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_names = 0x1e0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bShuffle = 0x1f8; // bool m_bShuffle; |  0x1f8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLinear = 0x1f9; // bool m_bLinear; |  0x1f9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bModelFromRenderer = 0x1fa; // bool m_bModelFromRenderer; |  0x1fa | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1fc; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_hModel = 0x1e0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_names = 0x1e8; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bShuffle = 0x200; // bool m_bShuffle; |  0x200 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLinear = 0x201; // bool m_bLinear; |  0x201 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bModelFromRenderer = 0x202; // bool m_bModelFromRenderer; |  0x202 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x204; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

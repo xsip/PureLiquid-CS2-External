@@ -31,14 +31,14 @@ namespace CS2 {
 			PROPERTY(m_bIsLinearConstraintDisabled,bool, 0x51);
 			PROPERTY(m_bIsAngularConstraintDisabled,bool, 0x52);
 			PROPERTY(m_bEnableLinearLimit,bool, 0x53);
-			NESTED_PROPERTY(m_LinearLimit,modellib::VPhysXRange_t, 0x54);
+			NESTED_PROPERTY(m_LinearLimit,IDENTITY(modellib::VPhysXRange_t), 0x54);
 			PROPERTY(m_bEnableLinearMotor,bool, 0x5c);
 			PROPERTY(m_vLinearTargetVelocity,GlobalTypes::Vector, 0x60);
 			PROPERTY(m_flMaxForce,float32, 0x6c);
 			PROPERTY(m_bEnableSwingLimit,bool, 0x70);
-			NESTED_PROPERTY(m_SwingLimit,modellib::VPhysXRange_t, 0x74);
+			NESTED_PROPERTY(m_SwingLimit,IDENTITY(modellib::VPhysXRange_t), 0x74);
 			PROPERTY(m_bEnableTwistLimit,bool, 0x7c);
-			NESTED_PROPERTY(m_TwistLimit,modellib::VPhysXRange_t, 0x80);
+			NESTED_PROPERTY(m_TwistLimit,IDENTITY(modellib::VPhysXRange_t), 0x80);
 			PROPERTY(m_bEnableAngularMotor,bool, 0x88);
 			PROPERTY(m_vAngularTargetVelocity,GlobalTypes::Vector, 0x8c);
 			PROPERTY(m_flMaxTorque,float32, 0x98);
@@ -53,6 +53,9 @@ namespace CS2 {
 			PROPERTY(m_Tag,GlobalTypes::CUtlString*, 0xc0);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::VPhysXJoint_t) == 0xD0, "VPhysXJoint_t size should be 0xD0");
+
+#endif
 	}
 }

@@ -24,9 +24,12 @@ namespace CS2 {
 			PROPERTY(m_TargetKVs,GlobalTypes::KeyValues3, 0x8);
 			PROPERTY(m_PreGenerationKVs,GlobalTypes::KeyValues3, 0x18);
 			PROPERTY(m_FinalKVs,GlobalTypes::KeyValues3, 0x58);
-			NESTED_PROPERTY(m_vecGeneratedTextures,GlobalTypes::CUtlVector<compositematerialslib::GeneratedTextureHandle_t>, 0x80);
+			NESTED_PROPERTY(m_vecGeneratedTextures,IDENTITY(GlobalTypes::CUtlVector<compositematerialslib::GeneratedTextureHandle_t>), 0x80);
 			S2_PAD(0xA0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CompositeMaterial_t) == 0xA0, "CompositeMaterial_t size should be 0xA0");
+
+#endif
 	}
 }

@@ -8,32 +8,32 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x8490
+			// Class size: 0x85B0
 			namespace C_Inferno /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_nfxFireDamageEffect = 0xec8; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_hInfernoPointsSnapshot = 0xed0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hInfernoFillerPointsSnapshot = 0xed8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hInfernoOutlinePointsSnapshot = 0xee0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hInfernoClimbingOutlinePointsSnapshot = 0xee8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hInfernoDecalsSnapshot = 0xef0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_firePositions = 0xef8; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_fireParentPositions = 0x11f8; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_bFireIsBurning = 0x14f8; // bool m_bFireIsBurning[64]; |  0x14f8 | Schema_FixedArray | Size: 0x40
-				constexpr std::ptrdiff_t m_BurnNormal = 0x1538; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_fireCount = 0x1838; // int32_t m_fireCount; |  0x1838 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nInfernoType = 0x183c; // int32_t m_nInfernoType; |  0x183c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFireLifetime = 0x1840; // float32 m_nFireLifetime; |  0x1840 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bInPostEffectTime = 0x1844; // bool m_bInPostEffectTime; |  0x1844 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_lastFireCount = 0x1848; // int32_t m_lastFireCount; |  0x1848 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x184c; // int32_t m_nFireEffectTickBegin; |  0x184c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_drawableCount = 0x8450; // int32_t m_drawableCount; |  0x8450 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_blosCheck = 0x8454; // bool m_blosCheck; |  0x8454 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nlosperiod = 0x8458; // int32_t m_nlosperiod; |  0x8458 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_maxFireHalfWidth = 0x845c; // float32 m_maxFireHalfWidth; |  0x845c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_maxFireHeight = 0x8460; // float32 m_maxFireHeight; |  0x8460 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_minBounds = 0x8464; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_maxBounds = 0x8470; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flLastGrassBurnThink = 0x847c; // float32 m_flLastGrassBurnThink; |  0x847c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nfxFireDamageEffect = 0xfe8; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_hInfernoPointsSnapshot = 0xff0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hInfernoFillerPointsSnapshot = 0xff8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hInfernoOutlinePointsSnapshot = 0x1000; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hInfernoClimbingOutlinePointsSnapshot = 0x1008; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hInfernoDecalsSnapshot = 0x1010; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_firePositions = 0x1018; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
+				constexpr std::ptrdiff_t m_fireParentPositions = 0x1318; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
+				constexpr std::ptrdiff_t m_bFireIsBurning = 0x1618; // bool m_bFireIsBurning[64]; |  0x1618 | Schema_FixedArray | Size: 0x40
+				constexpr std::ptrdiff_t m_BurnNormal = 0x1658; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
+				constexpr std::ptrdiff_t m_fireCount = 0x1958; // int32_t m_fireCount; |  0x1958 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nInfernoType = 0x195c; // int32_t m_nInfernoType; |  0x195c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFireLifetime = 0x1960; // float32 m_nFireLifetime; |  0x1960 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bInPostEffectTime = 0x1964; // bool m_bInPostEffectTime; |  0x1964 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_lastFireCount = 0x1968; // int32_t m_lastFireCount; |  0x1968 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x196c; // int32_t m_nFireEffectTickBegin; |  0x196c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_drawableCount = 0x8570; // int32_t m_drawableCount; |  0x8570 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_blosCheck = 0x8574; // bool m_blosCheck; |  0x8574 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nlosperiod = 0x8578; // int32_t m_nlosperiod; |  0x8578 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_maxFireHalfWidth = 0x857c; // float32 m_maxFireHalfWidth; |  0x857c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_maxFireHeight = 0x8580; // float32 m_maxFireHeight; |  0x8580 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_minBounds = 0x8584; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_maxBounds = 0x8590; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flLastGrassBurnThink = 0x859c; // float32 m_flLastGrassBurnThink; |  0x859c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

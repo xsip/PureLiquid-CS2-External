@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CRotDoor : public CS2::server::CBaseDoor {
 		public:
-			PROPERTY(m_bSolidBsp,bool, 0x930);
+			PROPERTY(m_bSolidBsp,bool, 0x968);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::server::CRotDoor) == 0x938, "CRotDoor size should be 0x938");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CRotDoor) == 0x970, "CRotDoor size should be 0x970");
+
+#endif
 	}
 }

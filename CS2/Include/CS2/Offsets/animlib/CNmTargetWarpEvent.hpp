@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x28
+			// Class size: 0x20
 			namespace CNmTargetWarpEvent /*: public CS2::animlib::CNmEvent*/ {
-				constexpr std::ptrdiff_t m_rule = 0x20; // animlib::NmTargetWarpRule_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_algorithm = 0x21; // animlib::NmTargetWarpAlgorithm_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_rule = 0x18; // animlib::NmTargetWarpRule_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_algorithm = 0x19; // animlib::NmTargetWarpAlgorithm_t  | Schema_DeclaredEnum | Size: 0x1
 			}
 		}
 	}

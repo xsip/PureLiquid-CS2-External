@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x838
+			// Class size: 0x868
 			namespace CFuncTrackAuto /*: public CS2::server::CFuncTrackChange*/ {
 				// NO SCHEMA DATA FOUND!
 			}

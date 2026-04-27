@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x230
 			namespace C_OP_FadeOut /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flFadeOutTimeMin = 0x1d0; // float32 m_flFadeOutTimeMin; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutTimeMax = 0x1d4; // float32 m_flFadeOutTimeMax; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutTimeExp = 0x1d8; // float32 m_flFadeOutTimeExp; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeBias = 0x1dc; // float32 m_flFadeBias; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bProportional = 0x210; // bool m_bProportional; |  0x210 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEaseInAndOut = 0x211; // bool m_bEaseInAndOut; |  0x211 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flFadeOutTimeMin = 0x1d8; // float32 m_flFadeOutTimeMin; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutTimeMax = 0x1dc; // float32 m_flFadeOutTimeMax; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutTimeExp = 0x1e0; // float32 m_flFadeOutTimeExp; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeBias = 0x1e4; // float32 m_flFadeBias; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bProportional = 0x220; // bool m_bProportional; |  0x220 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEaseInAndOut = 0x221; // bool m_bEaseInAndOut; |  0x221 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace modellib {
 		class CFootTrajectories  {
 		public:
-			NESTED_PROPERTY(m_trajectories,GlobalTypes::CUtlVector<modellib::CFootTrajectory>, 0x0);
+			NESTED_PROPERTY(m_trajectories,IDENTITY(GlobalTypes::CUtlVector<modellib::CFootTrajectory>), 0x0);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFootTrajectories) == 0x18, "CFootTrajectories size should be 0x18");
+
+#endif
 	}
 }

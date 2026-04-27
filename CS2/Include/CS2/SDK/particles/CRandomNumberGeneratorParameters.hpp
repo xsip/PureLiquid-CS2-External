@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nSeed,int32_t, 0x4);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CRandomNumberGeneratorParameters) == 0x8, "CRandomNumberGeneratorParameters size should be 0x8");
+
+#endif
 	}
 }

@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x750
+			// Class size: 0x788
 			namespace CFuncNavObstruction /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_bDisabled = 0x748; // bool m_bDisabled; |  0x748 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseAsyncObstacleUpdate = 0x749; // bool m_bUseAsyncObstacleUpdate; |  0x749 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisabled = 0x780; // bool m_bDisabled; |  0x780 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseAsyncObstacleUpdate = 0x781; // bool m_bUseAsyncObstacleUpdate; |  0x781 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

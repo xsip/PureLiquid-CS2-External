@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_TwistAroundAxis : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_fForceAmount,float32, 0x1e0);
-			PROPERTY(m_TwistAxis,GlobalTypes::Vector, 0x1e4);
-			PROPERTY(m_bLocalSpace,bool, 0x1f0);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1f4);
+			PROPERTY(m_fForceAmount,float32, 0x1e8);
+			PROPERTY(m_TwistAxis,GlobalTypes::Vector, 0x1ec);
+			PROPERTY(m_bLocalSpace,bool, 0x1f8);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1fc);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_TwistAroundAxis) == 0x1F8, "C_OP_TwistAroundAxis size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_TwistAroundAxis) == 0x200, "C_OP_TwistAroundAxis size should be 0x200");
+
+#endif
 	}
 }

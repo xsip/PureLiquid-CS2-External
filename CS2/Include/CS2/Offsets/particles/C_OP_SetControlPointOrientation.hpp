@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x370
+			// Class size: 0x378
 			namespace C_OP_SetControlPointOrientation /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_bUseWorldLocation = 0x1d8; // bool m_bUseWorldLocation; |  0x1d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRandomize = 0x1da; // bool m_bRandomize; |  0x1da | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetOnce = 0x1db; // bool m_bSetOnce; |  0x1db | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nCP = 0x1dc; // int32_t m_nCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nHeadLocation = 0x1e0; // int32_t m_nHeadLocation; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecRotation = 0x1e4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecRotationB = 0x1f0; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flInterpolation = 0x200; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bUseWorldLocation = 0x1e0; // bool m_bUseWorldLocation; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRandomize = 0x1e2; // bool m_bRandomize; |  0x1e2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetOnce = 0x1e3; // bool m_bSetOnce; |  0x1e3 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCP = 0x1e4; // int32_t m_nCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nHeadLocation = 0x1e8; // int32_t m_nHeadLocation; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecRotation = 0x1ec; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecRotationB = 0x1f8; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flInterpolation = 0x208; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

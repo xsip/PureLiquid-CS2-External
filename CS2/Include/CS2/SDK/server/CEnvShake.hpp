@@ -16,6 +16,11 @@
 
 
 
+namespace CS2 {
+	namespace client {
+		class IPhysicsMotionController;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -28,13 +33,17 @@ namespace CS2 {
 			PROPERTY(m_Frequency,float32, 0x4b4);
 			PROPERTY(m_Duration,float32, 0x4b8);
 			PROPERTY(m_Radius,float32, 0x4bc);
-			NESTED_PROPERTY(m_stopTime,entity2::GameTime_t, 0x4c0);
-			NESTED_PROPERTY(m_nextShake,entity2::GameTime_t, 0x4c4);
+			NESTED_PROPERTY(m_stopTime,IDENTITY(entity2::GameTime_t), 0x4c0);
+			NESTED_PROPERTY(m_nextShake,IDENTITY(entity2::GameTime_t), 0x4c4);
 			PROPERTY(m_currentAmp,float32, 0x4c8);
 			PROPERTY(m_maxForce,GlobalTypes::Vector, 0x4cc);
-			NESTED_PROPERTY(m_shakeCallback,server::CPhysicsShake, 0x4e0);
+			PROPERTY(m_pShakeController,IDENTITY(client::IPhysicsMotionController*), 0x4d8);
+			NESTED_PROPERTY(m_shakeCallback,IDENTITY(server::CPhysicsShake), 0x4e0);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvShake) == 0x4F8, "CEnvShake size should be 0x4F8");
+
+#endif
 	}
 }

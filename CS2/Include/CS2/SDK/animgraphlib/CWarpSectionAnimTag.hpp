@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_bWarpOrientation,bool, 0x51);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CWarpSectionAnimTag) == 0x58, "CWarpSectionAnimTag size should be 0x58");
+
+#endif
 	}
 }

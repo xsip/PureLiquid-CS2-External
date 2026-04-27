@@ -21,9 +21,12 @@ namespace CS2 {
 		class WeightList  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_weights,GlobalTypes::CUtlVector< float32 >, 0x8);
+			NESTED_PROPERTY(m_weights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x8);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::WeightList) == 0x20, "WeightList size should be 0x20");
+
+#endif
 	}
 }

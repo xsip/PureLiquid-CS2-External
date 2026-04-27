@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_Value,uint32_t, 0x0);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::SceneEventId_t) == 0x4, "SceneEventId_t size should be 0x4");
+
+#endif
 	}
 }

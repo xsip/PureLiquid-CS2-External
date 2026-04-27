@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DistanceCull : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nControlPoint,int32_t, 0x1d0);
-			PROPERTY(m_vecPointOffset,GlobalTypes::Vector, 0x1d4);
-			NESTED_PROPERTY(m_flDistance,particleslib::CParticleCollectionFloatInput, 0x1e0);
-			PROPERTY(m_bCullInside,bool, 0x350);
-			NESTED_PROPERTY(m_nAttribute,particles::ParticleAttributeIndex_t, 0x354);
+			PROPERTY(m_nControlPoint,int32_t, 0x1d8);
+			PROPERTY(m_vecPointOffset,GlobalTypes::Vector, 0x1dc);
+			NESTED_PROPERTY(m_flDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
+			PROPERTY(m_bCullInside,bool, 0x358);
+			NESTED_PROPERTY(m_nAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x35c);
 			S2_PAD(0x188);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_DistanceCull) == 0x358, "C_OP_DistanceCull size should be 0x358");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_DistanceCull) == 0x360, "C_OP_DistanceCull size should be 0x360");
+
+#endif
 	}
 }

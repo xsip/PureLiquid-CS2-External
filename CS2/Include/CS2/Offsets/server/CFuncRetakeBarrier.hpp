@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xC70
+			// Class size: 0xBA0
 			namespace CFuncRetakeBarrier /*: public CS2::server::CDynamicProp*/ {
 				// NO SCHEMA DATA FOUND!
 			}

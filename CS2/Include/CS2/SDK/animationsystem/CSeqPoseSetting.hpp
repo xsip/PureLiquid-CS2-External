@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_eType,int32_t, 0x38);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqPoseSetting) == 0x40, "CSeqPoseSetting size should be 0x40");
+
+#endif
 	}
 }

@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CCPPScriptComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_scriptsToRun,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x30);
+			NESTED_PROPERTY(m_scriptsToRun,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x30);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CCPPScriptComponentUpdater) == 0x60, "CCPPScriptComponentUpdater size should be 0x60");
+
+#endif
 	}
 }

@@ -23,12 +23,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_LerpScalar : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_flOutput,particleslib::CPerParticleFloatInput, 0x1d8);
-			PROPERTY(m_flStartTime,float32, 0x348);
-			PROPERTY(m_flEndTime,float32, 0x34c);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_flOutput,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			PROPERTY(m_flStartTime,float32, 0x350);
+			PROPERTY(m_flEndTime,float32, 0x354);
 			S2_PAD(0x180);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_LerpScalar) == 0x350, "C_OP_LerpScalar size should be 0x350");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_LerpScalar) == 0x358, "C_OP_LerpScalar size should be 0x358");
+
+#endif
 	}
 }

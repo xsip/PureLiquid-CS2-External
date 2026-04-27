@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_flModulatorAmount,float32, 0xb0);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerRealtimeFMSineWave) == 0xB8, "CVoiceContainerRealtimeFMSineWave size should be 0xB8");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x228
 			namespace C_INIT_RemapNamedModelBodyPartToScalar /*: public CS2::particles::C_INIT_RemapNamedModelElementToScalar*/ {
 				// NO SCHEMA DATA FOUND!
 			}

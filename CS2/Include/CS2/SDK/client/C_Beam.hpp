@@ -13,6 +13,7 @@
 #include <SDK/client/C_BaseModelEntity.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
 #include <SDK/client/BeamType_t.hpp>
+#include <SDK/client/CHandle< C_BaseEntity >.hpp>
 #include <SDK/modellib/AttachmentHandle_t.hpp>
 #include <SDK/client/BeamClipStyle_t.hpp>
 
@@ -33,32 +34,35 @@ namespace CS2 {
 	namespace client {
 		class C_Beam : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_flFrameRate,float32, 0xe88);
-			PROPERTY(m_flHDRColorScale,float32, 0xe8c);
-			NESTED_PROPERTY(m_flFireTime,entity2::GameTime_t, 0xe90);
-			PROPERTY(m_flDamage,float32, 0xe94);
-			PROPERTY(m_nNumBeamEnts,uint8_t, 0xe98);
-			PROPERTY(m_queryHandleHalo,int32_t, 0xe9c);
-			PROPERTY(m_hBaseMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xec0);
-			PROPERTY(m_nHaloIndex,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xec8);
-			PROPERTY(m_nBeamType,client::BeamType_t, 0xed0);
-			PROPERTY(m_nBeamFlags,uint32_t, 0xed4);
-			PROPERTY_ARRAY(m_hAttachEntity,client::CHandle< C_BaseEntity >, 10 , 0xed8);
-			PROPERTY_ARRAY(m_nAttachIndex,modellib::AttachmentHandle_t, 10 , 0xf00);
-			PROPERTY(m_fWidth,float32, 0xf0c);
-			PROPERTY(m_fEndWidth,float32, 0xf10);
-			PROPERTY(m_fFadeLength,float32, 0xf14);
-			PROPERTY(m_fHaloScale,float32, 0xf18);
-			PROPERTY(m_fAmplitude,float32, 0xf1c);
-			PROPERTY(m_fStartFrame,float32, 0xf20);
-			PROPERTY(m_fSpeed,float32, 0xf24);
-			PROPERTY(m_flFrame,float32, 0xf28);
-			PROPERTY(m_nClipStyle,client::BeamClipStyle_t, 0xf2c);
-			PROPERTY(m_bTurnedOff,bool, 0xf30);
-			PROPERTY(m_vecEndPos,GlobalTypes::VectorWS, 0xf34);
-			PROPERTY(m_hEndEntity,GlobalTypes::CHandle<client::C_BaseEntity>, 0xf40);
+			PROPERTY(m_flFrameRate,float32, 0xfa8);
+			PROPERTY(m_flHDRColorScale,float32, 0xfac);
+			NESTED_PROPERTY(m_flFireTime,IDENTITY(entity2::GameTime_t), 0xfb0);
+			PROPERTY(m_flDamage,float32, 0xfb4);
+			PROPERTY(m_nNumBeamEnts,uint8_t, 0xfb8);
+			PROPERTY(m_queryHandleHalo,int32_t, 0xfbc);
+			PROPERTY(m_hBaseMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfe0);
+			PROPERTY(m_nHaloIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfe8);
+			PROPERTY(m_nBeamType,IDENTITY(client::BeamType_t), 0xff0);
+			PROPERTY(m_nBeamFlags,uint32_t, 0xff4);
+			// PROPERTY_ARRAY(m_hAttachEntity,IDENTITY(GlobalTypes::CHandle< C_BaseEntity >[10]), 10 , 0xff8);
+			PROPERTY_ARRAY(m_nAttachIndex,IDENTITY(modellib::AttachmentHandle_t), 10 , 0x1020);
+			PROPERTY(m_fWidth,float32, 0x102c);
+			PROPERTY(m_fEndWidth,float32, 0x1030);
+			PROPERTY(m_fFadeLength,float32, 0x1034);
+			PROPERTY(m_fHaloScale,float32, 0x1038);
+			PROPERTY(m_fAmplitude,float32, 0x103c);
+			PROPERTY(m_fStartFrame,float32, 0x1040);
+			PROPERTY(m_fSpeed,float32, 0x1044);
+			PROPERTY(m_flFrame,float32, 0x1048);
+			PROPERTY(m_nClipStyle,IDENTITY(client::BeamClipStyle_t), 0x104c);
+			PROPERTY(m_bTurnedOff,bool, 0x1050);
+			PROPERTY(m_vecEndPos,GlobalTypes::VectorWS, 0x1054);
+			PROPERTY(m_hEndEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x1060);
 			S2_PAD(0xC0);
 		};
-		//static_assert(sizeof(CS2::client::C_Beam) == 0xF48, "C_Beam size should be 0xF48");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_Beam) == 0x1068, "C_Beam size should be 0x1068");
+
+#endif
 	}
 }

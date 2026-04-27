@@ -10,10 +10,10 @@
 #endif
 
 
-#include <SDK/client/C_BaseFlex.hpp>
+#include <SDK/client/CBaseAnimGraph.hpp>
 #include <SDK/client/C_EconWearable.hpp>
 #include <SDK/modellib/AttachmentHandle_t.hpp>
-#include <SDK/client/WaterWakeMode_t.hpp>
+#include <SDK/client/C_BaseCombatCharacter_WaterWakeMode_t.hpp>
 
 
 
@@ -22,16 +22,19 @@
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace client {
-		class C_BaseCombatCharacter : public CS2::client::C_BaseFlex {
+		class C_BaseCombatCharacter : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_hMyWearables,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_EconWearable>>, 0x1350);
-			NESTED_PROPERTY(m_leftFootAttachment,modellib::AttachmentHandle_t, 0x1368);
-			NESTED_PROPERTY(m_rightFootAttachment,modellib::AttachmentHandle_t, 0x1369);
-			PROPERTY(m_nWaterWakeMode,client::WaterWakeMode_t, 0x136c);
-			PROPERTY(m_flWaterWorldZ,float32, 0x1370);
-			PROPERTY(m_flWaterNextTraceTime,float32, 0x1374);
+			// PROPERTY(m_hMyWearables,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_EconWearable>>), 0x1158);
+			NESTED_PROPERTY(m_leftFootAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1170);
+			NESTED_PROPERTY(m_rightFootAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1171);
+			PROPERTY(m_nWaterWakeMode,IDENTITY(client::C_BaseCombatCharacter_WaterWakeMode_t), 0x1174);
+			PROPERTY(m_flWaterWorldZ,float32, 0x1178);
+			PROPERTY(m_flWaterNextTraceTime,float32, 0x117c);
 			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::client::C_BaseCombatCharacter) == 0x13D8, "C_BaseCombatCharacter size should be 0x13D8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BaseCombatCharacter) == 0x11E0, "C_BaseCombatCharacter size should be 0x11E0");
+
+#endif
 	}
 }

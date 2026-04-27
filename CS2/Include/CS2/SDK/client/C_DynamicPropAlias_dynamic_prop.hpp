@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_DynamicPropAlias_dynamic_prop : public CS2::client::C_DynamicProp {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_DynamicPropAlias_dynamic_prop) == 0x13A0, "C_DynamicPropAlias_dynamic_prop size should be 0x13A0");
+
+#endif
 	}
 }

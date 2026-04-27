@@ -21,26 +21,29 @@ namespace CS2 {
 	namespace client {
 		class C_EnvVolumetricFogVolume : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_bActive,bool, 0x608);
-			PROPERTY(m_vBoxMins,GlobalTypes::Vector, 0x60c);
-			PROPERTY(m_vBoxMaxs,GlobalTypes::Vector, 0x618);
-			PROPERTY(m_bStartDisabled,bool, 0x624);
-			PROPERTY(m_bIndirectUseLPVs,bool, 0x625);
-			PROPERTY(m_flStrength,float32, 0x628);
-			PROPERTY(m_nFalloffShape,int32_t, 0x62c);
-			PROPERTY(m_flFalloffExponent,float32, 0x630);
-			PROPERTY(m_flHeightFogDepth,float32, 0x634);
-			PROPERTY(m_fHeightFogEdgeWidth,float32, 0x638);
-			PROPERTY(m_fIndirectLightStrength,float32, 0x63c);
-			PROPERTY(m_fSunLightStrength,float32, 0x640);
-			PROPERTY(m_fNoiseStrength,float32, 0x644);
-			PROPERTY(m_TintColor,GlobalTypes::Color, 0x648);
-			PROPERTY(m_bOverrideTintColor,bool, 0x64c);
-			PROPERTY(m_bOverrideIndirectLightStrength,bool, 0x64d);
-			PROPERTY(m_bOverrideSunLightStrength,bool, 0x64e);
-			PROPERTY(m_bOverrideNoiseStrength,bool, 0x64f);
+			PROPERTY(m_bActive,bool, 0x600);
+			PROPERTY(m_vBoxMins,GlobalTypes::Vector, 0x604);
+			PROPERTY(m_vBoxMaxs,GlobalTypes::Vector, 0x610);
+			PROPERTY(m_bStartDisabled,bool, 0x61c);
+			PROPERTY(m_bIndirectUseLPVs,bool, 0x61d);
+			PROPERTY(m_flStrength,float32, 0x620);
+			PROPERTY(m_nFalloffShape,int32_t, 0x624);
+			PROPERTY(m_flFalloffExponent,float32, 0x628);
+			PROPERTY(m_flHeightFogDepth,float32, 0x62c);
+			PROPERTY(m_fHeightFogEdgeWidth,float32, 0x630);
+			PROPERTY(m_fIndirectLightStrength,float32, 0x634);
+			PROPERTY(m_fSunLightStrength,float32, 0x638);
+			PROPERTY(m_fNoiseStrength,float32, 0x63c);
+			PROPERTY(m_TintColor,GlobalTypes::Color, 0x640);
+			PROPERTY(m_bOverrideTintColor,bool, 0x644);
+			PROPERTY(m_bOverrideIndirectLightStrength,bool, 0x645);
+			PROPERTY(m_bOverrideSunLightStrength,bool, 0x646);
+			PROPERTY(m_bOverrideNoiseStrength,bool, 0x647);
 			S2_PAD(0x48);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvVolumetricFogVolume) == 0x650, "C_EnvVolumetricFogVolume size should be 0x650");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvVolumetricFogVolume) == 0x648, "C_EnvVolumetricFogVolume size should be 0x648");
+
+#endif
 	}
 }

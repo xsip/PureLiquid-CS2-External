@@ -12,7 +12,7 @@
 
 #include <SDK/particles/CParticleFunctionRenderer.hpp>
 #include <SDK/particleslib/CParticleCollectionVecInput.hpp>
-#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
 #include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 
 
@@ -24,15 +24,21 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderLightBeam : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			NESTED_PROPERTY(m_vColorBlend,particleslib::CParticleCollectionVecInput, 0x220);
-			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0x8d8);
-			NESTED_PROPERTY(m_flBrightnessLumensPerMeter,particleslib::CParticleCollectionFloatInput, 0x8e0);
-			PROPERTY(m_bCastShadows,bool, 0xa50);
-			NESTED_PROPERTY(m_flSkirt,particleslib::CParticleCollectionFloatInput, 0xa58);
-			NESTED_PROPERTY(m_flRange,particleslib::CParticleCollectionFloatInput, 0xbc8);
-			NESTED_PROPERTY(m_flThickness,particleslib::CParticleCollectionFloatInput, 0xd38);
-			S2_PAD(0xC88);
+			PROPERTY(m_nMaxAllowed,uint16_t, 0x228);
+			NESTED_PROPERTY(m_vColorBlend,IDENTITY(particleslib::CParticleCollectionVecInput), 0x230);
+			PROPERTY(m_nColorBlendType,IDENTITY(particleslib::ParticleColorBlendType_t), 0x8e8);
+			NESTED_PROPERTY(m_flBrightnessLumensPerMeter,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x8f0);
+			PROPERTY(m_bCastShadows,bool, 0xa60);
+			PROPERTY(m_bDynamicBounce,bool, 0xa61);
+			NESTED_PROPERTY(m_flBounceScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa68);
+			NESTED_PROPERTY(m_flSkirt,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xbd8);
+			NESTED_PROPERTY(m_flRange,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd48);
+			NESTED_PROPERTY(m_flThickness,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xeb8);
+			S2_PAD(0xE00);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderLightBeam) == 0xEA8, "C_OP_RenderLightBeam size should be 0xEA8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderLightBeam) == 0x1028, "C_OP_RenderLightBeam size should be 0x1028");
+
+#endif
 	}
 }

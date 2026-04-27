@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CFollowAttachmentUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_opFixedData,animgraphlib::FollowAttachmentSettings_t, 0x70);
+			NESTED_PROPERTY(m_opFixedData,IDENTITY(animgraphlib::FollowAttachmentSettings_t), 0x70);
 			S2_PAD(0xA0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFollowAttachmentUpdateNode) == 0x110, "CFollowAttachmentUpdateNode size should be 0x110");
+
+#endif
 	}
 }

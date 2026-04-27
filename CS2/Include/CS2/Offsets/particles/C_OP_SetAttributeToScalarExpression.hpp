@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x650
+			// Class size: 0x660
 			namespace C_OP_SetAttributeToScalarExpression /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nExpression = 0x1d0; // particles::ScalarExpressionType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flInput1 = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInput2 = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputRemap = 0x4b8; // particleslib::CParticleRemapFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nOutputField = 0x628; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nSetMethod = 0x62c; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nExpression = 0x1d8; // particles::ScalarExpressionType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flInput1 = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInput2 = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputRemap = 0x4c0; // particleslib::CParticleRemapFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nOutputField = 0x630; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetMethod = 0x634; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

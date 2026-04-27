@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(orbit_distance,float32, 0x30);
 			S2_PAD(0x34);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::inv_image_camera_t) == 0x34, "inv_image_camera_t size should be 0x34");
+
+#endif
 	}
 }

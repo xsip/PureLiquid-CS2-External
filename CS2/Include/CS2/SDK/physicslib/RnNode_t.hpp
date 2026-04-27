@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_nTriangleOffset,uint32_t, 0x1c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnNode_t) == 0x20, "RnNode_t size should be 0x20");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CServerOnlyPointEntity : public CS2::server::CServerOnlyEntity {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CServerOnlyPointEntity) == 0x4A8, "CServerOnlyPointEntity size should be 0x4A8");
+
+#endif
 	}
 }

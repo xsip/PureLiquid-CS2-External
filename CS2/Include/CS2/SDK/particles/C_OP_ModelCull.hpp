@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ModelCull : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			PROPERTY(m_bBoundBox,bool, 0x1d4);
-			PROPERTY(m_bCullOutside,bool, 0x1d5);
-			PROPERTY(m_bUseBones,bool, 0x1d6);
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1d7);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
+			PROPERTY(m_bBoundBox,bool, 0x1dc);
+			PROPERTY(m_bCullOutside,bool, 0x1dd);
+			PROPERTY(m_bUseBones,bool, 0x1de);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1df);
 			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ModelCull) == 0x258, "C_OP_ModelCull size should be 0x258");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ModelCull) == 0x260, "C_OP_ModelCull size should be 0x260");
+
+#endif
 	}
 }

@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CZeroPoseUpdateNode) == 0x60, "CZeroPoseUpdateNode size should be 0x60");
+
+#endif
 	}
 }

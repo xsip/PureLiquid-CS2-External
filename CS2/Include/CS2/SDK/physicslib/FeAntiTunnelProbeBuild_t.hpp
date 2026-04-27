@@ -26,9 +26,12 @@ namespace CS2 {
 			PROPERTY(flCurvature,float32, 0xc);
 			PROPERTY(nFlags,uint32_t, 0x10);
 			PROPERTY(nProbeNode,uint16_t, 0x14);
-			NESTED_PROPERTY(targetNodes,GlobalTypes::CUtlVector< uint16 >, 0x18);
+			NESTED_PROPERTY(targetNodes,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x18);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeAntiTunnelProbeBuild_t) == 0x30, "FeAntiTunnelProbeBuild_t size should be 0x30");
+
+#endif
 	}
 }

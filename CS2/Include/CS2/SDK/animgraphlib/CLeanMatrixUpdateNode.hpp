@@ -26,18 +26,21 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CLeanMatrixUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			PROPERTY_ARRAY(m_frameCorners,int32_t, 3[3] , 0x5c);
-			PROPERTY_ARRAY(m_poses,animgraphlib::CPoseHandle, 9 , 0x80);
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0xa8);
-			PROPERTY(m_blendSource,animgraphlib::AnimVectorSource, 0xc0);
-			NESTED_PROPERTY(m_paramIndex,animgraphlib::CAnimParamHandle, 0xc4);
+			// PROPERTY_ARRAY(m_frameCorners,int32_t, 3[3] , 0x5c);
+			PROPERTY_ARRAY(m_poses,IDENTITY(animgraphlib::CPoseHandle), 9 , 0x80);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0xa8);
+			PROPERTY(m_blendSource,IDENTITY(animgraphlib::AnimVectorSource), 0xc0);
+			NESTED_PROPERTY(m_paramIndex,IDENTITY(animgraphlib::CAnimParamHandle), 0xc4);
 			PROPERTY(m_verticalAxis,GlobalTypes::Vector, 0xc8);
 			PROPERTY(m_horizontalAxis,GlobalTypes::Vector, 0xd4);
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0xe0);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0xe0);
 			PROPERTY(m_flMaxValue,float32, 0xe4);
 			PROPERTY(m_nSequenceMaxFrame,int32_t, 0xe8);
 			S2_PAD(0x98);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CLeanMatrixUpdateNode) == 0xF0, "CLeanMatrixUpdateNode size should be 0xF0");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CFireCrackerBlast : public CS2::server::CInferno {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CFireCrackerBlast) == 0x13B8, "CFireCrackerBlast size should be 0x13B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFireCrackerBlast) == 0x13F0, "CFireCrackerBlast size should be 0x13F0");
+
+#endif
 	}
 }

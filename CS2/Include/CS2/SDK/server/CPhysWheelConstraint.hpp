@@ -37,9 +37,12 @@ namespace CS2 {
 			PROPERTY(m_flMaxSteeringAngle,float32, 0x528);
 			PROPERTY(m_flSteeringAxisFriction,float32, 0x52c);
 			PROPERTY(m_flSpinAxisFriction,float32, 0x530);
-			PROPERTY(m_hSteeringMimicsEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x534);
+			PROPERTY(m_hSteeringMimicsEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x534);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysWheelConstraint) == 0x540, "CPhysWheelConstraint size should be 0x540");
+
+#endif
 	}
 }

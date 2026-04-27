@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class C_EconWearable : public CS2::client::C_EconEntity {
 		public:
-			PROPERTY(m_nForceSkin,int32_t, 0x18c0);
-			PROPERTY(m_bAlwaysAllow,bool, 0x18c4);
+			PROPERTY(m_nForceSkin,int32_t, 0x16c8);
+			PROPERTY(m_bAlwaysAllow,bool, 0x16cc);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_EconWearable) == 0x18C8, "C_EconWearable size should be 0x18C8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EconWearable) == 0x16D0, "C_EconWearable size should be 0x16D0");
+
+#endif
 	}
 }

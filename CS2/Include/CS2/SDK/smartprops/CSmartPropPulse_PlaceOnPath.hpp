@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropPulse_PlaceOnPath : public CS2::smartprops::CSmartPropPulse_BaseQueryableFlow {
 		public:
-			NESTED_PROPERTY(m_OutflowList,pulse_runtime_lib::PulseSelectorOutflowList_t, 0x48);
+			NESTED_PROPERTY(m_OutflowList,IDENTITY(pulse_runtime_lib::PulseSelectorOutflowList_t), 0x48);
 			PROPERTY(m_PathName,GlobalTypes::CUtlString*, 0x60);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropPulse_PlaceOnPath) == 0x68, "CSmartPropPulse_PlaceOnPath size should be 0x68");
+
+#endif
 	}
 }

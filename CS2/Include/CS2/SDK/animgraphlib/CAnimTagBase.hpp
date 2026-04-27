@@ -24,10 +24,13 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CGlobalSymbol, 0x18);
 			PROPERTY(m_sComment,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_group,GlobalTypes::CGlobalSymbol, 0x28);
-			NESTED_PROPERTY(m_tagID,modellib::AnimTagID, 0x30);
+			NESTED_PROPERTY(m_tagID,IDENTITY(modellib::AnimTagID), 0x30);
 			PROPERTY(m_bIsReferenced,bool, 0x48);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimTagBase) == 0x50, "CAnimTagBase size should be 0x50");
+
+#endif
 	}
 }

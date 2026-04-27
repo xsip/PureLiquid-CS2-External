@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_OscillateScalarSimple : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_Rate,float32, 0x1d0);
-			PROPERTY(m_Frequency,float32, 0x1d4);
-			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x1d8);
-			PROPERTY(m_flOscMult,float32, 0x1dc);
-			PROPERTY(m_flOscAdd,float32, 0x1e0);
-			S2_PAD(0x40);
+			PROPERTY(m_Rate,float32, 0x1d8);
+			PROPERTY(m_Frequency,float32, 0x1dc);
+			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			PROPERTY(m_flOscMult,float32, 0x1e4);
+			PROPERTY(m_flOscAdd,float32, 0x1e8);
+			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_OscillateScalarSimple) == 0x210, "C_OP_OscillateScalarSimple size should be 0x210");
+
+#endif
 	}
 }

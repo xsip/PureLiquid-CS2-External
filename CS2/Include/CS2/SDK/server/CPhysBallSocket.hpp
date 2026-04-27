@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_flMaxTwistAngle,float32, 0x51c);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysBallSocket) == 0x520, "CPhysBallSocket size should be 0x520");
+
+#endif
 	}
 }

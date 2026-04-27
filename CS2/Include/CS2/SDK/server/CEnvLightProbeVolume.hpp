@@ -26,15 +26,15 @@ namespace CS2 {
 	namespace server {
 		class CEnvLightProbeVolume : public CS2::server::CBaseEntity {
 		public:
-			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14a0);
-			PROPERTY(m_Entity_hLightProbeTexture_SDF,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14a8);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14b0);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14b8);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14c0);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14c8);
-			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14d0);
-			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14d8);
-			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x14e0);
+			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14a0);
+			PROPERTY(m_Entity_hLightProbeTexture_SDF,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14a8);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14b0);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14b8);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14c0);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14c8);
+			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14d0);
+			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14d8);
+			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x14e0);
 			PROPERTY(m_Entity_vBoxMins,GlobalTypes::Vector, 0x14e8);
 			PROPERTY(m_Entity_vBoxMaxs,GlobalTypes::Vector, 0x14f4);
 			PROPERTY(m_Entity_bMoveable,bool, 0x1500);
@@ -50,6 +50,9 @@ namespace CS2 {
 			PROPERTY(m_Entity_bEnabled,bool, 0x1531);
 			S2_PAD(0x1090);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvLightProbeVolume) == 0x1538, "CEnvLightProbeVolume size should be 0x1538");
+
+#endif
 	}
 }

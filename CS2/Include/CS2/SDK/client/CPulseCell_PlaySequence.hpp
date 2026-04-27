@@ -24,11 +24,14 @@ namespace CS2 {
 		class CPulseCell_PlaySequence : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
 			PROPERTY(m_SequenceName,GlobalTypes::CUtlString*, 0x48);
-			NESTED_PROPERTY(m_PulseAnimEvents,pulse_runtime_lib::PulseNodeDynamicOutflows_t, 0x50);
-			NESTED_PROPERTY(m_OnFinished,pulse_runtime_lib::CPulse_ResumePoint, 0x68);
-			NESTED_PROPERTY(m_OnCanceled,pulse_runtime_lib::CPulse_ResumePoint, 0xb0);
+			NESTED_PROPERTY(m_PulseAnimEvents,IDENTITY(pulse_runtime_lib::PulseNodeDynamicOutflows_t), 0x50);
+			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x68);
+			NESTED_PROPERTY(m_OnCanceled,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xb0);
 			S2_PAD(0xB0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPulseCell_PlaySequence) == 0xF8, "CPulseCell_PlaySequence size should be 0xF8");
+
+#endif
 	}
 }

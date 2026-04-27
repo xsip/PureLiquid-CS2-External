@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace server {
 		class CSoundOpvarSetAutoRoomEntity : public CS2::server::CSoundOpvarSetPointEntity {
 		public:
-			NESTED_PROPERTY(m_traceResults,GlobalTypes::CUtlVector<server::SoundOpvarTraceResult_t>, 0x640);
-			NESTED_PROPERTY(m_doorwayPairs,GlobalTypes::CUtlVector<server::AutoRoomDoorwayPairs_t>, 0x658);
+			NESTED_PROPERTY(m_traceResults,IDENTITY(GlobalTypes::CUtlVector<server::SoundOpvarTraceResult_t>), 0x640);
+			NESTED_PROPERTY(m_doorwayPairs,IDENTITY(GlobalTypes::CUtlVector<server::AutoRoomDoorwayPairs_t>), 0x658);
 			PROPERTY(m_flSize,float32, 0x670);
 			PROPERTY(m_flHeightTolerance,float32, 0x674);
 			PROPERTY(m_flSizeSqr,float32, 0x678);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundOpvarSetAutoRoomEntity) == 0x680, "CSoundOpvarSetAutoRoomEntity size should be 0x680");
+
+#endif
 	}
 }

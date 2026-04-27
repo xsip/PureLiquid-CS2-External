@@ -33,13 +33,16 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nContentVersion,int32_t, 0x0);
 			PROPERTY(m_nMaxDepth,GlobalTypes::CSmartPropAttributeInt, 0x8);
-			NESTED_PROPERTY(m_Variables,GlobalTypes::CUtlVector<smartprops::CSmartPropVariable*>, 0x48);
-			NESTED_PROPERTY(m_Choices,GlobalTypes::CUtlVector<smartprops::CSmartPropChoice*>, 0x60);
-			NESTED_PROPERTY(m_Children,GlobalTypes::CUtlVector<smartprops::CSmartPropElement*>, 0x78);
-			NESTED_PROPERTY(m_Modifiers,GlobalTypes::CUtlVector<smartprops::CSmartPropModifier*>, 0x90);
-			PROPERTY(m_hPulseGraph,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIPulseGraphDef>, 0xa8);
+			NESTED_PROPERTY(m_Variables,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropVariable*>), 0x48);
+			NESTED_PROPERTY(m_Choices,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropChoice*>), 0x60);
+			NESTED_PROPERTY(m_Children,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropElement*>), 0x78);
+			NESTED_PROPERTY(m_Modifiers,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropModifier*>), 0x90);
+			PROPERTY(m_hPulseGraph,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIPulseGraphDef>), 0xa8);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropRoot) == 0xD0, "CSmartPropRoot size should be 0xD0");
+
+#endif
 	}
 }

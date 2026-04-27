@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CItemDefuserAlias_item_defuser : public CS2::server::CItemDefuser {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CItemDefuserAlias_item_defuser) == 0xAE0, "CItemDefuserAlias_item_defuser size should be 0xAE0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CItemDefuserAlias_item_defuser) == 0xA00, "CItemDefuserAlias_item_defuser size should be 0xA00");
+
+#endif
 	}
 }

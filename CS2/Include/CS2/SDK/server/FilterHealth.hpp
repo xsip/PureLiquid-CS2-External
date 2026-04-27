@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_iHealthMax,int32_t, 0x4e8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::FilterHealth) == 0x4F0, "FilterHealth size should be 0x4F0");
+
+#endif
 	}
 }

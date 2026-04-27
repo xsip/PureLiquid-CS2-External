@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x278
+			// Class size: 0x280
 			namespace C_OP_RtEnvCull /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_vecTestDir = 0x1d0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecTestNormal = 0x1dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bCullOnMiss = 0x1e8; // bool m_bCullOnMiss; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bStickInsteadOfCull = 0x1e9; // bool m_bStickInsteadOfCull; |  0x1e9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_RtEnvName = 0x1ea; // char m_RtEnvName[128]; |  0x1ea | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nRTEnvCP = 0x26c; // int32_t m_nRTEnvCP; |  0x26c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nComponent = 0x270; // int32_t m_nComponent; |  0x270 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecTestDir = 0x1d8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecTestNormal = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bCullOnMiss = 0x1f0; // bool m_bCullOnMiss; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStickInsteadOfCull = 0x1f1; // bool m_bStickInsteadOfCull; |  0x1f1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_RtEnvName = 0x1f2; // char m_RtEnvName[128]; |  0x1f2 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nRTEnvCP = 0x274; // int32_t m_nRTEnvCP; |  0x274 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nComponent = 0x278; // int32_t m_nComponent; |  0x278 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

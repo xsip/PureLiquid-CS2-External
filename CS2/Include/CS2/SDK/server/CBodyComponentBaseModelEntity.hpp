@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CBodyComponentBaseModelEntity : public CS2::server::CBodyComponentSkeletonInstance {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CBodyComponentBaseModelEntity) == 0x4B0, "CBodyComponentBaseModelEntity size should be 0x4B0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBodyComponentBaseModelEntity) == 0x4A0, "CBodyComponentBaseModelEntity size should be 0x4A0");
+
+#endif
 	}
 }

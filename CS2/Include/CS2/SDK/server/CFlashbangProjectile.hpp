@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CFlashbangProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_flTimeToDetonate,float32, 0xbb0);
-			PROPERTY(m_numOpponentsHit,uint8_t, 0xbb4);
-			PROPERTY(m_numTeammatesHit,uint8_t, 0xbb5);
+			PROPERTY(m_flTimeToDetonate,float32, 0xa30);
+			PROPERTY(m_numOpponentsHit,uint8_t, 0xa34);
+			PROPERTY(m_numTeammatesHit,uint8_t, 0xa35);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CFlashbangProjectile) == 0xBC0, "CFlashbangProjectile size should be 0xBC0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFlashbangProjectile) == 0xA40, "CFlashbangProjectile size should be 0xA40");
+
+#endif
 	}
 }

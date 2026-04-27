@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapDensityToVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flRadiusScale,float32, 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d4);
-			PROPERTY(m_flDensityMin,float32, 0x1d8);
-			PROPERTY(m_flDensityMax,float32, 0x1dc);
-			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1e0);
-			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1ec);
-			PROPERTY(m_bUseParentDensity,bool, 0x1f8);
-			PROPERTY(m_nVoxelGridResolution,int32_t, 0x1fc);
+			PROPERTY(m_flRadiusScale,float32, 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1dc);
+			PROPERTY(m_flDensityMin,float32, 0x1e0);
+			PROPERTY(m_flDensityMax,float32, 0x1e4);
+			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1e8);
+			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1f4);
+			PROPERTY(m_bUseParentDensity,bool, 0x200);
+			PROPERTY(m_nVoxelGridResolution,int32_t, 0x204);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapDensityToVector) == 0x200, "C_OP_RemapDensityToVector size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapDensityToVector) == 0x208, "C_OP_RemapDensityToVector size should be 0x208");
+
+#endif
 	}
 }

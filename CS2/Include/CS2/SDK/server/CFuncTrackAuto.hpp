@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CFuncTrackAuto : public CS2::server::CFuncTrackChange {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CFuncTrackAuto) == 0x838, "CFuncTrackAuto size should be 0x838");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncTrackAuto) == 0x868, "CFuncTrackAuto size should be 0x868");
+
+#endif
 	}
 }

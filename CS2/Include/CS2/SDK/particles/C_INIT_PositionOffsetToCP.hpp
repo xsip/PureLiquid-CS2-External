@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PositionOffsetToCP : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumberStart,int32_t, 0x1d8);
-			PROPERTY(m_nControlPointNumberEnd,int32_t, 0x1dc);
-			PROPERTY(m_bLocalCoords,bool, 0x1e0);
+			PROPERTY(m_nControlPointNumberStart,int32_t, 0x1e0);
+			PROPERTY(m_nControlPointNumberEnd,int32_t, 0x1e4);
+			PROPERTY(m_bLocalCoords,bool, 0x1e8);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_PositionOffsetToCP) == 0x1E8, "C_INIT_PositionOffsetToCP size should be 0x1E8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_PositionOffsetToCP) == 0x1F0, "C_INIT_PositionOffsetToCP size should be 0x1F0");
+
+#endif
 	}
 }

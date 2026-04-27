@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace particles {
 		class CParticleFunctionInitializer : public CS2::particles::CParticleFunction {
 		public:
-			PROPERTY(m_nAssociatedEmitterIndex,int32_t, 0x1d0);
+			PROPERTY(m_nAssociatedEmitterIndex,int32_t, 0x1d8);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::particles::CParticleFunctionInitializer) == 0x1D8, "CParticleFunctionInitializer size should be 0x1D8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::CParticleFunctionInitializer) == 0x1E0, "CParticleFunctionInitializer size should be 0x1E0");
+
+#endif
 	}
 }

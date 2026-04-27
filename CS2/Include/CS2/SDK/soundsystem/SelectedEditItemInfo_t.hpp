@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace soundsystem {
 		class SelectedEditItemInfo_t  {
 		public:
-			NESTED_PROPERTY(m_EditItems,GlobalTypes::CUtlVector<soundsystem::SosEditItemInfo_t>, 0x0);
+			NESTED_PROPERTY(m_EditItems,IDENTITY(GlobalTypes::CUtlVector<soundsystem::SosEditItemInfo_t>), 0x0);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::SelectedEditItemInfo_t) == 0x18, "SelectedEditItemInfo_t size should be 0x18");
+
+#endif
 	}
 }

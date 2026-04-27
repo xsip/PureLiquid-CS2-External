@@ -15,7 +15,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_drawCalls = 0x18; // GlobalTypes::CUtlLeanVector<modellib::CMaterialDrawDescriptor>  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_drawBounds = 0x28; // GlobalTypes::CUtlLeanVector<mathlib_extended::AABB_t>  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_meshlets = 0x38; // GlobalTypes::CUtlLeanVector<modellib::CMeshletDescriptor>  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_rtProxyDrawCalls = 0x48; // GlobalTypes::CUtlLeanVector<modellib::RTProxyDrawDescriptor_t>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_rtProxyDrawCalls = 0x48; // GlobalTypes::CUtlLeanVector<modellib::CSceneObjectData_RTProxyDrawDescriptor_t>  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_vTintColor = 0x58; // GlobalTypes::Vector4D  | Schema_Atomic | Size: 0x10
 			}
 		}

@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace client {
 		class C_SkyCamera : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_skyboxData,client::sky3dparams_t, 0x608);
-			PROPERTY(m_skyboxSlotToken,GlobalTypes::CUtlStringToken*, 0x698);
-			PROPERTY(m_bUseAngles,bool, 0x69c);
-			PROPERTY(m_pNext,client::C_SkyCamera*, 0x6a0);
+			NESTED_PROPERTY(m_skyboxData,IDENTITY(client::sky3dparams_t), 0x600);
+			PROPERTY(m_skyboxSlotToken,GlobalTypes::CUtlStringToken*, 0x690);
+			PROPERTY(m_bUseAngles,bool, 0x694);
+			PROPERTY(m_pNext,IDENTITY(client::C_SkyCamera*), 0x698);
 			S2_PAD(0xA0);
 		};
-		//static_assert(sizeof(CS2::client::C_SkyCamera) == 0x6A8, "C_SkyCamera size should be 0x6A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SkyCamera) == 0x6A0, "C_SkyCamera size should be 0x6A0");
+
+#endif
 	}
 }

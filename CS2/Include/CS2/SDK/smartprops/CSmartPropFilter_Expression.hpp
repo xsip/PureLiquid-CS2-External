@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_Expression,GlobalTypes::CUtlString*, 0x50);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropFilter_Expression) == 0x58, "CSmartPropFilter_Expression size should be 0x58");
+
+#endif
 	}
 }

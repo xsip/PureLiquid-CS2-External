@@ -10,10 +10,10 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x660
 			namespace CPathNode /*: public CS2::client::C_PointEntity*/ {
-				constexpr std::ptrdiff_t m_vInTangentLocal = 0x608; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOutTangentLocal = 0x614; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_strParentPathUniqueID = 0x620; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_strPathNodeParameter = 0x628; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_vInTangentLocal = 0x600; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vOutTangentLocal = 0x60c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_strParentPathUniqueID = 0x618; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strPathNodeParameter = 0x620; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_xWSPrevParent = 0x630; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_hPath = 0x650; // GlobalTypes::CHandle<client::CPathWithDynamicNodes>  | Schema_Atomic | Size: 0x4
 			}

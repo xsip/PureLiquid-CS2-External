@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xF48
+			// Class size: 0xF50
 			namespace C_OP_RemapCrossProductOfTwoVectorsToVector /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_InputVec1 = 0x1d0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_InputVec2 = 0x888; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_nFieldOutput = 0xf40; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bNormalize = 0xf44; // bool m_bNormalize; |  0xf44 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_InputVec1 = 0x1d8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_InputVec2 = 0x890; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nFieldOutput = 0xf48; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bNormalize = 0xf4c; // bool m_bNormalize; |  0xf4c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

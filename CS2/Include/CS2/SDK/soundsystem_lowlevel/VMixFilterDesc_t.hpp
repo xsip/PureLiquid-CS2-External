@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class VMixFilterDesc_t  {
 		public:
-			PROPERTY(m_nFilterType,soundsystem_lowlevel::VMixFilterType_t, 0x0);
-			PROPERTY(m_nFilterSlope,soundsystem_lowlevel::VMixFilterSlope_t, 0x2);
+			PROPERTY(m_nFilterType,IDENTITY(soundsystem_lowlevel::VMixFilterType_t), 0x0);
+			PROPERTY(m_nFilterSlope,IDENTITY(soundsystem_lowlevel::VMixFilterSlope_t), 0x2);
 			PROPERTY(m_bEnabled,bool, 0x3);
 			PROPERTY(m_fldbGain,float32, 0x4);
 			PROPERTY(m_flCutoffFreq,float32, 0x8);
 			PROPERTY(m_flQ,float32, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixFilterDesc_t) == 0x10, "VMixFilterDesc_t size should be 0x10");
+
+#endif
 	}
 }

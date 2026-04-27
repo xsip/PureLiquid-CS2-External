@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x6A0
+			// Class size: 0x698
 			namespace CEnvSoundscapeProxy /*: public CS2::client::CEnvSoundscape*/ {
-				constexpr std::ptrdiff_t m_MainSoundscapeName = 0x698; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_MainSoundscapeName = 0x690; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

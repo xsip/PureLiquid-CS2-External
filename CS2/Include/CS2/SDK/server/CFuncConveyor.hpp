@@ -23,17 +23,20 @@ namespace CS2 {
 	namespace server {
 		class CFuncConveyor : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_szConveyorModels,GlobalTypes::CUtlSymbolLarge*, 0x730);
-			PROPERTY(m_flTransitionDurationSeconds,float32, 0x738);
-			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x73c);
-			PROPERTY(m_vecMoveDirEntitySpace,GlobalTypes::Vector, 0x748);
-			PROPERTY(m_flTargetSpeed,float32, 0x754);
-			NESTED_PROPERTY(m_nTransitionStartTick,entity2::GameTick_t, 0x758);
-			PROPERTY(m_nTransitionDurationTicks,int32_t, 0x75c);
-			PROPERTY(m_flTransitionStartSpeed,float32, 0x760);
-			PROPERTY(m_hConveyorModels,server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>, 0x768);
+			PROPERTY(m_szConveyorModels,GlobalTypes::CUtlSymbolLarge*, 0x768);
+			PROPERTY(m_flTransitionDurationSeconds,float32, 0x770);
+			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x774);
+			PROPERTY(m_vecMoveDirEntitySpace,GlobalTypes::Vector, 0x780);
+			PROPERTY(m_flTargetSpeed,float32, 0x78c);
+			NESTED_PROPERTY(m_nTransitionStartTick,IDENTITY(entity2::GameTick_t), 0x790);
+			PROPERTY(m_nTransitionDurationTicks,int32_t, 0x794);
+			PROPERTY(m_flTransitionStartSpeed,float32, 0x798);
+			// PROPERTY(m_hConveyorModels,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>), 0x7a0);
 			S2_PAD(0x50);
 		};
-		//static_assert(sizeof(CS2::server::CFuncConveyor) == 0x780, "CFuncConveyor size should be 0x780");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncConveyor) == 0x7B8, "CFuncConveyor size should be 0x7B8");
+
+#endif
 	}
 }

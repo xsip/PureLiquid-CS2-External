@@ -24,13 +24,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_BasicMovement : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_Gravity,particleslib::CParticleCollectionVecInput, 0x1d0);
-			NESTED_PROPERTY(m_fDrag,particleslib::CParticleCollectionFloatInput, 0x888);
-			NESTED_PROPERTY(m_massControls,particles::CParticleMassCalculationParameters, 0x9f8);
-			PROPERTY(m_nMaxConstraintPasses,int32_t, 0xe50);
-			PROPERTY(m_bUseNewCode,bool, 0xe54);
+			NESTED_PROPERTY(m_Gravity,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d8);
+			NESTED_PROPERTY(m_fDrag,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x890);
+			NESTED_PROPERTY(m_massControls,IDENTITY(particles::CParticleMassCalculationParameters), 0xa00);
+			PROPERTY(m_nMaxConstraintPasses,int32_t, 0xe58);
+			PROPERTY(m_bUseNewCode,bool, 0xe5c);
 			S2_PAD(0xC88);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_BasicMovement) == 0xE58, "C_OP_BasicMovement size should be 0xE58");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_BasicMovement) == 0xE60, "C_OP_BasicMovement size should be 0xE60");
+
+#endif
 	}
 }

@@ -14,7 +14,7 @@
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 #include <SDK/particleslib/CPerParticleVecInput.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -25,17 +25,20 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DistanceBetweenVecs : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_vecPoint1,particleslib::CPerParticleVecInput, 0x1d8);
-			NESTED_PROPERTY(m_vecPoint2,particleslib::CPerParticleVecInput, 0x890);
-			NESTED_PROPERTY(m_flInputMin,particleslib::CPerParticleFloatInput, 0xf48);
-			NESTED_PROPERTY(m_flInputMax,particleslib::CPerParticleFloatInput, 0x10b8);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CPerParticleFloatInput, 0x1228);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CPerParticleFloatInput, 0x1398);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x1508);
-			PROPERTY(m_bDeltaTime,bool, 0x150c);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_vecPoint1,IDENTITY(particleslib::CPerParticleVecInput), 0x1e0);
+			NESTED_PROPERTY(m_vecPoint2,IDENTITY(particleslib::CPerParticleVecInput), 0x898);
+			NESTED_PROPERTY(m_flInputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0xf50);
+			NESTED_PROPERTY(m_flInputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x10c0);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1230);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x13a0);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x1510);
+			PROPERTY(m_bDeltaTime,bool, 0x1514);
 			S2_PAD(0x1340);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenVecs) == 0x1510, "C_OP_DistanceBetweenVecs size should be 0x1510");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenVecs) == 0x1518, "C_OP_DistanceBetweenVecs size should be 0x1518");
+
+#endif
 	}
 }

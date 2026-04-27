@@ -25,22 +25,25 @@ namespace CS2 {
 	namespace server {
 		class CTriggerHurt : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_flOriginalDamage,float32, 0x890);
-			PROPERTY(m_flDamage,float32, 0x894);
-			PROPERTY(m_flDamageCap,float32, 0x898);
-			NESTED_PROPERTY(m_flLastDmgTime,entity2::GameTime_t, 0x89c);
-			PROPERTY(m_flForgivenessDelay,float32, 0x8a0);
-			PROPERTY(m_bitsDamageInflict,client::DamageTypes_t, 0x8a4);
-			PROPERTY(m_damageModel,int32_t, 0x8a8);
-			PROPERTY(m_bNoDmgForce,bool, 0x8ac);
-			PROPERTY(m_vDamageForce,GlobalTypes::Vector, 0x8b0);
-			PROPERTY(m_thinkAlways,bool, 0x8bc);
-			PROPERTY(m_hurtThinkPeriod,float32, 0x8c0);
-			NESTED_PROPERTY(m_OnHurt,entity2::CEntityIOOutput, 0x8c8);
-			NESTED_PROPERTY(m_OnHurtPlayer,entity2::CEntityIOOutput, 0x8e0);
-			NESTED_PROPERTY(m_hurtEntities,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x8f8);
-			S2_PAD(0x80);
+			PROPERTY(m_flOriginalDamage,float32, 0x8c8);
+			PROPERTY(m_flDamage,float32, 0x8cc);
+			PROPERTY(m_flDamageCap,float32, 0x8d0);
+			NESTED_PROPERTY(m_flLastDmgTime,IDENTITY(entity2::GameTime_t), 0x8d4);
+			PROPERTY(m_flForgivenessDelay,float32, 0x8d8);
+			PROPERTY(m_bitsDamageInflict,IDENTITY(client::DamageTypes_t), 0x8dc);
+			PROPERTY(m_damageModel,int32_t, 0x8e0);
+			PROPERTY(m_bNoDmgForce,bool, 0x8e4);
+			PROPERTY(m_vDamageForce,GlobalTypes::Vector, 0x8e8);
+			PROPERTY(m_thinkAlways,bool, 0x8f4);
+			PROPERTY(m_hurtThinkPeriod,float32, 0x8f8);
+			NESTED_PROPERTY(m_OnHurt,IDENTITY(entity2::CEntityIOOutput), 0x900);
+			NESTED_PROPERTY(m_OnHurtPlayer,IDENTITY(entity2::CEntityIOOutput), 0x918);
+			NESTED_PROPERTY(m_hurtEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x930);
+			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerHurt) == 0x910, "CTriggerHurt size should be 0x910");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerHurt) == 0x950, "CTriggerHurt size should be 0x950");
+
+#endif
 	}
 }

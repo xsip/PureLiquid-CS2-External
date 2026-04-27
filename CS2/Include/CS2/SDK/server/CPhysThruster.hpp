@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_localOrigin,GlobalTypes::Vector, 0x508);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysThruster) == 0x518, "CPhysThruster size should be 0x518");
+
+#endif
 	}
 }

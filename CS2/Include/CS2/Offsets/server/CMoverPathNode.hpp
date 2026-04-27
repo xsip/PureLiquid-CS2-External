@@ -10,11 +10,11 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x5A0
 			namespace CMoverPathNode /*: public CS2::server::CPathNode*/ {
-				constexpr std::ptrdiff_t m_OnStartFromOrInSegment = 0x500; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnStoppedAtOrInSegment = 0x520; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnPassThrough = 0x540; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnPassThroughForward = 0x560; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnPassThroughReverse = 0x580; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnStartFromOrInSegment = 0x500; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnStoppedAtOrInSegment = 0x520; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnPassThrough = 0x540; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnPassThroughForward = 0x560; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnPassThroughReverse = 0x580; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

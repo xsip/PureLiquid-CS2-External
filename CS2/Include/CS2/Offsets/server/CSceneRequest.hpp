@@ -8,11 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x20
+			// Class size: 0x88
 			namespace CSceneRequest /**/ {
-				constexpr std::ptrdiff_t m_szPayloadTypeName = 0x0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_uHandle = 0x8; // server::SceneRequestHandle_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_state = 0xc; // server::ESceneRequestState_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_szPayloadVDataName = 0x0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_uHandle = 0x8; // client::SceneRequestHandle_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_state = 0xc; // client::ESceneRequestState_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nNPCBehaviorOverride = 0x10; // client::ENPCBehaviorOverride_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vecActorMap = 0x18; // GlobalTypes::CUtlVector<server::SceneRequestTargetMapPair_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecAnchorMap = 0x30; // GlobalTypes::CUtlVector<server::SceneRequestTargetMapPair_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecGraphMap = 0x48; // GlobalTypes::CUtlVector<server::SceneRequestTargetMapPair_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hOwner = 0x60; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nameMapKV3 = 0x68; // GlobalTypes::KeyValues3  | Schema_Atomic | Size: 0x10
 			}
 		}
 	}

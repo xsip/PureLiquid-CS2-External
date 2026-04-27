@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace client {
 		class C_ShatterGlassShardPhysics : public CS2::client::C_PhysicsProp {
 		public:
-			NESTED_PROPERTY(m_ShardDesc,client::shard_model_desc_t, 0x12e8);
+			NESTED_PROPERTY(m_ShardDesc,IDENTITY(client::shard_model_desc_t), 0x12e8);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_ShatterGlassShardPhysics) == 0x1370, "C_ShatterGlassShardPhysics size should be 0x1370");
+
+#endif
 	}
 }

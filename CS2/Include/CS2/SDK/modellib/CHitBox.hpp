@@ -35,6 +35,9 @@ namespace CS2 {
 			PROPERTY(m_nHitBoxIndex,uint16_t, 0x48);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CHitBox) == 0x70, "CHitBox size should be 0x70");
+
+#endif
 	}
 }

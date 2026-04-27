@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CPathCornerCrash : public CS2::server::CPathCorner {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathCornerCrash) == 0x4C8, "CPathCornerCrash size should be 0x4C8");
+
+#endif
 	}
 }

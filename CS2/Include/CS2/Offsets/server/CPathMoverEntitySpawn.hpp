@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0x20
 			namespace CPathMoverEntitySpawn /**/ {
 				constexpr std::ptrdiff_t hMover = 0x0; // GlobalTypes::CHandle<server::CFuncMover>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t vecOtherEntities = 0x8; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t vecOtherEntities = 0x8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

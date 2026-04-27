@@ -24,15 +24,18 @@ namespace CS2 {
 		class CompositeMaterialInputContainer_t  {
 		public:
 			PROPERTY(m_bEnabled,bool, 0x0);
-			PROPERTY(m_nCompositeMaterialInputContainerSourceType,compositematerialslib::CompositeMaterialInputContainerSourceType_t, 0x4);
-			PROPERTY(m_strSpecificContainerMaterial,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIMaterial2>>, 0x8);
+			PROPERTY(m_nCompositeMaterialInputContainerSourceType,IDENTITY(compositematerialslib::CompositeMaterialInputContainerSourceType_t), 0x4);
+			PROPERTY(m_strSpecificContainerMaterial,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIMaterial2>>), 0x8);
 			PROPERTY(m_strAttrName,GlobalTypes::CUtlString*, 0xe8);
 			PROPERTY(m_strAlias,GlobalTypes::CUtlString*, 0xf0);
-			NESTED_PROPERTY(m_vecLooseVariables,GlobalTypes::CUtlVector<compositematerialslib::CompositeMaterialInputLooseVariable_t>, 0xf8);
+			NESTED_PROPERTY(m_vecLooseVariables,IDENTITY(GlobalTypes::CUtlVector<compositematerialslib::CompositeMaterialInputLooseVariable_t>), 0xf8);
 			PROPERTY(m_strAttrNameForVar,GlobalTypes::CUtlString*, 0x110);
 			PROPERTY(m_bExposeExternally,bool, 0x118);
 			S2_PAD(0x138);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CompositeMaterialInputContainer_t) == 0x138, "CompositeMaterialInputContainer_t size should be 0x138");
+
+#endif
 	}
 }

@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class CFilterProximity : public CS2::client::CBaseFilter {
 		public:
-			PROPERTY(m_flRadius,float32, 0x640);
+			PROPERTY(m_flRadius,float32, 0x638);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::CFilterProximity) == 0x648, "CFilterProximity size should be 0x648");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CFilterProximity) == 0x640, "CFilterProximity size should be 0x640");
+
+#endif
 	}
 }

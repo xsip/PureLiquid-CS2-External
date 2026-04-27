@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class CPointChildModifier : public CS2::client::C_PointEntity {
 		public:
-			PROPERTY(m_bOrphanInsteadOfDeletingChildrenOnRemove,bool, 0x608);
+			PROPERTY(m_bOrphanInsteadOfDeletingChildrenOnRemove,bool, 0x600);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::CPointChildModifier) == 0x610, "CPointChildModifier size should be 0x610");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPointChildModifier) == 0x608, "CPointChildModifier size should be 0x608");
+
+#endif
 	}
 }

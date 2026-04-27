@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0xE8
+			// Class size: 0xF0
 			namespace CPulseTurtleGraphicsCursor /*: public CS2::pulse_runtime_lib::CPulseExecCursor*/ {
-				constexpr std::ptrdiff_t m_Color = 0xd0; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vPos = 0xd4; // GlobalTypes::Vector2D  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flHeadingDeg = 0xdc; // float32 m_flHeadingDeg; |  0xdc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bPenUp = 0xe0; // bool m_bPenUp; |  0xe0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_Color = 0xd8; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_vPos = 0xdc; // GlobalTypes::Vector2D  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flHeadingDeg = 0xe4; // float32 m_flHeadingDeg; |  0xe4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bPenUp = 0xe8; // bool m_bPenUp; |  0xe8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

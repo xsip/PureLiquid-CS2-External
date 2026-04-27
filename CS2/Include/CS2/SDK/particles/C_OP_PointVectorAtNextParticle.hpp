@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PointVectorAtNextParticle : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
 			S2_PAD(0x178);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PointVectorAtNextParticle) == 0x348, "C_OP_PointVectorAtNextParticle size should be 0x348");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PointVectorAtNextParticle) == 0x350, "C_OP_PointVectorAtNextParticle size should be 0x350");
+
+#endif
 	}
 }

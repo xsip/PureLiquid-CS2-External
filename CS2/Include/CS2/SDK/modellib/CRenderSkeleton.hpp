@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace modellib {
 		class CRenderSkeleton  {
 		public:
-			NESTED_PROPERTY(m_bones,GlobalTypes::CUtlVector<modellib::RenderSkeletonBone_t>, 0x0);
-			NESTED_PROPERTY(m_boneParents,GlobalTypes::CUtlVector< int32 >, 0x30);
+			NESTED_PROPERTY(m_bones,IDENTITY(GlobalTypes::CUtlVector<modellib::RenderSkeletonBone_t>), 0x0);
+			NESTED_PROPERTY(m_boneParents,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x30);
 			PROPERTY(m_nBoneWeightCount,int32_t, 0x48);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CRenderSkeleton) == 0x50, "CRenderSkeleton size should be 0x50");
+
+#endif
 	}
 }

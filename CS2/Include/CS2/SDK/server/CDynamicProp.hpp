@@ -23,30 +23,33 @@ namespace CS2 {
 	namespace server {
 		class CDynamicProp : public CS2::server::CBreakableProp {
 		public:
-			PROPERTY(m_bCreateNavObstacle,bool, 0xba8);
-			PROPERTY(m_bNavObstacleUpdatesOverridden,bool, 0xba9);
-			PROPERTY(m_bUseHitboxesForRenderBox,bool, 0xbaa);
-			PROPERTY(m_bUseAnimGraph,bool, 0xbab);
-			NESTED_PROPERTY(m_pOutputAnimBegun,entity2::CEntityIOOutput, 0xbb0);
-			NESTED_PROPERTY(m_pOutputAnimOver,entity2::CEntityIOOutput, 0xbc8);
-			NESTED_PROPERTY(m_pOutputAnimLoopCycleOver,entity2::CEntityIOOutput, 0xbe0);
-			NESTED_PROPERTY(m_OnAnimReachedStart,entity2::CEntityIOOutput, 0xbf8);
-			NESTED_PROPERTY(m_OnAnimReachedEnd,entity2::CEntityIOOutput, 0xc10);
-			PROPERTY(m_iszIdleAnim,GlobalTypes::CUtlSymbolLarge*, 0xc28);
-			PROPERTY(m_nIdleAnimLoopMode,client::AnimLoopMode_t, 0xc30);
-			PROPERTY(m_bRandomizeCycle,bool, 0xc34);
-			PROPERTY(m_bStartDisabled,bool, 0xc35);
-			PROPERTY(m_bFiredStartEndOutput,bool, 0xc36);
-			PROPERTY(m_bForceNpcExclude,bool, 0xc37);
-			PROPERTY(m_bCreateNonSolid,bool, 0xc38);
-			PROPERTY(m_bIsOverrideProp,bool, 0xc39);
-			PROPERTY(m_iInitialGlowState,int32_t, 0xc3c);
-			PROPERTY(m_nGlowRange,int32_t, 0xc40);
-			PROPERTY(m_nGlowRangeMin,int32_t, 0xc44);
-			PROPERTY(m_glowColor,GlobalTypes::Color, 0xc48);
-			PROPERTY(m_nGlowTeam,int32_t, 0xc4c);
+			PROPERTY(m_bCreateNavObstacle,bool, 0xad8);
+			PROPERTY(m_bNavObstacleUpdatesOverridden,bool, 0xad9);
+			PROPERTY(m_bUseHitboxesForRenderBox,bool, 0xada);
+			PROPERTY(m_bUseAnimGraph,bool, 0xadb);
+			NESTED_PROPERTY(m_pOutputAnimBegun,IDENTITY(entity2::CEntityIOOutput), 0xae0);
+			NESTED_PROPERTY(m_pOutputAnimOver,IDENTITY(entity2::CEntityIOOutput), 0xaf8);
+			NESTED_PROPERTY(m_pOutputAnimLoopCycleOver,IDENTITY(entity2::CEntityIOOutput), 0xb10);
+			NESTED_PROPERTY(m_OnAnimReachedStart,IDENTITY(entity2::CEntityIOOutput), 0xb28);
+			NESTED_PROPERTY(m_OnAnimReachedEnd,IDENTITY(entity2::CEntityIOOutput), 0xb40);
+			PROPERTY(m_iszIdleAnim,GlobalTypes::CUtlSymbolLarge*, 0xb58);
+			PROPERTY(m_nIdleAnimLoopMode,IDENTITY(client::AnimLoopMode_t), 0xb60);
+			PROPERTY(m_bRandomizeCycle,bool, 0xb64);
+			PROPERTY(m_bStartDisabled,bool, 0xb65);
+			PROPERTY(m_bFiredStartEndOutput,bool, 0xb66);
+			PROPERTY(m_bForceNpcExclude,bool, 0xb67);
+			PROPERTY(m_bCreateNonSolid,bool, 0xb68);
+			PROPERTY(m_bIsOverrideProp,bool, 0xb69);
+			PROPERTY(m_iInitialGlowState,int32_t, 0xb6c);
+			PROPERTY(m_nGlowRange,int32_t, 0xb70);
+			PROPERTY(m_nGlowRangeMin,int32_t, 0xb74);
+			PROPERTY(m_glowColor,GlobalTypes::Color, 0xb78);
+			PROPERTY(m_nGlowTeam,int32_t, 0xb7c);
 			S2_PAD(0xB0);
 		};
-		//static_assert(sizeof(CS2::server::CDynamicProp) == 0xC50, "CDynamicProp size should be 0xC50");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CDynamicProp) == 0xB80, "CDynamicProp size should be 0xB80");
+
+#endif
 	}
 }

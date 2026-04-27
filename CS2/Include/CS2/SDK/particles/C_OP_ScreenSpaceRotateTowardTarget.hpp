@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionOperator.hpp>
 #include <SDK/particleslib/CPerParticleVecInput.hpp>
 #include <SDK/particleslib/CParticleRemapFloatInput.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
@@ -25,12 +25,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ScreenSpaceRotateTowardTarget : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_vecTargetPosition,particleslib::CPerParticleVecInput, 0x1d0);
-			NESTED_PROPERTY(m_flOutputRemap,particleslib::CParticleRemapFloatInput, 0x888);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x9f8);
-			NESTED_PROPERTY(m_flScreenEdgeAlignmentDistance,particleslib::CPerParticleFloatInput, 0xa00);
+			NESTED_PROPERTY(m_vecTargetPosition,IDENTITY(particleslib::CPerParticleVecInput), 0x1d8);
+			NESTED_PROPERTY(m_flOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x890);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0xa00);
+			NESTED_PROPERTY(m_flScreenEdgeAlignmentDistance,IDENTITY(particleslib::CPerParticleFloatInput), 0xa08);
 			S2_PAD(0x9A0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ScreenSpaceRotateTowardTarget) == 0xB70, "C_OP_ScreenSpaceRotateTowardTarget size should be 0xB70");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ScreenSpaceRotateTowardTarget) == 0xB78, "C_OP_ScreenSpaceRotateTowardTarget size should be 0xB78");
+
+#endif
 	}
 }

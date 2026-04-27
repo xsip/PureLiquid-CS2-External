@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStepsRemainingMetricEvaluator : public CS2::animgraphlib::CMotionMetricEvaluator {
 		public:
-			NESTED_PROPERTY(m_footIndices,GlobalTypes::CUtlVector< int32 >, 0x50);
+			NESTED_PROPERTY(m_footIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x50);
 			PROPERTY(m_flMinStepsRemaining,float32, 0x68);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStepsRemainingMetricEvaluator) == 0x70, "CStepsRemainingMetricEvaluator size should be 0x70");
+
+#endif
 	}
 }

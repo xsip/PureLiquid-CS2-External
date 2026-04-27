@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_flMaxInterval,float32, 0xc);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CRandSimTimer) == 0x10, "CRandSimTimer size should be 0x10");
+
+#endif
 	}
 }

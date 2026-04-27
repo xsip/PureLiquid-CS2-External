@@ -27,9 +27,12 @@ namespace CS2 {
 			PROPERTY_ARRAY(nNodeY0,uint16_t, 4 , 0x18);
 			PROPERTY_ARRAY(nNodeY1,uint16_t, 4 , 0x20);
 			PROPERTY_ARRAY(nDummy,uint16_t, 4 , 0x28);
-			NESTED_PROPERTY(qAdjust,mathlib_extended::FourQuaternions, 0x30);
+			NESTED_PROPERTY(qAdjust,IDENTITY(mathlib_extended::FourQuaternions), 0x30);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeSimdNodeBase_t) == 0x70, "FeSimdNodeBase_t size should be 0x70");
+
+#endif
 	}
 }

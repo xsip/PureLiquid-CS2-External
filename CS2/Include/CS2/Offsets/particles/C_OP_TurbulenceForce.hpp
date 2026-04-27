@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x228
 			namespace C_OP_TurbulenceForce /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_flNoiseCoordScale0 = 0x1e0; // float32 m_flNoiseCoordScale0; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNoiseCoordScale1 = 0x1e4; // float32 m_flNoiseCoordScale1; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNoiseCoordScale2 = 0x1e8; // float32 m_flNoiseCoordScale2; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNoiseCoordScale3 = 0x1ec; // float32 m_flNoiseCoordScale3; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecNoiseAmount0 = 0x1f0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecNoiseAmount1 = 0x1fc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecNoiseAmount2 = 0x208; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecNoiseAmount3 = 0x214; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flNoiseCoordScale0 = 0x1e8; // float32 m_flNoiseCoordScale0; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNoiseCoordScale1 = 0x1ec; // float32 m_flNoiseCoordScale1; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNoiseCoordScale2 = 0x1f0; // float32 m_flNoiseCoordScale2; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNoiseCoordScale3 = 0x1f4; // float32 m_flNoiseCoordScale3; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecNoiseAmount0 = 0x1f8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecNoiseAmount1 = 0x204; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecNoiseAmount2 = 0x210; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecNoiseAmount3 = 0x21c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

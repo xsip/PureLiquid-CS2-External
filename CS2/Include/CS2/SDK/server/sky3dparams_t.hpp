@@ -25,10 +25,13 @@ namespace CS2 {
 			PROPERTY(origin,GlobalTypes::Vector, 0xc);
 			PROPERTY(bClip3DSkyBoxNearToWorldFar,bool, 0x18);
 			PROPERTY(flClip3DSkyBoxNearToWorldFarOffset,float32, 0x1c);
-			NESTED_PROPERTY(fog,server::fogparams_t, 0x20);
+			NESTED_PROPERTY(fog,IDENTITY(server::fogparams_t), 0x20);
 			PROPERTY(m_nWorldGroupID,GlobalTypes::WorldGroupId_t, 0x88);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::sky3dparams_t) == 0x90, "sky3dparams_t size should be 0x90");
+
+#endif
 	}
 }

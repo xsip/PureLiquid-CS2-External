@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionGraphUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			PROPERTY(m_pMotionGraph,GlobalTypes::CSmartPtr<animgraphlib::CMotionGraph>, 0x58);
+			PROPERTY(m_pMotionGraph,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CMotionGraph>), 0x58);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionGraphUpdateNode) == 0x68, "CMotionGraphUpdateNode size should be 0x68");
+
+#endif
 	}
 }

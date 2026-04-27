@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1658
+			// Class size: 0x1460
 			namespace C_CSObserverPawn /*: public CS2::client::C_CSPlayerPawnBase*/ {
-				constexpr std::ptrdiff_t m_hDetectParentChange = 0x1650; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hDetectParentChange = 0x1458; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

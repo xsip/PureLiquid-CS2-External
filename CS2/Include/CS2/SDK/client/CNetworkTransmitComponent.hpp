@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_nTransmitStateOwnedCounter,uint8_t, 0x184);
 			S2_PAD(0x1D0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CNetworkTransmitComponent) == 0x1D0, "CNetworkTransmitComponent size should be 0x1D0");
+
+#endif
 	}
 }

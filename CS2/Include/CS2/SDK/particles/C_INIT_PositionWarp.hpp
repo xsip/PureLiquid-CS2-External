@@ -22,18 +22,21 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_PositionWarp : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_vecWarpMin,particleslib::CParticleCollectionVecInput, 0x1d8);
-			NESTED_PROPERTY(m_vecWarpMax,particleslib::CParticleCollectionVecInput, 0x890);
-			PROPERTY(m_nScaleControlPointNumber,int32_t, 0xf48);
-			PROPERTY(m_nControlPointNumber,int32_t, 0xf4c);
-			PROPERTY(m_nRadiusComponent,int32_t, 0xf50);
-			PROPERTY(m_flWarpTime,float32, 0xf54);
-			PROPERTY(m_flWarpStartTime,float32, 0xf58);
-			PROPERTY(m_flPrevPosScale,float32, 0xf5c);
-			PROPERTY(m_bInvertWarp,bool, 0xf60);
-			PROPERTY(m_bUseCount,bool, 0xf61);
+			NESTED_PROPERTY(m_vecWarpMin,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			NESTED_PROPERTY(m_vecWarpMax,IDENTITY(particleslib::CParticleCollectionVecInput), 0x898);
+			PROPERTY(m_nScaleControlPointNumber,int32_t, 0xf50);
+			PROPERTY(m_nControlPointNumber,int32_t, 0xf54);
+			PROPERTY(m_nRadiusComponent,int32_t, 0xf58);
+			PROPERTY(m_flWarpTime,float32, 0xf5c);
+			PROPERTY(m_flWarpStartTime,float32, 0xf60);
+			PROPERTY(m_flPrevPosScale,float32, 0xf64);
+			PROPERTY(m_bInvertWarp,bool, 0xf68);
+			PROPERTY(m_bUseCount,bool, 0xf69);
 			S2_PAD(0xD90);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_PositionWarp) == 0xF68, "C_INIT_PositionWarp size should be 0xF68");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_PositionWarp) == 0xF70, "C_INIT_PositionWarp size should be 0xF70");
+
+#endif
 	}
 }

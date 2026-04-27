@@ -22,9 +22,12 @@ namespace CS2 {
 		class RotatorHistoryEntry_t  {
 		public:
 			PROPERTY(qInvChange,GlobalTypes::Quaternion, 0x0);
-			NESTED_PROPERTY(flTimeRotationStart,entity2::GameTime_t, 0x10);
+			NESTED_PROPERTY(flTimeRotationStart,IDENTITY(entity2::GameTime_t), 0x10);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::RotatorHistoryEntry_t) == 0x20, "RotatorHistoryEntry_t size should be 0x20");
+
+#endif
 	}
 }

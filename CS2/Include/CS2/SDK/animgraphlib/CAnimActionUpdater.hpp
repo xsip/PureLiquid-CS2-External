@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimActionUpdater) == 0x18, "CAnimActionUpdater size should be 0x18");
+
+#endif
 	}
 }

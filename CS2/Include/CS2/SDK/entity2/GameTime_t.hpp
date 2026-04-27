@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_Value,float32, 0x0);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::entity2::GameTime_t) == 0x4, "GameTime_t size should be 0x4");
+
+#endif
 	}
 }

@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CBtActionParachutePositioning : public CS2::server::CBtNode {
 		public:
-			NESTED_PROPERTY(m_ActionTimer,server::CountdownTimer, 0x58);
+			NESTED_PROPERTY(m_ActionTimer,IDENTITY(server::CountdownTimer), 0x58);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBtActionParachutePositioning) == 0x78, "CBtActionParachutePositioning size should be 0x78");
+
+#endif
 	}
 }

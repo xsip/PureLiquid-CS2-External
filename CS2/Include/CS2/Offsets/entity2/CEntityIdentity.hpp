@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace entity2 {
 			// Class size: 0x70
 			namespace CEntityIdentity /**/ {
-				constexpr std::ptrdiff_t m_nameStringableIndex = 0x14; // int32_t m_nameStringableIndex; |  0x14 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nameStringTableIndex = 0x14; // int32_t m_nameStringTableIndex; |  0x14 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_name = 0x18; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_designerName = 0x20; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_flags = 0x30; // uint32_t m_flags; |  0x30 | Schema_Builtin | Size: 0x4

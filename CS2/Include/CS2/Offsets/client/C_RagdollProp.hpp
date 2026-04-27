@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x11F8
+			// Class size: 0x11E0
 			namespace C_RagdollProp /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_ragEnabled = 0x1170; // GlobalTypes::C_NetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_ragPos = 0x1188; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_ragAngles = 0x11a0; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::QAngle>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flBlendWeight = 0x11b8; // float32 m_flBlendWeight; |  0x11b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hRagdollSource = 0x11bc; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iEyeAttachment = 0x11c0; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_flBlendWeightCurrent = 0x11c4; // float32 m_flBlendWeightCurrent; |  0x11c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_parentPhysicsBoneIndices = 0x11c8; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_worldSpaceBoneComputationOrder = 0x11e0; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ragEnabled = 0x1158; // GlobalTypes::C_NetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ragPos = 0x1170; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ragAngles = 0x1188; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::QAngle>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flBlendWeight = 0x11a0; // float32 m_flBlendWeight; |  0x11a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hRagdollSource = 0x11a4; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iEyeAttachment = 0x11a8; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_flBlendWeightCurrent = 0x11ac; // float32 m_flBlendWeightCurrent; |  0x11ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_parentPhysicsBoneIndices = 0x11b0; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_worldSpaceBoneComputationOrder = 0x11c8; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_bAllowMultipleScenes,bool, 0xa0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMultiplayer_Expresser) == 0xA8, "CMultiplayer_Expresser size should be 0xA8");
+
+#endif
 	}
 }

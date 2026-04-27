@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1510
+			// Class size: 0x1518
 			namespace C_OP_DistanceBetweenVecs /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vecPoint1 = 0x1d8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecPoint2 = 0x890; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flInputMin = 0xf48; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInputMax = 0x10b8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMin = 0x1228; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMax = 0x1398; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nSetMethod = 0x1508; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bDeltaTime = 0x150c; // bool m_bDeltaTime; |  0x150c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_vecPoint1 = 0x1e0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecPoint2 = 0x898; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flInputMin = 0xf50; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInputMax = 0x10c0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMin = 0x1230; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMax = 0x13a0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nSetMethod = 0x1510; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bDeltaTime = 0x1514; // bool m_bDeltaTime; |  0x1514 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

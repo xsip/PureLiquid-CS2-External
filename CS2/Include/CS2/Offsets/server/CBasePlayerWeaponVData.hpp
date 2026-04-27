@@ -8,39 +8,40 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x440
+			// Class size: 0x520
 			namespace CBasePlayerWeaponVData /*: public CS2::client::CEntitySubclassVDataBase*/ {
 				constexpr std::ptrdiff_t m_szWorldModel = 0x28; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>  | Schema_Atomic | Size: 0xe0
-				constexpr std::ptrdiff_t m_sToolsOnlyOwnerModelName = 0x108; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>  | Schema_Atomic | Size: 0xe0
-				constexpr std::ptrdiff_t m_bBuiltRightHanded = 0x1e8; // bool m_bBuiltRightHanded; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAllowFlipping = 0x1e9; // bool m_bAllowFlipping; |  0x1e9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_sMuzzleAttachment = 0x1f0; // GlobalTypes::CAttachmentNameSymbolWithStorage  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x210; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
-				constexpr std::ptrdiff_t m_szMuzzleFlashParticleConfig = 0x2f0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_szBarrelSmokeParticle = 0x2f8; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
-				constexpr std::ptrdiff_t m_nMuzzleSmokeShotThreshold = 0x3d8; // uint8_t m_nMuzzleSmokeShotThreshold; |  0x3d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flMuzzleSmokeTimeout = 0x3dc; // float32 m_flMuzzleSmokeTimeout; |  0x3dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMuzzleSmokeDecrementRate = 0x3e0; // float32 m_flMuzzleSmokeDecrementRate; |  0x3e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bGenerateMuzzleLight = 0x3e4; // bool m_bGenerateMuzzleLight; |  0x3e4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLinkedCooldowns = 0x3e5; // bool m_bLinkedCooldowns; |  0x3e5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iFlags = 0x3e6; // client::ItemFlagTypes_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_iWeight = 0x3e8; // int32_t m_iWeight; |  0x3e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAutoSwitchTo = 0x3ec; // bool m_bAutoSwitchTo; |  0x3ec | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAutoSwitchFrom = 0x3ed; // bool m_bAutoSwitchFrom; |  0x3ed | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nPrimaryAmmoType = 0x3ee; // client::AmmoIndex_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_nSecondaryAmmoType = 0x3ef; // client::AmmoIndex_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_iMaxClip1 = 0x3f0; // int32_t m_iMaxClip1; |  0x3f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iMaxClip2 = 0x3f4; // int32_t m_iMaxClip2; |  0x3f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iDefaultClip1 = 0x3f8; // int32_t m_iDefaultClip1; |  0x3f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iDefaultClip2 = 0x3fc; // int32_t m_iDefaultClip2; |  0x3fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bReserveAmmoAsClips = 0x400; // bool m_bReserveAmmoAsClips; |  0x400 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bTreatAsSingleClip = 0x401; // bool m_bTreatAsSingleClip; |  0x401 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bKeepLoadedAmmo = 0x402; // bool m_bKeepLoadedAmmo; |  0x402 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iRumbleEffect = 0x404; // client::RumbleEffect_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flDropSpeed = 0x408; // float32 m_flDropSpeed; |  0x408 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iSlot = 0x40c; // int32_t m_iSlot; |  0x40c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iPosition = 0x410; // int32_t m_iPosition; |  0x410 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_aShootSounds = 0x418; // GlobalTypes::CUtlOrderedMap  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_szWorldModelAg2Override = 0x108; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_sToolsOnlyOwnerModelName = 0x1e8; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_bBuiltRightHanded = 0x2c8; // bool m_bBuiltRightHanded; |  0x2c8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAllowFlipping = 0x2c9; // bool m_bAllowFlipping; |  0x2c9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sMuzzleAttachment = 0x2d0; // GlobalTypes::CAttachmentNameSymbolWithStorage  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x2f0; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_szMuzzleFlashParticleConfig = 0x3d0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_szBarrelSmokeParticle = 0x3d8; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_nMuzzleSmokeShotThreshold = 0x4b8; // uint8_t m_nMuzzleSmokeShotThreshold; |  0x4b8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flMuzzleSmokeTimeout = 0x4bc; // float32 m_flMuzzleSmokeTimeout; |  0x4bc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMuzzleSmokeDecrementRate = 0x4c0; // float32 m_flMuzzleSmokeDecrementRate; |  0x4c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bGenerateMuzzleLight = 0x4c4; // bool m_bGenerateMuzzleLight; |  0x4c4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLinkedCooldowns = 0x4c5; // bool m_bLinkedCooldowns; |  0x4c5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iFlags = 0x4c6; // client::ItemFlagTypes_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_iWeight = 0x4c8; // int32_t m_iWeight; |  0x4c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAutoSwitchTo = 0x4cc; // bool m_bAutoSwitchTo; |  0x4cc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAutoSwitchFrom = 0x4cd; // bool m_bAutoSwitchFrom; |  0x4cd | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nPrimaryAmmoType = 0x4ce; // client::AmmoIndex_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_nSecondaryAmmoType = 0x4cf; // client::AmmoIndex_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_iMaxClip1 = 0x4d0; // int32_t m_iMaxClip1; |  0x4d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iMaxClip2 = 0x4d4; // int32_t m_iMaxClip2; |  0x4d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iDefaultClip1 = 0x4d8; // int32_t m_iDefaultClip1; |  0x4d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iDefaultClip2 = 0x4dc; // int32_t m_iDefaultClip2; |  0x4dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bReserveAmmoAsClips = 0x4e0; // bool m_bReserveAmmoAsClips; |  0x4e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bTreatAsSingleClip = 0x4e1; // bool m_bTreatAsSingleClip; |  0x4e1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bKeepLoadedAmmo = 0x4e2; // bool m_bKeepLoadedAmmo; |  0x4e2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iRumbleEffect = 0x4e4; // client::RumbleEffect_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flDropSpeed = 0x4e8; // float32 m_flDropSpeed; |  0x4e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iSlot = 0x4ec; // int32_t m_iSlot; |  0x4ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iPosition = 0x4f0; // int32_t m_iPosition; |  0x4f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_aShootSounds = 0x4f8; // GlobalTypes::CUtlOrderedMap  | Schema_Atomic | Size: 0x28
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x558
+			// Class size: 0x568
 			namespace CSoundEventEntity /*: public CS2::server::CBaseEntity*/ {
 				constexpr std::ptrdiff_t m_bStartOnSpawn = 0x4a8; // bool m_bStartOnSpawn; |  0x4a8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bToLocalPlayer = 0x4a9; // bool m_bToLocalPlayer; |  0x4a9 | Schema_Builtin | Size: 0x1
@@ -18,12 +18,12 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flSavedElapsedTime = 0x4b0; // float32 m_flSavedElapsedTime; |  0x4b0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_iszSourceEntityName = 0x4b8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_iszAttachmentName = 0x4c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_onGUIDChanged = 0x4c8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_onSoundFinished = 0x4e8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_flClientCullRadius = 0x500; // float32 m_flClientCullRadius; |  0x500 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iszSoundName = 0x530; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hSource = 0x54c; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nEntityIndexSelection = 0x550; // int32_t m_nEntityIndexSelection; |  0x550 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_onGUIDChanged = 0x4c8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::SndOpEventGuid_t>  | Schema_Atomic | Size: 0x30
+				constexpr std::ptrdiff_t m_onSoundFinished = 0x4f8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_flClientCullRadius = 0x510; // float32 m_flClientCullRadius; |  0x510 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszSoundName = 0x540; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hSource = 0x55c; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nEntityIndexSelection = 0x560; // int32_t m_nEntityIndexSelection; |  0x560 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

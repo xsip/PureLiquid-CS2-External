@@ -22,26 +22,29 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_StatusEffect : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nDetail2Combo,particles::Detail2Combo_t, 0x1d8);
-			PROPERTY(m_flDetail2Rotation,float32, 0x1dc);
-			PROPERTY(m_flDetail2Scale,float32, 0x1e0);
-			PROPERTY(m_flDetail2BlendFactor,float32, 0x1e4);
-			PROPERTY(m_flColorWarpIntensity,float32, 0x1e8);
-			PROPERTY(m_flDiffuseWarpBlendToFull,float32, 0x1ec);
-			PROPERTY(m_flEnvMapIntensity,float32, 0x1f0);
-			PROPERTY(m_flAmbientScale,float32, 0x1f4);
-			PROPERTY(m_specularColor,GlobalTypes::Color, 0x1f8);
-			PROPERTY(m_flSpecularScale,float32, 0x1fc);
-			PROPERTY(m_flSpecularExponent,float32, 0x200);
-			PROPERTY(m_flSpecularExponentBlendToFull,float32, 0x204);
-			PROPERTY(m_flSpecularBlendToFull,float32, 0x208);
-			PROPERTY(m_rimLightColor,GlobalTypes::Color, 0x20c);
-			PROPERTY(m_flRimLightScale,float32, 0x210);
-			PROPERTY(m_flReflectionsTintByBaseBlendToNone,float32, 0x214);
-			PROPERTY(m_flMetalnessBlendToFull,float32, 0x218);
-			PROPERTY(m_flSelfIllumBlendToFull,float32, 0x21c);
+			PROPERTY(m_nDetail2Combo,IDENTITY(particles::Detail2Combo_t), 0x1e0);
+			PROPERTY(m_flDetail2Rotation,float32, 0x1e4);
+			PROPERTY(m_flDetail2Scale,float32, 0x1e8);
+			PROPERTY(m_flDetail2BlendFactor,float32, 0x1ec);
+			PROPERTY(m_flColorWarpIntensity,float32, 0x1f0);
+			PROPERTY(m_flDiffuseWarpBlendToFull,float32, 0x1f4);
+			PROPERTY(m_flEnvMapIntensity,float32, 0x1f8);
+			PROPERTY(m_flAmbientScale,float32, 0x1fc);
+			PROPERTY(m_specularColor,GlobalTypes::Color, 0x200);
+			PROPERTY(m_flSpecularScale,float32, 0x204);
+			PROPERTY(m_flSpecularExponent,float32, 0x208);
+			PROPERTY(m_flSpecularExponentBlendToFull,float32, 0x20c);
+			PROPERTY(m_flSpecularBlendToFull,float32, 0x210);
+			PROPERTY(m_rimLightColor,GlobalTypes::Color, 0x214);
+			PROPERTY(m_flRimLightScale,float32, 0x218);
+			PROPERTY(m_flReflectionsTintByBaseBlendToNone,float32, 0x21c);
+			PROPERTY(m_flMetalnessBlendToFull,float32, 0x220);
+			PROPERTY(m_flSelfIllumBlendToFull,float32, 0x224);
 			S2_PAD(0x60);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_StatusEffect) == 0x238, "C_INIT_StatusEffect size should be 0x238");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_StatusEffect) == 0x240, "C_INIT_StatusEffect size should be 0x240");
+
+#endif
 	}
 }

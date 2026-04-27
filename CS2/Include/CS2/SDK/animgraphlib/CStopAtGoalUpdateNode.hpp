@@ -26,9 +26,12 @@ namespace CS2 {
 			PROPERTY(m_flInnerRadius,float32, 0x78);
 			PROPERTY(m_flMaxScale,float32, 0x7c);
 			PROPERTY(m_flMinScale,float32, 0x80);
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x88);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x88);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStopAtGoalUpdateNode) == 0xA0, "CStopAtGoalUpdateNode size should be 0xA0");
+
+#endif
 	}
 }

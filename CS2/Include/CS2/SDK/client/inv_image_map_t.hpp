@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(map_rotation,float32, 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::inv_image_map_t) == 0x10, "inv_image_map_t size should be 0x10");
+
+#endif
 	}
 }

@@ -22,20 +22,23 @@ namespace CS2 {
 	namespace server {
 		class CSmokeGrenadeProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nSmokeEffectTickBegin,int32_t, 0xbd8);
-			PROPERTY(m_bDidSmokeEffect,bool, 0xbdc);
-			PROPERTY(m_nRandomSeed,int32_t, 0xbe0);
-			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0xbe4);
-			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::Vector, 0xbf0);
-			PROPERTY(m_VoxelFrameData,GlobalTypes::CNetworkUtlVectorBase< uint8 >, 0xc00);
-			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0xc18);
-			PROPERTY(m_nVoxelUpdate,int32_t, 0xc1c);
-			NESTED_PROPERTY(m_flLastBounce,entity2::GameTime_t, 0xc20);
-			NESTED_PROPERTY(m_fllastSimulationTime,entity2::GameTime_t, 0xc24);
-			PROPERTY(m_bExplodeFromInferno,bool, 0x2ea8);
-			PROPERTY(m_bDidGroundScorch,bool, 0x2ea9);
+			PROPERTY(m_nSmokeEffectTickBegin,int32_t, 0xa58);
+			PROPERTY(m_bDidSmokeEffect,bool, 0xa5c);
+			PROPERTY(m_nRandomSeed,int32_t, 0xa60);
+			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0xa64);
+			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::Vector, 0xa70);
+			// PROPERTY(m_VoxelFrameData,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0xa80);
+			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0xa98);
+			PROPERTY(m_nVoxelUpdate,int32_t, 0xa9c);
+			NESTED_PROPERTY(m_flLastBounce,IDENTITY(entity2::GameTime_t), 0xaa0);
+			NESTED_PROPERTY(m_fllastSimulationTime,IDENTITY(entity2::GameTime_t), 0xaa4);
+			PROPERTY(m_bExplodeFromInferno,bool, 0x2d28);
+			PROPERTY(m_bDidGroundScorch,bool, 0x2d29);
 			S2_PAD(0x2300);
 		};
-		//static_assert(sizeof(CS2::server::CSmokeGrenadeProjectile) == 0x2EB0, "CSmokeGrenadeProjectile size should be 0x2EB0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CSmokeGrenadeProjectile) == 0x2D30, "CSmokeGrenadeProjectile size should be 0x2D30");
+
+#endif
 	}
 }

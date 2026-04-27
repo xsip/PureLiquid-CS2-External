@@ -24,18 +24,21 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CTargetSelectorUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			PROPERTY(m_eAngleMode,animgraphlib::TargetSelectorAngleMode_t, 0x60);
-			NESTED_PROPERTY(m_children,GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>, 0x68);
-			NESTED_PROPERTY(m_hTargetPosition,animgraphlib::CAnimParamHandle, 0x84);
-			NESTED_PROPERTY(m_hTargetFacePositionParameter,animgraphlib::CAnimParamHandle, 0x86);
-			NESTED_PROPERTY(m_hMoveHeadingParameter,animgraphlib::CAnimParamHandle, 0x88);
-			NESTED_PROPERTY(m_hDesiredMoveHeadingParameter,animgraphlib::CAnimParamHandle, 0x8a);
+			PROPERTY(m_eAngleMode,IDENTITY(animgraphlib::TargetSelectorAngleMode_t), 0x60);
+			NESTED_PROPERTY(m_children,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>), 0x68);
+			NESTED_PROPERTY(m_hTargetPosition,IDENTITY(animgraphlib::CAnimParamHandle), 0x84);
+			NESTED_PROPERTY(m_hTargetFacePositionParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x86);
+			NESTED_PROPERTY(m_hMoveHeadingParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x88);
+			NESTED_PROPERTY(m_hDesiredMoveHeadingParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0x8a);
 			PROPERTY(m_bTargetPositionIsWorldSpace,bool, 0x8c);
 			PROPERTY(m_bTargetFacePositionIsWorldSpace,bool, 0x8d);
 			PROPERTY(m_bEnablePhaseMatching,bool, 0x8e);
 			PROPERTY(m_flPhaseMatchingMaxRootMotionSkip,float32, 0x90);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CTargetSelectorUpdateNode) == 0xA0, "CTargetSelectorUpdateNode size should be 0xA0");
+
+#endif
 	}
 }

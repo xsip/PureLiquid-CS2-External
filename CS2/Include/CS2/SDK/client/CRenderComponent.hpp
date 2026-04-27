@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace client {
 		class CRenderComponent : public CS2::entity2::CEntityComponent {
 		public:
-			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x10);
+			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x10);
 			PROPERTY(m_bIsRenderingWithViewModels,bool, 0x50);
 			PROPERTY(m_nSplitscreenFlags,uint32_t, 0x54);
 			PROPERTY(m_bEnableRendering,bool, 0x58);
 			PROPERTY(m_bInterpolationReadyToDraw,bool, 0xa8);
 			S2_PAD(0xC8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CRenderComponent) == 0xD0, "CRenderComponent size should be 0xD0");
+
+#endif
 	}
 }

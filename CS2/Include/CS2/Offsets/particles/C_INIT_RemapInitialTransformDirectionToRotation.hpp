@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x250
+			// Class size: 0x258
 			namespace C_INIT_RemapInitialTransformDirectionToRotation /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_TransformInput = 0x1d8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x240; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flOffsetRot = 0x244; // float32 m_flOffsetRot; |  0x244 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nComponent = 0x248; // int32_t m_nComponent; |  0x248 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_TransformInput = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x248; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flOffsetRot = 0x24c; // float32 m_flOffsetRot; |  0x24c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nComponent = 0x250; // int32_t m_nComponent; |  0x250 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

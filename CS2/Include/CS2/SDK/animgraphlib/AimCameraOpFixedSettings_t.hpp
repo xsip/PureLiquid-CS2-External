@@ -26,9 +26,12 @@ namespace CS2 {
 			PROPERTY(m_nClavicleLeftJointIndex,int32_t, 0xc);
 			PROPERTY(m_nClavicleRightJointIndex,int32_t, 0x10);
 			PROPERTY(m_nDepenetrationJointIndex,int32_t, 0x14);
-			NESTED_PROPERTY(m_propJoints,GlobalTypes::CUtlVector< int32 >, 0x18);
+			NESTED_PROPERTY(m_propJoints,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x18);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::AimCameraOpFixedSettings_t) == 0x30, "AimCameraOpFixedSettings_t size should be 0x30");
+
+#endif
 	}
 }

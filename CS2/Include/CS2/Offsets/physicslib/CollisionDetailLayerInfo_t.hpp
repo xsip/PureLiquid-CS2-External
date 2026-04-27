@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_sFriendlyName = 0x8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_bIsQueryOnly = 0x10; // bool m_bIsQueryOnly; |  0x10 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_sParentDetailLayer = 0x18; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vecSubtreeDetailLayers = 0x20; // GlobalTypes::CUtlVector<physicslib::Name_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecSubtreeDetailLayers = 0x20; // GlobalTypes::CUtlVector<physicslib::CollisionDetailLayerInfo_t_Name_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bNotPickable = 0x38; // bool m_bNotPickable; |  0x38 | Schema_Builtin | Size: 0x1
 			}
 		}

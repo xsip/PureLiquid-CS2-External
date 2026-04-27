@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_flLateReflections,float32, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixFreeverbDesc_t) == 0x10, "VMixFreeverbDesc_t size should be 0x10");
+
+#endif
 	}
 }

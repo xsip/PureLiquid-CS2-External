@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xC50
+			// Class size: 0xB80
 			namespace CDynamicPropAlias_cable_dynamic /*: public CS2::server::CDynamicProp*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_value,GlobalTypes::CUtlBinaryBlock, 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::MaterialParamBuffer_t) == 0x18, "MaterialParamBuffer_t size should be 0x18");
+
+#endif
 	}
 }

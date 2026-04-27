@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_SoundOpvarSetPointEntity : public CS2::client::C_SoundOpvarSetPointBase {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundOpvarSetPointEntity) == 0x628, "C_SoundOpvarSetPointEntity size should be 0x628");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundOpvarSetPointEntity) == 0x620, "C_SoundOpvarSetPointEntity size should be 0x620");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1170
+			// Class size: 0x1070
 			namespace CFlashbang /*: public CS2::server::CBaseCSGrenade*/ {
 				// NO SCHEMA DATA FOUND!
 			}

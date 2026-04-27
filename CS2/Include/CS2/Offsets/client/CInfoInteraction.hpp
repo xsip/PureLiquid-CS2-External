@@ -8,11 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x658
+			// Class size: 0x670
 			namespace CInfoInteraction /*: public CS2::client::C_PointEntity*/ {
-				constexpr std::ptrdiff_t m_strSlotEntityName = 0x608; // GlobalTypes::CUtlSymbolLarge[8]  | Schema_FixedArray | Size: 0x40
-				constexpr std::ptrdiff_t m_strInteractVData = 0x648; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flInteractRadius = 0x650; // float32 m_flInteractRadius; |  0x650 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hSceneRequest = 0x600; // client::SceneRequestHandle_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_hSceneOpportunity = 0x604; // client::SceneOpportunityHandle_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bEnabled = 0x608; // bool m_bEnabled; |  0x608 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStartDisabled = 0x609; // bool m_bStartDisabled; |  0x609 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_strSceneVDataName = 0x610; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strPulseVDataName = 0x618; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flRadius = 0x640; // float32 m_flRadius; |  0x640 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOwnerFOV = 0x644; // float32 m_flOwnerFOV; |  0x644 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_strLocalInterestReqTags = 0x648; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strLocalInterestOptTags = 0x650; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strLookTarget = 0x658; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flDuration = 0x660; // float32 m_flDuration; |  0x660 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCooldown = 0x664; // float32 m_flCooldown; |  0x664 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRepeatCount = 0x668; // int32_t m_nRepeatCount; |  0x668 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bDisableOnExit = 0x66c; // bool m_bDisableOnExit; |  0x66c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

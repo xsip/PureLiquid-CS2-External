@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_RadioServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			NESTED_PROPERTY(m_flGotHostageTalkTimer,entity2::GameTime_t, 0x48);
-			NESTED_PROPERTY(m_flDefusingTalkTimer,entity2::GameTime_t, 0x4c);
-			NESTED_PROPERTY(m_flC4PlantTalkTimer,entity2::GameTime_t, 0x50);
-			PROPERTY_ARRAY(m_flRadioTokenSlots,entity2::GameTime_t, 3 , 0x54);
+			NESTED_PROPERTY(m_flGotHostageTalkTimer,IDENTITY(entity2::GameTime_t), 0x48);
+			NESTED_PROPERTY(m_flDefusingTalkTimer,IDENTITY(entity2::GameTime_t), 0x4c);
+			NESTED_PROPERTY(m_flC4PlantTalkTimer,IDENTITY(entity2::GameTime_t), 0x50);
+			PROPERTY_ARRAY(m_flRadioTokenSlots,IDENTITY(entity2::GameTime_t), 3 , 0x54);
 			PROPERTY(m_bIgnoreRadio,bool, 0x60);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_RadioServices) == 0x68, "CCSPlayer_RadioServices size should be 0x68");
+
+#endif
 	}
 }

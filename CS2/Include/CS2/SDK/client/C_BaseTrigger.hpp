@@ -28,19 +28,22 @@ namespace CS2 {
 	namespace client {
 		class C_BaseTrigger : public CS2::client::C_BaseToggle {
 		public:
-			NESTED_PROPERTY(m_OnStartTouch,entity2::CEntityIOOutput, 0xe88);
-			NESTED_PROPERTY(m_OnStartTouchAll,entity2::CEntityIOOutput, 0xea0);
-			NESTED_PROPERTY(m_OnEndTouch,entity2::CEntityIOOutput, 0xeb8);
-			NESTED_PROPERTY(m_OnEndTouchAll,entity2::CEntityIOOutput, 0xed0);
-			NESTED_PROPERTY(m_OnTouching,entity2::CEntityIOOutput, 0xee8);
-			NESTED_PROPERTY(m_OnTouchingEachEntity,entity2::CEntityIOOutput, 0xf00);
-			NESTED_PROPERTY(m_OnNotTouching,entity2::CEntityIOOutput, 0xf18);
-			NESTED_PROPERTY(m_hTouchingEntities,GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>, 0xf30);
-			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0xf48);
-			PROPERTY(m_hFilter,GlobalTypes::CHandle<client::CBaseFilter>, 0xf50);
-			PROPERTY(m_bDisabled,bool, 0xf54);
+			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0xfa8);
+			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0xfc0);
+			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0xfd8);
+			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0xff0);
+			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x1008);
+			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x1020);
+			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x1038);
+			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>), 0x1050);
+			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x1068);
+			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<client::CBaseFilter>), 0x1070);
+			PROPERTY(m_bDisabled,bool, 0x1074);
 			S2_PAD(0xD0);
 		};
-		//static_assert(sizeof(CS2::client::C_BaseTrigger) == 0xF58, "C_BaseTrigger size should be 0xF58");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BaseTrigger) == 0x1078, "C_BaseTrigger size should be 0x1078");
+
+#endif
 	}
 }

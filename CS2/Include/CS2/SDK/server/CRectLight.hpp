@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CRectLight : public CS2::server::CBarnLight {
 		public:
-			PROPERTY(m_bShowLight,bool, 0xa20);
+			PROPERTY(m_bShowLight,bool, 0xa50);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::server::CRectLight) == 0xA28, "CRectLight size should be 0xA28");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CRectLight) == 0xA58, "CRectLight size should be 0xA58");
+
+#endif
 	}
 }

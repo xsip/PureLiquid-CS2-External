@@ -26,11 +26,14 @@ namespace CS2 {
 			PROPERTY(m_iszEntityB,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
 			PROPERTY(m_flZone1Distance,float32, 0x4b8);
 			PROPERTY(m_flZone2Distance,float32, 0x4bc);
-			NESTED_PROPERTY(m_InZone1,entity2::CEntityIOOutput, 0x4c0);
-			NESTED_PROPERTY(m_InZone2,entity2::CEntityIOOutput, 0x4d8);
-			NESTED_PROPERTY(m_InZone3,entity2::CEntityIOOutput, 0x4f0);
+			NESTED_PROPERTY(m_InZone1,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
+			NESTED_PROPERTY(m_InZone2,IDENTITY(entity2::CEntityIOOutput), 0x4d8);
+			NESTED_PROPERTY(m_InZone3,IDENTITY(entity2::CEntityIOOutput), 0x4f0);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicDistanceCheck) == 0x508, "CLogicDistanceCheck size should be 0x508");
+
+#endif
 	}
 }

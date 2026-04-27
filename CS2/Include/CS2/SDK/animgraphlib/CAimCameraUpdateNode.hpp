@@ -23,16 +23,19 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAimCameraUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_hParameterPosition,animgraphlib::CAnimParamHandle, 0x70);
-			NESTED_PROPERTY(m_hParameterOrientation,animgraphlib::CAnimParamHandle, 0x72);
-			NESTED_PROPERTY(m_hParameterPelvisOffset,animgraphlib::CAnimParamHandle, 0x74);
-			NESTED_PROPERTY(m_hParameterCameraOnly,animgraphlib::CAnimParamHandle, 0x76);
-			NESTED_PROPERTY(m_hParameterWeaponDepenetrationDistance,animgraphlib::CAnimParamHandle, 0x78);
-			NESTED_PROPERTY(m_hParameterWeaponDepenetrationDelta,animgraphlib::CAnimParamHandle, 0x7a);
-			NESTED_PROPERTY(m_hParameterCameraClearanceDistance,animgraphlib::CAnimParamHandle, 0x7c);
-			NESTED_PROPERTY(m_opFixedSettings,animgraphlib::AimCameraOpFixedSettings_t, 0x80);
+			NESTED_PROPERTY(m_hParameterPosition,IDENTITY(animgraphlib::CAnimParamHandle), 0x70);
+			NESTED_PROPERTY(m_hParameterOrientation,IDENTITY(animgraphlib::CAnimParamHandle), 0x72);
+			NESTED_PROPERTY(m_hParameterPelvisOffset,IDENTITY(animgraphlib::CAnimParamHandle), 0x74);
+			NESTED_PROPERTY(m_hParameterCameraOnly,IDENTITY(animgraphlib::CAnimParamHandle), 0x76);
+			NESTED_PROPERTY(m_hParameterWeaponDepenetrationDistance,IDENTITY(animgraphlib::CAnimParamHandle), 0x78);
+			NESTED_PROPERTY(m_hParameterWeaponDepenetrationDelta,IDENTITY(animgraphlib::CAnimParamHandle), 0x7a);
+			NESTED_PROPERTY(m_hParameterCameraClearanceDistance,IDENTITY(animgraphlib::CAnimParamHandle), 0x7c);
+			NESTED_PROPERTY(m_opFixedSettings,IDENTITY(animgraphlib::AimCameraOpFixedSettings_t), 0x80);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAimCameraUpdateNode) == 0xB8, "CAimCameraUpdateNode size should be 0xB8");
+
+#endif
 	}
 }

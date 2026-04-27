@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_Args,GlobalTypes::KeyValues3, 0x50);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CModelConfigElement_Command) == 0x60, "CModelConfigElement_Command size should be 0x60");
+
+#endif
 	}
 }

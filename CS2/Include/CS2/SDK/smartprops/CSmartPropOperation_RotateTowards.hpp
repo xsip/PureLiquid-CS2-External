@@ -26,11 +26,14 @@ namespace CS2 {
 			PROPERTY(m_vTargetPos,GlobalTypes::CSmartPropAttributeVector, 0x90);
 			PROPERTY(m_vUpPos,GlobalTypes::CSmartPropAttributeVector, 0xd0);
 			PROPERTY(m_flWeight,GlobalTypes::CSmartPropAttributeFloat, 0x110);
-			NESTED_PROPERTY(m_OriginSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x150);
-			NESTED_PROPERTY(m_TargetSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x190);
-			NESTED_PROPERTY(m_UpSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x1d0);
+			NESTED_PROPERTY(m_OriginSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x150);
+			NESTED_PROPERTY(m_TargetSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x190);
+			NESTED_PROPERTY(m_UpSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x1d0);
 			S2_PAD(0x1C0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_RotateTowards) == 0x210, "CSmartPropOperation_RotateTowards size should be 0x210");
+
+#endif
 	}
 }

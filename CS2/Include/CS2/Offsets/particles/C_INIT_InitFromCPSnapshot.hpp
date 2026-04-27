@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4E0
+			// Class size: 0x4E8
 			namespace C_INIT_InitFromCPSnapshot /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x1e0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nAttributeToRead = 0x1e8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nAttributeToWrite = 0x1ec; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1f0; // int32_t m_nLocalSpaceCP; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRandom = 0x1f4; // bool m_bRandom; |  0x1f4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bReverse = 0x1f5; // bool m_bReverse; |  0x1f5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nSnapShotIncrement = 0x1f8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nManualSnapshotIndex = 0x368; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nRandomSeed = 0x4d8; // int32_t m_nRandomSeed; |  0x4d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLocalSpaceAngles = 0x4dc; // bool m_bLocalSpaceAngles; |  0x4dc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e0; // int32_t m_nControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x1e8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nAttributeToRead = 0x1f0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nAttributeToWrite = 0x1f4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1f8; // int32_t m_nLocalSpaceCP; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRandom = 0x1fc; // bool m_bRandom; |  0x1fc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bReverse = 0x1fd; // bool m_bReverse; |  0x1fd | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSnapShotIncrement = 0x200; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nManualSnapshotIndex = 0x370; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nRandomSeed = 0x4e0; // int32_t m_nRandomSeed; |  0x4e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLocalSpaceAngles = 0x4e4; // bool m_bLocalSpaceAngles; |  0x4e4 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

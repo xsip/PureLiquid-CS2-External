@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x608
+			// Class size: 0x600
 			namespace CChoreoInfoTarget /*: public CS2::client::C_PointEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

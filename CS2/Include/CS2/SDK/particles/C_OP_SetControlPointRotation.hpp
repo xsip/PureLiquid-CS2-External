@@ -23,12 +23,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointRotation : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_vecRotAxis,particleslib::CParticleCollectionVecInput, 0x1d8);
-			NESTED_PROPERTY(m_flRotRate,particleslib::CParticleCollectionFloatInput, 0x890);
-			PROPERTY(m_nCP,int32_t, 0xa00);
-			PROPERTY(m_nLocalCP,int32_t, 0xa04);
+			NESTED_PROPERTY(m_vecRotAxis,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			NESTED_PROPERTY(m_flRotRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x898);
+			PROPERTY(m_nCP,int32_t, 0xa08);
+			PROPERTY(m_nLocalCP,int32_t, 0xa0c);
 			S2_PAD(0x830);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointRotation) == 0xA08, "C_OP_SetControlPointRotation size should be 0xA08");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointRotation) == 0xA10, "C_OP_SetControlPointRotation size should be 0xA10");
+
+#endif
 	}
 }

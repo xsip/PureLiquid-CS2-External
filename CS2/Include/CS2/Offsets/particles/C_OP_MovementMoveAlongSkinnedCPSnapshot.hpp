@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4C0
+			// Class size: 0x4C8
 			namespace C_OP_MovementMoveAlongSkinnedCPSnapshot /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d0; // int32_t m_nControlPointNumber; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSnapshotControlPointNumber = 0x1d4; // int32_t m_nSnapshotControlPointNumber; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSetNormal = 0x1d8; // bool m_bSetNormal; |  0x1d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetRadius = 0x1d9; // bool m_bSetRadius; |  0x1d9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flInterpolation = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flTValue = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSnapshotControlPointNumber = 0x1dc; // int32_t m_nSnapshotControlPointNumber; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSetNormal = 0x1e0; // bool m_bSetNormal; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetRadius = 0x1e1; // bool m_bSetRadius; |  0x1e1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flInterpolation = 0x1e8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flTValue = 0x358; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

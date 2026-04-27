@@ -8,13 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x28
+			// Class size: 0x30
 			namespace PulseGraphExecutionHistoryCursorDesc_t /**/ {
 				constexpr std::ptrdiff_t vecAncestorCursorIDs = 0x0; // GlobalTypes::CUtlVector<pulse_runtime_lib::PulseCursorID_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t nSpawnNodeID = 0x18; // pulse_runtime_lib::PulseDocNodeID_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t nRetiredAtNodeID = 0x1c; // pulse_runtime_lib::PulseDocNodeID_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t flLastReferenced = 0x20; // float32 flLastReferenced; |  0x20 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t nLastValidEntryIdx = 0x24; // int32_t nLastValidEntryIdx; |  0x24 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t bWasAnObservableComputation = 0x28; // bool bWasAnObservableComputation; |  0x28 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

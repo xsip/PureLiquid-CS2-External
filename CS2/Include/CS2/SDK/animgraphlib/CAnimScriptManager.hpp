@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimScriptManager  {
 		public:
-			NESTED_PROPERTY(m_scriptInfo,GlobalTypes::CUtlVector<animgraphlib::ScriptInfo_t>, 0x10);
+			NESTED_PROPERTY(m_scriptInfo,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::ScriptInfo_t>), 0x10);
 			S2_PAD(0x1A0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimScriptManager) == 0x1A0, "CAnimScriptManager size should be 0x1A0");
+
+#endif
 	}
 }

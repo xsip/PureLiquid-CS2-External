@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x508
+			// Class size: 0x560
 			namespace CPathMoverEntitySpawner /*: public CS2::server::CLogicalEntity*/ {
 				constexpr std::ptrdiff_t m_szSpawnTemplates = 0x4a8; // GlobalTypes::CUtlSymbolLarge[4]  | Schema_FixedArray | Size: 0x20
 				constexpr std::ptrdiff_t m_nSpawnIndex = 0x4c8; // int32_t m_nSpawnIndex; |  0x4c8 | Schema_Builtin | Size: 0x4
@@ -17,8 +17,13 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flSpawnFrequencyDistToNearestMover = 0x4d4; // float32 m_flSpawnFrequencyDistToNearestMover; |  0x4d4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_mapSpawnedMoverTemplates = 0x4d8; // server::CUtlHashtable  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_nMaxActive = 0x4f8; // int32_t m_nMaxActive; |  0x4f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastSpawnTime = 0x4fc; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bEnabled = 0x500; // bool m_bEnabled; |  0x500 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSpawnNum = 0x4fc; // int32_t m_nSpawnNum; |  0x4fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastSpawnTime = 0x500; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bEnabled = 0x504; // bool m_bEnabled; |  0x504 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDestroyMoverOnArrivedAtEnd = 0x505; // bool m_bDestroyMoverOnArrivedAtEnd; |  0x505 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecQueuedRemovals = 0x508; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_OnTemplateSpawned = 0x520; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnTemplateGroupSpawned = 0x538; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

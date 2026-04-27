@@ -11,7 +11,7 @@
 
 
 #include <SDK/resourcesystem/InfoForResourceTypeCTextureBase.hpp>
-#include <SDK/worldrenderer/BakedShadowAssignment_t.hpp>
+#include <SDK/worldrenderer/BakedLightingInfo_t_BakedShadowAssignment_t.hpp>
 
 
 
@@ -31,10 +31,13 @@ namespace CS2 {
 			PROPERTY(m_bSHLightmaps,bool, 0x13);
 			PROPERTY(m_nChartPackIterations,uint8_t, 0x14);
 			PROPERTY(m_nVradQuality,uint8_t, 0x15);
-			NESTED_PROPERTY(m_lightMaps,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>>, 0x18);
-			NESTED_PROPERTY(m_bakedShadows,GlobalTypes::CUtlVector<worldrenderer::BakedShadowAssignment_t>, 0x30);
+			NESTED_PROPERTY(m_lightMaps,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>>), 0x18);
+			NESTED_PROPERTY(m_bakedShadows,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::BakedLightingInfo_t_BakedShadowAssignment_t>), 0x30);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::BakedLightingInfo_t) == 0x48, "BakedLightingInfo_t size should be 0x48");
+
+#endif
 	}
 }

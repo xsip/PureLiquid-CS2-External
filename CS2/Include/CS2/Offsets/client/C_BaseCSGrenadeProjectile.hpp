@@ -8,24 +8,24 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1438
+			// Class size: 0x1238
 			namespace C_BaseCSGrenadeProjectile /*: public CS2::client::C_BaseGrenade*/ {
-				constexpr std::ptrdiff_t m_vInitialPosition = 0x13a0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vInitialVelocity = 0x13ac; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nBounces = 0x13b8; // int32_t m_nBounces; |  0x13b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nExplodeEffectIndex = 0x13c0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nExplodeEffectTickBegin = 0x13c8; // int32_t m_nExplodeEffectTickBegin; |  0x13c8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecExplodeEffectOrigin = 0x13cc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flSpawnTime = 0x13d8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t vecLastTrailLinePos = 0x13dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t flNextTrailLineTime = 0x13e8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bExplodeEffectBegan = 0x13ec; // bool m_bExplodeEffectBegan; |  0x13ec | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCanCreateGrenadeTrail = 0x13ed; // bool m_bCanCreateGrenadeTrail; |  0x13ed | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nSnapshotTrajectoryEffectIndex = 0x13f0; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_hSnapshotTrajectoryParticleSnapshot = 0x13f8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_arrTrajectoryTrailPoints = 0x1400; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_arrTrajectoryTrailPointCreationTimes = 0x1418; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flTrajectoryTrailEffectCreationTime = 0x1430; // float32 m_flTrajectoryTrailEffectCreationTime; |  0x1430 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vInitialPosition = 0x11a0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vInitialVelocity = 0x11ac; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nBounces = 0x11b8; // int32_t m_nBounces; |  0x11b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nExplodeEffectIndex = 0x11c0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nExplodeEffectTickBegin = 0x11c8; // int32_t m_nExplodeEffectTickBegin; |  0x11c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecExplodeEffectOrigin = 0x11cc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flSpawnTime = 0x11d8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t vecLastTrailLinePos = 0x11dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t flNextTrailLineTime = 0x11e8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bExplodeEffectBegan = 0x11ec; // bool m_bExplodeEffectBegan; |  0x11ec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCanCreateGrenadeTrail = 0x11ed; // bool m_bCanCreateGrenadeTrail; |  0x11ed | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSnapshotTrajectoryEffectIndex = 0x11f0; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_hSnapshotTrajectoryParticleSnapshot = 0x11f8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_arrTrajectoryTrailPoints = 0x1200; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_arrTrajectoryTrailPointCreationTimes = 0x1218; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flTrajectoryTrailEffectCreationTime = 0x1230; // float32 m_flTrajectoryTrailEffectCreationTime; |  0x1230 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

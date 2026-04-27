@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_TonemapController2Alias_env_tonemap_controller2 : public CS2::client::C_TonemapController2 {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_TonemapController2Alias_env_tonemap_controller2) == 0x620, "C_TonemapController2Alias_env_tonemap_controller2 size should be 0x620");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_TonemapController2Alias_env_tonemap_controller2) == 0x618, "C_TonemapController2Alias_env_tonemap_controller2 size should be 0x618");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_Value,GlobalTypes::KeyValues3, 0x18);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_Constant) == 0x30, "CPulse_Constant size should be 0x30");
+
+#endif
 	}
 }

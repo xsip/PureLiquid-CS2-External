@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ExternalGameImpulseForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			NESTED_PROPERTY(m_flForceScale,particleslib::CPerParticleFloatInput, 0x1e0);
-			PROPERTY(m_bRopes,bool, 0x350);
-			PROPERTY(m_bRopesZOnly,bool, 0x351);
-			PROPERTY(m_bExplosions,bool, 0x352);
-			PROPERTY(m_bParticles,bool, 0x353);
+			NESTED_PROPERTY(m_flForceScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
+			PROPERTY(m_bRopes,bool, 0x358);
+			PROPERTY(m_bRopesZOnly,bool, 0x359);
+			PROPERTY(m_bExplosions,bool, 0x35a);
+			PROPERTY(m_bParticles,bool, 0x35b);
 			S2_PAD(0x178);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ExternalGameImpulseForce) == 0x358, "C_OP_ExternalGameImpulseForce size should be 0x358");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ExternalGameImpulseForce) == 0x360, "C_OP_ExternalGameImpulseForce size should be 0x360");
+
+#endif
 	}
 }

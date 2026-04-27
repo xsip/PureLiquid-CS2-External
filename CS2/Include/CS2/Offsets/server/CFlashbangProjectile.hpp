@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xBC0
+			// Class size: 0xA40
 			namespace CFlashbangProjectile /*: public CS2::server::CBaseCSGrenadeProjectile*/ {
-				constexpr std::ptrdiff_t m_flTimeToDetonate = 0xbb0; // float32 m_flTimeToDetonate; |  0xbb0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_numOpponentsHit = 0xbb4; // uint8_t m_numOpponentsHit; |  0xbb4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_numTeammatesHit = 0xbb5; // uint8_t m_numTeammatesHit; |  0xbb5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flTimeToDetonate = 0xa30; // float32 m_flTimeToDetonate; |  0xa30 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_numOpponentsHit = 0xa34; // uint8_t m_numOpponentsHit; |  0xa34 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_numTeammatesHit = 0xa35; // uint8_t m_numTeammatesHit; |  0xa35 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

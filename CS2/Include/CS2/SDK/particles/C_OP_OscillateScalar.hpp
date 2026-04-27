@@ -22,21 +22,24 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_OscillateScalar : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_RateMin,float32, 0x1d0);
-			PROPERTY(m_RateMax,float32, 0x1d4);
-			PROPERTY(m_FrequencyMin,float32, 0x1d8);
-			PROPERTY(m_FrequencyMax,float32, 0x1dc);
-			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x1e0);
-			PROPERTY(m_bProportional,bool, 0x1e4);
-			PROPERTY(m_bProportionalOp,bool, 0x1e5);
-			PROPERTY(m_flStartTime_min,float32, 0x1e8);
-			PROPERTY(m_flStartTime_max,float32, 0x1ec);
-			PROPERTY(m_flEndTime_min,float32, 0x1f0);
-			PROPERTY(m_flEndTime_max,float32, 0x1f4);
-			PROPERTY(m_flOscMult,float32, 0x1f8);
-			PROPERTY(m_flOscAdd,float32, 0x1fc);
+			PROPERTY(m_RateMin,float32, 0x1d8);
+			PROPERTY(m_RateMax,float32, 0x1dc);
+			PROPERTY(m_FrequencyMin,float32, 0x1e0);
+			PROPERTY(m_FrequencyMax,float32, 0x1e4);
+			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e8);
+			PROPERTY(m_bProportional,bool, 0x1ec);
+			PROPERTY(m_bProportionalOp,bool, 0x1ed);
+			PROPERTY(m_flStartTime_min,float32, 0x1f0);
+			PROPERTY(m_flStartTime_max,float32, 0x1f4);
+			PROPERTY(m_flEndTime_min,float32, 0x1f8);
+			PROPERTY(m_flEndTime_max,float32, 0x1fc);
+			PROPERTY(m_flOscMult,float32, 0x200);
+			PROPERTY(m_flOscAdd,float32, 0x204);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_OscillateScalar) == 0x200, "C_OP_OscillateScalar size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_OscillateScalar) == 0x208, "C_OP_OscillateScalar size should be 0x208");
+
+#endif
 	}
 }

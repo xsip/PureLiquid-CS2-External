@@ -24,12 +24,15 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CGlobalSymbol, 0x18);
 			PROPERTY(m_sComment,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_group,GlobalTypes::CUtlString*, 0x28);
-			NESTED_PROPERTY(m_id,modellib::AnimParamID, 0x30);
+			NESTED_PROPERTY(m_id,IDENTITY(modellib::AnimParamID), 0x30);
 			PROPERTY(m_componentName,GlobalTypes::CUtlString*, 0x48);
 			PROPERTY(m_bNetworkingRequested,bool, 0x68);
 			PROPERTY(m_bIsReferenced,bool, 0x69);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimParameterBase) == 0x70, "CAnimParameterBase size should be 0x70");
+
+#endif
 	}
 }

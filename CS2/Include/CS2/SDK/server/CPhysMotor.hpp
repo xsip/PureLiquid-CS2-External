@@ -19,6 +19,10 @@ namespace CS2 {
 	namespace server {
 		class CBaseEntity;
 	}
+	namespace vphysics2 {
+		class IPhysicsBody;
+		class IPhysicsJoint;
+	}
 }
 
 
@@ -29,8 +33,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nameAttach,GlobalTypes::CUtlSymbolLarge*, 0x4a8);
 			PROPERTY(m_nameAnchor,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
-			PROPERTY(m_hAttachedObject,GlobalTypes::CHandle<server::CBaseEntity>, 0x4b8);
-			PROPERTY(m_hAnchorObject,GlobalTypes::CHandle<server::CBaseEntity>, 0x4bc);
+			PROPERTY(m_hAttachedObject,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4b8);
+			PROPERTY(m_hAnchorObject,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4bc);
 			PROPERTY(m_spinUp,float32, 0x4c0);
 			PROPERTY(m_spinDown,float32, 0x4c4);
 			PROPERTY(m_flMotorFriction,float32, 0x4c8);
@@ -39,9 +43,14 @@ namespace CS2 {
 			PROPERTY(m_flTorqueScale,float32, 0x4d4);
 			PROPERTY(m_flTargetSpeed,float32, 0x4d8);
 			PROPERTY(m_flSpeedWhenSpinUpOrSpinDownStarted,float32, 0x4dc);
-			NESTED_PROPERTY(m_motor,server::CMotorController, 0x4f0);
+			PROPERTY(m_pFixedWorldBody,IDENTITY(vphysics2::IPhysicsBody*), 0x4e0);
+			PROPERTY(m_pMotorJoint,IDENTITY(vphysics2::IPhysicsJoint*), 0x4e8);
+			NESTED_PROPERTY(m_motor,IDENTITY(server::CMotorController), 0x4f0);
 			S2_PAD(0x68);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysMotor) == 0x510, "CPhysMotor size should be 0x510");
+
+#endif
 	}
 }

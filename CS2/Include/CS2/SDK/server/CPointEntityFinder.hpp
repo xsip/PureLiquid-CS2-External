@@ -28,15 +28,18 @@ namespace CS2 {
 	namespace server {
 		class CPointEntityFinder : public CS2::server::CBaseEntity {
 		public:
-			PROPERTY(m_hEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4a8);
+			PROPERTY(m_hEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4a8);
 			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
-			PROPERTY(m_hFilter,GlobalTypes::CHandle<server::CBaseFilter>, 0x4b8);
+			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0x4b8);
 			PROPERTY(m_iRefName,GlobalTypes::CUtlSymbolLarge*, 0x4c0);
-			PROPERTY(m_hReference,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c8);
-			PROPERTY(m_FindMethod,server::EntFinderMethod_t, 0x4cc);
-			NESTED_PROPERTY(m_OnFoundEntity,entity2::CEntityIOOutput, 0x4d0);
+			PROPERTY(m_hReference,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c8);
+			PROPERTY(m_FindMethod,IDENTITY(server::EntFinderMethod_t), 0x4cc);
+			NESTED_PROPERTY(m_OnFoundEntity,IDENTITY(entity2::CEntityIOOutput), 0x4d0);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointEntityFinder) == 0x4E8, "CPointEntityFinder size should be 0x4E8");
+
+#endif
 	}
 }

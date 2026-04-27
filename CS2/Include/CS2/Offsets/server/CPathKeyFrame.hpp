@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x500
+			// Class size: 0x4F0
 			namespace CPathKeyFrame /*: public CS2::server::CLogicalEntity*/ {
 				constexpr std::ptrdiff_t m_Origin = 0x4a8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_Angles = 0x4b4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_qAngle = 0x4c0; // GlobalTypes::Quaternion  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_iNextKey = 0x4d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_flNextTime = 0x4d8; // float32 m_flNextTime; |  0x4d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pNextKey = 0x4e0; // server::CPathKeyFrame**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pPrevKey = 0x4e8; // server::CPathKeyFrame**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_flMoveSpeed = 0x4f0; // float32 m_flMoveSpeed; |  0x4f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pNextKey = 0x4dc; // GlobalTypes::CHandle<server::CPathKeyFrame>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pPrevKey = 0x4e0; // GlobalTypes::CHandle<server::CPathKeyFrame>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flMoveSpeed = 0x4e4; // float32 m_flMoveSpeed; |  0x4e4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

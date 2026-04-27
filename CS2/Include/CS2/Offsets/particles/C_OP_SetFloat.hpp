@@ -10,10 +10,10 @@ namespace CS2 {
 		namespace particles {
 			// Class size: 0x4E0
 			namespace C_OP_SetFloat /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_InputValue = 0x1d0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nOutputField = 0x340; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nSetMethod = 0x344; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_Lerp = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_InputValue = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nOutputField = 0x348; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetMethod = 0x34c; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_Lerp = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

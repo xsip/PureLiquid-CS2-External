@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nBoneIndex,int32_t, 0x50);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBonePositionMetricEvaluator) == 0x58, "CBonePositionMetricEvaluator size should be 0x58");
+
+#endif
 	}
 }

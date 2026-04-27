@@ -31,37 +31,40 @@ namespace CS2 {
 	namespace client {
 		class C_PlantedC4 : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bBombTicking,bool, 0x1170);
-			PROPERTY(m_nBombSite,int32_t, 0x1174);
-			PROPERTY(m_nSourceSoundscapeHash,int32_t, 0x1178);
-			NESTED_PROPERTY(m_entitySpottedState,client::EntitySpottedState_t, 0x1180);
-			NESTED_PROPERTY(m_flNextGlow,entity2::GameTime_t, 0x1198);
-			NESTED_PROPERTY(m_flNextBeep,entity2::GameTime_t, 0x119c);
-			NESTED_PROPERTY(m_flC4Blow,entity2::GameTime_t, 0x11a0);
-			PROPERTY(m_bCannotBeDefused,bool, 0x11a4);
-			PROPERTY(m_bHasExploded,bool, 0x11a5);
-			PROPERTY(m_flTimerLength,float32, 0x11a8);
-			PROPERTY(m_bBeingDefused,bool, 0x11ac);
-			PROPERTY(m_bTriggerWarning,float32, 0x11b0);
-			PROPERTY(m_bExplodeWarning,float32, 0x11b4);
-			PROPERTY(m_bC4Activated,bool, 0x11b8);
-			PROPERTY(m_bTenSecWarning,bool, 0x11b9);
-			PROPERTY(m_flDefuseLength,float32, 0x11bc);
-			NESTED_PROPERTY(m_flDefuseCountDown,entity2::GameTime_t, 0x11c0);
-			PROPERTY(m_bBombDefused,bool, 0x11c4);
-			PROPERTY(m_hBombDefuser,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x11c8);
-			NESTED_PROPERTY(m_AttributeManager,client::C_AttributeContainer, 0x11d0);
-			PROPERTY(m_hDefuserMultimeter,GlobalTypes::CHandle<client::C_Multimeter>, 0x16a0);
-			NESTED_PROPERTY(m_flNextRadarFlashTime,entity2::GameTime_t, 0x16a4);
-			PROPERTY(m_bRadarFlash,bool, 0x16a8);
-			PROPERTY(m_pBombDefuser,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x16ac);
-			NESTED_PROPERTY(m_fLastDefuseTime,entity2::GameTime_t, 0x16b0);
-			PROPERTY(m_pPredictionOwner,client::CBasePlayerController*, 0x16b8);
-			PROPERTY(m_vecC4ExplodeSpectatePos,GlobalTypes::Vector, 0x16c0);
-			PROPERTY(m_vecC4ExplodeSpectateAng,GlobalTypes::QAngle, 0x16cc);
-			PROPERTY(m_flC4ExplodeSpectateDuration,float32, 0x16d8);
+			PROPERTY(m_bBombTicking,bool, 0x1160);
+			PROPERTY(m_nBombSite,int32_t, 0x1164);
+			PROPERTY(m_nSourceSoundscapeHash,int32_t, 0x1168);
+			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(client::EntitySpottedState_t), 0x1170);
+			NESTED_PROPERTY(m_flNextGlow,IDENTITY(entity2::GameTime_t), 0x1188);
+			NESTED_PROPERTY(m_flNextBeep,IDENTITY(entity2::GameTime_t), 0x118c);
+			NESTED_PROPERTY(m_flC4Blow,IDENTITY(entity2::GameTime_t), 0x1190);
+			PROPERTY(m_bCannotBeDefused,bool, 0x1194);
+			PROPERTY(m_bHasExploded,bool, 0x1195);
+			PROPERTY(m_flTimerLength,float32, 0x1198);
+			PROPERTY(m_bBeingDefused,bool, 0x119c);
+			PROPERTY(m_bTriggerWarning,float32, 0x11a0);
+			PROPERTY(m_bExplodeWarning,float32, 0x11a4);
+			PROPERTY(m_bC4Activated,bool, 0x11a8);
+			PROPERTY(m_bTenSecWarning,bool, 0x11a9);
+			PROPERTY(m_flDefuseLength,float32, 0x11ac);
+			NESTED_PROPERTY(m_flDefuseCountDown,IDENTITY(entity2::GameTime_t), 0x11b0);
+			PROPERTY(m_bBombDefused,bool, 0x11b4);
+			PROPERTY(m_hBombDefuser,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x11b8);
+			NESTED_PROPERTY(m_AttributeManager,IDENTITY(client::C_AttributeContainer), 0x11c0);
+			PROPERTY(m_hDefuserMultimeter,IDENTITY(GlobalTypes::CHandle<client::C_Multimeter>), 0x1690);
+			NESTED_PROPERTY(m_flNextRadarFlashTime,IDENTITY(entity2::GameTime_t), 0x1694);
+			PROPERTY(m_bRadarFlash,bool, 0x1698);
+			PROPERTY(m_pBombDefuser,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x169c);
+			NESTED_PROPERTY(m_fLastDefuseTime,IDENTITY(entity2::GameTime_t), 0x16a0);
+			PROPERTY(m_pPredictionOwner,IDENTITY(client::CBasePlayerController*), 0x16a8);
+			PROPERTY(m_vecC4ExplodeSpectatePos,GlobalTypes::Vector, 0x16b0);
+			PROPERTY(m_vecC4ExplodeSpectateAng,GlobalTypes::QAngle, 0x16bc);
+			PROPERTY(m_flC4ExplodeSpectateDuration,float32, 0x16c8);
 			S2_PAD(0x578);
 		};
-		//static_assert(sizeof(CS2::client::C_PlantedC4) == 0x16E0, "C_PlantedC4 size should be 0x16E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PlantedC4) == 0x16D0, "C_PlantedC4 size should be 0x16D0");
+
+#endif
 	}
 }

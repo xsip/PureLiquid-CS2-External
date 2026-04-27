@@ -17,6 +17,9 @@ namespace CS2 {
 	namespace resourcesystem {
 		class InfoForResourceTypeCModel;
 	}
+	namespace vphysics2 {
+		class IPhysAggregateInstance;
+	}
 }
 
 
@@ -25,16 +28,25 @@ namespace CS2 {
 	namespace server {
 		class CModelState  {
 		public:
-			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0xa0);
+			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0xa0);
 			PROPERTY(m_ModelName,GlobalTypes::CUtlSymbolLarge*, 0xa8);
+			PROPERTY(m_pVPhysicsAggregate,IDENTITY(vphysics2::IPhysAggregateInstance*), 0xe0);
+			PROPERTY(m_flRootBoneOffset_x,float32, 0xe8);
+			PROPERTY(m_flRootBoneOffset_y,float32, 0xec);
+			PROPERTY(m_flRootBoneOffset_z,float32, 0xf0);
+			PROPERTY(m_nRootBoneOffsetResetSerialNumber,uint8_t, 0xf4);
 			PROPERTY(m_bClientClothCreationSuppressed,bool, 0xf5);
-			PROPERTY(m_MeshGroupMask,uint64_t, 0x1a0);
-			PROPERTY(m_nBodyGroupChoices,GlobalTypes::CNetworkUtlVectorBase< int32 >, 0x1f0);
-			PROPERTY(m_nIdealMotionType,int8_t, 0x23a);
-			PROPERTY(m_nForceLOD,int8_t, 0x23b);
-			PROPERTY(m_nClothUpdateFlags,int8_t, 0x23c);
+			PROPERTY(m_nAnimStateNoInterpSerialNumber,uint8_t, 0x1a0);
+			PROPERTY(m_MeshGroupMask,uint64_t, 0x1a8);
+			// PROPERTY(m_nBodyGroupChoices,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< int32 >), 0x1f8);
+			PROPERTY(m_nIdealMotionType,int8_t, 0x242);
+			PROPERTY(m_nForceLOD,int8_t, 0x243);
+			PROPERTY(m_nClothUpdateFlags,int8_t, 0x244);
 			S2_PAD(0x250);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CModelState) == 0x250, "CModelState size should be 0x250");
+
+#endif
 	}
 }

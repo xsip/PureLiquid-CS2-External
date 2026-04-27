@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x50
+			// Class size: 0x48
 			namespace CNmSoundEvent /*: public CS2::animlib::CNmEvent*/ {
-				constexpr std::ptrdiff_t m_relevance = 0x20; // animlib::CNmEventRelevance_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_name = 0x28; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_position = 0x30; // animlib::CNmSoundEvent::Position_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_attachmentName = 0x38; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_tags = 0x40; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bContinuePlayingSoundAtDurationEnd = 0x48; // bool m_bContinuePlayingSoundAtDurationEnd; |  0x48 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flDurationInterruptionThreshold = 0x4c; // float32 m_flDurationInterruptionThreshold; |  0x4c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_relevance = 0x18; // animlib::CNmEventRelevance_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_name = 0x20; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_position = 0x28; // animlib::CNmSoundEvent::Position_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_attachmentName = 0x30; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_tags = 0x38; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bContinuePlayingSoundAtDurationEnd = 0x40; // bool m_bContinuePlayingSoundAtDurationEnd; |  0x40 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flDurationInterruptionThreshold = 0x44; // float32 m_flDurationInterruptionThreshold; |  0x44 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

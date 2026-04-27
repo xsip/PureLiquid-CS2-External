@@ -23,22 +23,25 @@ namespace CS2 {
 	namespace client {
 		class C_BaseCSGrenade : public CS2::client::C_CSWeaponBase {
 		public:
-			PROPERTY(m_bClientPredictDelete,bool, 0x1f40);
-			PROPERTY(m_bRedraw,bool, 0x1f41);
-			PROPERTY(m_bIsHeldByPlayer,bool, 0x1f42);
-			PROPERTY(m_bPinPulled,bool, 0x1f43);
-			PROPERTY(m_bJumpThrow,bool, 0x1f44);
-			PROPERTY(m_bThrowAnimating,bool, 0x1f45);
-			NESTED_PROPERTY(m_fThrowTime,entity2::GameTime_t, 0x1f48);
-			PROPERTY(m_flThrowStrength,float32, 0x1f50);
-			NESTED_PROPERTY(m_fDropTime,entity2::GameTime_t, 0x1fc8);
-			NESTED_PROPERTY(m_fPinPullTime,entity2::GameTime_t, 0x1fcc);
-			PROPERTY(m_bJustPulledPin,bool, 0x1fd0);
-			NESTED_PROPERTY(m_nNextHoldTick,entity2::GameTick_t, 0x1fd4);
-			PROPERTY(m_flNextHoldFrac,float32, 0x1fd8);
-			PROPERTY(m_hSwitchToWeaponAfterThrow,GlobalTypes::CHandle<client::C_CSWeaponBase>, 0x1fdc);
+			PROPERTY(m_bClientPredictDelete,bool, 0x1cb0);
+			PROPERTY(m_bRedraw,bool, 0x1cb1);
+			PROPERTY(m_bIsHeldByPlayer,bool, 0x1cb2);
+			PROPERTY(m_bPinPulled,bool, 0x1cb3);
+			PROPERTY(m_bJumpThrow,bool, 0x1cb4);
+			PROPERTY(m_bThrowAnimating,bool, 0x1cb5);
+			NESTED_PROPERTY(m_fThrowTime,IDENTITY(entity2::GameTime_t), 0x1cb8);
+			PROPERTY(m_flThrowStrength,float32, 0x1cc0);
+			NESTED_PROPERTY(m_fDropTime,IDENTITY(entity2::GameTime_t), 0x1d38);
+			NESTED_PROPERTY(m_fPinPullTime,IDENTITY(entity2::GameTime_t), 0x1d3c);
+			PROPERTY(m_bJustPulledPin,bool, 0x1d40);
+			NESTED_PROPERTY(m_nNextHoldTick,IDENTITY(entity2::GameTick_t), 0x1d44);
+			PROPERTY(m_flNextHoldFrac,float32, 0x1d48);
+			PROPERTY(m_hSwitchToWeaponAfterThrow,IDENTITY(GlobalTypes::CHandle<client::C_CSWeaponBase>), 0x1d4c);
 			S2_PAD(0xC0);
 		};
-		//static_assert(sizeof(CS2::client::C_BaseCSGrenade) == 0x2000, "C_BaseCSGrenade size should be 0x2000");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BaseCSGrenade) == 0x1D70, "C_BaseCSGrenade size should be 0x1D70");
+
+#endif
 	}
 }

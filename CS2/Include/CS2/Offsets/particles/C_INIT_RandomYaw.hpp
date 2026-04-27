@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace C_INIT_RandomYaw /*: public CS2::particles::CGeneralRandomRotation*/ {
 				// NO SCHEMA DATA FOUND!
 			}

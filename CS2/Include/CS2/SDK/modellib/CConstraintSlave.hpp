@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_sName,GlobalTypes::CUtlString*, 0x28);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CConstraintSlave) == 0x50, "CConstraintSlave size should be 0x50");
+
+#endif
 	}
 }

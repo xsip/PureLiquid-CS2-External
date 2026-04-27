@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace server {
 		class CTriggerActiveWeaponDetect : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_OnTouchedActiveWeapon,entity2::CEntityIOOutput, 0x890);
-			PROPERTY(m_iszWeaponClassName,GlobalTypes::CUtlSymbolLarge*, 0x8a8);
+			NESTED_PROPERTY(m_OnTouchedActiveWeapon,IDENTITY(entity2::CEntityIOOutput), 0x8c8);
+			PROPERTY(m_iszWeaponClassName,GlobalTypes::CUtlSymbolLarge*, 0x8e0);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerActiveWeaponDetect) == 0x8B0, "CTriggerActiveWeaponDetect size should be 0x8B0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerActiveWeaponDetect) == 0x8E8, "CTriggerActiveWeaponDetect size should be 0x8E8");
+
+#endif
 	}
 }

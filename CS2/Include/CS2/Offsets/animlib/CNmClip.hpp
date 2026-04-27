@@ -24,7 +24,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_syncTrack = 0xf8; // animlib::CNmSyncTrack  | Schema_DeclaredClass | Size: 0xb0
 				constexpr std::ptrdiff_t m_rootMotion = 0x1b0; // animlib::CNmRootMotionData  | Schema_DeclaredClass | Size: 0x50
 				constexpr std::ptrdiff_t m_bIsAdditive = 0x200; // bool m_bIsAdditive; |  0x200 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_modelSpaceSamplingChain = 0x208; // GlobalTypes::CUtlVector<animlib::ModelSpaceSamplingChainLink_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_modelSpaceSamplingChain = 0x208; // GlobalTypes::CUtlVector<animlib::CNmClip_ModelSpaceSamplingChainLink_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_modelSpaceBoneSamplingIndices = 0x220; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 			}
 		}

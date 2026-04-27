@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CTurnHelperUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			PROPERTY(m_facingTarget,animgraphlib::AnimValueSource, 0x74);
+			PROPERTY(m_facingTarget,IDENTITY(animgraphlib::AnimValueSource), 0x74);
 			PROPERTY(m_turnStartTimeOffset,float32, 0x78);
 			PROPERTY(m_turnDuration,float32, 0x7c);
 			PROPERTY(m_bMatchChildDuration,bool, 0x80);
@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_bUseManualTurnOffset,bool, 0x88);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CTurnHelperUpdateNode) == 0x90, "CTurnHelperUpdateNode size should be 0x90");
+
+#endif
 	}
 }

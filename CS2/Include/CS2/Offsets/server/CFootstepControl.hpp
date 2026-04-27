@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8A0
+			// Class size: 0x8D8
 			namespace CFootstepControl /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_source = 0x890; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_destination = 0x898; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_source = 0x8c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_destination = 0x8d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

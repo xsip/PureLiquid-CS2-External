@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_iCashSpentThisRound,int32_t, 0x54);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerController_InGameMoneyServices) == 0x58, "CCSPlayerController_InGameMoneyServices size should be 0x58");
+
+#endif
 	}
 }

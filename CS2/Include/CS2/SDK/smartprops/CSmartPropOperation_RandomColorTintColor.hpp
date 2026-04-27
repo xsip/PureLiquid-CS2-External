@@ -23,12 +23,15 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropOperation_RandomColorTintColor : public CS2::smartprops::CSmartPropOperation {
 		public:
-			NESTED_PROPERTY(m_SelectionMode,smartprops::CSmartPropAttributeChoiceSelectionMode, 0x50);
+			NESTED_PROPERTY(m_SelectionMode,IDENTITY(smartprops::CSmartPropAttributeChoiceSelectionMode), 0x50);
 			PROPERTY(m_ColorPosition,GlobalTypes::CSmartPropAttributeFloat, 0x90);
-			PROPERTY(m_Mode,smartprops::ApplyColorMode_t, 0xd0);
+			PROPERTY(m_Mode,IDENTITY(smartprops::ApplyColorMode_t), 0xd0);
 			PROPERTY(m_Gradient,GlobalTypes::CColorGradient, 0xd8);
 			S2_PAD(0xA0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_RandomColorTintColor) == 0xF0, "CSmartPropOperation_RandomColorTintColor size should be 0xF0");
+
+#endif
 	}
 }

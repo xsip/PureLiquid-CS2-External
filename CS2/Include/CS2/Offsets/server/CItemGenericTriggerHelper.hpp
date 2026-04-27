@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x738
+			// Class size: 0x770
 			namespace CItemGenericTriggerHelper /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_hParentItem = 0x730; // GlobalTypes::CHandle<server::CItemGeneric>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hParentItem = 0x768; // GlobalTypes::CHandle<server::CItemGeneric>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

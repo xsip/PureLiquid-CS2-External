@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_nPhonemeCode,int32_t, 0x8);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CAudioPhonemeTag) == 0xC, "CAudioPhonemeTag size should be 0xC");
+
+#endif
 	}
 }

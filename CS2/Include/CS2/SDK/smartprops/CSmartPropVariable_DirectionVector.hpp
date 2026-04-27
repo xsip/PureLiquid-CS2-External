@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropVariable_DirectionVector : public CS2::smartprops::CSmartPropVariable {
 		public:
-			PROPERTY(m_DefaultValue,smartprops::SmartPropDirection_t, 0x38);
+			PROPERTY(m_DefaultValue,IDENTITY(smartprops::SmartPropDirection_t), 0x38);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_DirectionVector) == 0x40, "CSmartPropVariable_DirectionVector size should be 0x40");
+
+#endif
 	}
 }

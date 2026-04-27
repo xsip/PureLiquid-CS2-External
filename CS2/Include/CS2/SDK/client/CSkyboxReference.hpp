@@ -26,10 +26,13 @@ namespace CS2 {
 	namespace client {
 		class CSkyboxReference : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_worldGroupId,GlobalTypes::WorldGroupId_t, 0x608);
-			PROPERTY(m_hSkyCamera,GlobalTypes::CHandle<client::C_SkyCamera>, 0x60c);
+			PROPERTY(m_worldGroupId,GlobalTypes::WorldGroupId_t, 0x600);
+			PROPERTY(m_hSkyCamera,IDENTITY(GlobalTypes::CHandle<client::C_SkyCamera>), 0x604);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::CSkyboxReference) == 0x610, "CSkyboxReference size should be 0x610");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CSkyboxReference) == 0x608, "CSkyboxReference size should be 0x608");
+
+#endif
 	}
 }

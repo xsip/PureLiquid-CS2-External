@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1D0
+			// Class size: 0x1D8
 			namespace C_OP_SpinUpdate /*: public CS2::particles::CSpinUpdateBase*/ {
 				// NO SCHEMA DATA FOUND!
 			}

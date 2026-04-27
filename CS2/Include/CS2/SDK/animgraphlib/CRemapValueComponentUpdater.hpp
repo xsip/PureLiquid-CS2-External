@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CRemapValueComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_items,GlobalTypes::CUtlVector<animgraphlib::CRemapValueUpdateItem>, 0x30);
+			NESTED_PROPERTY(m_items,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CRemapValueUpdateItem>), 0x30);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CRemapValueComponentUpdater) == 0x48, "CRemapValueComponentUpdater size should be 0x48");
+
+#endif
 	}
 }

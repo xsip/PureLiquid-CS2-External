@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_bEnableEyeBulgeDeformation,bool, 0xb);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::DynamicMeshDeformParams_t) == 0xC, "DynamicMeshDeformParams_t size should be 0xC");
+
+#endif
 	}
 }

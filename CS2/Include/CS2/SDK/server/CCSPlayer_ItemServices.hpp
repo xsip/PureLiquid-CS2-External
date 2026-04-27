@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_bHasHelmet,bool, 0x49);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_ItemServices) == 0x50, "CCSPlayer_ItemServices size should be 0x50");
+
+#endif
 	}
 }

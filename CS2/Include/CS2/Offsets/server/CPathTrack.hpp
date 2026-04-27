@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x4F0
+			// Class size: 0x4E8
 			namespace CPathTrack /*: public CS2::server::CPointEntity*/ {
-				constexpr std::ptrdiff_t m_pnext = 0x4a8; // server::CPathTrack**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pprevious = 0x4b0; // server::CPathTrack**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_paltpath = 0x4b8; // server::CPathTrack**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_flRadius = 0x4c0; // float32 m_flRadius; |  0x4c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_length = 0x4c4; // float32 m_length; |  0x4c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_altName = 0x4c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nIterVal = 0x4d0; // int32_t m_nIterVal; |  0x4d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_eOrientationType = 0x4d4; // server::TrackOrientationType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_OnPass = 0x4d8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_pnext = 0x4a8; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pprevious = 0x4ac; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_paltpath = 0x4b0; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x4b4; // float32 m_flRadius; |  0x4b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_length = 0x4b8; // float32 m_length; |  0x4b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_altName = 0x4c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nIterVal = 0x4c8; // int32_t m_nIterVal; |  0x4c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_eOrientationType = 0x4cc; // server::TrackOrientationType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_OnPass = 0x4d0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

@@ -22,17 +22,20 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetCPOrientationToGroundNormal : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flInterpRate,float32, 0x1d0);
-			PROPERTY(m_flMaxTraceLength,float32, 0x1d4);
-			PROPERTY(m_flTolerance,float32, 0x1d8);
-			PROPERTY(m_flTraceOffset,float32, 0x1dc);
-			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1e0);
-			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x260);
-			PROPERTY(m_nInputCP,int32_t, 0x264);
-			PROPERTY(m_nOutputCP,int32_t, 0x268);
-			PROPERTY(m_bIncludeWater,bool, 0x278);
+			PROPERTY(m_flInterpRate,float32, 0x1d8);
+			PROPERTY(m_flMaxTraceLength,float32, 0x1dc);
+			PROPERTY(m_flTolerance,float32, 0x1e0);
+			PROPERTY(m_flTraceOffset,float32, 0x1e4);
+			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1e8);
+			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x268);
+			PROPERTY(m_nInputCP,int32_t, 0x26c);
+			PROPERTY(m_nOutputCP,int32_t, 0x270);
+			PROPERTY(m_bIncludeWater,bool, 0x280);
 			S2_PAD(0xB0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetCPOrientationToGroundNormal) == 0x280, "C_OP_SetCPOrientationToGroundNormal size should be 0x280");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetCPOrientationToGroundNormal) == 0x288, "C_OP_SetCPOrientationToGroundNormal size should be 0x288");
+
+#endif
 	}
 }

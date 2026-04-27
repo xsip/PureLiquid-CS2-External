@@ -10,6 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x508
 			namespace CPhysConstraint /*: public CS2::server::CLogicalEntity*/ {
+				constexpr std::ptrdiff_t m_hJoint = 0x4a8; // vphysics2::IPhysicsJoint**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_nameAttach1 = 0x4b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nameAttach2 = 0x4b8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hAttach1 = 0x4c0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4

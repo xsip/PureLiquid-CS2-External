@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x290
+			// Class size: 0x298
 			namespace C_INIT_InitialRepulsionVelocity /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_CollisionGroupName = 0x1d8; // char m_CollisionGroupName[128]; |  0x1d8 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nTraceSet = 0x258; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_vecOutputMin = 0x25c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecOutputMax = 0x268; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x274; // int32_t m_nControlPointNumber; |  0x274 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bPerParticle = 0x278; // bool m_bPerParticle; |  0x278 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bTranslate = 0x279; // bool m_bTranslate; |  0x279 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bProportional = 0x27a; // bool m_bProportional; |  0x27a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flTraceLength = 0x27c; // float32 m_flTraceLength; |  0x27c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bPerParticleTR = 0x280; // bool m_bPerParticleTR; |  0x280 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bInherit = 0x281; // bool m_bInherit; |  0x281 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nChildCP = 0x284; // int32_t m_nChildCP; |  0x284 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nChildGroupID = 0x288; // int32_t m_nChildGroupID; |  0x288 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_CollisionGroupName = 0x1e0; // char m_CollisionGroupName[128]; |  0x1e0 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nTraceSet = 0x260; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vecOutputMin = 0x264; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOutputMax = 0x270; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x27c; // int32_t m_nControlPointNumber; |  0x27c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bPerParticle = 0x280; // bool m_bPerParticle; |  0x280 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bTranslate = 0x281; // bool m_bTranslate; |  0x281 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bProportional = 0x282; // bool m_bProportional; |  0x282 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flTraceLength = 0x284; // float32 m_flTraceLength; |  0x284 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bPerParticleTR = 0x288; // bool m_bPerParticleTR; |  0x288 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bInherit = 0x289; // bool m_bInherit; |  0x289 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nChildCP = 0x28c; // int32_t m_nChildCP; |  0x28c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nChildGroupID = 0x290; // int32_t m_nChildGroupID; |  0x290 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

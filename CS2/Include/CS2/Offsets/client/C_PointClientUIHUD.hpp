@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1080
+			// Class size: 0x11A0
 			namespace C_PointClientUIHUD /*: public CS2::client::C_BaseClientUIEntity*/ {
-				constexpr std::ptrdiff_t m_bCheckCSSClasses = 0xec0; // bool m_bCheckCSSClasses; |  0xec0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIgnoreInput = 0x1038; // bool m_bIgnoreInput; |  0x1038 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flWidth = 0x103c; // float32 m_flWidth; |  0x103c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flHeight = 0x1040; // float32 m_flHeight; |  0x1040 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDPI = 0x1044; // float32 m_flDPI; |  0x1044 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInteractDistance = 0x1048; // float32 m_flInteractDistance; |  0x1048 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDepthOffset = 0x104c; // float32 m_flDepthOffset; |  0x104c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unOwnerContext = 0x1050; // uint32_t m_unOwnerContext; |  0x1050 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unHorizontalAlign = 0x1054; // uint32_t m_unHorizontalAlign; |  0x1054 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unVerticalAlign = 0x1058; // uint32_t m_unVerticalAlign; |  0x1058 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unOrientation = 0x105c; // uint32_t m_unOrientation; |  0x105c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAllowInteractionFromAllSceneWorlds = 0x1060; // bool m_bAllowInteractionFromAllSceneWorlds; |  0x1060 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecCSSClasses = 0x1068; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bCheckCSSClasses = 0xfe0; // bool m_bCheckCSSClasses; |  0xfe0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIgnoreInput = 0x1158; // bool m_bIgnoreInput; |  0x1158 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flWidth = 0x115c; // float32 m_flWidth; |  0x115c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flHeight = 0x1160; // float32 m_flHeight; |  0x1160 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDPI = 0x1164; // float32 m_flDPI; |  0x1164 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInteractDistance = 0x1168; // float32 m_flInteractDistance; |  0x1168 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDepthOffset = 0x116c; // float32 m_flDepthOffset; |  0x116c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unOwnerContext = 0x1170; // uint32_t m_unOwnerContext; |  0x1170 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unHorizontalAlign = 0x1174; // uint32_t m_unHorizontalAlign; |  0x1174 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unVerticalAlign = 0x1178; // uint32_t m_unVerticalAlign; |  0x1178 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unOrientation = 0x117c; // uint32_t m_unOrientation; |  0x117c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAllowInteractionFromAllSceneWorlds = 0x1180; // bool m_bAllowInteractionFromAllSceneWorlds; |  0x1180 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecCSSClasses = 0x1188; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

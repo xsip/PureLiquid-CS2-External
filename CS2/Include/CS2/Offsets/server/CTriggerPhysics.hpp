@@ -8,21 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8F0
+			// Class size: 0x928
 			namespace CTriggerPhysics /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_gravityScale = 0x8a0; // float32 m_gravityScale; |  0x8a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_linearLimit = 0x8a4; // float32 m_linearLimit; |  0x8a4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_linearDamping = 0x8a8; // float32 m_linearDamping; |  0x8a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_angularLimit = 0x8ac; // float32 m_angularLimit; |  0x8ac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_angularDamping = 0x8b0; // float32 m_angularDamping; |  0x8b0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_linearForce = 0x8b4; // float32 m_linearForce; |  0x8b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFrequency = 0x8b8; // float32 m_flFrequency; |  0x8b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDampingRatio = 0x8bc; // float32 m_flDampingRatio; |  0x8bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecLinearForcePointAt = 0x8c0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bCollapseToForcePoint = 0x8cc; // bool m_bCollapseToForcePoint; |  0x8cc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecLinearForcePointAtWorld = 0x8d0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecLinearForceDirection = 0x8dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bConvertToDebrisWhenPossible = 0x8e8; // bool m_bConvertToDebrisWhenPossible; |  0x8e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pController = 0x8d0; // client::IPhysicsMotionController**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_gravityScale = 0x8d8; // float32 m_gravityScale; |  0x8d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_linearLimit = 0x8dc; // float32 m_linearLimit; |  0x8dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_linearDamping = 0x8e0; // float32 m_linearDamping; |  0x8e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_angularLimit = 0x8e4; // float32 m_angularLimit; |  0x8e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_angularDamping = 0x8e8; // float32 m_angularDamping; |  0x8e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_linearForce = 0x8ec; // float32 m_linearForce; |  0x8ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFrequency = 0x8f0; // float32 m_flFrequency; |  0x8f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDampingRatio = 0x8f4; // float32 m_flDampingRatio; |  0x8f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecLinearForcePointAt = 0x8f8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bCollapseToForcePoint = 0x904; // bool m_bCollapseToForcePoint; |  0x904 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecLinearForcePointAtWorld = 0x908; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecLinearForceDirection = 0x914; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bConvertToDebrisWhenPossible = 0x920; // bool m_bConvertToDebrisWhenPossible; |  0x920 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

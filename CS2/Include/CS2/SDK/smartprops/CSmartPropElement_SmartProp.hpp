@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropElement_SmartProp : public CS2::smartprops::CSmartPropElement {
 		public:
-			PROPERTY(m_sSmartProp,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCSmartProp>>, 0x88);
+			PROPERTY(m_sSmartProp,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCSmartProp>>), 0x88);
 			PROPERTY(m_bLocalEvaluationState,bool, 0x168);
 			S2_PAD(0xE8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_SmartProp) == 0x170, "CSmartPropElement_SmartProp size should be 0x170");
+
+#endif
 	}
 }

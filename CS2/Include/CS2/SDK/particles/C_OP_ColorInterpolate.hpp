@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ColorInterpolate : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_ColorFade,GlobalTypes::Color, 0x1d0);
-			PROPERTY(m_flFadeStartTime,float32, 0x1e0);
-			PROPERTY(m_flFadeEndTime,float32, 0x1e4);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1e8);
-			PROPERTY(m_bEaseInOut,bool, 0x1ec);
+			PROPERTY(m_ColorFade,GlobalTypes::Color, 0x1d8);
+			PROPERTY(m_flFadeStartTime,float32, 0x1e8);
+			PROPERTY(m_flFadeEndTime,float32, 0x1ec);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1f0);
+			PROPERTY(m_bEaseInOut,bool, 0x1f4);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ColorInterpolate) == 0x1F0, "C_OP_ColorInterpolate size should be 0x1F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ColorInterpolate) == 0x1F8, "C_OP_ColorInterpolate size should be 0x1F8");
+
+#endif
 	}
 }

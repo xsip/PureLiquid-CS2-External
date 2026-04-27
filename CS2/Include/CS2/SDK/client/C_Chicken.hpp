@@ -29,15 +29,18 @@ namespace CS2 {
 	namespace client {
 		class C_Chicken : public CS2::client::C_DynamicProp {
 		public:
-			PROPERTY(m_hHolidayHatAddon,GlobalTypes::CHandle<client::CBaseAnimGraph>, 0x13a8);
+			PROPERTY(m_hHolidayHatAddon,IDENTITY(GlobalTypes::CHandle<client::CBaseAnimGraph>), 0x13a8);
 			PROPERTY(m_jumpedThisFrame,bool, 0x13ac);
-			PROPERTY(m_leader,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x13b0);
-			NESTED_PROPERTY(m_AttributeManager,client::C_AttributeContainer, 0x13b8);
+			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x13b0);
+			NESTED_PROPERTY(m_AttributeManager,IDENTITY(client::C_AttributeContainer), 0x13b8);
 			PROPERTY(m_bAttributesInitialized,bool, 0x1888);
-			NESTED_PROPERTY(m_hWaterWakeParticles,client::ParticleIndex_t, 0x188c);
+			NESTED_PROPERTY(m_hWaterWakeParticles,IDENTITY(client::ParticleIndex_t), 0x188c);
 			PROPERTY(m_bIsPreviewModel,bool, 0x1890);
 			S2_PAD(0x500);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_Chicken) == 0x18A0, "C_Chicken size should be 0x18A0");
+
+#endif
 	}
 }

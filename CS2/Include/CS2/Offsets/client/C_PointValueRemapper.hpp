@@ -8,33 +8,33 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x680
+			// Class size: 0x678
 			namespace C_PointValueRemapper /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_bDisabled = 0x608; // bool m_bDisabled; |  0x608 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisabledOld = 0x609; // bool m_bDisabledOld; |  0x609 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUpdateOnClient = 0x60a; // bool m_bUpdateOnClient; |  0x60a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nInputType = 0x60c; // client::ValueRemapperInputType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_hRemapLineStart = 0x610; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hRemapLineEnd = 0x614; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaximumChangePerSecond = 0x618; // float32 m_flMaximumChangePerSecond; |  0x618 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDisengageDistance = 0x61c; // float32 m_flDisengageDistance; |  0x61c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEngageDistance = 0x620; // float32 m_flEngageDistance; |  0x620 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRequiresUseKey = 0x624; // bool m_bRequiresUseKey; |  0x624 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nOutputType = 0x628; // client::ValueRemapperOutputType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_hOutputEntities = 0x630; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseEntity>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nHapticsType = 0x648; // client::ValueRemapperHapticsType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nMomentumType = 0x64c; // client::ValueRemapperMomentumType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flMomentumModifier = 0x650; // float32 m_flMomentumModifier; |  0x650 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSnapValue = 0x654; // float32 m_flSnapValue; |  0x654 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flCurrentMomentum = 0x658; // float32 m_flCurrentMomentum; |  0x658 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRatchetType = 0x65c; // client::ValueRemapperRatchetType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flRatchetOffset = 0x660; // float32 m_flRatchetOffset; |  0x660 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputOffset = 0x664; // float32 m_flInputOffset; |  0x664 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bEngaged = 0x668; // bool m_bEngaged; |  0x668 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFirstUpdate = 0x669; // bool m_bFirstUpdate; |  0x669 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flPreviousValue = 0x66c; // float32 m_flPreviousValue; |  0x66c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flPreviousUpdateTickTime = 0x670; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x674; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bDisabled = 0x600; // bool m_bDisabled; |  0x600 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisabledOld = 0x601; // bool m_bDisabledOld; |  0x601 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUpdateOnClient = 0x602; // bool m_bUpdateOnClient; |  0x602 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nInputType = 0x604; // client::ValueRemapperInputType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_hRemapLineStart = 0x608; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hRemapLineEnd = 0x60c; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaximumChangePerSecond = 0x610; // float32 m_flMaximumChangePerSecond; |  0x610 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDisengageDistance = 0x614; // float32 m_flDisengageDistance; |  0x614 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEngageDistance = 0x618; // float32 m_flEngageDistance; |  0x618 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRequiresUseKey = 0x61c; // bool m_bRequiresUseKey; |  0x61c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nOutputType = 0x620; // client::ValueRemapperOutputType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_hOutputEntities = 0x628; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nHapticsType = 0x640; // client::ValueRemapperHapticsType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nMomentumType = 0x644; // client::ValueRemapperMomentumType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flMomentumModifier = 0x648; // float32 m_flMomentumModifier; |  0x648 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSnapValue = 0x64c; // float32 m_flSnapValue; |  0x64c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCurrentMomentum = 0x650; // float32 m_flCurrentMomentum; |  0x650 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRatchetType = 0x654; // client::ValueRemapperRatchetType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flRatchetOffset = 0x658; // float32 m_flRatchetOffset; |  0x658 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputOffset = 0x65c; // float32 m_flInputOffset; |  0x65c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bEngaged = 0x660; // bool m_bEngaged; |  0x660 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFirstUpdate = 0x661; // bool m_bFirstUpdate; |  0x661 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flPreviousValue = 0x664; // float32 m_flPreviousValue; |  0x664 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flPreviousUpdateTickTime = 0x668; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x66c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

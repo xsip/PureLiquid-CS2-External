@@ -22,9 +22,12 @@ namespace CS2 {
 		class CSequenceTagSpans  {
 		public:
 			PROPERTY(m_sSequenceName,GlobalTypes::CGlobalSymbol, 0x0);
-			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x8);
+			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x8);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSequenceTagSpans) == 0x20, "CSequenceTagSpans size should be 0x20");
+
+#endif
 	}
 }

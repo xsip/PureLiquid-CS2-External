@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayer_UseServices : public CS2::client::CPlayer_UseServices {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayer_UseServices) == 0x48, "CCSPlayer_UseServices size should be 0x48");
+
+#endif
 	}
 }

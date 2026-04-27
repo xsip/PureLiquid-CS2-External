@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_TeamSelectCounterTerroristPosition : public CS2::client::C_CSGO_TeamSelectCharacterPosition {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_CSGO_TeamSelectCounterTerroristPosition) == 0x13A8, "C_CSGO_TeamSelectCounterTerroristPosition size should be 0x13A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSGO_TeamSelectCounterTerroristPosition) == 0x13A0, "C_CSGO_TeamSelectCounterTerroristPosition size should be 0x13A0");
+
+#endif
 	}
 }

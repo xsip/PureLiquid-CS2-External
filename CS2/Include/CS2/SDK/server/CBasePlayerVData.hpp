@@ -23,22 +23,26 @@ namespace CS2 {
 	namespace server {
 		class CBasePlayerVData : public CS2::client::CEntitySubclassVDataBase {
 		public:
-			PROPERTY(m_sModelName,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>, 0x28);
-			NESTED_PROPERTY(m_flHeadDamageMultiplier,client::CSkillFloat, 0x108);
-			NESTED_PROPERTY(m_flChestDamageMultiplier,client::CSkillFloat, 0x118);
-			NESTED_PROPERTY(m_flStomachDamageMultiplier,client::CSkillFloat, 0x128);
-			NESTED_PROPERTY(m_flArmDamageMultiplier,client::CSkillFloat, 0x138);
-			NESTED_PROPERTY(m_flLegDamageMultiplier,client::CSkillFloat, 0x148);
-			PROPERTY(m_flHoldBreathTime,float32, 0x158);
-			PROPERTY(m_flDrowningDamageInterval,float32, 0x15c);
-			PROPERTY(m_nDrowningDamageInitial,int32_t, 0x160);
-			PROPERTY(m_nDrowningDamageMax,int32_t, 0x164);
-			PROPERTY(m_nWaterSpeed,int32_t, 0x168);
-			PROPERTY(m_flUseRange,float32, 0x16c);
-			PROPERTY(m_flUseAngleTolerance,float32, 0x170);
-			PROPERTY(m_flCrouchTime,float32, 0x174);
-			S2_PAD(0x150);
+			PROPERTY(m_sModelName,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x28);
+			PROPERTY(m_sModelNameAg2Override,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x108);
+			NESTED_PROPERTY(m_flHeadDamageMultiplier,IDENTITY(client::CSkillFloat), 0x1e8);
+			NESTED_PROPERTY(m_flChestDamageMultiplier,IDENTITY(client::CSkillFloat), 0x1f8);
+			NESTED_PROPERTY(m_flStomachDamageMultiplier,IDENTITY(client::CSkillFloat), 0x208);
+			NESTED_PROPERTY(m_flArmDamageMultiplier,IDENTITY(client::CSkillFloat), 0x218);
+			NESTED_PROPERTY(m_flLegDamageMultiplier,IDENTITY(client::CSkillFloat), 0x228);
+			PROPERTY(m_flHoldBreathTime,float32, 0x238);
+			PROPERTY(m_flDrowningDamageInterval,float32, 0x23c);
+			PROPERTY(m_nDrowningDamageInitial,int32_t, 0x240);
+			PROPERTY(m_nDrowningDamageMax,int32_t, 0x244);
+			PROPERTY(m_nWaterSpeed,int32_t, 0x248);
+			PROPERTY(m_flUseRange,float32, 0x24c);
+			PROPERTY(m_flUseAngleTolerance,float32, 0x250);
+			PROPERTY(m_flCrouchTime,float32, 0x254);
+			S2_PAD(0x230);
 		};
-		//static_assert(sizeof(CS2::server::CBasePlayerVData) == 0x178, "CBasePlayerVData size should be 0x178");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBasePlayerVData) == 0x258, "CBasePlayerVData size should be 0x258");
+
+#endif
 	}
 }

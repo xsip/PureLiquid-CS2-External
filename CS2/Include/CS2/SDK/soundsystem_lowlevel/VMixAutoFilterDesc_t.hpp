@@ -25,13 +25,16 @@ namespace CS2 {
 			PROPERTY(m_flEnvelopeAmount,float32, 0x0);
 			PROPERTY(m_flAttackTimeMS,float32, 0x4);
 			PROPERTY(m_flReleaseTimeMS,float32, 0x8);
-			NESTED_PROPERTY(m_filter,soundsystem_lowlevel::VMixFilterDesc_t, 0xc);
+			NESTED_PROPERTY(m_filter,IDENTITY(soundsystem_lowlevel::VMixFilterDesc_t), 0xc);
 			PROPERTY(m_flLFOAmount,float32, 0x1c);
 			PROPERTY(m_flLFORate,float32, 0x20);
 			PROPERTY(m_flPhase,float32, 0x24);
-			PROPERTY(m_nLFOShape,soundsystem_lowlevel::VMixLFOShape_t, 0x28);
+			PROPERTY(m_nLFOShape,IDENTITY(soundsystem_lowlevel::VMixLFOShape_t), 0x28);
 			S2_PAD(0x2C);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixAutoFilterDesc_t) == 0x2C, "VMixAutoFilterDesc_t size should be 0x2C");
+
+#endif
 	}
 }

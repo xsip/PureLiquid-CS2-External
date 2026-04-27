@@ -8,15 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x810
 			namespace C_INIT_CreateSpiralSphere /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOverrideCP = 0x1dc; // int32_t m_nOverrideCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDensity = 0x1e0; // int32_t m_nDensity; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInitialRadius = 0x1e4; // float32 m_flInitialRadius; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInitialSpeedMin = 0x1e8; // float32 m_flInitialSpeedMin; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInitialSpeedMax = 0x1ec; // float32 m_flInitialSpeedMax; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseParticleCount = 0x1f0; // bool m_bUseParticleCount; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_TransformInput = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_flDensity = 0x248; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitialRadius = 0x3b8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitialSpeedMin = 0x528; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitialSpeedMax = 0x698; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bUseParticleCount = 0x808; // bool m_bUseParticleCount; |  0x808 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

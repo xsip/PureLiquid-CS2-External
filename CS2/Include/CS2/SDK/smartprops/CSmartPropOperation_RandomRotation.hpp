@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_vSnapIncrement,GlobalTypes::CSmartPropAttributeAngles, 0xd0);
 			S2_PAD(0xC0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_RandomRotation) == 0x110, "CSmartPropOperation_RandomRotation size should be 0x110");
+
+#endif
 	}
 }

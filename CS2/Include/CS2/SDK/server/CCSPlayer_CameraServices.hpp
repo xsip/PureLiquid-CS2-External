@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_CameraServices : public CS2::server::CCSPlayerBase_CameraServices {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_CameraServices) == 0x1B0, "CCSPlayer_CameraServices size should be 0x1B0");
+
+#endif
 	}
 }

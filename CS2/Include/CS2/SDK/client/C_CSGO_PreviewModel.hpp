@@ -10,7 +10,7 @@
 #endif
 
 
-#include <SDK/client/C_BaseFlex.hpp>
+#include <SDK/client/CBaseAnimGraph.hpp>
 #include <SDK/client/AnimLoopMode_t.hpp>
 
 
@@ -20,14 +20,17 @@
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace client {
-		class C_CSGO_PreviewModel : public CS2::client::C_BaseFlex {
+		class C_CSGO_PreviewModel : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_defaultAnim,GlobalTypes::CUtlString*, 0x1350);
-			PROPERTY(m_nDefaultAnimLoopMode,client::AnimLoopMode_t, 0x1358);
-			PROPERTY(m_flInitialModelScale,float32, 0x135c);
-			PROPERTY(m_sInitialWeaponState,GlobalTypes::CUtlString*, 0x1360);
+			PROPERTY(m_defaultAnim,GlobalTypes::CUtlString*, 0x1158);
+			PROPERTY(m_nDefaultAnimLoopMode,IDENTITY(client::AnimLoopMode_t), 0x1160);
+			PROPERTY(m_flInitialModelScale,float32, 0x1164);
+			PROPERTY(m_sInitialWeaponState,GlobalTypes::CUtlString*, 0x1168);
 			S2_PAD(0x510);
 		};
-		//static_assert(sizeof(CS2::client::C_CSGO_PreviewModel) == 0x1860, "C_CSGO_PreviewModel size should be 0x1860");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSGO_PreviewModel) == 0x1668, "C_CSGO_PreviewModel size should be 0x1668");
+
+#endif
 	}
 }

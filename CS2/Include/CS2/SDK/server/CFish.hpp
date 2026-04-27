@@ -27,32 +27,35 @@ namespace CS2 {
 	namespace server {
 		class CFish : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_pool,GlobalTypes::CHandle<server::CFishPool>, 0xa20);
-			PROPERTY(m_id,uint32_t, 0xa24);
-			PROPERTY(m_x,float32, 0xa28);
-			PROPERTY(m_y,float32, 0xa2c);
-			PROPERTY(m_z,float32, 0xa30);
-			PROPERTY(m_angle,float32, 0xa34);
-			PROPERTY(m_angleChange,float32, 0xa38);
-			PROPERTY(m_forward,GlobalTypes::Vector, 0xa3c);
-			PROPERTY(m_perp,GlobalTypes::Vector, 0xa48);
-			PROPERTY(m_poolOrigin,GlobalTypes::Vector, 0xa54);
-			PROPERTY(m_waterLevel,float32, 0xa60);
-			PROPERTY(m_speed,float32, 0xa64);
-			PROPERTY(m_desiredSpeed,float32, 0xa68);
-			PROPERTY(m_calmSpeed,float32, 0xa6c);
-			PROPERTY(m_panicSpeed,float32, 0xa70);
-			PROPERTY(m_avoidRange,float32, 0xa74);
-			NESTED_PROPERTY(m_turnTimer,server::CountdownTimer, 0xa78);
-			PROPERTY(m_turnClockwise,bool, 0xa90);
-			NESTED_PROPERTY(m_goTimer,server::CountdownTimer, 0xa98);
-			NESTED_PROPERTY(m_moveTimer,server::CountdownTimer, 0xab0);
-			NESTED_PROPERTY(m_panicTimer,server::CountdownTimer, 0xac8);
-			NESTED_PROPERTY(m_disperseTimer,server::CountdownTimer, 0xae0);
-			NESTED_PROPERTY(m_proximityTimer,server::CountdownTimer, 0xaf8);
-			NESTED_PROPERTY(m_visible,server::CUtlVector<server::CFish*>, 0xb10);
+			PROPERTY(m_pool,IDENTITY(GlobalTypes::CHandle<server::CFishPool>), 0x940);
+			PROPERTY(m_id,uint32_t, 0x944);
+			PROPERTY(m_x,float32, 0x948);
+			PROPERTY(m_y,float32, 0x94c);
+			PROPERTY(m_z,float32, 0x950);
+			PROPERTY(m_angle,float32, 0x954);
+			PROPERTY(m_angleChange,float32, 0x958);
+			PROPERTY(m_forward,GlobalTypes::Vector, 0x95c);
+			PROPERTY(m_perp,GlobalTypes::Vector, 0x968);
+			PROPERTY(m_poolOrigin,GlobalTypes::Vector, 0x974);
+			PROPERTY(m_waterLevel,float32, 0x980);
+			PROPERTY(m_speed,float32, 0x984);
+			PROPERTY(m_desiredSpeed,float32, 0x988);
+			PROPERTY(m_calmSpeed,float32, 0x98c);
+			PROPERTY(m_panicSpeed,float32, 0x990);
+			PROPERTY(m_avoidRange,float32, 0x994);
+			NESTED_PROPERTY(m_turnTimer,IDENTITY(server::CountdownTimer), 0x998);
+			PROPERTY(m_turnClockwise,bool, 0x9b0);
+			NESTED_PROPERTY(m_goTimer,IDENTITY(server::CountdownTimer), 0x9b8);
+			NESTED_PROPERTY(m_moveTimer,IDENTITY(server::CountdownTimer), 0x9d0);
+			NESTED_PROPERTY(m_panicTimer,IDENTITY(server::CountdownTimer), 0x9e8);
+			NESTED_PROPERTY(m_disperseTimer,IDENTITY(server::CountdownTimer), 0xa00);
+			NESTED_PROPERTY(m_proximityTimer,IDENTITY(server::CountdownTimer), 0xa18);
+			NESTED_PROPERTY(m_visible,IDENTITY(GlobalTypes::CUtlVector<server::CFish*>), 0xa30);
 			S2_PAD(0x110);
 		};
-		//static_assert(sizeof(CS2::server::CFish) == 0xB30, "CFish size should be 0xB30");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFish) == 0xA50, "CFish size should be 0xA50");
+
+#endif
 	}
 }

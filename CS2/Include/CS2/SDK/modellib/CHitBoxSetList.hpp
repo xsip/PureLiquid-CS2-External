@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace modellib {
 		class CHitBoxSetList  {
 		public:
-			NESTED_PROPERTY(m_HitBoxSets,GlobalTypes::CUtlVector<modellib::CHitBoxSet>, 0x0);
+			NESTED_PROPERTY(m_HitBoxSets,IDENTITY(GlobalTypes::CUtlVector<modellib::CHitBoxSet>), 0x0);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CHitBoxSetList) == 0x18, "CHitBoxSetList size should be 0x18");
+
+#endif
 	}
 }

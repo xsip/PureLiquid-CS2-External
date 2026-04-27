@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PlaneCull : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nPlaneControlPoint,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_vecPlaneDirection,particleslib::CParticleCollectionVecInput, 0x1d8);
-			PROPERTY(m_bLocalSpace,bool, 0x890);
-			PROPERTY(m_flPlaneOffset,float32, 0x894);
+			PROPERTY(m_nPlaneControlPoint,int32_t, 0x1d8);
+			NESTED_PROPERTY(m_vecPlaneDirection,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			PROPERTY(m_bLocalSpace,bool, 0x898);
+			PROPERTY(m_flPlaneOffset,float32, 0x89c);
 			S2_PAD(0x6C8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PlaneCull) == 0x898, "C_OP_PlaneCull size should be 0x898");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PlaneCull) == 0x8A0, "C_OP_PlaneCull size should be 0x8A0");
+
+#endif
 	}
 }

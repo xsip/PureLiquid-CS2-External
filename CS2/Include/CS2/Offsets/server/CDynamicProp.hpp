@@ -8,30 +8,30 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xC50
+			// Class size: 0xB80
 			namespace CDynamicProp /*: public CS2::server::CBreakableProp*/ {
-				constexpr std::ptrdiff_t m_bCreateNavObstacle = 0xba8; // bool m_bCreateNavObstacle; |  0xba8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNavObstacleUpdatesOverridden = 0xba9; // bool m_bNavObstacleUpdatesOverridden; |  0xba9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseHitboxesForRenderBox = 0xbaa; // bool m_bUseHitboxesForRenderBox; |  0xbaa | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseAnimGraph = 0xbab; // bool m_bUseAnimGraph; |  0xbab | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_pOutputAnimBegun = 0xbb0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_pOutputAnimOver = 0xbc8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_pOutputAnimLoopCycleOver = 0xbe0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnAnimReachedStart = 0xbf8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnAnimReachedEnd = 0xc10; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_iszIdleAnim = 0xc28; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nIdleAnimLoopMode = 0xc30; // client::AnimLoopMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bRandomizeCycle = 0xc34; // bool m_bRandomizeCycle; |  0xc34 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bStartDisabled = 0xc35; // bool m_bStartDisabled; |  0xc35 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFiredStartEndOutput = 0xc36; // bool m_bFiredStartEndOutput; |  0xc36 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceNpcExclude = 0xc37; // bool m_bForceNpcExclude; |  0xc37 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreateNonSolid = 0xc38; // bool m_bCreateNonSolid; |  0xc38 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsOverrideProp = 0xc39; // bool m_bIsOverrideProp; |  0xc39 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iInitialGlowState = 0xc3c; // int32_t m_iInitialGlowState; |  0xc3c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nGlowRange = 0xc40; // int32_t m_nGlowRange; |  0xc40 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nGlowRangeMin = 0xc44; // int32_t m_nGlowRangeMin; |  0xc44 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_glowColor = 0xc48; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nGlowTeam = 0xc4c; // int32_t m_nGlowTeam; |  0xc4c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bCreateNavObstacle = 0xad8; // bool m_bCreateNavObstacle; |  0xad8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNavObstacleUpdatesOverridden = 0xad9; // bool m_bNavObstacleUpdatesOverridden; |  0xad9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseHitboxesForRenderBox = 0xada; // bool m_bUseHitboxesForRenderBox; |  0xada | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseAnimGraph = 0xadb; // bool m_bUseAnimGraph; |  0xadb | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pOutputAnimBegun = 0xae0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_pOutputAnimOver = 0xaf8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_pOutputAnimLoopCycleOver = 0xb10; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnAnimReachedStart = 0xb28; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnAnimReachedEnd = 0xb40; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_iszIdleAnim = 0xb58; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nIdleAnimLoopMode = 0xb60; // client::AnimLoopMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bRandomizeCycle = 0xb64; // bool m_bRandomizeCycle; |  0xb64 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStartDisabled = 0xb65; // bool m_bStartDisabled; |  0xb65 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFiredStartEndOutput = 0xb66; // bool m_bFiredStartEndOutput; |  0xb66 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceNpcExclude = 0xb67; // bool m_bForceNpcExclude; |  0xb67 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreateNonSolid = 0xb68; // bool m_bCreateNonSolid; |  0xb68 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsOverrideProp = 0xb69; // bool m_bIsOverrideProp; |  0xb69 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iInitialGlowState = 0xb6c; // int32_t m_iInitialGlowState; |  0xb6c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nGlowRange = 0xb70; // int32_t m_nGlowRange; |  0xb70 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nGlowRangeMin = 0xb74; // int32_t m_nGlowRangeMin; |  0xb74 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_glowColor = 0xb78; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nGlowTeam = 0xb7c; // int32_t m_nGlowTeam; |  0xb7c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

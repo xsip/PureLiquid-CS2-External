@@ -14,6 +14,11 @@
 
 
 
+namespace CS2 {
+	namespace vphysics2 {
+		class IPhysicsJoint;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -21,6 +26,7 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsSpring : public CS2::server::CBaseEntity {
 		public:
+			PROPERTY(m_pSpringJoint,IDENTITY(vphysics2::IPhysicsJoint*), 0x4a8);
 			PROPERTY(m_flFrequency,float32, 0x4b0);
 			PROPERTY(m_flDampingRatio,float32, 0x4b4);
 			PROPERTY(m_flRestLength,float32, 0x4b8);
@@ -31,6 +37,9 @@ namespace CS2 {
 			PROPERTY(m_teleportTick,uint32_t, 0x4e8);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysicsSpring) == 0x4F0, "CPhysicsSpring size should be 0x4F0");
+
+#endif
 	}
 }

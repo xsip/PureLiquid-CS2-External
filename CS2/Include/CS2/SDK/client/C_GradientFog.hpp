@@ -26,24 +26,27 @@ namespace CS2 {
 	namespace client {
 		class C_GradientFog : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_hGradientFogTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x608);
-			PROPERTY(m_flFogStartDistance,float32, 0x610);
-			PROPERTY(m_flFogEndDistance,float32, 0x614);
-			PROPERTY(m_bHeightFogEnabled,bool, 0x618);
-			PROPERTY(m_flFogStartHeight,float32, 0x61c);
-			PROPERTY(m_flFogEndHeight,float32, 0x620);
-			PROPERTY(m_flFarZ,float32, 0x624);
-			PROPERTY(m_flFogMaxOpacity,float32, 0x628);
-			PROPERTY(m_flFogFalloffExponent,float32, 0x62c);
-			PROPERTY(m_flFogVerticalExponent,float32, 0x630);
-			PROPERTY(m_fogColor,GlobalTypes::Color, 0x634);
-			PROPERTY(m_flFogStrength,float32, 0x638);
-			PROPERTY(m_flFadeTime,float32, 0x63c);
-			PROPERTY(m_bStartDisabled,bool, 0x640);
-			PROPERTY(m_bIsEnabled,bool, 0x641);
-			PROPERTY(m_bGradientFogNeedsTextures,bool, 0x642);
+			PROPERTY(m_hGradientFogTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x600);
+			PROPERTY(m_flFogStartDistance,float32, 0x608);
+			PROPERTY(m_flFogEndDistance,float32, 0x60c);
+			PROPERTY(m_bHeightFogEnabled,bool, 0x610);
+			PROPERTY(m_flFogStartHeight,float32, 0x614);
+			PROPERTY(m_flFogEndHeight,float32, 0x618);
+			PROPERTY(m_flFarZ,float32, 0x61c);
+			PROPERTY(m_flFogMaxOpacity,float32, 0x620);
+			PROPERTY(m_flFogFalloffExponent,float32, 0x624);
+			PROPERTY(m_flFogVerticalExponent,float32, 0x628);
+			PROPERTY(m_fogColor,GlobalTypes::Color, 0x62c);
+			PROPERTY(m_flFogStrength,float32, 0x630);
+			PROPERTY(m_flFadeTime,float32, 0x634);
+			PROPERTY(m_bStartDisabled,bool, 0x638);
+			PROPERTY(m_bIsEnabled,bool, 0x639);
+			PROPERTY(m_bGradientFogNeedsTextures,bool, 0x63a);
 			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::client::C_GradientFog) == 0x6A0, "C_GradientFog size should be 0x6A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_GradientFog) == 0x698, "C_GradientFog size should be 0x698");
+
+#endif
 	}
 }

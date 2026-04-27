@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CShower : public CS2::server::CModelPointEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CShower) == 0x730, "CShower size should be 0x730");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CShower) == 0x768, "CShower size should be 0x768");
+
+#endif
 	}
 }

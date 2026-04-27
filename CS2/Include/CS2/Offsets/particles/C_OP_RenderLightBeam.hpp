@@ -8,15 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xEA8
+			// Class size: 0x1028
 			namespace C_OP_RenderLightBeam /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_vColorBlend = 0x220; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_nColorBlendType = 0x8d8; // particles::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flBrightnessLumensPerMeter = 0x8e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bCastShadows = 0xa50; // bool m_bCastShadows; |  0xa50 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flSkirt = 0xa58; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flRange = 0xbc8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flThickness = 0xd38; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nMaxAllowed = 0x228; // uint16_t m_nMaxAllowed; |  0x228 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_vColorBlend = 0x230; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nColorBlendType = 0x8e8; // particleslib::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flBrightnessLumensPerMeter = 0x8f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bCastShadows = 0xa60; // bool m_bCastShadows; |  0xa60 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDynamicBounce = 0xa61; // bool m_bDynamicBounce; |  0xa61 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flBounceScale = 0xa68; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flSkirt = 0xbd8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flRange = 0xd48; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flThickness = 0xeb8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

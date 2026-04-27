@@ -21,23 +21,26 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_NoiseEmitter : public CS2::particles::CParticleFunctionEmitter {
 		public:
-			PROPERTY(m_flEmissionDuration,float32, 0x1d8);
-			PROPERTY(m_flStartTime,float32, 0x1dc);
-			PROPERTY(m_flEmissionScale,float32, 0x1e0);
-			PROPERTY(m_nScaleControlPoint,int32_t, 0x1e4);
-			PROPERTY(m_nScaleControlPointField,int32_t, 0x1e8);
-			PROPERTY(m_nWorldNoisePoint,int32_t, 0x1ec);
-			PROPERTY(m_bAbsVal,bool, 0x1f0);
-			PROPERTY(m_bAbsValInv,bool, 0x1f1);
-			PROPERTY(m_flOffset,float32, 0x1f4);
-			PROPERTY(m_flOutputMin,float32, 0x1f8);
-			PROPERTY(m_flOutputMax,float32, 0x1fc);
-			PROPERTY(m_flNoiseScale,float32, 0x200);
-			PROPERTY(m_flWorldNoiseScale,float32, 0x204);
-			PROPERTY(m_vecOffsetLoc,GlobalTypes::Vector, 0x208);
-			PROPERTY(m_flWorldTimeScale,float32, 0x214);
+			PROPERTY(m_flEmissionDuration,float32, 0x1e0);
+			PROPERTY(m_flStartTime,float32, 0x1e4);
+			PROPERTY(m_flEmissionScale,float32, 0x1e8);
+			PROPERTY(m_nScaleControlPoint,int32_t, 0x1ec);
+			PROPERTY(m_nScaleControlPointField,int32_t, 0x1f0);
+			PROPERTY(m_nWorldNoisePoint,int32_t, 0x1f4);
+			PROPERTY(m_bAbsVal,bool, 0x1f8);
+			PROPERTY(m_bAbsValInv,bool, 0x1f9);
+			PROPERTY(m_flOffset,float32, 0x1fc);
+			PROPERTY(m_flOutputMin,float32, 0x200);
+			PROPERTY(m_flOutputMax,float32, 0x204);
+			PROPERTY(m_flNoiseScale,float32, 0x208);
+			PROPERTY(m_flWorldNoiseScale,float32, 0x20c);
+			PROPERTY(m_vecOffsetLoc,GlobalTypes::Vector, 0x210);
+			PROPERTY(m_flWorldTimeScale,float32, 0x21c);
 			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_NoiseEmitter) == 0x218, "C_OP_NoiseEmitter size should be 0x218");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_NoiseEmitter) == 0x220, "C_OP_NoiseEmitter size should be 0x220");
+
+#endif
 	}
 }

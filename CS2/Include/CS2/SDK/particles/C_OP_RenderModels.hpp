@@ -20,7 +20,7 @@
 #include <SDK/particles/RenderModelSubModelFieldType_t.hpp>
 #include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 #include <SDK/particleslib/CParticleCollectionVecInput.hpp>
-#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
 
 
 
@@ -36,63 +36,67 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderModels : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_bOnlyRenderInEffectsBloomPass,bool, 0x220);
-			PROPERTY(m_bOnlyRenderInEffectsWaterPass,bool, 0x221);
-			PROPERTY(m_bUseMixedResolutionRendering,bool, 0x222);
-			PROPERTY(m_bOnlyRenderInEffecsGameOverlay,bool, 0x223);
-			NESTED_PROPERTY(m_ModelList,GlobalTypes::CUtlVector<particles::ModelReference_t>, 0x228);
-			NESTED_PROPERTY(m_nBodyGroupField,particles::ParticleAttributeIndex_t, 0x240);
-			NESTED_PROPERTY(m_nSubModelField,particles::ParticleAttributeIndex_t, 0x244);
-			PROPERTY(m_bIgnoreNormal,bool, 0x248);
-			PROPERTY(m_bOrientZ,bool, 0x249);
-			PROPERTY(m_bCenterOffset,bool, 0x24a);
-			NESTED_PROPERTY(m_vecLocalOffset,particleslib::CPerParticleVecInput, 0x250);
-			NESTED_PROPERTY(m_vecLocalRotation,particleslib::CPerParticleVecInput, 0x908);
-			PROPERTY(m_bIgnoreRadius,bool, 0xfc0);
-			PROPERTY(m_nModelScaleCP,int32_t, 0xfc4);
-			NESTED_PROPERTY(m_vecComponentScale,particleslib::CPerParticleVecInput, 0xfc8);
-			PROPERTY(m_bLocalScale,bool, 0x1680);
-			PROPERTY(m_nSizeCullBloat,int32_t, 0x1684);
-			PROPERTY(m_bAnimated,bool, 0x1688);
-			NESTED_PROPERTY(m_flAnimationRate,particleslib::CPerParticleFloatInput, 0x1690);
-			PROPERTY(m_bScaleAnimationRate,bool, 0x1800);
-			PROPERTY(m_bForceLoopingAnimation,bool, 0x1801);
-			PROPERTY(m_bResetAnimOnStop,bool, 0x1802);
-			PROPERTY(m_bManualAnimFrame,bool, 0x1803);
-			NESTED_PROPERTY(m_nAnimationScaleField,particles::ParticleAttributeIndex_t, 0x1804);
-			NESTED_PROPERTY(m_nAnimationField,particles::ParticleAttributeIndex_t, 0x1808);
-			NESTED_PROPERTY(m_nManualFrameField,particles::ParticleAttributeIndex_t, 0x180c);
-			PROPERTY_ARRAY(m_ActivityName,char, 256 , 0x1810);
-			PROPERTY_ARRAY(m_SequenceName,char, 256 , 0x1910);
-			PROPERTY(m_bEnableClothSimulation,bool, 0x1a10);
-			PROPERTY_ARRAY(m_ClothEffectName,char, 64 , 0x1a11);
-			PROPERTY(m_hOverrideMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x1a58);
-			PROPERTY(m_bOverrideTranslucentMaterials,bool, 0x1a60);
-			NESTED_PROPERTY(m_nSkin,particleslib::CPerParticleFloatInput, 0x1a68);
-			NESTED_PROPERTY(m_MaterialVars,GlobalTypes::CUtlVector<particles::MaterialVariable_t>, 0x1bd8);
-			NESTED_PROPERTY(m_flRenderFilter,particleslib::CPerParticleFloatInput, 0x1bf0);
-			NESTED_PROPERTY(m_flManualModelSelection,particleslib::CPerParticleFloatInput, 0x1d60);
-			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x1ed0);
-			PROPERTY(m_nLOD,int32_t, 0x1f30);
-			PROPERTY_ARRAY(m_EconSlotName,char, 256 , 0x1f34);
-			PROPERTY(m_bOriginalModel,bool, 0x2034);
-			PROPERTY(m_bSuppressTint,bool, 0x2035);
-			PROPERTY(m_nSubModelFieldType,particles::RenderModelSubModelFieldType_t, 0x2038);
-			PROPERTY(m_bDisableShadows,bool, 0x203c);
-			PROPERTY(m_bDisableDepthPrepass,bool, 0x203d);
-			PROPERTY(m_bAcceptsDecals,bool, 0x203e);
-			PROPERTY(m_bForceDrawInterlevedWithSiblings,bool, 0x203f);
-			PROPERTY(m_bDoNotDrawInParticlePass,bool, 0x2040);
-			PROPERTY(m_bAllowApproximateTransforms,bool, 0x2041);
-			PROPERTY_ARRAY(m_szRenderAttribute,char, 260 , 0x2042);
-			NESTED_PROPERTY(m_flRadiusScale,particleslib::CParticleCollectionFloatInput, 0x2148);
-			NESTED_PROPERTY(m_flAlphaScale,particleslib::CParticleCollectionFloatInput, 0x22b8);
-			NESTED_PROPERTY(m_flRollScale,particleslib::CParticleCollectionFloatInput, 0x2428);
-			NESTED_PROPERTY(m_nAlpha2Field,particles::ParticleAttributeIndex_t, 0x2598);
-			NESTED_PROPERTY(m_vecColorScale,particleslib::CParticleCollectionVecInput, 0x25a0);
-			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0x2c58);
+			PROPERTY(m_bOnlyRenderInEffectsBloomPass,bool, 0x228);
+			PROPERTY(m_bOnlyRenderInEffectsWaterPass,bool, 0x229);
+			PROPERTY(m_bUseMixedResolutionRendering,bool, 0x22a);
+			PROPERTY(m_bOnlyRenderInEffecsGameOverlay,bool, 0x22b);
+			NESTED_PROPERTY(m_ModelList,IDENTITY(GlobalTypes::CUtlVector<particles::ModelReference_t>), 0x230);
+			NESTED_PROPERTY(m_nBodyGroupField,IDENTITY(particles::ParticleAttributeIndex_t), 0x248);
+			NESTED_PROPERTY(m_nSubModelField,IDENTITY(particles::ParticleAttributeIndex_t), 0x24c);
+			PROPERTY(m_bIgnoreNormal,bool, 0x250);
+			PROPERTY(m_bOrientZ,bool, 0x251);
+			PROPERTY(m_bCenterOffset,bool, 0x252);
+			NESTED_PROPERTY(m_vecLocalOffset,IDENTITY(particleslib::CPerParticleVecInput), 0x258);
+			NESTED_PROPERTY(m_vecLocalRotation,IDENTITY(particleslib::CPerParticleVecInput), 0x910);
+			PROPERTY(m_bIgnoreRadius,bool, 0xfc8);
+			PROPERTY(m_nModelScaleCP,int32_t, 0xfcc);
+			NESTED_PROPERTY(m_vecComponentScale,IDENTITY(particleslib::CPerParticleVecInput), 0xfd0);
+			PROPERTY(m_bLocalScale,bool, 0x1688);
+			PROPERTY(m_nSizeCullBloat,int32_t, 0x168c);
+			PROPERTY(m_bAnimated,bool, 0x1690);
+			NESTED_PROPERTY(m_flAnimationRate,IDENTITY(particleslib::CPerParticleFloatInput), 0x1698);
+			PROPERTY(m_bScaleAnimationRate,bool, 0x1808);
+			PROPERTY(m_bForceLoopingAnimation,bool, 0x1809);
+			PROPERTY(m_bResetAnimOnStop,bool, 0x180a);
+			PROPERTY(m_bManualAnimFrame,bool, 0x180b);
+			NESTED_PROPERTY(m_nAnimationScaleField,IDENTITY(particles::ParticleAttributeIndex_t), 0x180c);
+			NESTED_PROPERTY(m_nAnimationField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1810);
+			NESTED_PROPERTY(m_nManualFrameField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1814);
+			PROPERTY_ARRAY(m_ActivityName,char, 256 , 0x1818);
+			PROPERTY_ARRAY(m_SequenceName,char, 256 , 0x1918);
+			PROPERTY(m_bEnableClothSimulation,bool, 0x1a18);
+			PROPERTY(m_bDisableClothGroundCollision,bool, 0x1a19);
+			PROPERTY_ARRAY(m_ClothEffectName,char, 64 , 0x1a1a);
+			PROPERTY(m_hOverrideMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x1a60);
+			PROPERTY(m_bOverrideTranslucentMaterials,bool, 0x1a68);
+			NESTED_PROPERTY(m_nSkin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1a70);
+			NESTED_PROPERTY(m_MaterialVars,IDENTITY(GlobalTypes::CUtlVector<particles::MaterialVariable_t>), 0x1be0);
+			NESTED_PROPERTY(m_flRenderFilter,IDENTITY(particleslib::CPerParticleFloatInput), 0x1bf8);
+			NESTED_PROPERTY(m_flManualModelSelection,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d68);
+			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x1ed8);
+			PROPERTY(m_nLOD,int32_t, 0x1f38);
+			PROPERTY_ARRAY(m_EconSlotName,char, 256 , 0x1f3c);
+			PROPERTY(m_bOriginalModel,bool, 0x203c);
+			PROPERTY(m_bSuppressTint,bool, 0x203d);
+			PROPERTY(m_nSubModelFieldType,IDENTITY(particles::RenderModelSubModelFieldType_t), 0x2040);
+			PROPERTY(m_bDisableShadows,bool, 0x2044);
+			PROPERTY(m_bDisableDepthPrepass,bool, 0x2045);
+			PROPERTY(m_bAcceptsDecals,bool, 0x2046);
+			PROPERTY(m_bForceDrawInterlevedWithSiblings,bool, 0x2047);
+			PROPERTY(m_bDoNotDrawInParticlePass,bool, 0x2048);
+			PROPERTY(m_bAllowApproximateTransforms,bool, 0x2049);
+			PROPERTY_ARRAY(m_szRenderAttribute,char, 260 , 0x204a);
+			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x2150);
+			NESTED_PROPERTY(m_flAlphaScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x22c0);
+			NESTED_PROPERTY(m_flRollScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x2430);
+			NESTED_PROPERTY(m_nAlpha2Field,IDENTITY(particles::ParticleAttributeIndex_t), 0x25a0);
+			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x25a8);
+			PROPERTY(m_nColorBlendType,IDENTITY(particleslib::ParticleColorBlendType_t), 0x2c60);
 			S2_PAD(0x2A80);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderModels) == 0x2CA0, "C_OP_RenderModels size should be 0x2CA0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderModels) == 0x2CA8, "C_OP_RenderModels size should be 0x2CA8");
+
+#endif
 	}
 }

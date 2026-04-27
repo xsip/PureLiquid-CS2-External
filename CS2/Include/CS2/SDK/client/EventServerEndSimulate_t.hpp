@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_bLastTick,bool, 0x0);
 			S2_PAD(0x1);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::EventServerEndSimulate_t) == 0x1, "EventServerEndSimulate_t size should be 0x1");
+
+#endif
 	}
 }

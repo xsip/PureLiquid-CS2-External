@@ -23,9 +23,12 @@ namespace CS2 {
 		class CCSPlayerController_DamageServices : public CS2::client::CPlayerControllerComponent {
 		public:
 			PROPERTY(m_nSendUpdate,int32_t, 0x40);
-			PROPERTY(m_DamageList,GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::CDamageRecord>, 0x48);
+			// PROPERTY(m_DamageList,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::CDamageRecord>), 0x48);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayerController_DamageServices) == 0xB0, "CCSPlayerController_DamageServices size should be 0xB0");
+
+#endif
 	}
 }

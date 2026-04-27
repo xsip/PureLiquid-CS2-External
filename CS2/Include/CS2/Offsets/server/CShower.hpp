@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x730
+			// Class size: 0x768
 			namespace CShower /*: public CS2::server::CModelPointEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

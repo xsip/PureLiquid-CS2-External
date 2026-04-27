@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x510
+			// Class size: 0x530
 			namespace CPointPrefab /*: public CS2::server::CServerOnlyPointEntity*/ {
 				constexpr std::ptrdiff_t m_targetMapName = 0x4a8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_forceWorldGroupID = 0x4b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
@@ -16,6 +16,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_fixupNames = 0x4c0; // bool m_fixupNames; |  0x4c0 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bLoadDynamic = 0x4c1; // bool m_bLoadDynamic; |  0x4c1 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_associatedRelayEntity = 0x4c4; // GlobalTypes::CHandle<server::CPointPrefab>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_ProceduralRelaySources = 0x4c8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

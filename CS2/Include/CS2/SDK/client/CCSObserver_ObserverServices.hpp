@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace client {
 		class CCSObserver_ObserverServices : public CS2::client::CPlayer_ObserverServices {
 		public:
-			PROPERTY(m_obsInterpState,client::ObserverInterpState_t, 0x64);
+			PROPERTY(m_obsInterpState,IDENTITY(client::ObserverInterpState_t), 0x64);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSObserver_ObserverServices) == 0xF0, "CCSObserver_ObserverServices size should be 0xF0");
+
+#endif
 	}
 }

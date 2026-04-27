@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_vMaxBounds,GlobalTypes::Vector, 0xc);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::mathlib_extended::AABB_t) == 0x18, "AABB_t size should be 0x18");
+
+#endif
 	}
 }

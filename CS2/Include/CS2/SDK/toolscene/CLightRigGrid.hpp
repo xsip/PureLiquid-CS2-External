@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_Color,GlobalTypes::Color, 0x1);
 			S2_PAD(0x5);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigGrid) == 0x5, "CLightRigGrid size should be 0x5");
+
+#endif
 	}
 }

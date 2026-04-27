@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetUserEvent : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flInput,particleslib::CPerParticleFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_flRisingEdge,particleslib::CPerParticleFloatInput, 0x340);
-			PROPERTY(m_nRisingEventType,particles::EventTypeSelection_t, 0x4b0);
-			NESTED_PROPERTY(m_flFallingEdge,particleslib::CPerParticleFloatInput, 0x4b8);
-			PROPERTY(m_nFallingEventType,particles::EventTypeSelection_t, 0x628);
+			NESTED_PROPERTY(m_flInput,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flRisingEdge,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
+			PROPERTY(m_nRisingEventType,IDENTITY(particles::EventTypeSelection_t), 0x4b8);
+			NESTED_PROPERTY(m_flFallingEdge,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c0);
+			PROPERTY(m_nFallingEventType,IDENTITY(particles::EventTypeSelection_t), 0x630);
 			S2_PAD(0x460);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetUserEvent) == 0x630, "C_OP_SetUserEvent size should be 0x630");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetUserEvent) == 0x638, "C_OP_SetUserEvent size should be 0x638");
+
+#endif
 	}
 }

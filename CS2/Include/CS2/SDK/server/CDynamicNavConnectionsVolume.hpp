@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace server {
 		class CDynamicNavConnectionsVolume : public CS2::server::CTriggerMultiple {
 		public:
-			PROPERTY(m_iszConnectionTarget,GlobalTypes::CUtlSymbolLarge*, 0x8a8);
-			NESTED_PROPERTY(m_vecConnections,GlobalTypes::CUtlVector<server::DynamicVolumeDef_t>, 0x8b0);
-			PROPERTY(m_sTransitionType,GlobalTypes::CGlobalSymbol, 0x8c8);
-			PROPERTY(m_bConnectionsEnabled,bool, 0x8d0);
-			PROPERTY(m_flTargetAreaSearchRadius,float32, 0x8d4);
-			PROPERTY(m_flUpdateDistance,float32, 0x8d8);
-			PROPERTY(m_flMaxConnectionDistance,float32, 0x8dc);
+			PROPERTY(m_iszConnectionTarget,GlobalTypes::CUtlSymbolLarge*, 0x8e0);
+			NESTED_PROPERTY(m_vecConnections,IDENTITY(GlobalTypes::CUtlVector<server::DynamicVolumeDef_t>), 0x8e8);
+			PROPERTY(m_sTransitionType,GlobalTypes::CGlobalSymbol, 0x900);
+			PROPERTY(m_bConnectionsEnabled,bool, 0x908);
+			PROPERTY(m_flTargetAreaSearchRadius,float32, 0x90c);
+			PROPERTY(m_flUpdateDistance,float32, 0x910);
+			PROPERTY(m_flMaxConnectionDistance,float32, 0x914);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CDynamicNavConnectionsVolume) == 0x8E0, "CDynamicNavConnectionsVolume size should be 0x8E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CDynamicNavConnectionsVolume) == 0x918, "CDynamicNavConnectionsVolume size should be 0x918");
+
+#endif
 	}
 }

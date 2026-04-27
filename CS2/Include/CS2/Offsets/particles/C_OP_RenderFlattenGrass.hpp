@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x230
+			// Class size: 0x238
 			namespace C_OP_RenderFlattenGrass /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_flFlattenStrength = 0x220; // float32 m_flFlattenStrength; |  0x220 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nStrengthFieldOverride = 0x224; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadiusScale = 0x228; // float32 m_flRadiusScale; |  0x228 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFlattenStrength = 0x228; // float32 m_flFlattenStrength; |  0x228 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nStrengthFieldOverride = 0x22c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadiusScale = 0x230; // float32 m_flRadiusScale; |  0x230 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

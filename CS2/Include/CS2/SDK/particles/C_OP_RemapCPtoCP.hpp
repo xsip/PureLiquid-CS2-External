@@ -21,18 +21,21 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapCPtoCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nInputControlPoint,int32_t, 0x1d8);
-			PROPERTY(m_nOutputControlPoint,int32_t, 0x1dc);
-			PROPERTY(m_nInputField,int32_t, 0x1e0);
-			PROPERTY(m_nOutputField,int32_t, 0x1e4);
-			PROPERTY(m_flInputMin,float32, 0x1e8);
-			PROPERTY(m_flInputMax,float32, 0x1ec);
-			PROPERTY(m_flOutputMin,float32, 0x1f0);
-			PROPERTY(m_flOutputMax,float32, 0x1f4);
-			PROPERTY(m_bDerivative,bool, 0x1f8);
-			PROPERTY(m_flInterpRate,float32, 0x1fc);
+			PROPERTY(m_nInputControlPoint,int32_t, 0x1e0);
+			PROPERTY(m_nOutputControlPoint,int32_t, 0x1e4);
+			PROPERTY(m_nInputField,int32_t, 0x1e8);
+			PROPERTY(m_nOutputField,int32_t, 0x1ec);
+			PROPERTY(m_flInputMin,float32, 0x1f0);
+			PROPERTY(m_flInputMax,float32, 0x1f4);
+			PROPERTY(m_flOutputMin,float32, 0x1f8);
+			PROPERTY(m_flOutputMax,float32, 0x1fc);
+			PROPERTY(m_bDerivative,bool, 0x200);
+			PROPERTY(m_flInterpRate,float32, 0x204);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapCPtoCP) == 0x200, "C_OP_RemapCPtoCP size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapCPtoCP) == 0x208, "C_OP_RemapCPtoCP size should be 0x208");
+
+#endif
 	}
 }

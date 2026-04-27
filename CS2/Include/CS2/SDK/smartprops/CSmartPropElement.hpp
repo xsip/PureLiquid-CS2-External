@@ -29,10 +29,13 @@ namespace CS2 {
 			PROPERTY(m_nElementID,int32_t, 0x8);
 			PROPERTY(m_bEnabled,GlobalTypes::CSmartPropAttributeBool, 0x10);
 			PROPERTY(m_sLabel,GlobalTypes::CUtlString*, 0x50);
-			NESTED_PROPERTY(m_SelectionCriteria,GlobalTypes::CUtlVector<smartprops::CSmartPropSelectionCriteria*>, 0x58);
-			NESTED_PROPERTY(m_Modifiers,GlobalTypes::CUtlVector<smartprops::CSmartPropModifier*>, 0x70);
+			NESTED_PROPERTY(m_SelectionCriteria,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropSelectionCriteria*>), 0x58);
+			NESTED_PROPERTY(m_Modifiers,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropModifier*>), 0x70);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement) == 0x88, "CSmartPropElement size should be 0x88");
+
+#endif
 	}
 }

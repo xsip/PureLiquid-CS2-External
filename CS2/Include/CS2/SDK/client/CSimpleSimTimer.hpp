@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class CSimpleSimTimer  {
 		public:
-			NESTED_PROPERTY(m_flNext,entity2::GameTime_t, 0x0);
+			NESTED_PROPERTY(m_flNext,IDENTITY(entity2::GameTime_t), 0x0);
 			PROPERTY(m_nWorldGroupId,GlobalTypes::WorldGroupId_t, 0x4);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSimpleSimTimer) == 0x8, "CSimpleSimTimer size should be 0x8");
+
+#endif
 	}
 }

@@ -26,11 +26,14 @@ namespace CS2 {
 			PROPERTY(m_qAngle,GlobalTypes::Quaternion, 0x4c0);
 			PROPERTY(m_iNextKey,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
 			PROPERTY(m_flNextTime,float32, 0x4d8);
-			PROPERTY(m_pNextKey,server::CPathKeyFrame*, 0x4e0);
-			PROPERTY(m_pPrevKey,server::CPathKeyFrame*, 0x4e8);
-			PROPERTY(m_flMoveSpeed,float32, 0x4f0);
-			S2_PAD(0x58);
+			PROPERTY(m_pNextKey,IDENTITY(GlobalTypes::CHandle<server::CPathKeyFrame>), 0x4dc);
+			PROPERTY(m_pPrevKey,IDENTITY(GlobalTypes::CHandle<server::CPathKeyFrame>), 0x4e0);
+			PROPERTY(m_flMoveSpeed,float32, 0x4e4);
+			S2_PAD(0x48);
 		};
-		//static_assert(sizeof(CS2::server::CPathKeyFrame) == 0x500, "CPathKeyFrame size should be 0x500");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPathKeyFrame) == 0x4F0, "CPathKeyFrame size should be 0x4F0");
+
+#endif
 	}
 }

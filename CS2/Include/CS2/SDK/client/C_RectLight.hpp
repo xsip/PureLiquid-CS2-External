@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_RectLight : public CS2::client::C_BarnLight {
 		public:
-			PROPERTY(m_bShowLight,bool, 0x1198);
+			PROPERTY(m_bShowLight,bool, 0x12b8);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_RectLight) == 0x11A0, "C_RectLight size should be 0x11A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_RectLight) == 0x12C0, "C_RectLight size should be 0x12C0");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x240
+			// Class size: 0x258
 			namespace CCSObserver_MovementServices /*: public CS2::client::CPlayer_MovementServices*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x678
+			// Class size: 0x670
 			namespace C_FogController /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_fog = 0x608; // client::fogparams_t  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_bUseAngles = 0x670; // bool m_bUseAngles; |  0x670 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iChangedVariables = 0x674; // int32_t m_iChangedVariables; |  0x674 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fog = 0x600; // client::fogparams_t  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_bUseAngles = 0x668; // bool m_bUseAngles; |  0x668 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iChangedVariables = 0x66c; // int32_t m_iChangedVariables; |  0x66c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

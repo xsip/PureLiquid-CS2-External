@@ -6,7 +6,6 @@
 namespace CS2 {
 	namespace client {
 		enum WeaponGameplayAnimState : std::uint16_t {
-			WeaponGameplayAnimState_WEAPON_LEGACY_STATE_CLEAR_FIRING = 0x7d1,
 			WeaponGameplayAnimState_WPN_ANIMSTATE_C4_PLANT = 0x12c,
 			WeaponGameplayAnimState_WPN_ANIMSTATE_CHARGE = 0x67,
 			WeaponGameplayAnimState_WPN_ANIMSTATE_DEPLOY = 0xb,

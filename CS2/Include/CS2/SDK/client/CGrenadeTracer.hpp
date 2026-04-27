@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace client {
 		class CGrenadeTracer : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_flTracerDuration,float32, 0xea0);
-			PROPERTY(m_nType,client::GrenadeType_t, 0xea4);
+			PROPERTY(m_flTracerDuration,float32, 0xfc0);
+			PROPERTY(m_nType,IDENTITY(client::GrenadeType_t), 0xfc4);
 			S2_PAD(0x498);
 		};
-		//static_assert(sizeof(CS2::client::CGrenadeTracer) == 0x1320, "CGrenadeTracer size should be 0x1320");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CGrenadeTracer) == 0x1440, "CGrenadeTracer size should be 0x1440");
+
+#endif
 	}
 }

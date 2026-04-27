@@ -22,13 +22,16 @@ namespace CS2 {
 		class ParticleControlPointDriver_t  {
 		public:
 			PROPERTY(m_iControlPoint,GlobalTypes::ParticleParamID_t, 0x0);
-			PROPERTY(m_iAttachType,animationsystem::ParticleAttachment_t, 0x10);
+			PROPERTY(m_iAttachType,IDENTITY(animationsystem::ParticleAttachment_t), 0x10);
 			PROPERTY(m_attachmentName,GlobalTypes::CUtlString*, 0x18);
 			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x20);
 			PROPERTY(m_angOffset,GlobalTypes::QAngle, 0x2c);
 			PROPERTY(m_entityName,GlobalTypes::CUtlString*, 0x38);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::ParticleControlPointDriver_t) == 0x40, "ParticleControlPointDriver_t size should be 0x40");
+
+#endif
 	}
 }

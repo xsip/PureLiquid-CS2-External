@@ -24,12 +24,15 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSequenceUpdateNode : public CS2::animgraphlib::CSequenceUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x78);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x78);
 			PROPERTY(m_duration,float32, 0x7c);
-			NESTED_PROPERTY(m_paramSpans,animgraphlib::CParamSpanUpdater, 0x80);
-			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x98);
+			NESTED_PROPERTY(m_paramSpans,IDENTITY(animgraphlib::CParamSpanUpdater), 0x80);
+			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x98);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSequenceUpdateNode) == 0xB0, "CSequenceUpdateNode size should be 0xB0");
+
+#endif
 	}
 }

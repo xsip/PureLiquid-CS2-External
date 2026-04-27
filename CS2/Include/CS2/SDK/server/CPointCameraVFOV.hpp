@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flVerticalFOV,float32, 0x508);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointCameraVFOV) == 0x510, "CPointCameraVFOV size should be 0x510");
+
+#endif
 	}
 }

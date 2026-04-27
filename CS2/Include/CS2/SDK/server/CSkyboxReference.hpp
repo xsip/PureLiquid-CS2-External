@@ -27,9 +27,12 @@ namespace CS2 {
 		class CSkyboxReference : public CS2::server::CBaseEntity {
 		public:
 			PROPERTY(m_worldGroupId,GlobalTypes::WorldGroupId_t, 0x4a8);
-			PROPERTY(m_hSkyCamera,GlobalTypes::CHandle<server::CSkyCamera>, 0x4ac);
+			PROPERTY(m_hSkyCamera,IDENTITY(GlobalTypes::CHandle<server::CSkyCamera>), 0x4ac);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSkyboxReference) == 0x4B0, "CSkyboxReference size should be 0x4B0");
+
+#endif
 	}
 }

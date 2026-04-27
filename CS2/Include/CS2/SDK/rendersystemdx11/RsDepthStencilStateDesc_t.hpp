@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace rendersystemdx11 {
 		class RsDepthStencilStateDesc_t  {
 		public:
-			PROPERTY(m_depthFunc,rendersystemdx11::RsComparison_t, 0x1);
-			NESTED_PROPERTY(m_stencilState,rendersystemdx11::RsStencilStateDesc_t, 0x2);
+			PROPERTY(m_depthFunc,IDENTITY(rendersystemdx11::RsComparison_t), 0x1);
+			NESTED_PROPERTY(m_stencilState,IDENTITY(rendersystemdx11::RsStencilStateDesc_t), 0x2);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::rendersystemdx11::RsDepthStencilStateDesc_t) == 0x8, "RsDepthStencilStateDesc_t size should be 0x8");
+
+#endif
 	}
 }

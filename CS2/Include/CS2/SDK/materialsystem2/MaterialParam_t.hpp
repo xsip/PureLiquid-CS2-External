@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::MaterialParam_t) == 0x8, "MaterialParam_t size should be 0x8");
+
+#endif
 	}
 }

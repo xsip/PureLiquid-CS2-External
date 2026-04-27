@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class CAnimGraphControllerBase  {
 		public:
-			NESTED_PROPERTY(m_hExternalGraph,client::ExternalAnimGraphHandle_t, 0x18);
-			S2_PAD(0x90);
+			NESTED_PROPERTY(m_hExternalGraph,IDENTITY(client::ExternalAnimGraphHandle_t), 0x10);
+			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::client::CAnimGraphControllerBase) == 0x90, "CAnimGraphControllerBase size should be 0x90");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CAnimGraphControllerBase) == 0x88, "CAnimGraphControllerBase size should be 0x88");
+
+#endif
 	}
 }

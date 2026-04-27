@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace animlib {
 		class CNmOrientationWarpEvent : public CS2::animlib::CNmEvent {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmOrientationWarpEvent) == 0x20, "CNmOrientationWarpEvent size should be 0x20");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmOrientationWarpEvent) == 0x18, "CNmOrientationWarpEvent size should be 0x18");
+
+#endif
 	}
 }

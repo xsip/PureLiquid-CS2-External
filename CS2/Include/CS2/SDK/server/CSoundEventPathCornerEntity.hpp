@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace server {
 		class CSoundEventPathCornerEntity : public CS2::server::CSoundEventEntity {
 		public:
-			PROPERTY(m_iszPathCorner,GlobalTypes::CUtlSymbolLarge*, 0x558);
-			PROPERTY(m_iCountMax,int32_t, 0x560);
-			PROPERTY(m_flDistanceMax,float32, 0x564);
-			PROPERTY(m_flDistMaxSqr,float32, 0x568);
-			PROPERTY(m_flDotProductMax,float32, 0x56c);
-			PROPERTY(m_bPlaying,bool, 0x570);
-			PROPERTY(m_vecCornerPairsNetworked,GlobalTypes::CNetworkUtlVectorBase<client::SoundeventPathCornerPairNetworked_t>, 0x598);
+			PROPERTY(m_iszPathCorner,GlobalTypes::CUtlSymbolLarge*, 0x568);
+			PROPERTY(m_iCountMax,int32_t, 0x570);
+			PROPERTY(m_flDistanceMax,float32, 0x574);
+			PROPERTY(m_flDistMaxSqr,float32, 0x578);
+			PROPERTY(m_flDotProductMax,float32, 0x57c);
+			PROPERTY(m_bPlaying,bool, 0x580);
+			// PROPERTY(m_vecCornerPairsNetworked,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<client::SoundeventPathCornerPairNetworked_t>), 0x5a8);
 			S2_PAD(0xA0);
 		};
-		//static_assert(sizeof(CS2::server::CSoundEventPathCornerEntity) == 0x5F8, "CSoundEventPathCornerEntity size should be 0x5F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CSoundEventPathCornerEntity) == 0x608, "CSoundEventPathCornerEntity size should be 0x608");
+
+#endif
 	}
 }

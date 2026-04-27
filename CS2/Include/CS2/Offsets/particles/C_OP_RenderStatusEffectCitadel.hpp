@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x250
+			// Class size: 0x258
 			namespace C_OP_RenderStatusEffectCitadel /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_pTextureColorWarp = 0x220; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pTextureNormal = 0x228; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pTextureMetalness = 0x230; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pTextureRoughness = 0x238; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pTextureSelfIllum = 0x240; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pTextureDetail = 0x248; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pTextureColorWarp = 0x228; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pTextureNormal = 0x230; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pTextureMetalness = 0x238; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pTextureRoughness = 0x240; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pTextureSelfIllum = 0x248; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pTextureDetail = 0x250; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

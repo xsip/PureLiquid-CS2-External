@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xED0
+			// Class size: 0xFF0
 			namespace C_EntityDissolve /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_flStartTime = 0xe90; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeInStart = 0xe94; // float32 m_flFadeInStart; |  0xe94 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeInLength = 0xe98; // float32 m_flFadeInLength; |  0xe98 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutModelStart = 0xe9c; // float32 m_flFadeOutModelStart; |  0xe9c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutModelLength = 0xea0; // float32 m_flFadeOutModelLength; |  0xea0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutStart = 0xea4; // float32 m_flFadeOutStart; |  0xea4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutLength = 0xea8; // float32 m_flFadeOutLength; |  0xea8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextSparkTime = 0xeac; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nDissolveType = 0xeb0; // client::EntityDisolveType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_vDissolverOrigin = 0xeb4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nMagnitude = 0xec0; // uint32_t m_nMagnitude; |  0xec0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bCoreExplode = 0xec4; // bool m_bCoreExplode; |  0xec4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLinkedToServerEnt = 0xec5; // bool m_bLinkedToServerEnt; |  0xec5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flStartTime = 0xfb0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeInStart = 0xfb4; // float32 m_flFadeInStart; |  0xfb4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeInLength = 0xfb8; // float32 m_flFadeInLength; |  0xfb8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutModelStart = 0xfbc; // float32 m_flFadeOutModelStart; |  0xfbc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutModelLength = 0xfc0; // float32 m_flFadeOutModelLength; |  0xfc0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutStart = 0xfc4; // float32 m_flFadeOutStart; |  0xfc4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutLength = 0xfc8; // float32 m_flFadeOutLength; |  0xfc8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextSparkTime = 0xfcc; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nDissolveType = 0xfd0; // client::EntityDisolveType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vDissolverOrigin = 0xfd4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nMagnitude = 0xfe0; // uint32_t m_nMagnitude; |  0xfe0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bCoreExplode = 0xfe4; // bool m_bCoreExplode; |  0xfe4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLinkedToServerEnt = 0xfe5; // bool m_bLinkedToServerEnt; |  0xfe5 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

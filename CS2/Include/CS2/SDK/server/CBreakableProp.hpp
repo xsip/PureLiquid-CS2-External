@@ -16,7 +16,6 @@
 #include <SDK/client/PerformanceMode_t.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
 #include <SDK/client/BreakableContentsType_t.hpp>
-#include <SDK/client/BaseExplosionTypes_t.hpp>
 
 
 
@@ -33,41 +32,44 @@ namespace CS2 {
 	namespace server {
 		class CBreakableProp : public CS2::server::CBaseProp {
 		public:
-			NESTED_PROPERTY(m_CPropDataComponent,server::CPropDataComponent, 0xa58);
-			NESTED_PROPERTY(m_OnStartDeath,entity2::CEntityIOOutput, 0xa98);
-			NESTED_PROPERTY(m_OnBreak,entity2::CEntityIOOutput, 0xab0);
-			PROPERTY(m_OnHealthChanged,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0xac8);
-			NESTED_PROPERTY(m_OnTakeDamage,entity2::CEntityIOOutput, 0xae8);
-			PROPERTY(m_impactEnergyScale,float32, 0xb00);
-			PROPERTY(m_iMinHealthDmg,int32_t, 0xb04);
-			PROPERTY(m_preferredCarryAngles,GlobalTypes::QAngle, 0xb08);
-			PROPERTY(m_flPressureDelay,float32, 0xb14);
-			PROPERTY(m_flDefBurstScale,float32, 0xb18);
-			PROPERTY(m_vDefBurstOffset,GlobalTypes::Vector, 0xb1c);
-			PROPERTY(m_hBreaker,GlobalTypes::CHandle<server::CBaseEntity>, 0xb28);
-			PROPERTY(m_PerformanceMode,client::PerformanceMode_t, 0xb2c);
-			NESTED_PROPERTY(m_flPreventDamageBeforeTime,entity2::GameTime_t, 0xb30);
-			PROPERTY(m_BreakableContentsType,client::BreakableContentsType_t, 0xb34);
-			PROPERTY(m_strBreakableContentsPropGroupOverride,GlobalTypes::CUtlString*, 0xb38);
-			PROPERTY(m_strBreakableContentsParticleOverride,GlobalTypes::CUtlString*, 0xb40);
-			PROPERTY(m_bHasBreakPiecesOrCommands,bool, 0xb48);
-			PROPERTY(m_explodeDamage,float32, 0xb4c);
-			PROPERTY(m_explodeRadius,float32, 0xb50);
-			PROPERTY(m_nExplosionType,client::BaseExplosionTypes_t, 0xb54);
-			PROPERTY(m_explosionDelay,float32, 0xb58);
-			PROPERTY(m_explosionBuildupSound,GlobalTypes::CUtlSymbolLarge*, 0xb60);
-			PROPERTY(m_explosionCustomEffect,GlobalTypes::CUtlSymbolLarge*, 0xb68);
-			PROPERTY(m_explosionCustomSound,GlobalTypes::CUtlSymbolLarge*, 0xb70);
-			PROPERTY(m_explosionModifier,GlobalTypes::CUtlSymbolLarge*, 0xb78);
-			PROPERTY(m_hPhysicsAttacker,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0xb80);
-			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,entity2::GameTime_t, 0xb84);
-			PROPERTY(m_flDefaultFadeScale,float32, 0xb88);
-			PROPERTY(m_hLastAttacker,GlobalTypes::CHandle<server::CBaseEntity>, 0xb8c);
-			PROPERTY(m_iszPuntSound,GlobalTypes::CUtlSymbolLarge*, 0xb90);
-			PROPERTY(m_bUsePuntSound,bool, 0xb98);
-			PROPERTY(m_bOriginalBlockLOS,bool, 0xb99);
-			S2_PAD(0x150);
+			NESTED_PROPERTY(m_CPropDataComponent,IDENTITY(server::CPropDataComponent), 0x978);
+			NESTED_PROPERTY(m_OnStartDeath,IDENTITY(entity2::CEntityIOOutput), 0x9b8);
+			NESTED_PROPERTY(m_OnBreak,IDENTITY(entity2::CEntityIOOutput), 0x9d0);
+			// PROPERTY(m_OnHealthChanged,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x9e8);
+			NESTED_PROPERTY(m_OnTakeDamage,IDENTITY(entity2::CEntityIOOutput), 0xa08);
+			PROPERTY(m_impactEnergyScale,float32, 0xa20);
+			PROPERTY(m_iMinHealthDmg,int32_t, 0xa24);
+			PROPERTY(m_preferredCarryAngles,GlobalTypes::QAngle, 0xa28);
+			PROPERTY(m_flPressureDelay,float32, 0xa34);
+			PROPERTY(m_flDefBurstScale,float32, 0xa38);
+			PROPERTY(m_vDefBurstOffset,GlobalTypes::Vector, 0xa3c);
+			PROPERTY(m_hBreaker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xa48);
+			PROPERTY(m_PerformanceMode,IDENTITY(client::PerformanceMode_t), 0xa4c);
+			NESTED_PROPERTY(m_flPreventDamageBeforeTime,IDENTITY(entity2::GameTime_t), 0xa50);
+			PROPERTY(m_BreakableContentsType,IDENTITY(client::BreakableContentsType_t), 0xa54);
+			PROPERTY(m_strBreakableContentsPropGroupOverride,GlobalTypes::CUtlString*, 0xa58);
+			PROPERTY(m_strBreakableContentsParticleOverride,GlobalTypes::CUtlString*, 0xa60);
+			PROPERTY(m_bHasBreakPiecesOrCommands,bool, 0xa68);
+			PROPERTY(m_explodeDamage,float32, 0xa6c);
+			PROPERTY(m_explodeRadius,float32, 0xa70);
+			PROPERTY(m_sExplosionType,GlobalTypes::CGlobalSymbol, 0xa78);
+			PROPERTY(m_explosionDelay,float32, 0xa80);
+			PROPERTY(m_explosionBuildupSound,GlobalTypes::CUtlSymbolLarge*, 0xa88);
+			PROPERTY(m_explosionCustomEffect,GlobalTypes::CUtlSymbolLarge*, 0xa90);
+			PROPERTY(m_explosionCustomSound,GlobalTypes::CUtlSymbolLarge*, 0xa98);
+			PROPERTY(m_explosionModifier,GlobalTypes::CUtlSymbolLarge*, 0xaa0);
+			PROPERTY(m_hPhysicsAttacker,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0xaa8);
+			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,IDENTITY(entity2::GameTime_t), 0xaac);
+			PROPERTY(m_flDefaultFadeScale,float32, 0xab0);
+			PROPERTY(m_hLastAttacker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xab4);
+			PROPERTY(m_iszPuntSound,GlobalTypes::CUtlSymbolLarge*, 0xab8);
+			PROPERTY(m_bUsePuntSound,bool, 0xac0);
+			PROPERTY(m_bOriginalBlockLOS,bool, 0xac1);
+			S2_PAD(0x160);
 		};
-		//static_assert(sizeof(CS2::server::CBreakableProp) == 0xBA0, "CBreakableProp size should be 0xBA0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBreakableProp) == 0xAD0, "CBreakableProp size should be 0xAD0");
+
+#endif
 	}
 }

@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace C_INIT_CreateFromPlaneCache /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_vecOffsetMin = 0x1d8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecOffsetMax = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bUseNormal = 0x1f1; // bool m_bUseNormal; |  0x1f1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecOffsetMin = 0x1e0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOffsetMax = 0x1ec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bUseNormal = 0x1f9; // bool m_bUseNormal; |  0x1f9 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

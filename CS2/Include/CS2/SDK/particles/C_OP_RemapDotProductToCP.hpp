@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapDotProductToCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nInputCP1,int32_t, 0x1d8);
-			PROPERTY(m_nInputCP2,int32_t, 0x1dc);
-			PROPERTY(m_nOutputCP,int32_t, 0x1e0);
-			PROPERTY(m_nOutVectorField,int32_t, 0x1e4);
-			NESTED_PROPERTY(m_flInputMin,particleslib::CParticleCollectionFloatInput, 0x1e8);
-			NESTED_PROPERTY(m_flInputMax,particleslib::CParticleCollectionFloatInput, 0x358);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CParticleCollectionFloatInput, 0x4c8);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CParticleCollectionFloatInput, 0x638);
+			PROPERTY(m_nInputCP1,int32_t, 0x1e0);
+			PROPERTY(m_nInputCP2,int32_t, 0x1e4);
+			PROPERTY(m_nOutputCP,int32_t, 0x1e8);
+			PROPERTY(m_nOutVectorField,int32_t, 0x1ec);
+			NESTED_PROPERTY(m_flInputMin,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f0);
+			NESTED_PROPERTY(m_flInputMax,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x360);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4d0);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x640);
 			S2_PAD(0x5D0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapDotProductToCP) == 0x7A8, "C_OP_RemapDotProductToCP size should be 0x7A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapDotProductToCP) == 0x7B0, "C_OP_RemapDotProductToCP size should be 0x7B0");
+
+#endif
 	}
 }

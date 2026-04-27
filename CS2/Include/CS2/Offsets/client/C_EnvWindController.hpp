@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x728
+			// Class size: 0x720
 			namespace C_EnvWindController /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_EnvWindShared = 0x608; // client::C_EnvWindShared  | Schema_DeclaredClass | Size: 0xf8
-				constexpr std::ptrdiff_t m_fDirectionVariation = 0x700; // float32 m_fDirectionVariation; |  0x700 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fSpeedVariation = 0x704; // float32 m_fSpeedVariation; |  0x704 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fTurbulence = 0x708; // float32 m_fTurbulence; |  0x708 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fVolumeHalfExtentXY = 0x70c; // float32 m_fVolumeHalfExtentXY; |  0x70c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fVolumeHalfExtentZ = 0x710; // float32 m_fVolumeHalfExtentZ; |  0x710 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nVolumeResolutionXY = 0x714; // int32_t m_nVolumeResolutionXY; |  0x714 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nVolumeResolutionZ = 0x718; // int32_t m_nVolumeResolutionZ; |  0x718 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nClipmapLevels = 0x71c; // int32_t m_nClipmapLevels; |  0x71c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bIsMaster = 0x720; // bool m_bIsMaster; |  0x720 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFirstTime = 0x721; // bool m_bFirstTime; |  0x721 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_EnvWindShared = 0x600; // client::C_EnvWindShared  | Schema_DeclaredClass | Size: 0xf8
+				constexpr std::ptrdiff_t m_fDirectionVariation = 0x6f8; // float32 m_fDirectionVariation; |  0x6f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fSpeedVariation = 0x6fc; // float32 m_fSpeedVariation; |  0x6fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fTurbulence = 0x700; // float32 m_fTurbulence; |  0x700 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fVolumeHalfExtentXY = 0x704; // float32 m_fVolumeHalfExtentXY; |  0x704 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fVolumeHalfExtentZ = 0x708; // float32 m_fVolumeHalfExtentZ; |  0x708 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVolumeResolutionXY = 0x70c; // int32_t m_nVolumeResolutionXY; |  0x70c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVolumeResolutionZ = 0x710; // int32_t m_nVolumeResolutionZ; |  0x710 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nClipmapLevels = 0x714; // int32_t m_nClipmapLevels; |  0x714 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIsMaster = 0x718; // bool m_bIsMaster; |  0x718 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFirstTime = 0x719; // bool m_bFirstTime; |  0x719 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

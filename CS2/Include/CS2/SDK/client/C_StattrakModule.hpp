@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_StattrakModule : public CS2::client::C_CS2WeaponModuleBase {
 		public:
-			PROPERTY(m_bKnife,bool, 0x1170);
+			PROPERTY(m_bKnife,bool, 0x1160);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_StattrakModule) == 0x1178, "C_StattrakModule size should be 0x1178");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_StattrakModule) == 0x1168, "C_StattrakModule size should be 0x1168");
+
+#endif
 	}
 }

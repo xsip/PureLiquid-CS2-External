@@ -34,6 +34,9 @@ namespace CS2 {
 			PROPERTY(m_strAnnotationsWorkshopId,GlobalTypes::CUtlString*, 0x28);
 			S2_PAD(0xF8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSAdditionalPerRoundStats_t) == 0xF8, "CSAdditionalPerRoundStats_t size should be 0xF8");
+
+#endif
 	}
 }

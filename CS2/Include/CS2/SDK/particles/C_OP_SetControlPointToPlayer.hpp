@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointToPlayer : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nCP1,int32_t, 0x1d8);
-			PROPERTY(m_vecCP1Pos,GlobalTypes::Vector, 0x1dc);
-			PROPERTY(m_bOrientToEyes,bool, 0x1e8);
-			PROPERTY(m_nPosition,particles::ParticleEntityPos_t, 0x1ec);
+			PROPERTY(m_nCP1,int32_t, 0x1e0);
+			PROPERTY(m_vecCP1Pos,GlobalTypes::Vector, 0x1e4);
+			PROPERTY(m_bOrientToEyes,bool, 0x1f0);
+			PROPERTY(m_nPosition,IDENTITY(particles::ParticleEntityPos_t), 0x1f4);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToPlayer) == 0x1F0, "C_OP_SetControlPointToPlayer size should be 0x1F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToPlayer) == 0x1F8, "C_OP_SetControlPointToPlayer size should be 0x1F8");
+
+#endif
 	}
 }

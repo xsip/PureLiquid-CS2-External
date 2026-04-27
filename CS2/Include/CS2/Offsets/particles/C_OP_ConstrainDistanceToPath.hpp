@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x230
+			// Class size: 0x240
 			namespace C_OP_ConstrainDistanceToPath /*: public CS2::particles::CParticleFunctionConstraint*/ {
-				constexpr std::ptrdiff_t m_fMinDistance = 0x1d0; // float32 m_fMinDistance; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxDistance0 = 0x1d4; // float32 m_flMaxDistance0; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxDistanceMid = 0x1d8; // float32 m_flMaxDistanceMid; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxDistance1 = 0x1dc; // float32 m_flMaxDistance1; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_PathParameters = 0x1e0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
-				constexpr std::ptrdiff_t m_flTravelTime = 0x220; // float32 m_flTravelTime; |  0x220 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldScale = 0x224; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nManualTField = 0x228; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_fMinDistance = 0x1d8; // float32 m_fMinDistance; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxDistance0 = 0x1dc; // float32 m_flMaxDistance0; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxDistanceMid = 0x1e0; // float32 m_flMaxDistanceMid; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxDistance1 = 0x1e4; // float32 m_flMaxDistance1; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_PathParameters = 0x1f0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
+				constexpr std::ptrdiff_t m_flTravelTime = 0x230; // float32 m_flTravelTime; |  0x230 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldScale = 0x234; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nManualTField = 0x238; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

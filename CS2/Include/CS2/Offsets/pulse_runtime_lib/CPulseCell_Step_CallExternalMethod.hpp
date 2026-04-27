@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0xC8
+			// Class size: 0xC0
 			namespace CPulseCell_Step_CallExternalMethod /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
 				constexpr std::ptrdiff_t m_MethodName = 0x48; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_GameBlackboard = 0x58; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_ExpectedArgs = 0x68; // GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_nAsyncCallMode = 0x78; // pulse_runtime_lib::PulseMethodCallMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_OnFinished = 0x80; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_nBlackboardIndex = 0x58; // pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t  | Schema_DeclaredClass | Size: 0x2
+				constexpr std::ptrdiff_t m_ExpectedArgs = 0x60; // GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_nAsyncCallMode = 0x70; // pulse_runtime_lib::PulseMethodCallMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_OnFinished = 0x78; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
 			}
 		}
 	}

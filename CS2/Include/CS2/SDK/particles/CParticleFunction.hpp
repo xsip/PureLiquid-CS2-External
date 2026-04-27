@@ -12,6 +12,7 @@
 
 #include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 #include <SDK/particles/ParticleEndcapMode_t.hpp>
+#include <SDK/particles/ParticleToolsState_t.hpp>
 
 
 
@@ -22,24 +23,28 @@ namespace CS2 {
 	namespace particles {
 		class CParticleFunction  {
 		public:
-			NESTED_PROPERTY(m_flOpStrength,particleslib::CParticleCollectionFloatInput, 0x8);
-			PROPERTY(m_nOpEndCapState,particles::ParticleEndcapMode_t, 0x178);
-			PROPERTY(m_flOpStartFadeInTime,float32, 0x17c);
-			PROPERTY(m_flOpEndFadeInTime,float32, 0x180);
-			PROPERTY(m_flOpStartFadeOutTime,float32, 0x184);
-			PROPERTY(m_flOpEndFadeOutTime,float32, 0x188);
-			PROPERTY(m_flOpFadeOscillatePeriod,float32, 0x18c);
-			PROPERTY(m_bNormalizeToStopTime,bool, 0x190);
-			PROPERTY(m_flOpTimeOffsetMin,float32, 0x194);
-			PROPERTY(m_flOpTimeOffsetMax,float32, 0x198);
-			PROPERTY(m_nOpTimeOffsetSeed,int32_t, 0x19c);
-			PROPERTY(m_nOpTimeScaleSeed,int32_t, 0x1a0);
-			PROPERTY(m_flOpTimeScaleMin,float32, 0x1a4);
-			PROPERTY(m_flOpTimeScaleMax,float32, 0x1a8);
-			PROPERTY(m_bDisableOperator,bool, 0x1ae);
-			PROPERTY(m_Notes,GlobalTypes::CUtlString*, 0x1b0);
-			S2_PAD(0x1D0);
+			NESTED_PROPERTY(m_flOpStrength,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x8);
+			PROPERTY(m_nOpEndCapState,IDENTITY(particles::ParticleEndcapMode_t), 0x178);
+			PROPERTY(m_nToolsState,IDENTITY(particles::ParticleToolsState_t), 0x17c);
+			PROPERTY(m_flOpStartFadeInTime,float32, 0x180);
+			PROPERTY(m_flOpEndFadeInTime,float32, 0x184);
+			PROPERTY(m_flOpStartFadeOutTime,float32, 0x188);
+			PROPERTY(m_flOpEndFadeOutTime,float32, 0x18c);
+			PROPERTY(m_flOpFadeOscillatePeriod,float32, 0x190);
+			PROPERTY(m_bNormalizeToStopTime,bool, 0x194);
+			PROPERTY(m_flOpTimeOffsetMin,float32, 0x198);
+			PROPERTY(m_flOpTimeOffsetMax,float32, 0x19c);
+			PROPERTY(m_nOpTimeOffsetSeed,int32_t, 0x1a0);
+			PROPERTY(m_nOpTimeScaleSeed,int32_t, 0x1a4);
+			PROPERTY(m_flOpTimeScaleMin,float32, 0x1a8);
+			PROPERTY(m_flOpTimeScaleMax,float32, 0x1ac);
+			PROPERTY(m_bDisableOperator,bool, 0x1b2);
+			PROPERTY(m_Notes,GlobalTypes::CUtlString*, 0x1b8);
+			S2_PAD(0x1D8);
 		};
-		//static_assert(sizeof(CS2::particles::CParticleFunction) == 0x1D0, "CParticleFunction size should be 0x1D0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::CParticleFunction) == 0x1D8, "CParticleFunction size should be 0x1D8");
+
+#endif
 	}
 }

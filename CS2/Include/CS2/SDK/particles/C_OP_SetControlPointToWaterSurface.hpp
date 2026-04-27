@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointToWaterSurface : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nSourceCP,int32_t, 0x1d8);
-			PROPERTY(m_nDestCP,int32_t, 0x1dc);
-			PROPERTY(m_nFlowCP,int32_t, 0x1e0);
-			PROPERTY(m_nActiveCP,int32_t, 0x1e4);
-			PROPERTY(m_nActiveCPField,int32_t, 0x1e8);
-			NESTED_PROPERTY(m_flRetestRate,particleslib::CParticleCollectionFloatInput, 0x1f0);
-			PROPERTY(m_bAdaptiveThreshold,bool, 0x360);
+			PROPERTY(m_nSourceCP,int32_t, 0x1e0);
+			PROPERTY(m_nDestCP,int32_t, 0x1e4);
+			PROPERTY(m_nFlowCP,int32_t, 0x1e8);
+			PROPERTY(m_nActiveCP,int32_t, 0x1ec);
+			PROPERTY(m_nActiveCPField,int32_t, 0x1f0);
+			NESTED_PROPERTY(m_flRetestRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f8);
+			PROPERTY(m_bAdaptiveThreshold,bool, 0x368);
 			S2_PAD(0x190);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToWaterSurface) == 0x368, "C_OP_SetControlPointToWaterSurface size should be 0x368");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToWaterSurface) == 0x370, "C_OP_SetControlPointToWaterSurface size should be 0x370");
+
+#endif
 	}
 }

@@ -27,44 +27,47 @@ namespace CS2 {
 	namespace client {
 		class C_EnvVolumetricFogController : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_flScattering,float32, 0x608);
-			PROPERTY(m_TintColor,GlobalTypes::Color, 0x60c);
-			PROPERTY(m_flAnisotropy,float32, 0x610);
-			PROPERTY(m_flFadeSpeed,float32, 0x614);
-			PROPERTY(m_flDrawDistance,float32, 0x618);
-			PROPERTY(m_flFadeInStart,float32, 0x61c);
-			PROPERTY(m_flFadeInEnd,float32, 0x620);
-			PROPERTY(m_flIndirectStrength,float32, 0x624);
-			PROPERTY(m_nVolumeDepth,int32_t, 0x628);
-			PROPERTY(m_fFirstVolumeSliceThickness,float32, 0x62c);
-			PROPERTY(m_nIndirectTextureDimX,int32_t, 0x630);
-			PROPERTY(m_nIndirectTextureDimY,int32_t, 0x634);
-			PROPERTY(m_nIndirectTextureDimZ,int32_t, 0x638);
-			PROPERTY(m_vBoxMins,GlobalTypes::Vector, 0x63c);
-			PROPERTY(m_vBoxMaxs,GlobalTypes::Vector, 0x648);
-			PROPERTY(m_bActive,bool, 0x654);
-			NESTED_PROPERTY(m_flStartAnisoTime,entity2::GameTime_t, 0x658);
-			NESTED_PROPERTY(m_flStartScatterTime,entity2::GameTime_t, 0x65c);
-			NESTED_PROPERTY(m_flStartDrawDistanceTime,entity2::GameTime_t, 0x660);
-			PROPERTY(m_flStartAnisotropy,float32, 0x664);
-			PROPERTY(m_flStartScattering,float32, 0x668);
-			PROPERTY(m_flStartDrawDistance,float32, 0x66c);
-			PROPERTY(m_flDefaultAnisotropy,float32, 0x670);
-			PROPERTY(m_flDefaultScattering,float32, 0x674);
-			PROPERTY(m_flDefaultDrawDistance,float32, 0x678);
-			PROPERTY(m_bStartDisabled,bool, 0x67c);
-			PROPERTY(m_bEnableIndirect,bool, 0x67d);
-			PROPERTY(m_bIsMaster,bool, 0x67e);
-			PROPERTY(m_hFogIndirectTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x680);
-			PROPERTY(m_nForceRefreshCount,int32_t, 0x688);
-			PROPERTY(m_fNoiseSpeed,float32, 0x68c);
-			PROPERTY(m_fNoiseStrength,float32, 0x690);
-			PROPERTY(m_vNoiseScale,GlobalTypes::Vector, 0x694);
-			PROPERTY(m_fWindSpeed,float32, 0x6a0);
-			PROPERTY(m_vWindDirection,GlobalTypes::Vector, 0x6a4);
-			PROPERTY(m_bFirstTime,bool, 0x6b0);
+			PROPERTY(m_flScattering,float32, 0x600);
+			PROPERTY(m_TintColor,GlobalTypes::Color, 0x604);
+			PROPERTY(m_flAnisotropy,float32, 0x608);
+			PROPERTY(m_flFadeSpeed,float32, 0x60c);
+			PROPERTY(m_flDrawDistance,float32, 0x610);
+			PROPERTY(m_flFadeInStart,float32, 0x614);
+			PROPERTY(m_flFadeInEnd,float32, 0x618);
+			PROPERTY(m_flIndirectStrength,float32, 0x61c);
+			PROPERTY(m_nVolumeDepth,int32_t, 0x620);
+			PROPERTY(m_fFirstVolumeSliceThickness,float32, 0x624);
+			PROPERTY(m_nIndirectTextureDimX,int32_t, 0x628);
+			PROPERTY(m_nIndirectTextureDimY,int32_t, 0x62c);
+			PROPERTY(m_nIndirectTextureDimZ,int32_t, 0x630);
+			PROPERTY(m_vBoxMins,GlobalTypes::Vector, 0x634);
+			PROPERTY(m_vBoxMaxs,GlobalTypes::Vector, 0x640);
+			PROPERTY(m_bActive,bool, 0x64c);
+			NESTED_PROPERTY(m_flStartAnisoTime,IDENTITY(entity2::GameTime_t), 0x650);
+			NESTED_PROPERTY(m_flStartScatterTime,IDENTITY(entity2::GameTime_t), 0x654);
+			NESTED_PROPERTY(m_flStartDrawDistanceTime,IDENTITY(entity2::GameTime_t), 0x658);
+			PROPERTY(m_flStartAnisotropy,float32, 0x65c);
+			PROPERTY(m_flStartScattering,float32, 0x660);
+			PROPERTY(m_flStartDrawDistance,float32, 0x664);
+			PROPERTY(m_flDefaultAnisotropy,float32, 0x668);
+			PROPERTY(m_flDefaultScattering,float32, 0x66c);
+			PROPERTY(m_flDefaultDrawDistance,float32, 0x670);
+			PROPERTY(m_bStartDisabled,bool, 0x674);
+			PROPERTY(m_bEnableIndirect,bool, 0x675);
+			PROPERTY(m_bIsMaster,bool, 0x676);
+			PROPERTY(m_hFogIndirectTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x678);
+			PROPERTY(m_nForceRefreshCount,int32_t, 0x680);
+			PROPERTY(m_fNoiseSpeed,float32, 0x684);
+			PROPERTY(m_fNoiseStrength,float32, 0x688);
+			PROPERTY(m_vNoiseScale,GlobalTypes::Vector, 0x68c);
+			PROPERTY(m_fWindSpeed,float32, 0x698);
+			PROPERTY(m_vWindDirection,GlobalTypes::Vector, 0x69c);
+			PROPERTY(m_bFirstTime,bool, 0x6a8);
 			S2_PAD(0xB0);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvVolumetricFogController) == 0x6B8, "C_EnvVolumetricFogController size should be 0x6B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvVolumetricFogController) == 0x6B0, "C_EnvVolumetricFogController size should be 0x6B0");
+
+#endif
 	}
 }

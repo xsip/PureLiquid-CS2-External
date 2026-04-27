@@ -11,6 +11,8 @@
 
 
 #include <SDK/particles/CParticleFunctionInitializer.hpp>
+#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include <SDK/particleslib/CPerParticleFloatInput.hpp>
 
 
 
@@ -21,15 +23,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateSpiralSphere : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_nOverrideCP,int32_t, 0x1dc);
-			PROPERTY(m_nDensity,int32_t, 0x1e0);
-			PROPERTY(m_flInitialRadius,float32, 0x1e4);
-			PROPERTY(m_flInitialSpeedMin,float32, 0x1e8);
-			PROPERTY(m_flInitialSpeedMax,float32, 0x1ec);
-			PROPERTY(m_bUseParticleCount,bool, 0x1f0);
-			S2_PAD(0x20);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
+			NESTED_PROPERTY(m_flDensity,IDENTITY(particleslib::CPerParticleFloatInput), 0x248);
+			NESTED_PROPERTY(m_flInitialRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x3b8);
+			NESTED_PROPERTY(m_flInitialSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x528);
+			NESTED_PROPERTY(m_flInitialSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x698);
+			PROPERTY(m_bUseParticleCount,bool, 0x808);
+			S2_PAD(0x630);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateSpiralSphere) == 0x1F8, "C_INIT_CreateSpiralSphere size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateSpiralSphere) == 0x810, "C_INIT_CreateSpiralSphere size should be 0x810");
+
+#endif
 	}
 }

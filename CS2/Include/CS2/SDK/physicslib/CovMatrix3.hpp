@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_flYZ,float32, 0x14);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::CovMatrix3) == 0x18, "CovMatrix3 size should be 0x18");
+
+#endif
 	}
 }

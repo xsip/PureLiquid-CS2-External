@@ -8,21 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x1A0
+			// Class size: 0x1B8
 			namespace CNmGraphDefinition /**/ {
 				constexpr std::ptrdiff_t m_variationID = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_skeleton = 0x8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pUserData = 0x10; // animlib::CNmGraphVariationUserData**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_persistentNodeIndices = 0x18; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nRootNodeIdx = 0x30; // int16_t m_nRootNodeIdx; |  0x30 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_controlParameterIDs = 0x38; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_virtualParameterIDs = 0x50; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_virtualParameterNodeIndices = 0x68; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_referencedGraphSlots = 0x80; // GlobalTypes::CUtlVector<animlib::ReferencedGraphSlot_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_externalGraphSlots = 0x98; // GlobalTypes::CUtlVector<animlib::ExternalGraphSlot_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_externalPoseSlots = 0xb0; // GlobalTypes::CUtlVector<animlib::ExternalPoseSlot_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nodePaths = 0x138; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_resources = 0x150; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_supportedSecondarySkeletons = 0x10; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_pUserData = 0x28; // animlib::CNmGraphVariationUserData**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_persistentNodeIndices = 0x30; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nRootNodeIdx = 0x48; // int16_t m_nRootNodeIdx; |  0x48 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_controlParameterIDs = 0x50; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_virtualParameterIDs = 0x68; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_virtualParameterNodeIndices = 0x80; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_referencedGraphSlots = 0x98; // GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ReferencedGraphSlot_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_externalGraphSlots = 0xb0; // GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ExternalGraphSlot_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_externalPoseSlots = 0xc8; // GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ExternalPoseSlot_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nodePaths = 0x150; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_resources = 0x168; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

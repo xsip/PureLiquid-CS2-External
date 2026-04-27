@@ -10,8 +10,8 @@ namespace CS2 {
 		namespace particles {
 			// Class size: 0x370
 			namespace C_OP_QuantizeFloat /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_InputValue = 0x1d0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nOutputField = 0x340; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_InputValue = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nOutputField = 0x348; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

@@ -12,8 +12,6 @@
 
 #include <SDK/client/CSkeletonAnimationController.hpp>
 #include <SDK/client/AnimationAlgorithm_t.hpp>
-#include <SDK/server/CAnimGraphNetworkedVariables.hpp>
-#include <SDK/animgraphlib/IAnimationGraphInstance.hpp>
 #include <SDK/client/ExternalAnimGraphHandle_t.hpp>
 #include <SDK/server/CBaseAnimGraph.hpp>
 #include <SDK/animationsystem/HSequence.hpp>
@@ -21,6 +19,7 @@
 #include <SDK/client/AnimLoopMode_t.hpp>
 #include <SDK/client/SequenceFinishNotifyState_t.hpp>
 #include <SDK/entity2/GameTick_t.hpp>
+#include <SDK/server/AnimGraph2SerializedPoseRecipeSlot_t.hpp>
 #include <SDK/resourcefile/ResourceId_t.hpp>
 #include <SDK/client/ExternalAnimGraph_t.hpp>
 
@@ -30,6 +29,9 @@ namespace CS2 {
 	namespace resourcesystem {
 		class InfoForResourceTypeCNmGraphDefinition;
 	}
+	namespace animlib {
+		class CNmGraphInstance;
+	}
 }
 
 
@@ -38,39 +40,42 @@ namespace CS2 {
 	namespace server {
 		class CBaseAnimGraphController : public CS2::client::CSkeletonAnimationController {
 		public:
-			PROPERTY(m_nAnimationAlgorithm,client::AnimationAlgorithm_t, 0x18);
-			NESTED_PROPERTY(m_animGraphNetworkedVars,server::CAnimGraphNetworkedVariables, 0x20);
-			PROPERTY(m_pAnimGraphInstance,GlobalTypes::CSmartPtr<animgraphlib::IAnimationGraphInstance>, 0x228);
-			NESTED_PROPERTY(m_nNextExternalGraphHandle,client::ExternalAnimGraphHandle_t, 0x288);
-			NESTED_PROPERTY(m_vecSecondarySkeletonNames,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x290);
-			PROPERTY(m_vecSecondarySkeletons,server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseAnimGraph>>, 0x2a8);
-			PROPERTY(m_nSecondarySkeletonMasterCount,int32_t, 0x2c0);
-			PROPERTY(m_flSoundSyncTime,float32, 0x2c4);
-			PROPERTY(m_nActiveIKChainMask,uint32_t, 0x2c8);
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x2cc);
-			NESTED_PROPERTY(m_flSeqStartTime,entity2::GameTime_t, 0x2d0);
-			PROPERTY(m_flSeqFixedCycle,float32, 0x2d4);
-			PROPERTY(m_nAnimLoopMode,client::AnimLoopMode_t, 0x2d8);
-			PROPERTY(m_flPlaybackRate,GlobalTypes::CNetworkedQuantizedFloat, 0x2dc);
-			PROPERTY(m_nNotifyState,client::SequenceFinishNotifyState_t, 0x2e8);
-			PROPERTY(m_bNetworkedAnimationInputsChanged,bool, 0x2e9);
-			PROPERTY(m_bNetworkedSequenceChanged,bool, 0x2ea);
-			PROPERTY(m_bLastUpdateSkipped,bool, 0x2eb);
-			PROPERTY(m_bSequenceFinished,bool, 0x2ec);
-			NESTED_PROPERTY(m_nPrevAnimUpdateTick,entity2::GameTick_t, 0x2f0);
-			PROPERTY(m_hGraphDefinitionAG2,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmGraphDefinition>, 0x590);
-			PROPERTY(m_serializedPoseRecipeAG2,GlobalTypes::CNetworkUtlVectorBase< uint8 >, 0x598);
-			PROPERTY(m_nSerializePoseRecipeSizeAG2,int32_t, 0x5b0);
-			PROPERTY(m_nSerializePoseRecipeVersionAG2,int32_t, 0x5b4);
-			PROPERTY(m_nServerGraphInstanceIteration,int32_t, 0x5b8);
-			PROPERTY(m_nServerSerializationContextIteration,int32_t, 0x5bc);
-			NESTED_PROPERTY(m_primaryGraphId,resourcefile::ResourceId_t, 0x5c0);
-			PROPERTY(m_vecExternalGraphIds,GlobalTypes::CNetworkUtlVectorBase<resourcefile::ResourceId_t>, 0x5c8);
-			PROPERTY(m_vecExternalClipIds,GlobalTypes::CNetworkUtlVectorBase<resourcefile::ResourceId_t>, 0x5e0);
-			PROPERTY(m_sAnimGraph2Identifier,GlobalTypes::CGlobalSymbol, 0x5f8);
-			NESTED_PROPERTY(m_vecExternalGraphs,GlobalTypes::CUtlVector<client::ExternalAnimGraph_t>, 0x820);
-			S2_PAD(0x848);
+			PROPERTY(m_nAnimationAlgorithm,IDENTITY(client::AnimationAlgorithm_t), 0x18);
+			NESTED_PROPERTY(m_nNextExternalGraphHandle,IDENTITY(client::ExternalAnimGraphHandle_t), 0x1c);
+			// PROPERTY(m_vecSecondarySkeletonSlotIDs,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CGlobalSymbol>), 0x20);
+			// PROPERTY(m_vecSecondarySkeletons,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseAnimGraph>>), 0x38);
+			PROPERTY(m_nSecondarySkeletonMasterCount,int32_t, 0x50);
+			PROPERTY(m_flSoundSyncTime,float32, 0x54);
+			PROPERTY(m_nActiveIKChainMask,uint32_t, 0x58);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x5c);
+			NESTED_PROPERTY(m_flSeqStartTime,IDENTITY(entity2::GameTime_t), 0x60);
+			PROPERTY(m_flSeqFixedCycle,float32, 0x64);
+			PROPERTY(m_nAnimLoopMode,IDENTITY(client::AnimLoopMode_t), 0x68);
+			PROPERTY(m_flPlaybackRate,GlobalTypes::CNetworkedQuantizedFloat, 0x6c);
+			PROPERTY(m_nNotifyState,IDENTITY(client::SequenceFinishNotifyState_t), 0x78);
+			PROPERTY(m_bNetworkedAnimationInputsChanged,bool, 0x79);
+			PROPERTY(m_bNetworkedSequenceChanged,bool, 0x7a);
+			PROPERTY(m_bLastUpdateSkipped,bool, 0x7b);
+			PROPERTY(m_bSequenceFinished,bool, 0x7c);
+			NESTED_PROPERTY(m_nPrevAnimUpdateTick,IDENTITY(entity2::GameTick_t), 0x80);
+			PROPERTY(m_hGraphDefinitionAG2,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmGraphDefinition>), 0x320);
+			// PROPERTY(m_SerializePoseRecipeAG2Slots,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::AnimGraph2SerializedPoseRecipeSlot_t>), 0x328);
+			// PROPERTY(m_SerializePoseRecipeAG2Dynamic,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0x390);
+			PROPERTY(m_nSerializePoseRecipeAG2ActiveSlot,uint32_t, 0x3a8);
+			PROPERTY(m_nSerializePoseRecipeVersionAG2,int32_t, 0x3ac);
+			PROPERTY(m_nServerGraphInstanceIteration,int32_t, 0x3c0);
+			PROPERTY(m_nServerSerializationContextIteration,int32_t, 0x3c4);
+			NESTED_PROPERTY(m_primaryGraphId,IDENTITY(resourcefile::ResourceId_t), 0x3c8);
+			// PROPERTY(m_vecExternalGraphIds,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<resourcefile::ResourceId_t>), 0x3d0);
+			// PROPERTY(m_vecExternalClipIds,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<resourcefile::ResourceId_t>), 0x3e8);
+			PROPERTY(m_sAnimGraph2Identifier,GlobalTypes::CGlobalSymbol, 0x400);
+			PROPERTY(m_pGraphInstanceAG2,IDENTITY(animlib::CNmGraphInstance*), 0x408);
+			NESTED_PROPERTY(m_vecExternalGraphs,IDENTITY(GlobalTypes::CUtlVector<client::ExternalAnimGraph_t>), 0x620);
+			S2_PAD(0x630);
 		};
-		//static_assert(sizeof(CS2::server::CBaseAnimGraphController) == 0x858, "CBaseAnimGraphController size should be 0x858");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBaseAnimGraphController) == 0x640, "CBaseAnimGraphController size should be 0x640");
+
+#endif
 	}
 }

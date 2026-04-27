@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x278
+			// Class size: 0x290
 			namespace CPlayer_MovementServices_Humanoid /*: public CS2::server::CPlayer_MovementServices*/ {
-				constexpr std::ptrdiff_t m_flStepSoundTime = 0x240; // float32 m_flStepSoundTime; |  0x240 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFallVelocity = 0x244; // float32 m_flFallVelocity; |  0x244 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_groundNormal = 0x248; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flSurfaceFriction = 0x254; // float32 m_flSurfaceFriction; |  0x254 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_surfaceProps = 0x258; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nStepside = 0x268; // int32_t m_nStepside; |  0x268 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecSmoothedVelocity = 0x26c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flStepSoundTime = 0x258; // float32 m_flStepSoundTime; |  0x258 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFallVelocity = 0x25c; // float32 m_flFallVelocity; |  0x25c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_groundNormal = 0x260; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flSurfaceFriction = 0x26c; // float32 m_flSurfaceFriction; |  0x26c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_surfaceProps = 0x270; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nStepside = 0x280; // int32_t m_nStepside; |  0x280 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecSmoothedVelocity = 0x284; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

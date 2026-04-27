@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CPulseGraphInstance_GameBlackboard) == 0x1C8, "CPulseGraphInstance_GameBlackboard size should be 0x1C8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPulseGraphInstance_GameBlackboard) == 0x1E0, "CPulseGraphInstance_GameBlackboard size should be 0x1E0");
+
+#endif
 	}
 }

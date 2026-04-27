@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_bIsAttachment,bool, 0x59);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CConstraintTarget) == 0x60, "CConstraintTarget size should be 0x60");
+
+#endif
 	}
 }

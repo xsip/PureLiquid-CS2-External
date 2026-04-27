@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_MolotovProjectile : public CS2::client::C_BaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_bIsIncGrenade,bool, 0x1438);
+			PROPERTY(m_bIsIncGrenade,bool, 0x1238);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::client::C_MolotovProjectile) == 0x1460, "C_MolotovProjectile size should be 0x1460");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_MolotovProjectile) == 0x1260, "C_MolotovProjectile size should be 0x1260");
+
+#endif
 	}
 }

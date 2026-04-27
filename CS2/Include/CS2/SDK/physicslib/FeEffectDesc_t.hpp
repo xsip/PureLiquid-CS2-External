@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_Params,GlobalTypes::KeyValues3, 0x10);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeEffectDesc_t) == 0x20, "FeEffectDesc_t size should be 0x20");
+
+#endif
 	}
 }

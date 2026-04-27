@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(unItemDefIdx,uint16_t, 0x34);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::ServerAuthoritativeWeaponSlot_t) == 0x38, "ServerAuthoritativeWeaponSlot_t size should be 0x38");
+
+#endif
 	}
 }

@@ -23,9 +23,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_Name,GlobalTypes::PulseSymbol_t, 0x0);
 			PROPERTY(m_Description,GlobalTypes::CUtlString*, 0x10);
-			PROPERTY(m_Args,GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>, 0x18);
+			// PROPERTY(m_Args,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>), 0x18);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_PublicOutput) == 0x28, "CPulse_PublicOutput size should be 0x28");
+
+#endif
 	}
 }

@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Outflow_CycleOrdered : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
-			NESTED_PROPERTY(m_Outputs,server::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>, 0x48);
+			NESTED_PROPERTY(m_Outputs,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>), 0x48);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Outflow_CycleOrdered) == 0x60, "CPulseCell_Outflow_CycleOrdered size should be 0x60");
+
+#endif
 	}
 }

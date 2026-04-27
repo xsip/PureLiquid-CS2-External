@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CBuyZone : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_LegacyTeamNum,int32_t, 0x890);
+			PROPERTY(m_LegacyTeamNum,int32_t, 0x8c8);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::server::CBuyZone) == 0x898, "CBuyZone size should be 0x898");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBuyZone) == 0x8D0, "CBuyZone size should be 0x8D0");
+
+#endif
 	}
 }

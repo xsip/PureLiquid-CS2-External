@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace server {
 		class CGradientFog : public CS2::server::CBaseEntity {
 		public:
-			PROPERTY(m_hGradientFogTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x4a8);
+			PROPERTY(m_hGradientFogTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x4a8);
 			PROPERTY(m_flFogStartDistance,float32, 0x4b0);
 			PROPERTY(m_flFogEndDistance,float32, 0x4b4);
 			PROPERTY(m_bHeightFogEnabled,bool, 0x4b8);
@@ -44,6 +44,9 @@ namespace CS2 {
 			PROPERTY(m_bGradientFogNeedsTextures,bool, 0x4e2);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGradientFog) == 0x4E8, "CGradientFog size should be 0x4E8");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_bDefault,bool, 0x18);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimMotorUpdaterBase) == 0x20, "CAnimMotorUpdaterBase size should be 0x20");
+
+#endif
 	}
 }

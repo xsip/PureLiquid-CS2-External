@@ -21,7 +21,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_PostProcessingVolumes = 0x128; // server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CPostProcessingVolume>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_flOldPlayerZ = 0x140; // float32 m_flOldPlayerZ; |  0x140 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flOldPlayerViewOffsetZ = 0x144; // float32 m_flOldPlayerViewOffsetZ; |  0x144 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hTriggerSoundscapeList = 0x160; // server::CUtlVector<GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hTriggerSoundscapeList = 0x160; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

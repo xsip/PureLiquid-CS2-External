@@ -15,7 +15,7 @@
 #include <SDK/particleslib/CPerParticleVecInput.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -26,15 +26,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetVectorAttributeToVectorExpression : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nExpression,particles::VectorExpressionType_t, 0x1d0);
-			NESTED_PROPERTY(m_vInput1,particleslib::CPerParticleVecInput, 0x1d8);
-			NESTED_PROPERTY(m_vInput2,particleslib::CPerParticleVecInput, 0x890);
-			NESTED_PROPERTY(m_flLerp,particleslib::CPerParticleFloatInput, 0xf48);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x10b8);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x10bc);
-			PROPERTY(m_bNormalizedOutput,bool, 0x10c0);
-			S2_PAD(0xF60);
+			PROPERTY(m_nExpression,IDENTITY(particles::VectorExpressionType_t), 0x1d8);
+			NESTED_PROPERTY(m_vInput1,IDENTITY(particleslib::CPerParticleVecInput), 0x1e0);
+			NESTED_PROPERTY(m_vInput2,IDENTITY(particleslib::CPerParticleVecInput), 0x898);
+			NESTED_PROPERTY(m_flLerp,IDENTITY(particleslib::CPerParticleFloatInput), 0xf50);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x10c0);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x10c4);
+			PROPERTY(m_bNormalizedOutput,bool, 0x10c8);
+			S2_PAD(0xF58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetVectorAttributeToVectorExpression) == 0x1130, "C_OP_SetVectorAttributeToVectorExpression size should be 0x1130");
+
+#endif
 	}
 }

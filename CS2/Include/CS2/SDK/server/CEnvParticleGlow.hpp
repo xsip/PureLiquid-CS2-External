@@ -26,13 +26,16 @@ namespace CS2 {
 	namespace server {
 		class CEnvParticleGlow : public CS2::server::CParticleSystem {
 		public:
-			PROPERTY(m_flAlphaScale,float32, 0xca8);
-			PROPERTY(m_flRadiusScale,float32, 0xcac);
-			PROPERTY(m_flSelfIllumScale,float32, 0xcb0);
-			PROPERTY(m_ColorTint,GlobalTypes::Color, 0xcb4);
-			PROPERTY(m_hTextureOverride,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0xcb8);
+			PROPERTY(m_flAlphaScale,float32, 0xce0);
+			PROPERTY(m_flRadiusScale,float32, 0xce4);
+			PROPERTY(m_flSelfIllumScale,float32, 0xce8);
+			PROPERTY(m_ColorTint,GlobalTypes::Color, 0xcec);
+			PROPERTY(m_hTextureOverride,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xcf0);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::server::CEnvParticleGlow) == 0xCC0, "CEnvParticleGlow size should be 0xCC0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CEnvParticleGlow) == 0xCF8, "CEnvParticleGlow size should be 0xCF8");
+
+#endif
 	}
 }

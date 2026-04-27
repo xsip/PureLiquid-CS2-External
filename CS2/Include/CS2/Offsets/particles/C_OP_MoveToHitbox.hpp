@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4A0
+			// Class size: 0x4A8
 			namespace C_OP_MoveToHitbox /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_modelInput = 0x1d0; // particleslib::CParticleModelInput  | Schema_DeclaredClass | Size: 0x60
-				constexpr std::ptrdiff_t m_transformInput = 0x230; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_flLifeTimeLerpStart = 0x29c; // float32 m_flLifeTimeLerpStart; |  0x29c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLifeTimeLerpEnd = 0x2a0; // float32 m_flLifeTimeLerpEnd; |  0x2a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flPrevPosScale = 0x2a4; // float32 m_flPrevPosScale; |  0x2a4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_HitboxSetName = 0x2a8; // char m_HitboxSetName[128]; |  0x2a8 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_bUseBones = 0x328; // bool m_bUseBones; |  0x328 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nLerpType = 0x32c; // particles::HitboxLerpType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flInterpolation = 0x330; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_modelInput = 0x1d8; // particleslib::CParticleModelInput  | Schema_DeclaredClass | Size: 0x60
+				constexpr std::ptrdiff_t m_transformInput = 0x238; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_flLifeTimeLerpStart = 0x2a4; // float32 m_flLifeTimeLerpStart; |  0x2a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLifeTimeLerpEnd = 0x2a8; // float32 m_flLifeTimeLerpEnd; |  0x2a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flPrevPosScale = 0x2ac; // float32 m_flPrevPosScale; |  0x2ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_HitboxSetName = 0x2b0; // char m_HitboxSetName[128]; |  0x2b0 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_bUseBones = 0x330; // bool m_bUseBones; |  0x330 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nLerpType = 0x334; // particles::HitboxLerpType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flInterpolation = 0x338; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

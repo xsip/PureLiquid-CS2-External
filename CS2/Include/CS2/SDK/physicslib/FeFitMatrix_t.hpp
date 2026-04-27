@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(nBeginDynamic,uint16_t, 0x30);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeFitMatrix_t) == 0x40, "FeFitMatrix_t size should be 0x40");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nCount,uint16_t, 0x32);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::WeaponPurchaseCount_t) == 0x38, "WeaponPurchaseCount_t size should be 0x38");
+
+#endif
 	}
 }

@@ -23,12 +23,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderVRHapticEvent : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_nHand,particles::ParticleVRHandChoiceList_t, 0x220);
-			PROPERTY(m_nOutputHandCP,int32_t, 0x224);
-			PROPERTY(m_nOutputField,int32_t, 0x228);
-			NESTED_PROPERTY(m_flAmplitude,particleslib::CPerParticleFloatInput, 0x230);
+			PROPERTY(m_nHand,IDENTITY(particles::ParticleVRHandChoiceList_t), 0x228);
+			PROPERTY(m_nOutputHandCP,int32_t, 0x22c);
+			PROPERTY(m_nOutputField,int32_t, 0x230);
+			NESTED_PROPERTY(m_flAmplitude,IDENTITY(particleslib::CPerParticleFloatInput), 0x238);
 			S2_PAD(0x180);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderVRHapticEvent) == 0x3A0, "C_OP_RenderVRHapticEvent size should be 0x3A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderVRHapticEvent) == 0x3A8, "C_OP_RenderVRHapticEvent size should be 0x3A8");
+
+#endif
 	}
 }

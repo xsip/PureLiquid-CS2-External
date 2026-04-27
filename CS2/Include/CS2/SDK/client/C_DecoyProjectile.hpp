@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace client {
 		class C_DecoyProjectile : public CS2::client::C_BaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nDecoyShotTick,int32_t, 0x1438);
-			PROPERTY(m_nClientLastKnownDecoyShotTick,int32_t, 0x143c);
-			NESTED_PROPERTY(m_flTimeParticleEffectSpawn,entity2::GameTime_t, 0x1460);
+			PROPERTY(m_nDecoyShotTick,int32_t, 0x1238);
+			PROPERTY(m_nClientLastKnownDecoyShotTick,int32_t, 0x123c);
+			NESTED_PROPERTY(m_flTimeParticleEffectSpawn,IDENTITY(entity2::GameTime_t), 0x1260);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::client::C_DecoyProjectile) == 0x1468, "C_DecoyProjectile size should be 0x1468");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_DecoyProjectile) == 0x1268, "C_DecoyProjectile size should be 0x1268");
+
+#endif
 	}
 }

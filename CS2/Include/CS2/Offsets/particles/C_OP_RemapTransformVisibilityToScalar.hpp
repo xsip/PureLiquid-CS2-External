@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x258
+			// Class size: 0x260
 			namespace C_OP_RemapTransformVisibilityToScalar /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nSetMethod = 0x1d0; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_TransformInput = 0x1d8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x240; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMin = 0x244; // float32 m_flInputMin; |  0x244 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMax = 0x248; // float32 m_flInputMax; |  0x248 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMin = 0x24c; // float32 m_flOutputMin; |  0x24c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMax = 0x250; // float32 m_flOutputMax; |  0x250 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadius = 0x254; // float32 m_flRadius; |  0x254 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetMethod = 0x1d8; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_TransformInput = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x248; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMin = 0x24c; // float32 m_flInputMin; |  0x24c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMax = 0x250; // float32 m_flInputMax; |  0x250 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMin = 0x254; // float32 m_flOutputMin; |  0x254 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMax = 0x258; // float32 m_flOutputMax; |  0x258 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x25c; // float32 m_flRadius; |  0x25c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -22,19 +22,22 @@ namespace CS2 {
 	namespace server {
 		class CEnvSoundscape : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_OnPlay,entity2::CEntityIOOutput, 0x4a8);
+			NESTED_PROPERTY(m_OnPlay,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
 			PROPERTY(m_flRadius,float32, 0x4c0);
 			PROPERTY(m_soundEventName,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
 			PROPERTY(m_bOverrideWithEvent,bool, 0x4d0);
 			PROPERTY(m_soundscapeIndex,int32_t, 0x4d4);
 			PROPERTY(m_soundscapeEntityListId,int32_t, 0x4d8);
 			PROPERTY_ARRAY(m_positionNames,GlobalTypes::CUtlSymbolLarge*, 8 , 0x4e0);
-			PROPERTY(m_hProxySoundscape,GlobalTypes::CHandle<server::CEnvSoundscape>, 0x520);
+			PROPERTY(m_hProxySoundscape,IDENTITY(GlobalTypes::CHandle<server::CEnvSoundscape>), 0x520);
 			PROPERTY(m_bDisabled,bool, 0x524);
 			PROPERTY(m_soundscapeName,GlobalTypes::CUtlSymbolLarge*, 0x528);
 			PROPERTY(m_soundEventHash,uint32_t, 0x530);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvSoundscape) == 0x538, "CEnvSoundscape size should be 0x538");
+
+#endif
 	}
 }

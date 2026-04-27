@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x630
+			// Class size: 0x628
 			namespace C_SoundAreaEntityBase /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_bDisabled = 0x608; // bool m_bDisabled; |  0x608 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bWasEnabled = 0x610; // bool m_bWasEnabled; |  0x610 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iszSoundAreaType = 0x618; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vPos = 0x620; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bDisabled = 0x600; // bool m_bDisabled; |  0x600 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bWasEnabled = 0x608; // bool m_bWasEnabled; |  0x608 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iszSoundAreaType = 0x610; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_vPos = 0x618; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

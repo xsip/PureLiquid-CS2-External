@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionOperator.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 #include <SDK/particleslib/CParticleTransformInput.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,18 +24,21 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PercentageBetweenTransformsVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			PROPERTY(m_flInputMin,float32, 0x1d4);
-			PROPERTY(m_flInputMax,float32, 0x1d8);
-			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1dc);
-			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1e8);
-			NESTED_PROPERTY(m_TransformStart,particleslib::CParticleTransformInput, 0x1f8);
-			NESTED_PROPERTY(m_TransformEnd,particleslib::CParticleTransformInput, 0x260);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x2c8);
-			PROPERTY(m_bActiveRange,bool, 0x2cc);
-			PROPERTY(m_bRadialCheck,bool, 0x2cd);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			PROPERTY(m_flInputMin,float32, 0x1dc);
+			PROPERTY(m_flInputMax,float32, 0x1e0);
+			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1e4);
+			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1f0);
+			NESTED_PROPERTY(m_TransformStart,IDENTITY(particleslib::CParticleTransformInput), 0x200);
+			NESTED_PROPERTY(m_TransformEnd,IDENTITY(particleslib::CParticleTransformInput), 0x268);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x2d0);
+			PROPERTY(m_bActiveRange,bool, 0x2d4);
+			PROPERTY(m_bRadialCheck,bool, 0x2d5);
 			S2_PAD(0x100);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PercentageBetweenTransformsVector) == 0x2D0, "C_OP_PercentageBetweenTransformsVector size should be 0x2D0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PercentageBetweenTransformsVector) == 0x2D8, "C_OP_PercentageBetweenTransformsVector size should be 0x2D8");
+
+#endif
 	}
 }

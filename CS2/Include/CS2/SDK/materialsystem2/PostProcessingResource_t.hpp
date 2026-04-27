@@ -26,20 +26,23 @@ namespace CS2 {
 		class PostProcessingResource_t  {
 		public:
 			PROPERTY(m_bHasTonemapParams,bool, 0x0);
-			NESTED_PROPERTY(m_toneMapParams,materialsystem2::PostProcessingTonemapParameters_t, 0x4);
+			NESTED_PROPERTY(m_toneMapParams,IDENTITY(materialsystem2::PostProcessingTonemapParameters_t), 0x4);
 			PROPERTY(m_bHasBloomParams,bool, 0x40);
-			NESTED_PROPERTY(m_bloomParams,materialsystem2::PostProcessingBloomParameters_t, 0x44);
+			NESTED_PROPERTY(m_bloomParams,IDENTITY(materialsystem2::PostProcessingBloomParameters_t), 0x44);
 			PROPERTY(m_bHasVignetteParams,bool, 0xcc);
-			NESTED_PROPERTY(m_vignetteParams,materialsystem2::PostProcessingVignetteParameters_t, 0xd0);
+			NESTED_PROPERTY(m_vignetteParams,IDENTITY(materialsystem2::PostProcessingVignetteParameters_t), 0xd0);
 			PROPERTY(m_bHasLocalContrastParams,bool, 0xf4);
-			NESTED_PROPERTY(m_localConstrastParams,materialsystem2::PostProcessingLocalContrastParameters_t, 0xf8);
+			NESTED_PROPERTY(m_localConstrastParams,IDENTITY(materialsystem2::PostProcessingLocalContrastParameters_t), 0xf8);
 			PROPERTY(m_nColorCorrectionVolumeDim,int32_t, 0x10c);
 			PROPERTY(m_colorCorrectionVolumeData,GlobalTypes::CUtlBinaryBlock, 0x110);
 			PROPERTY(m_bHasColorCorrection,bool, 0x120);
 			PROPERTY(m_bHasFogScatteringParams,bool, 0x121);
-			NESTED_PROPERTY(m_fogScatteringParams,materialsystem2::PostProcessingFogScatteringParameters_t, 0x124);
+			NESTED_PROPERTY(m_fogScatteringParams,IDENTITY(materialsystem2::PostProcessingFogScatteringParameters_t), 0x124);
 			S2_PAD(0x138);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::PostProcessingResource_t) == 0x138, "PostProcessingResource_t size should be 0x138");
+
+#endif
 	}
 }

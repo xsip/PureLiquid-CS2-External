@@ -15,7 +15,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flFOVTime = 0x180; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_flFOVRate = 0x184; // float32 m_flFOVRate; |  0x184 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_hZoomOwner = 0x188; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hTriggerFogList = 0x190; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hTriggerFogList = 0x190; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_hLastFogTrigger = 0x1a8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 			}
 		}

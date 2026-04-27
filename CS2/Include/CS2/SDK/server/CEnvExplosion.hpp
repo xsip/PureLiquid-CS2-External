@@ -28,23 +28,26 @@ namespace CS2 {
 	namespace server {
 		class CEnvExplosion : public CS2::server::CModelPointEntity {
 		public:
-			PROPERTY(m_iMagnitude,int32_t, 0x730);
-			PROPERTY(m_flPlayerDamage,float32, 0x734);
-			PROPERTY(m_iRadiusOverride,int32_t, 0x738);
-			PROPERTY(m_flInnerRadius,float32, 0x73c);
-			PROPERTY(m_flDamageForce,float32, 0x740);
-			PROPERTY(m_hInflictor,GlobalTypes::CHandle<server::CBaseEntity>, 0x744);
-			PROPERTY(m_iCustomDamageType,client::DamageTypes_t, 0x748);
-			PROPERTY(m_bCreateDebris,bool, 0x74c);
-			PROPERTY(m_iszCustomEffectName,GlobalTypes::CUtlSymbolLarge*, 0x758);
-			PROPERTY(m_iszCustomSoundName,GlobalTypes::CUtlSymbolLarge*, 0x760);
-			PROPERTY(m_bSuppressParticleImpulse,bool, 0x768);
-			PROPERTY(m_iClassIgnore,client::Class_T, 0x76c);
-			PROPERTY(m_iClassIgnore2,client::Class_T, 0x770);
-			PROPERTY(m_iszEntityIgnoreName,GlobalTypes::CUtlSymbolLarge*, 0x778);
-			PROPERTY(m_hEntityIgnore,GlobalTypes::CHandle<server::CBaseEntity>, 0x780);
+			PROPERTY(m_iMagnitude,int32_t, 0x768);
+			PROPERTY(m_flPlayerDamage,float32, 0x76c);
+			PROPERTY(m_iRadiusOverride,int32_t, 0x770);
+			PROPERTY(m_flInnerRadius,float32, 0x774);
+			PROPERTY(m_flDamageForce,float32, 0x778);
+			PROPERTY(m_hInflictor,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x77c);
+			PROPERTY(m_iCustomDamageType,IDENTITY(client::DamageTypes_t), 0x780);
+			PROPERTY(m_bCreateDebris,bool, 0x784);
+			PROPERTY(m_iszCustomEffectName,GlobalTypes::CUtlSymbolLarge*, 0x790);
+			PROPERTY(m_iszCustomSoundName,GlobalTypes::CUtlSymbolLarge*, 0x798);
+			PROPERTY(m_bSuppressParticleImpulse,bool, 0x7a0);
+			PROPERTY(m_iClassIgnore,IDENTITY(client::Class_T), 0x7a4);
+			PROPERTY(m_iClassIgnore2,IDENTITY(client::Class_T), 0x7a8);
+			PROPERTY(m_iszEntityIgnoreName,GlobalTypes::CUtlSymbolLarge*, 0x7b0);
+			PROPERTY(m_hEntityIgnore,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7b8);
 			S2_PAD(0x58);
 		};
-		//static_assert(sizeof(CS2::server::CEnvExplosion) == 0x788, "CEnvExplosion size should be 0x788");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CEnvExplosion) == 0x7C0, "CEnvExplosion size should be 0x7C0");
+
+#endif
 	}
 }

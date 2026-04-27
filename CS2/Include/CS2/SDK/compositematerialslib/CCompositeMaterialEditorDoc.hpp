@@ -22,10 +22,13 @@ namespace CS2 {
 		class CCompositeMaterialEditorDoc  {
 		public:
 			PROPERTY(m_nVersion,int32_t, 0x8);
-			NESTED_PROPERTY(m_Points,GlobalTypes::CUtlVector<compositematerialslib::CompositeMaterialEditorPoint_t>, 0x10);
+			NESTED_PROPERTY(m_Points,IDENTITY(GlobalTypes::CUtlVector<compositematerialslib::CompositeMaterialEditorPoint_t>), 0x10);
 			PROPERTY(m_KVthumbnail,GlobalTypes::KeyValues3, 0x28);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CCompositeMaterialEditorDoc) == 0x38, "CCompositeMaterialEditorDoc size should be 0x38");
+
+#endif
 	}
 }

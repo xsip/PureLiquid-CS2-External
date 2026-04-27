@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_bLooping,bool, 0x1c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqPoseParamDesc) == 0x20, "CSeqPoseParamDesc size should be 0x20");
+
+#endif
 	}
 }

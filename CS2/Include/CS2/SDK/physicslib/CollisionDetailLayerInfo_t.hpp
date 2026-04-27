@@ -10,7 +10,7 @@
 #endif
 
 
-#include <SDK/physicslib/Name_t.hpp>
+#include <SDK/physicslib/CollisionDetailLayerInfo_t_Name_t.hpp>
 
 
 
@@ -25,10 +25,13 @@ namespace CS2 {
 			PROPERTY(m_sFriendlyName,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_bIsQueryOnly,bool, 0x10);
 			PROPERTY(m_sParentDetailLayer,GlobalTypes::CUtlString*, 0x18);
-			NESTED_PROPERTY(m_vecSubtreeDetailLayers,GlobalTypes::CUtlVector<physicslib::Name_t>, 0x20);
+			NESTED_PROPERTY(m_vecSubtreeDetailLayers,IDENTITY(GlobalTypes::CUtlVector<physicslib::CollisionDetailLayerInfo_t_Name_t>), 0x20);
 			PROPERTY(m_bNotPickable,bool, 0x38);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::CollisionDetailLayerInfo_t) == 0x40, "CollisionDetailLayerInfo_t size should be 0x40");
+
+#endif
 	}
 }

@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace navlib {
 		class CNavVolumeSphere : public CS2::navlib::CNavVolume {
 		public:
-			PROPERTY(m_vCenter,GlobalTypes::Vector, 0x78);
+			PROPERTY(m_vCenter,GlobalTypes::VectorWS, 0x78);
 			PROPERTY(m_flRadius,float32, 0x84);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::navlib::CNavVolumeSphere) == 0x88, "CNavVolumeSphere size should be 0x88");
+
+#endif
 	}
 }

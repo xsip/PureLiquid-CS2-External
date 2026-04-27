@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_nBeverageType,int32_t, 0x4ac);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvBeverage) == 0x4B0, "CEnvBeverage size should be 0x4B0");
+
+#endif
 	}
 }

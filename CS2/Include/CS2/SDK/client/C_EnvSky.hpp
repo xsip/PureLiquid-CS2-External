@@ -26,20 +26,23 @@ namespace CS2 {
 	namespace client {
 		class C_EnvSky : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_hSkyMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xe88);
-			PROPERTY(m_hSkyMaterialLightingOnly,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0xe90);
-			PROPERTY(m_bStartDisabled,bool, 0xe98);
-			PROPERTY(m_vTintColor,GlobalTypes::Color, 0xe99);
-			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0xe9d);
-			PROPERTY(m_flBrightnessScale,float32, 0xea4);
-			PROPERTY(m_nFogType,int32_t, 0xea8);
-			PROPERTY(m_flFogMinStart,float32, 0xeac);
-			PROPERTY(m_flFogMinEnd,float32, 0xeb0);
-			PROPERTY(m_flFogMaxStart,float32, 0xeb4);
-			PROPERTY(m_flFogMaxEnd,float32, 0xeb8);
-			PROPERTY(m_bEnabled,bool, 0xebc);
+			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfa8);
+			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfb0);
+			PROPERTY(m_bStartDisabled,bool, 0xfb8);
+			PROPERTY(m_vTintColor,GlobalTypes::Color, 0xfb9);
+			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0xfbd);
+			PROPERTY(m_flBrightnessScale,float32, 0xfc4);
+			PROPERTY(m_nFogType,int32_t, 0xfc8);
+			PROPERTY(m_flFogMinStart,float32, 0xfcc);
+			PROPERTY(m_flFogMinEnd,float32, 0xfd0);
+			PROPERTY(m_flFogMaxStart,float32, 0xfd4);
+			PROPERTY(m_flFogMaxEnd,float32, 0xfd8);
+			PROPERTY(m_bEnabled,bool, 0xfdc);
 			S2_PAD(0x60);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvSky) == 0xEE8, "C_EnvSky size should be 0xEE8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvSky) == 0x1008, "C_EnvSky size should be 0x1008");
+
+#endif
 	}
 }

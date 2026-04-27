@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitFromParentKilled : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nAttributeToCopy,particles::ParticleAttributeIndex_t, 0x1d8);
-			PROPERTY(m_nEventType,particles::EventTypeSelection_t, 0x1dc);
+			NESTED_PROPERTY(m_nAttributeToCopy,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x1e4);
 			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitFromParentKilled) == 0x260, "C_INIT_InitFromParentKilled size should be 0x260");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitFromParentKilled) == 0x268, "C_INIT_InitFromParentKilled size should be 0x268");
+
+#endif
 	}
 }

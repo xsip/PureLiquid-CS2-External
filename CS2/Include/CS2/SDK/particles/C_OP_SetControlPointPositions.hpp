@@ -21,20 +21,23 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointPositions : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_bUseWorldLocation,bool, 0x1d8);
-			PROPERTY(m_bOrient,bool, 0x1d9);
-			PROPERTY(m_bSetOnce,bool, 0x1da);
-			PROPERTY(m_nCP1,int32_t, 0x1dc);
-			PROPERTY(m_nCP2,int32_t, 0x1e0);
-			PROPERTY(m_nCP3,int32_t, 0x1e4);
-			PROPERTY(m_nCP4,int32_t, 0x1e8);
-			PROPERTY(m_vecCP1Pos,GlobalTypes::Vector, 0x1ec);
-			PROPERTY(m_vecCP2Pos,GlobalTypes::Vector, 0x1f8);
-			PROPERTY(m_vecCP3Pos,GlobalTypes::Vector, 0x204);
-			PROPERTY(m_vecCP4Pos,GlobalTypes::Vector, 0x210);
-			PROPERTY(m_nHeadLocation,int32_t, 0x21c);
+			PROPERTY(m_bUseWorldLocation,bool, 0x1e0);
+			PROPERTY(m_bOrient,bool, 0x1e1);
+			PROPERTY(m_bSetOnce,bool, 0x1e2);
+			PROPERTY(m_nCP1,int32_t, 0x1e4);
+			PROPERTY(m_nCP2,int32_t, 0x1e8);
+			PROPERTY(m_nCP3,int32_t, 0x1ec);
+			PROPERTY(m_nCP4,int32_t, 0x1f0);
+			PROPERTY(m_vecCP1Pos,GlobalTypes::Vector, 0x1f4);
+			PROPERTY(m_vecCP2Pos,GlobalTypes::Vector, 0x200);
+			PROPERTY(m_vecCP3Pos,GlobalTypes::Vector, 0x20c);
+			PROPERTY(m_vecCP4Pos,GlobalTypes::Vector, 0x218);
+			PROPERTY(m_nHeadLocation,int32_t, 0x224);
 			S2_PAD(0x48);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositions) == 0x220, "C_OP_SetControlPointPositions size should be 0x220");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositions) == 0x228, "C_OP_SetControlPointPositions size should be 0x228");
+
+#endif
 	}
 }

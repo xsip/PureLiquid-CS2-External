@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderText : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_OutlineColor,GlobalTypes::Color, 0x220);
-			PROPERTY(m_DefaultText,GlobalTypes::CUtlString*, 0x228);
+			PROPERTY(m_OutlineColor,GlobalTypes::Color, 0x228);
+			PROPERTY(m_DefaultText,GlobalTypes::CUtlString*, 0x230);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderText) == 0x230, "C_OP_RenderText size should be 0x230");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderText) == 0x238, "C_OP_RenderText size should be 0x238");
+
+#endif
 	}
 }

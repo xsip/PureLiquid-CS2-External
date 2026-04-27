@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CWarpSectionAnimTagBase : public CS2::animgraphlib::CAnimTagBase {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CWarpSectionAnimTagBase) == 0x50, "CWarpSectionAnimTagBase size should be 0x50");
+
+#endif
 	}
 }

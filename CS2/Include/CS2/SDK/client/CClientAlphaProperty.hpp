@@ -26,10 +26,13 @@ namespace CS2 {
 			PROPERTY(m_nDistFadeEnd,uint16_t, 0x12);
 			PROPERTY(m_nAlpha,uint8_t, 0x17);
 			PROPERTY(m_flFadeScale,float32, 0x18);
-			NESTED_PROPERTY(m_flRenderFxStartTime,entity2::GameTime_t, 0x1c);
+			NESTED_PROPERTY(m_flRenderFxStartTime,IDENTITY(entity2::GameTime_t), 0x1c);
 			PROPERTY(m_flRenderFxDuration,float32, 0x20);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CClientAlphaProperty) == 0x30, "CClientAlphaProperty size should be 0x30");
+
+#endif
 	}
 }

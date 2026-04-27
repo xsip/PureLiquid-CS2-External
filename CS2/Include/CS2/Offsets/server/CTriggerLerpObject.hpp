@@ -8,24 +8,24 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x930
+			// Class size: 0x968
 			namespace CTriggerLerpObject /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_iszLerpTarget = 0x890; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hLerpTarget = 0x898; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iszLerpTargetAttachment = 0x8a0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hLerpTargetAttachment = 0x8a8; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_flLerpDuration = 0x8ac; // float32 m_flLerpDuration; |  0x8ac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAttachedEntityWasParented = 0x8b0; // bool m_bAttachedEntityWasParented; |  0x8b0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLerpRestoreMoveType = 0x8b1; // bool m_bLerpRestoreMoveType; |  0x8b1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSingleLerpObject = 0x8b2; // bool m_bSingleLerpObject; |  0x8b2 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecLerpingObjects = 0x8b8; // GlobalTypes::CUtlVector<server::lerpdata_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_iszLerpEffect = 0x8d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszLerpSound = 0x8d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bAttachTouchingObject = 0x8e0; // bool m_bAttachTouchingObject; |  0x8e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hEntityToWaitForDisconnect = 0x8e4; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_OnLerpStarted = 0x8e8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnLerpFinished = 0x900; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnDetached = 0x918; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_iszLerpTarget = 0x8c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hLerpTarget = 0x8d0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iszLerpTargetAttachment = 0x8d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hLerpTargetAttachment = 0x8e0; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_flLerpDuration = 0x8e4; // float32 m_flLerpDuration; |  0x8e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAttachedEntityWasParented = 0x8e8; // bool m_bAttachedEntityWasParented; |  0x8e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLerpRestoreMoveType = 0x8e9; // bool m_bLerpRestoreMoveType; |  0x8e9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSingleLerpObject = 0x8ea; // bool m_bSingleLerpObject; |  0x8ea | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecLerpingObjects = 0x8f0; // GlobalTypes::CUtlVector<server::lerpdata_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_iszLerpEffect = 0x908; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszLerpSound = 0x910; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bAttachTouchingObject = 0x918; // bool m_bAttachTouchingObject; |  0x918 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hEntityToWaitForDisconnect = 0x91c; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_OnLerpStarted = 0x920; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnLerpFinished = 0x938; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnDetached = 0x950; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

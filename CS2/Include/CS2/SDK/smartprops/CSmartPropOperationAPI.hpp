@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x1);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperationAPI) == 0x1, "CSmartPropOperationAPI size should be 0x1");
+
+#endif
 	}
 }

@@ -10,8 +10,9 @@ namespace CS2 {
 		namespace animlib {
 			// Class size: 0x70
 			namespace CNmParticleEvent /*: public CS2::animlib::CNmEvent*/ {
-				constexpr std::ptrdiff_t m_relevance = 0x20; // animlib::CNmEventRelevance_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_type = 0x24; // animlib::CNmParticleEvent::Type_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_relevance = 0x18; // animlib::CNmEventRelevance_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_type = 0x1c; // animlib::CNmParticleEvent::Type_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_target = 0x20; // animlib::CNmEventTargetEntity_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_hParticleSystem = 0x28; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_tags = 0x30; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_bStopImmediately = 0x38; // bool m_bStopImmediately; |  0x38 | Schema_Builtin | Size: 0x1

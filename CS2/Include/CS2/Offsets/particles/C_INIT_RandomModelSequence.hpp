@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x3E0
+			// Class size: 0x3E8
 			namespace C_INIT_RandomModelSequence /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_ActivityName = 0x1d8; // char m_ActivityName[256]; |  0x1d8 | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_SequenceName = 0x2d8; // char m_SequenceName[256]; |  0x2d8 | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_hModel = 0x3d8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_ActivityName = 0x1e0; // char m_ActivityName[256]; |  0x1e0 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_SequenceName = 0x2e0; // char m_SequenceName[256]; |  0x2e0 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_hModel = 0x3e0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

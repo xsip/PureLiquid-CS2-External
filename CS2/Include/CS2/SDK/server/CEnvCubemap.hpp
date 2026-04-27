@@ -26,7 +26,7 @@ namespace CS2 {
 	namespace server {
 		class CEnvCubemap : public CS2::server::CBaseEntity {
 		public:
-			PROPERTY(m_Entity_hCubemapTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x528);
+			PROPERTY(m_Entity_hCubemapTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x528);
 			PROPERTY(m_Entity_bCustomCubemapTexture,bool, 0x530);
 			PROPERTY(m_Entity_flInfluenceRadius,float32, 0x534);
 			PROPERTY(m_Entity_vBoxProjectMins,GlobalTypes::Vector, 0x538);
@@ -46,6 +46,9 @@ namespace CS2 {
 			PROPERTY(m_Entity_bEnabled,bool, 0x588);
 			S2_PAD(0xE8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvCubemap) == 0x590, "CEnvCubemap size should be 0x590");
+
+#endif
 	}
 }

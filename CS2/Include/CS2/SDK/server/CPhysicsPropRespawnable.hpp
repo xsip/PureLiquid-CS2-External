@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsPropRespawnable : public CS2::server::CPhysicsProp {
 		public:
-			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0xce0);
-			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0xcec);
-			PROPERTY(m_vOriginalMins,GlobalTypes::Vector, 0xcf8);
-			PROPERTY(m_vOriginalMaxs,GlobalTypes::Vector, 0xd04);
-			PROPERTY(m_flRespawnDuration,float32, 0xd10);
+			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0xc10);
+			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0xc1c);
+			PROPERTY(m_vOriginalMins,GlobalTypes::Vector, 0xc28);
+			PROPERTY(m_vOriginalMaxs,GlobalTypes::Vector, 0xc34);
+			PROPERTY(m_flRespawnDuration,float32, 0xc40);
 			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::server::CPhysicsPropRespawnable) == 0xD20, "CPhysicsPropRespawnable size should be 0xD20");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPhysicsPropRespawnable) == 0xC50, "CPhysicsPropRespawnable size should be 0xC50");
+
+#endif
 	}
 }

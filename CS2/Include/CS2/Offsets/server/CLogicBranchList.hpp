@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0x590
 			namespace CLogicBranchList /*: public CS2::server::CLogicalEntity*/ {
 				constexpr std::ptrdiff_t m_nLogicBranchNames = 0x4a8; // GlobalTypes::CUtlSymbolLarge[16]  | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_LogicBranchList = 0x528; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_LogicBranchList = 0x528; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_eLastState = 0x540; // server::CLogicBranchList::LogicBranchListenerLastState_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_OnAllTrue = 0x548; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnAllFalse = 0x560; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18

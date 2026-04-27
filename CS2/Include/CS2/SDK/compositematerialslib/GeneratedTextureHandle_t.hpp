@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_strBitmapName,GlobalTypes::CUtlString*, 0x0);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::GeneratedTextureHandle_t) == 0x60, "GeneratedTextureHandle_t size should be 0x60");
+
+#endif
 	}
 }

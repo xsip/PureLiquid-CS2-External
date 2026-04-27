@@ -24,9 +24,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_flWait,float32, 0x4a8);
 			PROPERTY(m_flRadius,float32, 0x4ac);
-			NESTED_PROPERTY(m_OnPass,entity2::CEntityIOOutput, 0x4b0);
+			NESTED_PROPERTY(m_OnPass,IDENTITY(entity2::CEntityIOOutput), 0x4b0);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathCorner) == 0x4C8, "CPathCorner size should be 0x4C8");
+
+#endif
 	}
 }

@@ -33,6 +33,9 @@ namespace CS2 {
 			PROPERTY(m_OutputVariable,GlobalTypes::CUtlString*, 0x2e0);
 			S2_PAD(0x248);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_MidpointDeformer) == 0x2E8, "CSmartPropElement_MidpointDeformer size should be 0x2E8");
+
+#endif
 	}
 }

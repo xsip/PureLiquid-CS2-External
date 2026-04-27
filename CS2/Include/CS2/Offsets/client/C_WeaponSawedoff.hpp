@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1F40
+			// Class size: 0x1CB0
 			namespace C_WeaponSawedoff /*: public CS2::client::C_CSWeaponBaseShotgun*/ {
 				// NO SCHEMA DATA FOUND!
 			}

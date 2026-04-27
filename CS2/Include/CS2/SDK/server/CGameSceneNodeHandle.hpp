@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CUtlStringToken*, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGameSceneNodeHandle) == 0x10, "CGameSceneNodeHandle size should be 0x10");
+
+#endif
 	}
 }

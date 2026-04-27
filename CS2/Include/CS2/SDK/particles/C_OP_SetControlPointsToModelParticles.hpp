@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointsToModelParticles : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1d0);
-			PROPERTY_ARRAY(m_AttachmentName,char, 128 , 0x250);
-			PROPERTY(m_nFirstControlPoint,int32_t, 0x2d0);
-			PROPERTY(m_nNumControlPoints,int32_t, 0x2d4);
-			PROPERTY(m_nFirstSourcePoint,int32_t, 0x2d8);
-			PROPERTY(m_bSkin,bool, 0x2dc);
-			PROPERTY(m_bAttachment,bool, 0x2dd);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1d8);
+			PROPERTY_ARRAY(m_AttachmentName,char, 128 , 0x258);
+			PROPERTY(m_nFirstControlPoint,int32_t, 0x2d8);
+			PROPERTY(m_nNumControlPoints,int32_t, 0x2dc);
+			PROPERTY(m_nFirstSourcePoint,int32_t, 0x2e0);
+			PROPERTY(m_bSkin,bool, 0x2e4);
+			PROPERTY(m_bAttachment,bool, 0x2e5);
 			S2_PAD(0x110);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointsToModelParticles) == 0x2E0, "C_OP_SetControlPointsToModelParticles size should be 0x2E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointsToModelParticles) == 0x2E8, "C_OP_SetControlPointsToModelParticles size should be 0x2E8");
+
+#endif
 	}
 }

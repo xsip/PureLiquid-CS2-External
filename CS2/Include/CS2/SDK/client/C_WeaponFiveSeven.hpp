@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_WeaponFiveSeven : public CS2::client::C_CSWeaponBaseGun {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_WeaponFiveSeven) == 0x1F70, "C_WeaponFiveSeven size should be 0x1F70");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_WeaponFiveSeven) == 0x1CE0, "C_WeaponFiveSeven size should be 0x1CE0");
+
+#endif
 	}
 }

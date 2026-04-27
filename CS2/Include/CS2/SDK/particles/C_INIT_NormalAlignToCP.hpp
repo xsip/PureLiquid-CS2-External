@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_NormalAlignToCP : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x1d8);
-			PROPERTY(m_nControlPointAxis,particles::ParticleControlPointAxis_t, 0x240);
+			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
+			PROPERTY(m_nControlPointAxis,IDENTITY(particles::ParticleControlPointAxis_t), 0x248);
 			S2_PAD(0x70);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_NormalAlignToCP) == 0x248, "C_INIT_NormalAlignToCP size should be 0x248");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_NormalAlignToCP) == 0x250, "C_INIT_NormalAlignToCP size should be 0x250");
+
+#endif
 	}
 }

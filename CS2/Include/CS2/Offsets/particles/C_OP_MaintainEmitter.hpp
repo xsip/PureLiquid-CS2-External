@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x648
+			// Class size: 0x650
 			namespace C_OP_MaintainEmitter /*: public CS2::particles::CParticleFunctionEmitter*/ {
-				constexpr std::ptrdiff_t m_nParticlesToMaintain = 0x1d8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flStartTime = 0x348; // float32 m_flStartTime; |  0x348 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEmissionDuration = 0x350; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flEmissionRate = 0x4c0; // float32 m_flEmissionRate; |  0x4c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x4c4; // int32_t m_nSnapshotControlPoint; |  0x4c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x4c8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bEmitInstantaneously = 0x4d0; // bool m_bEmitInstantaneously; |  0x4d0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFinalEmitOnStop = 0x4d1; // bool m_bFinalEmitOnStop; |  0x4d1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flScale = 0x4d8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nParticlesToMaintain = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flStartTime = 0x350; // float32 m_flStartTime; |  0x350 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEmissionDuration = 0x358; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flEmissionRate = 0x4c8; // float32 m_flEmissionRate; |  0x4c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x4cc; // int32_t m_nSnapshotControlPoint; |  0x4cc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x4d0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bEmitInstantaneously = 0x4d8; // bool m_bEmitInstantaneously; |  0x4d8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFinalEmitOnStop = 0x4d9; // bool m_bFinalEmitOnStop; |  0x4d9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flScale = 0x4e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

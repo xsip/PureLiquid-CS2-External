@@ -14,7 +14,8 @@
 #include <SDK/entity2/CEntityIOOutput.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
 #include <SDK/physicslib/DynamicContinuousContactBehavior_t.hpp>
-#include <SDK/server/CrateType_t.hpp>
+#include <SDK/server/INavObstacle_NavObstacleType_t.hpp>
+#include <SDK/server/CPhysicsProp_CrateType_t.hpp>
 
 
 
@@ -25,49 +26,53 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsProp : public CS2::server::CBreakableProp {
 		public:
-			NESTED_PROPERTY(m_MotionEnabled,entity2::CEntityIOOutput, 0xbb0);
-			NESTED_PROPERTY(m_OnAwakened,entity2::CEntityIOOutput, 0xbc8);
-			NESTED_PROPERTY(m_OnAwake,entity2::CEntityIOOutput, 0xbe0);
-			NESTED_PROPERTY(m_OnAsleep,entity2::CEntityIOOutput, 0xbf8);
-			NESTED_PROPERTY(m_OnPlayerUse,entity2::CEntityIOOutput, 0xc10);
-			NESTED_PROPERTY(m_OnOutOfWorld,entity2::CEntityIOOutput, 0xc28);
-			NESTED_PROPERTY(m_OnPlayerPickup,entity2::CEntityIOOutput, 0xc40);
-			PROPERTY(m_bForceNavIgnore,bool, 0xc58);
-			PROPERTY(m_bNoNavmeshBlocker,bool, 0xc59);
-			PROPERTY(m_bForceNpcExclude,bool, 0xc5a);
-			PROPERTY(m_massScale,float32, 0xc5c);
-			PROPERTY(m_buoyancyScale,float32, 0xc60);
-			PROPERTY(m_damageType,int32_t, 0xc64);
-			PROPERTY(m_damageToEnableMotion,int32_t, 0xc68);
-			PROPERTY(m_flForceToEnableMotion,float32, 0xc6c);
-			PROPERTY(m_bThrownByPlayer,bool, 0xc70);
-			PROPERTY(m_bDroppedByPlayer,bool, 0xc71);
-			PROPERTY(m_bTouchedByPlayer,bool, 0xc72);
-			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xc73);
-			PROPERTY(m_bHasBeenAwakened,bool, 0xc74);
-			PROPERTY(m_bIsOverrideProp,bool, 0xc75);
-			NESTED_PROPERTY(m_flLastBurn,entity2::GameTime_t, 0xc78);
-			PROPERTY(m_nDynamicContinuousContactBehavior,physicslib::DynamicContinuousContactBehavior_t, 0xc7c);
-			NESTED_PROPERTY(m_fNextCheckDisableMotionContactsTime,entity2::GameTime_t, 0xc80);
-			PROPERTY(m_iInitialGlowState,int32_t, 0xc84);
-			PROPERTY(m_nGlowRange,int32_t, 0xc88);
-			PROPERTY(m_nGlowRangeMin,int32_t, 0xc8c);
-			PROPERTY(m_glowColor,GlobalTypes::Color, 0xc90);
-			PROPERTY(m_bShouldAutoConvertBackFromDebris,bool, 0xc94);
-			PROPERTY(m_bMuteImpactEffects,bool, 0xc95);
-			PROPERTY(m_bUpdateNavWhenMoving,bool, 0xc9c);
-			PROPERTY(m_bForceNavObstacleCut,bool, 0xc9d);
-			PROPERTY(m_bAllowObstacleConvexHullMerging,bool, 0xc9e);
-			PROPERTY(m_bAcceptDamageFromHeldObjects,bool, 0xc9f);
-			PROPERTY(m_bEnableUseOutput,bool, 0xca0);
-			PROPERTY(m_CrateType,server::CrateType_t, 0xca4);
-			PROPERTY_ARRAY(m_strItemClass,GlobalTypes::CUtlSymbolLarge*, 4 , 0xca8);
-			PROPERTY_ARRAY(m_nItemCount,int32_t, 4 , 0xcc8);
-			PROPERTY(m_bRemovableForAmmoBalancing,bool, 0xcd8);
-			PROPERTY(m_bAwake,bool, 0xcd9);
-			PROPERTY(m_bAttachedToReferenceFrame,bool, 0xcda);
+			NESTED_PROPERTY(m_MotionEnabled,IDENTITY(entity2::CEntityIOOutput), 0xae0);
+			NESTED_PROPERTY(m_OnAwakened,IDENTITY(entity2::CEntityIOOutput), 0xaf8);
+			NESTED_PROPERTY(m_OnAwake,IDENTITY(entity2::CEntityIOOutput), 0xb10);
+			NESTED_PROPERTY(m_OnAsleep,IDENTITY(entity2::CEntityIOOutput), 0xb28);
+			NESTED_PROPERTY(m_OnPlayerUse,IDENTITY(entity2::CEntityIOOutput), 0xb40);
+			NESTED_PROPERTY(m_OnOutOfWorld,IDENTITY(entity2::CEntityIOOutput), 0xb58);
+			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xb70);
+			PROPERTY(m_bForceNavIgnore,bool, 0xb88);
+			PROPERTY(m_bNoNavmeshBlocker,bool, 0xb89);
+			PROPERTY(m_bForceNpcExclude,bool, 0xb8a);
+			PROPERTY(m_massScale,float32, 0xb8c);
+			PROPERTY(m_buoyancyScale,float32, 0xb90);
+			PROPERTY(m_damageType,int32_t, 0xb94);
+			PROPERTY(m_damageToEnableMotion,int32_t, 0xb98);
+			PROPERTY(m_flForceToEnableMotion,float32, 0xb9c);
+			PROPERTY(m_bThrownByPlayer,bool, 0xba0);
+			PROPERTY(m_bDroppedByPlayer,bool, 0xba1);
+			PROPERTY(m_bTouchedByPlayer,bool, 0xba2);
+			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xba3);
+			PROPERTY(m_bHasBeenAwakened,bool, 0xba4);
+			PROPERTY(m_bIsOverrideProp,bool, 0xba5);
+			NESTED_PROPERTY(m_flLastBurn,IDENTITY(entity2::GameTime_t), 0xba8);
+			PROPERTY(m_nDynamicContinuousContactBehavior,IDENTITY(physicslib::DynamicContinuousContactBehavior_t), 0xbac);
+			NESTED_PROPERTY(m_fNextCheckDisableMotionContactsTime,IDENTITY(entity2::GameTime_t), 0xbb0);
+			PROPERTY(m_iInitialGlowState,int32_t, 0xbb4);
+			PROPERTY(m_nGlowRange,int32_t, 0xbb8);
+			PROPERTY(m_nGlowRangeMin,int32_t, 0xbbc);
+			PROPERTY(m_glowColor,GlobalTypes::Color, 0xbc0);
+			PROPERTY(m_bShouldAutoConvertBackFromDebris,bool, 0xbc4);
+			PROPERTY(m_bMuteImpactEffects,bool, 0xbc5);
+			PROPERTY(m_nNavObstacleType,IDENTITY(server::INavObstacle_NavObstacleType_t), 0xbc8);
+			PROPERTY(m_bUpdateNavWhenMoving,bool, 0xbcc);
+			PROPERTY(m_bForceNavObstacleCut,bool, 0xbcd);
+			PROPERTY(m_bAllowObstacleConvexHullMerging,bool, 0xbce);
+			PROPERTY(m_bAcceptDamageFromHeldObjects,bool, 0xbcf);
+			PROPERTY(m_bEnableUseOutput,bool, 0xbd0);
+			PROPERTY(m_CrateType,IDENTITY(server::CPhysicsProp_CrateType_t), 0xbd4);
+			PROPERTY_ARRAY(m_strItemClass,GlobalTypes::CUtlSymbolLarge*, 4 , 0xbd8);
+			PROPERTY_ARRAY(m_nItemCount,int32_t, 4 , 0xbf8);
+			PROPERTY(m_bRemovableForAmmoBalancing,bool, 0xc08);
+			PROPERTY(m_bAwake,bool, 0xc09);
+			PROPERTY(m_bAttachedToReferenceFrame,bool, 0xc0a);
 			S2_PAD(0x140);
 		};
-		//static_assert(sizeof(CS2::server::CPhysicsProp) == 0xCE0, "CPhysicsProp size should be 0xCE0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPhysicsProp) == 0xC10, "CPhysicsProp size should be 0xC10");
+
+#endif
 	}
 }

@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x788
+			// Class size: 0x7C0
 			namespace CEnvExplosion /*: public CS2::server::CModelPointEntity*/ {
-				constexpr std::ptrdiff_t m_iMagnitude = 0x730; // int32_t m_iMagnitude; |  0x730 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flPlayerDamage = 0x734; // float32 m_flPlayerDamage; |  0x734 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iRadiusOverride = 0x738; // int32_t m_iRadiusOverride; |  0x738 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInnerRadius = 0x73c; // float32 m_flInnerRadius; |  0x73c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDamageForce = 0x740; // float32 m_flDamageForce; |  0x740 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hInflictor = 0x744; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iCustomDamageType = 0x748; // client::DamageTypes_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bCreateDebris = 0x74c; // bool m_bCreateDebris; |  0x74c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iszCustomEffectName = 0x758; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszCustomSoundName = 0x760; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bSuppressParticleImpulse = 0x768; // bool m_bSuppressParticleImpulse; |  0x768 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iClassIgnore = 0x76c; // client::Class_T  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iClassIgnore2 = 0x770; // client::Class_T  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iszEntityIgnoreName = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hEntityIgnore = 0x780; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iMagnitude = 0x768; // int32_t m_iMagnitude; |  0x768 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flPlayerDamage = 0x76c; // float32 m_flPlayerDamage; |  0x76c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iRadiusOverride = 0x770; // int32_t m_iRadiusOverride; |  0x770 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInnerRadius = 0x774; // float32 m_flInnerRadius; |  0x774 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDamageForce = 0x778; // float32 m_flDamageForce; |  0x778 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hInflictor = 0x77c; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iCustomDamageType = 0x780; // client::DamageTypes_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bCreateDebris = 0x784; // bool m_bCreateDebris; |  0x784 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iszCustomEffectName = 0x790; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszCustomSoundName = 0x798; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bSuppressParticleImpulse = 0x7a0; // bool m_bSuppressParticleImpulse; |  0x7a0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iClassIgnore = 0x7a4; // client::Class_T  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iClassIgnore2 = 0x7a8; // client::Class_T  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iszEntityIgnoreName = 0x7b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hEntityIgnore = 0x7b8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

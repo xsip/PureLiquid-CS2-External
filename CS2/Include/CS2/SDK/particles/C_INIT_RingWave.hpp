@@ -24,19 +24,22 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RingWave : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1d8);
-			NESTED_PROPERTY(m_flParticlesPerOrbit,particleslib::CParticleCollectionFloatInput, 0x240);
-			NESTED_PROPERTY(m_flInitialRadius,particleslib::CPerParticleFloatInput, 0x3b0);
-			NESTED_PROPERTY(m_flThickness,particleslib::CPerParticleFloatInput, 0x520);
-			NESTED_PROPERTY(m_flInitialSpeedMin,particleslib::CPerParticleFloatInput, 0x690);
-			NESTED_PROPERTY(m_flInitialSpeedMax,particleslib::CPerParticleFloatInput, 0x800);
-			NESTED_PROPERTY(m_flRoll,particleslib::CPerParticleFloatInput, 0x970);
-			NESTED_PROPERTY(m_flPitch,particleslib::CPerParticleFloatInput, 0xae0);
-			NESTED_PROPERTY(m_flYaw,particleslib::CPerParticleFloatInput, 0xc50);
-			PROPERTY(m_bEvenDistribution,bool, 0xdc0);
-			PROPERTY(m_bXYVelocityOnly,bool, 0xdc1);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
+			NESTED_PROPERTY(m_flParticlesPerOrbit,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x248);
+			NESTED_PROPERTY(m_flInitialRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x3b8);
+			NESTED_PROPERTY(m_flThickness,IDENTITY(particleslib::CPerParticleFloatInput), 0x528);
+			NESTED_PROPERTY(m_flInitialSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x698);
+			NESTED_PROPERTY(m_flInitialSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x808);
+			NESTED_PROPERTY(m_flRoll,IDENTITY(particleslib::CPerParticleFloatInput), 0x978);
+			NESTED_PROPERTY(m_flPitch,IDENTITY(particleslib::CPerParticleFloatInput), 0xae8);
+			NESTED_PROPERTY(m_flYaw,IDENTITY(particleslib::CPerParticleFloatInput), 0xc58);
+			PROPERTY(m_bEvenDistribution,bool, 0xdc8);
+			PROPERTY(m_bXYVelocityOnly,bool, 0xdc9);
 			S2_PAD(0xBF0);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RingWave) == 0xDC8, "C_INIT_RingWave size should be 0xDC8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RingWave) == 0xDD0, "C_INIT_RingWave size should be 0xDD0");
+
+#endif
 	}
 }

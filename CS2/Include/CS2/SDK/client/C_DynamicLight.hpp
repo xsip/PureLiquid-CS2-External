@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace client {
 		class C_DynamicLight : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_Flags,uint8_t, 0xe88);
-			PROPERTY(m_LightStyle,uint8_t, 0xe89);
-			PROPERTY(m_Radius,float32, 0xe8c);
-			PROPERTY(m_Exponent,int32_t, 0xe90);
-			PROPERTY(m_InnerAngle,float32, 0xe94);
-			PROPERTY(m_OuterAngle,float32, 0xe98);
-			PROPERTY(m_SpotRadius,float32, 0xe9c);
+			PROPERTY(m_Flags,uint8_t, 0xfa8);
+			PROPERTY(m_LightStyle,uint8_t, 0xfa9);
+			PROPERTY(m_Radius,float32, 0xfac);
+			PROPERTY(m_Exponent,int32_t, 0xfb0);
+			PROPERTY(m_InnerAngle,float32, 0xfb4);
+			PROPERTY(m_OuterAngle,float32, 0xfb8);
+			PROPERTY(m_SpotRadius,float32, 0xfbc);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::client::C_DynamicLight) == 0xEB0, "C_DynamicLight size should be 0xEB0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_DynamicLight) == 0xFD0, "C_DynamicLight size should be 0xFD0");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nDensity,int32_t, 0x4a8);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysicsWire) == 0x4B0, "CPhysicsWire size should be 0x4B0");
+
+#endif
 	}
 }

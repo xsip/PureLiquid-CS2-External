@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x738
+			// Class size: 0x770
 			namespace CLightEntity /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_CLightComponent = 0x730; // server::CLightComponent**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_CLightComponent = 0x768; // server::CLightComponent**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

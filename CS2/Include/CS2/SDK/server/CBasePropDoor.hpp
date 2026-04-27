@@ -29,46 +29,49 @@ namespace CS2 {
 	namespace server {
 		class CBasePropDoor : public CS2::server::CDynamicProp {
 		public:
-			PROPERTY(m_flAutoReturnDelay,float32, 0xc60);
-			NESTED_PROPERTY(m_hDoorList,server::CUtlVector<GlobalTypes::CHandle<server::CBasePropDoor>>, 0xc68);
-			PROPERTY(m_nHardwareType,int32_t, 0xc80);
-			PROPERTY(m_bNeedsHardware,bool, 0xc84);
-			PROPERTY(m_eDoorState,client::DoorState_t, 0xc88);
-			PROPERTY(m_bLocked,bool, 0xc8c);
-			PROPERTY(m_bNoNPCs,bool, 0xc8d);
-			PROPERTY(m_closedPosition,GlobalTypes::Vector, 0xc90);
-			PROPERTY(m_closedAngles,GlobalTypes::QAngle, 0xc9c);
-			PROPERTY(m_hBlocker,GlobalTypes::CHandle<server::CBaseEntity>, 0xca8);
-			PROPERTY(m_bFirstBlocked,bool, 0xcac);
-			NESTED_PROPERTY(m_ls,server::locksound_t, 0xcb0);
-			PROPERTY(m_bForceClosed,bool, 0xcd0);
-			PROPERTY(m_vecLatchWorldPosition,GlobalTypes::VectorWS, 0xcd4);
-			PROPERTY(m_hActivator,GlobalTypes::CHandle<server::CBaseEntity>, 0xce0);
-			PROPERTY(m_SoundMoving,GlobalTypes::CUtlSymbolLarge*, 0xcf8);
-			PROPERTY(m_SoundOpen,GlobalTypes::CUtlSymbolLarge*, 0xd00);
-			PROPERTY(m_SoundClose,GlobalTypes::CUtlSymbolLarge*, 0xd08);
-			PROPERTY(m_SoundLock,GlobalTypes::CUtlSymbolLarge*, 0xd10);
-			PROPERTY(m_SoundUnlock,GlobalTypes::CUtlSymbolLarge*, 0xd18);
-			PROPERTY(m_SoundLatch,GlobalTypes::CUtlSymbolLarge*, 0xd20);
-			PROPERTY(m_SoundPound,GlobalTypes::CUtlSymbolLarge*, 0xd28);
-			PROPERTY(m_SoundJiggle,GlobalTypes::CUtlSymbolLarge*, 0xd30);
-			PROPERTY(m_SoundLockedAnim,GlobalTypes::CUtlSymbolLarge*, 0xd38);
-			PROPERTY(m_numCloseAttempts,int32_t, 0xd40);
-			PROPERTY(m_nPhysicsMaterial,GlobalTypes::CUtlStringToken*, 0xd44);
-			PROPERTY(m_SlaveName,GlobalTypes::CUtlSymbolLarge*, 0xd48);
-			PROPERTY(m_hMaster,GlobalTypes::CHandle<server::CBasePropDoor>, 0xd50);
-			NESTED_PROPERTY(m_OnBlockedClosing,entity2::CEntityIOOutput, 0xd58);
-			NESTED_PROPERTY(m_OnBlockedOpening,entity2::CEntityIOOutput, 0xd70);
-			NESTED_PROPERTY(m_OnUnblockedClosing,entity2::CEntityIOOutput, 0xd88);
-			NESTED_PROPERTY(m_OnUnblockedOpening,entity2::CEntityIOOutput, 0xda0);
-			NESTED_PROPERTY(m_OnFullyClosed,entity2::CEntityIOOutput, 0xdb8);
-			NESTED_PROPERTY(m_OnFullyOpen,entity2::CEntityIOOutput, 0xdd0);
-			NESTED_PROPERTY(m_OnClose,entity2::CEntityIOOutput, 0xde8);
-			NESTED_PROPERTY(m_OnOpen,entity2::CEntityIOOutput, 0xe00);
-			NESTED_PROPERTY(m_OnLockedUse,entity2::CEntityIOOutput, 0xe18);
-			NESTED_PROPERTY(m_OnAjarOpen,entity2::CEntityIOOutput, 0xe30);
+			PROPERTY(m_flAutoReturnDelay,float32, 0xb90);
+			NESTED_PROPERTY(m_hDoorList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePropDoor>>), 0xb98);
+			PROPERTY(m_nHardwareType,int32_t, 0xbb0);
+			PROPERTY(m_bNeedsHardware,bool, 0xbb4);
+			PROPERTY(m_eDoorState,IDENTITY(client::DoorState_t), 0xbb8);
+			PROPERTY(m_bLocked,bool, 0xbbc);
+			PROPERTY(m_bNoNPCs,bool, 0xbbd);
+			PROPERTY(m_closedPosition,GlobalTypes::Vector, 0xbc0);
+			PROPERTY(m_closedAngles,GlobalTypes::QAngle, 0xbcc);
+			PROPERTY(m_hBlocker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xbd8);
+			PROPERTY(m_bFirstBlocked,bool, 0xbdc);
+			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0xbe0);
+			PROPERTY(m_bForceClosed,bool, 0xc00);
+			PROPERTY(m_vecLatchWorldPosition,GlobalTypes::VectorWS, 0xc04);
+			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xc10);
+			PROPERTY(m_SoundMoving,GlobalTypes::CUtlSymbolLarge*, 0xc28);
+			PROPERTY(m_SoundOpen,GlobalTypes::CUtlSymbolLarge*, 0xc30);
+			PROPERTY(m_SoundClose,GlobalTypes::CUtlSymbolLarge*, 0xc38);
+			PROPERTY(m_SoundLock,GlobalTypes::CUtlSymbolLarge*, 0xc40);
+			PROPERTY(m_SoundUnlock,GlobalTypes::CUtlSymbolLarge*, 0xc48);
+			PROPERTY(m_SoundLatch,GlobalTypes::CUtlSymbolLarge*, 0xc50);
+			PROPERTY(m_SoundPound,GlobalTypes::CUtlSymbolLarge*, 0xc58);
+			PROPERTY(m_SoundJiggle,GlobalTypes::CUtlSymbolLarge*, 0xc60);
+			PROPERTY(m_SoundLockedAnim,GlobalTypes::CUtlSymbolLarge*, 0xc68);
+			PROPERTY(m_numCloseAttempts,int32_t, 0xc70);
+			PROPERTY(m_nPhysicsMaterial,GlobalTypes::CUtlStringToken*, 0xc74);
+			PROPERTY(m_SlaveName,GlobalTypes::CUtlSymbolLarge*, 0xc78);
+			PROPERTY(m_hMaster,IDENTITY(GlobalTypes::CHandle<server::CBasePropDoor>), 0xc80);
+			NESTED_PROPERTY(m_OnBlockedClosing,IDENTITY(entity2::CEntityIOOutput), 0xc88);
+			NESTED_PROPERTY(m_OnBlockedOpening,IDENTITY(entity2::CEntityIOOutput), 0xca0);
+			NESTED_PROPERTY(m_OnUnblockedClosing,IDENTITY(entity2::CEntityIOOutput), 0xcb8);
+			NESTED_PROPERTY(m_OnUnblockedOpening,IDENTITY(entity2::CEntityIOOutput), 0xcd0);
+			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0xce8);
+			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0xd00);
+			NESTED_PROPERTY(m_OnClose,IDENTITY(entity2::CEntityIOOutput), 0xd18);
+			NESTED_PROPERTY(m_OnOpen,IDENTITY(entity2::CEntityIOOutput), 0xd30);
+			NESTED_PROPERTY(m_OnLockedUse,IDENTITY(entity2::CEntityIOOutput), 0xd48);
+			NESTED_PROPERTY(m_OnAjarOpen,IDENTITY(entity2::CEntityIOOutput), 0xd60);
 			S2_PAD(0x200);
 		};
-		//static_assert(sizeof(CS2::server::CBasePropDoor) == 0xE50, "CBasePropDoor size should be 0xE50");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBasePropDoor) == 0xD80, "CBasePropDoor size should be 0xD80");
+
+#endif
 	}
 }

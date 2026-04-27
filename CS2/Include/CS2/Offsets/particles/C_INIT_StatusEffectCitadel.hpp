@@ -8,27 +8,27 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x228
+			// Class size: 0x230
 			namespace C_INIT_StatusEffectCitadel /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_flSFXColorWarpAmount = 0x1d8; // float32 m_flSFXColorWarpAmount; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXNormalAmount = 0x1dc; // float32 m_flSFXNormalAmount; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXMetalnessAmount = 0x1e0; // float32 m_flSFXMetalnessAmount; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXRoughnessAmount = 0x1e4; // float32 m_flSFXRoughnessAmount; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSelfIllumAmount = 0x1e8; // float32 m_flSFXSelfIllumAmount; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSScale = 0x1ec; // float32 m_flSFXSScale; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSScrollX = 0x1f0; // float32 m_flSFXSScrollX; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSScrollY = 0x1f4; // float32 m_flSFXSScrollY; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSScrollZ = 0x1f8; // float32 m_flSFXSScrollZ; |  0x1f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSOffsetX = 0x1fc; // float32 m_flSFXSOffsetX; |  0x1fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSOffsetY = 0x200; // float32 m_flSFXSOffsetY; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSOffsetZ = 0x204; // float32 m_flSFXSOffsetZ; |  0x204 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDetailCombo = 0x208; // particles::DetailCombo_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSDetailAmount = 0x20c; // float32 m_flSFXSDetailAmount; |  0x20c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSDetailScale = 0x210; // float32 m_flSFXSDetailScale; |  0x210 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSDetailScrollX = 0x214; // float32 m_flSFXSDetailScrollX; |  0x214 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSDetailScrollY = 0x218; // float32 m_flSFXSDetailScrollY; |  0x218 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSDetailScrollZ = 0x21c; // float32 m_flSFXSDetailScrollZ; |  0x21c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSFXSUseModelUVs = 0x220; // float32 m_flSFXSUseModelUVs; |  0x220 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXColorWarpAmount = 0x1e0; // float32 m_flSFXColorWarpAmount; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXNormalAmount = 0x1e4; // float32 m_flSFXNormalAmount; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXMetalnessAmount = 0x1e8; // float32 m_flSFXMetalnessAmount; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXRoughnessAmount = 0x1ec; // float32 m_flSFXRoughnessAmount; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSelfIllumAmount = 0x1f0; // float32 m_flSFXSelfIllumAmount; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSScale = 0x1f4; // float32 m_flSFXSScale; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSScrollX = 0x1f8; // float32 m_flSFXSScrollX; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSScrollY = 0x1fc; // float32 m_flSFXSScrollY; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSScrollZ = 0x200; // float32 m_flSFXSScrollZ; |  0x200 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSOffsetX = 0x204; // float32 m_flSFXSOffsetX; |  0x204 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSOffsetY = 0x208; // float32 m_flSFXSOffsetY; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSOffsetZ = 0x20c; // float32 m_flSFXSOffsetZ; |  0x20c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDetailCombo = 0x210; // particles::DetailCombo_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSDetailAmount = 0x214; // float32 m_flSFXSDetailAmount; |  0x214 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSDetailScale = 0x218; // float32 m_flSFXSDetailScale; |  0x218 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSDetailScrollX = 0x21c; // float32 m_flSFXSDetailScrollX; |  0x21c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSDetailScrollY = 0x220; // float32 m_flSFXSDetailScrollY; |  0x220 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSDetailScrollZ = 0x224; // float32 m_flSFXSDetailScrollZ; |  0x224 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSFXSUseModelUVs = 0x228; // float32 m_flSFXSUseModelUVs; |  0x228 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

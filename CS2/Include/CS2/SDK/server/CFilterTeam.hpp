@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_iFilterTeam,int32_t, 0x4e0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFilterTeam) == 0x4E8, "CFilterTeam size should be 0x4E8");
+
+#endif
 	}
 }

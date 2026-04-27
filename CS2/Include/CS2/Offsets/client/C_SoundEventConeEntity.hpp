@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x6D0
+			// Class size: 0x6D8
 			namespace C_SoundEventConeEntity /*: public CS2::client::C_SoundEventEntity*/ {
-				constexpr std::ptrdiff_t m_flEmitterAngle = 0x6b8; // float32 m_flEmitterAngle; |  0x6b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSweetSpotAngle = 0x6bc; // float32 m_flSweetSpotAngle; |  0x6bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAttenMin = 0x6c0; // float32 m_flAttenMin; |  0x6c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAttenMax = 0x6c4; // float32 m_flAttenMax; |  0x6c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iszParameterName = 0x6c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flEmitterAngle = 0x6c0; // float32 m_flEmitterAngle; |  0x6c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSweetSpotAngle = 0x6c4; // float32 m_flSweetSpotAngle; |  0x6c4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAttenMin = 0x6c8; // float32 m_flAttenMin; |  0x6c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAttenMax = 0x6cc; // float32 m_flAttenMax; |  0x6cc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszParameterName = 0x6d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

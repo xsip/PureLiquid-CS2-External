@@ -28,9 +28,12 @@ namespace CS2 {
 			PROPERTY(m_Transform,GlobalTypes::CTransform, 0x0);
 			PROPERTY(m_Name,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_nParent,int32_t, 0x28);
-			PROPERTY(m_refModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x30);
+			PROPERTY(m_refModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x30);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::PermModelExtPart_t) == 0x40, "PermModelExtPart_t size should be 0x40");
+
+#endif
 	}
 }

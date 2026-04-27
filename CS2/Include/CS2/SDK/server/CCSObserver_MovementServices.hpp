@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CCSObserver_MovementServices : public CS2::server::CPlayer_MovementServices {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CCSObserver_MovementServices) == 0x240, "CCSObserver_MovementServices size should be 0x240");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CCSObserver_MovementServices) == 0x258, "CCSObserver_MovementServices size should be 0x258");
+
+#endif
 	}
 }

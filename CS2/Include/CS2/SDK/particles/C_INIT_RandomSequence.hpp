@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RandomSequence : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nSequenceMin,int32_t, 0x1d8);
-			PROPERTY(m_nSequenceMax,int32_t, 0x1dc);
-			PROPERTY(m_bShuffle,bool, 0x1e0);
-			PROPERTY(m_bLinear,bool, 0x1e1);
-			NESTED_PROPERTY(m_WeightedList,GlobalTypes::CUtlVector<particles::SequenceWeightedList_t>, 0x1e8);
+			PROPERTY(m_nSequenceMin,int32_t, 0x1e0);
+			PROPERTY(m_nSequenceMax,int32_t, 0x1e4);
+			PROPERTY(m_bShuffle,bool, 0x1e8);
+			PROPERTY(m_bLinear,bool, 0x1e9);
+			NESTED_PROPERTY(m_WeightedList,IDENTITY(GlobalTypes::CUtlVector<particles::SequenceWeightedList_t>), 0x1f0);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RandomSequence) == 0x208, "C_INIT_RandomSequence size should be 0x208");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RandomSequence) == 0x210, "C_INIT_RandomSequence size should be 0x210");
+
+#endif
 	}
 }

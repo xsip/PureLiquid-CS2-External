@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_nEndFrame,int32_t, 0x2c);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimLocalHierarchy) == 0x30, "CAnimLocalHierarchy size should be 0x30");
+
+#endif
 	}
 }

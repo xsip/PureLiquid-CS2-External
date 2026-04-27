@@ -29,21 +29,24 @@ namespace CS2 {
 			PROPERTY(m_bStartActive,bool, 0x4b0);
 			PROPERTY(m_flMaxSimulationTime,float32, 0x4b4);
 			PROPERTY(m_iszEffectName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
-			PROPERTY(m_PathNodes_Name,GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>, 0x4c0);
+			PROPERTY(m_PathNodes_Name,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>), 0x4c0);
 			PROPERTY(m_flParticleSpacing,float32, 0x4d8);
 			PROPERTY(m_flSlack,float32, 0x4dc);
 			PROPERTY(m_flRadius,float32, 0x4e0);
 			PROPERTY(m_ColorTint,GlobalTypes::Color, 0x4e4);
 			PROPERTY(m_nEffectState,int32_t, 0x4e8);
-			PROPERTY(m_iEffectIndex,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x4f0);
-			PROPERTY(m_PathNodes_Position,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0x4f8);
-			PROPERTY(m_PathNodes_TangentIn,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0x510);
-			PROPERTY(m_PathNodes_TangentOut,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0x528);
-			PROPERTY(m_PathNodes_Color,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0x540);
-			PROPERTY(m_PathNodes_PinEnabled,GlobalTypes::CNetworkUtlVectorBase< bool >, 0x558);
-			PROPERTY(m_PathNodes_RadiusScale,GlobalTypes::CNetworkUtlVectorBase< float32 >, 0x570);
+			PROPERTY(m_iEffectIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x4f0);
+			// PROPERTY(m_PathNodes_Position,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0x4f8);
+			// PROPERTY(m_PathNodes_TangentIn,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0x510);
+			// PROPERTY(m_PathNodes_TangentOut,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0x528);
+			// PROPERTY(m_PathNodes_Color,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0x540);
+			// PROPERTY(m_PathNodes_PinEnabled,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< bool >), 0x558);
+			// PROPERTY(m_PathNodes_RadiusScale,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< float32 >), 0x570);
 			S2_PAD(0xE8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathParticleRope) == 0x590, "CPathParticleRope size should be 0x590");
+
+#endif
 	}
 }

@@ -23,19 +23,23 @@ namespace CS2 {
 	namespace client {
 		class CPointTemplate : public CS2::client::CLogicalEntity {
 		public:
-			PROPERTY(m_iszWorldName,GlobalTypes::CUtlSymbolLarge*, 0x608);
-			PROPERTY(m_iszSource2EntityLumpName,GlobalTypes::CUtlSymbolLarge*, 0x610);
-			PROPERTY(m_iszEntityFilterName,GlobalTypes::CUtlSymbolLarge*, 0x618);
-			PROPERTY(m_flTimeoutInterval,float32, 0x620);
-			PROPERTY(m_bAsynchronouslySpawnEntities,bool, 0x624);
-			PROPERTY(m_clientOnlyEntityBehavior,client::PointTemplateClientOnlyEntityBehavior_t, 0x628);
-			PROPERTY(m_ownerSpawnGroupType,client::PointTemplateOwnerSpawnGroupType_t, 0x62c);
-			NESTED_PROPERTY(m_createdSpawnGroupHandles,GlobalTypes::CUtlVector< uint32 >, 0x630);
-			NESTED_PROPERTY(m_SpawnedEntityHandles,GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>, 0x648);
-			PROPERTY(m_ScriptSpawnCallback,GlobalTypes::HSCRIPT, 0x660);
-			PROPERTY(m_ScriptCallbackScope,GlobalTypes::HSCRIPT, 0x668);
-			S2_PAD(0x68);
+			PROPERTY(m_iszWorldName,GlobalTypes::CUtlSymbolLarge*, 0x600);
+			PROPERTY(m_iszSource2EntityLumpName,GlobalTypes::CUtlSymbolLarge*, 0x608);
+			PROPERTY(m_iszEntityFilterName,GlobalTypes::CUtlSymbolLarge*, 0x610);
+			PROPERTY(m_flTimeoutInterval,float32, 0x618);
+			PROPERTY(m_bAsynchronouslySpawnEntities,bool, 0x61c);
+			PROPERTY(m_clientOnlyEntityBehavior,IDENTITY(client::PointTemplateClientOnlyEntityBehavior_t), 0x620);
+			PROPERTY(m_ownerSpawnGroupType,IDENTITY(client::PointTemplateOwnerSpawnGroupType_t), 0x624);
+			NESTED_PROPERTY(m_createdSpawnGroupHandles,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x628);
+			NESTED_PROPERTY(m_SpawnedEntityHandles,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>), 0x640);
+			PROPERTY(m_ScriptSpawnCallback,GlobalTypes::HSCRIPT, 0x658);
+			PROPERTY(m_ScriptCallbackScope,GlobalTypes::HSCRIPT, 0x660);
+			// PROPERTY(m_OnEntitySpawned,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlVector<CEntityHandle>>), 0x668);
+			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::client::CPointTemplate) == 0x670, "CPointTemplate size should be 0x670");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPointTemplate) == 0x698, "CPointTemplate size should be 0x698");
+
+#endif
 	}
 }

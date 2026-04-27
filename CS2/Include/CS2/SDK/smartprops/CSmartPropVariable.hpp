@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_ReadOnlyExpression,GlobalTypes::CUtlString*, 0x30);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable) == 0x38, "CSmartPropVariable size should be 0x38");
+
+#endif
 	}
 }

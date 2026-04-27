@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_flListenerReverbModifierWhenSourceReverbIsActive,float32, 0x18);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CDSPMixgroupModifier) == 0x20, "CDSPMixgroupModifier size should be 0x20");
+
+#endif
 	}
 }

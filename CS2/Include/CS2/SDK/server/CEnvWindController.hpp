@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace server {
 		class CEnvWindController : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_EnvWindShared,server::CEnvWindShared, 0x4a8);
+			NESTED_PROPERTY(m_EnvWindShared,IDENTITY(server::CEnvWindShared), 0x4a8);
 			PROPERTY(m_fDirectionVariation,float32, 0x5d8);
 			PROPERTY(m_fSpeedVariation,float32, 0x5dc);
 			PROPERTY(m_fTurbulence,float32, 0x5e0);
@@ -35,6 +35,9 @@ namespace CS2 {
 			PROPERTY(m_bFirstTime,bool, 0x5f9);
 			S2_PAD(0x158);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvWindController) == 0x600, "CEnvWindController size should be 0x600");
+
+#endif
 	}
 }

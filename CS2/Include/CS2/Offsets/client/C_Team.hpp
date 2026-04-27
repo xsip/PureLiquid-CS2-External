@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x6C0
+			// Class size: 0x6B8
 			namespace C_Team /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_aPlayerControllers = 0x608; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::CBasePlayerController>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_aPlayers = 0x620; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BasePlayerPawn>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_iScore = 0x638; // int32_t m_iScore; |  0x638 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_szTeamname = 0x63c; // char m_szTeamname[129]; |  0x63c | Schema_FixedArray | Size: 0x81
+				constexpr std::ptrdiff_t m_aPlayerControllers = 0x600; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::CBasePlayerController>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_aPlayers = 0x618; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BasePlayerPawn>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_iScore = 0x630; // int32_t m_iScore; |  0x630 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_szTeamname = 0x634; // char m_szTeamname[129]; |  0x634 | Schema_FixedArray | Size: 0x81
 			}
 		}
 	}

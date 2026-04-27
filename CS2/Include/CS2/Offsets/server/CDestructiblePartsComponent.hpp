@@ -13,6 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t __m_pChainEntity = 0x0; // entity2::CNetworkVarChainer  | Schema_DeclaredClass | Size: 0x28
 				constexpr std::ptrdiff_t m_vecDamageTakenByHitGroup = 0x48; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_hOwner = 0x60; // GlobalTypes::CHandle<server::CBaseModelEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pAnimGraphDestructibleGraphController = 0x68; // client::CBaseAnimGraphDestructibleParts_GraphController**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

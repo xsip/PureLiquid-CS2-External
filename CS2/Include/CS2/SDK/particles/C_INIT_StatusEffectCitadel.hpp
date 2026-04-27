@@ -22,27 +22,30 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_StatusEffectCitadel : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_flSFXColorWarpAmount,float32, 0x1d8);
-			PROPERTY(m_flSFXNormalAmount,float32, 0x1dc);
-			PROPERTY(m_flSFXMetalnessAmount,float32, 0x1e0);
-			PROPERTY(m_flSFXRoughnessAmount,float32, 0x1e4);
-			PROPERTY(m_flSFXSelfIllumAmount,float32, 0x1e8);
-			PROPERTY(m_flSFXSScale,float32, 0x1ec);
-			PROPERTY(m_flSFXSScrollX,float32, 0x1f0);
-			PROPERTY(m_flSFXSScrollY,float32, 0x1f4);
-			PROPERTY(m_flSFXSScrollZ,float32, 0x1f8);
-			PROPERTY(m_flSFXSOffsetX,float32, 0x1fc);
-			PROPERTY(m_flSFXSOffsetY,float32, 0x200);
-			PROPERTY(m_flSFXSOffsetZ,float32, 0x204);
-			PROPERTY(m_nDetailCombo,particles::DetailCombo_t, 0x208);
-			PROPERTY(m_flSFXSDetailAmount,float32, 0x20c);
-			PROPERTY(m_flSFXSDetailScale,float32, 0x210);
-			PROPERTY(m_flSFXSDetailScrollX,float32, 0x214);
-			PROPERTY(m_flSFXSDetailScrollY,float32, 0x218);
-			PROPERTY(m_flSFXSDetailScrollZ,float32, 0x21c);
-			PROPERTY(m_flSFXSUseModelUVs,float32, 0x220);
+			PROPERTY(m_flSFXColorWarpAmount,float32, 0x1e0);
+			PROPERTY(m_flSFXNormalAmount,float32, 0x1e4);
+			PROPERTY(m_flSFXMetalnessAmount,float32, 0x1e8);
+			PROPERTY(m_flSFXRoughnessAmount,float32, 0x1ec);
+			PROPERTY(m_flSFXSelfIllumAmount,float32, 0x1f0);
+			PROPERTY(m_flSFXSScale,float32, 0x1f4);
+			PROPERTY(m_flSFXSScrollX,float32, 0x1f8);
+			PROPERTY(m_flSFXSScrollY,float32, 0x1fc);
+			PROPERTY(m_flSFXSScrollZ,float32, 0x200);
+			PROPERTY(m_flSFXSOffsetX,float32, 0x204);
+			PROPERTY(m_flSFXSOffsetY,float32, 0x208);
+			PROPERTY(m_flSFXSOffsetZ,float32, 0x20c);
+			PROPERTY(m_nDetailCombo,IDENTITY(particles::DetailCombo_t), 0x210);
+			PROPERTY(m_flSFXSDetailAmount,float32, 0x214);
+			PROPERTY(m_flSFXSDetailScale,float32, 0x218);
+			PROPERTY(m_flSFXSDetailScrollX,float32, 0x21c);
+			PROPERTY(m_flSFXSDetailScrollY,float32, 0x220);
+			PROPERTY(m_flSFXSDetailScrollZ,float32, 0x224);
+			PROPERTY(m_flSFXSUseModelUVs,float32, 0x228);
 			S2_PAD(0x50);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_StatusEffectCitadel) == 0x228, "C_INIT_StatusEffectCitadel size should be 0x228");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_StatusEffectCitadel) == 0x230, "C_INIT_StatusEffectCitadel size should be 0x230");
+
+#endif
 	}
 }

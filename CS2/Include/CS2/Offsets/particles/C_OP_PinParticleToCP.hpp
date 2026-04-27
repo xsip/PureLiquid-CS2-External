@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1150
+			// Class size: 0x1158
 			namespace C_OP_PinParticleToCP /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d0; // int32_t m_nControlPointNumber; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecOffset = 0x1d8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_bOffsetLocal = 0x890; // bool m_bOffsetLocal; |  0x890 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nParticleSelection = 0x894; // particles::ParticleSelection_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nParticleNumber = 0x898; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nPinBreakType = 0xa08; // particles::ParticlePinDistance_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flBreakDistance = 0xa10; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flBreakSpeed = 0xb80; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flAge = 0xcf0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nBreakControlPointNumber = 0xe60; // int32_t m_nBreakControlPointNumber; |  0xe60 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nBreakControlPointNumber2 = 0xe64; // int32_t m_nBreakControlPointNumber2; |  0xe64 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBreakValue = 0xe68; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInterpolation = 0xfd8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bRetainInitialVelocity = 0x1148; // bool m_bRetainInitialVelocity; |  0x1148 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecOffset = 0x1e0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_bOffsetLocal = 0x898; // bool m_bOffsetLocal; |  0x898 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nParticleSelection = 0x89c; // particles::ParticleSelection_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nParticleNumber = 0x8a0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nPinBreakType = 0xa10; // particles::ParticlePinDistance_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flBreakDistance = 0xa18; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flBreakSpeed = 0xb88; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flAge = 0xcf8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nBreakControlPointNumber = 0xe68; // int32_t m_nBreakControlPointNumber; |  0xe68 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nBreakControlPointNumber2 = 0xe6c; // int32_t m_nBreakControlPointNumber2; |  0xe6c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBreakValue = 0xe70; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInterpolation = 0xfe0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bRetainInitialVelocity = 0x1150; // bool m_bRetainInitialVelocity; |  0x1150 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

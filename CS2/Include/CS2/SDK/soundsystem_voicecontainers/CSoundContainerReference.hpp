@@ -28,11 +28,15 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CSoundContainerReference  {
 		public:
-			PROPERTY(m_bUseReference,bool, 0x0);
-			PROPERTY(m_sound,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>, 0x8);
-			PROPERTY(m_pSound,soundsystem_voicecontainers::CVoiceContainerBase*, 0x10);
-			S2_PAD(0x18);
+			PROPERTY(m_namespace,GlobalTypes::CUtlString*, 0x0);
+			PROPERTY(m_bUseReference,bool, 0x8);
+			PROPERTY(m_sound,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>), 0x10);
+			PROPERTY(m_pSound,IDENTITY(soundsystem_voicecontainers::CVoiceContainerBase*), 0x18);
+			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CSoundContainerReference) == 0x18, "CSoundContainerReference size should be 0x18");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CSoundContainerReference) == 0x20, "CSoundContainerReference size should be 0x20");
+
+#endif
 	}
 }

@@ -24,10 +24,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_TriggerHitPoints,int32_t, 0x4b8);
 			PROPERTY(m_flTimeToTrigger,float32, 0x4bc);
-			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x4c0);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x4c0);
 			PROPERTY(m_flDangerousTime,float32, 0x4c4);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicActiveAutosave) == 0x4C8, "CLogicActiveAutosave size should be 0x4C8");
+
+#endif
 	}
 }

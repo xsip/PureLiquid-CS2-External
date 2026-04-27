@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_strStateBlob,GlobalTypes::CUtlString*, 0x4b8);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseGameBlackboard) == 0x4C0, "CPulseGameBlackboard size should be 0x4C0");
+
+#endif
 	}
 }

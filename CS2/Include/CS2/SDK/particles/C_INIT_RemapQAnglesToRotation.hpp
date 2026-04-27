@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapQAnglesToRotation : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1d8);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
 			S2_PAD(0x68);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RemapQAnglesToRotation) == 0x240, "C_INIT_RemapQAnglesToRotation size should be 0x240");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RemapQAnglesToRotation) == 0x248, "C_INIT_RemapQAnglesToRotation size should be 0x248");
+
+#endif
 	}
 }

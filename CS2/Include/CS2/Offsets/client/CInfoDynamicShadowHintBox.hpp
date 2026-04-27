@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x638
+			// Class size: 0x630
 			namespace CInfoDynamicShadowHintBox /*: public CS2::client::CInfoDynamicShadowHint*/ {
-				constexpr std::ptrdiff_t m_vBoxMins = 0x620; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vBoxMaxs = 0x62c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vBoxMins = 0x618; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vBoxMaxs = 0x624; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

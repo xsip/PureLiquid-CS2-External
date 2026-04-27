@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x28
+			// Class size: 0x20
 			namespace CNmFrameSnapEvent /*: public CS2::animlib::CNmEvent*/ {
-				constexpr std::ptrdiff_t m_frameSnapMode = 0x20; // animlib::NmFrameSnapEventMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_frameSnapMode = 0x18; // animlib::NmFrameSnapEventMode_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

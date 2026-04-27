@@ -21,34 +21,37 @@ namespace CS2 {
 	namespace client {
 		class C_PointCamera : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_FOV,float32, 0x608);
-			PROPERTY(m_Resolution,float32, 0x60c);
-			PROPERTY(m_bFogEnable,bool, 0x610);
-			PROPERTY(m_FogColor,GlobalTypes::Color, 0x611);
-			PROPERTY(m_flFogStart,float32, 0x618);
-			PROPERTY(m_flFogEnd,float32, 0x61c);
-			PROPERTY(m_flFogMaxDensity,float32, 0x620);
-			PROPERTY(m_bActive,bool, 0x624);
-			PROPERTY(m_bUseScreenAspectRatio,bool, 0x625);
-			PROPERTY(m_flAspectRatio,float32, 0x628);
-			PROPERTY(m_bNoSky,bool, 0x62c);
-			PROPERTY(m_fBrightness,float32, 0x630);
-			PROPERTY(m_flZFar,float32, 0x634);
-			PROPERTY(m_flZNear,float32, 0x638);
-			PROPERTY(m_bCanHLTVUse,bool, 0x63c);
-			PROPERTY(m_bAlignWithParent,bool, 0x63d);
-			PROPERTY(m_bDofEnabled,bool, 0x63e);
-			PROPERTY(m_flDofNearBlurry,float32, 0x640);
-			PROPERTY(m_flDofNearCrisp,float32, 0x644);
-			PROPERTY(m_flDofFarCrisp,float32, 0x648);
-			PROPERTY(m_flDofFarBlurry,float32, 0x64c);
-			PROPERTY(m_flDofTiltToGround,float32, 0x650);
-			PROPERTY(m_TargetFOV,float32, 0x654);
-			PROPERTY(m_DegreesPerSecond,float32, 0x658);
-			PROPERTY(m_bIsOn,bool, 0x65c);
-			PROPERTY(m_pNext,client::C_PointCamera*, 0x660);
+			PROPERTY(m_FOV,float32, 0x600);
+			PROPERTY(m_Resolution,float32, 0x604);
+			PROPERTY(m_bFogEnable,bool, 0x608);
+			PROPERTY(m_FogColor,GlobalTypes::Color, 0x609);
+			PROPERTY(m_flFogStart,float32, 0x610);
+			PROPERTY(m_flFogEnd,float32, 0x614);
+			PROPERTY(m_flFogMaxDensity,float32, 0x618);
+			PROPERTY(m_bActive,bool, 0x61c);
+			PROPERTY(m_bUseScreenAspectRatio,bool, 0x61d);
+			PROPERTY(m_flAspectRatio,float32, 0x620);
+			PROPERTY(m_bNoSky,bool, 0x624);
+			PROPERTY(m_fBrightness,float32, 0x628);
+			PROPERTY(m_flZFar,float32, 0x62c);
+			PROPERTY(m_flZNear,float32, 0x630);
+			PROPERTY(m_bCanHLTVUse,bool, 0x634);
+			PROPERTY(m_bAlignWithParent,bool, 0x635);
+			PROPERTY(m_bDofEnabled,bool, 0x636);
+			PROPERTY(m_flDofNearBlurry,float32, 0x638);
+			PROPERTY(m_flDofNearCrisp,float32, 0x63c);
+			PROPERTY(m_flDofFarCrisp,float32, 0x640);
+			PROPERTY(m_flDofFarBlurry,float32, 0x644);
+			PROPERTY(m_flDofTiltToGround,float32, 0x648);
+			PROPERTY(m_TargetFOV,float32, 0x64c);
+			PROPERTY(m_DegreesPerSecond,float32, 0x650);
+			PROPERTY(m_bIsOn,bool, 0x654);
+			PROPERTY(m_pNext,IDENTITY(client::C_PointCamera*), 0x658);
 			S2_PAD(0x60);
 		};
-		//static_assert(sizeof(CS2::client::C_PointCamera) == 0x668, "C_PointCamera size should be 0x668");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PointCamera) == 0x660, "C_PointCamera size should be 0x660");
+
+#endif
 	}
 }

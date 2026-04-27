@@ -13,7 +13,7 @@
 #include <SDK/modellib/CMaterialDrawDescriptor.hpp>
 #include <SDK/mathlib_extended/AABB_t.hpp>
 #include <SDK/modellib/CMeshletDescriptor.hpp>
-#include <SDK/modellib/RTProxyDrawDescriptor_t.hpp>
+#include <SDK/modellib/CSceneObjectData_RTProxyDrawDescriptor_t.hpp>
 
 
 
@@ -26,13 +26,16 @@ namespace CS2 {
 		public:
 			PROPERTY(m_vMinBounds,GlobalTypes::Vector, 0x0);
 			PROPERTY(m_vMaxBounds,GlobalTypes::Vector, 0xc);
-			PROPERTY(m_drawCalls,GlobalTypes::CUtlLeanVector<modellib::CMaterialDrawDescriptor>, 0x18);
-			PROPERTY(m_drawBounds,GlobalTypes::CUtlLeanVector<mathlib_extended::AABB_t>, 0x28);
-			PROPERTY(m_meshlets,GlobalTypes::CUtlLeanVector<modellib::CMeshletDescriptor>, 0x38);
-			PROPERTY(m_rtProxyDrawCalls,GlobalTypes::CUtlLeanVector<modellib::RTProxyDrawDescriptor_t>, 0x48);
+			// PROPERTY(m_drawCalls,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CMaterialDrawDescriptor>), 0x18);
+			// PROPERTY(m_drawBounds,IDENTITY(GlobalTypes::CUtlLeanVector<mathlib_extended::AABB_t>), 0x28);
+			// PROPERTY(m_meshlets,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CMeshletDescriptor>), 0x38);
+			// PROPERTY(m_rtProxyDrawCalls,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CSceneObjectData_RTProxyDrawDescriptor_t>), 0x48);
 			PROPERTY(m_vTintColor,GlobalTypes::Vector4D, 0x58);
 			S2_PAD(0xA0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CSceneObjectData) == 0xA0, "CSceneObjectData size should be 0xA0");
+
+#endif
 	}
 }

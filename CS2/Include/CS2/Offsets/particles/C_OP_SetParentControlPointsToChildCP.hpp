@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_OP_SetParentControlPointsToChildCP /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nChildGroupID = 0x1d8; // int32_t m_nChildGroupID; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nChildControlPoint = 0x1dc; // int32_t m_nChildControlPoint; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nNumControlPoints = 0x1e0; // int32_t m_nNumControlPoints; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x1e4; // int32_t m_nFirstSourcePoint; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSetOrientation = 0x1e8; // bool m_bSetOrientation; |  0x1e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nChildGroupID = 0x1e0; // int32_t m_nChildGroupID; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nChildControlPoint = 0x1e4; // int32_t m_nChildControlPoint; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nNumControlPoints = 0x1e8; // int32_t m_nNumControlPoints; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x1ec; // int32_t m_nFirstSourcePoint; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSetOrientation = 0x1f0; // bool m_bSetOrientation; |  0x1f0 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

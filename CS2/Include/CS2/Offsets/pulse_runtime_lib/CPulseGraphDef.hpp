@@ -15,14 +15,14 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_ParentMapName = 0x30; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_ParentXmlName = 0x40; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_Chunks = 0x50; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_Chunk*>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_Cells = 0x68; // server::CUtlVector<pulse_runtime_lib::CPulseCell_Base*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Cells = 0x68; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulseCell_Base*>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_Vars = 0x80; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_Variable>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_PublicOutputs = 0x98; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_PublicOutput>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_InvokeBindings = 0xb0; // server::CUtlVector<pulse_runtime_lib::CPulse_InvokeBinding*>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_CallInfos = 0xc8; // server::CUtlVector<pulse_runtime_lib::CPulse_CallInfo*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_InvokeBindings = 0xb0; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_InvokeBinding*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_CallInfos = 0xc8; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_CallInfo*>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_Constants = 0xe0; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_Constant>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_DomainValues = 0xf8; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_DomainValue>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_BlackboardReferences = 0x110; // server::CUtlVector<pulse_runtime_lib::CPulse_BlackboardReference>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_BlackboardReferences = 0x110; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_BlackboardReference>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_OutputConnections = 0x128; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutputConnection*>  | Schema_Atomic | Size: 0x18
 			}
 		}

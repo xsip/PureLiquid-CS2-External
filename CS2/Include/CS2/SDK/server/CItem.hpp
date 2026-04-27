@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace server {
 		class CItem : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_OnPlayerTouch,entity2::CEntityIOOutput, 0xa28);
-			NESTED_PROPERTY(m_OnPlayerPickup,entity2::CEntityIOOutput, 0xa40);
-			PROPERTY(m_bActivateWhenAtRest,bool, 0xa58);
-			NESTED_PROPERTY(m_OnCacheInteraction,entity2::CEntityIOOutput, 0xa60);
-			NESTED_PROPERTY(m_OnGlovePulled,entity2::CEntityIOOutput, 0xa78);
-			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0xa90);
-			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0xa9c);
-			PROPERTY(m_bPhysStartAsleep,bool, 0xaa8);
+			NESTED_PROPERTY(m_OnPlayerTouch,IDENTITY(entity2::CEntityIOOutput), 0x948);
+			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0x960);
+			PROPERTY(m_bActivateWhenAtRest,bool, 0x978);
+			NESTED_PROPERTY(m_OnCacheInteraction,IDENTITY(entity2::CEntityIOOutput), 0x980);
+			NESTED_PROPERTY(m_OnGlovePulled,IDENTITY(entity2::CEntityIOOutput), 0x998);
+			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0x9b0);
+			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0x9bc);
+			PROPERTY(m_bPhysStartAsleep,bool, 0x9c8);
 			S2_PAD(0xA0);
 		};
-		//static_assert(sizeof(CS2::server::CItem) == 0xAC0, "CItem size should be 0xAC0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CItem) == 0x9E0, "CItem size should be 0x9E0");
+
+#endif
 	}
 }

@@ -26,16 +26,19 @@ namespace CS2 {
 	namespace client {
 		class C_TextureBasedAnimatable : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_bLoop,bool, 0xe88);
-			PROPERTY(m_flFPS,float32, 0xe8c);
-			PROPERTY(m_hPositionKeys,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0xe90);
-			PROPERTY(m_hRotationKeys,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0xe98);
-			PROPERTY(m_vAnimationBoundsMin,GlobalTypes::Vector, 0xea0);
-			PROPERTY(m_vAnimationBoundsMax,GlobalTypes::Vector, 0xeac);
-			PROPERTY(m_flStartTime,float32, 0xeb8);
-			PROPERTY(m_flStartFrame,float32, 0xebc);
+			PROPERTY(m_bLoop,bool, 0xfa8);
+			PROPERTY(m_flFPS,float32, 0xfac);
+			PROPERTY(m_hPositionKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xfb0);
+			PROPERTY(m_hRotationKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xfb8);
+			PROPERTY(m_vAnimationBoundsMin,GlobalTypes::Vector, 0xfc0);
+			PROPERTY(m_vAnimationBoundsMax,GlobalTypes::Vector, 0xfcc);
+			PROPERTY(m_flStartTime,float32, 0xfd8);
+			PROPERTY(m_flStartFrame,float32, 0xfdc);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::client::C_TextureBasedAnimatable) == 0xEC0, "C_TextureBasedAnimatable size should be 0xEC0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_TextureBasedAnimatable) == 0xFE0, "C_TextureBasedAnimatable size should be 0xFE0");
+
+#endif
 	}
 }

@@ -8,34 +8,34 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x860
+			// Class size: 0x898
 			namespace CFuncShatterglass /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_matPanelTransform = 0x730; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
-				constexpr std::ptrdiff_t m_matPanelTransformWsTemp = 0x760; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
-				constexpr std::ptrdiff_t m_vecShatterGlassShards = 0x790; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_PanelSize = 0x7a8; // GlobalTypes::Vector2D  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flLastShatterSoundEmitTime = 0x7b0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastCleanupTime = 0x7b4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flInitAtTime = 0x7b8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flGlassThickness = 0x7bc; // float32 m_flGlassThickness; |  0x7bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpawnInvulnerability = 0x7c0; // float32 m_flSpawnInvulnerability; |  0x7c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bBreakSilent = 0x7c4; // bool m_bBreakSilent; |  0x7c4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bBreakShardless = 0x7c5; // bool m_bBreakShardless; |  0x7c5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bBroken = 0x7c6; // bool m_bBroken; |  0x7c6 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bGlassNavIgnore = 0x7c7; // bool m_bGlassNavIgnore; |  0x7c7 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bGlassInFrame = 0x7c8; // bool m_bGlassInFrame; |  0x7c8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bStartBroken = 0x7c9; // bool m_bStartBroken; |  0x7c9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iInitialDamageType = 0x7ca; // uint8_t m_iInitialDamageType; |  0x7ca | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_szDamagePositioningEntityName01 = 0x7d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_szDamagePositioningEntityName02 = 0x7d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_szDamagePositioningEntityName03 = 0x7e0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_szDamagePositioningEntityName04 = 0x7e8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vInitialDamagePositions = 0x7f0; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vExtraDamagePositions = 0x808; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vInitialPanelVertices = 0x820; // GlobalTypes::CUtlVector<GlobalTypes::Vector4D>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_OnBroken = 0x838; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_iSurfaceType = 0x850; // uint8_t m_iSurfaceType; |  0x850 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hMaterialDamageBase = 0x858; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_matPanelTransform = 0x768; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
+				constexpr std::ptrdiff_t m_matPanelTransformWsTemp = 0x798; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
+				constexpr std::ptrdiff_t m_vecShatterGlassShards = 0x7c8; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_PanelSize = 0x7e0; // GlobalTypes::Vector2D  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flLastShatterSoundEmitTime = 0x7e8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastCleanupTime = 0x7ec; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flInitAtTime = 0x7f0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flGlassThickness = 0x7f4; // float32 m_flGlassThickness; |  0x7f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpawnInvulnerability = 0x7f8; // float32 m_flSpawnInvulnerability; |  0x7f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bBreakSilent = 0x7fc; // bool m_bBreakSilent; |  0x7fc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bBreakShardless = 0x7fd; // bool m_bBreakShardless; |  0x7fd | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bBroken = 0x7fe; // bool m_bBroken; |  0x7fe | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGlassNavIgnore = 0x7ff; // bool m_bGlassNavIgnore; |  0x7ff | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGlassInFrame = 0x800; // bool m_bGlassInFrame; |  0x800 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStartBroken = 0x801; // bool m_bStartBroken; |  0x801 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iInitialDamageType = 0x802; // uint8_t m_iInitialDamageType; |  0x802 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_szDamagePositioningEntityName01 = 0x808; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_szDamagePositioningEntityName02 = 0x810; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_szDamagePositioningEntityName03 = 0x818; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_szDamagePositioningEntityName04 = 0x820; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_vInitialDamagePositions = 0x828; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vExtraDamagePositions = 0x840; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vInitialPanelVertices = 0x858; // GlobalTypes::CUtlVector<GlobalTypes::Vector4D>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_OnBroken = 0x870; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_iSurfaceType = 0x888; // uint8_t m_iSurfaceType; |  0x888 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hMaterialDamageBase = 0x890; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

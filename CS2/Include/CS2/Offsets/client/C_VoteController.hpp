@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x640
+			// Class size: 0x638
 			namespace C_VoteController /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_iActiveIssueIndex = 0x618; // int32_t m_iActiveIssueIndex; |  0x618 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iOnlyTeamToVote = 0x61c; // int32_t m_iOnlyTeamToVote; |  0x61c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nVoteOptionCount = 0x620; // int32_t m_nVoteOptionCount[5]; |  0x620 | Schema_FixedArray | Size: 0x14
-				constexpr std::ptrdiff_t m_nPotentialVotes = 0x634; // int32_t m_nPotentialVotes; |  0x634 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bVotesDirty = 0x638; // bool m_bVotesDirty; |  0x638 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bTypeDirty = 0x639; // bool m_bTypeDirty; |  0x639 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsYesNoVote = 0x63a; // bool m_bIsYesNoVote; |  0x63a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iActiveIssueIndex = 0x610; // int32_t m_iActiveIssueIndex; |  0x610 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iOnlyTeamToVote = 0x614; // int32_t m_iOnlyTeamToVote; |  0x614 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVoteOptionCount = 0x618; // int32_t m_nVoteOptionCount[5]; |  0x618 | Schema_FixedArray | Size: 0x14
+				constexpr std::ptrdiff_t m_nPotentialVotes = 0x62c; // int32_t m_nPotentialVotes; |  0x62c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bVotesDirty = 0x630; // bool m_bVotesDirty; |  0x630 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bTypeDirty = 0x631; // bool m_bTypeDirty; |  0x631 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsYesNoVote = 0x632; // bool m_bIsYesNoVote; |  0x632 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

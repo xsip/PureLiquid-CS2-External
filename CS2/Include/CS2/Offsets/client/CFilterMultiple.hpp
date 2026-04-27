@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x6C0
+			// Class size: 0x6B8
 			namespace CFilterMultiple /*: public CS2::client::CBaseFilter*/ {
-				constexpr std::ptrdiff_t m_nFilterType = 0x640; // client::filter_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iFilterName = 0x648; // GlobalTypes::CUtlSymbolLarge[10]  | Schema_FixedArray | Size: 0x50
-				constexpr std::ptrdiff_t m_hFilter = 0x698; // GlobalTypes::CHandle  | Schema_FixedArray | Size: 0x28
+				constexpr std::ptrdiff_t m_nFilterType = 0x638; // client::filter_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iFilterName = 0x640; // GlobalTypes::CUtlSymbolLarge[10]  | Schema_FixedArray | Size: 0x50
+				constexpr std::ptrdiff_t m_hFilter = 0x690; // GlobalTypes::CHandle  | Schema_FixedArray | Size: 0x28
 			}
 		}
 	}

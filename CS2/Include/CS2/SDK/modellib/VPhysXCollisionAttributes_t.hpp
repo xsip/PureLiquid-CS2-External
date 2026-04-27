@@ -22,17 +22,20 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nIncludeDetailLayerCount,int32_t, 0x0);
 			PROPERTY(m_CollisionGroup,uint32_t, 0x4);
-			NESTED_PROPERTY(m_InteractAs,GlobalTypes::CUtlVector< uint32 >, 0x8);
-			NESTED_PROPERTY(m_InteractWith,GlobalTypes::CUtlVector< uint32 >, 0x20);
-			NESTED_PROPERTY(m_InteractExclude,GlobalTypes::CUtlVector< uint32 >, 0x38);
-			NESTED_PROPERTY(m_DetailLayers,GlobalTypes::CUtlVector< uint32 >, 0x50);
+			NESTED_PROPERTY(m_InteractAs,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x8);
+			NESTED_PROPERTY(m_InteractWith,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x20);
+			NESTED_PROPERTY(m_InteractExclude,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x38);
+			NESTED_PROPERTY(m_DetailLayers,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x50);
 			PROPERTY(m_CollisionGroupString,GlobalTypes::CUtlString*, 0x68);
-			PROPERTY(m_InteractAsStrings,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x70);
-			PROPERTY(m_InteractWithStrings,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x88);
-			PROPERTY(m_InteractExcludeStrings,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0xa0);
-			PROPERTY(m_DetailLayerStrings,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0xb8);
+			PROPERTY(m_InteractAsStrings,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x70);
+			PROPERTY(m_InteractWithStrings,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x88);
+			PROPERTY(m_InteractExcludeStrings,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0xa0);
+			PROPERTY(m_DetailLayerStrings,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0xb8);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::VPhysXCollisionAttributes_t) == 0xD0, "VPhysXCollisionAttributes_t size should be 0xD0");
+
+#endif
 	}
 }

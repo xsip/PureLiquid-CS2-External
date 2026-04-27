@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1198
+			// Class size: 0x1188
 			namespace C_PhysMagnet /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_aAttachedObjectsFromServer = 0x1168; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_aAttachedObjects = 0x1180; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_aAttachedObjectsFromServer = 0x1158; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_aAttachedObjects = 0x1170; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

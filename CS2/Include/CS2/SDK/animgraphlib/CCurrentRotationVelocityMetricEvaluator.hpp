@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CCurrentRotationVelocityMetricEvaluator : public CS2::animgraphlib::CMotionMetricEvaluator {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CCurrentRotationVelocityMetricEvaluator) == 0x50, "CCurrentRotationVelocityMetricEvaluator size should be 0x50");
+
+#endif
 	}
 }

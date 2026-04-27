@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_LifespanFromVelocity : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_vecComponentScale,GlobalTypes::Vector, 0x1d8);
-			PROPERTY(m_flTraceOffset,float32, 0x1e4);
-			PROPERTY(m_flMaxTraceLength,float32, 0x1e8);
-			PROPERTY(m_flTraceTolerance,float32, 0x1ec);
-			PROPERTY(m_nMaxPlanes,int32_t, 0x1f0);
-			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1f8);
-			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x278);
-			PROPERTY(m_bIncludeWater,bool, 0x288);
+			PROPERTY(m_vecComponentScale,GlobalTypes::Vector, 0x1e0);
+			PROPERTY(m_flTraceOffset,float32, 0x1ec);
+			PROPERTY(m_flMaxTraceLength,float32, 0x1f0);
+			PROPERTY(m_flTraceTolerance,float32, 0x1f4);
+			PROPERTY(m_nMaxPlanes,int32_t, 0x1f8);
+			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x200);
+			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x280);
+			PROPERTY(m_bIncludeWater,bool, 0x290);
 			S2_PAD(0xB8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_LifespanFromVelocity) == 0x290, "C_INIT_LifespanFromVelocity size should be 0x290");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_LifespanFromVelocity) == 0x298, "C_INIT_LifespanFromVelocity size should be 0x298");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CInfoTeleportDestination : public CS2::server::CPointEntity {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoTeleportDestination) == 0x4A8, "CInfoTeleportDestination size should be 0x4A8");
+
+#endif
 	}
 }

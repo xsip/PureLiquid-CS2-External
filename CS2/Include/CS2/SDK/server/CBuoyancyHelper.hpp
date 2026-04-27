@@ -13,6 +13,11 @@
 
 
 
+namespace CS2 {
+	namespace client {
+		class IPhysicsMotionController;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -20,18 +25,22 @@ namespace CS2 {
 	namespace server {
 		class CBuoyancyHelper  {
 		public:
+			PROPERTY(m_pController,IDENTITY(client::IPhysicsMotionController*), 0x8);
 			PROPERTY(m_nFluidType,GlobalTypes::CUtlStringToken*, 0x18);
 			PROPERTY(m_flFluidDensity,float32, 0x1c);
 			PROPERTY(m_flNeutrallyBuoyantGravity,float32, 0x20);
 			PROPERTY(m_flNeutrallyBuoyantLinearDamping,float32, 0x24);
 			PROPERTY(m_flNeutrallyBuoyantAngularDamping,float32, 0x28);
 			PROPERTY(m_bNeutrallyBuoyant,bool, 0x2c);
-			NESTED_PROPERTY(m_vecFractionOfWheelSubmergedForWheelFriction,GlobalTypes::CUtlVector< float32 >, 0x30);
-			NESTED_PROPERTY(m_vecWheelFrictionScales,GlobalTypes::CUtlVector< float32 >, 0x48);
-			NESTED_PROPERTY(m_vecFractionOfWheelSubmergedForWheelDrag,GlobalTypes::CUtlVector< float32 >, 0x60);
-			NESTED_PROPERTY(m_vecWheelDrag,GlobalTypes::CUtlVector< float32 >, 0x78);
+			NESTED_PROPERTY(m_vecFractionOfWheelSubmergedForWheelFriction,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x30);
+			NESTED_PROPERTY(m_vecWheelFrictionScales,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x48);
+			NESTED_PROPERTY(m_vecFractionOfWheelSubmergedForWheelDrag,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x60);
+			NESTED_PROPERTY(m_vecWheelDrag,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x78);
 			S2_PAD(0x118);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBuoyancyHelper) == 0x118, "CBuoyancyHelper size should be 0x118");
+
+#endif
 	}
 }

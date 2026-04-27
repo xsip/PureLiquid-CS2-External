@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapNamedModelBodyPartToScalar : public CS2::particles::C_INIT_RemapNamedModelElementToScalar {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RemapNamedModelBodyPartToScalar) == 0x220, "C_INIT_RemapNamedModelBodyPartToScalar size should be 0x220");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RemapNamedModelBodyPartToScalar) == 0x228, "C_INIT_RemapNamedModelBodyPartToScalar size should be 0x228");
+
+#endif
 	}
 }

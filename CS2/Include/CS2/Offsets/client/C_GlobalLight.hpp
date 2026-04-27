@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xB00
+			// Class size: 0xAF0
 			namespace C_GlobalLight /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_WindClothForceHandle = 0xad0; // uint16_t m_WindClothForceHandle; |  0xad0 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_WindClothForceHandle = 0xac0; // uint16_t m_WindClothForceHandle; |  0xac0 | Schema_Builtin | Size: 0x2
 			}
 		}
 	}

@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_bMatchTargetOrientation,bool, 0xd);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FollowTargetOpFixedSettings_t) == 0x10, "FollowTargetOpFixedSettings_t size should be 0x10");
+
+#endif
 	}
 }

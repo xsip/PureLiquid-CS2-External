@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace client {
 		class C_WeaponTaser : public CS2::client::C_CSWeaponBaseGun {
 		public:
-			NESTED_PROPERTY(m_fFireTime,entity2::GameTime_t, 0x1f70);
-			PROPERTY(m_nLastAttackTick,int32_t, 0x1f74);
+			NESTED_PROPERTY(m_fFireTime,IDENTITY(entity2::GameTime_t), 0x1ce0);
+			PROPERTY(m_nLastAttackTick,int32_t, 0x1ce4);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::client::C_WeaponTaser) == 0x1F80, "C_WeaponTaser size should be 0x1F80");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_WeaponTaser) == 0x1CF0, "C_WeaponTaser size should be 0x1CF0");
+
+#endif
 	}
 }

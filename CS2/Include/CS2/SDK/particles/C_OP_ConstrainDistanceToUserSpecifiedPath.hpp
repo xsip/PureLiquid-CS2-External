@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ConstrainDistanceToUserSpecifiedPath : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			PROPERTY(m_fMinDistance,float32, 0x1d0);
-			PROPERTY(m_flMaxDistance,float32, 0x1d4);
-			PROPERTY(m_flTimeScale,float32, 0x1d8);
-			PROPERTY(m_bLoopedPath,bool, 0x1dc);
-			NESTED_PROPERTY(m_pointList,GlobalTypes::CUtlVector<particles::PointDefinitionWithTimeValues_t>, 0x1e0);
+			PROPERTY(m_fMinDistance,float32, 0x1d8);
+			PROPERTY(m_flMaxDistance,float32, 0x1dc);
+			PROPERTY(m_flTimeScale,float32, 0x1e0);
+			PROPERTY(m_bLoopedPath,bool, 0x1e4);
+			NESTED_PROPERTY(m_pointList,IDENTITY(GlobalTypes::CUtlVector<particles::PointDefinitionWithTimeValues_t>), 0x1e8);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ConstrainDistanceToUserSpecifiedPath) == 0x1F8, "C_OP_ConstrainDistanceToUserSpecifiedPath size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ConstrainDistanceToUserSpecifiedPath) == 0x200, "C_OP_ConstrainDistanceToUserSpecifiedPath size should be 0x200");
+
+#endif
 	}
 }

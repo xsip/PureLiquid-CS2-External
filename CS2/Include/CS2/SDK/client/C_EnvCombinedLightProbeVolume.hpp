@@ -26,37 +26,40 @@ namespace CS2 {
 	namespace client {
 		class C_EnvCombinedLightProbeVolume : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_Entity_Color,GlobalTypes::Color, 0x1680);
-			PROPERTY(m_Entity_flBrightness,float32, 0x1684);
-			PROPERTY(m_Entity_hCubemapTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1688);
-			PROPERTY(m_Entity_bCustomCubemapTexture,bool, 0x1690);
-			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1698);
-			PROPERTY(m_Entity_hLightProbeTexture_SDF,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16a0);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16a8);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16b0);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16b8);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16c0);
-			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16c8);
-			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16d0);
-			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x16d8);
-			PROPERTY(m_Entity_vBoxMins,GlobalTypes::Vector, 0x16e0);
-			PROPERTY(m_Entity_vBoxMaxs,GlobalTypes::Vector, 0x16ec);
-			PROPERTY(m_Entity_bMoveable,bool, 0x16f8);
-			PROPERTY(m_Entity_nHandshake,int32_t, 0x16fc);
-			PROPERTY(m_Entity_nEnvCubeMapArrayIndex,int32_t, 0x1700);
-			PROPERTY(m_Entity_nPriority,int32_t, 0x1704);
-			PROPERTY(m_Entity_bStartDisabled,bool, 0x1708);
-			PROPERTY(m_Entity_flEdgeFadeDist,float32, 0x170c);
-			PROPERTY(m_Entity_vEdgeFadeDists,GlobalTypes::Vector, 0x1710);
-			PROPERTY(m_Entity_nLightProbeSizeX,int32_t, 0x171c);
-			PROPERTY(m_Entity_nLightProbeSizeY,int32_t, 0x1720);
-			PROPERTY(m_Entity_nLightProbeSizeZ,int32_t, 0x1724);
-			PROPERTY(m_Entity_nLightProbeAtlasX,int32_t, 0x1728);
-			PROPERTY(m_Entity_nLightProbeAtlasY,int32_t, 0x172c);
-			PROPERTY(m_Entity_nLightProbeAtlasZ,int32_t, 0x1730);
-			PROPERTY(m_Entity_bEnabled,bool, 0x1749);
+			PROPERTY(m_Entity_Color,GlobalTypes::Color, 0x1678);
+			PROPERTY(m_Entity_flBrightness,float32, 0x167c);
+			PROPERTY(m_Entity_hCubemapTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1680);
+			PROPERTY(m_Entity_bCustomCubemapTexture,bool, 0x1688);
+			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1690);
+			PROPERTY(m_Entity_hLightProbeTexture_SDF,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1698);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16a0);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16a8);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16b0);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16b8);
+			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16c0);
+			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16c8);
+			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x16d0);
+			PROPERTY(m_Entity_vBoxMins,GlobalTypes::Vector, 0x16d8);
+			PROPERTY(m_Entity_vBoxMaxs,GlobalTypes::Vector, 0x16e4);
+			PROPERTY(m_Entity_bMoveable,bool, 0x16f0);
+			PROPERTY(m_Entity_nHandshake,int32_t, 0x16f4);
+			PROPERTY(m_Entity_nEnvCubeMapArrayIndex,int32_t, 0x16f8);
+			PROPERTY(m_Entity_nPriority,int32_t, 0x16fc);
+			PROPERTY(m_Entity_bStartDisabled,bool, 0x1700);
+			PROPERTY(m_Entity_flEdgeFadeDist,float32, 0x1704);
+			PROPERTY(m_Entity_vEdgeFadeDists,GlobalTypes::Vector, 0x1708);
+			PROPERTY(m_Entity_nLightProbeSizeX,int32_t, 0x1714);
+			PROPERTY(m_Entity_nLightProbeSizeY,int32_t, 0x1718);
+			PROPERTY(m_Entity_nLightProbeSizeZ,int32_t, 0x171c);
+			PROPERTY(m_Entity_nLightProbeAtlasX,int32_t, 0x1720);
+			PROPERTY(m_Entity_nLightProbeAtlasY,int32_t, 0x1724);
+			PROPERTY(m_Entity_nLightProbeAtlasZ,int32_t, 0x1728);
+			PROPERTY(m_Entity_bEnabled,bool, 0x1741);
 			S2_PAD(0x1148);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvCombinedLightProbeVolume) == 0x1750, "C_EnvCombinedLightProbeVolume size should be 0x1750");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvCombinedLightProbeVolume) == 0x1748, "C_EnvCombinedLightProbeVolume size should be 0x1748");
+
+#endif
 	}
 }

@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x620
+			// Class size: 0x618
 			namespace C_TonemapController2 /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_flAutoExposureMin = 0x608; // float32 m_flAutoExposureMin; |  0x608 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAutoExposureMax = 0x60c; // float32 m_flAutoExposureMax; |  0x60c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flExposureAdaptationSpeedUp = 0x610; // float32 m_flExposureAdaptationSpeedUp; |  0x610 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flExposureAdaptationSpeedDown = 0x614; // float32 m_flExposureAdaptationSpeedDown; |  0x614 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTonemapEVSmoothingRange = 0x618; // float32 m_flTonemapEVSmoothingRange; |  0x618 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAutoExposureMin = 0x600; // float32 m_flAutoExposureMin; |  0x600 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAutoExposureMax = 0x604; // float32 m_flAutoExposureMax; |  0x604 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flExposureAdaptationSpeedUp = 0x608; // float32 m_flExposureAdaptationSpeedUp; |  0x608 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flExposureAdaptationSpeedDown = 0x60c; // float32 m_flExposureAdaptationSpeedDown; |  0x60c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTonemapEVSmoothingRange = 0x610; // float32 m_flTonemapEVSmoothingRange; |  0x610 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

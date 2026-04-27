@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSubtractUpdateNode : public CS2::animgraphlib::CBinaryUpdateNode {
 		public:
-			PROPERTY(m_footMotionTiming,animgraphlib::BinaryNodeChildOption, 0x94);
+			PROPERTY(m_footMotionTiming,IDENTITY(animgraphlib::BinaryNodeChildOption), 0x94);
 			PROPERTY(m_bApplyToFootMotion,bool, 0x98);
 			PROPERTY(m_bApplyChannelsSeparately,bool, 0x99);
 			PROPERTY(m_bUseModelSpace,bool, 0x9a);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSubtractUpdateNode) == 0xA0, "CSubtractUpdateNode size should be 0xA0");
+
+#endif
 	}
 }

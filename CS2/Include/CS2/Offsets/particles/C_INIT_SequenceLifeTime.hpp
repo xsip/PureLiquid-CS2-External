@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E0
+			// Class size: 0x1E8
 			namespace C_INIT_SequenceLifeTime /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_flFramerate = 0x1d8; // float32 m_flFramerate; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFramerate = 0x1e0; // float32 m_flFramerate; |  0x1e0 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

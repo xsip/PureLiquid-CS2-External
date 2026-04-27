@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_ScaleVelocity : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x1d8);
+			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
 			S2_PAD(0x6B8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_ScaleVelocity) == 0x890, "C_INIT_ScaleVelocity size should be 0x890");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_ScaleVelocity) == 0x898, "C_INIT_ScaleVelocity size should be 0x898");
+
+#endif
 	}
 }

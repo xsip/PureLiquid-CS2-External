@@ -21,16 +21,19 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_AgeNoise : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_bAbsVal,bool, 0x1d8);
-			PROPERTY(m_bAbsValInv,bool, 0x1d9);
-			PROPERTY(m_flOffset,float32, 0x1dc);
-			PROPERTY(m_flAgeMin,float32, 0x1e0);
-			PROPERTY(m_flAgeMax,float32, 0x1e4);
-			PROPERTY(m_flNoiseScale,float32, 0x1e8);
-			PROPERTY(m_flNoiseScaleLoc,float32, 0x1ec);
-			PROPERTY(m_vecOffsetLoc,GlobalTypes::Vector, 0x1f0);
+			PROPERTY(m_bAbsVal,bool, 0x1e0);
+			PROPERTY(m_bAbsValInv,bool, 0x1e1);
+			PROPERTY(m_flOffset,float32, 0x1e4);
+			PROPERTY(m_flAgeMin,float32, 0x1e8);
+			PROPERTY(m_flAgeMax,float32, 0x1ec);
+			PROPERTY(m_flNoiseScale,float32, 0x1f0);
+			PROPERTY(m_flNoiseScaleLoc,float32, 0x1f4);
+			PROPERTY(m_vecOffsetLoc,GlobalTypes::Vector, 0x1f8);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_AgeNoise) == 0x200, "C_INIT_AgeNoise size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_AgeNoise) == 0x208, "C_INIT_AgeNoise size should be 0x208");
+
+#endif
 	}
 }

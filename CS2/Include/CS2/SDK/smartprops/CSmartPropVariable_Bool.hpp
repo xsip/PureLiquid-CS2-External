@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_DefaultValue,bool, 0x38);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_Bool) == 0x40, "CSmartPropVariable_Bool size should be 0x40");
+
+#endif
 	}
 }

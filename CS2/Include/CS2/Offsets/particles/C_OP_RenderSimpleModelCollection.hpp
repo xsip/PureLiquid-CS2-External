@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x590
+			// Class size: 0x598
 			namespace C_OP_RenderSimpleModelCollection /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_bCenterOffset = 0x220; // bool m_bCenterOffset; |  0x220 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hModel = 0x228; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_modelInput = 0x230; // particleslib::CParticleModelInput  | Schema_DeclaredClass | Size: 0x60
-				constexpr std::ptrdiff_t m_fSizeCullScale = 0x290; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bDisableShadows = 0x400; // bool m_bDisableShadows; |  0x400 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisableMotionBlur = 0x401; // bool m_bDisableMotionBlur; |  0x401 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAcceptsDecals = 0x402; // bool m_bAcceptsDecals; |  0x402 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fDrawFilter = 0x408; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nAngularVelocityField = 0x578; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bCenterOffset = 0x228; // bool m_bCenterOffset; |  0x228 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hModel = 0x230; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_modelInput = 0x238; // particleslib::CParticleModelInput  | Schema_DeclaredClass | Size: 0x60
+				constexpr std::ptrdiff_t m_fSizeCullScale = 0x298; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bDisableShadows = 0x408; // bool m_bDisableShadows; |  0x408 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisableMotionBlur = 0x409; // bool m_bDisableMotionBlur; |  0x409 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAcceptsDecals = 0x40a; // bool m_bAcceptsDecals; |  0x40a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fDrawFilter = 0x410; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nAngularVelocityField = 0x580; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

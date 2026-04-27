@@ -11,7 +11,7 @@
 
 
 #include <SDK/particles/C_OP_RenderPoints.hpp>
-#include <SDK/particles/AnimationType_t.hpp>
+#include <SDK/particleslib/AnimationType_t.hpp>
 
 
 
@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderLights : public CS2::particles::C_OP_RenderPoints {
 		public:
-			PROPERTY(m_flAnimationRate,float32, 0x228);
-			PROPERTY(m_nAnimationType,particles::AnimationType_t, 0x22c);
-			PROPERTY(m_bAnimateInFPS,bool, 0x230);
-			PROPERTY(m_flMinSize,float32, 0x234);
-			PROPERTY(m_flMaxSize,float32, 0x238);
-			PROPERTY(m_flStartFadeSize,float32, 0x23c);
-			PROPERTY(m_flEndFadeSize,float32, 0x240);
+			PROPERTY(m_flAnimationRate,float32, 0x230);
+			PROPERTY(m_nAnimationType,IDENTITY(particleslib::AnimationType_t), 0x234);
+			PROPERTY(m_bAnimateInFPS,bool, 0x238);
+			PROPERTY(m_flMinSize,float32, 0x23c);
+			PROPERTY(m_flMaxSize,float32, 0x240);
+			PROPERTY(m_flStartFadeSize,float32, 0x244);
+			PROPERTY(m_flEndFadeSize,float32, 0x248);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderLights) == 0x248, "C_OP_RenderLights size should be 0x248");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderLights) == 0x250, "C_OP_RenderLights size should be 0x250");
+
+#endif
 	}
 }

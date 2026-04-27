@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_srgbWriteEnableBits,uint8_t, 0x1d);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::rendersystemdx11::RsBlendStateDesc_t) == 0x20, "RsBlendStateDesc_t size should be 0x20");
+
+#endif
 	}
 }

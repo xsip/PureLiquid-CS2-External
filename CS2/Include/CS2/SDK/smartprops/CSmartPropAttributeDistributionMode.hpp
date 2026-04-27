@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropAttributeDistributionMode) == 0x40, "CSmartPropAttributeDistributionMode size should be 0x40");
+
+#endif
 	}
 }

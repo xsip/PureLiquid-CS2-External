@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_PointClientUIWorldTextPanel : public CS2::client::C_PointClientUIWorldPanel {
 		public:
-			PROPERTY_ARRAY(m_messageText,char, 512 , 0x10e0);
+			PROPERTY_ARRAY(m_messageText,char, 512 , 0x1200);
 			S2_PAD(0x200);
 		};
-		//static_assert(sizeof(CS2::client::C_PointClientUIWorldTextPanel) == 0x12E0, "C_PointClientUIWorldTextPanel size should be 0x12E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PointClientUIWorldTextPanel) == 0x1400, "C_PointClientUIWorldTextPanel size should be 0x1400");
+
+#endif
 	}
 }

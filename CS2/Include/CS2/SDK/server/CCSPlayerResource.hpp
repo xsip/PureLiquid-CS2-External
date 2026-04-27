@@ -33,6 +33,9 @@ namespace CS2 {
 			PROPERTY(m_foundGoalPositions,bool, 0x539);
 			S2_PAD(0x98);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerResource) == 0x540, "CCSPlayerResource size should be 0x540");
+
+#endif
 	}
 }

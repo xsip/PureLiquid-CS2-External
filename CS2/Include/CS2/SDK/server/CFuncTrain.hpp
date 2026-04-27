@@ -27,14 +27,17 @@ namespace CS2 {
 	namespace server {
 		class CFuncTrain : public CS2::server::CBasePlatTrain {
 		public:
-			PROPERTY(m_hCurrentTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x7d8);
-			PROPERTY(m_activated,bool, 0x7dc);
-			PROPERTY(m_hEnemy,GlobalTypes::CHandle<server::CBaseEntity>, 0x7e0);
-			PROPERTY(m_flBlockDamage,float32, 0x7e4);
-			NESTED_PROPERTY(m_flNextBlockTime,entity2::GameTime_t, 0x7e8);
-			PROPERTY(m_iszLastTarget,GlobalTypes::CUtlSymbolLarge*, 0x7f0);
+			PROPERTY(m_hCurrentTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x810);
+			PROPERTY(m_activated,bool, 0x814);
+			PROPERTY(m_hEnemy,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x818);
+			PROPERTY(m_flBlockDamage,float32, 0x81c);
+			NESTED_PROPERTY(m_flNextBlockTime,IDENTITY(entity2::GameTime_t), 0x820);
+			PROPERTY(m_iszLastTarget,GlobalTypes::CUtlSymbolLarge*, 0x828);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::server::CFuncTrain) == 0x7F8, "CFuncTrain size should be 0x7F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncTrain) == 0x830, "CFuncTrain size should be 0x830");
+
+#endif
 	}
 }

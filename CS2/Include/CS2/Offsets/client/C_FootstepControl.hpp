@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xF68
+			// Class size: 0x1088
 			namespace C_FootstepControl /*: public CS2::client::C_BaseTrigger*/ {
-				constexpr std::ptrdiff_t m_source = 0xf58; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_destination = 0xf60; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_source = 0x1078; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_destination = 0x1080; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

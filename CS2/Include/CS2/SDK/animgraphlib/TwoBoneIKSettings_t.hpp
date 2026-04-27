@@ -24,13 +24,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class TwoBoneIKSettings_t  {
 		public:
-			PROPERTY(m_endEffectorType,animgraphlib::IkEndEffectorType, 0x0);
-			NESTED_PROPERTY(m_endEffectorAttachment,modellib::CAnimAttachment, 0x10);
-			PROPERTY(m_targetType,animgraphlib::IkTargetType, 0x90);
-			NESTED_PROPERTY(m_targetAttachment,modellib::CAnimAttachment, 0xa0);
+			PROPERTY(m_endEffectorType,IDENTITY(animgraphlib::IkEndEffectorType), 0x0);
+			NESTED_PROPERTY(m_endEffectorAttachment,IDENTITY(modellib::CAnimAttachment), 0x10);
+			PROPERTY(m_targetType,IDENTITY(animgraphlib::IkTargetType), 0x90);
+			NESTED_PROPERTY(m_targetAttachment,IDENTITY(modellib::CAnimAttachment), 0xa0);
 			PROPERTY(m_targetBoneIndex,int32_t, 0x120);
-			NESTED_PROPERTY(m_hPositionParam,animgraphlib::CAnimParamHandle, 0x124);
-			NESTED_PROPERTY(m_hRotationParam,animgraphlib::CAnimParamHandle, 0x126);
+			NESTED_PROPERTY(m_hPositionParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x124);
+			NESTED_PROPERTY(m_hRotationParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x126);
 			PROPERTY(m_bAlwaysUseFallbackHinge,bool, 0x128);
 			PROPERTY(m_vLsFallbackHingeAxis,GlobalTypes::VectorAligned, 0x130);
 			PROPERTY(m_nFixedBoneIndex,int32_t, 0x140);
@@ -41,6 +41,9 @@ namespace CS2 {
 			PROPERTY(m_flMaxTwist,float32, 0x150);
 			S2_PAD(0x160);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::TwoBoneIKSettings_t) == 0x160, "TwoBoneIKSettings_t size should be 0x160");
+
+#endif
 	}
 }

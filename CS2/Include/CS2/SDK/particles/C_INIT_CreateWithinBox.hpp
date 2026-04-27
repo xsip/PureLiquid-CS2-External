@@ -23,14 +23,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateWithinBox : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_vecMin,particleslib::CPerParticleVecInput, 0x1d8);
-			NESTED_PROPERTY(m_vecMax,particleslib::CPerParticleVecInput, 0x890);
-			PROPERTY(m_nControlPointNumber,int32_t, 0xf48);
-			PROPERTY(m_bLocalSpace,bool, 0xf4c);
-			NESTED_PROPERTY(m_randomnessParameters,particles::CRandomNumberGeneratorParameters, 0xf50);
-			PROPERTY(m_bUseNewCode,bool, 0xf58);
+			NESTED_PROPERTY(m_vecMin,IDENTITY(particleslib::CPerParticleVecInput), 0x1e0);
+			NESTED_PROPERTY(m_vecMax,IDENTITY(particleslib::CPerParticleVecInput), 0x898);
+			PROPERTY(m_nControlPointNumber,int32_t, 0xf50);
+			PROPERTY(m_bLocalSpace,bool, 0xf54);
+			NESTED_PROPERTY(m_randomnessParameters,IDENTITY(particles::CRandomNumberGeneratorParameters), 0xf58);
+			PROPERTY(m_bUseNewCode,bool, 0xf60);
 			S2_PAD(0xD88);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateWithinBox) == 0xF60, "C_INIT_CreateWithinBox size should be 0xF60");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateWithinBox) == 0xF68, "C_INIT_CreateWithinBox size should be 0xF68");
+
+#endif
 	}
 }

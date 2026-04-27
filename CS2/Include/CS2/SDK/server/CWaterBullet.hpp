@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CWaterBullet : public CS2::server::CBaseAnimGraph {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CWaterBullet) == 0xA20, "CWaterBullet size should be 0xA20");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CWaterBullet) == 0x940, "CWaterBullet size should be 0x940");
+
+#endif
 	}
 }

@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace modellib {
 			// Class size: 0x88
 			namespace CBoneConstraintPoseSpaceBone /*: public CS2::modellib::CBaseConstraint*/ {
-				constexpr std::ptrdiff_t m_inputList = 0x60; // GlobalTypes::CUtlVector<modellib::Input_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_inputList = 0x60; // GlobalTypes::CUtlVector<modellib::CBoneConstraintPoseSpaceBone_Input_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

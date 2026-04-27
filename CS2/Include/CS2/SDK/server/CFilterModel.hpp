@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_iFilterModel,GlobalTypes::CUtlSymbolLarge*, 0x4e0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFilterModel) == 0x4E8, "CFilterModel size should be 0x4E8");
+
+#endif
 	}
 }

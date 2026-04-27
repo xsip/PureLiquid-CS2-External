@@ -25,17 +25,20 @@ namespace CS2 {
 		public:
 			PROPERTY(m_vMin,GlobalTypes::Vector, 0x0);
 			PROPERTY(m_vMax,GlobalTypes::Vector, 0xc);
-			NESTED_PROPERTY(m_Nodes,GlobalTypes::CUtlVector<physicslib::RnNode_t>, 0x18);
-			PROPERTY(m_Vertices,GlobalTypes::CUtlVectorSIMDPaddedVector, 0x30);
-			NESTED_PROPERTY(m_Triangles,GlobalTypes::CUtlVector<physicslib::RnTriangle_t>, 0x48);
-			NESTED_PROPERTY(m_Wings,GlobalTypes::CUtlVector<physicslib::RnWing_t>, 0x60);
-			NESTED_PROPERTY(m_TriangleEdgeFlags,GlobalTypes::CUtlVector< uint8 >, 0x78);
-			NESTED_PROPERTY(m_Materials,GlobalTypes::CUtlVector< uint8 >, 0x90);
+			NESTED_PROPERTY(m_Nodes,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnNode_t>), 0x18);
+			// PROPERTY(m_Vertices,GlobalTypes::CUtlVectorSIMDPaddedVector, 0x30);
+			NESTED_PROPERTY(m_Triangles,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnTriangle_t>), 0x48);
+			NESTED_PROPERTY(m_Wings,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnWing_t>), 0x60);
+			NESTED_PROPERTY(m_TriangleEdgeFlags,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x78);
+			NESTED_PROPERTY(m_Materials,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x90);
 			PROPERTY(m_vOrthographicAreas,GlobalTypes::Vector, 0xa8);
 			PROPERTY(m_nFlags,uint32_t, 0xb4);
 			PROPERTY(m_nDebugFlags,uint32_t, 0xb8);
 			S2_PAD(0xC0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnMesh_t) == 0xC0, "RnMesh_t size should be 0xC0");
+
+#endif
 	}
 }

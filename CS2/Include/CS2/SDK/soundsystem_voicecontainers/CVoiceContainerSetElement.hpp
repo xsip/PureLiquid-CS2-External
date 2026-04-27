@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerSetElement  {
 		public:
-			NESTED_PROPERTY(m_sound,soundsystem_voicecontainers::CSoundContainerReference, 0x0);
-			PROPERTY(m_flVolumeDB,float32, 0x18);
-			S2_PAD(0x20);
+			NESTED_PROPERTY(m_sound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0x0);
+			PROPERTY(m_flVolumeDB,float32, 0x20);
+			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerSetElement) == 0x20, "CVoiceContainerSetElement size should be 0x20");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerSetElement) == 0x28, "CVoiceContainerSetElement size should be 0x28");
+
+#endif
 	}
 }

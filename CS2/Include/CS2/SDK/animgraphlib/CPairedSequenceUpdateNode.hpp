@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_sPairedSequenceRole,GlobalTypes::CGlobalSymbol, 0x78);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CPairedSequenceUpdateNode) == 0x88, "CPairedSequenceUpdateNode size should be 0x88");
+
+#endif
 	}
 }

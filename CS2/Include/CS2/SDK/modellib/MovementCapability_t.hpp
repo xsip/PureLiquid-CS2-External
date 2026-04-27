@@ -6,14 +6,16 @@
 namespace CS2 {
 	namespace modellib {
 		enum MovementCapability_t : std::uint32_t {
-			MovementCapability_t_eCount = 0x7,
+			MovementCapability_t_eCount = 0x9,
 			MovementCapability_t_eIdleTurn = 0x1,
 			MovementCapability_t_eInstantStop = 0x4,
+			MovementCapability_t_eLean = 0x8,
 			MovementCapability_t_ePlantedTurn = 0x6,
 			MovementCapability_t_eShuffle = 0x5,
 			MovementCapability_t_eStart = 0x2,
 			MovementCapability_t_eStop = 0x3,
-			MovementCapability_t_eStrafe = 0x0
+			MovementCapability_t_eStrafe = 0x0,
+			MovementCapability_t_eUseStartAsPlantedTurn = 0x7
 		};
 	}
 }

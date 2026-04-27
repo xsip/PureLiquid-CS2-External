@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CEditableMotionGraph : public CS2::animgraphlib::CMotionGraph {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CEditableMotionGraph) == 0x58, "CEditableMotionGraph size should be 0x58");
+
+#endif
 	}
 }

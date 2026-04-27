@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropPulse_CriteriaPathPosition : public CS2::pulse_runtime_lib::CPulseCell_BaseRequirement {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropPulse_CriteriaPathPosition) == 0x48, "CSmartPropPulse_CriteriaPathPosition size should be 0x48");
+
+#endif
 	}
 }

@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_nHeight,int32_t, 0x28);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ragdollelement_t) == 0x30, "ragdollelement_t size should be 0x30");
+
+#endif
 	}
 }

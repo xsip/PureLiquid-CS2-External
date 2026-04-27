@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class ParamSpan_t  {
 		public:
-			NESTED_PROPERTY(m_samples,GlobalTypes::CUtlVector<animgraphlib::ParamSpanSample_t>, 0x0);
-			NESTED_PROPERTY(m_hParam,animgraphlib::CAnimParamHandle, 0x18);
-			PROPERTY(m_eParamType,animgraphlib::AnimParamType_t, 0x1a);
+			NESTED_PROPERTY(m_samples,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::ParamSpanSample_t>), 0x0);
+			NESTED_PROPERTY(m_hParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x18);
+			PROPERTY(m_eParamType,IDENTITY(animgraphlib::AnimParamType_t), 0x1a);
 			PROPERTY(m_flStartCycle,float32, 0x1c);
 			PROPERTY(m_flEndCycle,float32, 0x20);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::ParamSpan_t) == 0x28, "ParamSpan_t size should be 0x28");
+
+#endif
 	}
 }

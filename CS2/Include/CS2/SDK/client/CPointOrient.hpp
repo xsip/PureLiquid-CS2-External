@@ -24,15 +24,18 @@ namespace CS2 {
 	namespace client {
 		class CPointOrient : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_iszSpawnTargetName,GlobalTypes::CUtlSymbolLarge*, 0x608);
-			PROPERTY(m_hTarget,GlobalTypes::CHandle<client::C_BaseEntity>, 0x610);
-			PROPERTY(m_bActive,bool, 0x614);
-			PROPERTY(m_nGoalDirection,client::PointOrientGoalDirectionType_t, 0x618);
-			PROPERTY(m_nConstraint,client::PointOrientConstraint_t, 0x61c);
-			PROPERTY(m_flMaxTurnRate,float32, 0x620);
-			NESTED_PROPERTY(m_flLastGameTime,entity2::GameTime_t, 0x624);
+			PROPERTY(m_iszSpawnTargetName,GlobalTypes::CUtlSymbolLarge*, 0x600);
+			PROPERTY(m_hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x608);
+			PROPERTY(m_bActive,bool, 0x60c);
+			PROPERTY(m_nGoalDirection,IDENTITY(client::PointOrientGoalDirectionType_t), 0x610);
+			PROPERTY(m_nConstraint,IDENTITY(client::PointOrientConstraint_t), 0x614);
+			PROPERTY(m_flMaxTurnRate,float32, 0x618);
+			NESTED_PROPERTY(m_flLastGameTime,IDENTITY(entity2::GameTime_t), 0x61c);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::client::CPointOrient) == 0x628, "CPointOrient size should be 0x628");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPointOrient) == 0x620, "CPointOrient size should be 0x620");
+
+#endif
 	}
 }

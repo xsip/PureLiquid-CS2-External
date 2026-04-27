@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PlayEndCapWhenFinished : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_bFireOnEmissionEnd,bool, 0x1d8);
-			PROPERTY(m_bIncludeChildren,bool, 0x1d9);
+			PROPERTY(m_bFireOnEmissionEnd,bool, 0x1e0);
+			PROPERTY(m_bIncludeChildren,bool, 0x1e1);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PlayEndCapWhenFinished) == 0x1E0, "C_OP_PlayEndCapWhenFinished size should be 0x1E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PlayEndCapWhenFinished) == 0x1E8, "C_OP_PlayEndCapWhenFinished size should be 0x1E8");
+
+#endif
 	}
 }

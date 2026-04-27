@@ -26,12 +26,15 @@ namespace CS2 {
 	namespace server {
 		class CLogicLineToEntity : public CS2::server::CLogicalEntity {
 		public:
-			PROPERTY(m_Line,GlobalTypes::CEntityOutputTemplate< Vector, Vector >, 0x4a8);
+			// PROPERTY(m_Line,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>), 0x4a8);
 			PROPERTY(m_SourceName,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
-			PROPERTY(m_StartEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4d8);
-			PROPERTY(m_EndEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4dc);
+			PROPERTY(m_StartEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4d8);
+			PROPERTY(m_EndEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4dc);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicLineToEntity) == 0x4E0, "CLogicLineToEntity size should be 0x4E0");
+
+#endif
 	}
 }

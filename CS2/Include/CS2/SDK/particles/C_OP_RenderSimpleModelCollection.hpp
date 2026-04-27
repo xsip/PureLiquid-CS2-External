@@ -30,17 +30,20 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderSimpleModelCollection : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_bCenterOffset,bool, 0x220);
-			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x228);
-			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x230);
-			NESTED_PROPERTY(m_fSizeCullScale,particleslib::CParticleCollectionFloatInput, 0x290);
-			PROPERTY(m_bDisableShadows,bool, 0x400);
-			PROPERTY(m_bDisableMotionBlur,bool, 0x401);
-			PROPERTY(m_bAcceptsDecals,bool, 0x402);
-			NESTED_PROPERTY(m_fDrawFilter,particleslib::CPerParticleFloatInput, 0x408);
-			NESTED_PROPERTY(m_nAngularVelocityField,particles::ParticleAttributeIndex_t, 0x578);
+			PROPERTY(m_bCenterOffset,bool, 0x228);
+			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x230);
+			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x238);
+			NESTED_PROPERTY(m_fSizeCullScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x298);
+			PROPERTY(m_bDisableShadows,bool, 0x408);
+			PROPERTY(m_bDisableMotionBlur,bool, 0x409);
+			PROPERTY(m_bAcceptsDecals,bool, 0x40a);
+			NESTED_PROPERTY(m_fDrawFilter,IDENTITY(particleslib::CPerParticleFloatInput), 0x410);
+			NESTED_PROPERTY(m_nAngularVelocityField,IDENTITY(particles::ParticleAttributeIndex_t), 0x580);
 			S2_PAD(0x370);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderSimpleModelCollection) == 0x590, "C_OP_RenderSimpleModelCollection size should be 0x590");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderSimpleModelCollection) == 0x598, "C_OP_RenderSimpleModelCollection size should be 0x598");
+
+#endif
 	}
 }

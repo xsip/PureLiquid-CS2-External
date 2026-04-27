@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimNodePath  {
 		public:
-			PROPERTY_ARRAY(m_path,modellib::AnimNodeID, 11 , 0x0);
+			PROPERTY_ARRAY(m_path,IDENTITY(modellib::AnimNodeID), 11 , 0x0);
 			PROPERTY(m_nCount,int32_t, 0x2c);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimNodePath) == 0x30, "CAnimNodePath size should be 0x30");
+
+#endif
 	}
 }

@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CDampedValueUpdateItem  {
 		public:
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x0);
-			NESTED_PROPERTY(m_hParamIn,animgraphlib::CAnimParamHandle, 0x20);
-			NESTED_PROPERTY(m_hParamOut,animgraphlib::CAnimParamHandle, 0x22);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x0);
+			NESTED_PROPERTY(m_hParamIn,IDENTITY(animgraphlib::CAnimParamHandle), 0x20);
+			NESTED_PROPERTY(m_hParamOut,IDENTITY(animgraphlib::CAnimParamHandle), 0x22);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CDampedValueUpdateItem) == 0x28, "CDampedValueUpdateItem size should be 0x28");
+
+#endif
 	}
 }

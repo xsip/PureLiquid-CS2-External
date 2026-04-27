@@ -30,9 +30,12 @@ namespace CS2 {
 			PROPERTY(m_iNumYesVotes,int32_t, 0x164);
 			PROPERTY(m_iNumNoVotes,int32_t, 0x168);
 			PROPERTY(m_iNumPotentialVotes,int32_t, 0x16c);
-			PROPERTY(m_pVoteController,server::CVoteController*, 0x170);
+			PROPERTY(m_pVoteController,IDENTITY(server::CVoteController*), 0x170);
 			S2_PAD(0x178);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseIssue) == 0x178, "CBaseIssue size should be 0x178");
+
+#endif
 	}
 }

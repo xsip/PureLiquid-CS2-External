@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CWeaponNOVA : public CS2::server::CCSWeaponBaseShotgun {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CWeaponNOVA) == 0x1130, "CWeaponNOVA size should be 0x1130");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CWeaponNOVA) == 0x1030, "CWeaponNOVA size should be 0x1030");
+
+#endif
 	}
 }

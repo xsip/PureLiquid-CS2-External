@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x13A8
+			// Class size: 0x13A0
 			namespace CCSGO_WingmanIntroCounterTerroristPosition /*: public CS2::client::CCSGO_WingmanIntroCharacterPosition*/ {
 				// NO SCHEMA DATA FOUND!
 			}

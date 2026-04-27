@@ -21,22 +21,25 @@ namespace CS2 {
 	namespace server {
 		class CBaseClientUIEntity : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_bEnabled,bool, 0x730);
-			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0x738);
-			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0x740);
-			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0x748);
-			PROPERTY(m_CustomOutput0,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x750);
-			PROPERTY(m_CustomOutput1,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x770);
-			PROPERTY(m_CustomOutput2,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x790);
-			PROPERTY(m_CustomOutput3,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x7b0);
-			PROPERTY(m_CustomOutput4,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x7d0);
-			PROPERTY(m_CustomOutput5,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x7f0);
-			PROPERTY(m_CustomOutput6,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x810);
-			PROPERTY(m_CustomOutput7,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x830);
-			PROPERTY(m_CustomOutput8,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x850);
-			PROPERTY(m_CustomOutput9,GlobalTypes::CEntityOutputTemplate< CUtlString, char* >*, 0x870);
+			PROPERTY(m_bEnabled,bool, 0x768);
+			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0x770);
+			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0x778);
+			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0x780);
+			// PROPERTY(m_CustomOutput0,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x788);
+			// PROPERTY(m_CustomOutput1,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x7a8);
+			// PROPERTY(m_CustomOutput2,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x7c8);
+			// PROPERTY(m_CustomOutput3,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x7e8);
+			// PROPERTY(m_CustomOutput4,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x808);
+			// PROPERTY(m_CustomOutput5,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x828);
+			// PROPERTY(m_CustomOutput6,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x848);
+			// PROPERTY(m_CustomOutput7,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x868);
+			// PROPERTY(m_CustomOutput8,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x888);
+			// PROPERTY(m_CustomOutput9,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x8a8);
 			S2_PAD(0x160);
 		};
-		//static_assert(sizeof(CS2::server::CBaseClientUIEntity) == 0x890, "CBaseClientUIEntity size should be 0x890");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBaseClientUIEntity) == 0x8C8, "CBaseClientUIEntity size should be 0x8C8");
+
+#endif
 	}
 }

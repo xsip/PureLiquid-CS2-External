@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_bBonesOrientedAlongPositiveX,bool, 0xa);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqIKLock) == 0xC, "CSeqIKLock size should be 0xC");
+
+#endif
 	}
 }

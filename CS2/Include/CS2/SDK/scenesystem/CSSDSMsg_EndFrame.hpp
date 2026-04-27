@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace scenesystem {
 		class CSSDSMsg_EndFrame  {
 		public:
-			NESTED_PROPERTY(m_Views,GlobalTypes::CUtlVector<scenesystem::CSSDSEndFrameViewInfo>, 0x0);
+			NESTED_PROPERTY(m_Views,IDENTITY(GlobalTypes::CUtlVector<scenesystem::CSSDSEndFrameViewInfo>), 0x0);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::scenesystem::CSSDSMsg_EndFrame) == 0x18, "CSSDSMsg_EndFrame size should be 0x18");
+
+#endif
 	}
 }

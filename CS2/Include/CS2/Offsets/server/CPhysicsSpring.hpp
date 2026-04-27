@@ -10,6 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x4F0
 			namespace CPhysicsSpring /*: public CS2::server::CBaseEntity*/ {
+				constexpr std::ptrdiff_t m_pSpringJoint = 0x4a8; // vphysics2::IPhysicsJoint**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_flFrequency = 0x4b0; // float32 m_flFrequency; |  0x4b0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flDampingRatio = 0x4b4; // float32 m_flDampingRatio; |  0x4b4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flRestLength = 0x4b8; // float32 m_flRestLength; |  0x4b8 | Schema_Builtin | Size: 0x4

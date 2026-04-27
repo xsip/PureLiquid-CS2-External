@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionInitializer.hpp>
 #include <SDK/particleslib/CPerParticleVecInput.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,13 +24,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitVec : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_InputValue,particleslib::CPerParticleVecInput, 0x1d8);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x890);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x894);
-			PROPERTY(m_bNormalizedOutput,bool, 0x898);
-			PROPERTY(m_bWritePreviousPosition,bool, 0x899);
+			NESTED_PROPERTY(m_InputValue,IDENTITY(particleslib::CPerParticleVecInput), 0x1e0);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x898);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x89c);
+			PROPERTY(m_bNormalizedOutput,bool, 0x8a0);
+			PROPERTY(m_bWritePreviousPosition,bool, 0x8a1);
 			S2_PAD(0x6C8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitVec) == 0x8A0, "C_INIT_InitVec size should be 0x8A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitVec) == 0x8A8, "C_INIT_InitVec size should be 0x8A8");
+
+#endif
 	}
 }

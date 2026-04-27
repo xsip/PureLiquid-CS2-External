@@ -30,23 +30,26 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayerPawnBase : public CS2::server::CBasePlayerPawn {
 		public:
-			NESTED_PROPERTY(m_CTouchExpansionComponent,server::CTouchExpansionComponent, 0xd30);
-			PROPERTY(m_pPingServices,server::CCSPlayer_PingServices*, 0xd80);
-			NESTED_PROPERTY(m_blindUntilTime,entity2::GameTime_t, 0xd88);
-			NESTED_PROPERTY(m_blindStartTime,entity2::GameTime_t, 0xd8c);
-			PROPERTY(m_iPlayerState,client::CSPlayerState, 0xd90);
-			PROPERTY(m_bRespawning,bool, 0xe40);
-			PROPERTY(m_bHasMovedSinceSpawn,bool, 0xe41);
-			PROPERTY(m_iNumSpawns,int32_t, 0xe44);
-			PROPERTY(m_flIdleTimeSinceLastAction,float32, 0xe4c);
-			PROPERTY(m_fNextRadarUpdateTime,float32, 0xe50);
-			PROPERTY(m_flFlashDuration,float32, 0xe54);
-			PROPERTY(m_flFlashMaxAlpha,float32, 0xe58);
-			PROPERTY(m_flProgressBarStartTime,float32, 0xe5c);
-			PROPERTY(m_iProgressBarDuration,int32_t, 0xe60);
-			PROPERTY(m_hOriginalController,GlobalTypes::CHandle<server::CCSPlayerController>, 0xe64);
+			NESTED_PROPERTY(m_CTouchExpansionComponent,IDENTITY(server::CTouchExpansionComponent), 0xbc0);
+			PROPERTY(m_pPingServices,IDENTITY(server::CCSPlayer_PingServices*), 0xc10);
+			NESTED_PROPERTY(m_blindUntilTime,IDENTITY(entity2::GameTime_t), 0xc18);
+			NESTED_PROPERTY(m_blindStartTime,IDENTITY(entity2::GameTime_t), 0xc1c);
+			PROPERTY(m_iPlayerState,IDENTITY(client::CSPlayerState), 0xc20);
+			PROPERTY(m_bRespawning,bool, 0xcd0);
+			PROPERTY(m_bHasMovedSinceSpawn,bool, 0xcd1);
+			PROPERTY(m_iNumSpawns,int32_t, 0xcd4);
+			PROPERTY(m_flIdleTimeSinceLastAction,float32, 0xcdc);
+			PROPERTY(m_fNextRadarUpdateTime,float32, 0xce0);
+			PROPERTY(m_flFlashDuration,float32, 0xce4);
+			PROPERTY(m_flFlashMaxAlpha,float32, 0xce8);
+			PROPERTY(m_flProgressBarStartTime,float32, 0xcec);
+			PROPERTY(m_iProgressBarDuration,int32_t, 0xcf0);
+			PROPERTY(m_hOriginalController,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerController>), 0xcf4);
 			S2_PAD(0x150);
 		};
-		//static_assert(sizeof(CS2::server::CCSPlayerPawnBase) == 0xE70, "CCSPlayerPawnBase size should be 0xE70");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CCSPlayerPawnBase) == 0xD00, "CCSPlayerPawnBase size should be 0xD00");
+
+#endif
 	}
 }

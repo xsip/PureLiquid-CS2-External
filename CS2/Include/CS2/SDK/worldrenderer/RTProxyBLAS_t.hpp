@@ -27,12 +27,15 @@ namespace CS2 {
 			PROPERTY(m_nVBByteOffset,uint32_t, 0x8);
 			PROPERTY(m_nBaseVertex,uint32_t, 0xc);
 			PROPERTY(m_nVertexCount,uint16_t, 0x10);
-			PROPERTY(m_albedoFormat,modellib::VertexAlbedoFormat_t, 0x12);
-			NESTED_PROPERTY(m_boundLs,mathlib_extended::AABB_t, 0x14);
+			PROPERTY(m_albedoFormat,IDENTITY(modellib::VertexAlbedoFormat_t), 0x12);
+			NESTED_PROPERTY(m_boundLs,IDENTITY(mathlib_extended::AABB_t), 0x14);
 			PROPERTY(m_vVertexOriginLs,GlobalTypes::Vector, 0x2c);
 			PROPERTY(m_vVertexExtentLs,GlobalTypes::Vector, 0x38);
 			S2_PAD(0x44);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::RTProxyBLAS_t) == 0x44, "RTProxyBLAS_t size should be 0x44");
+
+#endif
 	}
 }

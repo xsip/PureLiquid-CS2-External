@@ -25,14 +25,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionMatchingUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			NESTED_PROPERTY(m_dataSet,animgraphlib::CMotionDataSet, 0x58);
-			NESTED_PROPERTY(m_metrics,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CMotionMetricEvaluator>>, 0x78);
-			NESTED_PROPERTY(m_weights,GlobalTypes::CUtlVector< float32 >, 0x90);
+			NESTED_PROPERTY(m_dataSet,IDENTITY(animgraphlib::CMotionDataSet), 0x58);
+			NESTED_PROPERTY(m_metrics,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CMotionMetricEvaluator>>), 0x78);
+			NESTED_PROPERTY(m_weights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x90);
 			PROPERTY(m_bSearchEveryTick,bool, 0xe0);
 			PROPERTY(m_flSearchInterval,float32, 0xe4);
 			PROPERTY(m_bSearchWhenClipEnds,bool, 0xe8);
 			PROPERTY(m_bSearchWhenGoalChanges,bool, 0xe9);
-			NESTED_PROPERTY(m_blendCurve,animgraphlib::CBlendCurve, 0xec);
+			NESTED_PROPERTY(m_blendCurve,IDENTITY(animgraphlib::CBlendCurve), 0xec);
 			PROPERTY(m_flSampleRate,float32, 0xf4);
 			PROPERTY(m_flBlendTime,float32, 0xf8);
 			PROPERTY(m_bLockClipWhenWaning,bool, 0xfc);
@@ -42,7 +42,7 @@ namespace CS2 {
 			PROPERTY(m_bGoalAssist,bool, 0x109);
 			PROPERTY(m_flGoalAssistDistance,float32, 0x10c);
 			PROPERTY(m_flGoalAssistTolerance,float32, 0x110);
-			NESTED_PROPERTY(m_distanceScale_Damping,animgraphlib::CAnimInputDamping, 0x118);
+			NESTED_PROPERTY(m_distanceScale_Damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x118);
 			PROPERTY(m_flDistanceScale_OuterRadius,float32, 0x130);
 			PROPERTY(m_flDistanceScale_InnerRadius,float32, 0x134);
 			PROPERTY(m_flDistanceScale_MaxScale,float32, 0x138);
@@ -50,6 +50,9 @@ namespace CS2 {
 			PROPERTY(m_bEnableDistanceScaling,bool, 0x140);
 			S2_PAD(0xF0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionMatchingUpdateNode) == 0x148, "CMotionMatchingUpdateNode size should be 0x148");
+
+#endif
 	}
 }

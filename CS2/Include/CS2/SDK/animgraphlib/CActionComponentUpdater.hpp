@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CActionComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_actions,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimActionUpdater>>, 0x30);
+			NESTED_PROPERTY(m_actions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimActionUpdater>>), 0x30);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CActionComponentUpdater) == 0x48, "CActionComponentUpdater size should be 0x48");
+
+#endif
 	}
 }

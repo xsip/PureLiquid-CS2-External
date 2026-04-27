@@ -12,7 +12,7 @@
 
 #include <SDK/particles/CParticleFunctionOperator.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -23,19 +23,22 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapCPtoScalar : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nCPInput,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d4);
-			PROPERTY(m_nField,int32_t, 0x1d8);
-			PROPERTY(m_flInputMin,float32, 0x1dc);
-			PROPERTY(m_flInputMax,float32, 0x1e0);
-			PROPERTY(m_flOutputMin,float32, 0x1e4);
-			PROPERTY(m_flOutputMax,float32, 0x1e8);
-			PROPERTY(m_flStartTime,float32, 0x1ec);
-			PROPERTY(m_flEndTime,float32, 0x1f0);
-			PROPERTY(m_flInterpRate,float32, 0x1f4);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x1f8);
+			PROPERTY(m_nCPInput,int32_t, 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1dc);
+			PROPERTY(m_nField,int32_t, 0x1e0);
+			PROPERTY(m_flInputMin,float32, 0x1e4);
+			PROPERTY(m_flInputMax,float32, 0x1e8);
+			PROPERTY(m_flOutputMin,float32, 0x1ec);
+			PROPERTY(m_flOutputMax,float32, 0x1f0);
+			PROPERTY(m_flStartTime,float32, 0x1f4);
+			PROPERTY(m_flEndTime,float32, 0x1f8);
+			PROPERTY(m_flInterpRate,float32, 0x1fc);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x200);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapCPtoScalar) == 0x200, "C_OP_RemapCPtoScalar size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapCPtoScalar) == 0x208, "C_OP_RemapCPtoScalar size should be 0x208");
+
+#endif
 	}
 }

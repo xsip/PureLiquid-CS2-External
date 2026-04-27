@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CUnaryUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_pChildNode,animgraphlib::CAnimUpdateNodeRef, 0x60);
+			NESTED_PROPERTY(m_pChildNode,IDENTITY(animgraphlib::CAnimUpdateNodeRef), 0x60);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CUnaryUpdateNode) == 0x70, "CUnaryUpdateNode size should be 0x70");
+
+#endif
 	}
 }

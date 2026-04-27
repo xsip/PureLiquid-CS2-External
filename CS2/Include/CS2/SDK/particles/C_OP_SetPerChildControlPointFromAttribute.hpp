@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetPerChildControlPointFromAttribute : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nChildGroupID,int32_t, 0x1d0);
-			PROPERTY(m_nFirstControlPoint,int32_t, 0x1d4);
-			PROPERTY(m_nNumControlPoints,int32_t, 0x1d8);
-			PROPERTY(m_nParticleIncrement,int32_t, 0x1dc);
-			PROPERTY(m_nFirstSourcePoint,int32_t, 0x1e0);
-			PROPERTY(m_bNumBasedOnParticleCount,bool, 0x1e4);
-			NESTED_PROPERTY(m_nAttributeToRead,particles::ParticleAttributeIndex_t, 0x1e8);
-			PROPERTY(m_nCPField,int32_t, 0x1ec);
+			PROPERTY(m_nChildGroupID,int32_t, 0x1d8);
+			PROPERTY(m_nFirstControlPoint,int32_t, 0x1dc);
+			PROPERTY(m_nNumControlPoints,int32_t, 0x1e0);
+			PROPERTY(m_nParticleIncrement,int32_t, 0x1e4);
+			PROPERTY(m_nFirstSourcePoint,int32_t, 0x1e8);
+			PROPERTY(m_bNumBasedOnParticleCount,bool, 0x1ec);
+			NESTED_PROPERTY(m_nAttributeToRead,IDENTITY(particles::ParticleAttributeIndex_t), 0x1f0);
+			PROPERTY(m_nCPField,int32_t, 0x1f4);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetPerChildControlPointFromAttribute) == 0x1F0, "C_OP_SetPerChildControlPointFromAttribute size should be 0x1F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetPerChildControlPointFromAttribute) == 0x1F8, "C_OP_SetPerChildControlPointFromAttribute size should be 0x1F8");
+
+#endif
 	}
 }

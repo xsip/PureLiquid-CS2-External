@@ -10,8 +10,8 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x24
 			namespace SoundeventPathCornerPairNetworked_t /**/ {
-				constexpr std::ptrdiff_t vP1 = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t vP2 = 0xc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t vP1 = 0x0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t vP2 = 0xc; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t flPathLengthSqr = 0x18; // float32 flPathLengthSqr; |  0x18 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t flP1Pct = 0x1c; // float32 flP1Pct; |  0x1c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t flP2Pct = 0x20; // float32 flP2Pct; |  0x20 | Schema_Builtin | Size: 0x4

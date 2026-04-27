@@ -27,14 +27,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CBlendUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_children,GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>, 0x60);
-			NESTED_PROPERTY(m_sortedOrder,GlobalTypes::CUtlVector< uint8 >, 0x78);
-			NESTED_PROPERTY(m_targetValues,GlobalTypes::CUtlVector< float32 >, 0x90);
-			PROPERTY(m_blendValueSource,animgraphlib::AnimValueSource, 0xac);
-			PROPERTY(m_eLinearRootMotionBlendMode,animgraphlib::LinearRootMotionBlendMode_t, 0xb0);
-			NESTED_PROPERTY(m_paramIndex,animgraphlib::CAnimParamHandle, 0xb4);
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0xb8);
-			PROPERTY(m_blendKeyType,animgraphlib::BlendKeyType, 0xd0);
+			NESTED_PROPERTY(m_children,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimUpdateNodeRef>), 0x60);
+			NESTED_PROPERTY(m_sortedOrder,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x78);
+			NESTED_PROPERTY(m_targetValues,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x90);
+			PROPERTY(m_blendValueSource,IDENTITY(animgraphlib::AnimValueSource), 0xac);
+			PROPERTY(m_eLinearRootMotionBlendMode,IDENTITY(animgraphlib::LinearRootMotionBlendMode_t), 0xb0);
+			NESTED_PROPERTY(m_paramIndex,IDENTITY(animgraphlib::CAnimParamHandle), 0xb4);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0xb8);
+			PROPERTY(m_blendKeyType,IDENTITY(animgraphlib::BlendKeyType), 0xd0);
 			PROPERTY(m_bLockBlendOnReset,bool, 0xd4);
 			PROPERTY(m_bSyncCycles,bool, 0xd5);
 			PROPERTY(m_bLoop,bool, 0xd6);
@@ -42,6 +42,9 @@ namespace CS2 {
 			PROPERTY(m_bIsAngle,bool, 0xd8);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBlendUpdateNode) == 0xE0, "CBlendUpdateNode size should be 0xE0");
+
+#endif
 	}
 }

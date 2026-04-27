@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CWeaponCZ75a : public CS2::server::CCSWeaponBaseGun {
 		public:
-			PROPERTY(m_bMagazineRemoved,bool, 0x1150);
+			PROPERTY(m_bMagazineRemoved,bool, 0x1050);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CWeaponCZ75a) == 0x1160, "CWeaponCZ75a size should be 0x1160");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CWeaponCZ75a) == 0x1060, "CWeaponCZ75a size should be 0x1060");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xB70
+			// Class size: 0xAB0
 			namespace CRagdollPropAlias_physics_prop_ragdoll /*: public CS2::server::CRagdollProp*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -11,15 +11,15 @@
 
 
 #include <SDK/client/IChoreoServices.hpp>
-#include <SDK/client/ScriptState_t.hpp>
-#include <SDK/client/ChoreoState_t.hpp>
+#include <SDK/client/IChoreoServices_ScriptState_t.hpp>
+#include <SDK/client/IChoreoServices_ChoreoState_t.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
 
 
 
 namespace CS2 {
 	namespace server {
-		class CBaseAnimGraph;
+		class CBaseModelEntity;
 		class CScriptedSequence;
 	}
 }
@@ -30,13 +30,16 @@ namespace CS2 {
 	namespace server {
 		class CGameChoreoServices : public CS2::client::IChoreoServices {
 		public:
-			PROPERTY(m_hOwner,GlobalTypes::CHandle<server::CBaseAnimGraph>, 0x8);
-			PROPERTY(m_hScriptedSequence,GlobalTypes::CHandle<server::CScriptedSequence>, 0xc);
-			PROPERTY(m_scriptState,client::ScriptState_t, 0x10);
-			PROPERTY(m_choreoState,client::ChoreoState_t, 0x14);
-			NESTED_PROPERTY(m_flTimeStartedState,entity2::GameTime_t, 0x18);
+			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseModelEntity>), 0x8);
+			PROPERTY(m_hScriptedSequence,IDENTITY(GlobalTypes::CHandle<server::CScriptedSequence>), 0xc);
+			PROPERTY(m_scriptState,IDENTITY(client::IChoreoServices_ScriptState_t), 0x10);
+			PROPERTY(m_choreoState,IDENTITY(client::IChoreoServices_ChoreoState_t), 0x14);
+			NESTED_PROPERTY(m_flTimeStartedState,IDENTITY(entity2::GameTime_t), 0x18);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGameChoreoServices) == 0x20, "CGameChoreoServices size should be 0x20");
+
+#endif
 	}
 }

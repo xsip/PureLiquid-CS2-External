@@ -32,6 +32,9 @@ namespace CS2 {
 			PROPERTY(m_keyValueText,GlobalTypes::CUtlString*, 0x50);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::PermModelInfo_t) == 0x58, "PermModelInfo_t size should be 0x58");
+
+#endif
 	}
 }

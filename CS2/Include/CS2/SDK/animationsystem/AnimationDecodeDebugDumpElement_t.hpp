@@ -22,12 +22,15 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nEntityIndex,int32_t, 0x0);
 			PROPERTY(m_modelName,GlobalTypes::CUtlString*, 0x8);
-			PROPERTY(m_poseParams,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x10);
-			PROPERTY(m_decodeOps,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x28);
-			PROPERTY(m_internalOps,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x40);
-			PROPERTY(m_decodedAnims,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x58);
+			PROPERTY(m_poseParams,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x10);
+			PROPERTY(m_decodeOps,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x28);
+			PROPERTY(m_internalOps,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x40);
+			PROPERTY(m_decodedAnims,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x58);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::AnimationDecodeDebugDumpElement_t) == 0x70, "AnimationDecodeDebugDumpElement_t size should be 0x70");
+
+#endif
 	}
 }

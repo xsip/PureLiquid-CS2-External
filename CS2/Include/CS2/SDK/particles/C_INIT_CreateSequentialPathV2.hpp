@@ -24,14 +24,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateSequentialPathV2 : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_fMaxDistance,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_flNumToAssign,particleslib::CParticleCollectionFloatInput, 0x348);
-			PROPERTY(m_bLoop,bool, 0x4b8);
-			PROPERTY(m_bCPPairs,bool, 0x4b9);
-			PROPERTY(m_bSaveOffset,bool, 0x4ba);
-			NESTED_PROPERTY(m_PathParams,particles::CPathParameters, 0x4c0);
-			S2_PAD(0x338);
+			NESTED_PROPERTY(m_fMaxDistance,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flNumToAssign,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
+			PROPERTY(m_bLoop,bool, 0x4c0);
+			PROPERTY(m_bCPPairs,bool, 0x4c1);
+			PROPERTY(m_bSaveOffset,bool, 0x4c2);
+			NESTED_PROPERTY(m_PathParams,IDENTITY(particles::CPathParameters), 0x4d0);
+			S2_PAD(0x340);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateSequentialPathV2) == 0x510, "C_INIT_CreateSequentialPathV2 size should be 0x510");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateSequentialPathV2) == 0x520, "C_INIT_CreateSequentialPathV2 size should be 0x520");
+
+#endif
 	}
 }

@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CEnvWind : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_EnvWindShared,server::CEnvWindShared, 0x4a8);
+			NESTED_PROPERTY(m_EnvWindShared,IDENTITY(server::CEnvWindShared), 0x4a8);
 			S2_PAD(0x130);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvWind) == 0x5D8, "CEnvWind size should be 0x5D8");
+
+#endif
 	}
 }

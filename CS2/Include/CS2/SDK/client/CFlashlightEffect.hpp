@@ -35,11 +35,14 @@ namespace CS2 {
 			PROPERTY(m_flLinearAtten,float32, 0x54);
 			PROPERTY(m_bCastsShadows,bool, 0x58);
 			PROPERTY(m_flCurrentPullBackDist,float32, 0x5c);
-			PROPERTY(m_FlashlightTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x60);
-			PROPERTY(m_MuzzleFlashTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x68);
+			PROPERTY(m_FlashlightTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x60);
+			PROPERTY(m_MuzzleFlashTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x68);
 			PROPERTY_ARRAY(m_textureName,char, 64 , 0x70);
 			S2_PAD(0x2E0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CFlashlightEffect) == 0x2E0, "CFlashlightEffect size should be 0x2E0");
+
+#endif
 	}
 }

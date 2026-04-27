@@ -24,9 +24,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_flRoundStartThresholdSeconds,float32, 0x78);
 			PROPERTY(m_flSensorInactivityThresholdSeconds,float32, 0x7c);
-			NESTED_PROPERTY(m_SensorInactivityTimer,server::CountdownTimer, 0x80);
+			NESTED_PROPERTY(m_SensorInactivityTimer,IDENTITY(server::CountdownTimer), 0x80);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBtNodeConditionInactive) == 0x98, "CBtNodeConditionInactive size should be 0x98");
+
+#endif
 	}
 }

@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_LagCompensation : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nDesiredVelocityCP,int32_t, 0x1d0);
-			PROPERTY(m_nLatencyCP,int32_t, 0x1d4);
-			PROPERTY(m_nLatencyCPField,int32_t, 0x1d8);
-			PROPERTY(m_nDesiredVelocityCPField,int32_t, 0x1dc);
+			PROPERTY(m_nDesiredVelocityCP,int32_t, 0x1d8);
+			PROPERTY(m_nLatencyCP,int32_t, 0x1dc);
+			PROPERTY(m_nLatencyCPField,int32_t, 0x1e0);
+			PROPERTY(m_nDesiredVelocityCPField,int32_t, 0x1e4);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_LagCompensation) == 0x1E0, "C_OP_LagCompensation size should be 0x1E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_LagCompensation) == 0x1E8, "C_OP_LagCompensation size should be 0x1E8");
+
+#endif
 	}
 }

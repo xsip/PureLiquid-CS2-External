@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointOrientation : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_bUseWorldLocation,bool, 0x1d8);
-			PROPERTY(m_bRandomize,bool, 0x1da);
-			PROPERTY(m_bSetOnce,bool, 0x1db);
-			PROPERTY(m_nCP,int32_t, 0x1dc);
-			PROPERTY(m_nHeadLocation,int32_t, 0x1e0);
-			PROPERTY(m_vecRotation,GlobalTypes::QAngle, 0x1e4);
-			PROPERTY(m_vecRotationB,GlobalTypes::QAngle, 0x1f0);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CParticleCollectionFloatInput, 0x200);
+			PROPERTY(m_bUseWorldLocation,bool, 0x1e0);
+			PROPERTY(m_bRandomize,bool, 0x1e2);
+			PROPERTY(m_bSetOnce,bool, 0x1e3);
+			PROPERTY(m_nCP,int32_t, 0x1e4);
+			PROPERTY(m_nHeadLocation,int32_t, 0x1e8);
+			PROPERTY(m_vecRotation,GlobalTypes::QAngle, 0x1ec);
+			PROPERTY(m_vecRotationB,GlobalTypes::QAngle, 0x1f8);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x208);
 			S2_PAD(0x198);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointOrientation) == 0x370, "C_OP_SetControlPointOrientation size should be 0x370");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointOrientation) == 0x378, "C_OP_SetControlPointOrientation size should be 0x378");
+
+#endif
 	}
 }

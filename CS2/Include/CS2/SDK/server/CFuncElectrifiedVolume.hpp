@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace server {
 		class CFuncElectrifiedVolume : public CS2::server::CFuncBrush {
 		public:
-			PROPERTY(m_EffectName,GlobalTypes::CUtlSymbolLarge*, 0x750);
-			PROPERTY(m_EffectInterpenetrateName,GlobalTypes::CUtlSymbolLarge*, 0x758);
-			PROPERTY(m_EffectZapName,GlobalTypes::CUtlSymbolLarge*, 0x760);
-			PROPERTY(m_iszEffectSource,GlobalTypes::CUtlSymbolLarge*, 0x768);
+			PROPERTY(m_EffectName,GlobalTypes::CUtlSymbolLarge*, 0x788);
+			PROPERTY(m_EffectInterpenetrateName,GlobalTypes::CUtlSymbolLarge*, 0x790);
+			PROPERTY(m_EffectZapName,GlobalTypes::CUtlSymbolLarge*, 0x798);
+			PROPERTY(m_iszEffectSource,GlobalTypes::CUtlSymbolLarge*, 0x7a0);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CFuncElectrifiedVolume) == 0x788, "CFuncElectrifiedVolume size should be 0x788");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncElectrifiedVolume) == 0x7C0, "CFuncElectrifiedVolume size should be 0x7C0");
+
+#endif
 	}
 }

@@ -20,15 +20,18 @@ namespace CS2 {
 	namespace modellib {
 		class ModelSkeletonData_t  {
 		public:
-			PROPERTY(m_boneName,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x0);
-			NESTED_PROPERTY(m_nParent,GlobalTypes::CUtlVector< int16 >, 0x18);
-			NESTED_PROPERTY(m_boneSphere,GlobalTypes::CUtlVector< float32 >, 0x30);
-			NESTED_PROPERTY(m_nFlag,GlobalTypes::CUtlVector< uint32 >, 0x48);
-			NESTED_PROPERTY(m_bonePosParent,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x60);
-			NESTED_PROPERTY(m_boneRotParent,GlobalTypes::CUtlVector<GlobalTypes::QuaternionStorage>, 0x78);
-			NESTED_PROPERTY(m_boneScaleParent,GlobalTypes::CUtlVector< float32 >, 0x90);
+			PROPERTY(m_boneName,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x0);
+			NESTED_PROPERTY(m_nParent,IDENTITY(GlobalTypes::CUtlVector< int16 >), 0x18);
+			NESTED_PROPERTY(m_boneSphere,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x30);
+			NESTED_PROPERTY(m_nFlag,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x48);
+			NESTED_PROPERTY(m_bonePosParent,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x60);
+			NESTED_PROPERTY(m_boneRotParent,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::QuaternionStorage>), 0x78);
+			NESTED_PROPERTY(m_boneScaleParent,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x90);
 			S2_PAD(0xA8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::ModelSkeletonData_t) == 0xA8, "ModelSkeletonData_t size should be 0xA8");
+
+#endif
 	}
 }

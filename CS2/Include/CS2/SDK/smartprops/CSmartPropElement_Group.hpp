@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropElement_Group : public CS2::smartprops::CSmartPropElement {
 		public:
-			NESTED_PROPERTY(m_Children,GlobalTypes::CUtlVector<smartprops::CSmartPropElement*>, 0x88);
+			NESTED_PROPERTY(m_Children,IDENTITY(GlobalTypes::CUtlVector<smartprops::CSmartPropElement*>), 0x88);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_Group) == 0xA0, "CSmartPropElement_Group size should be 0xA0");
+
+#endif
 	}
 }

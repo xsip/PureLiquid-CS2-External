@@ -10,16 +10,14 @@
 #endif
 
 
-#include <SDK/animlib/ReferencedGraphSlot_t.hpp>
-#include <SDK/animlib/ExternalGraphSlot_t.hpp>
-#include <SDK/animlib/ExternalPoseSlot_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeCNmSkeleton.hpp>
+#include <SDK/animlib/CNmGraphDefinition_ReferencedGraphSlot_t.hpp>
+#include <SDK/animlib/CNmGraphDefinition_ExternalGraphSlot_t.hpp>
+#include <SDK/animlib/CNmGraphDefinition_ExternalPoseSlot_t.hpp>
 
 
 
 namespace CS2 {
-	namespace resourcesystem {
-		class InfoForResourceTypeCNmSkeleton;
-	}
 	namespace animlib {
 		class CNmGraphVariationUserData;
 	}
@@ -32,20 +30,24 @@ namespace CS2 {
 		class CNmGraphDefinition  {
 		public:
 			PROPERTY(m_variationID,GlobalTypes::CGlobalSymbol, 0x0);
-			PROPERTY(m_skeleton,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>, 0x8);
-			PROPERTY(m_pUserData,animlib::CNmGraphVariationUserData*, 0x10);
-			NESTED_PROPERTY(m_persistentNodeIndices,GlobalTypes::CUtlVector< int16 >, 0x18);
-			PROPERTY(m_nRootNodeIdx,int16_t, 0x30);
-			NESTED_PROPERTY(m_controlParameterIDs,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x38);
-			NESTED_PROPERTY(m_virtualParameterIDs,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x50);
-			NESTED_PROPERTY(m_virtualParameterNodeIndices,GlobalTypes::CUtlVector< int16 >, 0x68);
-			NESTED_PROPERTY(m_referencedGraphSlots,GlobalTypes::CUtlVector<animlib::ReferencedGraphSlot_t>, 0x80);
-			NESTED_PROPERTY(m_externalGraphSlots,GlobalTypes::CUtlVector<animlib::ExternalGraphSlot_t>, 0x98);
-			NESTED_PROPERTY(m_externalPoseSlots,GlobalTypes::CUtlVector<animlib::ExternalPoseSlot_t>, 0xb0);
-			PROPERTY(m_nodePaths,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x138);
-			NESTED_PROPERTY(m_resources,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>, 0x150);
-			S2_PAD(0x1A0);
+			PROPERTY(m_skeleton,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>), 0x8);
+			NESTED_PROPERTY(m_supportedSecondarySkeletons,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>>), 0x10);
+			PROPERTY(m_pUserData,IDENTITY(animlib::CNmGraphVariationUserData*), 0x28);
+			NESTED_PROPERTY(m_persistentNodeIndices,IDENTITY(GlobalTypes::CUtlVector< int16 >), 0x30);
+			PROPERTY(m_nRootNodeIdx,int16_t, 0x48);
+			NESTED_PROPERTY(m_controlParameterIDs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x50);
+			NESTED_PROPERTY(m_virtualParameterIDs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x68);
+			NESTED_PROPERTY(m_virtualParameterNodeIndices,IDENTITY(GlobalTypes::CUtlVector< int16 >), 0x80);
+			NESTED_PROPERTY(m_referencedGraphSlots,IDENTITY(GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ReferencedGraphSlot_t>), 0x98);
+			NESTED_PROPERTY(m_externalGraphSlots,IDENTITY(GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ExternalGraphSlot_t>), 0xb0);
+			NESTED_PROPERTY(m_externalPoseSlots,IDENTITY(GlobalTypes::CUtlVector<animlib::CNmGraphDefinition_ExternalPoseSlot_t>), 0xc8);
+			PROPERTY(m_nodePaths,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x150);
+			NESTED_PROPERTY(m_resources,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleVoid>), 0x168);
+			S2_PAD(0x1B8);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmGraphDefinition) == 0x1A0, "CNmGraphDefinition size should be 0x1A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmGraphDefinition) == 0x1B8, "CNmGraphDefinition size should be 0x1B8");
+
+#endif
 	}
 }

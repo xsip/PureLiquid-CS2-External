@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_flags,int32_t, 0x44);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimBone) == 0x48, "CAnimBone size should be 0x48");
+
+#endif
 	}
 }

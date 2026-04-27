@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CDynamicPropAlias_prop_dynamic_override : public CS2::server::CDynamicProp {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CDynamicPropAlias_prop_dynamic_override) == 0xC50, "CDynamicPropAlias_prop_dynamic_override size should be 0xC50");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CDynamicPropAlias_prop_dynamic_override) == 0xB80, "CDynamicPropAlias_prop_dynamic_override size should be 0xB80");
+
+#endif
 	}
 }

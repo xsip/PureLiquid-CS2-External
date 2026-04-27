@@ -23,27 +23,30 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitSkinnedPositionFromCPSnapshot : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1dc);
-			PROPERTY(m_bRandom,bool, 0x1e0);
-			PROPERTY(m_nRandomSeed,int32_t, 0x1e4);
-			PROPERTY(m_bRigid,bool, 0x1e8);
-			PROPERTY(m_bSetNormal,bool, 0x1e9);
-			PROPERTY(m_bIgnoreDt,bool, 0x1ea);
-			PROPERTY(m_flMinNormalVelocity,float32, 0x1ec);
-			PROPERTY(m_flMaxNormalVelocity,float32, 0x1f0);
-			PROPERTY(m_nIndexType,particles::SnapshotIndexType_t, 0x1f4);
-			NESTED_PROPERTY(m_flReadIndex,particleslib::CPerParticleFloatInput, 0x1f8);
-			PROPERTY(m_flIncrement,float32, 0x368);
-			PROPERTY(m_nFullLoopIncrement,int32_t, 0x36c);
-			PROPERTY(m_nSnapShotStartPoint,int32_t, 0x370);
-			PROPERTY(m_flBoneVelocity,float32, 0x374);
-			PROPERTY(m_flBoneVelocityMax,float32, 0x378);
-			PROPERTY(m_bCopyColor,bool, 0x37c);
-			PROPERTY(m_bCopyAlpha,bool, 0x37d);
-			PROPERTY(m_bSetRadius,bool, 0x37e);
+			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1e0);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e4);
+			PROPERTY(m_bRandom,bool, 0x1e8);
+			PROPERTY(m_nRandomSeed,int32_t, 0x1ec);
+			PROPERTY(m_bRigid,bool, 0x1f0);
+			PROPERTY(m_bSetNormal,bool, 0x1f1);
+			PROPERTY(m_bIgnoreDt,bool, 0x1f2);
+			PROPERTY(m_flMinNormalVelocity,float32, 0x1f4);
+			PROPERTY(m_flMaxNormalVelocity,float32, 0x1f8);
+			PROPERTY(m_nIndexType,IDENTITY(particles::SnapshotIndexType_t), 0x1fc);
+			NESTED_PROPERTY(m_flReadIndex,IDENTITY(particleslib::CPerParticleFloatInput), 0x200);
+			PROPERTY(m_flIncrement,float32, 0x370);
+			PROPERTY(m_nFullLoopIncrement,int32_t, 0x374);
+			PROPERTY(m_nSnapShotStartPoint,int32_t, 0x378);
+			PROPERTY(m_flBoneVelocity,float32, 0x37c);
+			PROPERTY(m_flBoneVelocityMax,float32, 0x380);
+			PROPERTY(m_bCopyColor,bool, 0x384);
+			PROPERTY(m_bCopyAlpha,bool, 0x385);
+			PROPERTY(m_bSetRadius,bool, 0x386);
 			S2_PAD(0x1A8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitSkinnedPositionFromCPSnapshot) == 0x380, "C_INIT_InitSkinnedPositionFromCPSnapshot size should be 0x380");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitSkinnedPositionFromCPSnapshot) == 0x388, "C_INIT_InitSkinnedPositionFromCPSnapshot size should be 0x388");
+
+#endif
 	}
 }

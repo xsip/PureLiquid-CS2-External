@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace client {
 		class CPathWithDynamicNodes : public CS2::client::CPathSimple {
 		public:
-			PROPERTY(m_vecPathNodes,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::CPathNode>>, 0x710);
+			// PROPERTY(m_vecPathNodes,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::CPathNode>>), 0x710);
 			PROPERTY(m_xInitialPathWorldToLocal,GlobalTypes::CTransform, 0x730);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPathWithDynamicNodes) == 0x750, "CPathWithDynamicNodes size should be 0x750");
+
+#endif
 	}
 }

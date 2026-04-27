@@ -9,6 +9,7 @@ namespace CS2 {
 			DisableShadows_t_kDisableShadows_All = 0x1,
 			DisableShadows_t_kDisableShadows_Baked = 0x2,
 			DisableShadows_t_kDisableShadows_None = 0x0,
+			DisableShadows_t_kDisableShadows_ReallyNone = 0x4,
 			DisableShadows_t_kDisableShadows_Realtime = 0x3
 		};
 	}

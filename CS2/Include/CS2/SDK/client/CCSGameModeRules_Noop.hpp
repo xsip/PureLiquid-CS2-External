@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CCSGameModeRules_Noop : public CS2::client::CCSGameModeRules {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSGameModeRules_Noop) == 0x30, "CCSGameModeRules_Noop size should be 0x30");
+
+#endif
 	}
 }

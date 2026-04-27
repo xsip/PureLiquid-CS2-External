@@ -25,9 +25,12 @@ namespace CS2 {
 	namespace toolscene {
 		class CLightRigSky  {
 		public:
-			PROPERTY(m_hSkyMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x0);
+			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigSky) == 0x8, "CLightRigSky size should be 0x8");
+
+#endif
 	}
 }

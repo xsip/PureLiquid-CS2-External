@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x610
+			// Class size: 0x608
 			namespace CPointChildModifier /*: public CS2::client::C_PointEntity*/ {
-				constexpr std::ptrdiff_t m_bOrphanInsteadOfDeletingChildrenOnRemove = 0x608; // bool m_bOrphanInsteadOfDeletingChildrenOnRemove; |  0x608 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bOrphanInsteadOfDeletingChildrenOnRemove = 0x600; // bool m_bOrphanInsteadOfDeletingChildrenOnRemove; |  0x600 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

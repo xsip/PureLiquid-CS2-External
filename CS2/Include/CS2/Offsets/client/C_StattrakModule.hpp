@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1178
+			// Class size: 0x1168
 			namespace C_StattrakModule /*: public CS2::client::C_CS2WeaponModuleBase*/ {
-				constexpr std::ptrdiff_t m_bKnife = 0x1170; // bool m_bKnife; |  0x1170 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bKnife = 0x1160; // bool m_bKnife; |  0x1160 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

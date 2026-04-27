@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_vOuterMaxs,GlobalTypes::Vector, 0x74c);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicNPCCounterAABB) == 0x758, "CLogicNPCCounterAABB size should be 0x758");
+
+#endif
 	}
 }

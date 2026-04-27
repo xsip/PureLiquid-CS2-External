@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulse_RegisterInfo  {
 		public:
-			NESTED_PROPERTY(m_nReg,pulse_runtime_lib::PulseRuntimeRegisterIndex_t, 0x0);
+			NESTED_PROPERTY(m_nReg,IDENTITY(pulse_runtime_lib::PulseRuntimeRegisterIndex_t), 0x0);
 			PROPERTY(m_Type,GlobalTypes::CPulseValueFullType, 0x8);
 			PROPERTY(m_OriginName,GlobalTypes::CKV3MemberNameWithStorage, 0x20);
 			PROPERTY(m_nWrittenByInstruction,int32_t, 0x58);
 			PROPERTY(m_nLastReadByInstruction,int32_t, 0x5c);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_RegisterInfo) == 0x60, "CPulse_RegisterInfo size should be 0x60");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CEnvCubemapBox : public CS2::server::CEnvCubemap {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CEnvCubemapBox) == 0x590, "CEnvCubemapBox size should be 0x590");
+
+#endif
 	}
 }

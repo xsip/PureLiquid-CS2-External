@@ -26,8 +26,8 @@ namespace CS2 {
 			PROPERTY(m_flWidth,GlobalTypes::CSmartPropAttributeFloat, 0xa0);
 			PROPERTY(m_flLength,GlobalTypes::CSmartPropAttributeFloat, 0xe0);
 			PROPERTY(m_bVerticalLength,GlobalTypes::CSmartPropAttributeBool, 0x120);
-			NESTED_PROPERTY(m_GridArrangement,smartprops::CSmartPropAttributeGridPlacementMode, 0x160);
-			NESTED_PROPERTY(m_GridOriginMode,smartprops::CSmartPropAttributeGridOriginMode, 0x1a0);
+			NESTED_PROPERTY(m_GridArrangement,IDENTITY(smartprops::CSmartPropAttributeGridPlacementMode), 0x160);
+			NESTED_PROPERTY(m_GridOriginMode,IDENTITY(smartprops::CSmartPropAttributeGridOriginMode), 0x1a0);
 			PROPERTY(m_nCountW,GlobalTypes::CSmartPropAttributeInt, 0x1e0);
 			PROPERTY(m_nCountL,GlobalTypes::CSmartPropAttributeInt, 0x220);
 			PROPERTY(m_flSpacingWidth,GlobalTypes::CSmartPropAttributeFloat, 0x260);
@@ -37,6 +37,9 @@ namespace CS2 {
 			PROPERTY(m_flAlternateShiftLength,GlobalTypes::CSmartPropAttributeFloat, 0x360);
 			S2_PAD(0x300);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_Layout2DGrid) == 0x3A0, "CSmartPropElement_Layout2DGrid size should be 0x3A0");
+
+#endif
 	}
 }

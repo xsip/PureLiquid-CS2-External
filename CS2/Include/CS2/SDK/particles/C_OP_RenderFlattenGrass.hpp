@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderFlattenGrass : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_flFlattenStrength,float32, 0x220);
-			NESTED_PROPERTY(m_nStrengthFieldOverride,particles::ParticleAttributeIndex_t, 0x224);
-			PROPERTY(m_flRadiusScale,float32, 0x228);
+			PROPERTY(m_flFlattenStrength,float32, 0x228);
+			NESTED_PROPERTY(m_nStrengthFieldOverride,IDENTITY(particles::ParticleAttributeIndex_t), 0x22c);
+			PROPERTY(m_flRadiusScale,float32, 0x230);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderFlattenGrass) == 0x230, "C_OP_RenderFlattenGrass size should be 0x230");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderFlattenGrass) == 0x238, "C_OP_RenderFlattenGrass size should be 0x238");
+
+#endif
 	}
 }

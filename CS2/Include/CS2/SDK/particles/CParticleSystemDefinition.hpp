@@ -43,14 +43,14 @@ namespace CS2 {
 		class CParticleSystemDefinition : public CS2::particles::IParticleSystemDefinition {
 		public:
 			PROPERTY(m_nBehaviorVersion,int32_t, 0x8);
-			NESTED_PROPERTY(m_PreEmissionOperators,GlobalTypes::CUtlVector<particles::CParticleFunctionPreEmission*>, 0x10);
-			NESTED_PROPERTY(m_Emitters,GlobalTypes::CUtlVector<particles::CParticleFunctionEmitter*>, 0x28);
-			NESTED_PROPERTY(m_Initializers,GlobalTypes::CUtlVector<particles::CParticleFunctionInitializer*>, 0x40);
-			NESTED_PROPERTY(m_Operators,GlobalTypes::CUtlVector<particles::CParticleFunctionOperator*>, 0x58);
-			NESTED_PROPERTY(m_ForceGenerators,GlobalTypes::CUtlVector<particles::CParticleFunctionForce*>, 0x70);
-			NESTED_PROPERTY(m_Constraints,GlobalTypes::CUtlVector<particles::CParticleFunctionConstraint*>, 0x88);
-			NESTED_PROPERTY(m_Renderers,GlobalTypes::CUtlVector<particles::CParticleFunctionRenderer*>, 0xa0);
-			NESTED_PROPERTY(m_Children,GlobalTypes::CUtlVector<particles::ParticleChildrenInfo_t>, 0xb8);
+			NESTED_PROPERTY(m_PreEmissionOperators,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionPreEmission*>), 0x10);
+			NESTED_PROPERTY(m_Emitters,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionEmitter*>), 0x28);
+			NESTED_PROPERTY(m_Initializers,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionInitializer*>), 0x40);
+			NESTED_PROPERTY(m_Operators,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionOperator*>), 0x58);
+			NESTED_PROPERTY(m_ForceGenerators,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionForce*>), 0x70);
+			NESTED_PROPERTY(m_Constraints,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionConstraint*>), 0x88);
+			NESTED_PROPERTY(m_Renderers,IDENTITY(GlobalTypes::CUtlVector<particles::CParticleFunctionRenderer*>), 0xa0);
+			NESTED_PROPERTY(m_Children,IDENTITY(GlobalTypes::CUtlVector<particles::ParticleChildrenInfo_t>), 0xb8);
 			PROPERTY(m_nFirstMultipleOverride_BackwardCompat,int32_t, 0x178);
 			PROPERTY(m_nInitialParticles,int32_t, 0x258);
 			PROPERTY(m_nMaxParticles,int32_t, 0x25c);
@@ -62,7 +62,7 @@ namespace CS2 {
 			PROPERTY(m_bInfiniteBounds,bool, 0x284);
 			PROPERTY(m_bEnableNamedValues,bool, 0x285);
 			PROPERTY(m_NamedValueDomain,GlobalTypes::CUtlString*, 0x288);
-			NESTED_PROPERTY(m_NamedValueLocals,GlobalTypes::CUtlVector<particleslib::ParticleNamedValueSource_t*>, 0x290);
+			NESTED_PROPERTY(m_NamedValueLocals,IDENTITY(GlobalTypes::CUtlVector<particleslib::ParticleNamedValueSource_t*>), 0x290);
 			PROPERTY(m_ConstantColor,GlobalTypes::Color, 0x2a8);
 			PROPERTY(m_ConstantNormal,GlobalTypes::Vector, 0x2ac);
 			PROPERTY(m_flConstantRadius,float32, 0x2b8);
@@ -72,15 +72,15 @@ namespace CS2 {
 			PROPERTY(m_nConstantSequenceNumber,int32_t, 0x2c8);
 			PROPERTY(m_nConstantSequenceNumber1,int32_t, 0x2cc);
 			PROPERTY(m_nSnapshotControlPoint,int32_t, 0x2d0);
-			PROPERTY(m_hSnapshot,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>, 0x2d8);
-			PROPERTY(m_pszCullReplacementName,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x2e0);
+			PROPERTY(m_hSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x2d8);
+			PROPERTY(m_pszCullReplacementName,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x2e0);
 			PROPERTY(m_flCullRadius,float32, 0x2e8);
 			PROPERTY(m_flCullFillCost,float32, 0x2ec);
 			PROPERTY(m_nCullControlPoint,int32_t, 0x2f0);
-			PROPERTY(m_hFallback,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x2f8);
+			PROPERTY(m_hFallback,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x2f8);
 			PROPERTY(m_nFallbackMaxCount,int32_t, 0x300);
-			PROPERTY(m_hLowViolenceDef,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x308);
-			PROPERTY(m_hReferenceReplacement,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x310);
+			PROPERTY(m_hLowViolenceDef,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x308);
+			PROPERTY(m_hReferenceReplacement,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x310);
 			PROPERTY(m_flPreSimulationTime,float32, 0x318);
 			PROPERTY(m_flStopSimulationAfterTime,float32, 0x31c);
 			PROPERTY(m_flMaximumTimeStep,float32, 0x320);
@@ -88,27 +88,31 @@ namespace CS2 {
 			PROPERTY(m_flMinimumSimTime,float32, 0x328);
 			PROPERTY(m_flMinimumTimeStep,float32, 0x32c);
 			PROPERTY(m_nMinimumFrames,int32_t, 0x330);
-			PROPERTY(m_nMinCPULevel,int32_t, 0x334);
-			PROPERTY(m_nMinGPULevel,int32_t, 0x338);
-			PROPERTY(m_flNoDrawTimeToGoToSleep,float32, 0x33c);
-			PROPERTY(m_flMaxDrawDistance,float32, 0x340);
-			PROPERTY(m_flStartFadeDistance,float32, 0x344);
-			PROPERTY(m_flMaxCreationDistance,float32, 0x348);
-			PROPERTY(m_nAggregationMinAvailableParticles,int32_t, 0x34c);
-			PROPERTY(m_flAggregateRadius,float32, 0x350);
-			PROPERTY(m_bShouldBatch,bool, 0x354);
-			PROPERTY(m_bShouldHitboxesFallbackToRenderBounds,bool, 0x355);
-			PROPERTY(m_bShouldHitboxesFallbackToSnapshot,bool, 0x356);
-			PROPERTY(m_bShouldHitboxesFallbackToCollisionHulls,bool, 0x357);
-			PROPERTY(m_nViewModelEffect,particles::InheritableBoolType_t, 0x358);
-			PROPERTY(m_bScreenSpaceEffect,bool, 0x35c);
-			PROPERTY(m_pszTargetLayerID,GlobalTypes::CUtlSymbolLarge*, 0x360);
-			PROPERTY(m_nSkipRenderControlPoint,int32_t, 0x368);
-			PROPERTY(m_nAllowRenderControlPoint,int32_t, 0x36c);
-			PROPERTY(m_bShouldSort,bool, 0x370);
-			NESTED_PROPERTY(m_controlPointConfigurations,GlobalTypes::CUtlVector<particles::ParticleControlPointConfiguration_t>, 0x3b8);
+			PROPERTY(m_bIsGPUParticleSystem,bool, 0x334);
+			PROPERTY(m_nMinCPULevel,int32_t, 0x338);
+			PROPERTY(m_nMinGPULevel,int32_t, 0x33c);
+			PROPERTY(m_flNoDrawTimeToGoToSleep,float32, 0x340);
+			PROPERTY(m_flMaxDrawDistance,float32, 0x344);
+			PROPERTY(m_flStartFadeDistance,float32, 0x348);
+			PROPERTY(m_flMaxCreationDistance,float32, 0x34c);
+			PROPERTY(m_nAggregationMinAvailableParticles,int32_t, 0x350);
+			PROPERTY(m_flAggregateRadius,float32, 0x354);
+			PROPERTY(m_bShouldBatch,bool, 0x358);
+			PROPERTY(m_bShouldHitboxesFallbackToRenderBounds,bool, 0x359);
+			PROPERTY(m_bShouldHitboxesFallbackToSnapshot,bool, 0x35a);
+			PROPERTY(m_bShouldHitboxesFallbackToCollisionHulls,bool, 0x35b);
+			PROPERTY(m_nViewModelEffect,IDENTITY(particles::InheritableBoolType_t), 0x35c);
+			PROPERTY(m_bScreenSpaceEffect,bool, 0x360);
+			PROPERTY(m_pszTargetLayerID,GlobalTypes::CUtlSymbolLarge*, 0x368);
+			PROPERTY(m_nSkipRenderControlPoint,int32_t, 0x370);
+			PROPERTY(m_nAllowRenderControlPoint,int32_t, 0x374);
+			PROPERTY(m_bShouldSort,bool, 0x378);
+			NESTED_PROPERTY(m_controlPointConfigurations,IDENTITY(GlobalTypes::CUtlVector<particles::ParticleControlPointConfiguration_t>), 0x3c0);
 			S2_PAD(0x438);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CParticleSystemDefinition) == 0x440, "CParticleSystemDefinition size should be 0x440");
+
+#endif
 	}
 }

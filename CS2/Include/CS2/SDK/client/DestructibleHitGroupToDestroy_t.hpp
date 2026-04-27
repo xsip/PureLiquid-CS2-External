@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/HitGroup_t.hpp>
+#include "HitGroup_t.hpp"
 
 
 
@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class DestructibleHitGroupToDestroy_t  {
 		public:
-			PROPERTY(m_nHitGroup,client::HitGroup_t, 0x0);
+			PROPERTY(m_nHitGroup,IDENTITY(client::HitGroup_t), 0x0);
 			PROPERTY(m_nMaxDamageLevel,int32_t, 0x4);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::DestructibleHitGroupToDestroy_t) == 0x8, "DestructibleHitGroupToDestroy_t size should be 0x8");
+
+#endif
 	}
 }

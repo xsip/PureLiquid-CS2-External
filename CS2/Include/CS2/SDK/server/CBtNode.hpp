@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBtNode) == 0x58, "CBtNode size should be 0x58");
+
+#endif
 	}
 }

@@ -22,19 +22,22 @@ namespace CS2 {
 	namespace client {
 		class C_EnvWindController : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_EnvWindShared,client::C_EnvWindShared, 0x608);
-			PROPERTY(m_fDirectionVariation,float32, 0x700);
-			PROPERTY(m_fSpeedVariation,float32, 0x704);
-			PROPERTY(m_fTurbulence,float32, 0x708);
-			PROPERTY(m_fVolumeHalfExtentXY,float32, 0x70c);
-			PROPERTY(m_fVolumeHalfExtentZ,float32, 0x710);
-			PROPERTY(m_nVolumeResolutionXY,int32_t, 0x714);
-			PROPERTY(m_nVolumeResolutionZ,int32_t, 0x718);
-			PROPERTY(m_nClipmapLevels,int32_t, 0x71c);
-			PROPERTY(m_bIsMaster,bool, 0x720);
-			PROPERTY(m_bFirstTime,bool, 0x721);
+			NESTED_PROPERTY(m_EnvWindShared,IDENTITY(client::C_EnvWindShared), 0x600);
+			PROPERTY(m_fDirectionVariation,float32, 0x6f8);
+			PROPERTY(m_fSpeedVariation,float32, 0x6fc);
+			PROPERTY(m_fTurbulence,float32, 0x700);
+			PROPERTY(m_fVolumeHalfExtentXY,float32, 0x704);
+			PROPERTY(m_fVolumeHalfExtentZ,float32, 0x708);
+			PROPERTY(m_nVolumeResolutionXY,int32_t, 0x70c);
+			PROPERTY(m_nVolumeResolutionZ,int32_t, 0x710);
+			PROPERTY(m_nClipmapLevels,int32_t, 0x714);
+			PROPERTY(m_bIsMaster,bool, 0x718);
+			PROPERTY(m_bFirstTime,bool, 0x719);
 			S2_PAD(0x120);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvWindController) == 0x728, "C_EnvWindController size should be 0x728");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvWindController) == 0x720, "C_EnvWindController size should be 0x720");
+
+#endif
 	}
 }

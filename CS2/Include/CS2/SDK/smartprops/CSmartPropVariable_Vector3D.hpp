@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_DefaultValue,GlobalTypes::Vector, 0x38);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_Vector3D) == 0x48, "CSmartPropVariable_Vector3D size should be 0x48");
+
+#endif
 	}
 }

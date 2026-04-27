@@ -22,9 +22,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_Name,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_DisplayName,GlobalTypes::CUtlString*, 0x8);
-			NESTED_PROPERTY(m_VariableValues,GlobalTypes::CUtlVector<GlobalTypes::CSmartPropAttributeVariableValue>, 0x10);
+			NESTED_PROPERTY(m_VariableValues,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPropAttributeVariableValue>), 0x10);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropChoiceOption) == 0x28, "CSmartPropChoiceOption size should be 0x28");
+
+#endif
 	}
 }

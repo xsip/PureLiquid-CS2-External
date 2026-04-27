@@ -24,11 +24,14 @@ namespace CS2 {
 			PROPERTY(m_ConfigName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_ConfigValue,GlobalTypes::KeyValues3, 0x8);
 			PROPERTY(m_BoundValuePath,GlobalTypes::CUtlString*, 0x18);
-			PROPERTY(m_iAttachType,animationsystem::ParticleAttachment_t, 0x20);
+			PROPERTY(m_iAttachType,IDENTITY(animationsystem::ParticleAttachment_t), 0x20);
 			PROPERTY(m_strEntityScope,GlobalTypes::CUtlString*, 0x28);
 			PROPERTY(m_strAttachmentName,GlobalTypes::CUtlString*, 0x30);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::ParticleNamedValueConfiguration_t) == 0x38, "ParticleNamedValueConfiguration_t size should be 0x38");
+
+#endif
 	}
 }

@@ -28,17 +28,20 @@ namespace CS2 {
 	namespace server {
 		class CFuncTrackChange : public CS2::server::CFuncPlatRot {
 		public:
-			PROPERTY(m_trackTop,server::CPathTrack*, 0x7f8);
-			PROPERTY(m_trackBottom,server::CPathTrack*, 0x800);
-			PROPERTY(m_train,server::CFuncTrackTrain*, 0x808);
-			PROPERTY(m_trackTopName,GlobalTypes::CUtlSymbolLarge*, 0x810);
-			PROPERTY(m_trackBottomName,GlobalTypes::CUtlSymbolLarge*, 0x818);
-			PROPERTY(m_trainName,GlobalTypes::CUtlSymbolLarge*, 0x820);
-			PROPERTY(m_code,server::TRAIN_CODE, 0x828);
-			PROPERTY(m_targetState,int32_t, 0x82c);
-			PROPERTY(m_use,int32_t, 0x830);
-			S2_PAD(0x40);
+			PROPERTY(m_trackTop,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x830);
+			PROPERTY(m_trackBottom,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x834);
+			PROPERTY(m_train,IDENTITY(GlobalTypes::CHandle<server::CFuncTrackTrain>), 0x838);
+			PROPERTY(m_trackTopName,GlobalTypes::CUtlSymbolLarge*, 0x840);
+			PROPERTY(m_trackBottomName,GlobalTypes::CUtlSymbolLarge*, 0x848);
+			PROPERTY(m_trainName,GlobalTypes::CUtlSymbolLarge*, 0x850);
+			PROPERTY(m_code,IDENTITY(server::TRAIN_CODE), 0x858);
+			PROPERTY(m_targetState,int32_t, 0x85c);
+			PROPERTY(m_use,int32_t, 0x860);
+			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CFuncTrackChange) == 0x838, "CFuncTrackChange size should be 0x838");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncTrackChange) == 0x868, "CFuncTrackChange size should be 0x868");
+
+#endif
 	}
 }

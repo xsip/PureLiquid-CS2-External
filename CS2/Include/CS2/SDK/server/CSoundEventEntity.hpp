@@ -30,14 +30,17 @@ namespace CS2 {
 			PROPERTY(m_flSavedElapsedTime,float32, 0x4b0);
 			PROPERTY(m_iszSourceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
 			PROPERTY(m_iszAttachmentName,GlobalTypes::CUtlSymbolLarge*, 0x4c0);
-			PROPERTY(m_onGUIDChanged,GlobalTypes::CEntityOutputTemplate< uint64, uint64 >, 0x4c8);
-			NESTED_PROPERTY(m_onSoundFinished,entity2::CEntityIOOutput, 0x4e8);
-			PROPERTY(m_flClientCullRadius,float32, 0x500);
-			PROPERTY(m_iszSoundName,GlobalTypes::CUtlSymbolLarge*, 0x530);
-			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x54c);
-			PROPERTY(m_nEntityIndexSelection,int32_t, 0x550);
-			S2_PAD(0xB0);
+			// PROPERTY(m_onGUIDChanged,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::SndOpEventGuid_t>), 0x4c8);
+			NESTED_PROPERTY(m_onSoundFinished,IDENTITY(entity2::CEntityIOOutput), 0x4f8);
+			PROPERTY(m_flClientCullRadius,float32, 0x510);
+			PROPERTY(m_iszSoundName,GlobalTypes::CUtlSymbolLarge*, 0x540);
+			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x55c);
+			PROPERTY(m_nEntityIndexSelection,int32_t, 0x560);
+			S2_PAD(0xC0);
 		};
-		//static_assert(sizeof(CS2::server::CSoundEventEntity) == 0x558, "CSoundEventEntity size should be 0x558");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CSoundEventEntity) == 0x568, "CSoundEventEntity size should be 0x568");
+
+#endif
 	}
 }

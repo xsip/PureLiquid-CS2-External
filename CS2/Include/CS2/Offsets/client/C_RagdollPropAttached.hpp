@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1230
+			// Class size: 0x1218
 			namespace C_RagdollPropAttached /*: public CS2::client::C_RagdollProp*/ {
-				constexpr std::ptrdiff_t m_boneIndexAttached = 0x11f8; // uint32_t m_boneIndexAttached; |  0x11f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_ragdollAttachedObjectIndex = 0x11fc; // uint32_t m_ragdollAttachedObjectIndex; |  0x11fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_attachmentPointBoneSpace = 0x1200; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_attachmentPointRagdollSpace = 0x120c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecOffset = 0x1218; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_parentTime = 0x1224; // float32 m_parentTime; |  0x1224 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bHasParent = 0x1228; // bool m_bHasParent; |  0x1228 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_boneIndexAttached = 0x11e0; // uint32_t m_boneIndexAttached; |  0x11e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ragdollAttachedObjectIndex = 0x11e4; // uint32_t m_ragdollAttachedObjectIndex; |  0x11e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_attachmentPointBoneSpace = 0x11e8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_attachmentPointRagdollSpace = 0x11f4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOffset = 0x1200; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_parentTime = 0x120c; // float32 m_parentTime; |  0x120c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bHasParent = 0x1210; // bool m_bHasParent; |  0x1210 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

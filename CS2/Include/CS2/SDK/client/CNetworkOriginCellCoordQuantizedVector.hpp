@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_vecZ,GlobalTypes::CNetworkedQuantizedFloat, 0x28);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CNetworkOriginCellCoordQuantizedVector) == 0x30, "CNetworkOriginCellCoordQuantizedVector size should be 0x30");
+
+#endif
 	}
 }

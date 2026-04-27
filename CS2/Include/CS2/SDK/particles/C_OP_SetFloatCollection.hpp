@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionOperator.hpp>
 #include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,12 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetFloatCollection : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_InputValue,particleslib::CParticleCollectionFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x340);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x344);
-			NESTED_PROPERTY(m_Lerp,particleslib::CParticleCollectionFloatInput, 0x348);
-			S2_PAD(0x310);
+			NESTED_PROPERTY(m_InputValue,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x348);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x34c);
+			NESTED_PROPERTY(m_Lerp,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
+			S2_PAD(0x308);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_SetFloatCollection) == 0x4E0, "C_OP_SetFloatCollection size should be 0x4E0");
+
+#endif
 	}
 }

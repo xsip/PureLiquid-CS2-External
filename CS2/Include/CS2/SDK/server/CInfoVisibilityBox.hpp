@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_bEnabled,bool, 0x4bc);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoVisibilityBox) == 0x4C0, "CInfoVisibilityBox size should be 0x4C0");
+
+#endif
 	}
 }

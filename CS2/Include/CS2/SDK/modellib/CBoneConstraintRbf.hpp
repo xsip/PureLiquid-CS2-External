@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace modellib {
 		class CBoneConstraintRbf : public CS2::modellib::CBoneConstraintBase {
 		public:
-			PROPERTY(m_inputBones,GlobalTypes::CUtlVector<std::pair< CUtlString, uint32 >>, 0x20);
-			PROPERTY(m_outputBones,GlobalTypes::CUtlVector<std::pair< CUtlString, uint32 >>, 0x38);
+			PROPERTY(m_inputBones,IDENTITY(GlobalTypes::CUtlVector<std::pair< CUtlString, uint32 >>), 0x20);
+			PROPERTY(m_outputBones,IDENTITY(GlobalTypes::CUtlVector<std::pair< CUtlString, uint32 >>), 0x38);
 			S2_PAD(0xA8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CBoneConstraintRbf) == 0xC8, "CBoneConstraintRbf size should be 0xC8");
+
+#endif
 	}
 }

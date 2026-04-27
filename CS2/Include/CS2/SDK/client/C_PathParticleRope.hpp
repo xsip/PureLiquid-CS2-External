@@ -26,24 +26,27 @@ namespace CS2 {
 	namespace client {
 		class C_PathParticleRope : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_bStartActive,bool, 0x610);
-			PROPERTY(m_flMaxSimulationTime,float32, 0x614);
-			PROPERTY(m_iszEffectName,GlobalTypes::CUtlSymbolLarge*, 0x618);
-			PROPERTY(m_PathNodes_Name,GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>, 0x620);
-			PROPERTY(m_flParticleSpacing,float32, 0x638);
-			PROPERTY(m_flSlack,float32, 0x63c);
-			PROPERTY(m_flRadius,float32, 0x640);
-			PROPERTY(m_ColorTint,GlobalTypes::Color, 0x644);
-			PROPERTY(m_nEffectState,int32_t, 0x648);
-			PROPERTY(m_iEffectIndex,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x650);
-			PROPERTY(m_PathNodes_Position,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>, 0x658);
-			PROPERTY(m_PathNodes_TangentIn,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>, 0x670);
-			PROPERTY(m_PathNodes_TangentOut,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>, 0x688);
-			PROPERTY(m_PathNodes_Color,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>, 0x6a0);
-			PROPERTY(m_PathNodes_PinEnabled,GlobalTypes::C_NetworkUtlVectorBase< bool >, 0x6b8);
-			PROPERTY(m_PathNodes_RadiusScale,GlobalTypes::C_NetworkUtlVectorBase< float32 >, 0x6d0);
+			PROPERTY(m_bStartActive,bool, 0x608);
+			PROPERTY(m_flMaxSimulationTime,float32, 0x60c);
+			PROPERTY(m_iszEffectName,GlobalTypes::CUtlSymbolLarge*, 0x610);
+			PROPERTY(m_PathNodes_Name,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>), 0x618);
+			PROPERTY(m_flParticleSpacing,float32, 0x630);
+			PROPERTY(m_flSlack,float32, 0x634);
+			PROPERTY(m_flRadius,float32, 0x638);
+			PROPERTY(m_ColorTint,GlobalTypes::Color, 0x63c);
+			PROPERTY(m_nEffectState,int32_t, 0x640);
+			PROPERTY(m_iEffectIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x648);
+			// PROPERTY(m_PathNodes_Position,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>), 0x650);
+			// PROPERTY(m_PathNodes_TangentIn,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>), 0x668);
+			// PROPERTY(m_PathNodes_TangentOut,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>), 0x680);
+			// PROPERTY(m_PathNodes_Color,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>), 0x698);
+			// PROPERTY(m_PathNodes_PinEnabled,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< bool >), 0x6b0);
+			// PROPERTY(m_PathNodes_RadiusScale,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< float32 >), 0x6c8);
 			S2_PAD(0x110);
 		};
-		//static_assert(sizeof(CS2::client::C_PathParticleRope) == 0x718, "C_PathParticleRope size should be 0x718");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PathParticleRope) == 0x710, "C_PathParticleRope size should be 0x710");
+
+#endif
 	}
 }

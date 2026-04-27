@@ -21,28 +21,31 @@ namespace CS2 {
 	namespace server {
 		class CCS2WeaponGraphController : public CS2::client::CAnimGraphControllerBase {
 		public:
-			PROPERTY(m_action,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x90);
-			PROPERTY(m_bActionReset,GlobalTypes::CAnimGraph2ParamOptionalRef< bool >, 0xa8);
-			PROPERTY(m_flWeaponActionSpeedScale,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0xc0);
-			PROPERTY(m_weaponCategory,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0xd8);
-			PROPERTY(m_weaponType,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0xf0);
-			PROPERTY(m_weaponExtraInfo,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x108);
-			PROPERTY(m_flWeaponAmmo,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x120);
-			PROPERTY(m_flWeaponAmmoMax,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x138);
-			PROPERTY(m_flWeaponAmmoReserve,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x150);
-			PROPERTY(m_bWeaponIsSilenced,GlobalTypes::CAnimGraph2ParamOptionalRef< bool >, 0x168);
-			PROPERTY(m_flWeaponIronsightAmount,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x180);
-			PROPERTY(m_bIsUsingLegacyModel,GlobalTypes::CAnimGraph2ParamOptionalRef< bool >, 0x198);
-			PROPERTY(m_idleVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x1b0);
-			PROPERTY(m_deployVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x1c8);
-			PROPERTY(m_attackType,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x1e0);
-			PROPERTY(m_attackThrowStrength,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x1f8);
-			PROPERTY(m_flAttackVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x210);
-			PROPERTY(m_inspectVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x228);
-			PROPERTY(m_inspectExtraInfo,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x240);
-			PROPERTY(m_reloadStage,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x258);
-			S2_PAD(0x548);
+			// PROPERTY(m_action,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x88);
+			// PROPERTY(m_bActionReset,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0xa0);
+			// PROPERTY(m_flWeaponActionSpeedScale,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xb8);
+			// PROPERTY(m_weaponCategory,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0xd0);
+			// PROPERTY(m_weaponType,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0xe8);
+			// PROPERTY(m_weaponExtraInfo,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x100);
+			// PROPERTY(m_flWeaponAmmo,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x118);
+			// PROPERTY(m_flWeaponAmmoMax,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x130);
+			// PROPERTY(m_flWeaponAmmoReserve,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x148);
+			// PROPERTY(m_bWeaponIsSilenced,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x160);
+			// PROPERTY(m_flWeaponIronsightAmount,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x178);
+			// PROPERTY(m_bIsUsingLegacyModel,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x190);
+			// PROPERTY(m_idleVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x1a8);
+			// PROPERTY(m_deployVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x1c0);
+			// PROPERTY(m_attackType,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x1d8);
+			// PROPERTY(m_attackThrowStrength,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x1f0);
+			// PROPERTY(m_flAttackVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x208);
+			// PROPERTY(m_inspectVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x220);
+			// PROPERTY(m_inspectExtraInfo,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x238);
+			// PROPERTY(m_reloadStage,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x250);
+			S2_PAD(0x500);
 		};
-		//static_assert(sizeof(CS2::server::CCS2WeaponGraphController) == 0x5D8, "CCS2WeaponGraphController size should be 0x5D8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CCS2WeaponGraphController) == 0x588, "CCS2WeaponGraphController size should be 0x588");
+
+#endif
 	}
 }

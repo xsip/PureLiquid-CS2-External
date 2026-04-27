@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace client {
 		class C_SoundEventPathCornerEntity : public CS2::client::C_SoundEventEntity {
 		public:
-			PROPERTY(m_vecCornerPairsNetworked,GlobalTypes::C_NetworkUtlVectorBase<client::SoundeventPathCornerPairNetworked_t>, 0x6b8);
+			// PROPERTY(m_vecCornerPairsNetworked,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<client::SoundeventPathCornerPairNetworked_t>), 0x6c0);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundEventPathCornerEntity) == 0x6D0, "C_SoundEventPathCornerEntity size should be 0x6D0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundEventPathCornerEntity) == 0x6D8, "C_SoundEventPathCornerEntity size should be 0x6D8");
+
+#endif
 	}
 }

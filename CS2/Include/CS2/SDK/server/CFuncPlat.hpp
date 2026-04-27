@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CFuncPlat : public CS2::server::CBasePlatTrain {
 		public:
-			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x7d8);
+			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x810);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::server::CFuncPlat) == 0x7E0, "CFuncPlat size should be 0x7E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncPlat) == 0x818, "CFuncPlat size should be 0x818");
+
+#endif
 	}
 }

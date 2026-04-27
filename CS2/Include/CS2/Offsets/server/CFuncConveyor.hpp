@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x780
+			// Class size: 0x7B8
 			namespace CFuncConveyor /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_szConveyorModels = 0x730; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flTransitionDurationSeconds = 0x738; // float32 m_flTransitionDurationSeconds; |  0x738 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x73c; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecMoveDirEntitySpace = 0x748; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flTargetSpeed = 0x754; // float32 m_flTargetSpeed; |  0x754 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTransitionStartTick = 0x758; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nTransitionDurationTicks = 0x75c; // int32_t m_nTransitionDurationTicks; |  0x75c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTransitionStartSpeed = 0x760; // float32 m_flTransitionStartSpeed; |  0x760 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hConveyorModels = 0x768; // server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_szConveyorModels = 0x768; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flTransitionDurationSeconds = 0x770; // float32 m_flTransitionDurationSeconds; |  0x770 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x774; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecMoveDirEntitySpace = 0x780; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flTargetSpeed = 0x78c; // float32 m_flTargetSpeed; |  0x78c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTransitionStartTick = 0x790; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nTransitionDurationTicks = 0x794; // int32_t m_nTransitionDurationTicks; |  0x794 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTransitionStartSpeed = 0x798; // float32 m_flTransitionStartSpeed; |  0x798 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hConveyorModels = 0x7a0; // server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xA20
+			// Class size: 0x940
 			namespace CHostageCarriableProp /*: public CS2::server::CBaseAnimGraph*/ {
 				// NO SCHEMA DATA FOUND!
 			}

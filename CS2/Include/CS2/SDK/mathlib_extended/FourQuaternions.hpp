@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(w,GlobalTypes::fltx4, 0x30);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::mathlib_extended::FourQuaternions) == 0x40, "FourQuaternions size should be 0x40");
+
+#endif
 	}
 }

@@ -28,20 +28,23 @@ namespace CS2 {
 	namespace server {
 		class CBaseTrigger : public CS2::server::CBaseToggle {
 		public:
-			NESTED_PROPERTY(m_OnStartTouch,entity2::CEntityIOOutput, 0x7b0);
-			NESTED_PROPERTY(m_OnStartTouchAll,entity2::CEntityIOOutput, 0x7c8);
-			NESTED_PROPERTY(m_OnEndTouch,entity2::CEntityIOOutput, 0x7e0);
-			NESTED_PROPERTY(m_OnEndTouchAll,entity2::CEntityIOOutput, 0x7f8);
-			NESTED_PROPERTY(m_OnTouching,entity2::CEntityIOOutput, 0x810);
-			NESTED_PROPERTY(m_OnTouchingEachEntity,entity2::CEntityIOOutput, 0x828);
-			NESTED_PROPERTY(m_OnNotTouching,entity2::CEntityIOOutput, 0x840);
-			NESTED_PROPERTY(m_hTouchingEntities,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x858);
-			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x870);
-			PROPERTY(m_hFilter,GlobalTypes::CHandle<server::CBaseFilter>, 0x878);
-			PROPERTY(m_bDisabled,bool, 0x87c);
-			PROPERTY(m_bUseAsyncQueries,bool, 0x888);
+			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0x7e8);
+			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x800);
+			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0x818);
+			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x830);
+			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x848);
+			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x860);
+			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x878);
+			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x890);
+			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x8a8);
+			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0x8b0);
+			PROPERTY(m_bDisabled,bool, 0x8b4);
+			PROPERTY(m_bUseAsyncQueries,bool, 0x8c0);
 			S2_PAD(0xE0);
 		};
-		//static_assert(sizeof(CS2::server::CBaseTrigger) == 0x890, "CBaseTrigger size should be 0x890");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBaseTrigger) == 0x8C8, "CBaseTrigger size should be 0x8C8");
+
+#endif
 	}
 }

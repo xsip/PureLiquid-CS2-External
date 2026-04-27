@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RandomScalar : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_flMin,float32, 0x1d8);
-			PROPERTY(m_flMax,float32, 0x1dc);
-			PROPERTY(m_flExponent,float32, 0x1e0);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1e4);
+			PROPERTY(m_flMin,float32, 0x1e0);
+			PROPERTY(m_flMax,float32, 0x1e4);
+			PROPERTY(m_flExponent,float32, 0x1e8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1ec);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RandomScalar) == 0x1E8, "C_INIT_RandomScalar size should be 0x1E8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RandomScalar) == 0x1F0, "C_INIT_RandomScalar size should be 0x1F0");
+
+#endif
 	}
 }

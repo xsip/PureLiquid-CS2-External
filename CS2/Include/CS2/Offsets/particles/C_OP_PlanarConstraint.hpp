@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4D8
+			// Class size: 0x4E0
 			namespace C_OP_PlanarConstraint /*: public CS2::particles::CParticleFunctionConstraint*/ {
-				constexpr std::ptrdiff_t m_PointOnPlane = 0x1d0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_PlaneNormal = 0x1dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e8; // int32_t m_nControlPointNumber; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bGlobalOrigin = 0x1ec; // bool m_bGlobalOrigin; |  0x1ec | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bGlobalNormal = 0x1ed; // bool m_bGlobalNormal; |  0x1ed | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flRadiusScale = 0x1f0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMaximumDistanceToCP = 0x360; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bUseOldCode = 0x4d0; // bool m_bUseOldCode; |  0x4d0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_PointOnPlane = 0x1d8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_PlaneNormal = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1f0; // int32_t m_nControlPointNumber; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bGlobalOrigin = 0x1f4; // bool m_bGlobalOrigin; |  0x1f4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGlobalNormal = 0x1f5; // bool m_bGlobalNormal; |  0x1f5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flRadiusScale = 0x1f8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMaximumDistanceToCP = 0x368; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bUseOldCode = 0x4d8; // bool m_bUseOldCode; |  0x4d8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -21,22 +21,25 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreatePhyllotaxis : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_nScaleCP,int32_t, 0x1dc);
-			PROPERTY(m_nComponent,int32_t, 0x1e0);
-			PROPERTY(m_fRadCentCore,float32, 0x1e4);
-			PROPERTY(m_fRadPerPoint,float32, 0x1e8);
-			PROPERTY(m_fRadPerPointTo,float32, 0x1ec);
-			PROPERTY(m_fpointAngle,float32, 0x1f0);
-			PROPERTY(m_fsizeOverall,float32, 0x1f4);
-			PROPERTY(m_fRadBias,float32, 0x1f8);
-			PROPERTY(m_fMinRad,float32, 0x1fc);
-			PROPERTY(m_fDistBias,float32, 0x200);
-			PROPERTY(m_bUseLocalCoords,bool, 0x204);
-			PROPERTY(m_bUseWithContEmit,bool, 0x205);
-			PROPERTY(m_bUseOrigRadius,bool, 0x206);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
+			PROPERTY(m_nScaleCP,int32_t, 0x1e4);
+			PROPERTY(m_nComponent,int32_t, 0x1e8);
+			PROPERTY(m_fRadCentCore,float32, 0x1ec);
+			PROPERTY(m_fRadPerPoint,float32, 0x1f0);
+			PROPERTY(m_fRadPerPointTo,float32, 0x1f4);
+			PROPERTY(m_fpointAngle,float32, 0x1f8);
+			PROPERTY(m_fsizeOverall,float32, 0x1fc);
+			PROPERTY(m_fRadBias,float32, 0x200);
+			PROPERTY(m_fMinRad,float32, 0x204);
+			PROPERTY(m_fDistBias,float32, 0x208);
+			PROPERTY(m_bUseLocalCoords,bool, 0x20c);
+			PROPERTY(m_bUseWithContEmit,bool, 0x20d);
+			PROPERTY(m_bUseOrigRadius,bool, 0x20e);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreatePhyllotaxis) == 0x208, "C_INIT_CreatePhyllotaxis size should be 0x208");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreatePhyllotaxis) == 0x210, "C_INIT_CreatePhyllotaxis size should be 0x210");
+
+#endif
 	}
 }

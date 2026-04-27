@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_bIsZeroDuration,bool, 0x1c);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CEmitTagActionUpdater) == 0x20, "CEmitTagActionUpdater size should be 0x20");
+
+#endif
 	}
 }

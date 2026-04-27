@@ -21,16 +21,19 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RtEnvCull : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_vecTestDir,GlobalTypes::Vector, 0x1d8);
-			PROPERTY(m_vecTestNormal,GlobalTypes::Vector, 0x1e4);
-			PROPERTY(m_bUseVelocity,bool, 0x1f0);
-			PROPERTY(m_bCullOnMiss,bool, 0x1f1);
-			PROPERTY(m_bLifeAdjust,bool, 0x1f2);
-			PROPERTY_ARRAY(m_RtEnvName,char, 128 , 0x1f3);
-			PROPERTY(m_nRTEnvCP,int32_t, 0x274);
-			PROPERTY(m_nComponent,int32_t, 0x278);
+			PROPERTY(m_vecTestDir,GlobalTypes::Vector, 0x1e0);
+			PROPERTY(m_vecTestNormal,GlobalTypes::Vector, 0x1ec);
+			PROPERTY(m_bUseVelocity,bool, 0x1f8);
+			PROPERTY(m_bCullOnMiss,bool, 0x1f9);
+			PROPERTY(m_bLifeAdjust,bool, 0x1fa);
+			PROPERTY_ARRAY(m_RtEnvName,char, 128 , 0x1fb);
+			PROPERTY(m_nRTEnvCP,int32_t, 0x27c);
+			PROPERTY(m_nComponent,int32_t, 0x280);
 			S2_PAD(0xA8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RtEnvCull) == 0x280, "C_INIT_RtEnvCull size should be 0x280");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RtEnvCull) == 0x288, "C_INIT_RtEnvCull size should be 0x288");
+
+#endif
 	}
 }

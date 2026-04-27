@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ColorAdjustHSL : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flHueAdjust,particleslib::CPerParticleFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_flSaturationAdjust,particleslib::CPerParticleFloatInput, 0x340);
-			NESTED_PROPERTY(m_flLightnessAdjust,particleslib::CPerParticleFloatInput, 0x4b0);
+			NESTED_PROPERTY(m_flHueAdjust,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flSaturationAdjust,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
+			NESTED_PROPERTY(m_flLightnessAdjust,IDENTITY(particleslib::CPerParticleFloatInput), 0x4b8);
 			S2_PAD(0x450);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ColorAdjustHSL) == 0x620, "C_OP_ColorAdjustHSL size should be 0x620");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ColorAdjustHSL) == 0x628, "C_OP_ColorAdjustHSL size should be 0x628");
+
+#endif
 	}
 }

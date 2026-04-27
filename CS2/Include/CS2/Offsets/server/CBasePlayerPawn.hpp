@@ -8,33 +8,33 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xD20
+			// Class size: 0xBB0
 			namespace CBasePlayerPawn /*: public CS2::server::CBaseCombatCharacter*/ {
-				constexpr std::ptrdiff_t m_pWeaponServices = 0xb70; // server::CPlayer_WeaponServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pItemServices = 0xb78; // server::CPlayer_ItemServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pAutoaimServices = 0xb80; // server::CPlayer_AutoaimServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pObserverServices = 0xb88; // server::CPlayer_ObserverServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pWaterServices = 0xb90; // server::CPlayer_WaterServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pUseServices = 0xb98; // server::CPlayer_UseServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pFlashlightServices = 0xba0; // server::CPlayer_FlashlightServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pCameraServices = 0xba8; // server::CPlayer_CameraServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pMovementServices = 0xbb0; // server::CPlayer_MovementServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_ServerViewAngleChanges = 0xbc0; // server::CUtlVectorEmbeddedNetworkVar<server::ViewAngleServerChange_t>  | Schema_Atomic | Size: 0x68
-				constexpr std::ptrdiff_t v_angle = 0xc28; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t v_anglePrevious = 0xc34; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_iHideHUD = 0xc40; // uint32_t m_iHideHUD; |  0xc40 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_skybox3d = 0xc48; // server::sky3dparams_t  | Schema_DeclaredClass | Size: 0x90
-				constexpr std::ptrdiff_t m_fTimeLastHurt = 0xcd8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flDeathTime = 0xcdc; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_fNextSuicideTime = 0xce0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_fInitHUD = 0xce4; // bool m_fInitHUD; |  0xce4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_pExpresser = 0xce8; // server::CAI_Expresser**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_hController = 0xcf0; // GlobalTypes::CHandle<server::CBasePlayerController>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hDefaultController = 0xcf4; // GlobalTypes::CHandle<server::CBasePlayerController>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_fHltvReplayDelay = 0xcfc; // float32 m_fHltvReplayDelay; |  0xcfc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fHltvReplayEnd = 0xd00; // float32 m_fHltvReplayEnd; |  0xd00 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iHltvReplayEntity = 0xd04; // GlobalTypes::CEntityIndex  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_sndOpvarLatchData = 0xd08; // GlobalTypes::CUtlVector<client::sndopvarlatchdata_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_pWeaponServices = 0xa00; // server::CPlayer_WeaponServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pItemServices = 0xa08; // server::CPlayer_ItemServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pAutoaimServices = 0xa10; // server::CPlayer_AutoaimServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pObserverServices = 0xa18; // server::CPlayer_ObserverServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pWaterServices = 0xa20; // server::CPlayer_WaterServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pUseServices = 0xa28; // server::CPlayer_UseServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pFlashlightServices = 0xa30; // server::CPlayer_FlashlightServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pCameraServices = 0xa38; // server::CPlayer_CameraServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pMovementServices = 0xa40; // server::CPlayer_MovementServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_ServerViewAngleChanges = 0xa50; // server::CUtlVectorEmbeddedNetworkVar<server::ViewAngleServerChange_t>  | Schema_Atomic | Size: 0x68
+				constexpr std::ptrdiff_t v_angle = 0xab8; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t v_anglePrevious = 0xac4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_iHideHUD = 0xad0; // uint32_t m_iHideHUD; |  0xad0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_skybox3d = 0xad8; // server::sky3dparams_t  | Schema_DeclaredClass | Size: 0x90
+				constexpr std::ptrdiff_t m_fTimeLastHurt = 0xb68; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flDeathTime = 0xb6c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_fNextSuicideTime = 0xb70; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_fInitHUD = 0xb74; // bool m_fInitHUD; |  0xb74 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pExpresser = 0xb78; // server::CAI_Expresser**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_hController = 0xb80; // GlobalTypes::CHandle<server::CBasePlayerController>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hDefaultController = 0xb84; // GlobalTypes::CHandle<server::CBasePlayerController>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_fHltvReplayDelay = 0xb8c; // float32 m_fHltvReplayDelay; |  0xb8c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fHltvReplayEnd = 0xb90; // float32 m_fHltvReplayEnd; |  0xb90 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iHltvReplayEntity = 0xb94; // GlobalTypes::CEntityIndex  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_sndOpvarLatchData = 0xb98; // GlobalTypes::CUtlVector<client::sndopvarlatchdata_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x228
 			namespace C_OP_RenderClothForce /*: public CS2::particles::CParticleFunctionRenderer*/ {
 				// NO SCHEMA DATA FOUND!
 			}

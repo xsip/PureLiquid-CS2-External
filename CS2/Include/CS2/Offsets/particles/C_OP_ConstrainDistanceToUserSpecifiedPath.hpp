@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace C_OP_ConstrainDistanceToUserSpecifiedPath /*: public CS2::particles::CParticleFunctionConstraint*/ {
-				constexpr std::ptrdiff_t m_fMinDistance = 0x1d0; // float32 m_fMinDistance; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxDistance = 0x1d4; // float32 m_flMaxDistance; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTimeScale = 0x1d8; // float32 m_flTimeScale; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLoopedPath = 0x1dc; // bool m_bLoopedPath; |  0x1dc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_pointList = 0x1e0; // GlobalTypes::CUtlVector<particles::PointDefinitionWithTimeValues_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_fMinDistance = 0x1d8; // float32 m_fMinDistance; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxDistance = 0x1dc; // float32 m_flMaxDistance; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTimeScale = 0x1e0; // float32 m_flTimeScale; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLoopedPath = 0x1e4; // bool m_bLoopedPath; |  0x1e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pointList = 0x1e8; // GlobalTypes::CUtlVector<particles::PointDefinitionWithTimeValues_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

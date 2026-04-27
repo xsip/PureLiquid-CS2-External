@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitialVelocityFromHitbox : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_flVelocityMin,float32, 0x1d8);
-			PROPERTY(m_flVelocityMax,float32, 0x1dc);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1e4);
-			PROPERTY(m_bUseBones,bool, 0x264);
+			PROPERTY(m_flVelocityMin,float32, 0x1e0);
+			PROPERTY(m_flVelocityMax,float32, 0x1e4);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e8);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x1ec);
+			PROPERTY(m_bUseBones,bool, 0x26c);
 			S2_PAD(0x90);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitialVelocityFromHitbox) == 0x268, "C_INIT_InitialVelocityFromHitbox size should be 0x268");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitialVelocityFromHitbox) == 0x270, "C_INIT_InitialVelocityFromHitbox size should be 0x270");
+
+#endif
 	}
 }

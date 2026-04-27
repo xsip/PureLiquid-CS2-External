@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xE88
+			// Class size: 0xFA8
 			namespace C_ModelPointEntity /*: public CS2::client::C_BaseModelEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

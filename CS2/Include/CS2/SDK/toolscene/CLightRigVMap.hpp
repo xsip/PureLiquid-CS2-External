@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace toolscene {
 		class CLightRigVMap  {
 		public:
-			PROPERTY(m_MapName,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<worldrenderer::InfoForResourceTypeVMapResourceData_t>>, 0x0);
+			PROPERTY(m_MapName,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<worldrenderer::InfoForResourceTypeVMapResourceData_t>>), 0x0);
 			PROPERTY(m_bRender3DSkybox,bool, 0xe0);
 			PROPERTY(m_bParticlesTraceAgainstMap,bool, 0xe1);
 			S2_PAD(0xE8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigVMap) == 0xE8, "CLightRigVMap size should be 0xE8");
+
+#endif
 	}
 }

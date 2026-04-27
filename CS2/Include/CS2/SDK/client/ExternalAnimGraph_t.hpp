@@ -28,13 +28,16 @@ namespace CS2 {
 	namespace client {
 		class ExternalAnimGraph_t  {
 		public:
-			NESTED_PROPERTY(m_hExtGraphHandle,client::ExternalAnimGraphHandle_t, 0x0);
+			NESTED_PROPERTY(m_hExtGraphHandle,IDENTITY(client::ExternalAnimGraphHandle_t), 0x0);
 			PROPERTY(m_sExternalGraphSlotID,GlobalTypes::CGlobalSymbol, 0x8);
-			PROPERTY(m_hGraphDefinition,GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeCNmGraphDefinition>, 0x10);
-			PROPERTY(m_hExternalGraphOwner,GlobalTypes::CHandle<client::CBaseAnimGraph>, 0x18);
-			PROPERTY(m_nInactiveBehavior,client::ExternalAnimGraphInactiveBehavior_t, 0x30);
+			PROPERTY(m_hGraphDefinition,IDENTITY(GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeCNmGraphDefinition>), 0x10);
+			PROPERTY(m_hExternalGraphOwner,IDENTITY(GlobalTypes::CHandle<client::CBaseAnimGraph>), 0x18);
+			PROPERTY(m_nInactiveBehavior,IDENTITY(client::ExternalAnimGraphInactiveBehavior_t), 0x30);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ExternalAnimGraph_t) == 0x38, "ExternalAnimGraph_t size should be 0x38");
+
+#endif
 	}
 }

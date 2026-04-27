@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class CDestructiblePartsSystemData  {
 		public:
-			PROPERTY(m_PartsDataByHitGroup,GlobalTypes::CUtlOrderedMap< HitGroup_t, CDestructiblePart >, 0x0);
-			NESTED_PROPERTY(m_nMinMaxNumberHitGroupsToDestroyWhenGibbing,tier2::CRangeInt, 0x28);
+			// PROPERTY(m_PartsDataByHitGroup,IDENTITY(GlobalTypes::CUtlOrderedMap< HitGroup_t, CDestructiblePart >), 0x0);
+			NESTED_PROPERTY(m_nMinMaxNumberHitGroupsToDestroyWhenGibbing,IDENTITY(tier2::CRangeInt), 0x28);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDestructiblePartsSystemData) == 0x30, "CDestructiblePartsSystemData size should be 0x30");
+
+#endif
 	}
 }

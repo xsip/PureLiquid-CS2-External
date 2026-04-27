@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_CSObserverPawn : public CS2::client::C_CSPlayerPawnBase {
 		public:
-			PROPERTY(m_hDetectParentChange,GlobalTypes::CEntityHandle, 0x1650);
+			PROPERTY(m_hDetectParentChange,GlobalTypes::CEntityHandle, 0x1458);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_CSObserverPawn) == 0x1658, "C_CSObserverPawn size should be 0x1658");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSObserverPawn) == 0x1460, "C_CSObserverPawn size should be 0x1460");
+
+#endif
 	}
 }

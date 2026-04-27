@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_variableType,GlobalTypes::CPulseValueFullType, 0x38);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleVariableRef) == 0x50, "CParticleVariableRef size should be 0x50");
+
+#endif
 	}
 }

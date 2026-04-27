@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleInput) == 0x10, "CParticleInput size should be 0x10");
+
+#endif
 	}
 }

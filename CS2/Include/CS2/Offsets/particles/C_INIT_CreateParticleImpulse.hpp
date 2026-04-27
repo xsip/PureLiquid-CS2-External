@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x638
+			// Class size: 0x640
 			namespace C_INIT_CreateParticleImpulse /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_InputRadius = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_InputMagnitude = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nFalloffFunction = 0x4b8; // particles::ParticleFalloffFunction_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_InputFalloffExp = 0x4c0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nImpulseType = 0x630; // particles::ParticleImpulseType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_InputRadius = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_InputMagnitude = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nFalloffFunction = 0x4c0; // particles::ParticleFalloffFunction_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_InputFalloffExp = 0x4c8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nImpulseType = 0x638; // particles::ParticleImpulseType_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

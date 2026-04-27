@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStateMachineComponentUpdater : public CS2::animgraphlib::CAnimComponentUpdater {
 		public:
-			NESTED_PROPERTY(m_stateMachine,animgraphlib::CAnimStateMachineUpdater, 0x30);
+			NESTED_PROPERTY(m_stateMachine,IDENTITY(animgraphlib::CAnimStateMachineUpdater), 0x30);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStateMachineComponentUpdater) == 0x88, "CStateMachineComponentUpdater size should be 0x88");
+
+#endif
 	}
 }

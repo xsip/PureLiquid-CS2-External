@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateSequentialPath : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_fMaxDistance,float32, 0x1d8);
-			PROPERTY(m_flNumToAssign,float32, 0x1dc);
-			PROPERTY(m_bLoop,bool, 0x1e0);
-			PROPERTY(m_bCPPairs,bool, 0x1e1);
-			PROPERTY(m_bSaveOffset,bool, 0x1e2);
-			NESTED_PROPERTY(m_PathParams,particles::CPathParameters, 0x1f0);
-			S2_PAD(0x58);
+			PROPERTY(m_fMaxDistance,float32, 0x1e0);
+			PROPERTY(m_flNumToAssign,float32, 0x1e4);
+			PROPERTY(m_bLoop,bool, 0x1e8);
+			PROPERTY(m_bCPPairs,bool, 0x1e9);
+			PROPERTY(m_bSaveOffset,bool, 0x1ea);
+			NESTED_PROPERTY(m_PathParams,IDENTITY(particles::CPathParameters), 0x1f0);
+			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_INIT_CreateSequentialPath) == 0x230, "C_INIT_CreateSequentialPath size should be 0x230");
+
+#endif
 	}
 }

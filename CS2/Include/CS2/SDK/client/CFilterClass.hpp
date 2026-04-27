@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class CFilterClass : public CS2::client::CBaseFilter {
 		public:
-			PROPERTY(m_iFilterClass,GlobalTypes::CUtlSymbolLarge*, 0x640);
+			PROPERTY(m_iFilterClass,GlobalTypes::CUtlSymbolLarge*, 0x638);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::CFilterClass) == 0x648, "CFilterClass size should be 0x648");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CFilterClass) == 0x640, "CFilterClass size should be 0x640");
+
+#endif
 	}
 }

@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CAnimEventListener) == 0x20, "CAnimEventListener size should be 0x20");
+
+#endif
 	}
 }

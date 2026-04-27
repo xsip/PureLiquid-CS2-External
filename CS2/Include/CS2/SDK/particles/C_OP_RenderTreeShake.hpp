@@ -22,18 +22,21 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderTreeShake : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_flPeakStrength,float32, 0x220);
-			NESTED_PROPERTY(m_nPeakStrengthFieldOverride,particles::ParticleAttributeIndex_t, 0x224);
-			PROPERTY(m_flRadius,float32, 0x228);
-			NESTED_PROPERTY(m_nRadiusFieldOverride,particles::ParticleAttributeIndex_t, 0x22c);
-			PROPERTY(m_flShakeDuration,float32, 0x230);
-			PROPERTY(m_flTransitionTime,float32, 0x234);
-			PROPERTY(m_flTwistAmount,float32, 0x238);
-			PROPERTY(m_flRadialAmount,float32, 0x23c);
-			PROPERTY(m_flControlPointOrientationAmount,float32, 0x240);
-			PROPERTY(m_nControlPointForLinearDirection,int32_t, 0x244);
+			PROPERTY(m_flPeakStrength,float32, 0x228);
+			NESTED_PROPERTY(m_nPeakStrengthFieldOverride,IDENTITY(particles::ParticleAttributeIndex_t), 0x22c);
+			PROPERTY(m_flRadius,float32, 0x230);
+			NESTED_PROPERTY(m_nRadiusFieldOverride,IDENTITY(particles::ParticleAttributeIndex_t), 0x234);
+			PROPERTY(m_flShakeDuration,float32, 0x238);
+			PROPERTY(m_flTransitionTime,float32, 0x23c);
+			PROPERTY(m_flTwistAmount,float32, 0x240);
+			PROPERTY(m_flRadialAmount,float32, 0x244);
+			PROPERTY(m_flControlPointOrientationAmount,float32, 0x248);
+			PROPERTY(m_nControlPointForLinearDirection,int32_t, 0x24c);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderTreeShake) == 0x248, "C_OP_RenderTreeShake size should be 0x248");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderTreeShake) == 0x250, "C_OP_RenderTreeShake size should be 0x250");
+
+#endif
 	}
 }

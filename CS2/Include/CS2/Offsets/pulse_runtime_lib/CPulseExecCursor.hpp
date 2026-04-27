@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0xD0
+			// Class size: 0xD8
 			namespace CPulseExecCursor /**/ {
 				// NO SCHEMA DATA FOUND!
 			}

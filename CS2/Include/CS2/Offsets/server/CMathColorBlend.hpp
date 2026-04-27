@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flInMax = 0x4ac; // float32 m_flInMax; |  0x4ac | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_OutColor1 = 0x4b0; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_OutColor2 = 0x4b4; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_OutValue = 0x4b8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OutValue = 0x4b8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Color>  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

@@ -8,16 +8,31 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x590
+			// Class size: 0x7A0
 			namespace CTestPulseIO /*: public CS2::server::CLogicalEntity*/ {
 				constexpr std::ptrdiff_t m_OnVariantVoid = 0x4a8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnVariantBool = 0x4c0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_OnVariantInt = 0x4e0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_OnVariantFloat = 0x500; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnVariantString = 0x520; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnVariantColor = 0x540; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnVariantVector = 0x560; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_OnVariantString = 0x520; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnVariantColor = 0x540; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Color>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnVariantVector = 0x560; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x28
 				constexpr std::ptrdiff_t m_bAllowEmptyInputs = 0x588; // bool m_bAllowEmptyInputs; |  0x588 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_TestComponent = 0x590; // server::CTestPulseIOComponent_Derived  | Schema_DeclaredClass | Size: 0x30
+				constexpr std::ptrdiff_t m_OnInternalTestVoid = 0x5c0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnInternalTestBool = 0x5d8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestInt = 0x5f8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestFloat = 0x618; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestString = 0x638; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestColor = 0x658; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Color>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestVector = 0x678; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_OnInternalTestEntityName = 0x6a0; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CEntityNameString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestEntityHandle = 0x6c0; // server::CEntityOutputTemplate<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestSchemaEnum = 0x6e0; // GlobalTypes::CEntityOutputTemplate<server::TestInputOutputCombinationsEnum_t>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestFloatString = 0x700; // server::CEntityOutputTemplate<server::CTestPulseIO_FloatStringArgs_t>  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_OnInternalTestEntityNameString = 0x728; // server::CEntityOutputTemplate<server::CTestPulseIO_EntityNameStringArgs_t>  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_OnInternalTestEntityHandleInt = 0x750; // server::CEntityOutputTemplate<server::CTestPulseIO_EntityHandleIntArgs_t>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnInternalTestStringStringString = 0x770; // server::CEntityOutputTemplate<server::CTestPulseIO_ThreeStringArgs_t>  | Schema_Atomic | Size: 0x30
 			}
 		}
 	}

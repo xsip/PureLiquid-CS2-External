@@ -8,28 +8,28 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x18C0
-			namespace C_EconEntity /*: public CS2::client::C_BaseFlex*/ {
-				constexpr std::ptrdiff_t m_flFlexDelayTime = 0x1360; // float32 m_flFlexDelayTime; |  0x1360 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFlexDelayedWeight = 0x1368; // float32* m_flFlexDelayedWeight; |  0x1368 | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_bAttributesInitialized = 0x1370; // bool m_bAttributesInitialized; |  0x1370 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_AttributeManager = 0x1378; // client::C_AttributeContainer  | Schema_DeclaredClass | Size: 0x4d0
-				constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0x1848; // uint32_t m_OriginalOwnerXuidLow; |  0x1848 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OriginalOwnerXuidHigh = 0x184c; // uint32_t m_OriginalOwnerXuidHigh; |  0x184c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFallbackPaintKit = 0x1850; // int32_t m_nFallbackPaintKit; |  0x1850 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFallbackSeed = 0x1854; // int32_t m_nFallbackSeed; |  0x1854 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFallbackWear = 0x1858; // float32 m_flFallbackWear; |  0x1858 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFallbackStatTrak = 0x185c; // int32_t m_nFallbackStatTrak; |  0x185c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bClientside = 0x1860; // bool m_bClientside; |  0x1860 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bParticleSystemsCreated = 0x1861; // bool m_bParticleSystemsCreated; |  0x1861 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecAttachedParticles = 0x1868; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_hViewmodelAttachment = 0x1880; // GlobalTypes::CHandle<client::CBaseAnimGraph>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iOldTeam = 0x1884; // int32_t m_iOldTeam; |  0x1884 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAttachmentDirty = 0x1888; // bool m_bAttachmentDirty; |  0x1888 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nUnloadedModelIndex = 0x188c; // int32_t m_nUnloadedModelIndex; |  0x188c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iNumOwnerValidationRetries = 0x1890; // int32_t m_iNumOwnerValidationRetries; |  0x1890 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hOldProvidee = 0x18a0; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vecAttachedModels = 0x18a8; // GlobalTypes::CUtlVector<client::AttachedModelData_t>  | Schema_Atomic | Size: 0x18
+			// Class size: 0x16C8
+			namespace C_EconEntity /*: public CS2::client::CBaseAnimGraph*/ {
+				constexpr std::ptrdiff_t m_flFlexDelayTime = 0x1168; // float32 m_flFlexDelayTime; |  0x1168 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFlexDelayedWeight = 0x1170; // float32* m_flFlexDelayedWeight; |  0x1170 | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_bAttributesInitialized = 0x1178; // bool m_bAttributesInitialized; |  0x1178 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_AttributeManager = 0x1180; // client::C_AttributeContainer  | Schema_DeclaredClass | Size: 0x4d0
+				constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0x1650; // uint32_t m_OriginalOwnerXuidLow; |  0x1650 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OriginalOwnerXuidHigh = 0x1654; // uint32_t m_OriginalOwnerXuidHigh; |  0x1654 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFallbackPaintKit = 0x1658; // int32_t m_nFallbackPaintKit; |  0x1658 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFallbackSeed = 0x165c; // int32_t m_nFallbackSeed; |  0x165c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFallbackWear = 0x1660; // float32 m_flFallbackWear; |  0x1660 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFallbackStatTrak = 0x1664; // int32_t m_nFallbackStatTrak; |  0x1664 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bClientside = 0x1668; // bool m_bClientside; |  0x1668 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bParticleSystemsCreated = 0x1669; // bool m_bParticleSystemsCreated; |  0x1669 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecAttachedParticles = 0x1670; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hViewmodelAttachment = 0x1688; // GlobalTypes::CHandle<client::CBaseAnimGraph>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iOldTeam = 0x168c; // int32_t m_iOldTeam; |  0x168c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAttachmentDirty = 0x1690; // bool m_bAttachmentDirty; |  0x1690 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nUnloadedModelIndex = 0x1694; // int32_t m_nUnloadedModelIndex; |  0x1694 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iNumOwnerValidationRetries = 0x1698; // int32_t m_iNumOwnerValidationRetries; |  0x1698 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hOldProvidee = 0x16a8; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_vecAttachedModels = 0x16b0; // GlobalTypes::CUtlVector<client::C_EconEntity_AttachedModelData_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

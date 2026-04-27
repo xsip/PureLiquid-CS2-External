@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x740
+			// Class size: 0x778
 			namespace CTriggerVolume /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_iFilterName = 0x730; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hFilter = 0x738; // GlobalTypes::CHandle<server::CBaseFilter>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iFilterName = 0x768; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hFilter = 0x770; // GlobalTypes::CHandle<server::CBaseFilter>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

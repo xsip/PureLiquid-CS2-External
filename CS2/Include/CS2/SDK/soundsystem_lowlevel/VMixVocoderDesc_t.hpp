@@ -32,6 +32,9 @@ namespace CS2 {
 			PROPERTY(m_bPeakMode,bool, 0x24);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixVocoderDesc_t) == 0x28, "VMixVocoderDesc_t size should be 0x28");
+
+#endif
 	}
 }

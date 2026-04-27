@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x6F0
+			// Class size: 0x6E8
 			namespace C_EnvCubemapBox /*: public CS2::client::C_EnvCubemap*/ {
 				// NO SCHEMA DATA FOUND!
 			}

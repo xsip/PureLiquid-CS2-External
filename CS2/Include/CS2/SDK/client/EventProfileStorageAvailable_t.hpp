@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_nSplitScreenSlot,GlobalTypes::CSplitScreenSlot, 0x0);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::EventProfileStorageAvailable_t) == 0x4, "EventProfileStorageAvailable_t size should be 0x4");
+
+#endif
 	}
 }

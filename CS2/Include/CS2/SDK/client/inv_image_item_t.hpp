@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(pose_sequence,GlobalTypes::CUtlString*, 0x18);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::inv_image_item_t) == 0x20, "inv_image_item_t size should be 0x20");
+
+#endif
 	}
 }

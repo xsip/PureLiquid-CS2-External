@@ -14,7 +14,7 @@
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particleslib/CParticleTransformInput.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -25,19 +25,22 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_CylindricalDistanceToTransform : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_flInputMin,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_flInputMax,particleslib::CPerParticleFloatInput, 0x348);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CPerParticleFloatInput, 0x4b8);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CPerParticleFloatInput, 0x628);
-			NESTED_PROPERTY(m_TransformStart,particleslib::CParticleTransformInput, 0x798);
-			NESTED_PROPERTY(m_TransformEnd,particleslib::CParticleTransformInput, 0x800);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x868);
-			PROPERTY(m_bActiveRange,bool, 0x86c);
-			PROPERTY(m_bAdditive,bool, 0x86d);
-			PROPERTY(m_bCapsule,bool, 0x86e);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_flInputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flInputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c0);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x630);
+			NESTED_PROPERTY(m_TransformStart,IDENTITY(particleslib::CParticleTransformInput), 0x7a0);
+			NESTED_PROPERTY(m_TransformEnd,IDENTITY(particleslib::CParticleTransformInput), 0x808);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x870);
+			PROPERTY(m_bActiveRange,bool, 0x874);
+			PROPERTY(m_bAdditive,bool, 0x875);
+			PROPERTY(m_bCapsule,bool, 0x876);
 			S2_PAD(0x6A0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_CylindricalDistanceToTransform) == 0x870, "C_OP_CylindricalDistanceToTransform size should be 0x870");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_CylindricalDistanceToTransform) == 0x878, "C_OP_CylindricalDistanceToTransform size should be 0x878");
+
+#endif
 	}
 }

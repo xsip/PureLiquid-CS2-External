@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4B8
+			// Class size: 0x4C0
 			namespace C_OP_PinRopeSegmentParticleToParent /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nParticleSelection = 0x1d0; // particles::ParticleSelection_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nParticleNumber = 0x1d8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInterpolation = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nParticleSelection = 0x1d8; // particles::ParticleSelection_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nParticleNumber = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInterpolation = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

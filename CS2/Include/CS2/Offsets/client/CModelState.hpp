@@ -8,16 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x2D0
+			// Class size: 0x270
 			namespace CModelState /**/ {
 				constexpr std::ptrdiff_t m_hModel = 0xa0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_ModelName = 0xa8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bClientClothCreationSuppressed = 0x179; // bool m_bClientClothCreationSuppressed; |  0x179 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_MeshGroupMask = 0x220; // uint64_t m_MeshGroupMask; |  0x220 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_nBodyGroupChoices = 0x270; // GlobalTypes::C_NetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nIdealMotionType = 0x2ba; // int8_t m_nIdealMotionType; |  0x2ba | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nForceLOD = 0x2bb; // int8_t m_nForceLOD; |  0x2bb | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nClothUpdateFlags = 0x2bc; // int8_t m_nClothUpdateFlags; |  0x2bc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pVPhysicsAggregate = 0xe0; // vphysics2::IPhysAggregateInstance**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_flRootBoneOffset_x = 0xe8; // float32 m_flRootBoneOffset_x; |  0xe8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRootBoneOffset_y = 0xec; // float32 m_flRootBoneOffset_y; |  0xec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRootBoneOffset_z = 0xf0; // float32 m_flRootBoneOffset_z; |  0xf0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRootBoneOffsetResetSerialNumber = 0xf4; // uint8_t m_nRootBoneOffsetResetSerialNumber; |  0xf4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bClientClothCreationSuppressed = 0x110; // bool m_bClientClothCreationSuppressed; |  0x110 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nAnimStateNoInterpSerialNumber = 0x1c0; // uint8_t m_nAnimStateNoInterpSerialNumber; |  0x1c0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_MeshGroupMask = 0x1c8; // uint64_t m_MeshGroupMask; |  0x1c8 | Schema_Builtin | Size: 0x8
+				constexpr std::ptrdiff_t m_nBodyGroupChoices = 0x218; // GlobalTypes::C_NetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nIdealMotionType = 0x262; // int8_t m_nIdealMotionType; |  0x262 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nForceLOD = 0x263; // int8_t m_nForceLOD; |  0x263 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nClothUpdateFlags = 0x264; // int8_t m_nClothUpdateFlags; |  0x264 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

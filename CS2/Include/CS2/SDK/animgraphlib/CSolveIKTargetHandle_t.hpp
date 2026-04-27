@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSolveIKTargetHandle_t  {
 		public:
-			NESTED_PROPERTY(m_positionHandle,animgraphlib::CAnimParamHandle, 0x0);
-			NESTED_PROPERTY(m_orientationHandle,animgraphlib::CAnimParamHandle, 0x2);
+			NESTED_PROPERTY(m_positionHandle,IDENTITY(animgraphlib::CAnimParamHandle), 0x0);
+			NESTED_PROPERTY(m_orientationHandle,IDENTITY(animgraphlib::CAnimParamHandle), 0x2);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSolveIKTargetHandle_t) == 0x4, "CSolveIKTargetHandle_t size should be 0x4");
+
+#endif
 	}
 }

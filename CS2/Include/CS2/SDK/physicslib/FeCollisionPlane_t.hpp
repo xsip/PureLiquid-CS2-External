@@ -23,10 +23,13 @@ namespace CS2 {
 		public:
 			PROPERTY(nCtrlParent,uint16_t, 0x0);
 			PROPERTY(nChildNode,uint16_t, 0x2);
-			NESTED_PROPERTY(m_Plane,physicslib::RnPlane_t, 0x4);
+			NESTED_PROPERTY(m_Plane,IDENTITY(physicslib::RnPlane_t), 0x4);
 			PROPERTY(flStrength,float32, 0x14);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeCollisionPlane_t) == 0x18, "FeCollisionPlane_t size should be 0x18");
+
+#endif
 	}
 }

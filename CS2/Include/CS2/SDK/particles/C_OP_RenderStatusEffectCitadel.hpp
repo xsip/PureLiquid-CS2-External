@@ -26,14 +26,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderStatusEffectCitadel : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_pTextureColorWarp,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x220);
-			PROPERTY(m_pTextureNormal,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x228);
-			PROPERTY(m_pTextureMetalness,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x230);
-			PROPERTY(m_pTextureRoughness,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x238);
-			PROPERTY(m_pTextureSelfIllum,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x240);
-			PROPERTY(m_pTextureDetail,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x248);
+			PROPERTY(m_pTextureColorWarp,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x228);
+			PROPERTY(m_pTextureNormal,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x230);
+			PROPERTY(m_pTextureMetalness,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x238);
+			PROPERTY(m_pTextureRoughness,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x240);
+			PROPERTY(m_pTextureSelfIllum,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x248);
+			PROPERTY(m_pTextureDetail,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x250);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderStatusEffectCitadel) == 0x250, "C_OP_RenderStatusEffectCitadel size should be 0x250");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderStatusEffectCitadel) == 0x258, "C_OP_RenderStatusEffectCitadel size should be 0x258");
+
+#endif
 	}
 }

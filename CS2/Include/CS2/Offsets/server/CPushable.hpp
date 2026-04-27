@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x808
+			// Class size: 0x840
 			namespace CPushable /*: public CS2::server::CBreakable*/ {
 				// NO SCHEMA DATA FOUND!
 			}

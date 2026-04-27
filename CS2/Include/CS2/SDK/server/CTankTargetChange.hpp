@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace server {
 		class CTankTargetChange : public CS2::server::CPointEntity {
 		public:
-			PROPERTY(m_newTarget,GlobalTypes::CVariantBase<entity2::CVariantDefaultAllocator>, 0x4a8);
+			// PROPERTY(m_newTarget,IDENTITY(GlobalTypes::CVariantBase<entity2::CVariantDefaultAllocator>), 0x4a8);
 			PROPERTY(m_newTargetName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTankTargetChange) == 0x4C0, "CTankTargetChange size should be 0x4C0");
+
+#endif
 	}
 }

@@ -8,20 +8,20 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x918
+			// Class size: 0x920
 			namespace C_OP_MovementSkinnedPositionFromCPSnapshot /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nSnapshotControlPointNumber = 0x1d0; // int32_t m_nSnapshotControlPointNumber; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d4; // int32_t m_nControlPointNumber; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRandom = 0x1d8; // bool m_bRandom; |  0x1d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRandomSeed = 0x1dc; // int32_t m_nRandomSeed; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSetNormal = 0x1e0; // bool m_bSetNormal; |  0x1e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetRadius = 0x1e1; // bool m_bSetRadius; |  0x1e1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nIndexType = 0x1e4; // particles::SnapshotIndexType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flReadIndex = 0x1e8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flIncrement = 0x358; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nFullLoopIncrement = 0x4c8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nSnapShotStartPoint = 0x638; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInterpolation = 0x7a8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nSnapshotControlPointNumber = 0x1d8; // int32_t m_nSnapshotControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1dc; // int32_t m_nControlPointNumber; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRandom = 0x1e0; // bool m_bRandom; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRandomSeed = 0x1e4; // int32_t m_nRandomSeed; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSetNormal = 0x1e8; // bool m_bSetNormal; |  0x1e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetRadius = 0x1e9; // bool m_bSetRadius; |  0x1e9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nIndexType = 0x1ec; // particles::SnapshotIndexType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flReadIndex = 0x1f0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flIncrement = 0x360; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nFullLoopIncrement = 0x4d0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nSnapShotStartPoint = 0x640; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInterpolation = 0x7b0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

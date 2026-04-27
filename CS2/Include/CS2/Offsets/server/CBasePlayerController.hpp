@@ -16,7 +16,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bKnownTeamMismatch = 0x4e4; // bool m_bKnownTeamMismatch; |  0x4e4 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nSplitScreenSlot = 0x4e8; // GlobalTypes::CSplitScreenSlot  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hSplitOwner = 0x4ec; // GlobalTypes::CHandle<server::CBasePlayerController>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x4f0; // server::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerController>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x4f0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerController>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bIsHLTV = 0x508; // bool m_bIsHLTV; |  0x508 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_iConnected = 0x50c; // client::PlayerConnectedState  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_iszPlayerName = 0x510; // char m_iszPlayerName[128]; |  0x510 | Schema_FixedArray | Size: 0x80

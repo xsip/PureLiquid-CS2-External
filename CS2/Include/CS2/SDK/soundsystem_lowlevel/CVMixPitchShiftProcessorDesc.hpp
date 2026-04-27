@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class CVMixPitchShiftProcessorDesc : public CS2::soundsystem_lowlevel::CVMixBaseProcessorDesc {
 		public:
-			NESTED_PROPERTY(m_desc,soundsystem_lowlevel::VMixPitchShiftDesc_t, 0x20);
+			NESTED_PROPERTY(m_desc,IDENTITY(soundsystem_lowlevel::VMixPitchShiftDesc_t), 0x20);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::CVMixPitchShiftProcessorDesc) == 0x30, "CVMixPitchShiftProcessorDesc size should be 0x30");
+
+#endif
 	}
 }

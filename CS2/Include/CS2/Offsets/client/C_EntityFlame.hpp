@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x650
+			// Class size: 0x648
 			namespace C_EntityFlame /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_hEntAttached = 0x608; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hOldAttached = 0x630; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bCheapEffect = 0x634; // bool m_bCheapEffect; |  0x634 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hEntAttached = 0x600; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hOldAttached = 0x628; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bCheapEffect = 0x62c; // bool m_bCheapEffect; |  0x62c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

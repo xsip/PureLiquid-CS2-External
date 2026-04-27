@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x200
+			// Class size: 0x208
 			namespace C_OP_CPOffsetToPercentageBetweenCPs /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flInputMin = 0x1d0; // float32 m_flInputMin; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMax = 0x1d4; // float32 m_flInputMax; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputBias = 0x1d8; // float32 m_flInputBias; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nStartCP = 0x1dc; // int32_t m_nStartCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nEndCP = 0x1e0; // int32_t m_nEndCP; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOffsetCP = 0x1e4; // int32_t m_nOffsetCP; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOuputCP = 0x1e8; // int32_t m_nOuputCP; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nInputCP = 0x1ec; // int32_t m_nInputCP; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRadialCheck = 0x1f0; // bool m_bRadialCheck; |  0x1f0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bScaleOffset = 0x1f1; // bool m_bScaleOffset; |  0x1f1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecOffset = 0x1f4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flInputMin = 0x1d8; // float32 m_flInputMin; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMax = 0x1dc; // float32 m_flInputMax; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputBias = 0x1e0; // float32 m_flInputBias; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nStartCP = 0x1e4; // int32_t m_nStartCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nEndCP = 0x1e8; // int32_t m_nEndCP; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOffsetCP = 0x1ec; // int32_t m_nOffsetCP; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOuputCP = 0x1f0; // int32_t m_nOuputCP; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nInputCP = 0x1f4; // int32_t m_nInputCP; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRadialCheck = 0x1f8; // bool m_bRadialCheck; |  0x1f8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bScaleOffset = 0x1f9; // bool m_bScaleOffset; |  0x1f9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecOffset = 0x1fc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

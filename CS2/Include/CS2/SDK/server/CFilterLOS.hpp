@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CFilterLOS : public CS2::server::CBaseFilter {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFilterLOS) == 0x4E0, "CFilterLOS size should be 0x4E0");
+
+#endif
 	}
 }

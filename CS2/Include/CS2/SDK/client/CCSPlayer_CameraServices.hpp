@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_vClientScopeInaccuracy,GlobalTypes::Vector, 0x2b0);
 			S2_PAD(0x98);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayer_CameraServices) == 0x340, "CCSPlayer_CameraServices size should be 0x340");
+
+#endif
 	}
 }

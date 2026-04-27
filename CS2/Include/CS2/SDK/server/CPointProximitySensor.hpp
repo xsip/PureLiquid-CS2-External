@@ -27,10 +27,13 @@ namespace CS2 {
 		class CPointProximitySensor : public CS2::server::CPointEntity {
 		public:
 			PROPERTY(m_bDisabled,bool, 0x4a8);
-			PROPERTY(m_hTargetEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4ac);
-			PROPERTY(m_Distance,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4b0);
+			PROPERTY(m_hTargetEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4ac);
+			// PROPERTY(m_Distance,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4b0);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointProximitySensor) == 0x4D0, "CPointProximitySensor size should be 0x4D0");
+
+#endif
 	}
 }

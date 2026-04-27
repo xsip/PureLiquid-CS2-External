@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(flBias,float32, 0x18);
 			S2_PAD(0x1C);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeAntiTunnelProbe_t) == 0x1C, "FeAntiTunnelProbe_t size should be 0x1C");
+
+#endif
 	}
 }

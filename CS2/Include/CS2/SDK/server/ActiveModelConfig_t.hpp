@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace server {
 		class ActiveModelConfig_t  {
 		public:
-			NESTED_PROPERTY(m_Handle,client::ModelConfigHandle_t, 0x30);
+			NESTED_PROPERTY(m_Handle,IDENTITY(client::ModelConfigHandle_t), 0x30);
 			PROPERTY(m_Name,GlobalTypes::CUtlSymbolLarge*, 0x38);
-			PROPERTY(m_AssociatedEntities,server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseModelEntity>>, 0x40);
-			PROPERTY(m_AssociatedEntityNames,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>, 0x58);
+			// PROPERTY(m_AssociatedEntities,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseModelEntity>>), 0x40);
+			// PROPERTY(m_AssociatedEntityNames,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x58);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::ActiveModelConfig_t) == 0x70, "ActiveModelConfig_t size should be 0x70");
+
+#endif
 	}
 }

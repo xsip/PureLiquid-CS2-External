@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x620
+			// Class size: 0x618
 			namespace CPulseGameBlackboard /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_strGraphName = 0x610; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_strStateBlob = 0x618; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strGraphName = 0x608; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strStateBlob = 0x610; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

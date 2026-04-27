@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x620
+			// Class size: 0x618
 			namespace CInfoDynamicShadowHint /*: public CS2::client::C_PointEntity*/ {
-				constexpr std::ptrdiff_t m_bDisabled = 0x608; // bool m_bDisabled; |  0x608 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flRange = 0x60c; // float32 m_flRange; |  0x60c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nImportance = 0x610; // int32_t m_nImportance; |  0x610 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nLightChoice = 0x614; // int32_t m_nLightChoice; |  0x614 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hLight = 0x618; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bDisabled = 0x600; // bool m_bDisabled; |  0x600 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flRange = 0x604; // float32 m_flRange; |  0x604 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nImportance = 0x608; // int32_t m_nImportance; |  0x608 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nLightChoice = 0x60c; // int32_t m_nLightChoice; |  0x60c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hLight = 0x610; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

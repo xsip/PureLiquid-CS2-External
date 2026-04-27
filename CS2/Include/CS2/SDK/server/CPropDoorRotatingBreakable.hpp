@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace server {
 		class CPropDoorRotatingBreakable : public CS2::server::CPropDoorRotating {
 		public:
-			PROPERTY(m_bBreakable,bool, 0xef0);
-			PROPERTY(m_isAbleToCloseAreaPortals,bool, 0xef1);
-			PROPERTY(m_currentDamageState,int32_t, 0xef4);
-			PROPERTY(m_damageStates,GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>, 0xef8);
+			PROPERTY(m_bBreakable,bool, 0xe20);
+			PROPERTY(m_isAbleToCloseAreaPortals,bool, 0xe21);
+			PROPERTY(m_currentDamageState,int32_t, 0xe24);
+			PROPERTY(m_damageStates,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>), 0xe28);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::server::CPropDoorRotatingBreakable) == 0xF10, "CPropDoorRotatingBreakable size should be 0xF10");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPropDoorRotatingBreakable) == 0xE40, "CPropDoorRotatingBreakable size should be 0xE40");
+
+#endif
 	}
 }

@@ -19,6 +19,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flPushScale = 0x4c4; // float32 m_flPushScale; |  0x4c4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bConvertToDebrisWhenPossible = 0x4c8; // bool m_bConvertToDebrisWhenPossible; |  0x4c8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bAffectInvulnerableEnts = 0x4c9; // bool m_bAffectInvulnerableEnts; |  0x4c9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisablePushClamp = 0x4ca; // bool m_bDisablePushClamp; |  0x4ca | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_OnPushedPlayer = 0x4d0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}

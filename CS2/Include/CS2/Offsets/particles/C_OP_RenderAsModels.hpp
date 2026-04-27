@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x258
+			// Class size: 0x260
 			namespace C_OP_RenderAsModels /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_ModelList = 0x220; // GlobalTypes::CUtlVector<particles::ModelReference_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flModelScale = 0x23c; // float32 m_flModelScale; |  0x23c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bFitToModelSize = 0x240; // bool m_bFitToModelSize; |  0x240 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNonUniformScaling = 0x241; // bool m_bNonUniformScaling; |  0x241 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nXAxisScalingAttribute = 0x244; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nYAxisScalingAttribute = 0x248; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nZAxisScalingAttribute = 0x24c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nSizeCullBloat = 0x250; // int32_t m_nSizeCullBloat; |  0x250 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ModelList = 0x228; // GlobalTypes::CUtlVector<particles::ModelReference_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flModelScale = 0x244; // float32 m_flModelScale; |  0x244 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bFitToModelSize = 0x248; // bool m_bFitToModelSize; |  0x248 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNonUniformScaling = 0x249; // bool m_bNonUniformScaling; |  0x249 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nXAxisScalingAttribute = 0x24c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nYAxisScalingAttribute = 0x250; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nZAxisScalingAttribute = 0x254; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nSizeCullBloat = 0x258; // int32_t m_nSizeCullBloat; |  0x258 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

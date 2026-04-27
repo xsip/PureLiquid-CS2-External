@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x11B0
+			// Class size: 0x10B0
 			namespace CC4 /*: public CS2::server::CCSWeaponBase*/ {
-				constexpr std::ptrdiff_t m_vecLastValidPlayerHeldPosition = 0x1160; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecLastValidDroppedPosition = 0x116c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bDoValidDroppedPositionCheck = 0x1178; // bool m_bDoValidDroppedPositionCheck; |  0x1178 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bStartedArming = 0x1179; // bool m_bStartedArming; |  0x1179 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fArmedTime = 0x117c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0x1180; // bool m_bBombPlacedAnimation; |  0x1180 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsPlantingViaUse = 0x1181; // bool m_bIsPlantingViaUse; |  0x1181 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_entitySpottedState = 0x1188; // server::EntitySpottedState_t  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_nSpotRules = 0x11a0; // int32_t m_nSpotRules; |  0x11a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0x11a4; // bool m_bPlayedArmingBeeps[7]; |  0x11a4 | Schema_FixedArray | Size: 0x7
-				constexpr std::ptrdiff_t m_bBombPlanted = 0x11ab; // bool m_bBombPlanted; |  0x11ab | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecLastValidPlayerHeldPosition = 0x1060; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecLastValidDroppedPosition = 0x106c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bDoValidDroppedPositionCheck = 0x1078; // bool m_bDoValidDroppedPositionCheck; |  0x1078 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStartedArming = 0x1079; // bool m_bStartedArming; |  0x1079 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fArmedTime = 0x107c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0x1080; // bool m_bBombPlacedAnimation; |  0x1080 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsPlantingViaUse = 0x1081; // bool m_bIsPlantingViaUse; |  0x1081 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_entitySpottedState = 0x1088; // server::EntitySpottedState_t  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_nSpotRules = 0x10a0; // int32_t m_nSpotRules; |  0x10a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0x10a4; // bool m_bPlayedArmingBeeps[7]; |  0x10a4 | Schema_FixedArray | Size: 0x7
+				constexpr std::ptrdiff_t m_bBombPlanted = 0x10ab; // bool m_bBombPlanted; |  0x10ab | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

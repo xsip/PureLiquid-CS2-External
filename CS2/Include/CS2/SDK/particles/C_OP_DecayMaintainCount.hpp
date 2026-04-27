@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DecayMaintainCount : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nParticlesToMaintain,int32_t, 0x1d0);
-			PROPERTY(m_flDecayDelay,float32, 0x1d4);
-			PROPERTY(m_nSnapshotControlPoint,int32_t, 0x1d8);
-			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x1e0);
-			PROPERTY(m_bLifespanDecay,bool, 0x1e8);
-			NESTED_PROPERTY(m_flScale,particleslib::CParticleCollectionFloatInput, 0x1f0);
-			PROPERTY(m_bKillNewest,bool, 0x360);
+			PROPERTY(m_nParticlesToMaintain,int32_t, 0x1d8);
+			PROPERTY(m_flDecayDelay,float32, 0x1dc);
+			PROPERTY(m_nSnapshotControlPoint,int32_t, 0x1e0);
+			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x1e8);
+			PROPERTY(m_bLifespanDecay,bool, 0x1f0);
+			NESTED_PROPERTY(m_flScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f8);
+			PROPERTY(m_bKillNewest,bool, 0x368);
 			S2_PAD(0x198);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_DecayMaintainCount) == 0x368, "C_OP_DecayMaintainCount size should be 0x368");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_DecayMaintainCount) == 0x370, "C_OP_DecayMaintainCount size should be 0x370");
+
+#endif
 	}
 }

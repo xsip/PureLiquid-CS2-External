@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_nRenderHeight,int32_t, 0x24);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::EngineLoopState_t) == 0x28, "EngineLoopState_t size should be 0x28");
+
+#endif
 	}
 }

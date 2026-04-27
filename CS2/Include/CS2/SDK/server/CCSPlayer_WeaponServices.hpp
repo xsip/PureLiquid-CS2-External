@@ -27,23 +27,24 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_WeaponServices : public CS2::server::CPlayer_WeaponServices {
 		public:
-			NESTED_PROPERTY(m_flNextAttack,entity2::GameTime_t, 0xc0);
-			PROPERTY(m_bIsLookingAtWeapon,bool, 0xc4);
-			PROPERTY(m_bIsHoldingLookAtWeapon,bool, 0xc5);
-			PROPERTY(m_hSavedWeapon,GlobalTypes::CHandle<server::CBasePlayerWeapon>, 0xc8);
-			PROPERTY(m_nTimeToMelee,int32_t, 0xcc);
-			PROPERTY(m_nTimeToSecondary,int32_t, 0xd0);
-			PROPERTY(m_nTimeToPrimary,int32_t, 0xd4);
-			PROPERTY(m_nTimeToSniperRifle,int32_t, 0xd8);
-			PROPERTY(m_bIsBeingGivenItem,bool, 0xdc);
-			PROPERTY(m_bIsPickingUpItemWithUse,bool, 0xdd);
-			PROPERTY(m_bPickedUpWeapon,bool, 0xde);
-			PROPERTY(m_bDisableAutoDeploy,bool, 0xdf);
-			PROPERTY(m_bIsPickingUpGroundWeapon,bool, 0xe0);
-			PROPERTY(m_networkAnimTiming,GlobalTypes::CNetworkUtlVectorBase< uint8 >, 0x18b8);
-			PROPERTY(m_bBlockInspectUntilNextGraphUpdate,bool, 0x18d0);
-			S2_PAD(0x1828);
+			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0xc0);
+			PROPERTY(m_hSavedWeapon,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerWeapon>), 0xc4);
+			PROPERTY(m_nTimeToMelee,int32_t, 0xc8);
+			PROPERTY(m_nTimeToSecondary,int32_t, 0xcc);
+			PROPERTY(m_nTimeToPrimary,int32_t, 0xd0);
+			PROPERTY(m_nTimeToSniperRifle,int32_t, 0xd4);
+			PROPERTY(m_bIsBeingGivenItem,bool, 0xd8);
+			PROPERTY(m_bIsPickingUpItemWithUse,bool, 0xd9);
+			PROPERTY(m_bPickedUpWeapon,bool, 0xda);
+			PROPERTY(m_bDisableAutoDeploy,bool, 0xdb);
+			PROPERTY(m_bIsPickingUpGroundWeapon,bool, 0xdc);
+			// PROPERTY(m_networkAnimTiming,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0x1860);
+			PROPERTY(m_bBlockInspectUntilNextGraphUpdate,bool, 0x1878);
+			S2_PAD(0x17D0);
 		};
-		//static_assert(sizeof(CS2::server::CCSPlayer_WeaponServices) == 0x18D8, "CCSPlayer_WeaponServices size should be 0x18D8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CCSPlayer_WeaponServices) == 0x1880, "CCSPlayer_WeaponServices size should be 0x1880");
+
+#endif
 	}
 }

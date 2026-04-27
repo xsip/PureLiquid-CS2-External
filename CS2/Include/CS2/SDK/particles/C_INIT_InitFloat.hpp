@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionInitializer.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,12 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitFloat : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_InputValue,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x348);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x34c);
-			NESTED_PROPERTY(m_InputStrength,particleslib::CPerParticleFloatInput, 0x350);
+			NESTED_PROPERTY(m_InputValue,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x350);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x354);
+			NESTED_PROPERTY(m_InputStrength,IDENTITY(particleslib::CPerParticleFloatInput), 0x358);
 			S2_PAD(0x2E8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitFloat) == 0x4C0, "C_INIT_InitFloat size should be 0x4C0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitFloat) == 0x4C8, "C_INIT_InitFloat size should be 0x4C8");
+
+#endif
 	}
 }

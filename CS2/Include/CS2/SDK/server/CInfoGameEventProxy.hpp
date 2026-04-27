@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_flRange,float32, 0x4b0);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoGameEventProxy) == 0x4B8, "CInfoGameEventProxy size should be 0x4B8");
+
+#endif
 	}
 }

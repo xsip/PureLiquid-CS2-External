@@ -26,10 +26,13 @@ namespace CS2 {
 	namespace server {
 		class CItemDogtags : public CS2::server::CItem {
 		public:
-			PROPERTY(m_OwningPlayer,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0xac0);
-			PROPERTY(m_KillingPlayer,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0xac4);
+			PROPERTY(m_OwningPlayer,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x9e0);
+			PROPERTY(m_KillingPlayer,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x9e4);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CItemDogtags) == 0xAD0, "CItemDogtags size should be 0xAD0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CItemDogtags) == 0x9F0, "CItemDogtags size should be 0x9F0");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x20
+			// Class size: 0x3E8
 			namespace CNmEventConsumerLegacy /*: public CS2::client::CNmEventConsumer*/ {
 				// NO SCHEMA DATA FOUND!
 			}

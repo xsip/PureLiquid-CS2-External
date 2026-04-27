@@ -22,18 +22,21 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateOnGrid : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nXCount,particleslib::CParticleCollectionFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_nYCount,particleslib::CParticleCollectionFloatInput, 0x348);
-			NESTED_PROPERTY(m_nZCount,particleslib::CParticleCollectionFloatInput, 0x4b8);
-			NESTED_PROPERTY(m_nXSpacing,particleslib::CParticleCollectionFloatInput, 0x628);
-			NESTED_PROPERTY(m_nYSpacing,particleslib::CParticleCollectionFloatInput, 0x798);
-			NESTED_PROPERTY(m_nZSpacing,particleslib::CParticleCollectionFloatInput, 0x908);
-			PROPERTY(m_nControlPointNumber,int32_t, 0xa78);
-			PROPERTY(m_bLocalSpace,bool, 0xa7c);
-			PROPERTY(m_bCenter,bool, 0xa7d);
-			PROPERTY(m_bHollow,bool, 0xa7e);
+			NESTED_PROPERTY(m_nXCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_nYCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
+			NESTED_PROPERTY(m_nZCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4c0);
+			NESTED_PROPERTY(m_nXSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x630);
+			NESTED_PROPERTY(m_nYSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x7a0);
+			NESTED_PROPERTY(m_nZSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x910);
+			PROPERTY(m_nControlPointNumber,int32_t, 0xa80);
+			PROPERTY(m_bLocalSpace,bool, 0xa84);
+			PROPERTY(m_bCenter,bool, 0xa85);
+			PROPERTY(m_bHollow,bool, 0xa86);
 			S2_PAD(0x8A8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateOnGrid) == 0xA80, "C_INIT_CreateOnGrid size should be 0xA80");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateOnGrid) == 0xA88, "C_INIT_CreateOnGrid size should be 0xA88");
+
+#endif
 	}
 }

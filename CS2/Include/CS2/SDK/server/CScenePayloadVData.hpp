@@ -10,7 +10,10 @@
 #endif
 
 
+#include <SDK/client/ENPCBehaviorOverride_t.hpp>
+#include <SDK/resourcesystem/InfoForResourceTypeIPulseGraphDef.hpp>
 #include <SDK/resourcesystem/InfoForResourceTypeCChoreoSceneResource.hpp>
+#include <SDK/client/InteractionPriority_t.hpp>
 
 
 
@@ -21,9 +24,15 @@ namespace CS2 {
 	namespace server {
 		class CScenePayloadVData  {
 		public:
-			PROPERTY(m_sSceneFile,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>>, 0x0);
-			S2_PAD(0xE0);
+			PROPERTY(m_eNPCBehavior,IDENTITY(client::ENPCBehaviorOverride_t), 0x0);
+			PROPERTY(m_sPulseFile,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIPulseGraphDef>>), 0x8);
+			PROPERTY(m_sSceneFile,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>>), 0xe8);
+			PROPERTY(m_ePriority,IDENTITY(client::InteractionPriority_t), 0x1c8);
+			S2_PAD(0x1D0);
 		};
-		//static_assert(sizeof(CS2::server::CScenePayloadVData) == 0xE0, "CScenePayloadVData size should be 0xE0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CScenePayloadVData) == 0x1D0, "CScenePayloadVData size should be 0x1D0");
+
+#endif
 	}
 }

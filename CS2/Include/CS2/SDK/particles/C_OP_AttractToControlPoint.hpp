@@ -23,14 +23,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_AttractToControlPoint : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_vecComponentScale,GlobalTypes::Vector, 0x1e0);
-			NESTED_PROPERTY(m_fForceAmount,particleslib::CPerParticleFloatInput, 0x1f0);
-			PROPERTY(m_fFalloffPower,float32, 0x360);
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x368);
-			NESTED_PROPERTY(m_fForceAmountMin,particleslib::CPerParticleFloatInput, 0x3d0);
-			PROPERTY(m_bApplyMinForce,bool, 0x540);
+			PROPERTY(m_vecComponentScale,GlobalTypes::Vector, 0x1e8);
+			NESTED_PROPERTY(m_fForceAmount,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f8);
+			PROPERTY(m_fFalloffPower,float32, 0x368);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x370);
+			NESTED_PROPERTY(m_fForceAmountMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x3d8);
+			PROPERTY(m_bApplyMinForce,bool, 0x548);
 			S2_PAD(0x368);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_AttractToControlPoint) == 0x548, "C_OP_AttractToControlPoint size should be 0x548");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_AttractToControlPoint) == 0x550, "C_OP_AttractToControlPoint size should be 0x550");
+
+#endif
 	}
 }

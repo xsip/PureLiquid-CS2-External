@@ -22,8 +22,8 @@ namespace CS2 {
 	namespace server {
 		class ConstraintSoundInfo  {
 		public:
-			NESTED_PROPERTY(m_vSampler,server::VelocitySampler, 0x8);
-			NESTED_PROPERTY(m_soundProfile,server::SimpleConstraintSoundProfile, 0x20);
+			NESTED_PROPERTY(m_vSampler,IDENTITY(server::VelocitySampler), 0x8);
+			NESTED_PROPERTY(m_soundProfile,IDENTITY(server::SimpleConstraintSoundProfile), 0x20);
 			PROPERTY(m_forwardAxis,GlobalTypes::Vector, 0x40);
 			PROPERTY(m_iszTravelSoundFwd,GlobalTypes::CUtlSymbolLarge*, 0x50);
 			PROPERTY(m_iszTravelSoundBack,GlobalTypes::CUtlSymbolLarge*, 0x58);
@@ -34,6 +34,9 @@ namespace CS2 {
 			PROPERTY(m_bPlayReversalSound,bool, 0x91);
 			S2_PAD(0x98);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::ConstraintSoundInfo) == 0x98, "ConstraintSoundInfo size should be 0x98");
+
+#endif
 	}
 }

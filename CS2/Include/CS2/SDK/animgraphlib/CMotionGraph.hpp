@@ -23,15 +23,18 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionGraph  {
 		public:
-			NESTED_PROPERTY(m_paramSpans,animgraphlib::CParamSpanUpdater, 0x10);
-			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x28);
-			PROPERTY(m_pRootNode,GlobalTypes::CSmartPtr<animgraphlib::CMotionNode>, 0x40);
+			NESTED_PROPERTY(m_paramSpans,IDENTITY(animgraphlib::CParamSpanUpdater), 0x10);
+			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x28);
+			PROPERTY(m_pRootNode,IDENTITY(GlobalTypes::CSmartPtr<animgraphlib::CMotionNode>), 0x40);
 			PROPERTY(m_nParameterCount,int32_t, 0x48);
 			PROPERTY(m_nConfigStartIndex,int32_t, 0x4c);
 			PROPERTY(m_nConfigCount,int32_t, 0x50);
 			PROPERTY(m_bLoop,bool, 0x54);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionGraph) == 0x58, "CMotionGraph size should be 0x58");
+
+#endif
 	}
 }

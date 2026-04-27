@@ -23,14 +23,17 @@ namespace CS2 {
 	namespace animgraphlib {
 		class BlendItem_t  {
 		public:
-			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x0);
-			NESTED_PROPERTY(m_pChild,animgraphlib::CAnimUpdateNodeRef, 0x18);
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x28);
+			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x0);
+			NESTED_PROPERTY(m_pChild,IDENTITY(animgraphlib::CAnimUpdateNodeRef), 0x18);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x28);
 			PROPERTY(m_vPos,GlobalTypes::Vector2D, 0x2c);
 			PROPERTY(m_flDuration,float32, 0x34);
 			PROPERTY(m_bUseCustomDuration,bool, 0x38);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::BlendItem_t) == 0x40, "BlendItem_t size should be 0x40");
+
+#endif
 	}
 }

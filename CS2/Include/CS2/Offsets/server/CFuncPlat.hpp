@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7E0
+			// Class size: 0x818
 			namespace CFuncPlat /*: public CS2::server::CBasePlatTrain*/ {
-				constexpr std::ptrdiff_t m_sNoise = 0x7d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sNoise = 0x810; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

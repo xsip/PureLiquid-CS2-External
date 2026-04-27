@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmCachedPoseWriteTask) == 0x60, "CNmCachedPoseWriteTask size should be 0x60");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmCachedPoseWriteTask) == 0x50, "CNmCachedPoseWriteTask size should be 0x50");
+
+#endif
 	}
 }

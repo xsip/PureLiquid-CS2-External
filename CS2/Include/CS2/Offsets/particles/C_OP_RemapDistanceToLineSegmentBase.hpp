@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E8
+			// Class size: 0x1F0
 			namespace C_OP_RemapDistanceToLineSegmentBase /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nCP0 = 0x1d0; // int32_t m_nCP0; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCP1 = 0x1d4; // int32_t m_nCP1; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMinInputValue = 0x1d8; // float32 m_flMinInputValue; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxInputValue = 0x1dc; // float32 m_flMaxInputValue; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bInfiniteLine = 0x1e0; // bool m_bInfiniteLine; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCP0 = 0x1d8; // int32_t m_nCP0; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCP1 = 0x1dc; // int32_t m_nCP1; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinInputValue = 0x1e0; // float32 m_flMinInputValue; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxInputValue = 0x1e4; // float32 m_flMaxInputValue; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bInfiniteLine = 0x1e8; // bool m_bInfiniteLine; |  0x1e8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

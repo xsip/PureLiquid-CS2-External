@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Inflow_BaseEntrypoint : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
-			NESTED_PROPERTY(m_EntryChunk,pulse_runtime_lib::PulseRuntimeChunkIndex_t, 0x48);
-			NESTED_PROPERTY(m_RegisterMap,pulse_runtime_lib::PulseRegisterMap_t, 0x50);
+			NESTED_PROPERTY(m_EntryChunk,IDENTITY(pulse_runtime_lib::PulseRuntimeChunkIndex_t), 0x48);
+			NESTED_PROPERTY(m_RegisterMap,IDENTITY(pulse_runtime_lib::PulseRegisterMap_t), 0x50);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Inflow_BaseEntrypoint) == 0x80, "CPulseCell_Inflow_BaseEntrypoint size should be 0x80");
+
+#endif
 	}
 }

@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_InputVector,GlobalTypes::CSmartPropAttributeVector, 0x58);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_ComputeNormalizedVector3D) == 0x98, "CSmartPropOperation_ComputeNormalizedVector3D size should be 0x98");
+
+#endif
 	}
 }

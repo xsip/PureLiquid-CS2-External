@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CScriptNavBlocker : public CS2::server::CFuncNavBlocker {
 		public:
-			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x748);
+			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x780);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CScriptNavBlocker) == 0x758, "CScriptNavBlocker size should be 0x758");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CScriptNavBlocker) == 0x790, "CScriptNavBlocker size should be 0x790");
+
+#endif
 	}
 }

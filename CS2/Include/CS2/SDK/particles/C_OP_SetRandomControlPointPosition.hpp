@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetRandomControlPointPosition : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_bUseWorldLocation,bool, 0x1d8);
-			PROPERTY(m_bOrient,bool, 0x1d9);
-			PROPERTY(m_nCP1,int32_t, 0x1dc);
-			PROPERTY(m_nHeadLocation,int32_t, 0x1e0);
-			NESTED_PROPERTY(m_flReRandomRate,particleslib::CParticleCollectionFloatInput, 0x1e8);
-			PROPERTY(m_vecCPMinPos,GlobalTypes::Vector, 0x358);
-			PROPERTY(m_vecCPMaxPos,GlobalTypes::Vector, 0x364);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CParticleCollectionFloatInput, 0x370);
+			PROPERTY(m_bUseWorldLocation,bool, 0x1e0);
+			PROPERTY(m_bOrient,bool, 0x1e1);
+			PROPERTY(m_nCP1,int32_t, 0x1e4);
+			PROPERTY(m_nHeadLocation,int32_t, 0x1e8);
+			NESTED_PROPERTY(m_flReRandomRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f0);
+			PROPERTY(m_vecCPMinPos,GlobalTypes::Vector, 0x360);
+			PROPERTY(m_vecCPMaxPos,GlobalTypes::Vector, 0x36c);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x378);
 			S2_PAD(0x308);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetRandomControlPointPosition) == 0x4E0, "C_OP_SetRandomControlPointPosition size should be 0x4E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetRandomControlPointPosition) == 0x4E8, "C_OP_SetRandomControlPointPosition size should be 0x4E8");
+
+#endif
 	}
 }

@@ -26,10 +26,13 @@ namespace CS2 {
 	namespace client {
 		class CAttributeList  {
 		public:
-			PROPERTY(m_Attributes,GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::CEconItemAttribute>, 0x8);
-			PROPERTY(m_pManager,client::CAttributeManager*, 0x70);
+			// PROPERTY(m_Attributes,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::CEconItemAttribute>), 0x8);
+			PROPERTY(m_pManager,IDENTITY(client::CAttributeManager*), 0x70);
 			S2_PAD(0x78);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CAttributeList) == 0x78, "CAttributeList size should be 0x78");
+
+#endif
 	}
 }

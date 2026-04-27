@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1D8
+			// Class size: 0x1E0
 			namespace C_OP_AlphaDecay /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flMinAlpha = 0x1d0; // float32 m_flMinAlpha; |  0x1d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinAlpha = 0x1d8; // float32 m_flMinAlpha; |  0x1d8 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

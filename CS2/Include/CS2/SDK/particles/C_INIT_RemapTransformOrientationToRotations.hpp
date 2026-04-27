@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapTransformOrientationToRotations : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1d8);
-			PROPERTY(m_vecRotation,GlobalTypes::Vector, 0x240);
-			PROPERTY(m_bUseQuat,bool, 0x24c);
-			PROPERTY(m_bWriteNormal,bool, 0x24d);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
+			PROPERTY(m_vecRotation,GlobalTypes::Vector, 0x248);
+			PROPERTY(m_bUseQuat,bool, 0x254);
+			PROPERTY(m_bWriteNormal,bool, 0x255);
 			S2_PAD(0x78);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RemapTransformOrientationToRotations) == 0x250, "C_INIT_RemapTransformOrientationToRotations size should be 0x250");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RemapTransformOrientationToRotations) == 0x258, "C_INIT_RemapTransformOrientationToRotations size should be 0x258");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CTeamplayRules : public CS2::server::CMultiplayRules {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTeamplayRules) == 0xD0, "CTeamplayRules size should be 0xD0");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nConfig,uint16_t, 0x2);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::ConfigIndex) == 0x4, "ConfigIndex size should be 0x4");
+
+#endif
 	}
 }

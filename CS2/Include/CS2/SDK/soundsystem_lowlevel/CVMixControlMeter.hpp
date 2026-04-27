@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nValueIndex,int32_t, 0x10);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::CVMixControlMeter) == 0x18, "CVMixControlMeter size should be 0x18");
+
+#endif
 	}
 }

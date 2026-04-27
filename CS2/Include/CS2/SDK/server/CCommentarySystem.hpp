@@ -11,6 +11,7 @@
 
 
 #include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/server/modifiedconvars_t.hpp>
 #include <SDK/server/CPointCommentaryNode.hpp>
 
 
@@ -22,18 +23,21 @@ namespace CS2 {
 	namespace server {
 		class CCommentarySystem  {
 		public:
-			PROPERTY(m_bCommentaryConvarsChanging,bool, 0x11);
 			PROPERTY(m_bCommentaryEnabledMidGame,bool, 0x12);
-			NESTED_PROPERTY(m_flNextTeleportTime,entity2::GameTime_t, 0x14);
+			NESTED_PROPERTY(m_flNextTeleportTime,IDENTITY(entity2::GameTime_t), 0x14);
 			PROPERTY(m_iTeleportStage,int32_t, 0x18);
 			PROPERTY(m_bCheatState,bool, 0x1c);
 			PROPERTY(m_bIsFirstSpawnGroupToLoad,bool, 0x1d);
-			PROPERTY(m_hCurrentNode,GlobalTypes::CHandle<server::CPointCommentaryNode>, 0x38);
-			PROPERTY(m_hActiveCommentaryNode,GlobalTypes::CHandle<server::CPointCommentaryNode>, 0x3c);
-			PROPERTY(m_hLastCommentaryNode,GlobalTypes::CHandle<server::CPointCommentaryNode>, 0x40);
-			NESTED_PROPERTY(m_vecNodes,server::CUtlVector<GlobalTypes::CHandle<server::CPointCommentaryNode>>, 0x48);
+			NESTED_PROPERTY(m_ModifiedConvars,IDENTITY(GlobalTypes::CUtlVector<server::modifiedconvars_t>), 0x20);
+			PROPERTY(m_hCurrentNode,IDENTITY(GlobalTypes::CHandle<server::CPointCommentaryNode>), 0x38);
+			PROPERTY(m_hActiveCommentaryNode,IDENTITY(GlobalTypes::CHandle<server::CPointCommentaryNode>), 0x3c);
+			PROPERTY(m_hLastCommentaryNode,IDENTITY(GlobalTypes::CHandle<server::CPointCommentaryNode>), 0x40);
+			NESTED_PROPERTY(m_vecNodes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CPointCommentaryNode>>), 0x48);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCommentarySystem) == 0x60, "CCommentarySystem size should be 0x60");
+
+#endif
 	}
 }

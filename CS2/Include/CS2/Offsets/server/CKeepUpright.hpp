@@ -12,6 +12,7 @@ namespace CS2 {
 			namespace CKeepUpright /*: public CS2::server::CPointEntity*/ {
 				constexpr std::ptrdiff_t m_worldGoalAxis = 0x4b0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_localTestAxis = 0x4bc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_pController = 0x4c8; // client::IPhysicsMotionController**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_nameAttach = 0x4d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_attachedObject = 0x4d8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_angularLimit = 0x4dc; // float32 m_angularLimit; |  0x4dc | Schema_Builtin | Size: 0x4

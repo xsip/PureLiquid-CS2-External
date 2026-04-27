@@ -23,20 +23,23 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ContinuousEmitter : public CS2::particles::CParticleFunctionEmitter {
 		public:
-			NESTED_PROPERTY(m_flEmissionDuration,particleslib::CParticleCollectionFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_flStartTime,particleslib::CParticleCollectionFloatInput, 0x348);
-			NESTED_PROPERTY(m_flEmitRate,particleslib::CParticleCollectionFloatInput, 0x4b8);
-			PROPERTY(m_flEmissionScale,float32, 0x628);
-			PROPERTY(m_flScalePerParentParticle,float32, 0x62c);
-			PROPERTY(m_bInitFromKilledParentParticles,bool, 0x630);
-			PROPERTY(m_nEventType,particles::EventTypeSelection_t, 0x634);
-			PROPERTY(m_nSnapshotControlPoint,int32_t, 0x638);
-			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x640);
-			PROPERTY(m_nLimitPerUpdate,int32_t, 0x648);
-			PROPERTY(m_bForceEmitOnFirstUpdate,bool, 0x64c);
-			PROPERTY(m_bForceEmitOnLastUpdate,bool, 0x64d);
+			NESTED_PROPERTY(m_flEmissionDuration,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x350);
+			NESTED_PROPERTY(m_flEmitRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4c0);
+			PROPERTY(m_flEmissionScale,float32, 0x630);
+			PROPERTY(m_flScalePerParentParticle,float32, 0x634);
+			PROPERTY(m_bInitFromKilledParentParticles,bool, 0x638);
+			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x63c);
+			PROPERTY(m_nSnapshotControlPoint,int32_t, 0x640);
+			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x648);
+			PROPERTY(m_nLimitPerUpdate,int32_t, 0x650);
+			PROPERTY(m_bForceEmitOnFirstUpdate,bool, 0x654);
+			PROPERTY(m_bForceEmitOnLastUpdate,bool, 0x655);
 			S2_PAD(0x480);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ContinuousEmitter) == 0x658, "C_OP_ContinuousEmitter size should be 0x658");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ContinuousEmitter) == 0x660, "C_OP_ContinuousEmitter size should be 0x660");
+
+#endif
 	}
 }

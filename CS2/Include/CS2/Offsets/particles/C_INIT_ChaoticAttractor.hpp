@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x200
+			// Class size: 0x208
 			namespace C_INIT_ChaoticAttractor /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_flAParm = 0x1d8; // float32 m_flAParm; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBParm = 0x1dc; // float32 m_flBParm; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flCParm = 0x1e0; // float32 m_flCParm; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDParm = 0x1e4; // float32 m_flDParm; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flScale = 0x1e8; // float32 m_flScale; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpeedMin = 0x1ec; // float32 m_flSpeedMin; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpeedMax = 0x1f0; // float32 m_flSpeedMax; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nBaseCP = 0x1f4; // int32_t m_nBaseCP; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUniformSpeed = 0x1f8; // bool m_bUniformSpeed; |  0x1f8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flAParm = 0x1e0; // float32 m_flAParm; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBParm = 0x1e4; // float32 m_flBParm; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCParm = 0x1e8; // float32 m_flCParm; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDParm = 0x1ec; // float32 m_flDParm; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flScale = 0x1f0; // float32 m_flScale; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpeedMin = 0x1f4; // float32 m_flSpeedMin; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpeedMax = 0x1f8; // float32 m_flSpeedMax; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nBaseCP = 0x1fc; // int32_t m_nBaseCP; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUniformSpeed = 0x200; // bool m_bUniformSpeed; |  0x200 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -30,7 +30,6 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nAttachmentIndex = 0x64; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
 				constexpr std::ptrdiff_t m_nAttachmentName = 0x68; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_iEffectName = 0x6c; // uint16_t m_iEffectName; |  0x6c | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_nExplosionType = 0x6e; // uint8_t m_nExplosionType; |  0x6e | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace soundsystem_lowlevel {
 		class VMixEQ8Desc_t  {
 		public:
-			PROPERTY_ARRAY(m_stages,soundsystem_lowlevel::VMixFilterDesc_t, 8 , 0x0);
+			PROPERTY_ARRAY(m_stages,IDENTITY(soundsystem_lowlevel::VMixFilterDesc_t), 8 , 0x0);
 			S2_PAD(0x80);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixEQ8Desc_t) == 0x80, "VMixEQ8Desc_t size should be 0x80");
+
+#endif
 	}
 }

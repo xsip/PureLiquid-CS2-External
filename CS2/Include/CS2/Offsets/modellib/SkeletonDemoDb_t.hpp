@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0x38
 			namespace SkeletonDemoDb_t /**/ {
 				constexpr std::ptrdiff_t m_AnimCaptures = 0x0; // GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t*>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_CameraTrack = 0x18; // GlobalTypes::CUtlVector<modellib::Camera_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_CameraTrack = 0x18; // GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t_Camera_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_flRecordingTime = 0x30; // float32 m_flRecordingTime; |  0x30 | Schema_Builtin | Size: 0x4
 			}
 		}

@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace server {
 		class CMarkupVolumeTagged : public CS2::server::CMarkupVolume {
 		public:
-			NESTED_PROPERTY(m_GroupNames,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x738);
-			NESTED_PROPERTY(m_Tags,GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>, 0x750);
-			PROPERTY(m_bIsGroup,bool, 0x768);
-			PROPERTY(m_bGroupByPrefab,bool, 0x769);
-			PROPERTY(m_bGroupByVolume,bool, 0x76a);
-			PROPERTY(m_bGroupOtherGroups,bool, 0x76b);
-			PROPERTY(m_bIsInGroup,bool, 0x76c);
+			NESTED_PROPERTY(m_GroupNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x770);
+			NESTED_PROPERTY(m_Tags,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x788);
+			PROPERTY(m_bIsGroup,bool, 0x7a0);
+			PROPERTY(m_bGroupByPrefab,bool, 0x7a1);
+			PROPERTY(m_bGroupByVolume,bool, 0x7a2);
+			PROPERTY(m_bGroupOtherGroups,bool, 0x7a3);
+			PROPERTY(m_bIsInGroup,bool, 0x7a4);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CMarkupVolumeTagged) == 0x770, "CMarkupVolumeTagged size should be 0x770");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CMarkupVolumeTagged) == 0x7A8, "CMarkupVolumeTagged size should be 0x7A8");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1C8
+			// Class size: 0x1E0
 			namespace CPulseGraphInstance_GameBlackboard /*: public CS2::server::CPulseGraphInstance_ServerEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x620
+			// Class size: 0x618
 			namespace C_TintController /*: public CS2::client::C_BaseEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -23,12 +23,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_LerpToOtherAttribute : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_nFieldInputFrom,particles::ParticleAttributeIndex_t, 0x340);
-			NESTED_PROPERTY(m_nFieldInput,particles::ParticleAttributeIndex_t, 0x344);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x348);
-			S2_PAD(0x1A0);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_nFieldInputFrom,IDENTITY(particles::ParticleAttributeIndex_t), 0x348);
+			NESTED_PROPERTY(m_nFieldInput,IDENTITY(particles::ParticleAttributeIndex_t), 0x34c);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x350);
+			S2_PAD(0x1A8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_LerpToOtherAttribute) == 0x370, "C_OP_LerpToOtherAttribute size should be 0x370");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_LerpToOtherAttribute) == 0x380, "C_OP_LerpToOtherAttribute size should be 0x380");
+
+#endif
 	}
 }

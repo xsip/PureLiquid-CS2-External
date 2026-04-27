@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xE98
+			// Class size: 0xFB8
 			namespace C_FuncTrackTrain /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_nLongAxis = 0xe88; // int32_t m_nLongAxis; |  0xe88 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadius = 0xe8c; // float32 m_flRadius; |  0xe8c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLineLength = 0xe90; // float32 m_flLineLength; |  0xe90 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nLongAxis = 0xfa8; // int32_t m_nLongAxis; |  0xfa8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0xfac; // float32 m_flRadius; |  0xfac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLineLength = 0xfb0; // float32 m_flLineLength; |  0xfb0 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

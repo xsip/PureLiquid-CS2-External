@@ -22,19 +22,22 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapModelVolumetoCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nBBoxType,particles::BBoxVolumeType_t, 0x1d8);
-			PROPERTY(m_nInControlPointNumber,int32_t, 0x1dc);
-			PROPERTY(m_nOutControlPointNumber,int32_t, 0x1e0);
-			PROPERTY(m_nOutControlPointMaxNumber,int32_t, 0x1e4);
-			PROPERTY(m_nField,int32_t, 0x1e8);
-			PROPERTY(m_flInputMin,float32, 0x1ec);
-			PROPERTY(m_flInputMax,float32, 0x1f0);
-			PROPERTY(m_flOutputMin,float32, 0x1f4);
-			PROPERTY(m_flOutputMax,float32, 0x1f8);
-			PROPERTY(m_bBBoxOnly,bool, 0x1fc);
-			PROPERTY(m_bCubeRoot,bool, 0x1fd);
+			PROPERTY(m_nBBoxType,IDENTITY(particles::BBoxVolumeType_t), 0x1e0);
+			PROPERTY(m_nInControlPointNumber,int32_t, 0x1e4);
+			PROPERTY(m_nOutControlPointNumber,int32_t, 0x1e8);
+			PROPERTY(m_nOutControlPointMaxNumber,int32_t, 0x1ec);
+			PROPERTY(m_nField,int32_t, 0x1f0);
+			PROPERTY(m_flInputMin,float32, 0x1f4);
+			PROPERTY(m_flInputMax,float32, 0x1f8);
+			PROPERTY(m_flOutputMin,float32, 0x1fc);
+			PROPERTY(m_flOutputMax,float32, 0x200);
+			PROPERTY(m_bBBoxOnly,bool, 0x204);
+			PROPERTY(m_bCubeRoot,bool, 0x205);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapModelVolumetoCP) == 0x200, "C_OP_RemapModelVolumetoCP size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapModelVolumetoCP) == 0x208, "C_OP_RemapModelVolumetoCP size should be 0x208");
+
+#endif
 	}
 }

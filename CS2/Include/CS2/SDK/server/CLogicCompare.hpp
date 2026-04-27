@@ -23,12 +23,15 @@ namespace CS2 {
 		public:
 			PROPERTY(m_flInValue,float32, 0x4a8);
 			PROPERTY(m_flCompareValue,float32, 0x4ac);
-			PROPERTY(m_OnLessThan,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4b0);
-			PROPERTY(m_OnEqualTo,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4d0);
-			PROPERTY(m_OnNotEqualTo,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4f0);
-			PROPERTY(m_OnGreaterThan,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x510);
+			// PROPERTY(m_OnLessThan,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4b0);
+			// PROPERTY(m_OnEqualTo,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4d0);
+			// PROPERTY(m_OnNotEqualTo,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4f0);
+			// PROPERTY(m_OnGreaterThan,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x510);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicCompare) == 0x530, "CLogicCompare size should be 0x530");
+
+#endif
 	}
 }

@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_QuantizeFloat : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_InputValue,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x348);
+			NESTED_PROPERTY(m_InputValue,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x350);
 			S2_PAD(0x178);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_QuantizeFloat) == 0x350, "C_INIT_QuantizeFloat size should be 0x350");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_QuantizeFloat) == 0x358, "C_INIT_QuantizeFloat size should be 0x358");
+
+#endif
 	}
 }

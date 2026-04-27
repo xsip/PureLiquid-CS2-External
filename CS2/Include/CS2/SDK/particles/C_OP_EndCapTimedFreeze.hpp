@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_EndCapTimedFreeze : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_flFreezeTime,particleslib::CParticleCollectionFloatInput, 0x1d0);
+			NESTED_PROPERTY(m_flFreezeTime,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1d8);
 			S2_PAD(0x170);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_EndCapTimedFreeze) == 0x340, "C_OP_EndCapTimedFreeze size should be 0x340");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_EndCapTimedFreeze) == 0x348, "C_OP_EndCapTimedFreeze size should be 0x348");
+
+#endif
 	}
 }

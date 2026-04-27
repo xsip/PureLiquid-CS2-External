@@ -26,16 +26,19 @@ namespace CS2 {
 	namespace client {
 		class C_FuncMonitor : public CS2::client::C_FuncBrush {
 		public:
-			PROPERTY(m_targetCamera,GlobalTypes::CUtlString*, 0xe88);
-			PROPERTY(m_nResolutionEnum,int32_t, 0xe90);
-			PROPERTY(m_bRenderShadows,bool, 0xe94);
-			PROPERTY(m_bUseUniqueColorTarget,bool, 0xe95);
-			PROPERTY(m_brushModelName,GlobalTypes::CUtlString*, 0xe98);
-			PROPERTY(m_hTargetCamera,GlobalTypes::CHandle<client::C_BaseEntity>, 0xea0);
-			PROPERTY(m_bEnabled,bool, 0xea4);
-			PROPERTY(m_bDraw3DSkybox,bool, 0xea5);
+			PROPERTY(m_targetCamera,GlobalTypes::CUtlString*, 0xfa8);
+			PROPERTY(m_nResolutionEnum,int32_t, 0xfb0);
+			PROPERTY(m_bRenderShadows,bool, 0xfb4);
+			PROPERTY(m_bUseUniqueColorTarget,bool, 0xfb5);
+			PROPERTY(m_brushModelName,GlobalTypes::CUtlString*, 0xfb8);
+			PROPERTY(m_hTargetCamera,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xfc0);
+			PROPERTY(m_bEnabled,bool, 0xfc4);
+			PROPERTY(m_bDraw3DSkybox,bool, 0xfc5);
 			S2_PAD(0x478);
 		};
-		//static_assert(sizeof(CS2::client::C_FuncMonitor) == 0x1300, "C_FuncMonitor size should be 0x1300");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_FuncMonitor) == 0x1420, "C_FuncMonitor size should be 0x1420");
+
+#endif
 	}
 }

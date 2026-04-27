@@ -8,25 +8,26 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x400
+			// Class size: 0xAC0
 			namespace C_OP_MovementPlaceOnGround /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flOffset = 0x1d0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x340; // float32 m_flMaxTraceLength; |  0x340 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTolerance = 0x344; // float32 m_flTolerance; |  0x344 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTraceOffset = 0x348; // float32 m_flTraceOffset; |  0x348 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLerpRate = 0x34c; // float32 m_flLerpRate; |  0x34c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_CollisionGroupName = 0x350; // char m_CollisionGroupName[128]; |  0x350 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nTraceSet = 0x3d0; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nRefCP1 = 0x3d4; // int32_t m_nRefCP1; |  0x3d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRefCP2 = 0x3d8; // int32_t m_nRefCP2; |  0x3d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nLerpCP = 0x3dc; // int32_t m_nLerpCP; |  0x3dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTraceMissBehavior = 0x3e8; // particles::ParticleTraceMissBehavior_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bIncludeShotHull = 0x3ec; // bool m_bIncludeShotHull; |  0x3ec | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIncludeWater = 0x3ed; // bool m_bIncludeWater; |  0x3ed | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetNormal = 0x3f0; // bool m_bSetNormal; |  0x3f0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bScaleOffset = 0x3f1; // bool m_bScaleOffset; |  0x3f1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nPreserveOffsetCP = 0x3f4; // int32_t m_nPreserveOffsetCP; |  0x3f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nIgnoreCP = 0x3f8; // int32_t m_nIgnoreCP; |  0x3f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOffset = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x348; // float32 m_flMaxTraceLength; |  0x348 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTolerance = 0x34c; // float32 m_flTolerance; |  0x34c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecTraceDir = 0x350; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flTraceOffset = 0xa08; // float32 m_flTraceOffset; |  0xa08 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLerpRate = 0xa0c; // float32 m_flLerpRate; |  0xa0c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_CollisionGroupName = 0xa10; // char m_CollisionGroupName[128]; |  0xa10 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nTraceSet = 0xa90; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nRefCP1 = 0xa94; // int32_t m_nRefCP1; |  0xa94 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRefCP2 = 0xa98; // int32_t m_nRefCP2; |  0xa98 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nLerpCP = 0xa9c; // int32_t m_nLerpCP; |  0xa9c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTraceMissBehavior = 0xaa8; // particles::ParticleTraceMissBehavior_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bIncludeShotHull = 0xaac; // bool m_bIncludeShotHull; |  0xaac | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIncludeWater = 0xaad; // bool m_bIncludeWater; |  0xaad | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetNormal = 0xab0; // bool m_bSetNormal; |  0xab0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bScaleOffset = 0xab1; // bool m_bScaleOffset; |  0xab1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nPreserveOffsetCP = 0xab4; // int32_t m_nPreserveOffsetCP; |  0xab4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nIgnoreCP = 0xab8; // int32_t m_nIgnoreCP; |  0xab8 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

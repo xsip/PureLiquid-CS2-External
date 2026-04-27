@@ -16,7 +16,6 @@
 #include <SDK/client/ItemFlagTypes_t.hpp>
 #include <SDK/client/AmmoIndex_t.hpp>
 #include <SDK/client/RumbleEffect_t.hpp>
-#include <SDK/client/WeaponSound_t.hpp>
 
 
 
@@ -27,39 +26,43 @@ namespace CS2 {
 	namespace client {
 		class CBasePlayerWeaponVData : public CS2::client::CEntitySubclassVDataBase {
 		public:
-			PROPERTY(m_szWorldModel,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>, 0x28);
-			PROPERTY(m_sToolsOnlyOwnerModelName,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>, 0x108);
-			PROPERTY(m_bBuiltRightHanded,bool, 0x1e8);
-			PROPERTY(m_bAllowFlipping,bool, 0x1e9);
-			PROPERTY(m_sMuzzleAttachment,GlobalTypes::CAttachmentNameSymbolWithStorage, 0x1f0);
-			PROPERTY(m_szMuzzleFlashParticle,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>, 0x210);
-			PROPERTY(m_szMuzzleFlashParticleConfig,GlobalTypes::CUtlString*, 0x2f0);
-			PROPERTY(m_szBarrelSmokeParticle,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>, 0x2f8);
-			PROPERTY(m_nMuzzleSmokeShotThreshold,uint8_t, 0x3d8);
-			PROPERTY(m_flMuzzleSmokeTimeout,float32, 0x3dc);
-			PROPERTY(m_flMuzzleSmokeDecrementRate,float32, 0x3e0);
-			PROPERTY(m_bGenerateMuzzleLight,bool, 0x3e4);
-			PROPERTY(m_bLinkedCooldowns,bool, 0x3e5);
-			PROPERTY(m_iFlags,client::ItemFlagTypes_t, 0x3e6);
-			PROPERTY(m_iWeight,int32_t, 0x3e8);
-			PROPERTY(m_bAutoSwitchTo,bool, 0x3ec);
-			PROPERTY(m_bAutoSwitchFrom,bool, 0x3ed);
-			NESTED_PROPERTY(m_nPrimaryAmmoType,client::AmmoIndex_t, 0x3ee);
-			NESTED_PROPERTY(m_nSecondaryAmmoType,client::AmmoIndex_t, 0x3ef);
-			PROPERTY(m_iMaxClip1,int32_t, 0x3f0);
-			PROPERTY(m_iMaxClip2,int32_t, 0x3f4);
-			PROPERTY(m_iDefaultClip1,int32_t, 0x3f8);
-			PROPERTY(m_iDefaultClip2,int32_t, 0x3fc);
-			PROPERTY(m_bReserveAmmoAsClips,bool, 0x400);
-			PROPERTY(m_bTreatAsSingleClip,bool, 0x401);
-			PROPERTY(m_bKeepLoadedAmmo,bool, 0x402);
-			PROPERTY(m_iRumbleEffect,client::RumbleEffect_t, 0x404);
-			PROPERTY(m_flDropSpeed,float32, 0x408);
-			PROPERTY(m_iSlot,int32_t, 0x40c);
-			PROPERTY(m_iPosition,int32_t, 0x410);
-			// PROPERTY(m_aShootSounds,GlobalTypes::CUtlOrderedMap< client::WeaponSound_t, CSoundEventName >, 0x418);
-			S2_PAD(0x418);
+			PROPERTY(m_szWorldModel,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x28);
+			PROPERTY(m_szWorldModelAg2Override,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x108);
+			PROPERTY(m_sToolsOnlyOwnerModelName,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCModel>>), 0x1e8);
+			PROPERTY(m_bBuiltRightHanded,bool, 0x2c8);
+			PROPERTY(m_bAllowFlipping,bool, 0x2c9);
+			PROPERTY(m_sMuzzleAttachment,GlobalTypes::CAttachmentNameSymbolWithStorage, 0x2d0);
+			PROPERTY(m_szMuzzleFlashParticle,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>), 0x2f0);
+			PROPERTY(m_szMuzzleFlashParticleConfig,GlobalTypes::CUtlString*, 0x3d0);
+			PROPERTY(m_szBarrelSmokeParticle,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>), 0x3d8);
+			PROPERTY(m_nMuzzleSmokeShotThreshold,uint8_t, 0x4b8);
+			PROPERTY(m_flMuzzleSmokeTimeout,float32, 0x4bc);
+			PROPERTY(m_flMuzzleSmokeDecrementRate,float32, 0x4c0);
+			PROPERTY(m_bGenerateMuzzleLight,bool, 0x4c4);
+			PROPERTY(m_bLinkedCooldowns,bool, 0x4c5);
+			PROPERTY(m_iFlags,IDENTITY(client::ItemFlagTypes_t), 0x4c6);
+			PROPERTY(m_iWeight,int32_t, 0x4c8);
+			PROPERTY(m_bAutoSwitchTo,bool, 0x4cc);
+			PROPERTY(m_bAutoSwitchFrom,bool, 0x4cd);
+			NESTED_PROPERTY(m_nPrimaryAmmoType,IDENTITY(client::AmmoIndex_t), 0x4ce);
+			NESTED_PROPERTY(m_nSecondaryAmmoType,IDENTITY(client::AmmoIndex_t), 0x4cf);
+			PROPERTY(m_iMaxClip1,int32_t, 0x4d0);
+			PROPERTY(m_iMaxClip2,int32_t, 0x4d4);
+			PROPERTY(m_iDefaultClip1,int32_t, 0x4d8);
+			PROPERTY(m_iDefaultClip2,int32_t, 0x4dc);
+			PROPERTY(m_bReserveAmmoAsClips,bool, 0x4e0);
+			PROPERTY(m_bTreatAsSingleClip,bool, 0x4e1);
+			PROPERTY(m_bKeepLoadedAmmo,bool, 0x4e2);
+			PROPERTY(m_iRumbleEffect,IDENTITY(client::RumbleEffect_t), 0x4e4);
+			PROPERTY(m_flDropSpeed,float32, 0x4e8);
+			PROPERTY(m_iSlot,int32_t, 0x4ec);
+			PROPERTY(m_iPosition,int32_t, 0x4f0);
+			// PROPERTY(m_aShootSounds,IDENTITY(GlobalTypes::CUtlOrderedMap< WeaponSound_t, CSoundEventName >), 0x4f8);
+			S2_PAD(0x4F8);
 		};
-		//static_assert(sizeof(CS2::client::CBasePlayerWeaponVData) == 0x440, "CBasePlayerWeaponVData size should be 0x440");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CBasePlayerWeaponVData) == 0x520, "CBasePlayerWeaponVData size should be 0x520");
+
+#endif
 	}
 }

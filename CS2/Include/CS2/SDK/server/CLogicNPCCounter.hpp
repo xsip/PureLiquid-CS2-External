@@ -22,22 +22,22 @@ namespace CS2 {
 	namespace server {
 		class CLogicNPCCounter : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_OnMinCountAll,entity2::CEntityIOOutput, 0x4a8);
-			NESTED_PROPERTY(m_OnMaxCountAll,entity2::CEntityIOOutput, 0x4c0);
-			PROPERTY(m_OnFactorAll,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4d8);
-			PROPERTY(m_OnMinPlayerDistAll,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4f8);
-			NESTED_PROPERTY(m_OnMinCount_1,entity2::CEntityIOOutput, 0x518);
-			NESTED_PROPERTY(m_OnMaxCount_1,entity2::CEntityIOOutput, 0x530);
-			PROPERTY(m_OnFactor_1,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x548);
-			PROPERTY(m_OnMinPlayerDist_1,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x568);
-			NESTED_PROPERTY(m_OnMinCount_2,entity2::CEntityIOOutput, 0x588);
-			NESTED_PROPERTY(m_OnMaxCount_2,entity2::CEntityIOOutput, 0x5a0);
-			PROPERTY(m_OnFactor_2,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x5b8);
-			PROPERTY(m_OnMinPlayerDist_2,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x5d8);
-			NESTED_PROPERTY(m_OnMinCount_3,entity2::CEntityIOOutput, 0x5f8);
-			NESTED_PROPERTY(m_OnMaxCount_3,entity2::CEntityIOOutput, 0x610);
-			PROPERTY(m_OnFactor_3,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x628);
-			PROPERTY(m_OnMinPlayerDist_3,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x648);
+			NESTED_PROPERTY(m_OnMinCountAll,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
+			NESTED_PROPERTY(m_OnMaxCountAll,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
+			// PROPERTY(m_OnFactorAll,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4d8);
+			// PROPERTY(m_OnMinPlayerDistAll,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4f8);
+			NESTED_PROPERTY(m_OnMinCount_1,IDENTITY(entity2::CEntityIOOutput), 0x518);
+			NESTED_PROPERTY(m_OnMaxCount_1,IDENTITY(entity2::CEntityIOOutput), 0x530);
+			// PROPERTY(m_OnFactor_1,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x548);
+			// PROPERTY(m_OnMinPlayerDist_1,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x568);
+			NESTED_PROPERTY(m_OnMinCount_2,IDENTITY(entity2::CEntityIOOutput), 0x588);
+			NESTED_PROPERTY(m_OnMaxCount_2,IDENTITY(entity2::CEntityIOOutput), 0x5a0);
+			// PROPERTY(m_OnFactor_2,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x5b8);
+			// PROPERTY(m_OnMinPlayerDist_2,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x5d8);
+			NESTED_PROPERTY(m_OnMinCount_3,IDENTITY(entity2::CEntityIOOutput), 0x5f8);
+			NESTED_PROPERTY(m_OnMaxCount_3,IDENTITY(entity2::CEntityIOOutput), 0x610);
+			// PROPERTY(m_OnFactor_3,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x628);
+			// PROPERTY(m_OnMinPlayerDist_3,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x648);
 			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x668);
 			PROPERTY(m_iszSourceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x670);
 			PROPERTY(m_flDistanceMax,float32, 0x678);
@@ -72,6 +72,9 @@ namespace CS2 {
 			PROPERTY(m_flDefaultDist_3,float32, 0x70c);
 			S2_PAD(0x280);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicNPCCounter) == 0x728, "CLogicNPCCounter size should be 0x728");
+
+#endif
 	}
 }

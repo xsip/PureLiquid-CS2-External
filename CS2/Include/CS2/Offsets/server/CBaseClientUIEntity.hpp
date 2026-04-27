@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x890
+			// Class size: 0x8C8
 			namespace CBaseClientUIEntity /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_bEnabled = 0x730; // bool m_bEnabled; |  0x730 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_DialogXMLName = 0x738; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_PanelClassName = 0x740; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_PanelID = 0x748; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_CustomOutput0 = 0x750; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput1 = 0x770; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput2 = 0x790; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput3 = 0x7b0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput4 = 0x7d0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput5 = 0x7f0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput6 = 0x810; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput7 = 0x830; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput8 = 0x850; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_CustomOutput9 = 0x870; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_bEnabled = 0x768; // bool m_bEnabled; |  0x768 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_DialogXMLName = 0x770; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_PanelClassName = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_PanelID = 0x780; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_CustomOutput0 = 0x788; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput1 = 0x7a8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput2 = 0x7c8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput3 = 0x7e8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput4 = 0x808; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput5 = 0x828; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput6 = 0x848; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput7 = 0x868; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput8 = 0x888; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_CustomOutput9 = 0x8a8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

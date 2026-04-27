@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xEE0
+			// Class size: 0x1000
 			namespace C_FuncLadder /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_vecLadderDir = 0xe88; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_Dismounts = 0xe98; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_InfoLadderDismount>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vecLocalTop = 0xeb0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecPlayerMountPositionTop = 0xebc; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecPlayerMountPositionBottom = 0xec8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flAutoRideSpeed = 0xed4; // float32 m_flAutoRideSpeed; |  0xed4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bDisabled = 0xed8; // bool m_bDisabled; |  0xed8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFakeLadder = 0xed9; // bool m_bFakeLadder; |  0xed9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bHasSlack = 0xeda; // bool m_bHasSlack; |  0xeda | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecLadderDir = 0xfa8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_Dismounts = 0xfb8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_InfoLadderDismount>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecLocalTop = 0xfd0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecPlayerMountPositionTop = 0xfdc; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecPlayerMountPositionBottom = 0xfe8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flAutoRideSpeed = 0xff4; // float32 m_flAutoRideSpeed; |  0xff4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bDisabled = 0xff8; // bool m_bDisabled; |  0xff8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFakeLadder = 0xff9; // bool m_bFakeLadder; |  0xff9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bHasSlack = 0xffa; // bool m_bHasSlack; |  0xffa | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

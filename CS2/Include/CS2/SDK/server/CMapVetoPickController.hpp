@@ -40,13 +40,16 @@ namespace CS2 {
 			PROPERTY(m_nCurrentPhase,int32_t, 0xdf8);
 			PROPERTY(m_nPhaseStartTick,int32_t, 0xdfc);
 			PROPERTY(m_nPhaseDurationTicks,int32_t, 0xe00);
-			PROPERTY(m_OnMapVetoed,GlobalTypes::CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge >*, 0xe08);
-			PROPERTY(m_OnMapPicked,GlobalTypes::CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge >*, 0xe28);
-			PROPERTY(m_OnSidesPicked,GlobalTypes::CEntityOutputTemplate< int32, int32 >, 0xe48);
-			PROPERTY(m_OnNewPhaseStarted,GlobalTypes::CEntityOutputTemplate< int32, int32 >, 0xe68);
-			PROPERTY(m_OnLevelTransition,GlobalTypes::CEntityOutputTemplate< int32, int32 >, 0xe88);
+			// PROPERTY(m_OnMapVetoed,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>), 0xe08);
+			// PROPERTY(m_OnMapPicked,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>), 0xe28);
+			// PROPERTY(m_OnSidesPicked,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0xe48);
+			// PROPERTY(m_OnNewPhaseStarted,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0xe68);
+			// PROPERTY(m_OnLevelTransition,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0xe88);
 			S2_PAD(0xA00);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMapVetoPickController) == 0xEA8, "CMapVetoPickController size should be 0xEA8");
+
+#endif
 	}
 }

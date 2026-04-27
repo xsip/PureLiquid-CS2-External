@@ -28,23 +28,26 @@ namespace CS2 {
 	namespace server {
 		class CTriggerLook : public CS2::server::CTriggerOnce {
 		public:
-			PROPERTY(m_hLookTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x8a8);
-			PROPERTY(m_flFieldOfView,float32, 0x8ac);
-			PROPERTY(m_flLookTime,float32, 0x8b0);
-			PROPERTY(m_flLookTimeTotal,float32, 0x8b4);
-			NESTED_PROPERTY(m_flLookTimeLast,entity2::GameTime_t, 0x8b8);
-			PROPERTY(m_flTimeoutDuration,float32, 0x8bc);
-			PROPERTY(m_bTimeoutFired,bool, 0x8c0);
-			PROPERTY(m_bIsLooking,bool, 0x8c1);
-			PROPERTY(m_b2DFOV,bool, 0x8c2);
-			PROPERTY(m_bUseVelocity,bool, 0x8c3);
-			PROPERTY(m_bTestOcclusion,bool, 0x8c4);
-			PROPERTY(m_bTestAllVisibleOcclusion,bool, 0x8c5);
-			NESTED_PROPERTY(m_OnTimeout,entity2::CEntityIOOutput, 0x8c8);
-			NESTED_PROPERTY(m_OnStartLook,entity2::CEntityIOOutput, 0x8e0);
-			NESTED_PROPERTY(m_OnEndLook,entity2::CEntityIOOutput, 0x8f8);
+			PROPERTY(m_hLookTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8e0);
+			PROPERTY(m_flFieldOfView,float32, 0x8e4);
+			PROPERTY(m_flLookTime,float32, 0x8e8);
+			PROPERTY(m_flLookTimeTotal,float32, 0x8ec);
+			NESTED_PROPERTY(m_flLookTimeLast,IDENTITY(entity2::GameTime_t), 0x8f0);
+			PROPERTY(m_flTimeoutDuration,float32, 0x8f4);
+			PROPERTY(m_bTimeoutFired,bool, 0x8f8);
+			PROPERTY(m_bIsLooking,bool, 0x8f9);
+			PROPERTY(m_b2DFOV,bool, 0x8fa);
+			PROPERTY(m_bUseVelocity,bool, 0x8fb);
+			PROPERTY(m_bTestOcclusion,bool, 0x8fc);
+			PROPERTY(m_bTestAllVisibleOcclusion,bool, 0x8fd);
+			NESTED_PROPERTY(m_OnTimeout,IDENTITY(entity2::CEntityIOOutput), 0x900);
+			NESTED_PROPERTY(m_OnStartLook,IDENTITY(entity2::CEntityIOOutput), 0x918);
+			NESTED_PROPERTY(m_OnEndLook,IDENTITY(entity2::CEntityIOOutput), 0x930);
 			S2_PAD(0x68);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerLook) == 0x910, "CTriggerLook size should be 0x910");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerLook) == 0x948, "CTriggerLook size should be 0x948");
+
+#endif
 	}
 }

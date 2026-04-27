@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerLoopXFade : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_sound,soundsystem_voicecontainers::CSoundContainerReference, 0xa8);
-			PROPERTY(m_flLoopEnd,float32, 0xc0);
-			PROPERTY(m_flLoopStart,float32, 0xc4);
-			PROPERTY(m_flFadeOut,float32, 0xc8);
-			PROPERTY(m_flFadeIn,float32, 0xcc);
-			PROPERTY(m_bPlayHead,bool, 0xd0);
-			PROPERTY(m_bPlayTail,bool, 0xd1);
-			PROPERTY(m_bEqualPow,bool, 0xd2);
-			S2_PAD(0x30);
+			NESTED_PROPERTY(m_sound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xa8);
+			PROPERTY(m_flLoopEnd,float32, 0xc8);
+			PROPERTY(m_flLoopStart,float32, 0xcc);
+			PROPERTY(m_flFadeOut,float32, 0xd0);
+			PROPERTY(m_flFadeIn,float32, 0xd4);
+			PROPERTY(m_bPlayHead,bool, 0xd8);
+			PROPERTY(m_bPlayTail,bool, 0xd9);
+			PROPERTY(m_bEqualPow,bool, 0xda);
+			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerLoopXFade) == 0xD8, "CVoiceContainerLoopXFade size should be 0xD8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerLoopXFade) == 0xE0, "CVoiceContainerLoopXFade size should be 0xE0");
+
+#endif
 	}
 }

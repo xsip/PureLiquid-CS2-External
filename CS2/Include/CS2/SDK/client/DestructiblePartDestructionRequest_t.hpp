@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/EDestructibleParts_DestroyParameterFlags.hpp>
-#include <SDK/client/DamageTypes_t.hpp>
+#include "EDestructibleParts_DestroyParameterFlags.hpp"
+#include "DamageTypes_t.hpp"
 
 
 
@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace client {
 		class DestructiblePartDestructionRequest_t  {
 		public:
-			PROPERTY(m_nDestroyFlags,client::EDestructibleParts_DestroyParameterFlags, 0x0);
-			PROPERTY(m_nDamageType,client::DamageTypes_t, 0x4);
+			PROPERTY(m_nDestroyFlags,IDENTITY(client::EDestructibleParts_DestroyParameterFlags), 0x0);
+			PROPERTY(m_nDamageType,IDENTITY(client::DamageTypes_t), 0x4);
 			PROPERTY(m_flPartDamage,float32, 0x8);
 			PROPERTY(m_flPartDamageRadius,float32, 0xc);
 			PROPERTY(m_vWsPartDamageOrigin,GlobalTypes::VectorWS, 0x10);
 			PROPERTY(m_vWsPartDamageForce,GlobalTypes::Vector, 0x1c);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::DestructiblePartDestructionRequest_t) == 0x28, "DestructiblePartDestructionRequest_t size should be 0x28");
+
+#endif
 	}
 }

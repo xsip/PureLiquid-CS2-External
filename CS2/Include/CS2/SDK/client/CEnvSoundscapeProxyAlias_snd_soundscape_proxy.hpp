@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public CS2::client::CEnvSoundscapeProxy {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::CEnvSoundscapeProxyAlias_snd_soundscape_proxy) == 0x6A0, "CEnvSoundscapeProxyAlias_snd_soundscape_proxy size should be 0x6A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CEnvSoundscapeProxyAlias_snd_soundscape_proxy) == 0x698, "CEnvSoundscapeProxyAlias_snd_soundscape_proxy size should be 0x698");
+
+#endif
 	}
 }

@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayer_DamageReactServices) == 0x50, "CCSPlayer_DamageReactServices size should be 0x50");
+
+#endif
 	}
 }

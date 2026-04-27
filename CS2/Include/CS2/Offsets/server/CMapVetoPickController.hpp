@@ -29,8 +29,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nCurrentPhase = 0xdf8; // int32_t m_nCurrentPhase; |  0xdf8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nPhaseStartTick = 0xdfc; // int32_t m_nPhaseStartTick; |  0xdfc | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nPhaseDurationTicks = 0xe00; // int32_t m_nPhaseDurationTicks; |  0xe00 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OnMapVetoed = 0xe08; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnMapPicked = 0xe28; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnMapVetoed = 0xe08; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnMapPicked = 0xe28; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_OnSidesPicked = 0xe48; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_OnNewPhaseStarted = 0xe68; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_OnLevelTransition = 0xe88; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20

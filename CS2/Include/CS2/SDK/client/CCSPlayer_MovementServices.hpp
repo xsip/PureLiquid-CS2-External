@@ -11,6 +11,7 @@
 
 
 #include <SDK/client/CPlayer_MovementServices_Humanoid.hpp>
+#include <SDK/client/CCSPlayerAnimationState.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
 #include <SDK/client/CCSPlayerLegacyJump.hpp>
 #include <SDK/client/CCSPlayerModernJump.hpp>
@@ -25,54 +26,61 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayer_MovementServices : public CS2::client::CPlayer_MovementServices_Humanoid {
 		public:
-			PROPERTY(m_vecLadderNormal,GlobalTypes::Vector, 0x270);
-			PROPERTY(m_nLadderSurfacePropIndex,int32_t, 0x27c);
-			PROPERTY(m_bDucked,bool, 0x280);
-			PROPERTY(m_flDuckAmount,float32, 0x284);
-			PROPERTY(m_flDuckSpeed,float32, 0x288);
-			PROPERTY(m_bDuckOverride,bool, 0x28c);
-			PROPERTY(m_bDesiresDuck,bool, 0x28d);
-			PROPERTY(m_bDucking,bool, 0x28e);
-			PROPERTY(m_flDuckOffset,float32, 0x290);
-			PROPERTY(m_nDuckTimeMsecs,uint32_t, 0x294);
-			PROPERTY(m_nDuckJumpTimeMsecs,uint32_t, 0x298);
-			PROPERTY(m_nJumpTimeMsecs,uint32_t, 0x29c);
-			PROPERTY(m_flLastDuckTime,float32, 0x2a0);
-			PROPERTY(m_vecLastPositionAtFullCrouchSpeed,GlobalTypes::Vector2D, 0x2b0);
-			PROPERTY(m_duckUntilOnGround,bool, 0x2b8);
-			PROPERTY(m_bHasWalkMovedSinceLastJump,bool, 0x2b9);
-			PROPERTY(m_bInStuckTest,bool, 0x2ba);
-			PROPERTY(m_nTraceCount,int32_t, 0x4c8);
-			PROPERTY(m_StuckLast,int32_t, 0x4cc);
-			PROPERTY(m_bSpeedCropped,bool, 0x4d0);
-			PROPERTY(m_nOldWaterLevel,int32_t, 0x4d4);
-			PROPERTY(m_flWaterEntryTime,float32, 0x4d8);
-			PROPERTY(m_vecForward,GlobalTypes::Vector, 0x4dc);
-			PROPERTY(m_vecLeft,GlobalTypes::Vector, 0x4e8);
-			PROPERTY(m_vecUp,GlobalTypes::Vector, 0x4f4);
-			PROPERTY(m_nGameCodeHasMovedPlayerAfterCommand,int32_t, 0x500);
-			NESTED_PROPERTY(m_fStashGrenadeParameterWhen,entity2::GameTime_t, 0x504);
-			PROPERTY(m_nButtonDownMaskPrev,uint64_t, 0x508);
-			PROPERTY(m_flOffsetTickCompleteTime,float32, 0x510);
-			PROPERTY(m_flOffsetTickStashedSpeed,float32, 0x514);
-			PROPERTY(m_flStamina,float32, 0x518);
-			PROPERTY(m_flHeightAtJumpStart,float32, 0x51c);
-			PROPERTY(m_flMaxJumpHeightThisJump,float32, 0x520);
-			PROPERTY(m_flMaxJumpHeightLastJump,float32, 0x524);
-			PROPERTY(m_flStaminaAtJumpStart,float32, 0x528);
-			PROPERTY(m_flVelMulAtJumpStart,float32, 0x52c);
-			PROPERTY(m_flAccumulatedJumpError,float32, 0x530);
-			NESTED_PROPERTY(m_LegacyJump,client::CCSPlayerLegacyJump, 0x538);
-			NESTED_PROPERTY(m_ModernJump,client::CCSPlayerModernJump, 0x550);
-			NESTED_PROPERTY(m_nLastJumpTick,entity2::GameTick_t, 0x588);
-			PROPERTY(m_flLastJumpFrac,float32, 0x58c);
-			PROPERTY(m_flLastJumpVelocityZ,float32, 0x590);
-			PROPERTY(m_bJumpApexPending,bool, 0x594);
-			PROPERTY(m_flTicksSinceLastSurfingDetected,float32, 0x598);
-			PROPERTY(m_bWasSurfing,bool, 0x59c);
-			PROPERTY(m_vecInputRotated,GlobalTypes::Vector, 0x62c);
-			S2_PAD(0xBE8);
+			NESTED_PROPERTY(m_AnimationState,IDENTITY(client::CCSPlayerAnimationState), 0x2e0);
+			PROPERTY(m_vecLadderNormal,GlobalTypes::Vector, 0x3d0);
+			PROPERTY(m_nLadderSurfacePropIndex,int32_t, 0x3dc);
+			PROPERTY(m_bDucked,bool, 0x3e0);
+			PROPERTY(m_flDuckAmount,float32, 0x3e4);
+			PROPERTY(m_flDuckSpeed,float32, 0x3e8);
+			PROPERTY(m_bDuckOverride,bool, 0x3ec);
+			PROPERTY(m_bDesiresDuck,bool, 0x3ed);
+			PROPERTY(m_bDucking,bool, 0x3ee);
+			PROPERTY(m_flDuckRootOffset,float32, 0x3f0);
+			PROPERTY(m_flDuckViewOffset,float32, 0x3f4);
+			PROPERTY(m_flLastDuckTime,float32, 0x3f8);
+			PROPERTY(m_flBombPlantViewOffset,float32, 0x3fc);
+			PROPERTY(m_vecLastPositionAtFullCrouchSpeed,GlobalTypes::Vector2D, 0x408);
+			PROPERTY(m_duckUntilOnGround,bool, 0x410);
+			PROPERTY(m_bHasWalkMovedSinceLastJump,bool, 0x411);
+			PROPERTY(m_bInStuckTest,bool, 0x412);
+			PROPERTY(m_nTraceCount,int32_t, 0x620);
+			PROPERTY(m_StuckLast,int32_t, 0x624);
+			PROPERTY(m_bSpeedCropped,bool, 0x628);
+			PROPERTY(m_nOldWaterLevel,int32_t, 0x62c);
+			PROPERTY(m_flWaterEntryTime,float32, 0x630);
+			PROPERTY(m_vecForward,GlobalTypes::Vector, 0x634);
+			PROPERTY(m_vecLeft,GlobalTypes::Vector, 0x640);
+			PROPERTY(m_vecUp,GlobalTypes::Vector, 0x64c);
+			PROPERTY(m_nGameCodeHasMovedPlayerAfterCommand,int32_t, 0x658);
+			NESTED_PROPERTY(m_fStashGrenadeParameterWhen,IDENTITY(entity2::GameTime_t), 0x65c);
+			PROPERTY(m_nButtonDownMaskPrev,uint64_t, 0x660);
+			PROPERTY(m_bUseFrictionStashedSpeed,bool, 0x668);
+			PROPERTY(m_flUseFrictionStashedSpeedUntilFrac,float32, 0x66c);
+			PROPERTY(m_flFrictionStashedSpeed,float32, 0x670);
+			PROPERTY(m_flStamina,float32, 0x674);
+			PROPERTY(m_flHeightAtJumpStart,float32, 0x678);
+			PROPERTY(m_flMaxJumpHeightThisJump,float32, 0x67c);
+			PROPERTY(m_flMaxJumpHeightLastJump,float32, 0x680);
+			PROPERTY(m_flStaminaAtJumpStart,float32, 0x684);
+			PROPERTY(m_flVelMulAtJumpStart,float32, 0x688);
+			PROPERTY(m_flAccumulatedJumpError,float32, 0x68c);
+			NESTED_PROPERTY(m_LegacyJump,IDENTITY(client::CCSPlayerLegacyJump), 0x690);
+			NESTED_PROPERTY(m_ModernJump,IDENTITY(client::CCSPlayerModernJump), 0x6a8);
+			NESTED_PROPERTY(m_nLastJumpTick,IDENTITY(entity2::GameTick_t), 0x6e0);
+			PROPERTY(m_flLastJumpFrac,float32, 0x6e4);
+			PROPERTY(m_flLastJumpVelocityZ,float32, 0x6e8);
+			PROPERTY(m_bJumpApexPending,bool, 0x6ec);
+			PROPERTY(m_flTicksSinceLastSurfingDetected,float32, 0x6f0);
+			PROPERTY(m_bWasSurfing,bool, 0x6f4);
+			PROPERTY(m_vecWalkWishVel,GlobalTypes::Vector2D, 0x784);
+			NESTED_PROPERTY(m_gtLastTimeOnStaticWorldGround,IDENTITY(entity2::GameTime_t), 0xfb0);
+			NESTED_PROPERTY(m_gtLastTimeInAir,IDENTITY(entity2::GameTime_t), 0xfb4);
+			PROPERTY(m_bHasEverProcessedCommand,bool, 0xfb8);
+			S2_PAD(0xD38);
 		};
-		//static_assert(sizeof(CS2::client::CCSPlayer_MovementServices) == 0xE58, "CCSPlayer_MovementServices size should be 0xE58");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CCSPlayer_MovementServices) == 0xFC0, "CCSPlayer_MovementServices size should be 0xFC0");
+
+#endif
 	}
 }

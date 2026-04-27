@@ -26,6 +26,7 @@
 namespace CS2 {
 	namespace client {
 		class CRenderComponent;
+		class CChoreoComponent;
 		class CDestructiblePartsComponent;
 		class CClientAlphaProperty;
 	}
@@ -37,46 +38,55 @@ namespace CS2 {
 	namespace client {
 		class C_BaseModelEntity : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_CRenderComponent,client::CRenderComponent*, 0xaf0);
-			NESTED_PROPERTY(m_CHitboxComponent,client::CHitboxComponent, 0xaf8);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed0,client::HitGroup_t, 0xb10);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed1,client::HitGroup_t, 0xb14);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed2,client::HitGroup_t, 0xb18);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed3,client::HitGroup_t, 0xb1c);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed4,client::HitGroup_t, 0xb20);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed0_PartIndex,int32_t, 0xb24);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed1_PartIndex,int32_t, 0xb28);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed2_PartIndex,int32_t, 0xb2c);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed3_PartIndex,int32_t, 0xb30);
-			PROPERTY(m_nDestructiblePartInitialStateDestructed4_PartIndex,int32_t, 0xb34);
-			PROPERTY(m_pDestructiblePartsSystemComponent,client::CDestructiblePartsComponent*, 0xb38);
-			PROPERTY(m_bInitModelEffects,bool, 0xb58);
-			PROPERTY(m_bDoingModelEffects,bool, 0xb59);
-			PROPERTY(m_bIsStaticProp,bool, 0xb5a);
-			PROPERTY(m_iOldHealth,int32_t, 0xb5c);
-			PROPERTY(m_nRenderMode,client::RenderMode_t, 0xb60);
-			PROPERTY(m_nRenderFX,client::RenderFx_t, 0xb61);
-			PROPERTY(m_bAllowFadeInView,bool, 0xb62);
-			PROPERTY(m_clrRender,GlobalTypes::Color, 0xb80);
-			PROPERTY(m_vecRenderAttributes,GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::EntityRenderAttribute_t>, 0xb88);
-			PROPERTY(m_bRenderToCubemaps,bool, 0xc08);
-			PROPERTY(m_bNoInterpolate,bool, 0xc09);
-			NESTED_PROPERTY(m_Collision,client::CCollisionProperty, 0xc10);
-			NESTED_PROPERTY(m_Glow,client::CGlowProperty, 0xcc0);
-			PROPERTY(m_flGlowBackfaceMult,float32, 0xd18);
-			PROPERTY(m_fadeMinDist,float32, 0xd1c);
-			PROPERTY(m_fadeMaxDist,float32, 0xd20);
-			PROPERTY(m_flFadeScale,float32, 0xd24);
-			PROPERTY(m_flShadowStrength,float32, 0xd28);
-			PROPERTY(m_nObjectCulling,uint8_t, 0xd2c);
-			PROPERTY(m_nRequiredDecalRtEncoding,client::DecalRtEncoding_t, 0xd2d);
-			PROPERTY(m_vecViewOffset,GlobalTypes::Vector, 0xd58);
-			PROPERTY(m_pClientAlphaProperty,client::CClientAlphaProperty*, 0xe38);
-			PROPERTY(m_ClientOverrideTint,GlobalTypes::Color, 0xe40);
-			PROPERTY(m_bUseClientOverrideTint,bool, 0xe44);
-			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0xe80);
-			S2_PAD(0x880);
+			PROPERTY(m_CRenderComponent,IDENTITY(client::CRenderComponent*), 0xaf0);
+			NESTED_PROPERTY(m_CHitboxComponent,IDENTITY(client::CHitboxComponent), 0xaf8);
+			PROPERTY(m_pChoreoComponent,IDENTITY(client::CChoreoComponent*), 0xb10);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed0,IDENTITY(client::HitGroup_t), 0xb18);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed1,IDENTITY(client::HitGroup_t), 0xb1c);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed2,IDENTITY(client::HitGroup_t), 0xb20);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed3,IDENTITY(client::HitGroup_t), 0xb24);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed4,IDENTITY(client::HitGroup_t), 0xb28);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed0_PartIndex,int32_t, 0xb2c);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed1_PartIndex,int32_t, 0xb30);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed2_PartIndex,int32_t, 0xb34);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed3_PartIndex,int32_t, 0xb38);
+			PROPERTY(m_nDestructiblePartInitialStateDestructed4_PartIndex,int32_t, 0xb3c);
+			PROPERTY(m_bDestructiblePartInitialStateDestructed0_GenerateBreakpieces,bool, 0xb40);
+			PROPERTY(m_bDestructiblePartInitialStateDestructed1_GenerateBreakpieces,bool, 0xb41);
+			PROPERTY(m_bDestructiblePartInitialStateDestructed2_GenerateBreakpieces,bool, 0xb42);
+			PROPERTY(m_bDestructiblePartInitialStateDestructed3_GenerateBreakpieces,bool, 0xb43);
+			PROPERTY(m_bDestructiblePartInitialStateDestructed4_GenerateBreakpieces,bool, 0xb44);
+			PROPERTY(m_pDestructiblePartsSystemComponent,IDENTITY(client::CDestructiblePartsComponent*), 0xb48);
+			PROPERTY(m_bInitModelEffects,bool, 0xc70);
+			PROPERTY(m_bDoingModelEffects,bool, 0xc71);
+			PROPERTY(m_iOldHealth,int32_t, 0xc74);
+			PROPERTY(m_nRenderMode,IDENTITY(client::RenderMode_t), 0xc78);
+			PROPERTY(m_nRenderFX,IDENTITY(client::RenderFx_t), 0xc79);
+			PROPERTY(m_bAllowFadeInView,bool, 0xc7a);
+			PROPERTY(m_clrRender,GlobalTypes::Color, 0xc98);
+			// PROPERTY(m_vecRenderAttributes,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::EntityRenderAttribute_t>), 0xca0);
+			PROPERTY(m_bRenderToCubemaps,bool, 0xd20);
+			PROPERTY(m_bNoInterpolate,bool, 0xd21);
+			NESTED_PROPERTY(m_Collision,IDENTITY(client::CCollisionProperty), 0xd28);
+			NESTED_PROPERTY(m_Glow,IDENTITY(client::CGlowProperty), 0xdd8);
+			PROPERTY(m_flGlowBackfaceMult,float32, 0xe30);
+			PROPERTY(m_fadeMinDist,float32, 0xe34);
+			PROPERTY(m_fadeMaxDist,float32, 0xe38);
+			PROPERTY(m_flFadeScale,float32, 0xe3c);
+			PROPERTY(m_flShadowStrength,float32, 0xe40);
+			PROPERTY(m_nObjectCulling,uint8_t, 0xe44);
+			PROPERTY(m_nRequiredDecalRtEncoding,IDENTITY(client::DecalRtEncoding_t), 0xe45);
+			// PROPERTY(m_bodyGroupChoices,IDENTITY(GlobalTypes::CUtlOrderedMap< CGlobalSymbol, int32 >), 0xe48);
+			PROPERTY(m_vecViewOffset,IDENTITY(GlobalTypes::Vector), 0xe70);
+			PROPERTY(m_pClientAlphaProperty,IDENTITY(client::CClientAlphaProperty*), 0xf50);
+			PROPERTY(m_ClientOverrideTint,GlobalTypes::Color, 0xf58);
+			PROPERTY(m_bUseClientOverrideTint,bool, 0xf5c);
+			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0xf98);
+			S2_PAD(0x9A8);
 		};
-		//static_assert(sizeof(CS2::client::C_BaseModelEntity) == 0xE88, "C_BaseModelEntity size should be 0xE88");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BaseModelEntity) == 0xFA8, "C_BaseModelEntity size should be 0xFA8");
+
+#endif
 	}
 }

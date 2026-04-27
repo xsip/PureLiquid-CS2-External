@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace C_OP_RemapDistanceToLineSegmentToScalar /*: public CS2::particles::C_OP_RemapDistanceToLineSegmentBase*/ {
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1e8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flMinOutputValue = 0x1ec; // float32 m_flMinOutputValue; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxOutputValue = 0x1f0; // float32 m_flMaxOutputValue; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1f0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinOutputValue = 0x1f4; // float32 m_flMinOutputValue; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxOutputValue = 0x1f8; // float32 m_flMaxOutputValue; |  0x1f8 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

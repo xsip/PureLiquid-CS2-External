@@ -28,22 +28,25 @@ namespace CS2 {
 	namespace client {
 		class C_PointCommentaryNode : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bActive,bool, 0x1180);
-			PROPERTY(m_bWasActive,bool, 0x1181);
-			NESTED_PROPERTY(m_flEndTime,entity2::GameTime_t, 0x1184);
-			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x1188);
-			PROPERTY(m_flStartTimeInCommentary,float32, 0x118c);
-			PROPERTY(m_iszCommentaryFile,GlobalTypes::CUtlSymbolLarge*, 0x1190);
-			PROPERTY(m_iszTitle,GlobalTypes::CUtlSymbolLarge*, 0x1198);
-			PROPERTY(m_iszSpeakers,GlobalTypes::CUtlSymbolLarge*, 0x11a0);
-			PROPERTY(m_iNodeNumber,int32_t, 0x11a8);
-			PROPERTY(m_iNodeNumberMax,int32_t, 0x11ac);
-			PROPERTY(m_bListenedTo,bool, 0x11b0);
-			PROPERTY(m_sndCommentary,client::CSoundPatch*, 0x11b8);
-			PROPERTY(m_hViewPosition,GlobalTypes::CHandle<client::C_BaseEntity>, 0x11c0);
-			PROPERTY(m_bRestartAfterRestore,bool, 0x11c4);
+			PROPERTY(m_bActive,bool, 0x1170);
+			PROPERTY(m_bWasActive,bool, 0x1171);
+			NESTED_PROPERTY(m_flEndTime,IDENTITY(entity2::GameTime_t), 0x1174);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x1178);
+			PROPERTY(m_flStartTimeInCommentary,float32, 0x117c);
+			PROPERTY(m_iszCommentaryFile,GlobalTypes::CUtlSymbolLarge*, 0x1180);
+			PROPERTY(m_iszTitle,GlobalTypes::CUtlSymbolLarge*, 0x1188);
+			PROPERTY(m_iszSpeakers,GlobalTypes::CUtlSymbolLarge*, 0x1190);
+			PROPERTY(m_iNodeNumber,int32_t, 0x1198);
+			PROPERTY(m_iNodeNumberMax,int32_t, 0x119c);
+			PROPERTY(m_bListenedTo,bool, 0x11a0);
+			PROPERTY(m_sndCommentary,IDENTITY(client::CSoundPatch*), 0x11a8);
+			PROPERTY(m_hViewPosition,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x11b0);
+			PROPERTY(m_bRestartAfterRestore,bool, 0x11b4);
 			S2_PAD(0x60);
 		};
-		//static_assert(sizeof(CS2::client::C_PointCommentaryNode) == 0x11C8, "C_PointCommentaryNode size should be 0x11C8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PointCommentaryNode) == 0x11B8, "C_PointCommentaryNode size should be 0x11B8");
+
+#endif
 	}
 }

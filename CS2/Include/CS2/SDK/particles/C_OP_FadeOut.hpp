@@ -21,14 +21,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_FadeOut : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flFadeOutTimeMin,float32, 0x1d0);
-			PROPERTY(m_flFadeOutTimeMax,float32, 0x1d4);
-			PROPERTY(m_flFadeOutTimeExp,float32, 0x1d8);
-			PROPERTY(m_flFadeBias,float32, 0x1dc);
-			PROPERTY(m_bProportional,bool, 0x210);
-			PROPERTY(m_bEaseInAndOut,bool, 0x211);
-			S2_PAD(0x50);
+			PROPERTY(m_flFadeOutTimeMin,float32, 0x1d8);
+			PROPERTY(m_flFadeOutTimeMax,float32, 0x1dc);
+			PROPERTY(m_flFadeOutTimeExp,float32, 0x1e0);
+			PROPERTY(m_flFadeBias,float32, 0x1e4);
+			PROPERTY(m_bProportional,bool, 0x220);
+			PROPERTY(m_bEaseInAndOut,bool, 0x221);
+			S2_PAD(0x58);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_FadeOut) == 0x220, "C_OP_FadeOut size should be 0x220");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_FadeOut) == 0x230, "C_OP_FadeOut size should be 0x230");
+
+#endif
 	}
 }

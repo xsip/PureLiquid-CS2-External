@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace server {
 		class CColorCorrectionVolume : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_MaxWeight,float32, 0x890);
-			PROPERTY(m_FadeDuration,float32, 0x894);
-			PROPERTY(m_Weight,float32, 0x898);
-			PROPERTY_ARRAY(m_lookupFilename,char, 512 , 0x89c);
-			PROPERTY(m_LastEnterWeight,float32, 0xa9c);
-			NESTED_PROPERTY(m_LastEnterTime,entity2::GameTime_t, 0xaa0);
-			PROPERTY(m_LastExitWeight,float32, 0xaa4);
-			NESTED_PROPERTY(m_LastExitTime,entity2::GameTime_t, 0xaa8);
+			PROPERTY(m_MaxWeight,float32, 0x8c8);
+			PROPERTY(m_FadeDuration,float32, 0x8cc);
+			PROPERTY(m_Weight,float32, 0x8d0);
+			PROPERTY_ARRAY(m_lookupFilename,char, 512 , 0x8d4);
+			PROPERTY(m_LastEnterWeight,float32, 0xad4);
+			NESTED_PROPERTY(m_LastEnterTime,IDENTITY(entity2::GameTime_t), 0xad8);
+			PROPERTY(m_LastExitWeight,float32, 0xadc);
+			NESTED_PROPERTY(m_LastExitTime,IDENTITY(entity2::GameTime_t), 0xae0);
 			S2_PAD(0x220);
 		};
-		//static_assert(sizeof(CS2::server::CColorCorrectionVolume) == 0xAB0, "CColorCorrectionVolume size should be 0xAB0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CColorCorrectionVolume) == 0xAE8, "CColorCorrectionVolume size should be 0xAE8");
+
+#endif
 	}
 }

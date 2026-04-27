@@ -26,30 +26,33 @@ namespace CS2 {
 	namespace client {
 		class C_EnvLightProbeVolume : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1600);
-			PROPERTY(m_Entity_hLightProbeTexture_SDF,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1608);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1610);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1618);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1620);
-			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1628);
-			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1630);
-			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1638);
-			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1640);
-			PROPERTY(m_Entity_vBoxMins,GlobalTypes::Vector, 0x1648);
-			PROPERTY(m_Entity_vBoxMaxs,GlobalTypes::Vector, 0x1654);
-			PROPERTY(m_Entity_bMoveable,bool, 0x1660);
-			PROPERTY(m_Entity_nHandshake,int32_t, 0x1664);
-			PROPERTY(m_Entity_nPriority,int32_t, 0x1668);
-			PROPERTY(m_Entity_bStartDisabled,bool, 0x166c);
-			PROPERTY(m_Entity_nLightProbeSizeX,int32_t, 0x1670);
-			PROPERTY(m_Entity_nLightProbeSizeY,int32_t, 0x1674);
-			PROPERTY(m_Entity_nLightProbeSizeZ,int32_t, 0x1678);
-			PROPERTY(m_Entity_nLightProbeAtlasX,int32_t, 0x167c);
-			PROPERTY(m_Entity_nLightProbeAtlasY,int32_t, 0x1680);
-			PROPERTY(m_Entity_nLightProbeAtlasZ,int32_t, 0x1684);
-			PROPERTY(m_Entity_bEnabled,bool, 0x1691);
+			PROPERTY(m_Entity_hLightProbeTexture_AmbientCube,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x15f8);
+			PROPERTY(m_Entity_hLightProbeTexture_SDF,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1600);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_DC,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1608);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_R,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1610);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_G,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1618);
+			PROPERTY(m_Entity_hLightProbeTexture_SH2_B,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1620);
+			PROPERTY(m_Entity_hLightProbeDirectLightIndicesTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1628);
+			PROPERTY(m_Entity_hLightProbeDirectLightScalarsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1630);
+			PROPERTY(m_Entity_hLightProbeDirectLightShadowsTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1638);
+			PROPERTY(m_Entity_vBoxMins,GlobalTypes::Vector, 0x1640);
+			PROPERTY(m_Entity_vBoxMaxs,GlobalTypes::Vector, 0x164c);
+			PROPERTY(m_Entity_bMoveable,bool, 0x1658);
+			PROPERTY(m_Entity_nHandshake,int32_t, 0x165c);
+			PROPERTY(m_Entity_nPriority,int32_t, 0x1660);
+			PROPERTY(m_Entity_bStartDisabled,bool, 0x1664);
+			PROPERTY(m_Entity_nLightProbeSizeX,int32_t, 0x1668);
+			PROPERTY(m_Entity_nLightProbeSizeY,int32_t, 0x166c);
+			PROPERTY(m_Entity_nLightProbeSizeZ,int32_t, 0x1670);
+			PROPERTY(m_Entity_nLightProbeAtlasX,int32_t, 0x1674);
+			PROPERTY(m_Entity_nLightProbeAtlasY,int32_t, 0x1678);
+			PROPERTY(m_Entity_nLightProbeAtlasZ,int32_t, 0x167c);
+			PROPERTY(m_Entity_bEnabled,bool, 0x1689);
 			S2_PAD(0x1090);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvLightProbeVolume) == 0x1698, "C_EnvLightProbeVolume size should be 0x1698");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvLightProbeVolume) == 0x1690, "C_EnvLightProbeVolume size should be 0x1690");
+
+#endif
 	}
 }

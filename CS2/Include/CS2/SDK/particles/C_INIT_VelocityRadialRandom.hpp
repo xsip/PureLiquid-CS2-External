@@ -23,16 +23,19 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_VelocityRadialRandom : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_bPerParticleCenter,bool, 0x1d8);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_vecPosition,particleslib::CPerParticleVecInput, 0x1e0);
-			NESTED_PROPERTY(m_vecFwd,particleslib::CPerParticleVecInput, 0x898);
-			NESTED_PROPERTY(m_fSpeedMin,particleslib::CPerParticleFloatInput, 0xf50);
-			NESTED_PROPERTY(m_fSpeedMax,particleslib::CPerParticleFloatInput, 0x10c0);
-			PROPERTY(m_vecLocalCoordinateSystemSpeedScale,GlobalTypes::Vector, 0x1230);
-			PROPERTY(m_bIgnoreDelta,bool, 0x123d);
+			PROPERTY(m_bPerParticleCenter,bool, 0x1e0);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e4);
+			NESTED_PROPERTY(m_vecPosition,IDENTITY(particleslib::CPerParticleVecInput), 0x1e8);
+			NESTED_PROPERTY(m_vecFwd,IDENTITY(particleslib::CPerParticleVecInput), 0x8a0);
+			NESTED_PROPERTY(m_fSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0xf58);
+			NESTED_PROPERTY(m_fSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x10c8);
+			PROPERTY(m_vecLocalCoordinateSystemSpeedScale,GlobalTypes::Vector, 0x1238);
+			PROPERTY(m_bIgnoreDelta,bool, 0x1245);
 			S2_PAD(0x1068);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_VelocityRadialRandom) == 0x1240, "C_INIT_VelocityRadialRandom size should be 0x1240");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_VelocityRadialRandom) == 0x1248, "C_INIT_VelocityRadialRandom size should be 0x1248");
+
+#endif
 	}
 }

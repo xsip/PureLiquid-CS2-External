@@ -20,13 +20,16 @@ namespace CS2 {
 	namespace client {
 		class SoundeventPathCornerPairNetworked_t  {
 		public:
-			PROPERTY(vP1,GlobalTypes::Vector, 0x0);
-			PROPERTY(vP2,GlobalTypes::Vector, 0xc);
+			PROPERTY(vP1,GlobalTypes::VectorWS, 0x0);
+			PROPERTY(vP2,GlobalTypes::VectorWS, 0xc);
 			PROPERTY(flPathLengthSqr,float32, 0x18);
 			PROPERTY(flP1Pct,float32, 0x1c);
 			PROPERTY(flP2Pct,float32, 0x20);
 			S2_PAD(0x24);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::SoundeventPathCornerPairNetworked_t) == 0x24, "SoundeventPathCornerPairNetworked_t size should be 0x24");
+
+#endif
 	}
 }

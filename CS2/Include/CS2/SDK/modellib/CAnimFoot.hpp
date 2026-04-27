@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_toeBoneIndex,int32_t, 0x24);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CAnimFoot) == 0x28, "CAnimFoot size should be 0x28");
+
+#endif
 	}
 }

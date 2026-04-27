@@ -25,17 +25,20 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_MoveToHitbox : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x1d0);
-			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x230);
-			PROPERTY(m_flLifeTimeLerpStart,float32, 0x29c);
-			PROPERTY(m_flLifeTimeLerpEnd,float32, 0x2a0);
-			PROPERTY(m_flPrevPosScale,float32, 0x2a4);
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x2a8);
-			PROPERTY(m_bUseBones,bool, 0x328);
-			PROPERTY(m_nLerpType,particles::HitboxLerpType_t, 0x32c);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x330);
+			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x1d8);
+			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x238);
+			PROPERTY(m_flLifeTimeLerpStart,float32, 0x2a4);
+			PROPERTY(m_flLifeTimeLerpEnd,float32, 0x2a8);
+			PROPERTY(m_flPrevPosScale,float32, 0x2ac);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x2b0);
+			PROPERTY(m_bUseBones,bool, 0x330);
+			PROPERTY(m_nLerpType,IDENTITY(particles::HitboxLerpType_t), 0x334);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x338);
 			S2_PAD(0x2D0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_MoveToHitbox) == 0x4A0, "C_OP_MoveToHitbox size should be 0x4A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_MoveToHitbox) == 0x4A8, "C_OP_MoveToHitbox size should be 0x4A8");
+
+#endif
 	}
 }

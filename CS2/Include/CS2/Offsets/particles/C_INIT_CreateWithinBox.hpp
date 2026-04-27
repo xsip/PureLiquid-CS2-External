@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xF60
+			// Class size: 0xF68
 			namespace C_INIT_CreateWithinBox /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_vecMin = 0x1d8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecMax = 0x890; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0xf48; // int32_t m_nControlPointNumber; |  0xf48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLocalSpace = 0xf4c; // bool m_bLocalSpace; |  0xf4c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_randomnessParameters = 0xf50; // particles::CRandomNumberGeneratorParameters  | Schema_DeclaredClass | Size: 0x8
-				constexpr std::ptrdiff_t m_bUseNewCode = 0xf58; // bool m_bUseNewCode; |  0xf58 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecMin = 0x1e0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecMax = 0x898; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0xf50; // int32_t m_nControlPointNumber; |  0xf50 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLocalSpace = 0xf54; // bool m_bLocalSpace; |  0xf54 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_randomnessParameters = 0xf58; // particles::CRandomNumberGeneratorParameters  | Schema_DeclaredClass | Size: 0x8
+				constexpr std::ptrdiff_t m_bUseNewCode = 0xf60; // bool m_bUseNewCode; |  0xf60 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

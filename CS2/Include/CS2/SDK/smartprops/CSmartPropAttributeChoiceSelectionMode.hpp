@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropAttributeChoiceSelectionMode) == 0x40, "CSmartPropAttributeChoiceSelectionMode size should be 0x40");
+
+#endif
 	}
 }

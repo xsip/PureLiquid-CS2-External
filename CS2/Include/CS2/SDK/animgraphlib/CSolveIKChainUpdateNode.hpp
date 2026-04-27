@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSolveIKChainUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_targetHandles,GlobalTypes::CUtlVector<animgraphlib::CSolveIKTargetHandle_t>, 0x70);
-			NESTED_PROPERTY(m_opFixedData,animgraphlib::SolveIKChainPoseOpFixedSettings_t, 0x88);
+			NESTED_PROPERTY(m_targetHandles,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CSolveIKTargetHandle_t>), 0x70);
+			NESTED_PROPERTY(m_opFixedData,IDENTITY(animgraphlib::SolveIKChainPoseOpFixedSettings_t), 0x88);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSolveIKChainUpdateNode) == 0xA8, "CSolveIKChainUpdateNode size should be 0xA8");
+
+#endif
 	}
 }

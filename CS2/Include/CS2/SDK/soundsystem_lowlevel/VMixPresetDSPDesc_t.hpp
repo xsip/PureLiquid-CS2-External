@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_effectName,GlobalTypes::CUtlString*, 0x0);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixPresetDSPDesc_t) == 0x10, "VMixPresetDSPDesc_t size should be 0x10");
+
+#endif
 	}
 }

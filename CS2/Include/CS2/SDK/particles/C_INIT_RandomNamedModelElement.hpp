@@ -27,14 +27,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RandomNamedModelElement : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x1d8);
-			PROPERTY(m_names,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x1e0);
-			PROPERTY(m_bShuffle,bool, 0x1f8);
-			PROPERTY(m_bLinear,bool, 0x1f9);
-			PROPERTY(m_bModelFromRenderer,bool, 0x1fa);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1fc);
+			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x1e0);
+			PROPERTY(m_names,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x1e8);
+			PROPERTY(m_bShuffle,bool, 0x200);
+			PROPERTY(m_bLinear,bool, 0x201);
+			PROPERTY(m_bModelFromRenderer,bool, 0x202);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x204);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RandomNamedModelElement) == 0x200, "C_INIT_RandomNamedModelElement size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RandomNamedModelElement) == 0x208, "C_INIT_RandomNamedModelElement size should be 0x208");
+
+#endif
 	}
 }

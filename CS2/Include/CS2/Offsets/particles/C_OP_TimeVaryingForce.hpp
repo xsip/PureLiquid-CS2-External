@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x200
+			// Class size: 0x208
 			namespace C_OP_TimeVaryingForce /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_flStartLerpTime = 0x1e0; // float32 m_flStartLerpTime; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_StartingForce = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flEndLerpTime = 0x1f0; // float32 m_flEndLerpTime; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_EndingForce = 0x1f4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flStartLerpTime = 0x1e8; // float32 m_flStartLerpTime; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_StartingForce = 0x1ec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flEndLerpTime = 0x1f8; // float32 m_flEndLerpTime; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_EndingForce = 0x1fc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

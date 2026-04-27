@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimParameterManagerUpdater  {
 		public:
-			NESTED_PROPERTY(m_parameters,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimParameterBase>>, 0x18);
-			PROPERTY(m_idToIndexMap,GlobalTypes::CUtlHashtable< AnimParamID, int32 >, 0x30);
-			PROPERTY(m_nameToIndexMap,GlobalTypes::CUtlHashtable< CUtlString, int32 >*, 0x50);
-			NESTED_PROPERTY(m_indexToHandle,GlobalTypes::CUtlVector<animgraphlib::CAnimParamHandle>, 0x70);
-			NESTED_PROPERTY(m_autoResetParams,GlobalTypes::CUtlVector<std::pair< CAnimParamHandle, CAnimVariant >>, 0x88);
-			PROPERTY(m_autoResetMap,GlobalTypes::CUtlHashtable< CAnimParamHandle, int16 >, 0xa0);
+			NESTED_PROPERTY(m_parameters,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimParameterBase>>), 0x18);
+			// PROPERTY(m_idToIndexMap,IDENTITY(GlobalTypes::CUtlHashtable< AnimParamID, int32 >), 0x30);
+			// PROPERTY(m_nameToIndexMap,IDENTITY(GlobalTypes::CUtlHashtable< CUtlString, int32 >*), 0x50);
+			NESTED_PROPERTY(m_indexToHandle,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CAnimParamHandle>), 0x70);
+			NESTED_PROPERTY(m_autoResetParams,IDENTITY(GlobalTypes::CUtlVector<std::pair< CAnimParamHandle, CAnimVariant >>), 0x88);
+			// PROPERTY(m_autoResetMap,IDENTITY(GlobalTypes::CUtlHashtable< CAnimParamHandle, int16 >), 0xa0);
 			S2_PAD(0x100);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimParameterManagerUpdater) == 0x100, "CAnimParameterManagerUpdater size should be 0x100");
+
+#endif
 	}
 }

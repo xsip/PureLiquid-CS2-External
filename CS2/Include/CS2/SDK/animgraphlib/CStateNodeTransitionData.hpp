@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CStateNodeTransitionData  {
 		public:
-			NESTED_PROPERTY(m_curve,animgraphlib::CBlendCurve, 0x0);
-			PROPERTY(m_blendDuration,GlobalTypes::CAnimValue< float32 >, 0x8);
-			PROPERTY(m_resetCycleValue,GlobalTypes::CAnimValue< float32 >, 0x10);
+			NESTED_PROPERTY(m_curve,IDENTITY(animgraphlib::CBlendCurve), 0x0);
+			PROPERTY(m_blendDuration,IDENTITY(GlobalTypes::CAnimValue< float32 >), 0x8);
+			PROPERTY(m_resetCycleValue,IDENTITY(GlobalTypes::CAnimValue< float32 >), 0x10);
 			S2_PAD(0x1C);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CStateNodeTransitionData) == 0x1C, "CStateNodeTransitionData size should be 0x1C");
+
+#endif
 	}
 }

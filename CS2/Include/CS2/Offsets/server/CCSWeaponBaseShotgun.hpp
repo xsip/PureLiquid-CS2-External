@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1130
+			// Class size: 0x1030
 			namespace CCSWeaponBaseShotgun /*: public CS2::server::CCSWeaponBase*/ {
 				// NO SCHEMA DATA FOUND!
 			}

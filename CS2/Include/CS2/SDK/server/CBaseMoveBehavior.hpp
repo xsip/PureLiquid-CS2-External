@@ -21,19 +21,22 @@ namespace CS2 {
 	namespace server {
 		class CBaseMoveBehavior : public CS2::server::CPathKeyFrame {
 		public:
-			PROPERTY(m_iPositionInterpolator,int32_t, 0x500);
-			PROPERTY(m_iRotationInterpolator,int32_t, 0x504);
-			PROPERTY(m_flAnimStartTime,float32, 0x508);
-			PROPERTY(m_flAnimEndTime,float32, 0x50c);
-			PROPERTY(m_flAverageSpeedAcrossFrame,float32, 0x510);
-			PROPERTY(m_pCurrentKeyFrame,server::CPathKeyFrame*, 0x518);
-			PROPERTY(m_pTargetKeyFrame,server::CPathKeyFrame*, 0x520);
-			PROPERTY(m_pPreKeyFrame,server::CPathKeyFrame*, 0x528);
-			PROPERTY(m_pPostKeyFrame,server::CPathKeyFrame*, 0x530);
-			PROPERTY(m_flTimeIntoFrame,float32, 0x538);
-			PROPERTY(m_iDirection,int32_t, 0x53c);
-			S2_PAD(0x40);
+			PROPERTY(m_iPositionInterpolator,int32_t, 0x4f0);
+			PROPERTY(m_iRotationInterpolator,int32_t, 0x4f4);
+			PROPERTY(m_flAnimStartTime,float32, 0x4f8);
+			PROPERTY(m_flAnimEndTime,float32, 0x4fc);
+			PROPERTY(m_flAverageSpeedAcrossFrame,float32, 0x500);
+			PROPERTY(m_pCurrentKeyFrame,IDENTITY(GlobalTypes::CHandle<server::CPathKeyFrame>), 0x504);
+			PROPERTY(m_pTargetKeyFrame,IDENTITY(GlobalTypes::CHandle<server::CPathKeyFrame>), 0x508);
+			PROPERTY(m_pPreKeyFrame,IDENTITY(GlobalTypes::CHandle<server::CPathKeyFrame>), 0x50c);
+			PROPERTY(m_pPostKeyFrame,IDENTITY(GlobalTypes::CHandle<server::CPathKeyFrame>), 0x510);
+			PROPERTY(m_flTimeIntoFrame,float32, 0x514);
+			PROPERTY(m_iDirection,int32_t, 0x518);
+			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::server::CBaseMoveBehavior) == 0x540, "CBaseMoveBehavior size should be 0x540");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBaseMoveBehavior) == 0x520, "CBaseMoveBehavior size should be 0x520");
+
+#endif
 	}
 }

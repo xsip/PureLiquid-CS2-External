@@ -31,9 +31,12 @@ namespace CS2 {
 			PROPERTY(m_pNetworkDataReferencedPtrPropDescription,char*, 0x18);
 			PROPERTY(m_nRuntimeIndex,int32_t, 0x20);
 			PROPERTY(m_nFlags,uint32_t, 0x24);
-			PROPERTY(m_pBaseClassComponentHelper,entity2::CEntityComponentHelper*, 0x60);
+			PROPERTY(m_pBaseClassComponentHelper,IDENTITY(entity2::CEntityComponentHelper*), 0x60);
 			S2_PAD(0x68);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::entity2::EntComponentInfo_t) == 0x68, "EntComponentInfo_t size should be 0x68");
+
+#endif
 	}
 }

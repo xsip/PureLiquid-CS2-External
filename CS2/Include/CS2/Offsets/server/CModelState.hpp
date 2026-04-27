@@ -12,12 +12,18 @@ namespace CS2 {
 			namespace CModelState /**/ {
 				constexpr std::ptrdiff_t m_hModel = 0xa0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_ModelName = 0xa8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pVPhysicsAggregate = 0xe0; // vphysics2::IPhysAggregateInstance**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_flRootBoneOffset_x = 0xe8; // float32 m_flRootBoneOffset_x; |  0xe8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRootBoneOffset_y = 0xec; // float32 m_flRootBoneOffset_y; |  0xec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRootBoneOffset_z = 0xf0; // float32 m_flRootBoneOffset_z; |  0xf0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRootBoneOffsetResetSerialNumber = 0xf4; // uint8_t m_nRootBoneOffsetResetSerialNumber; |  0xf4 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bClientClothCreationSuppressed = 0xf5; // bool m_bClientClothCreationSuppressed; |  0xf5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_MeshGroupMask = 0x1a0; // uint64_t m_MeshGroupMask; |  0x1a0 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_nBodyGroupChoices = 0x1f0; // GlobalTypes::CNetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nIdealMotionType = 0x23a; // int8_t m_nIdealMotionType; |  0x23a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nForceLOD = 0x23b; // int8_t m_nForceLOD; |  0x23b | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nClothUpdateFlags = 0x23c; // int8_t m_nClothUpdateFlags; |  0x23c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nAnimStateNoInterpSerialNumber = 0x1a0; // uint8_t m_nAnimStateNoInterpSerialNumber; |  0x1a0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_MeshGroupMask = 0x1a8; // uint64_t m_MeshGroupMask; |  0x1a8 | Schema_Builtin | Size: 0x8
+				constexpr std::ptrdiff_t m_nBodyGroupChoices = 0x1f8; // GlobalTypes::CNetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nIdealMotionType = 0x242; // int8_t m_nIdealMotionType; |  0x242 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nForceLOD = 0x243; // int8_t m_nForceLOD; |  0x243 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nClothUpdateFlags = 0x244; // int8_t m_nClothUpdateFlags; |  0x244 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

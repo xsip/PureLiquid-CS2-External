@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xDC8
+			// Class size: 0xDD0
 			namespace C_INIT_RingWave /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_TransformInput = 0x1d8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_flParticlesPerOrbit = 0x240; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInitialRadius = 0x3b0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flThickness = 0x520; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInitialSpeedMin = 0x690; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInitialSpeedMax = 0x800; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flRoll = 0x970; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flPitch = 0xae0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flYaw = 0xc50; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bEvenDistribution = 0xdc0; // bool m_bEvenDistribution; |  0xdc0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bXYVelocityOnly = 0xdc1; // bool m_bXYVelocityOnly; |  0xdc1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_TransformInput = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_flParticlesPerOrbit = 0x248; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitialRadius = 0x3b8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flThickness = 0x528; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitialSpeedMin = 0x698; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitialSpeedMax = 0x808; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flRoll = 0x978; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flPitch = 0xae8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flYaw = 0xc58; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bEvenDistribution = 0xdc8; // bool m_bEvenDistribution; |  0xdc8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bXYVelocityOnly = 0xdc9; // bool m_bXYVelocityOnly; |  0xdc9 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

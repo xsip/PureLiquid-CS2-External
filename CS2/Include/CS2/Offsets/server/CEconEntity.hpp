@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xDE0
-			namespace CEconEntity /*: public CS2::server::CBaseFlex*/ {
-				constexpr std::ptrdiff_t m_AttributeManager = 0xac0; // server::CAttributeContainer  | Schema_DeclaredClass | Size: 0x2f8
-				constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0xdb8; // uint32_t m_OriginalOwnerXuidLow; |  0xdb8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OriginalOwnerXuidHigh = 0xdbc; // uint32_t m_OriginalOwnerXuidHigh; |  0xdbc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFallbackPaintKit = 0xdc0; // int32_t m_nFallbackPaintKit; |  0xdc0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFallbackSeed = 0xdc4; // int32_t m_nFallbackSeed; |  0xdc4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFallbackWear = 0xdc8; // float32 m_flFallbackWear; |  0xdc8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFallbackStatTrak = 0xdcc; // int32_t m_nFallbackStatTrak; |  0xdcc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hOldProvidee = 0xdd0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iOldOwnerClass = 0xdd4; // int32_t m_iOldOwnerClass; |  0xdd4 | Schema_Builtin | Size: 0x4
+			// Class size: 0xC70
+			namespace CEconEntity /*: public CS2::server::CBaseAnimGraph*/ {
+				constexpr std::ptrdiff_t m_AttributeManager = 0x958; // server::CAttributeContainer  | Schema_DeclaredClass | Size: 0x2f8
+				constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0xc50; // uint32_t m_OriginalOwnerXuidLow; |  0xc50 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OriginalOwnerXuidHigh = 0xc54; // uint32_t m_OriginalOwnerXuidHigh; |  0xc54 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFallbackPaintKit = 0xc58; // int32_t m_nFallbackPaintKit; |  0xc58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFallbackSeed = 0xc5c; // int32_t m_nFallbackSeed; |  0xc5c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFallbackWear = 0xc60; // float32 m_flFallbackWear; |  0xc60 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFallbackStatTrak = 0xc64; // int32_t m_nFallbackStatTrak; |  0xc64 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hOldProvidee = 0xc68; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iOldOwnerClass = 0xc6c; // int32_t m_iOldOwnerClass; |  0xc6c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

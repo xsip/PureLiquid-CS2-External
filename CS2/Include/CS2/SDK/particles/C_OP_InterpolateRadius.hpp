@@ -21,14 +21,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_InterpolateRadius : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flStartTime,float32, 0x1d0);
-			PROPERTY(m_flEndTime,float32, 0x1d4);
-			PROPERTY(m_flStartScale,float32, 0x1d8);
-			PROPERTY(m_flEndScale,float32, 0x1dc);
-			PROPERTY(m_bEaseInAndOut,bool, 0x1e0);
-			PROPERTY(m_flBias,float32, 0x1e4);
-			S2_PAD(0x50);
+			PROPERTY(m_flStartTime,float32, 0x1d8);
+			PROPERTY(m_flEndTime,float32, 0x1dc);
+			PROPERTY(m_flStartScale,float32, 0x1e0);
+			PROPERTY(m_flEndScale,float32, 0x1e4);
+			PROPERTY(m_bEaseInAndOut,bool, 0x1e8);
+			PROPERTY(m_flBias,float32, 0x1ec);
+			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_InterpolateRadius) == 0x220, "C_OP_InterpolateRadius size should be 0x220");
+
+#endif
 	}
 }

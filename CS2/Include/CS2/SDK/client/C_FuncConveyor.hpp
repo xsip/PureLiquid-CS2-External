@@ -23,16 +23,19 @@ namespace CS2 {
 	namespace client {
 		class C_FuncConveyor : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_vecMoveDirEntitySpace,GlobalTypes::Vector, 0xe90);
-			PROPERTY(m_flTargetSpeed,float32, 0xe9c);
-			NESTED_PROPERTY(m_nTransitionStartTick,entity2::GameTick_t, 0xea0);
-			PROPERTY(m_nTransitionDurationTicks,int32_t, 0xea4);
-			PROPERTY(m_flTransitionStartSpeed,float32, 0xea8);
-			PROPERTY(m_hConveyorModels,GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseEntity>>, 0xeb0);
-			PROPERTY(m_flCurrentConveyorOffset,float32, 0xec8);
-			PROPERTY(m_flCurrentConveyorSpeed,float32, 0xecc);
+			PROPERTY(m_vecMoveDirEntitySpace,GlobalTypes::Vector, 0xfb0);
+			PROPERTY(m_flTargetSpeed,float32, 0xfbc);
+			NESTED_PROPERTY(m_nTransitionStartTick,IDENTITY(entity2::GameTick_t), 0xfc0);
+			PROPERTY(m_nTransitionDurationTicks,int32_t, 0xfc4);
+			PROPERTY(m_flTransitionStartSpeed,float32, 0xfc8);
+			// PROPERTY(m_hConveyorModels,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseEntity>>), 0xfd0);
+			PROPERTY(m_flCurrentConveyorOffset,float32, 0xfe8);
+			PROPERTY(m_flCurrentConveyorSpeed,float32, 0xfec);
 			S2_PAD(0x48);
 		};
-		//static_assert(sizeof(CS2::client::C_FuncConveyor) == 0xED0, "C_FuncConveyor size should be 0xED0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_FuncConveyor) == 0xFF0, "C_FuncConveyor size should be 0xFF0");
+
+#endif
 	}
 }

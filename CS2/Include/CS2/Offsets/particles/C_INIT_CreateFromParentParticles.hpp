@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_INIT_CreateFromParentParticles /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_flVelocityScale = 0x1d8; // float32 m_flVelocityScale; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flIncrement = 0x1dc; // float32 m_flIncrement; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRandomDistribution = 0x1e0; // bool m_bRandomDistribution; |  0x1e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRandomSeed = 0x1e4; // int32_t m_nRandomSeed; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSubFrame = 0x1e8; // bool m_bSubFrame; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetRopeSegmentID = 0x1e9; // bool m_bSetRopeSegmentID; |  0x1e9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flVelocityScale = 0x1e0; // float32 m_flVelocityScale; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flIncrement = 0x1e4; // float32 m_flIncrement; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRandomDistribution = 0x1e8; // bool m_bRandomDistribution; |  0x1e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRandomSeed = 0x1ec; // int32_t m_nRandomSeed; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSubFrame = 0x1f0; // bool m_bSubFrame; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetRopeSegmentID = 0x1f1; // bool m_bSetRopeSegmentID; |  0x1f1 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

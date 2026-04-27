@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitVecCollection : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_InputValue,particleslib::CParticleCollectionVecInput, 0x1d8);
-			NESTED_PROPERTY(m_nOutputField,particles::ParticleAttributeIndex_t, 0x890);
+			NESTED_PROPERTY(m_InputValue,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x898);
 			S2_PAD(0x6C0);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitVecCollection) == 0x898, "C_INIT_InitVecCollection size should be 0x898");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitVecCollection) == 0x8A0, "C_INIT_InitVecCollection size should be 0x8A0");
+
+#endif
 	}
 }

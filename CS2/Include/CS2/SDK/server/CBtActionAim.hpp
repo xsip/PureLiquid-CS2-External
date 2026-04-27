@@ -30,12 +30,15 @@ namespace CS2 {
 			PROPERTY(m_flNextLookTargetLerpTime,float32, 0x94);
 			PROPERTY(m_flPenaltyReductionRatio,float32, 0x98);
 			PROPERTY(m_NextLookTarget,GlobalTypes::QAngle, 0x9c);
-			NESTED_PROPERTY(m_AimTimer,server::CountdownTimer, 0xa8);
-			NESTED_PROPERTY(m_SniperHoldTimer,server::CountdownTimer, 0xc0);
-			NESTED_PROPERTY(m_FocusIntervalTimer,server::CountdownTimer, 0xd8);
+			NESTED_PROPERTY(m_AimTimer,IDENTITY(server::CountdownTimer), 0xa8);
+			NESTED_PROPERTY(m_SniperHoldTimer,IDENTITY(server::CountdownTimer), 0xc0);
+			NESTED_PROPERTY(m_FocusIntervalTimer,IDENTITY(server::CountdownTimer), 0xd8);
 			PROPERTY(m_bAcquired,bool, 0xf0);
 			S2_PAD(0xA0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBtActionAim) == 0xF8, "CBtActionAim size should be 0xF8");
+
+#endif
 	}
 }

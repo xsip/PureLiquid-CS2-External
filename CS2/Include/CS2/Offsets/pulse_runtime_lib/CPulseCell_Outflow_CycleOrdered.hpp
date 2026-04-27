@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace pulse_runtime_lib {
 			// Class size: 0x60
 			namespace CPulseCell_Outflow_CycleOrdered /*: public CS2::pulse_runtime_lib::CPulseCell_BaseFlow*/ {
-				constexpr std::ptrdiff_t m_Outputs = 0x48; // server::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Outputs = 0x48; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

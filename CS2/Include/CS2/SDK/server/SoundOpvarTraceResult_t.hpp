@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(flDistSqrToCenter,float32, 0x10);
 			S2_PAD(0x14);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::SoundOpvarTraceResult_t) == 0x14, "SoundOpvarTraceResult_t size should be 0x14");
+
+#endif
 	}
 }

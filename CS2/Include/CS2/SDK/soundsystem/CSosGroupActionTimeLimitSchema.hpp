@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flMaxDuration,float32, 0x8);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CSosGroupActionTimeLimitSchema) == 0x10, "CSosGroupActionTimeLimitSchema size should be 0x10");
+
+#endif
 	}
 }

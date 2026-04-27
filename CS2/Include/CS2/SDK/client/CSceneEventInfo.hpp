@@ -33,22 +33,25 @@ namespace CS2 {
 		public:
 			PROPERTY(m_iLayer,int32_t, 0x0);
 			PROPERTY(m_iPriority,int32_t, 0x4);
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x8);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x8);
 			PROPERTY(m_flWeight,float32, 0xc);
-			PROPERTY(m_hAnimClip,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmClip>, 0x10);
+			PROPERTY(m_hAnimClip,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmClip>), 0x10);
 			PROPERTY(m_sAnimClipSlot,GlobalTypes::CGlobalSymbol, 0x18);
 			PROPERTY(m_sAnimClipSlotWeight,GlobalTypes::CGlobalSymbol, 0x20);
 			PROPERTY(m_bHasArrived,bool, 0x28);
 			PROPERTY(m_nType,int32_t, 0x2c);
-			NESTED_PROPERTY(m_flNext,entity2::GameTime_t, 0x30);
+			NESTED_PROPERTY(m_flNext,IDENTITY(entity2::GameTime_t), 0x30);
 			PROPERTY(m_bIsGesture,bool, 0x34);
 			PROPERTY(m_bShouldRemove,bool, 0x35);
-			PROPERTY(m_hTarget,GlobalTypes::CHandle<client::C_BaseEntity>, 0x5c);
-			NESTED_PROPERTY(m_nSceneEventId,client::SceneEventId_t, 0x60);
+			PROPERTY(m_hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x5c);
+			NESTED_PROPERTY(m_nSceneEventId,IDENTITY(client::SceneEventId_t), 0x60);
 			PROPERTY(m_bClientSide,bool, 0x64);
 			PROPERTY(m_bStarted,bool, 0x65);
 			S2_PAD(0x68);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSceneEventInfo) == 0x68, "CSceneEventInfo size should be 0x68");
+
+#endif
 	}
 }

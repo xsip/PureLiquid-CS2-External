@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8F0
+			// Class size: 0x928
 			namespace CBombTarget /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_OnBombExplode = 0x890; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnBombPlanted = 0x8a8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnBombDefused = 0x8c0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_bIsBombSiteB = 0x8d8; // bool m_bIsBombSiteB; |  0x8d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsHeistBombTarget = 0x8d9; // bool m_bIsHeistBombTarget; |  0x8d9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bBombPlantedHere = 0x8da; // bool m_bBombPlantedHere; |  0x8da | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_szMountTarget = 0x8e0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hInstructorHint = 0x8e8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nBombSiteDesignation = 0x8ec; // int32_t m_nBombSiteDesignation; |  0x8ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnBombExplode = 0x8c8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnBombPlanted = 0x8e0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnBombDefused = 0x8f8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_bIsBombSiteB = 0x910; // bool m_bIsBombSiteB; |  0x910 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsHeistBombTarget = 0x911; // bool m_bIsHeistBombTarget; |  0x911 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bBombPlantedHere = 0x912; // bool m_bBombPlantedHere; |  0x912 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_szMountTarget = 0x918; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hInstructorHint = 0x920; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nBombSiteDesignation = 0x924; // int32_t m_nBombSiteDesignation; |  0x924 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

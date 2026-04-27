@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_HSVShiftToCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nColorCP,int32_t, 0x1d8);
-			PROPERTY(m_nColorGemEnableCP,int32_t, 0x1dc);
-			PROPERTY(m_nOutputCP,int32_t, 0x1e0);
-			PROPERTY(m_DefaultHSVColor,GlobalTypes::Color, 0x1e4);
+			PROPERTY(m_nColorCP,int32_t, 0x1e0);
+			PROPERTY(m_nColorGemEnableCP,int32_t, 0x1e4);
+			PROPERTY(m_nOutputCP,int32_t, 0x1e8);
+			PROPERTY(m_DefaultHSVColor,GlobalTypes::Color, 0x1ec);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_HSVShiftToCP) == 0x1F8, "C_OP_HSVShiftToCP size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_HSVShiftToCP) == 0x200, "C_OP_HSVShiftToCP size should be 0x200");
+
+#endif
 	}
 }

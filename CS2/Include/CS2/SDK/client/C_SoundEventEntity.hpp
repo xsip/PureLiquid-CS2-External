@@ -22,22 +22,25 @@ namespace CS2 {
 	namespace client {
 		class C_SoundEventEntity : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_bStartOnSpawn,bool, 0x608);
-			PROPERTY(m_bToLocalPlayer,bool, 0x609);
-			PROPERTY(m_bStopOnNew,bool, 0x60a);
-			PROPERTY(m_bSaveRestore,bool, 0x60b);
-			PROPERTY(m_bSavedIsPlaying,bool, 0x60c);
-			PROPERTY(m_flSavedElapsedTime,float32, 0x610);
-			PROPERTY(m_iszSourceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x618);
-			PROPERTY(m_iszAttachmentName,GlobalTypes::CUtlSymbolLarge*, 0x620);
-			PROPERTY(m_onGUIDChanged,GlobalTypes::CEntityOutputTemplate< uint64, uint64 >, 0x628);
-			NESTED_PROPERTY(m_onSoundFinished,entity2::CEntityIOOutput, 0x648);
-			PROPERTY(m_flClientCullRadius,float32, 0x660);
-			PROPERTY(m_iszSoundName,GlobalTypes::CUtlSymbolLarge*, 0x690);
-			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x6ac);
-			PROPERTY(m_nEntityIndexSelection,int32_t, 0x6b0);
-			S2_PAD(0xB0);
+			PROPERTY(m_bStartOnSpawn,bool, 0x600);
+			PROPERTY(m_bToLocalPlayer,bool, 0x601);
+			PROPERTY(m_bStopOnNew,bool, 0x602);
+			PROPERTY(m_bSaveRestore,bool, 0x603);
+			PROPERTY(m_bSavedIsPlaying,bool, 0x604);
+			PROPERTY(m_flSavedElapsedTime,float32, 0x608);
+			PROPERTY(m_iszSourceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x610);
+			PROPERTY(m_iszAttachmentName,GlobalTypes::CUtlSymbolLarge*, 0x618);
+			// PROPERTY(m_onGUIDChanged,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::SndOpEventGuid_t>), 0x620);
+			NESTED_PROPERTY(m_onSoundFinished,IDENTITY(entity2::CEntityIOOutput), 0x650);
+			PROPERTY(m_flClientCullRadius,float32, 0x668);
+			PROPERTY(m_iszSoundName,GlobalTypes::CUtlSymbolLarge*, 0x698);
+			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x6b4);
+			PROPERTY(m_nEntityIndexSelection,int32_t, 0x6b8);
+			S2_PAD(0xC0);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundEventEntity) == 0x6B8, "C_SoundEventEntity size should be 0x6B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundEventEntity) == 0x6C0, "C_SoundEventEntity size should be 0x6C0");
+
+#endif
 	}
 }

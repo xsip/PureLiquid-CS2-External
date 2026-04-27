@@ -20,7 +20,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bConsiderSceneInvolvementAsSpeech = 0x79; // bool m_bConsiderSceneInvolvementAsSpeech; |  0x79 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bSceneEntityDisabled = 0x7a; // bool m_bSceneEntityDisabled; |  0x7a | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nLastSpokenPriority = 0x7c; // int32_t m_nLastSpokenPriority; |  0x7c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pOuter = 0x98; // server::CBaseFlex**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pOuter = 0x98; // server::CBaseModelEntity**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

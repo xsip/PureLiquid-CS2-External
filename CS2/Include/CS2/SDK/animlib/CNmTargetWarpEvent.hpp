@@ -23,10 +23,13 @@ namespace CS2 {
 	namespace animlib {
 		class CNmTargetWarpEvent : public CS2::animlib::CNmEvent {
 		public:
-			PROPERTY(m_rule,animlib::NmTargetWarpRule_t, 0x20);
-			PROPERTY(m_algorithm,animlib::NmTargetWarpAlgorithm_t, 0x21);
+			PROPERTY(m_rule,IDENTITY(animlib::NmTargetWarpRule_t), 0x18);
+			PROPERTY(m_algorithm,IDENTITY(animlib::NmTargetWarpAlgorithm_t), 0x19);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmTargetWarpEvent) == 0x28, "CNmTargetWarpEvent size should be 0x28");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmTargetWarpEvent) == 0x20, "CNmTargetWarpEvent size should be 0x20");
+
+#endif
 	}
 }

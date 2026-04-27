@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x208
+			// Class size: 0x210
 			namespace C_INIT_CreatePhyllotaxis /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nScaleCP = 0x1dc; // int32_t m_nScaleCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nComponent = 0x1e0; // int32_t m_nComponent; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fRadCentCore = 0x1e4; // float32 m_fRadCentCore; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fRadPerPoint = 0x1e8; // float32 m_fRadPerPoint; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fRadPerPointTo = 0x1ec; // float32 m_fRadPerPointTo; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fpointAngle = 0x1f0; // float32 m_fpointAngle; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fsizeOverall = 0x1f4; // float32 m_fsizeOverall; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fRadBias = 0x1f8; // float32 m_fRadBias; |  0x1f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fMinRad = 0x1fc; // float32 m_fMinRad; |  0x1fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fDistBias = 0x200; // float32 m_fDistBias; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseLocalCoords = 0x204; // bool m_bUseLocalCoords; |  0x204 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseWithContEmit = 0x205; // bool m_bUseWithContEmit; |  0x205 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseOrigRadius = 0x206; // bool m_bUseOrigRadius; |  0x206 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e0; // int32_t m_nControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nScaleCP = 0x1e4; // int32_t m_nScaleCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nComponent = 0x1e8; // int32_t m_nComponent; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fRadCentCore = 0x1ec; // float32 m_fRadCentCore; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fRadPerPoint = 0x1f0; // float32 m_fRadPerPoint; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fRadPerPointTo = 0x1f4; // float32 m_fRadPerPointTo; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fpointAngle = 0x1f8; // float32 m_fpointAngle; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fsizeOverall = 0x1fc; // float32 m_fsizeOverall; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fRadBias = 0x200; // float32 m_fRadBias; |  0x200 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fMinRad = 0x204; // float32 m_fMinRad; |  0x204 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fDistBias = 0x208; // float32 m_fDistBias; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseLocalCoords = 0x20c; // bool m_bUseLocalCoords; |  0x20c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseWithContEmit = 0x20d; // bool m_bUseWithContEmit; |  0x20d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseOrigRadius = 0x20e; // bool m_bUseOrigRadius; |  0x20e | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x270
+			// Class size: 0x278
 			namespace C_OP_SetControlPointPositionToTimeOfDayValue /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pszTimeOfDayParameter = 0x1dc; // char m_pszTimeOfDayParameter[128]; |  0x1dc | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_vecDefaultValue = 0x25c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e0; // int32_t m_nControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pszTimeOfDayParameter = 0x1e4; // char m_pszTimeOfDayParameter[128]; |  0x1e4 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_vecDefaultValue = 0x264; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

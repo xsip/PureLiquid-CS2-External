@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_vOffset,GlobalTypes::Vector, 0x8);
 			S2_PAD(0x14);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::PointDefinition_t) == 0x14, "PointDefinition_t size should be 0x14");
+
+#endif
 	}
 }

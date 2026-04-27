@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace compositematerialslib {
 		class CompMatMutatorCondition_t  {
 		public:
-			PROPERTY(m_nMutatorCondition,compositematerialslib::CompMatPropertyMutatorConditionType_t, 0x0);
+			PROPERTY(m_nMutatorCondition,IDENTITY(compositematerialslib::CompMatPropertyMutatorConditionType_t), 0x0);
 			PROPERTY(m_strMutatorConditionContainerName,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_strMutatorConditionContainerVarName,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(m_strMutatorConditionContainerVarValue,GlobalTypes::CUtlString*, 0x18);
 			PROPERTY(m_bPassWhenTrue,bool, 0x20);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::compositematerialslib::CompMatMutatorCondition_t) == 0x28, "CompMatMutatorCondition_t size should be 0x28");
+
+#endif
 	}
 }

@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace soundsystem {
 		class SosEditItemInfo_t  {
 		public:
-			PROPERTY(itemType,soundsystem::SosEditItemType_t, 0x0);
+			PROPERTY(itemType,IDENTITY(soundsystem::SosEditItemType_t), 0x0);
 			PROPERTY(itemName,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(itemTypeName,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(itemKVString,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(itemPos,GlobalTypes::Vector2D, 0x28);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::SosEditItemInfo_t) == 0x30, "SosEditItemInfo_t size should be 0x30");
+
+#endif
 	}
 }

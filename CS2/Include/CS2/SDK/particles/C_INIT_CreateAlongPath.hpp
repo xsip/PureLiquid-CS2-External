@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateAlongPath : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_fMaxDistance,float32, 0x1d8);
-			NESTED_PROPERTY(m_PathParams,particles::CPathParameters, 0x1e0);
-			PROPERTY(m_bUseRandomCPs,bool, 0x220);
-			PROPERTY(m_vEndOffset,GlobalTypes::Vector, 0x224);
-			PROPERTY(m_bSaveOffset,bool, 0x230);
-			S2_PAD(0x68);
+			PROPERTY(m_fMaxDistance,float32, 0x1e0);
+			NESTED_PROPERTY(m_PathParams,IDENTITY(particles::CPathParameters), 0x1f0);
+			PROPERTY(m_bUseRandomCPs,bool, 0x230);
+			PROPERTY(m_vEndOffset,GlobalTypes::Vector, 0x234);
+			PROPERTY(m_bSaveOffset,bool, 0x240);
+			S2_PAD(0x70);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateAlongPath) == 0x240, "C_INIT_CreateAlongPath size should be 0x240");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateAlongPath) == 0x250, "C_INIT_CreateAlongPath size should be 0x250");
+
+#endif
 	}
 }

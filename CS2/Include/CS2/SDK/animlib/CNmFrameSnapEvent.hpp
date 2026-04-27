@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace animlib {
 		class CNmFrameSnapEvent : public CS2::animlib::CNmEvent {
 		public:
-			PROPERTY(m_frameSnapMode,animlib::NmFrameSnapEventMode_t, 0x20);
+			PROPERTY(m_frameSnapMode,IDENTITY(animlib::NmFrameSnapEventMode_t), 0x18);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmFrameSnapEvent) == 0x28, "CNmFrameSnapEvent size should be 0x28");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmFrameSnapEvent) == 0x20, "CNmFrameSnapEvent size should be 0x20");
+
+#endif
 	}
 }

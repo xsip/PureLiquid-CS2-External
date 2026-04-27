@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_iLastFrame,int32_t, 0x4cc);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGameGibManager) == 0x4D0, "CGameGibManager size should be 0x4D0");
+
+#endif
 	}
 }

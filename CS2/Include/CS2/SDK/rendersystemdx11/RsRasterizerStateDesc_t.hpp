@@ -22,8 +22,8 @@ namespace CS2 {
 	namespace rendersystemdx11 {
 		class RsRasterizerStateDesc_t  {
 		public:
-			PROPERTY(m_nFillMode,rendersystemdx11::RsFillMode_t, 0x0);
-			PROPERTY(m_nCullMode,rendersystemdx11::RsCullMode_t, 0x1);
+			PROPERTY(m_nFillMode,IDENTITY(rendersystemdx11::RsFillMode_t), 0x0);
+			PROPERTY(m_nCullMode,IDENTITY(rendersystemdx11::RsCullMode_t), 0x1);
 			PROPERTY(m_bDepthClipEnable,bool, 0x2);
 			PROPERTY(m_bMultisampleEnable,bool, 0x3);
 			PROPERTY(m_nDepthBias,int32_t, 0x4);
@@ -31,6 +31,9 @@ namespace CS2 {
 			PROPERTY(m_flSlopeScaledDepthBias,float32, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::rendersystemdx11::RsRasterizerStateDesc_t) == 0x10, "RsRasterizerStateDesc_t size should be 0x10");
+
+#endif
 	}
 }

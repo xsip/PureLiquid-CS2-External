@@ -24,12 +24,15 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CSingleFrameUpdateNode : public CS2::animgraphlib::CLeafUpdateNode {
 		public:
-			NESTED_PROPERTY(m_actions,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimActionUpdater>>, 0x58);
-			NESTED_PROPERTY(m_hPoseCacheHandle,animgraphlib::CPoseHandle, 0x70);
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x74);
+			NESTED_PROPERTY(m_actions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimActionUpdater>>), 0x58);
+			NESTED_PROPERTY(m_hPoseCacheHandle,IDENTITY(animgraphlib::CPoseHandle), 0x70);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x74);
 			PROPERTY(m_flCycle,float32, 0x78);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CSingleFrameUpdateNode) == 0x80, "CSingleFrameUpdateNode size should be 0x80");
+
+#endif
 	}
 }

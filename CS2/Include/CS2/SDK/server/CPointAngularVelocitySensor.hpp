@@ -28,24 +28,27 @@ namespace CS2 {
 	namespace server {
 		class CPointAngularVelocitySensor : public CS2::server::CPointEntity {
 		public:
-			PROPERTY(m_hTargetEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4a8);
+			PROPERTY(m_hTargetEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4a8);
 			PROPERTY(m_flThreshold,float32, 0x4ac);
 			PROPERTY(m_nLastCompareResult,int32_t, 0x4b0);
 			PROPERTY(m_nLastFireResult,int32_t, 0x4b4);
-			NESTED_PROPERTY(m_flFireTime,entity2::GameTime_t, 0x4b8);
+			NESTED_PROPERTY(m_flFireTime,IDENTITY(entity2::GameTime_t), 0x4b8);
 			PROPERTY(m_flFireInterval,float32, 0x4bc);
 			PROPERTY(m_flLastAngVelocity,float32, 0x4c0);
 			PROPERTY(m_lastOrientation,GlobalTypes::QAngle, 0x4c4);
 			PROPERTY(m_vecAxis,GlobalTypes::VectorWS, 0x4d0);
 			PROPERTY(m_bUseHelper,bool, 0x4dc);
-			PROPERTY(m_AngularVelocity,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x4e0);
-			NESTED_PROPERTY(m_OnLessThan,entity2::CEntityIOOutput, 0x500);
-			NESTED_PROPERTY(m_OnLessThanOrEqualTo,entity2::CEntityIOOutput, 0x518);
-			NESTED_PROPERTY(m_OnGreaterThan,entity2::CEntityIOOutput, 0x530);
-			NESTED_PROPERTY(m_OnGreaterThanOrEqualTo,entity2::CEntityIOOutput, 0x548);
-			NESTED_PROPERTY(m_OnEqualTo,entity2::CEntityIOOutput, 0x560);
+			// PROPERTY(m_AngularVelocity,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x4e0);
+			NESTED_PROPERTY(m_OnLessThan,IDENTITY(entity2::CEntityIOOutput), 0x500);
+			NESTED_PROPERTY(m_OnLessThanOrEqualTo,IDENTITY(entity2::CEntityIOOutput), 0x518);
+			NESTED_PROPERTY(m_OnGreaterThan,IDENTITY(entity2::CEntityIOOutput), 0x530);
+			NESTED_PROPERTY(m_OnGreaterThanOrEqualTo,IDENTITY(entity2::CEntityIOOutput), 0x548);
+			NESTED_PROPERTY(m_OnEqualTo,IDENTITY(entity2::CEntityIOOutput), 0x560);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointAngularVelocitySensor) == 0x578, "CPointAngularVelocitySensor size should be 0x578");
+
+#endif
 	}
 }

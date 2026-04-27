@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_localSpaceTransforms = 0x10; // GlobalTypes::CUtlVector<GlobalTypes::CTransform>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_modelSpaceTransforms = 0x28; // GlobalTypes::CUtlVector<GlobalTypes::CTransform>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_boneNames = 0x40; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_children = 0x58; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_children = 0x58; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<int32>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_parents = 0x70; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_feet = 0x88; // GlobalTypes::CUtlVector<modellib::CAnimFoot>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_morphNames = 0xa0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18

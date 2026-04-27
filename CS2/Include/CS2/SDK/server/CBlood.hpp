@@ -25,9 +25,12 @@ namespace CS2 {
 			PROPERTY(m_vecSprayAngles,GlobalTypes::QAngle, 0x4a8);
 			PROPERTY(m_vecSprayDir,GlobalTypes::Vector, 0x4b4);
 			PROPERTY(m_flAmount,float32, 0x4c0);
-			PROPERTY(m_Color,client::BloodType, 0x4c4);
+			PROPERTY(m_Color,IDENTITY(client::BloodType), 0x4c4);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBlood) == 0x4C8, "CBlood size should be 0x4C8");
+
+#endif
 	}
 }

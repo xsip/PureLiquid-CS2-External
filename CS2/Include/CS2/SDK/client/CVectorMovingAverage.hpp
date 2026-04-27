@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CVectorMovingAverage) == 0x20, "CVectorMovingAverage size should be 0x20");
+
+#endif
 	}
 }

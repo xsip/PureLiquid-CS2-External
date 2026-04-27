@@ -12,7 +12,7 @@
 
 #include <SDK/particles/CParticleFunctionOperator.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -23,18 +23,21 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_CycleScalar : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nDestField,particles::ParticleAttributeIndex_t, 0x1d0);
-			PROPERTY(m_flStartValue,float32, 0x1d4);
-			PROPERTY(m_flEndValue,float32, 0x1d8);
-			PROPERTY(m_flCycleTime,float32, 0x1dc);
-			PROPERTY(m_bDoNotRepeatCycle,bool, 0x1e0);
-			PROPERTY(m_bSynchronizeParticles,bool, 0x1e1);
-			PROPERTY(m_nCPScale,int32_t, 0x1e4);
-			PROPERTY(m_nCPFieldMin,int32_t, 0x1e8);
-			PROPERTY(m_nCPFieldMax,int32_t, 0x1ec);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x1f0);
+			NESTED_PROPERTY(m_nDestField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			PROPERTY(m_flStartValue,float32, 0x1dc);
+			PROPERTY(m_flEndValue,float32, 0x1e0);
+			PROPERTY(m_flCycleTime,float32, 0x1e4);
+			PROPERTY(m_bDoNotRepeatCycle,bool, 0x1e8);
+			PROPERTY(m_bSynchronizeParticles,bool, 0x1e9);
+			PROPERTY(m_nCPScale,int32_t, 0x1ec);
+			PROPERTY(m_nCPFieldMin,int32_t, 0x1f0);
+			PROPERTY(m_nCPFieldMax,int32_t, 0x1f4);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x1f8);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_CycleScalar) == 0x1F8, "C_OP_CycleScalar size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_CycleScalar) == 0x200, "C_OP_CycleScalar size should be 0x200");
+
+#endif
 	}
 }

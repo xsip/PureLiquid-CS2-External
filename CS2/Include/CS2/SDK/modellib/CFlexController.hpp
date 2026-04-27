@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(max,float32, 0x14);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CFlexController) == 0x18, "CFlexController size should be 0x18");
+
+#endif
 	}
 }

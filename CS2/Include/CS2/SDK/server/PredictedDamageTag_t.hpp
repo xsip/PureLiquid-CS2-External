@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/GameTick_t.hpp>
+#include "../entity2/GameTick_t.hpp"
 
 
 
@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace server {
 		class PredictedDamageTag_t  {
 		public:
-			NESTED_PROPERTY(nTagTick,entity2::GameTick_t, 0x30);
+			NESTED_PROPERTY(nTagTick,IDENTITY(entity2::GameTick_t), 0x30);
 			PROPERTY(flFlinchModSmall,float32, 0x34);
 			PROPERTY(flFlinchModLarge,float32, 0x38);
 			PROPERTY(flFriendlyFireDamageReductionRatio,float32, 0x3c);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::PredictedDamageTag_t) == 0x40, "PredictedDamageTag_t size should be 0x40");
+
+#endif
 	}
 }

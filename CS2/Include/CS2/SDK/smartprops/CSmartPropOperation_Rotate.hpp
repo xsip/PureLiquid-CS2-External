@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_vRotation,GlobalTypes::CSmartPropAttributeAngles, 0x50);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_Rotate) == 0x90, "CSmartPropOperation_Rotate size should be 0x90");
+
+#endif
 	}
 }

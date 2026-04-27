@@ -27,21 +27,24 @@ namespace CS2 {
 	namespace animgraphlib {
 		class COrientationWarpUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			PROPERTY(m_eMode,animgraphlib::OrientationWarpMode_t, 0x74);
-			NESTED_PROPERTY(m_hTargetParam,animgraphlib::CAnimParamHandle, 0x78);
-			NESTED_PROPERTY(m_hTargetPositionParam,animgraphlib::CAnimParamHandle, 0x7a);
-			NESTED_PROPERTY(m_hFallbackTargetPositionParam,animgraphlib::CAnimParamHandle, 0x7c);
-			PROPERTY(m_eTargetOffsetMode,animgraphlib::OrientationWarpTargetOffsetMode_t, 0x80);
+			PROPERTY(m_eMode,IDENTITY(animgraphlib::OrientationWarpMode_t), 0x74);
+			NESTED_PROPERTY(m_hTargetParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x78);
+			NESTED_PROPERTY(m_hTargetPositionParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x7a);
+			NESTED_PROPERTY(m_hFallbackTargetPositionParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x7c);
+			PROPERTY(m_eTargetOffsetMode,IDENTITY(animgraphlib::OrientationWarpTargetOffsetMode_t), 0x80);
 			PROPERTY(m_flTargetOffset,float32, 0x84);
-			NESTED_PROPERTY(m_hTargetOffsetParam,animgraphlib::CAnimParamHandle, 0x88);
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0x90);
-			PROPERTY(m_eRootMotionSource,animgraphlib::OrientationWarpRootMotionSource_t, 0xa8);
+			NESTED_PROPERTY(m_hTargetOffsetParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x88);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0x90);
+			PROPERTY(m_eRootMotionSource,IDENTITY(animgraphlib::OrientationWarpRootMotionSource_t), 0xa8);
 			PROPERTY(m_flMaxRootMotionScale,float32, 0xac);
 			PROPERTY(m_bEnablePreferredRotationDirection,bool, 0xb0);
-			PROPERTY(m_ePreferredRotationDirection,animgraphlib::AnimValueSource, 0xb4);
+			PROPERTY(m_ePreferredRotationDirection,IDENTITY(animgraphlib::AnimValueSource), 0xb4);
 			PROPERTY(m_flPreferredRotationThreshold,float32, 0xb8);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::COrientationWarpUpdateNode) == 0xC0, "COrientationWarpUpdateNode size should be 0xC0");
+
+#endif
 	}
 }

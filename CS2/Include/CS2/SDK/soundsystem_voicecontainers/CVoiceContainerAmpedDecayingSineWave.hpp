@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flGainAmount,float32, 0xb0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerAmpedDecayingSineWave) == 0xB8, "CVoiceContainerAmpedDecayingSineWave size should be 0xB8");
+
+#endif
 	}
 }

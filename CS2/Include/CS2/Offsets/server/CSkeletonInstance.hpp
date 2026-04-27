@@ -8,15 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x430
+			// Class size: 0x420
 			namespace CSkeletonInstance /*: public CS2::server::CGameSceneNode*/ {
-				constexpr std::ptrdiff_t m_modelState = 0x140; // server::CModelState  | Schema_DeclaredClass | Size: 0x250
-				constexpr std::ptrdiff_t m_bIsAnimationEnabled = 0x390; // bool m_bIsAnimationEnabled; |  0x390 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x391; // bool m_bUseParentRenderBounds; |  0x391 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x392; // bool m_bDisableSolidCollisionsForHierarchy; |  0x392 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_materialGroup = 0x394; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nHitboxSet = 0x398; // uint8_t m_nHitboxSet; |  0x398 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceServerConstraintsEnabled = 0x3f4; // bool m_bForceServerConstraintsEnabled; |  0x3f4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_modelState = 0x130; // server::CModelState  | Schema_DeclaredClass | Size: 0x250
+				constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x380; // bool m_bUseParentRenderBounds; |  0x380 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x381; // bool m_bDisableSolidCollisionsForHierarchy; |  0x381 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_materialGroup = 0x384; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nHitboxSet = 0x388; // uint8_t m_nHitboxSet; |  0x388 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceServerConstraintsEnabled = 0x3e4; // bool m_bForceServerConstraintsEnabled; |  0x3e4 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

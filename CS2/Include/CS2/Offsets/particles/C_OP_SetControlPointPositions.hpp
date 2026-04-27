@@ -8,20 +8,20 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x228
 			namespace C_OP_SetControlPointPositions /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_bUseWorldLocation = 0x1d8; // bool m_bUseWorldLocation; |  0x1d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bOrient = 0x1d9; // bool m_bOrient; |  0x1d9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetOnce = 0x1da; // bool m_bSetOnce; |  0x1da | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nCP1 = 0x1dc; // int32_t m_nCP1; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCP2 = 0x1e0; // int32_t m_nCP2; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCP3 = 0x1e4; // int32_t m_nCP3; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCP4 = 0x1e8; // int32_t m_nCP4; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecCP1Pos = 0x1ec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecCP2Pos = 0x1f8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecCP3Pos = 0x204; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecCP4Pos = 0x210; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nHeadLocation = 0x21c; // int32_t m_nHeadLocation; |  0x21c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseWorldLocation = 0x1e0; // bool m_bUseWorldLocation; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bOrient = 0x1e1; // bool m_bOrient; |  0x1e1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetOnce = 0x1e2; // bool m_bSetOnce; |  0x1e2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCP1 = 0x1e4; // int32_t m_nCP1; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCP2 = 0x1e8; // int32_t m_nCP2; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCP3 = 0x1ec; // int32_t m_nCP3; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCP4 = 0x1f0; // int32_t m_nCP4; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecCP1Pos = 0x1f4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecCP2Pos = 0x200; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecCP3Pos = 0x20c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecCP4Pos = 0x218; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nHeadLocation = 0x224; // int32_t m_nHeadLocation; |  0x224 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

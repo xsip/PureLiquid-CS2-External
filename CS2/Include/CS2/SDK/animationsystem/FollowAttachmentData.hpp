@@ -22,9 +22,12 @@ namespace CS2 {
 		class FollowAttachmentData  {
 		public:
 			PROPERTY(m_boneIndex,int32_t, 0x0);
-			NESTED_PROPERTY(m_attachmentHandle,modellib::AttachmentHandle_t, 0x4);
+			NESTED_PROPERTY(m_attachmentHandle,IDENTITY(modellib::AttachmentHandle_t), 0x4);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::FollowAttachmentData) == 0x8, "FollowAttachmentData size should be 0x8");
+
+#endif
 	}
 }

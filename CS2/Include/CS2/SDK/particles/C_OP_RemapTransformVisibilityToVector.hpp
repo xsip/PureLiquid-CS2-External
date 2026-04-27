@@ -11,7 +11,7 @@
 
 
 #include <SDK/particles/CParticleFunctionOperator.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 #include <SDK/particleslib/CParticleTransformInput.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 
@@ -24,16 +24,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapTransformVisibilityToVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x1d0);
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1d8);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x240);
-			PROPERTY(m_flInputMin,float32, 0x244);
-			PROPERTY(m_flInputMax,float32, 0x248);
-			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x24c);
-			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x258);
-			PROPERTY(m_flRadius,float32, 0x264);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x1d8);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x248);
+			PROPERTY(m_flInputMin,float32, 0x24c);
+			PROPERTY(m_flInputMax,float32, 0x250);
+			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x254);
+			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x260);
+			PROPERTY(m_flRadius,float32, 0x26c);
 			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapTransformVisibilityToVector) == 0x268, "C_OP_RemapTransformVisibilityToVector size should be 0x268");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapTransformVisibilityToVector) == 0x270, "C_OP_RemapTransformVisibilityToVector size should be 0x270");
+
+#endif
 	}
 }

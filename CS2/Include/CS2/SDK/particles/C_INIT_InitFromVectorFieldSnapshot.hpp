@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitFromVectorFieldSnapshot : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1dc);
-			PROPERTY(m_nWeightUpdateCP,int32_t, 0x1e0);
-			PROPERTY(m_bUseVerticalVelocity,bool, 0x1e4);
-			NESTED_PROPERTY(m_vecScale,particleslib::CPerParticleVecInput, 0x1e8);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
+			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1e4);
+			PROPERTY(m_nWeightUpdateCP,int32_t, 0x1e8);
+			PROPERTY(m_bUseVerticalVelocity,bool, 0x1ec);
+			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CPerParticleVecInput), 0x1f0);
 			S2_PAD(0x6C8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitFromVectorFieldSnapshot) == 0x8A0, "C_INIT_InitFromVectorFieldSnapshot size should be 0x8A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitFromVectorFieldSnapshot) == 0x8A8, "C_INIT_InitFromVectorFieldSnapshot size should be 0x8A8");
+
+#endif
 	}
 }

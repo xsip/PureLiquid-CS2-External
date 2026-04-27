@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xA98
+			// Class size: 0xAA0
 			namespace C_OP_PositionLock /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_TransformInput = 0x1d0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_flStartTime_min = 0x238; // float32 m_flStartTime_min; |  0x238 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime_max = 0x23c; // float32 m_flStartTime_max; |  0x23c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime_exp = 0x240; // float32 m_flStartTime_exp; |  0x240 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_min = 0x244; // float32 m_flEndTime_min; |  0x244 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_max = 0x248; // float32 m_flEndTime_max; |  0x248 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_exp = 0x24c; // float32 m_flEndTime_exp; |  0x24c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRange = 0x250; // float32 m_flRange; |  0x250 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRangeBias = 0x258; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flJumpThreshold = 0x3c8; // float32 m_flJumpThreshold; |  0x3c8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flPrevPosScale = 0x3cc; // float32 m_flPrevPosScale; |  0x3cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLockRot = 0x3d0; // bool m_bLockRot; |  0x3d0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecScale = 0x3d8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_nFieldOutput = 0xa90; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutputPrev = 0xa94; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_TransformInput = 0x1d8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_flStartTime_min = 0x240; // float32 m_flStartTime_min; |  0x240 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime_max = 0x244; // float32 m_flStartTime_max; |  0x244 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime_exp = 0x248; // float32 m_flStartTime_exp; |  0x248 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_min = 0x24c; // float32 m_flEndTime_min; |  0x24c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_max = 0x250; // float32 m_flEndTime_max; |  0x250 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_exp = 0x254; // float32 m_flEndTime_exp; |  0x254 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRange = 0x258; // float32 m_flRange; |  0x258 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRangeBias = 0x260; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flJumpThreshold = 0x3d0; // float32 m_flJumpThreshold; |  0x3d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flPrevPosScale = 0x3d4; // float32 m_flPrevPosScale; |  0x3d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLockRot = 0x3d8; // bool m_bLockRot; |  0x3d8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecScale = 0x3e0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nFieldOutput = 0xa98; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutputPrev = 0xa9c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

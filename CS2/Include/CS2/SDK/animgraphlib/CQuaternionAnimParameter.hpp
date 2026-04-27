@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_bInterpolate,bool, 0x90);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CQuaternionAnimParameter) == 0xA0, "CQuaternionAnimParameter size should be 0xA0");
+
+#endif
 	}
 }

@@ -11,6 +11,7 @@
 
 
 #include <SDK/server/CLogicalEntity.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -21,13 +22,18 @@ namespace CS2 {
 	namespace server {
 		class CLogicRelay : public CS2::server::CLogicalEntity {
 		public:
-			PROPERTY(m_bDisabled,bool, 0x4a8);
-			PROPERTY(m_bWaitForRefire,bool, 0x4a9);
-			PROPERTY(m_bTriggerOnce,bool, 0x4aa);
-			PROPERTY(m_bFastRetrigger,bool, 0x4ab);
-			PROPERTY(m_bPassthoughCaller,bool, 0x4ac);
-			S2_PAD(0x8);
+			NESTED_PROPERTY(m_OnSpawn,IDENTITY(entity2::CEntityIOOutput), 0x4a8);
+			NESTED_PROPERTY(m_OnTrigger,IDENTITY(entity2::CEntityIOOutput), 0x4c0);
+			PROPERTY(m_bDisabled,bool, 0x4d8);
+			PROPERTY(m_bWaitForRefire,bool, 0x4d9);
+			PROPERTY(m_bTriggerOnce,bool, 0x4da);
+			PROPERTY(m_bFastRetrigger,bool, 0x4db);
+			PROPERTY(m_bPassthoughCaller,bool, 0x4dc);
+			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CLogicRelay) == 0x4B0, "CLogicRelay size should be 0x4B0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CLogicRelay) == 0x4E0, "CLogicRelay size should be 0x4E0");
+
+#endif
 	}
 }

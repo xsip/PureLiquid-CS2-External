@@ -18,6 +18,9 @@ namespace CS2 {
 	namespace server {
 		class CBaseModelEntity;
 	}
+	namespace client {
+		class CBaseAnimGraphDestructibleParts_GraphController;
+	}
 }
 
 
@@ -26,11 +29,15 @@ namespace CS2 {
 	namespace server {
 		class CDestructiblePartsComponent  {
 		public:
-			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x0);
-			NESTED_PROPERTY(m_vecDamageTakenByHitGroup,GlobalTypes::CUtlVector< uint16 >, 0x48);
-			PROPERTY(m_hOwner,GlobalTypes::CHandle<server::CBaseModelEntity>, 0x60);
+			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x0);
+			NESTED_PROPERTY(m_vecDamageTakenByHitGroup,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x48);
+			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseModelEntity>), 0x60);
+			PROPERTY(m_pAnimGraphDestructibleGraphController,IDENTITY(client::CBaseAnimGraphDestructibleParts_GraphController*), 0x68);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CDestructiblePartsComponent) == 0x70, "CDestructiblePartsComponent size should be 0x70");
+
+#endif
 	}
 }

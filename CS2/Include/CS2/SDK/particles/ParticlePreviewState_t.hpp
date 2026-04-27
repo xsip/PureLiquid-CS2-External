@@ -24,12 +24,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_previewModel,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_nModSpecificData,uint32_t, 0x8);
-			PROPERTY(m_groundType,particles::PetGroundType_t, 0xc);
+			PROPERTY(m_groundType,IDENTITY(particles::PetGroundType_t), 0xc);
 			PROPERTY(m_sequenceName,GlobalTypes::CUtlString*, 0x10);
 			PROPERTY(m_nFireParticleOnSequenceFrame,int32_t, 0x18);
 			PROPERTY(m_hitboxSetName,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_materialGroupName,GlobalTypes::CUtlString*, 0x28);
-			NESTED_PROPERTY(m_vecBodyGroups,GlobalTypes::CUtlVector<particles::ParticlePreviewBodyGroup_t>, 0x30);
+			NESTED_PROPERTY(m_vecBodyGroups,IDENTITY(GlobalTypes::CUtlVector<particles::ParticlePreviewBodyGroup_t>), 0x30);
 			PROPERTY(m_flPlaybackSpeed,float32, 0x48);
 			PROPERTY(m_flParticleSimulationRate,float32, 0x4c);
 			PROPERTY(m_bShouldDrawHitboxes,bool, 0x50);
@@ -41,6 +41,9 @@ namespace CS2 {
 			PROPERTY(m_vecPreviewGravity,GlobalTypes::Vector, 0x58);
 			S2_PAD(0x68);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::ParticlePreviewState_t) == 0x68, "ParticlePreviewState_t size should be 0x68");
+
+#endif
 	}
 }

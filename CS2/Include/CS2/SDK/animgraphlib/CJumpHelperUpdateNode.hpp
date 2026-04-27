@@ -23,16 +23,19 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CJumpHelperUpdateNode : public CS2::animgraphlib::CSequenceUpdateNode {
 		public:
-			NESTED_PROPERTY(m_hTargetParam,animgraphlib::CAnimParamHandle, 0xb0);
+			NESTED_PROPERTY(m_hTargetParam,IDENTITY(animgraphlib::CAnimParamHandle), 0xb0);
 			PROPERTY(m_flOriginalJumpMovement,GlobalTypes::Vector, 0xb4);
 			PROPERTY(m_flOriginalJumpDuration,float32, 0xc0);
 			PROPERTY(m_flJumpStartCycle,float32, 0xc4);
 			PROPERTY(m_flJumpEndCycle,float32, 0xc8);
-			PROPERTY(m_eCorrectionMethod,animgraphlib::JumpCorrectionMethod, 0xcc);
+			PROPERTY(m_eCorrectionMethod,IDENTITY(animgraphlib::JumpCorrectionMethod), 0xcc);
 			PROPERTY_ARRAY(m_bTranslationAxis,bool, 3 , 0xd0);
 			PROPERTY(m_bScaleSpeed,bool, 0xd3);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CJumpHelperUpdateNode) == 0xD8, "CJumpHelperUpdateNode size should be 0xD8");
+
+#endif
 	}
 }

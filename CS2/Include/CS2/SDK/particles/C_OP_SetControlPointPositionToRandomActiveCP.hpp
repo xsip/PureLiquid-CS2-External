@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointPositionToRandomActiveCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nCP1,int32_t, 0x1d8);
-			PROPERTY(m_nHeadLocationMin,int32_t, 0x1dc);
-			PROPERTY(m_nHeadLocationMax,int32_t, 0x1e0);
-			NESTED_PROPERTY(m_flResetRate,particleslib::CParticleCollectionFloatInput, 0x1e8);
+			PROPERTY(m_nCP1,int32_t, 0x1e0);
+			PROPERTY(m_nHeadLocationMin,int32_t, 0x1e4);
+			PROPERTY(m_nHeadLocationMax,int32_t, 0x1e8);
+			NESTED_PROPERTY(m_flResetRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f0);
 			S2_PAD(0x180);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositionToRandomActiveCP) == 0x358, "C_OP_SetControlPointPositionToRandomActiveCP size should be 0x358");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositionToRandomActiveCP) == 0x360, "C_OP_SetControlPointPositionToRandomActiveCP size should be 0x360");
+
+#endif
 	}
 }

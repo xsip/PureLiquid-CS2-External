@@ -21,25 +21,28 @@ namespace CS2 {
 	namespace client {
 		class C_MapVetoPickController : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_nDraftType,int32_t, 0x618);
-			PROPERTY(m_nTeamWinningCoinToss,int32_t, 0x61c);
-			PROPERTY_ARRAY(m_nTeamWithFirstChoice,int32_t, 64 , 0x620);
-			PROPERTY_ARRAY(m_nVoteMapIdsList,int32_t, 7 , 0x720);
-			PROPERTY_ARRAY(m_nAccountIDs,int32_t, 64 , 0x73c);
-			PROPERTY_ARRAY(m_nMapId0,int32_t, 64 , 0x83c);
-			PROPERTY_ARRAY(m_nMapId1,int32_t, 64 , 0x93c);
-			PROPERTY_ARRAY(m_nMapId2,int32_t, 64 , 0xa3c);
-			PROPERTY_ARRAY(m_nMapId3,int32_t, 64 , 0xb3c);
-			PROPERTY_ARRAY(m_nMapId4,int32_t, 64 , 0xc3c);
-			PROPERTY_ARRAY(m_nMapId5,int32_t, 64 , 0xd3c);
-			PROPERTY_ARRAY(m_nStartingSide0,int32_t, 64 , 0xe3c);
-			PROPERTY(m_nCurrentPhase,int32_t, 0xf3c);
-			PROPERTY(m_nPhaseStartTick,int32_t, 0xf40);
-			PROPERTY(m_nPhaseDurationTicks,int32_t, 0xf44);
-			PROPERTY(m_nPostDataUpdateTick,int32_t, 0xf48);
-			PROPERTY(m_bDisabledHud,bool, 0xf4c);
+			PROPERTY(m_nDraftType,int32_t, 0x610);
+			PROPERTY(m_nTeamWinningCoinToss,int32_t, 0x614);
+			PROPERTY_ARRAY(m_nTeamWithFirstChoice,int32_t, 64 , 0x618);
+			PROPERTY_ARRAY(m_nVoteMapIdsList,int32_t, 7 , 0x718);
+			PROPERTY_ARRAY(m_nAccountIDs,int32_t, 64 , 0x734);
+			PROPERTY_ARRAY(m_nMapId0,int32_t, 64 , 0x834);
+			PROPERTY_ARRAY(m_nMapId1,int32_t, 64 , 0x934);
+			PROPERTY_ARRAY(m_nMapId2,int32_t, 64 , 0xa34);
+			PROPERTY_ARRAY(m_nMapId3,int32_t, 64 , 0xb34);
+			PROPERTY_ARRAY(m_nMapId4,int32_t, 64 , 0xc34);
+			PROPERTY_ARRAY(m_nMapId5,int32_t, 64 , 0xd34);
+			PROPERTY_ARRAY(m_nStartingSide0,int32_t, 64 , 0xe34);
+			PROPERTY(m_nCurrentPhase,int32_t, 0xf34);
+			PROPERTY(m_nPhaseStartTick,int32_t, 0xf38);
+			PROPERTY(m_nPhaseDurationTicks,int32_t, 0xf3c);
+			PROPERTY(m_nPostDataUpdateTick,int32_t, 0xf40);
+			PROPERTY(m_bDisabledHud,bool, 0xf44);
 			S2_PAD(0x948);
 		};
-		//static_assert(sizeof(CS2::client::C_MapVetoPickController) == 0xF50, "C_MapVetoPickController size should be 0xF50");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_MapVetoPickController) == 0xF48, "C_MapVetoPickController size should be 0xF48");
+
+#endif
 	}
 }

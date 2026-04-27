@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1D8
+			// Class size: 0x1E0
 			namespace C_OP_SnapshotRigidSkinToBones /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_bTransformNormals = 0x1d0; // bool m_bTransformNormals; |  0x1d0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bTransformRadii = 0x1d1; // bool m_bTransformRadii; |  0x1d1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d4; // int32_t m_nControlPointNumber; |  0x1d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bTransformNormals = 0x1d8; // bool m_bTransformNormals; |  0x1d8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bTransformRadii = 0x1d9; // bool m_bTransformRadii; |  0x1d9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1dc; // int32_t m_nControlPointNumber; |  0x1dc | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

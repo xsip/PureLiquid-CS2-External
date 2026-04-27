@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xF58
+			// Class size: 0x1078
 			namespace C_TriggerMultiple /*: public CS2::client::C_BaseTrigger*/ {
 				// NO SCHEMA DATA FOUND!
 			}

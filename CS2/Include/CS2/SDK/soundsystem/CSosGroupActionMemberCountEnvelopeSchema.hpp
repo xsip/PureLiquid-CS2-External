@@ -31,6 +31,9 @@ namespace CS2 {
 			PROPERTY(m_bSaveToGroup,bool, 0x28);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CSosGroupActionMemberCountEnvelopeSchema) == 0x30, "CSosGroupActionMemberCountEnvelopeSchema size should be 0x30");
+
+#endif
 	}
 }

@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(nTargetNode,uint16_t, 0xe);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeNodeReverseOffset_t) == 0x10, "FeNodeReverseOffset_t size should be 0x10");
+
+#endif
 	}
 }

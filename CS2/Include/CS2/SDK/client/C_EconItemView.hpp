@@ -46,13 +46,16 @@ namespace CS2 {
 			PROPERTY(m_iOriginOverride,int32_t, 0x1f8);
 			PROPERTY(m_ubStyleOverride,uint8_t, 0x1fc);
 			PROPERTY(m_unClientFlags,uint8_t, 0x1fd);
-			NESTED_PROPERTY(m_AttributeList,client::CAttributeList, 0x208);
-			NESTED_PROPERTY(m_NetworkedDynamicAttributes,client::CAttributeList, 0x280);
+			NESTED_PROPERTY(m_AttributeList,IDENTITY(client::CAttributeList), 0x208);
+			NESTED_PROPERTY(m_NetworkedDynamicAttributes,IDENTITY(client::CAttributeList), 0x280);
 			PROPERTY_ARRAY(m_szCustomName,char, 161 , 0x2f8);
 			PROPERTY_ARRAY(m_szCustomNameOverride,char, 161 , 0x399);
 			PROPERTY(m_bInitializedTags,bool, 0x468);
 			S2_PAD(0x468);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_EconItemView) == 0x470, "C_EconItemView size should be 0x470");
+
+#endif
 	}
 }

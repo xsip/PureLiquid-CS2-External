@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x750
+			// Class size: 0x788
 			namespace CFuncBrush /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_iSolidity = 0x730; // client::BrushSolidities_e  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iDisabled = 0x734; // int32_t m_iDisabled; |  0x734 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSolidBsp = 0x738; // bool m_bSolidBsp; |  0x738 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iszExcludedClass = 0x740; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bInvertExclusion = 0x748; // bool m_bInvertExclusion; |  0x748 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bScriptedMovement = 0x749; // bool m_bScriptedMovement; |  0x749 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iSolidity = 0x768; // client::BrushSolidities_e  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iDisabled = 0x76c; // int32_t m_iDisabled; |  0x76c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSolidBsp = 0x770; // bool m_bSolidBsp; |  0x770 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iszExcludedClass = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bInvertExclusion = 0x780; // bool m_bInvertExclusion; |  0x780 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bScriptedMovement = 0x781; // bool m_bScriptedMovement; |  0x781 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimGraphSettingsManager  {
 		public:
-			NESTED_PROPERTY(m_settingsGroups,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimGraphSettingsGroup>>, 0x18);
+			NESTED_PROPERTY(m_settingsGroups,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimGraphSettingsGroup>>), 0x18);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimGraphSettingsManager) == 0x30, "CAnimGraphSettingsManager size should be 0x30");
+
+#endif
 	}
 }

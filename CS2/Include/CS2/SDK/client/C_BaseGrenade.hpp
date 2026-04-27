@@ -10,7 +10,7 @@
 #endif
 
 
-#include <SDK/client/C_BaseFlex.hpp>
+#include <SDK/client/CBaseAnimGraph.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
 
 
@@ -25,22 +25,25 @@ namespace CS2 {
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace client {
-		class C_BaseGrenade : public CS2::client::C_BaseFlex {
+		class C_BaseGrenade : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bHasWarnedAI,bool, 0x1350);
-			PROPERTY(m_bIsSmokeGrenade,bool, 0x1351);
-			PROPERTY(m_bIsLive,bool, 0x1352);
-			PROPERTY(m_DmgRadius,float32, 0x1354);
-			NESTED_PROPERTY(m_flDetonateTime,entity2::GameTime_t, 0x1358);
-			PROPERTY(m_flWarnAITime,float32, 0x135c);
-			PROPERTY(m_flDamage,float32, 0x1360);
-			PROPERTY(m_iszBounceSound,GlobalTypes::CUtlSymbolLarge*, 0x1368);
-			PROPERTY(m_ExplosionSound,GlobalTypes::CUtlString*, 0x1370);
-			PROPERTY(m_hThrower,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x137c);
-			NESTED_PROPERTY(m_flNextAttack,entity2::GameTime_t, 0x1394);
-			PROPERTY(m_hOriginalThrower,GlobalTypes::CHandle<client::C_CSPlayerPawn>, 0x1398);
-			S2_PAD(0x50);
+			PROPERTY(m_bHasWarnedAI,bool, 0x1158);
+			PROPERTY(m_bIsSmokeGrenade,bool, 0x1159);
+			PROPERTY(m_bIsLive,bool, 0x115a);
+			PROPERTY(m_DmgRadius,float32, 0x115c);
+			NESTED_PROPERTY(m_flDetonateTime,IDENTITY(entity2::GameTime_t), 0x1160);
+			PROPERTY(m_flWarnAITime,float32, 0x1164);
+			PROPERTY(m_flDamage,float32, 0x1168);
+			PROPERTY(m_iszBounceSound,GlobalTypes::CUtlSymbolLarge*, 0x1170);
+			PROPERTY(m_ExplosionSound,GlobalTypes::CUtlString*, 0x1178);
+			PROPERTY(m_hThrower,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x1180);
+			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0x1198);
+			PROPERTY(m_hOriginalThrower,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x119c);
+			S2_PAD(0x48);
 		};
-		//static_assert(sizeof(CS2::client::C_BaseGrenade) == 0x13A0, "C_BaseGrenade size should be 0x13A0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BaseGrenade) == 0x11A0, "C_BaseGrenade size should be 0x11A0");
+
+#endif
 	}
 }

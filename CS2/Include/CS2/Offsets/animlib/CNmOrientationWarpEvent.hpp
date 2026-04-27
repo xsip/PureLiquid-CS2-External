@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x20
+			// Class size: 0x18
 			namespace CNmOrientationWarpEvent /*: public CS2::animlib::CNmEvent*/ {
 				// NO SCHEMA DATA FOUND!
 			}

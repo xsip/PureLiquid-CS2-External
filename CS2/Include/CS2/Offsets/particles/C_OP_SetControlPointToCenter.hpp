@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_OP_SetControlPointToCenter /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nCP1 = 0x1d8; // int32_t m_nCP1; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecCP1Pos = 0x1dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bUseAvgParticlePos = 0x1e8; // bool m_bUseAvgParticlePos; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nSetParent = 0x1ec; // particles::ParticleParentSetMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nCP1 = 0x1e0; // int32_t m_nCP1; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecCP1Pos = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bUseAvgParticlePos = 0x1f0; // bool m_bUseAvgParticlePos; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSetParent = 0x1f4; // particles::ParticleParentSetMode_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

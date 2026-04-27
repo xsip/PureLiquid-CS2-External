@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_DefaultValue,GlobalTypes::CUtlString*, 0x38);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_SurfaceProperty) == 0x40, "CSmartPropVariable_SurfaceProperty size should be 0x40");
+
+#endif
 	}
 }

@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x350
+			// Class size: 0x358
 			namespace C_OP_StopAfterCPDuration /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_flDuration = 0x1d8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bDestroyImmediately = 0x348; // bool m_bDestroyImmediately; |  0x348 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bPlayEndCap = 0x349; // bool m_bPlayEndCap; |  0x349 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flDuration = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bDestroyImmediately = 0x350; // bool m_bDestroyImmediately; |  0x350 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bPlayEndCap = 0x351; // bool m_bPlayEndCap; |  0x351 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

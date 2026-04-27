@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::IHasAttributes) == 0x8, "IHasAttributes size should be 0x8");
+
+#endif
 	}
 }

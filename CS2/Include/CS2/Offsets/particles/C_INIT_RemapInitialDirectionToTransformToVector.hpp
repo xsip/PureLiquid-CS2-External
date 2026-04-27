@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x260
+			// Class size: 0x268
 			namespace C_INIT_RemapInitialDirectionToTransformToVector /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_TransformInput = 0x1d8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x240; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flScale = 0x244; // float32 m_flScale; |  0x244 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOffsetRot = 0x248; // float32 m_flOffsetRot; |  0x248 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecOffsetAxis = 0x24c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bNormalize = 0x258; // bool m_bNormalize; |  0x258 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_TransformInput = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x248; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flScale = 0x24c; // float32 m_flScale; |  0x24c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOffsetRot = 0x250; // float32 m_flOffsetRot; |  0x250 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecOffsetAxis = 0x254; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bNormalize = 0x260; // bool m_bNormalize; |  0x260 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

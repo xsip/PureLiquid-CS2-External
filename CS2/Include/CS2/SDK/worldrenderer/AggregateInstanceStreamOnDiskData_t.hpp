@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_BufferData,GlobalTypes::CUtlBinaryBlock, 0x8);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::AggregateInstanceStreamOnDiskData_t) == 0x18, "AggregateInstanceStreamOnDiskData_t size should be 0x18");
+
+#endif
 	}
 }

@@ -17,7 +17,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_modelSpaceReferencePose = 0x48; // GlobalTypes::CUtlVector<GlobalTypes::CTransform>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_numBonesToSampleAtLowLOD = 0x60; // int32_t m_numBonesToSampleAtLowLOD; |  0x60 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_maskDefinitions = 0x88; // GlobalTypes::CUtlLeanVector<animlib::NmBoneMaskSetDefinition_t>  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_secondarySkeletons = 0xa8; // GlobalTypes::CUtlLeanVector<animlib::SecondarySkeleton_t>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_secondarySkeletons = 0xa8; // GlobalTypes::CUtlLeanVector<animlib::CNmSkeleton_SecondarySkeleton_t>  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_bIsPropSkeleton = 0xb8; // bool m_bIsPropSkeleton; |  0xb8 | Schema_Builtin | Size: 0x1
 			}
 		}

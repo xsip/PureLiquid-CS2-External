@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace entity2 {
-			// Class size: 0x38
+			// Class size: 0x30
 			namespace CEntityInstance /**/ {
 				constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_pEntity = 0x10; // entity2::CEntityIdentity**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_CScriptComponent = 0x30; // entity2::CScriptComponent**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_CScriptComponent = 0x28; // entity2::CScriptComponent**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionNodeBlend1D : public CS2::animgraphlib::CMotionNode {
 		public:
-			NESTED_PROPERTY(m_blendItems,GlobalTypes::CUtlVector<animgraphlib::MotionBlendItem>, 0x28);
+			NESTED_PROPERTY(m_blendItems,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::MotionBlendItem>), 0x28);
 			PROPERTY(m_nParamIndex,int32_t, 0x40);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionNodeBlend1D) == 0x48, "CMotionNodeBlend1D size should be 0x48");
+
+#endif
 	}
 }

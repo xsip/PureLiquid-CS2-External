@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapNamedModelSequenceOnceTimed : public CS2::particles::C_OP_RemapNamedModelElementOnceTimed {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapNamedModelSequenceOnceTimed) == 0x230, "C_OP_RemapNamedModelSequenceOnceTimed size should be 0x230");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapNamedModelSequenceOnceTimed) == 0x238, "C_OP_RemapNamedModelSequenceOnceTimed size should be 0x238");
+
+#endif
 	}
 }

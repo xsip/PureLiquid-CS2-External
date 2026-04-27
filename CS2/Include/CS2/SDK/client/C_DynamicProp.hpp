@@ -25,13 +25,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bUseHitboxesForRenderBox,bool, 0x12d0);
 			PROPERTY(m_bUseAnimGraph,bool, 0x12d1);
-			NESTED_PROPERTY(m_pOutputAnimBegun,entity2::CEntityIOOutput, 0x12d8);
-			NESTED_PROPERTY(m_pOutputAnimOver,entity2::CEntityIOOutput, 0x12f0);
-			NESTED_PROPERTY(m_pOutputAnimLoopCycleOver,entity2::CEntityIOOutput, 0x1308);
-			NESTED_PROPERTY(m_OnAnimReachedStart,entity2::CEntityIOOutput, 0x1320);
-			NESTED_PROPERTY(m_OnAnimReachedEnd,entity2::CEntityIOOutput, 0x1338);
+			NESTED_PROPERTY(m_pOutputAnimBegun,IDENTITY(entity2::CEntityIOOutput), 0x12d8);
+			NESTED_PROPERTY(m_pOutputAnimOver,IDENTITY(entity2::CEntityIOOutput), 0x12f0);
+			NESTED_PROPERTY(m_pOutputAnimLoopCycleOver,IDENTITY(entity2::CEntityIOOutput), 0x1308);
+			NESTED_PROPERTY(m_OnAnimReachedStart,IDENTITY(entity2::CEntityIOOutput), 0x1320);
+			NESTED_PROPERTY(m_OnAnimReachedEnd,IDENTITY(entity2::CEntityIOOutput), 0x1338);
 			PROPERTY(m_iszIdleAnim,GlobalTypes::CUtlSymbolLarge*, 0x1350);
-			PROPERTY(m_nIdleAnimLoopMode,client::AnimLoopMode_t, 0x1358);
+			PROPERTY(m_nIdleAnimLoopMode,IDENTITY(client::AnimLoopMode_t), 0x1358);
 			PROPERTY(m_bRandomizeCycle,bool, 0x135c);
 			PROPERTY(m_bStartDisabled,bool, 0x135d);
 			PROPERTY(m_bFiredStartEndOutput,bool, 0x135e);
@@ -48,6 +48,9 @@ namespace CS2 {
 			PROPERTY(m_vecCachedRenderMaxs,GlobalTypes::Vector, 0x1388);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_DynamicProp) == 0x13A0, "C_DynamicProp size should be 0x13A0");
+
+#endif
 	}
 }

@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class CDecalGroupVData  {
 		public:
-			NESTED_PROPERTY(m_vecOptions,GlobalTypes::CUtlVector<client::DecalGroupOption_t>, 0x0);
+			NESTED_PROPERTY(m_vecOptions,IDENTITY(GlobalTypes::CUtlVector<client::DecalGroupOption_t>), 0x0);
 			PROPERTY(m_flTotalProbability,float32, 0x18);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDecalGroupVData) == 0x20, "CDecalGroupVData size should be 0x20");
+
+#endif
 	}
 }

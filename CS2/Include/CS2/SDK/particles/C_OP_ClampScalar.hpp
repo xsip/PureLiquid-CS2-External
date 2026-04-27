@@ -23,11 +23,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ClampScalar : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CPerParticleFloatInput, 0x348);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
 			S2_PAD(0x2E8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ClampScalar) == 0x4B8, "C_OP_ClampScalar size should be 0x4B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ClampScalar) == 0x4C0, "C_OP_ClampScalar size should be 0x4C0");
+
+#endif
 	}
 }

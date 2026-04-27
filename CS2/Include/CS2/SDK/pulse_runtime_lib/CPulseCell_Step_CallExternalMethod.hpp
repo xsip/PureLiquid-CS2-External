@@ -11,6 +11,7 @@
 
 
 #include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
+#include <SDK/pulse_runtime_lib/PulseRuntimeBlackboardReferenceIndex_t.hpp>
 #include <SDK/pulse_runtime_lib/CPulseRuntimeMethodArg.hpp>
 #include <SDK/pulse_runtime_lib/PulseMethodCallMode_t.hpp>
 #include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
@@ -25,12 +26,15 @@ namespace CS2 {
 		class CPulseCell_Step_CallExternalMethod : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
 			PROPERTY(m_MethodName,GlobalTypes::PulseSymbol_t, 0x48);
-			PROPERTY(m_GameBlackboard,GlobalTypes::PulseSymbol_t, 0x58);
-			PROPERTY(m_ExpectedArgs,GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>, 0x68);
-			PROPERTY(m_nAsyncCallMode,pulse_runtime_lib::PulseMethodCallMode_t, 0x78);
-			NESTED_PROPERTY(m_OnFinished,pulse_runtime_lib::CPulse_ResumePoint, 0x80);
-			S2_PAD(0x80);
+			NESTED_PROPERTY(m_nBlackboardIndex,IDENTITY(pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t), 0x58);
+			// PROPERTY(m_ExpectedArgs,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>), 0x60);
+			PROPERTY(m_nAsyncCallMode,IDENTITY(pulse_runtime_lib::PulseMethodCallMode_t), 0x70);
+			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x78);
+			S2_PAD(0x78);
 		};
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Step_CallExternalMethod) == 0xC8, "CPulseCell_Step_CallExternalMethod size should be 0xC8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Step_CallExternalMethod) == 0xC0, "CPulseCell_Step_CallExternalMethod size should be 0xC0");
+
+#endif
 	}
 }

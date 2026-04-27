@@ -15,7 +15,7 @@
 #include <SDK/particleslib/CParticleTransformInput.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particles/ParticleTraceSet_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -26,21 +26,24 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DistanceBetweenTransforms : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_TransformStart,particleslib::CParticleTransformInput, 0x1d8);
-			NESTED_PROPERTY(m_TransformEnd,particleslib::CParticleTransformInput, 0x240);
-			NESTED_PROPERTY(m_flInputMin,particleslib::CPerParticleFloatInput, 0x2a8);
-			NESTED_PROPERTY(m_flInputMax,particleslib::CPerParticleFloatInput, 0x418);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CPerParticleFloatInput, 0x588);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CPerParticleFloatInput, 0x6f8);
-			PROPERTY(m_flMaxTraceLength,float32, 0x868);
-			PROPERTY(m_flLOSScale,float32, 0x86c);
-			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x870);
-			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x8f0);
-			PROPERTY(m_bLOS,bool, 0x8f4);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x8f8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_TransformStart,IDENTITY(particleslib::CParticleTransformInput), 0x1e0);
+			NESTED_PROPERTY(m_TransformEnd,IDENTITY(particleslib::CParticleTransformInput), 0x248);
+			NESTED_PROPERTY(m_flInputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x2b0);
+			NESTED_PROPERTY(m_flInputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x420);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x590);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x700);
+			PROPERTY(m_flMaxTraceLength,float32, 0x870);
+			PROPERTY(m_flLOSScale,float32, 0x874);
+			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x878);
+			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x8f8);
+			PROPERTY(m_bLOS,bool, 0x8fc);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x900);
 			S2_PAD(0x730);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenTransforms) == 0x900, "C_OP_DistanceBetweenTransforms size should be 0x900");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_DistanceBetweenTransforms) == 0x908, "C_OP_DistanceBetweenTransforms size should be 0x908");
+
+#endif
 	}
 }

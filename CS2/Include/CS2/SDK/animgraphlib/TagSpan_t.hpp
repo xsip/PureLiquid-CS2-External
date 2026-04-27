@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_endCycle,float32, 0x8);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::TagSpan_t) == 0xC, "TagSpan_t size should be 0xC");
+
+#endif
 	}
 }

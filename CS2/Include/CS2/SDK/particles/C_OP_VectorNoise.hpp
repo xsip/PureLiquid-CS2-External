@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_VectorNoise : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1d4);
-			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1e0);
-			PROPERTY(m_fl4NoiseScale,float32, 0x1ec);
-			PROPERTY(m_bAdditive,bool, 0x1f0);
-			PROPERTY(m_bOffset,bool, 0x1f1);
-			PROPERTY(m_flNoiseAnimationTimeScale,float32, 0x1f4);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1dc);
+			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1e8);
+			PROPERTY(m_fl4NoiseScale,float32, 0x1f4);
+			PROPERTY(m_bAdditive,bool, 0x1f8);
+			PROPERTY(m_bOffset,bool, 0x1f9);
+			PROPERTY(m_flNoiseAnimationTimeScale,float32, 0x1fc);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_VectorNoise) == 0x1F8, "C_OP_VectorNoise size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_VectorNoise) == 0x200, "C_OP_VectorNoise size should be 0x200");
+
+#endif
 	}
 }

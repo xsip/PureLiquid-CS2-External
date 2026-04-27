@@ -22,31 +22,34 @@ namespace CS2 {
 	namespace client {
 		class C_Fish : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_pos,GlobalTypes::Vector, 0x1168);
-			PROPERTY(m_vel,GlobalTypes::Vector, 0x1174);
-			PROPERTY(m_angles,GlobalTypes::QAngle, 0x1180);
-			PROPERTY(m_localLifeState,int32_t, 0x118c);
-			PROPERTY(m_deathDepth,float32, 0x1190);
-			PROPERTY(m_deathAngle,float32, 0x1194);
-			PROPERTY(m_buoyancy,float32, 0x1198);
-			NESTED_PROPERTY(m_wiggleTimer,client::CountdownTimer, 0x11a0);
-			PROPERTY(m_wigglePhase,float32, 0x11b8);
-			PROPERTY(m_wiggleRate,float32, 0x11bc);
-			PROPERTY(m_actualPos,GlobalTypes::Vector, 0x11c0);
-			PROPERTY(m_actualAngles,GlobalTypes::QAngle, 0x11cc);
-			PROPERTY(m_poolOrigin,GlobalTypes::Vector, 0x11d8);
-			PROPERTY(m_waterLevel,float32, 0x11e4);
-			PROPERTY(m_gotUpdate,bool, 0x11e8);
-			PROPERTY(m_x,float32, 0x11ec);
-			PROPERTY(m_y,float32, 0x11f0);
-			PROPERTY(m_z,float32, 0x11f4);
-			PROPERTY(m_angle,float32, 0x11f8);
-			PROPERTY_ARRAY(m_errorHistory,float32, 20 , 0x11fc);
-			PROPERTY(m_errorHistoryIndex,int32_t, 0x124c);
-			PROPERTY(m_errorHistoryCount,int32_t, 0x1250);
-			PROPERTY(m_averageError,float32, 0x1254);
+			PROPERTY(m_pos,GlobalTypes::Vector, 0x1158);
+			PROPERTY(m_vel,GlobalTypes::Vector, 0x1164);
+			PROPERTY(m_angles,GlobalTypes::QAngle, 0x1170);
+			PROPERTY(m_localLifeState,int32_t, 0x117c);
+			PROPERTY(m_deathDepth,float32, 0x1180);
+			PROPERTY(m_deathAngle,float32, 0x1184);
+			PROPERTY(m_buoyancy,float32, 0x1188);
+			NESTED_PROPERTY(m_wiggleTimer,IDENTITY(client::CountdownTimer), 0x1190);
+			PROPERTY(m_wigglePhase,float32, 0x11a8);
+			PROPERTY(m_wiggleRate,float32, 0x11ac);
+			PROPERTY(m_actualPos,GlobalTypes::Vector, 0x11b0);
+			PROPERTY(m_actualAngles,GlobalTypes::QAngle, 0x11bc);
+			PROPERTY(m_poolOrigin,GlobalTypes::Vector, 0x11c8);
+			PROPERTY(m_waterLevel,float32, 0x11d4);
+			PROPERTY(m_gotUpdate,bool, 0x11d8);
+			PROPERTY(m_x,float32, 0x11dc);
+			PROPERTY(m_y,float32, 0x11e0);
+			PROPERTY(m_z,float32, 0x11e4);
+			PROPERTY(m_angle,float32, 0x11e8);
+			PROPERTY_ARRAY(m_errorHistory,float32, 20 , 0x11ec);
+			PROPERTY(m_errorHistoryIndex,int32_t, 0x123c);
+			PROPERTY(m_errorHistoryCount,int32_t, 0x1240);
+			PROPERTY(m_averageError,float32, 0x1244);
 			S2_PAD(0xF0);
 		};
-		//static_assert(sizeof(CS2::client::C_Fish) == 0x1258, "C_Fish size should be 0x1258");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_Fish) == 0x1248, "C_Fish size should be 0x1248");
+
+#endif
 	}
 }

@@ -15,11 +15,11 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_ImportedCollision = 0x8; // GlobalTypes::CUtlVector<GlobalTypes::CEntityIndex>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_ModelName = 0x20; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_CaptureName = 0x28; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_ModelBindPose = 0x30; // GlobalTypes::CUtlVector<modellib::Bone_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_FeModelInitPose = 0x48; // GlobalTypes::CUtlVector<modellib::Bone_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ModelBindPose = 0x30; // GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t_Bone_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_FeModelInitPose = 0x48; // GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t_Bone_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_nFlexControllers = 0x60; // int32_t m_nFlexControllers; |  0x60 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bPredicted = 0x64; // bool m_bPredicted; |  0x64 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_Frames = 0xa8; // GlobalTypes::CUtlVector<modellib::Frame_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Frames = 0xa8; // GlobalTypes::CUtlVector<modellib::SkeletonAnimCapture_t_Frame_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

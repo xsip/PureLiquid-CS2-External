@@ -8,25 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1168
+			// Class size: 0x1158
 			namespace CBaseAnimGraph /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_graphControllerManager = 0xe88; // client::CAnimGraphControllerManager  | Schema_DeclaredClass | Size: 0xb0
-				constexpr std::ptrdiff_t m_pMainGraphController = 0xf38; // client::CAnimGraphControllerBase**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_bInitiallyPopulateInterpHistory = 0xf40; // bool m_bInitiallyPopulateInterpHistory; |  0xf40 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSuppressAnimEventSounds = 0xf42; // bool m_bSuppressAnimEventSounds; |  0xf42 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAnimGraphUpdateEnabled = 0xf50; // bool m_bAnimGraphUpdateEnabled; |  0xf50 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flMaxSlopeDistance = 0xf54; // float32 m_flMaxSlopeDistance; |  0xf54 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vLastSlopeCheckPos = 0xf58; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nAnimGraphUpdateId = 0xf64; // uint32_t m_nAnimGraphUpdateId; |  0xf64 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAnimationUpdateScheduled = 0xf68; // bool m_bAnimationUpdateScheduled; |  0xf68 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecForce = 0xf6c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nForceBone = 0xf78; // int32_t m_nForceBone; |  0xf78 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pClientsideRagdoll = 0xf80; // client::CBaseAnimGraph**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_bBuiltRagdoll = 0xf88; // bool m_bBuiltRagdoll; |  0xf88 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_RagdollPose = 0xfa0; // client::PhysicsRagdollPose_t  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_bRagdollEnabled = 0xfe8; // bool m_bRagdollEnabled; |  0xfe8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRagdollClientSide = 0xfe9; // bool m_bRagdollClientSide; |  0xfe9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bHasAnimatedMaterialAttributes = 0xff8; // bool m_bHasAnimatedMaterialAttributes; |  0xff8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_graphControllerManager = 0xfa8; // client::CAnimGraphControllerManager  | Schema_DeclaredClass | Size: 0xb0
+				constexpr std::ptrdiff_t m_pMainGraphController = 0x1058; // client::CAnimGraphControllerBase**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_bInitiallyPopulateInterpHistory = 0x1060; // bool m_bInitiallyPopulateInterpHistory; |  0x1060 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSuppressAnimEventSounds = 0x1062; // bool m_bSuppressAnimEventSounds; |  0x1062 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAnimGraphUpdateEnabled = 0x1070; // bool m_bAnimGraphUpdateEnabled; |  0x1070 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAnimationUpdateScheduled = 0x1071; // bool m_bAnimationUpdateScheduled; |  0x1071 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecForce = 0x1074; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nForceBone = 0x1080; // int32_t m_nForceBone; |  0x1080 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pClientsideRagdoll = 0x1088; // client::CBaseAnimGraph**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_bBuiltRagdoll = 0x1090; // bool m_bBuiltRagdoll; |  0x1090 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pRagdollControl = 0x10a0; // vphysics2::IPhysicsRagdollControl**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_RagdollPose = 0x10a8; // client::PhysicsRagdollPose_t  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_bRagdollEnabled = 0x10f0; // bool m_bRagdollEnabled; |  0x10f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRagdollClientSide = 0x10f1; // bool m_bRagdollClientSide; |  0x10f1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bHasAnimatedMaterialAttributes = 0x1100; // bool m_bHasAnimatedMaterialAttributes; |  0x1100 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

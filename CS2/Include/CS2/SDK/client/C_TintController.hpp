@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::client::C_TintController) == 0x620, "C_TintController size should be 0x620");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_TintController) == 0x618, "C_TintController size should be 0x618");
+
+#endif
 	}
 }

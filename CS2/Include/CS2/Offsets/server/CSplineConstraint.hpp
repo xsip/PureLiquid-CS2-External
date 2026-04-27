@@ -12,6 +12,7 @@ namespace CS2 {
 			namespace CSplineConstraint /*: public CS2::server::CPhysConstraint*/ {
 				constexpr std::ptrdiff_t m_vAnchorOffsetRestore = 0x558; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_hSplineEntity = 0x564; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pSplineBody = 0x568; // vphysics2::IPhysicsBody**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_bEnableLateralConstraint = 0x570; // bool m_bEnableLateralConstraint; |  0x570 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bEnableVerticalConstraint = 0x571; // bool m_bEnableVerticalConstraint; |  0x571 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bEnableAngularConstraint = 0x572; // bool m_bEnableAngularConstraint; |  0x572 | Schema_Builtin | Size: 0x1

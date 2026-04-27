@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CAnimGraphControllerBase.hpp>
+#include "CAnimGraphControllerBase.hpp"
 
 
 
@@ -21,16 +21,19 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_PreviewPlayer_GraphController : public CS2::client::CAnimGraphControllerBase {
 		public:
-			PROPERTY(m_pszCharacterMode,GlobalTypes::CAnimGraphParamRef<char*>, 0x90);
-			PROPERTY(m_pszTeamPreviewVariant,GlobalTypes::CAnimGraphParamRef<char*>, 0xc0);
-			PROPERTY(m_pszTeamPreviewPosition,GlobalTypes::CAnimGraphParamRef<char*>, 0xf0);
-			PROPERTY(m_pszEndOfMatchCelebration,GlobalTypes::CAnimGraphParamRef<char*>, 0x120);
-			PROPERTY(m_nTeamPreviewRandom,GlobalTypes::CAnimGraphParamRef< int32 >, 0x150);
-			PROPERTY(m_pszWeaponState,GlobalTypes::CAnimGraphParamRef<char*>, 0x178);
-			PROPERTY(m_pszWeaponType,GlobalTypes::CAnimGraphParamRef<char*>, 0x1a8);
-			PROPERTY(m_bCT,GlobalTypes::CAnimGraphParamRef< bool >, 0x1d8);
+			// PROPERTY(m_pszCharacterMode,IDENTITY(GlobalTypes::CAnimGraphParamRef<char*>), 0x90);
+			// PROPERTY(m_pszTeamPreviewVariant,IDENTITY(GlobalTypes::CAnimGraphParamRef<char*>), 0xc0);
+			// PROPERTY(m_pszTeamPreviewPosition,IDENTITY(GlobalTypes::CAnimGraphParamRef<char*>), 0xf0);
+			// PROPERTY(m_pszEndOfMatchCelebration,IDENTITY(GlobalTypes::CAnimGraphParamRef<char*>), 0x120);
+			// PROPERTY(m_nTeamPreviewRandom,IDENTITY(GlobalTypes::CAnimGraphParamRef< int32 >), 0x150);
+			// PROPERTY(m_pszWeaponState,IDENTITY(GlobalTypes::CAnimGraphParamRef<char*>), 0x178);
+			// PROPERTY(m_pszWeaponType,IDENTITY(GlobalTypes::CAnimGraphParamRef<char*>), 0x1a8);
+			// PROPERTY(m_bCT,IDENTITY(GlobalTypes::CAnimGraphParamRef< bool >), 0x1d8);
 			S2_PAD(0x170);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayer_GraphController) == 0x200, "C_CSGO_PreviewPlayer_GraphController size should be 0x200");
+
+#endif
 	}
 }

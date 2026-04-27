@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x200
+			// Class size: 0x208
 			namespace C_OP_OscillateScalar /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_RateMin = 0x1d0; // float32 m_RateMin; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_RateMax = 0x1d4; // float32 m_RateMax; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_FrequencyMin = 0x1d8; // float32 m_FrequencyMin; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_FrequencyMax = 0x1dc; // float32 m_FrequencyMax; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nField = 0x1e0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bProportional = 0x1e4; // bool m_bProportional; |  0x1e4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bProportionalOp = 0x1e5; // bool m_bProportionalOp; |  0x1e5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flStartTime_min = 0x1e8; // float32 m_flStartTime_min; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime_max = 0x1ec; // float32 m_flStartTime_max; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_min = 0x1f0; // float32 m_flEndTime_min; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_max = 0x1f4; // float32 m_flEndTime_max; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOscMult = 0x1f8; // float32 m_flOscMult; |  0x1f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOscAdd = 0x1fc; // float32 m_flOscAdd; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_RateMin = 0x1d8; // float32 m_RateMin; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_RateMax = 0x1dc; // float32 m_RateMax; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_FrequencyMin = 0x1e0; // float32 m_FrequencyMin; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_FrequencyMax = 0x1e4; // float32 m_FrequencyMax; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nField = 0x1e8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bProportional = 0x1ec; // bool m_bProportional; |  0x1ec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bProportionalOp = 0x1ed; // bool m_bProportionalOp; |  0x1ed | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flStartTime_min = 0x1f0; // float32 m_flStartTime_min; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime_max = 0x1f4; // float32 m_flStartTime_max; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_min = 0x1f8; // float32 m_flEndTime_min; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_max = 0x1fc; // float32 m_flEndTime_max; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOscMult = 0x200; // float32 m_flOscMult; |  0x200 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOscAdd = 0x204; // float32 m_flOscAdd; |  0x204 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flValue,float32, 0x4);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CAudioEmphasisSample) == 0x8, "CAudioEmphasisSample size should be 0x8");
+
+#endif
 	}
 }

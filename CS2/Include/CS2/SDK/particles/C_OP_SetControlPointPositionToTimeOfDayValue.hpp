@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointPositionToTimeOfDayValue : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			PROPERTY_ARRAY(m_pszTimeOfDayParameter,char, 128 , 0x1dc);
-			PROPERTY(m_vecDefaultValue,GlobalTypes::Vector, 0x25c);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
+			PROPERTY_ARRAY(m_pszTimeOfDayParameter,char, 128 , 0x1e4);
+			PROPERTY(m_vecDefaultValue,GlobalTypes::Vector, 0x264);
 			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositionToTimeOfDayValue) == 0x270, "C_OP_SetControlPointPositionToTimeOfDayValue size should be 0x270");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointPositionToTimeOfDayValue) == 0x278, "C_OP_SetControlPointPositionToTimeOfDayValue size should be 0x278");
+
+#endif
 	}
 }

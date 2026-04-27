@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_MultiplayRules : public CS2::client::C_GameRules {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_MultiplayRules) == 0x40, "C_MultiplayRules size should be 0x40");
+
+#endif
 	}
 }

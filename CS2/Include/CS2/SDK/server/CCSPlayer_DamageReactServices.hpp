@@ -21,8 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_DamageReactServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			S2_PAD(0x8);
+			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::server::CCSPlayer_DamageReactServices) == 0x50, "CCSPlayer_DamageReactServices size should be 0x50");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CCSPlayer_DamageReactServices) == 0x68, "CCSPlayer_DamageReactServices size should be 0x68");
+
+#endif
 	}
 }

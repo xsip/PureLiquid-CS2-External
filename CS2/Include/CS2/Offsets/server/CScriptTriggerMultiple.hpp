@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8B8
+			// Class size: 0x8F0
 			namespace CScriptTriggerMultiple /*: public CS2::server::CTriggerMultiple*/ {
-				constexpr std::ptrdiff_t m_vExtent = 0x8a8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vExtent = 0x8e0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

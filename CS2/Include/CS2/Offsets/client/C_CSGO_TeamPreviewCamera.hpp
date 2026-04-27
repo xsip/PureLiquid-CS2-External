@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x698
+			// Class size: 0x690
 			namespace C_CSGO_TeamPreviewCamera /*: public CS2::client::C_CSGO_MapPreviewCameraPath*/ {
-				constexpr std::ptrdiff_t m_nVariant = 0x690; // int32_t m_nVariant; |  0x690 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVariant = 0x688; // int32_t m_nVariant; |  0x688 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

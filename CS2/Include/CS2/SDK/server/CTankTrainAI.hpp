@@ -27,8 +27,8 @@ namespace CS2 {
 	namespace server {
 		class CTankTrainAI : public CS2::server::CPointEntity {
 		public:
-			PROPERTY(m_hTrain,GlobalTypes::CHandle<server::CFuncTrackTrain>, 0x4a8);
-			PROPERTY(m_hTargetEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x4ac);
+			PROPERTY(m_hTrain,IDENTITY(GlobalTypes::CHandle<server::CFuncTrackTrain>), 0x4a8);
+			PROPERTY(m_hTargetEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4ac);
 			PROPERTY(m_soundPlaying,int32_t, 0x4b0);
 			PROPERTY(m_startSoundName,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
 			PROPERTY(m_engineSoundName,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
@@ -36,6 +36,9 @@ namespace CS2 {
 			PROPERTY(m_targetEntityName,GlobalTypes::CUtlSymbolLarge*, 0x4e0);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CTankTrainAI) == 0x4E8, "CTankTrainAI size should be 0x4E8");
+
+#endif
 	}
 }

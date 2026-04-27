@@ -28,31 +28,33 @@ namespace CS2 {
 		class CGameSceneNode  {
 		public:
 			PROPERTY(m_nodeToWorld,GlobalTypes::CTransformWS, 0x10);
-			PROPERTY(m_pOwner,entity2::CEntityInstance*, 0x30);
-			PROPERTY(m_pParent,server::CGameSceneNode*, 0x38);
-			PROPERTY(m_pChild,server::CGameSceneNode*, 0x40);
-			PROPERTY(m_pNextSibling,server::CGameSceneNode*, 0x48);
-			NESTED_PROPERTY(m_hParent,server::CGameSceneNodeHandle, 0x78);
-			NESTED_PROPERTY(m_vecOrigin,client::CNetworkOriginCellCoordQuantizedVector, 0x88);
-			PROPERTY(m_angRotation,GlobalTypes::QAngle, 0xc0);
-			PROPERTY(m_flScale,float32, 0xcc);
-			PROPERTY(m_vecAbsOrigin,GlobalTypes::VectorWS, 0xd0);
-			PROPERTY(m_angAbsRotation,GlobalTypes::QAngle, 0xdc);
-			PROPERTY(m_flAbsScale,float32, 0xe8);
-			PROPERTY(m_nParentAttachmentOrBone,int16_t, 0xec);
-			PROPERTY(m_bDebugAbsOriginChanges,bool, 0xee);
-			PROPERTY(m_bDormant,bool, 0xef);
-			PROPERTY(m_bForceParentToBeNetworked,bool, 0xf0);
-			PROPERTY(m_nHierarchicalDepth,uint8_t, 0xf3);
-			PROPERTY(m_nHierarchyType,uint8_t, 0xf4);
-			PROPERTY(m_nDoNotSetAnimTimeInInvalidatePhysicsCount,uint8_t, 0xf5);
-			PROPERTY(m_name,GlobalTypes::CUtlStringToken*, 0xf8);
-			PROPERTY(m_hierarchyAttachName,GlobalTypes::CUtlStringToken*, 0x10c);
-			PROPERTY(m_flZOffset,float32, 0x110);
-			PROPERTY(m_flClientLocalScale,float32, 0x114);
-			PROPERTY(m_vRenderOrigin,GlobalTypes::Vector, 0x118);
-			S2_PAD(0x130);
+			PROPERTY(m_pOwner,IDENTITY(entity2::CEntityInstance*), 0x30);
+			PROPERTY(m_pParent,IDENTITY(server::CGameSceneNode*), 0x38);
+			PROPERTY(m_pChild,IDENTITY(server::CGameSceneNode*), 0x40);
+			PROPERTY(m_pNextSibling,IDENTITY(server::CGameSceneNode*), 0x48);
+			NESTED_PROPERTY(m_hParent,IDENTITY(server::CGameSceneNodeHandle), 0x70);
+			NESTED_PROPERTY(m_vecOrigin,IDENTITY(client::CNetworkOriginCellCoordQuantizedVector), 0x80);
+			PROPERTY(m_angRotation,GlobalTypes::QAngle, 0xb8);
+			PROPERTY(m_flScale,float32, 0xc4);
+			PROPERTY(m_vecAbsOrigin,GlobalTypes::VectorWS, 0xc8);
+			PROPERTY(m_angAbsRotation,GlobalTypes::QAngle, 0xd4);
+			PROPERTY(m_flAbsScale,float32, 0xe0);
+			PROPERTY(m_nParentAttachmentOrBone,int16_t, 0xe4);
+			PROPERTY(m_bDebugAbsOriginChanges,bool, 0xe6);
+			PROPERTY(m_bDormant,bool, 0xe7);
+			PROPERTY(m_bForceParentToBeNetworked,bool, 0xe8);
+			PROPERTY(m_nHierarchicalDepth,uint8_t, 0xeb);
+			PROPERTY(m_nHierarchyType,uint8_t, 0xec);
+			PROPERTY(m_nDoNotSetAnimTimeInInvalidatePhysicsCount,uint8_t, 0xed);
+			PROPERTY(m_name,GlobalTypes::CUtlStringToken*, 0xf0);
+			PROPERTY(m_hierarchyAttachName,GlobalTypes::CUtlStringToken*, 0x104);
+			PROPERTY(m_flClientLocalScale,float32, 0x108);
+			PROPERTY(m_vRenderOrigin,GlobalTypes::Vector, 0x10c);
+			S2_PAD(0x120);
 		};
-		//static_assert(sizeof(CS2::server::CGameSceneNode) == 0x130, "CGameSceneNode size should be 0x130");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CGameSceneNode) == 0x120, "CGameSceneNode size should be 0x120");
+
+#endif
 	}
 }

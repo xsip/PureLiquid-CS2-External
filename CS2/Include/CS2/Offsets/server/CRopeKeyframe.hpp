@@ -8,29 +8,29 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x788
+			// Class size: 0x7C0
 			namespace CRopeKeyframe /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_RopeFlags = 0x738; // uint16_t m_RopeFlags; |  0x738 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_iNextLinkName = 0x740; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_Slack = 0x748; // int16_t m_Slack; |  0x748 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_Width = 0x74c; // float32 m_Width; |  0x74c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_TextureScale = 0x750; // float32 m_TextureScale; |  0x750 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSegments = 0x754; // uint8_t m_nSegments; |  0x754 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bConstrainBetweenEndpoints = 0x755; // bool m_bConstrainBetweenEndpoints; |  0x755 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_strRopeMaterialModel = 0x758; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iRopeMaterialModelIndex = 0x760; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_Subdiv = 0x768; // uint8_t m_Subdiv; |  0x768 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nChangeCount = 0x769; // uint8_t m_nChangeCount; |  0x769 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_RopeLength = 0x76a; // int16_t m_RopeLength; |  0x76a | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_fLockedPoints = 0x76c; // uint8_t m_fLockedPoints; |  0x76c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreatedFromMapFile = 0x76d; // bool m_bCreatedFromMapFile; |  0x76d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flScrollSpeed = 0x770; // float32 m_flScrollSpeed; |  0x770 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bStartPointValid = 0x774; // bool m_bStartPointValid; |  0x774 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEndPointValid = 0x775; // bool m_bEndPointValid; |  0x775 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hStartPoint = 0x778; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hEndPoint = 0x77c; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iStartAttachment = 0x780; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_iEndAttachment = 0x781; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_RopeFlags = 0x770; // uint16_t m_RopeFlags; |  0x770 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_iNextLinkName = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_Slack = 0x780; // int16_t m_Slack; |  0x780 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_Width = 0x784; // float32 m_Width; |  0x784 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_TextureScale = 0x788; // float32 m_TextureScale; |  0x788 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSegments = 0x78c; // uint8_t m_nSegments; |  0x78c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bConstrainBetweenEndpoints = 0x78d; // bool m_bConstrainBetweenEndpoints; |  0x78d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_strRopeMaterialModel = 0x790; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iRopeMaterialModelIndex = 0x798; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_Subdiv = 0x7a0; // uint8_t m_Subdiv; |  0x7a0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nChangeCount = 0x7a1; // uint8_t m_nChangeCount; |  0x7a1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_RopeLength = 0x7a2; // int16_t m_RopeLength; |  0x7a2 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_fLockedPoints = 0x7a4; // uint8_t m_fLockedPoints; |  0x7a4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreatedFromMapFile = 0x7a5; // bool m_bCreatedFromMapFile; |  0x7a5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flScrollSpeed = 0x7a8; // float32 m_flScrollSpeed; |  0x7a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bStartPointValid = 0x7ac; // bool m_bStartPointValid; |  0x7ac | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEndPointValid = 0x7ad; // bool m_bEndPointValid; |  0x7ad | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hStartPoint = 0x7b0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hEndPoint = 0x7b4; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iStartAttachment = 0x7b8; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_iEndAttachment = 0x7b9; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
 			}
 		}
 	}

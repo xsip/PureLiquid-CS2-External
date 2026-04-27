@@ -26,14 +26,17 @@ namespace CS2 {
 	namespace server {
 		class CPulseGraphInstance_ServerEntity : public CS2::pulse_runtime_lib::CBasePulseGraphInstance {
 		public:
-			PROPERTY(m_hOwner,GlobalTypes::CHandle<server::CBaseEntity>, 0x190);
-			PROPERTY(m_bActivated,bool, 0x194);
-			PROPERTY(m_sNameFixupStaticPrefix,GlobalTypes::CUtlSymbolLarge*, 0x198);
-			PROPERTY(m_sNameFixupParent,GlobalTypes::CUtlSymbolLarge*, 0x1a0);
-			PROPERTY(m_sNameFixupLocal,GlobalTypes::CUtlSymbolLarge*, 0x1a8);
-			PROPERTY(m_sProceduralWorldNameForRelays,GlobalTypes::CUtlSymbolLarge*, 0x1b0);
-			S2_PAD(0xA0);
+			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x1a8);
+			PROPERTY(m_bActivated,bool, 0x1ac);
+			PROPERTY(m_sNameFixupStaticPrefix,GlobalTypes::CUtlSymbolLarge*, 0x1b0);
+			PROPERTY(m_sNameFixupParent,GlobalTypes::CUtlSymbolLarge*, 0x1b8);
+			PROPERTY(m_sNameFixupLocal,GlobalTypes::CUtlSymbolLarge*, 0x1c0);
+			PROPERTY(m_sProceduralWorldNameForRelays,GlobalTypes::CUtlSymbolLarge*, 0x1c8);
+			S2_PAD(0xB8);
 		};
-		//static_assert(sizeof(CS2::server::CPulseGraphInstance_ServerEntity) == 0x1B8, "CPulseGraphInstance_ServerEntity size should be 0x1B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPulseGraphInstance_ServerEntity) == 0x1D0, "CPulseGraphInstance_ServerEntity size should be 0x1D0");
+
+#endif
 	}
 }

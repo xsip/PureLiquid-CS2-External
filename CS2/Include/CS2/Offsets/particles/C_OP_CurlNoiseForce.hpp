@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1FA8
+			// Class size: 0x1FB0
 			namespace C_OP_CurlNoiseForce /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_nNoiseType = 0x1e0; // particles::ParticleDirectionNoiseType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_vecNoiseFreq = 0x1e8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecNoiseScale = 0x8a0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecOffset = 0xf58; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecOffsetRate = 0x1610; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flWorleySeed = 0x1cc8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flWorleyJitter = 0x1e38; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nNoiseType = 0x1e8; // particleslib::ParticleDirectionNoiseType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vecNoiseFreq = 0x1f0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecNoiseScale = 0x8a8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecOffset = 0xf60; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecOffsetRate = 0x1618; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flWorleySeed = 0x1cd0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flWorleyJitter = 0x1e40; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

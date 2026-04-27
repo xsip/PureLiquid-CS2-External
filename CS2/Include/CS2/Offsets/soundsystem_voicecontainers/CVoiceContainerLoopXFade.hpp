@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0xD8
+			// Class size: 0xE0
 			namespace CVoiceContainerLoopXFade /*: public CS2::soundsystem_voicecontainers::CVoiceContainerBase*/ {
-				constexpr std::ptrdiff_t m_sound = 0xa8; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_flLoopEnd = 0xc0; // float32 m_flLoopEnd; |  0xc0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLoopStart = 0xc4; // float32 m_flLoopStart; |  0xc4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOut = 0xc8; // float32 m_flFadeOut; |  0xc8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeIn = 0xcc; // float32 m_flFadeIn; |  0xcc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bPlayHead = 0xd0; // bool m_bPlayHead; |  0xd0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bPlayTail = 0xd1; // bool m_bPlayTail; |  0xd1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEqualPow = 0xd2; // bool m_bEqualPow; |  0xd2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sound = 0xa8; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_flLoopEnd = 0xc8; // float32 m_flLoopEnd; |  0xc8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLoopStart = 0xcc; // float32 m_flLoopStart; |  0xcc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOut = 0xd0; // float32 m_flFadeOut; |  0xd0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeIn = 0xd4; // float32 m_flFadeIn; |  0xd4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bPlayHead = 0xd8; // bool m_bPlayHead; |  0xd8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bPlayTail = 0xd9; // bool m_bPlayTail; |  0xd9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEqualPow = 0xda; // bool m_bEqualPow; |  0xda | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

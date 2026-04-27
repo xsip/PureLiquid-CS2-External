@@ -21,12 +21,15 @@ namespace CS2 {
 		class CPathQueryUtil  {
 		public:
 			PROPERTY(m_PathToEntityTransform,GlobalTypes::CTransform, 0x10);
-			NESTED_PROPERTY(m_vecPathSamplePositions,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x30);
-			NESTED_PROPERTY(m_vecPathSampleParameters,GlobalTypes::CUtlVector< float32 >, 0x48);
-			NESTED_PROPERTY(m_vecPathSampleDistances,GlobalTypes::CUtlVector< float32 >, 0x60);
+			NESTED_PROPERTY(m_vecPathSamplePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x30);
+			NESTED_PROPERTY(m_vecPathSampleParameters,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x48);
+			NESTED_PROPERTY(m_vecPathSampleDistances,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x60);
 			PROPERTY(m_bIsClosedLoop,bool, 0x78);
 			S2_PAD(0x80);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPathQueryUtil) == 0x80, "CPathQueryUtil size should be 0x80");
+
+#endif
 	}
 }

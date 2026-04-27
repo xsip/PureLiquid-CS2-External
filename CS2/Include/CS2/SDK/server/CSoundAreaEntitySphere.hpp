@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flRadius,float32, 0x4c8);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundAreaEntitySphere) == 0x4D0, "CSoundAreaEntitySphere size should be 0x4D0");
+
+#endif
 	}
 }

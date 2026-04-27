@@ -27,11 +27,14 @@ namespace CS2 {
 	namespace server {
 		class CGunTarget : public CS2::server::CBaseToggle {
 		public:
-			PROPERTY(m_on,bool, 0x7b0);
-			PROPERTY(m_hTargetEnt,GlobalTypes::CHandle<server::CBaseEntity>, 0x7b4);
-			NESTED_PROPERTY(m_OnDeath,entity2::CEntityIOOutput, 0x7b8);
+			PROPERTY(m_on,bool, 0x7e8);
+			PROPERTY(m_hTargetEnt,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7ec);
+			NESTED_PROPERTY(m_OnDeath,IDENTITY(entity2::CEntityIOOutput), 0x7f0);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::server::CGunTarget) == 0x7D0, "CGunTarget size should be 0x7D0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CGunTarget) == 0x808, "CGunTarget size should be 0x808");
+
+#endif
 	}
 }

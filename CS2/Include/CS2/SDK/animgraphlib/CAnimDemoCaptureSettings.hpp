@@ -35,11 +35,14 @@ namespace CS2 {
 			PROPERTY(m_flIkTranslation_MaxQuantizationError,float32, 0x3c);
 			PROPERTY(m_baseSequence,GlobalTypes::CUtlString*, 0x40);
 			PROPERTY(m_nBaseSequenceFrame,int32_t, 0x48);
-			PROPERTY(m_boneSelectionMode,animgraphlib::EDemoBoneSelectionMode, 0x4c);
-			NESTED_PROPERTY(m_bones,GlobalTypes::CUtlVector<animgraphlib::BoneDemoCaptureSettings_t>, 0x50);
-			NESTED_PROPERTY(m_ikChains,GlobalTypes::CUtlVector<animgraphlib::IKDemoCaptureSettings_t>, 0x68);
+			PROPERTY(m_boneSelectionMode,IDENTITY(animgraphlib::EDemoBoneSelectionMode), 0x4c);
+			NESTED_PROPERTY(m_bones,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::BoneDemoCaptureSettings_t>), 0x50);
+			NESTED_PROPERTY(m_ikChains,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::IKDemoCaptureSettings_t>), 0x68);
 			S2_PAD(0x80);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimDemoCaptureSettings) == 0x80, "CAnimDemoCaptureSettings size should be 0x80");
+
+#endif
 	}
 }

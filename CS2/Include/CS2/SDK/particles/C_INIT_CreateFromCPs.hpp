@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateFromCPs : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nIncrement,int32_t, 0x1d8);
-			PROPERTY(m_nMinCP,int32_t, 0x1dc);
-			PROPERTY(m_nMaxCP,int32_t, 0x1e0);
-			NESTED_PROPERTY(m_nDynamicCPCount,particleslib::CParticleCollectionFloatInput, 0x1e8);
+			PROPERTY(m_nIncrement,int32_t, 0x1e0);
+			PROPERTY(m_nMinCP,int32_t, 0x1e4);
+			PROPERTY(m_nMaxCP,int32_t, 0x1e8);
+			NESTED_PROPERTY(m_nDynamicCPCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f0);
 			S2_PAD(0x180);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateFromCPs) == 0x358, "C_INIT_CreateFromCPs size should be 0x358");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateFromCPs) == 0x360, "C_INIT_CreateFromCPs size should be 0x360");
+
+#endif
 	}
 }

@@ -28,11 +28,14 @@ namespace CS2 {
 		class SummaryTakeDamageInfo_t  {
 		public:
 			PROPERTY(nSummarisedCount,int32_t, 0x0);
-			NESTED_PROPERTY(info,client::CTakeDamageInfo, 0x8);
-			NESTED_PROPERTY(result,client::CTakeDamageResult, 0x128);
-			PROPERTY(hTarget,GlobalTypes::CHandle<client::C_BaseEntity>, 0x158);
-			S2_PAD(0x160);
+			NESTED_PROPERTY(info,IDENTITY(client::CTakeDamageInfo), 0x8);
+			NESTED_PROPERTY(result,IDENTITY(client::CTakeDamageResult), 0x120);
+			PROPERTY(hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x170);
+			S2_PAD(0x178);
 		};
-		//static_assert(sizeof(CS2::client::SummaryTakeDamageInfo_t) == 0x160, "SummaryTakeDamageInfo_t size should be 0x160");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::SummaryTakeDamageInfo_t) == 0x178, "SummaryTakeDamageInfo_t size should be 0x178");
+
+#endif
 	}
 }

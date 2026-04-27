@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x7A8
+			// Class size: 0x7B0
 			namespace C_OP_SetControlPointFieldToScalarExpression /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nExpression = 0x1d8; // particles::ScalarExpressionType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flInput1 = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInput2 = 0x350; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputRemap = 0x4c0; // particleslib::CParticleRemapFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nOutputCP = 0x630; // int32_t m_nOutputCP; |  0x630 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutVectorField = 0x634; // int32_t m_nOutVectorField; |  0x634 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInterpolation = 0x638; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nExpression = 0x1e0; // particles::ScalarExpressionType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flInput1 = 0x1e8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInput2 = 0x358; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputRemap = 0x4c8; // particleslib::CParticleRemapFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nOutputCP = 0x638; // int32_t m_nOutputCP; |  0x638 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutVectorField = 0x63c; // int32_t m_nOutVectorField; |  0x63c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInterpolation = 0x640; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

@@ -34,24 +34,27 @@ namespace CS2 {
 	namespace server {
 		class CBreakable : public CS2::server::CBaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_CPropDataComponent,server::CPropDataComponent, 0x738);
-			PROPERTY(m_Material,server::Materials, 0x778);
-			PROPERTY(m_hBreaker,GlobalTypes::CHandle<server::CBaseEntity>, 0x77c);
-			PROPERTY(m_Explosion,server::Explosions, 0x780);
-			PROPERTY(m_iszSpawnObject,GlobalTypes::CUtlSymbolLarge*, 0x788);
-			PROPERTY(m_flPressureDelay,float32, 0x790);
-			PROPERTY(m_iMinHealthDmg,int32_t, 0x794);
-			PROPERTY(m_iszPropData,GlobalTypes::CUtlSymbolLarge*, 0x798);
-			PROPERTY(m_impactEnergyScale,float32, 0x7a0);
-			PROPERTY(m_nOverrideBlockLOS,server::EOverrideBlockLOS_t, 0x7a4);
-			NESTED_PROPERTY(m_OnStartDeath,entity2::CEntityIOOutput, 0x7a8);
-			NESTED_PROPERTY(m_OnBreak,entity2::CEntityIOOutput, 0x7c0);
-			PROPERTY(m_OnHealthChanged,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x7d8);
-			PROPERTY(m_PerformanceMode,client::PerformanceMode_t, 0x7f8);
-			PROPERTY(m_hPhysicsAttacker,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0x7fc);
-			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,entity2::GameTime_t, 0x800);
+			NESTED_PROPERTY(m_CPropDataComponent,IDENTITY(server::CPropDataComponent), 0x770);
+			PROPERTY(m_Material,IDENTITY(server::Materials), 0x7b0);
+			PROPERTY(m_hBreaker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7b4);
+			PROPERTY(m_Explosion,IDENTITY(server::Explosions), 0x7b8);
+			PROPERTY(m_iszSpawnObject,GlobalTypes::CUtlSymbolLarge*, 0x7c0);
+			PROPERTY(m_flPressureDelay,float32, 0x7c8);
+			PROPERTY(m_iMinHealthDmg,int32_t, 0x7cc);
+			PROPERTY(m_iszPropData,GlobalTypes::CUtlSymbolLarge*, 0x7d0);
+			PROPERTY(m_impactEnergyScale,float32, 0x7d8);
+			PROPERTY(m_nOverrideBlockLOS,IDENTITY(server::EOverrideBlockLOS_t), 0x7dc);
+			NESTED_PROPERTY(m_OnStartDeath,IDENTITY(entity2::CEntityIOOutput), 0x7e0);
+			NESTED_PROPERTY(m_OnBreak,IDENTITY(entity2::CEntityIOOutput), 0x7f8);
+			// PROPERTY(m_OnHealthChanged,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x810);
+			PROPERTY(m_PerformanceMode,IDENTITY(client::PerformanceMode_t), 0x830);
+			PROPERTY(m_hPhysicsAttacker,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0x834);
+			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,IDENTITY(entity2::GameTime_t), 0x838);
 			S2_PAD(0xD8);
 		};
-		//static_assert(sizeof(CS2::server::CBreakable) == 0x808, "CBreakable size should be 0x808");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBreakable) == 0x840, "CBreakable size should be 0x840");
+
+#endif
 	}
 }

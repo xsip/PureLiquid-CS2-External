@@ -12,7 +12,7 @@
 
 #include <SDK/animlib/CNmEvent.hpp>
 #include <SDK/animlib/CNmEventRelevance_t.hpp>
-#include <SDK/animlib/Position_t.hpp>
+#include <SDK/animlib/CNmSoundEvent_Position_t.hpp>
 
 
 
@@ -23,15 +23,18 @@ namespace CS2 {
 	namespace animlib {
 		class CNmSoundEvent : public CS2::animlib::CNmEvent {
 		public:
-			PROPERTY(m_relevance,animlib::CNmEventRelevance_t, 0x20);
-			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x28);
-			PROPERTY(m_position,animlib::Position_t, 0x30);
-			PROPERTY(m_attachmentName,GlobalTypes::CUtlString*, 0x38);
-			PROPERTY(m_tags,GlobalTypes::CUtlString*, 0x40);
-			PROPERTY(m_bContinuePlayingSoundAtDurationEnd,bool, 0x48);
-			PROPERTY(m_flDurationInterruptionThreshold,float32, 0x4c);
+			PROPERTY(m_relevance,IDENTITY(animlib::CNmEventRelevance_t), 0x18);
+			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x20);
+			PROPERTY(m_position,IDENTITY(animlib::CNmSoundEvent_Position_t), 0x28);
+			PROPERTY(m_attachmentName,GlobalTypes::CUtlString*, 0x30);
+			PROPERTY(m_tags,GlobalTypes::CUtlString*, 0x38);
+			PROPERTY(m_bContinuePlayingSoundAtDurationEnd,bool, 0x40);
+			PROPERTY(m_flDurationInterruptionThreshold,float32, 0x44);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmSoundEvent) == 0x50, "CNmSoundEvent size should be 0x50");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmSoundEvent) == 0x48, "CNmSoundEvent size should be 0x48");
+
+#endif
 	}
 }

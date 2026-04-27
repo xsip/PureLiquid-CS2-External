@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CChoreoInfoTarget : public CS2::client::C_PointEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::CChoreoInfoTarget) == 0x608, "CChoreoInfoTarget size should be 0x608");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CChoreoInfoTarget) == 0x600, "CChoreoInfoTarget size should be 0x600");
+
+#endif
 	}
 }

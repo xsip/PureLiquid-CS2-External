@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x280
+			// Class size: 0x288
 			namespace C_OP_SetCPOrientationToGroundNormal /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flInterpRate = 0x1d0; // float32 m_flInterpRate; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x1d4; // float32 m_flMaxTraceLength; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTolerance = 0x1d8; // float32 m_flTolerance; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTraceOffset = 0x1dc; // float32 m_flTraceOffset; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_CollisionGroupName = 0x1e0; // char m_CollisionGroupName[128]; |  0x1e0 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nTraceSet = 0x260; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nInputCP = 0x264; // int32_t m_nInputCP; |  0x264 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputCP = 0x268; // int32_t m_nOutputCP; |  0x268 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bIncludeWater = 0x278; // bool m_bIncludeWater; |  0x278 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flInterpRate = 0x1d8; // float32 m_flInterpRate; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x1dc; // float32 m_flMaxTraceLength; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTolerance = 0x1e0; // float32 m_flTolerance; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTraceOffset = 0x1e4; // float32 m_flTraceOffset; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_CollisionGroupName = 0x1e8; // char m_CollisionGroupName[128]; |  0x1e8 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nTraceSet = 0x268; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nInputCP = 0x26c; // int32_t m_nInputCP; |  0x26c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputCP = 0x270; // int32_t m_nOutputCP; |  0x270 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIncludeWater = 0x280; // bool m_bIncludeWater; |  0x280 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -25,10 +25,13 @@ namespace CS2 {
 			PROPERTY(m_vMinBounds,GlobalTypes::Vector, 0x10);
 			PROPERTY(m_vMaxBounds,GlobalTypes::Vector, 0x1c);
 			PROPERTY(m_flMinimumDistance,float32, 0x28);
-			NESTED_PROPERTY(m_ChildNodeIndices,GlobalTypes::CUtlVector< int32 >, 0x30);
+			NESTED_PROPERTY(m_ChildNodeIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x30);
 			PROPERTY(m_worldNodePrefix,GlobalTypes::CUtlString*, 0x48);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::NodeData_t) == 0x50, "NodeData_t size should be 0x50");
+
+#endif
 	}
 }

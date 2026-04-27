@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class CFilterMassGreater : public CS2::client::CBaseFilter {
 		public:
-			PROPERTY(m_fFilterMass,float32, 0x640);
+			PROPERTY(m_fFilterMass,float32, 0x638);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::CFilterMassGreater) == 0x648, "CFilterMassGreater size should be 0x648");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CFilterMassGreater) == 0x640, "CFilterMassGreater size should be 0x640");
+
+#endif
 	}
 }

@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_bIgnoreRotation,bool, 0x84);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CAttachment) == 0x90, "CAttachment size should be 0x90");
+
+#endif
 	}
 }

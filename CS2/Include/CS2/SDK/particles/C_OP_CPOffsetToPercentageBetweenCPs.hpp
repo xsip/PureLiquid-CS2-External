@@ -21,19 +21,22 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_CPOffsetToPercentageBetweenCPs : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flInputMin,float32, 0x1d0);
-			PROPERTY(m_flInputMax,float32, 0x1d4);
-			PROPERTY(m_flInputBias,float32, 0x1d8);
-			PROPERTY(m_nStartCP,int32_t, 0x1dc);
-			PROPERTY(m_nEndCP,int32_t, 0x1e0);
-			PROPERTY(m_nOffsetCP,int32_t, 0x1e4);
-			PROPERTY(m_nOuputCP,int32_t, 0x1e8);
-			PROPERTY(m_nInputCP,int32_t, 0x1ec);
-			PROPERTY(m_bRadialCheck,bool, 0x1f0);
-			PROPERTY(m_bScaleOffset,bool, 0x1f1);
-			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x1f4);
+			PROPERTY(m_flInputMin,float32, 0x1d8);
+			PROPERTY(m_flInputMax,float32, 0x1dc);
+			PROPERTY(m_flInputBias,float32, 0x1e0);
+			PROPERTY(m_nStartCP,int32_t, 0x1e4);
+			PROPERTY(m_nEndCP,int32_t, 0x1e8);
+			PROPERTY(m_nOffsetCP,int32_t, 0x1ec);
+			PROPERTY(m_nOuputCP,int32_t, 0x1f0);
+			PROPERTY(m_nInputCP,int32_t, 0x1f4);
+			PROPERTY(m_bRadialCheck,bool, 0x1f8);
+			PROPERTY(m_bScaleOffset,bool, 0x1f9);
+			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x1fc);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_CPOffsetToPercentageBetweenCPs) == 0x200, "C_OP_CPOffsetToPercentageBetweenCPs size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_CPOffsetToPercentageBetweenCPs) == 0x208, "C_OP_CPOffsetToPercentageBetweenCPs size should be 0x208");
+
+#endif
 	}
 }

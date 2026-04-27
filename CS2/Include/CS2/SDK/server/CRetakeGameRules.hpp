@@ -30,9 +30,12 @@ namespace CS2 {
 			PROPERTY(m_bRoundInProgress,bool, 0x13d);
 			PROPERTY(m_iFirstSecondHalfRound,int32_t, 0x140);
 			PROPERTY(m_iBombSite,int32_t, 0x144);
-			PROPERTY(m_hBombPlanter,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x148);
+			PROPERTY(m_hBombPlanter,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x148);
 			S2_PAD(0x1F0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CRetakeGameRules) == 0x1F0, "CRetakeGameRules size should be 0x1F0");
+
+#endif
 	}
 }

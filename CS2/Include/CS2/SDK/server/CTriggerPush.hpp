@@ -26,15 +26,18 @@ namespace CS2 {
 	namespace server {
 		class CTriggerPush : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_angPushEntitySpace,GlobalTypes::QAngle, 0x890);
-			PROPERTY(m_vecPushDirEntitySpace,GlobalTypes::Vector, 0x89c);
-			PROPERTY(m_bTriggerOnStartTouch,bool, 0x8a8);
-			PROPERTY(m_bUsePathSimple,bool, 0x8a9);
-			PROPERTY(m_iszPathSimpleName,GlobalTypes::CUtlSymbolLarge*, 0x8b0);
-			PROPERTY(m_PathSimple,server::CPathSimple*, 0x8b8);
-			PROPERTY(m_splinePushType,uint32_t, 0x8c0);
-			S2_PAD(0x38);
+			PROPERTY(m_angPushEntitySpace,GlobalTypes::QAngle, 0x8c8);
+			PROPERTY(m_vecPushDirEntitySpace,GlobalTypes::Vector, 0x8d4);
+			PROPERTY(m_bTriggerOnStartTouch,bool, 0x8e0);
+			PROPERTY(m_bUsePathSimple,bool, 0x8e1);
+			PROPERTY(m_iszPathSimpleName,GlobalTypes::CUtlSymbolLarge*, 0x8e8);
+			PROPERTY(m_PathSimple,IDENTITY(GlobalTypes::CHandle<server::CPathSimple>), 0x8f0);
+			PROPERTY(m_splinePushType,uint32_t, 0x8f4);
+			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerPush) == 0x8C8, "CTriggerPush size should be 0x8C8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerPush) == 0x8F8, "CTriggerPush size should be 0x8F8");
+
+#endif
 	}
 }

@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CTriggerDetectExplosion : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_OnDetectedExplosion,entity2::CEntityIOOutput, 0x8b8);
+			NESTED_PROPERTY(m_OnDetectedExplosion,IDENTITY(entity2::CEntityIOOutput), 0x8f0);
 			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerDetectExplosion) == 0x8D0, "CTriggerDetectExplosion size should be 0x8D0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerDetectExplosion) == 0x908, "CTriggerDetectExplosion size should be 0x908");
+
+#endif
 	}
 }

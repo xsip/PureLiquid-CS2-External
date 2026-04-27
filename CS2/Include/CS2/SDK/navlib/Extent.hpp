@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(hi,GlobalTypes::VectorWS, 0xc);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::navlib::Extent) == 0x18, "Extent size should be 0x18");
+
+#endif
 	}
 }

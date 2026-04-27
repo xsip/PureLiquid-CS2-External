@@ -8,18 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xA80
+			// Class size: 0xA88
 			namespace C_INIT_CreateOnGrid /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nXCount = 0x1d8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nYCount = 0x348; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nZCount = 0x4b8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nXSpacing = 0x628; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nYSpacing = 0x798; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nZSpacing = 0x908; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0xa78; // int32_t m_nControlPointNumber; |  0xa78 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLocalSpace = 0xa7c; // bool m_bLocalSpace; |  0xa7c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCenter = 0xa7d; // bool m_bCenter; |  0xa7d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bHollow = 0xa7e; // bool m_bHollow; |  0xa7e | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nXCount = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nYCount = 0x350; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nZCount = 0x4c0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nXSpacing = 0x630; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nYSpacing = 0x7a0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nZSpacing = 0x910; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0xa80; // int32_t m_nControlPointNumber; |  0xa80 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLocalSpace = 0xa84; // bool m_bLocalSpace; |  0xa84 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCenter = 0xa85; // bool m_bCenter; |  0xa85 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bHollow = 0xa86; // bool m_bHollow; |  0xa86 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

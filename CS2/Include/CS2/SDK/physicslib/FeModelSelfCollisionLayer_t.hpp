@@ -21,12 +21,15 @@ namespace CS2 {
 		class FeModelSelfCollisionLayer_t  {
 		public:
 			PROPERTY(m_Name,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_Nodes,GlobalTypes::CUtlVector< uint16 >, 0x8);
+			NESTED_PROPERTY(m_Nodes,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x8);
 			PROPERTY(m_flParentReaction,float32, 0x20);
 			PROPERTY(m_nFlags,uint32_t, 0x24);
 			PROPERTY_ARRAY(m_nEndIdx,uint32_t, 4 , 0x28);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeModelSelfCollisionLayer_t) == 0x38, "FeModelSelfCollisionLayer_t size should be 0x38");
+
+#endif
 	}
 }

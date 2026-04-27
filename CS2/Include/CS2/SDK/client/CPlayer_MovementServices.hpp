@@ -23,22 +23,28 @@ namespace CS2 {
 		class CPlayer_MovementServices : public CS2::client::CPlayerPawnComponent {
 		public:
 			PROPERTY(m_nImpulse,int32_t, 0x48);
-			NESTED_PROPERTY(m_nButtons,client::CInButtonState, 0x50);
+			NESTED_PROPERTY(m_nButtons,IDENTITY(client::CInButtonState), 0x50);
 			PROPERTY(m_nQueuedButtonDownMask,uint64_t, 0x70);
 			PROPERTY(m_nQueuedButtonChangeMask,uint64_t, 0x78);
 			PROPERTY(m_nButtonDoublePressed,uint64_t, 0x80);
 			PROPERTY_ARRAY(m_pButtonPressedCmdNumber,uint32_t, 64 , 0x88);
 			PROPERTY(m_nLastCommandNumberProcessed,uint32_t, 0x188);
 			PROPERTY(m_nToggleButtonDownMask,uint64_t, 0x190);
-			PROPERTY(m_flMaxspeed,float32, 0x1a0);
-			PROPERTY_ARRAY(m_arrForceSubtickMoveWhen,float32, 4 , 0x1a4);
-			PROPERTY(m_flForwardMove,float32, 0x1b4);
-			PROPERTY(m_flLeftMove,float32, 0x1b8);
-			PROPERTY(m_flUpMove,float32, 0x1bc);
-			PROPERTY(m_vecLastMovementImpulses,GlobalTypes::Vector, 0x1c0);
-			PROPERTY(m_vecOldViewAngles,GlobalTypes::QAngle, 0x228);
-			S2_PAD(0x1F8);
+			PROPERTY(m_flCmdForwardMove,float32, 0x1a0);
+			PROPERTY(m_flCmdLeftMove,float32, 0x1a4);
+			PROPERTY(m_flCmdUpMove,float32, 0x1a8);
+			PROPERTY(m_flMaxspeed,float32, 0x1ac);
+			PROPERTY_ARRAY(m_arrForceSubtickMoveWhen,float32, 4 , 0x1b0);
+			PROPERTY(m_flForwardMove,float32, 0x1c0);
+			PROPERTY(m_flLeftMove,float32, 0x1c4);
+			PROPERTY(m_flUpMove,float32, 0x1c8);
+			PROPERTY(m_vecLastMovementImpulses,GlobalTypes::Vector, 0x1cc);
+			PROPERTY(m_vecOldViewAngles,GlobalTypes::QAngle, 0x240);
+			S2_PAD(0x210);
 		};
-		//static_assert(sizeof(CS2::client::CPlayer_MovementServices) == 0x240, "CPlayer_MovementServices size should be 0x240");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPlayer_MovementServices) == 0x258, "CPlayer_MovementServices size should be 0x258");
+
+#endif
 	}
 }

@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY_ARRAY(nNode,uint16_t, 2 , 0x0);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeSourceEdge_t) == 0x4, "FeSourceEdge_t size should be 0x4");
+
+#endif
 	}
 }

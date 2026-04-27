@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_pValue,float32, 4 , 0x0);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSkillFloat) == 0x10, "CSkillFloat size should be 0x10");
+
+#endif
 	}
 }

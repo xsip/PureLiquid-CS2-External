@@ -25,9 +25,12 @@ namespace CS2 {
 	namespace physicslib {
 		class CFeVertexMapBuildArray  {
 		public:
-			NESTED_PROPERTY(m_Array,GlobalTypes::CUtlVector<physicslib::FeVertexMapBuild_t*>, 0x0);
+			NESTED_PROPERTY(m_Array,IDENTITY(GlobalTypes::CUtlVector<physicslib::FeVertexMapBuild_t*>), 0x0);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::CFeVertexMapBuildArray) == 0x18, "CFeVertexMapBuildArray size should be 0x18");
+
+#endif
 	}
 }

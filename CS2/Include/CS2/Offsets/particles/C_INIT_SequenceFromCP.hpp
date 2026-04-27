@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_INIT_SequenceFromCP /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_bKillUnused = 0x1d8; // bool m_bKillUnused; |  0x1d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRadiusScale = 0x1d9; // bool m_bRadiusScale; |  0x1d9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nCP = 0x1dc; // int32_t m_nCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecOffset = 0x1e0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bKillUnused = 0x1e0; // bool m_bKillUnused; |  0x1e0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRadiusScale = 0x1e1; // bool m_bRadiusScale; |  0x1e1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCP = 0x1e4; // int32_t m_nCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecOffset = 0x1e8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

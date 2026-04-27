@@ -23,16 +23,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ConstrainDistanceToPath : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			PROPERTY(m_fMinDistance,float32, 0x1d0);
-			PROPERTY(m_flMaxDistance0,float32, 0x1d4);
-			PROPERTY(m_flMaxDistanceMid,float32, 0x1d8);
-			PROPERTY(m_flMaxDistance1,float32, 0x1dc);
-			NESTED_PROPERTY(m_PathParameters,particles::CPathParameters, 0x1e0);
-			PROPERTY(m_flTravelTime,float32, 0x220);
-			NESTED_PROPERTY(m_nFieldScale,particles::ParticleAttributeIndex_t, 0x224);
-			NESTED_PROPERTY(m_nManualTField,particles::ParticleAttributeIndex_t, 0x228);
-			S2_PAD(0x60);
+			PROPERTY(m_fMinDistance,float32, 0x1d8);
+			PROPERTY(m_flMaxDistance0,float32, 0x1dc);
+			PROPERTY(m_flMaxDistanceMid,float32, 0x1e0);
+			PROPERTY(m_flMaxDistance1,float32, 0x1e4);
+			NESTED_PROPERTY(m_PathParameters,IDENTITY(particles::CPathParameters), 0x1f0);
+			PROPERTY(m_flTravelTime,float32, 0x230);
+			NESTED_PROPERTY(m_nFieldScale,IDENTITY(particles::ParticleAttributeIndex_t), 0x234);
+			NESTED_PROPERTY(m_nManualTField,IDENTITY(particles::ParticleAttributeIndex_t), 0x238);
+			S2_PAD(0x68);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ConstrainDistanceToPath) == 0x230, "C_OP_ConstrainDistanceToPath size should be 0x230");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ConstrainDistanceToPath) == 0x240, "C_OP_ConstrainDistanceToPath size should be 0x240");
+
+#endif
 	}
 }

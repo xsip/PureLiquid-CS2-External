@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x740
+			// Class size: 0x778
 			namespace CRevertSaved /*: public CS2::server::CModelPointEntity*/ {
-				constexpr std::ptrdiff_t m_loadTime = 0x730; // float32 m_loadTime; |  0x730 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_Duration = 0x734; // float32 m_Duration; |  0x734 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_HoldTime = 0x738; // float32 m_HoldTime; |  0x738 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_loadTime = 0x768; // float32 m_loadTime; |  0x768 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_Duration = 0x76c; // float32 m_Duration; |  0x76c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_HoldTime = 0x770; // float32 m_HoldTime; |  0x770 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

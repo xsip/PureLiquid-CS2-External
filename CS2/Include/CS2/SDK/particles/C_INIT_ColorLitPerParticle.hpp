@@ -11,7 +11,7 @@
 
 
 #include <SDK/particles/CParticleFunctionInitializer.hpp>
-#include <SDK/particles/ParticleColorBlendMode_t.hpp>
+#include <SDK/particleslib/ParticleColorBlendMode_t.hpp>
 
 
 
@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_ColorLitPerParticle : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_ColorMin,GlobalTypes::Color, 0x1f0);
-			PROPERTY(m_ColorMax,GlobalTypes::Color, 0x1f4);
-			PROPERTY(m_TintMin,GlobalTypes::Color, 0x1f8);
-			PROPERTY(m_TintMax,GlobalTypes::Color, 0x1fc);
-			PROPERTY(m_flTintPerc,float32, 0x200);
-			PROPERTY(m_nTintBlendMode,particles::ParticleColorBlendMode_t, 0x204);
-			PROPERTY(m_flLightAmplification,float32, 0x208);
+			PROPERTY(m_ColorMin,GlobalTypes::Color, 0x1f8);
+			PROPERTY(m_ColorMax,GlobalTypes::Color, 0x1fc);
+			PROPERTY(m_TintMin,GlobalTypes::Color, 0x200);
+			PROPERTY(m_TintMax,GlobalTypes::Color, 0x204);
+			PROPERTY(m_flTintPerc,float32, 0x208);
+			PROPERTY(m_nTintBlendMode,IDENTITY(particleslib::ParticleColorBlendMode_t), 0x20c);
+			PROPERTY(m_flLightAmplification,float32, 0x210);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_ColorLitPerParticle) == 0x210, "C_INIT_ColorLitPerParticle size should be 0x210");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_ColorLitPerParticle) == 0x218, "C_INIT_ColorLitPerParticle size should be 0x218");
+
+#endif
 	}
 }

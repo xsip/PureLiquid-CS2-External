@@ -21,26 +21,29 @@ namespace CS2 {
 	namespace client {
 		class C_ColorCorrection : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_vecOrigin,GlobalTypes::Vector, 0x608);
-			PROPERTY(m_MinFalloff,float32, 0x614);
-			PROPERTY(m_MaxFalloff,float32, 0x618);
-			PROPERTY(m_flFadeInDuration,float32, 0x61c);
-			PROPERTY(m_flFadeOutDuration,float32, 0x620);
-			PROPERTY(m_flMaxWeight,float32, 0x624);
-			PROPERTY(m_flCurWeight,float32, 0x628);
-			PROPERTY_ARRAY(m_netlookupFilename,char, 512 , 0x62c);
-			PROPERTY(m_bEnabled,bool, 0x82c);
-			PROPERTY(m_bMaster,bool, 0x82d);
-			PROPERTY(m_bClientSide,bool, 0x82e);
-			PROPERTY(m_bExclusive,bool, 0x82f);
-			PROPERTY_ARRAY(m_bEnabledOnClient,bool, 1 , 0x830);
-			PROPERTY_ARRAY(m_flCurWeightOnClient,float32, 1 , 0x834);
-			PROPERTY_ARRAY(m_bFadingIn,bool, 1 , 0x838);
-			PROPERTY_ARRAY(m_flFadeStartWeight,float32, 1 , 0x83c);
-			PROPERTY_ARRAY(m_flFadeStartTime,float32, 1 , 0x840);
-			PROPERTY_ARRAY(m_flFadeDuration,float32, 1 , 0x844);
+			PROPERTY(m_vecOrigin,GlobalTypes::Vector, 0x600);
+			PROPERTY(m_MinFalloff,float32, 0x60c);
+			PROPERTY(m_MaxFalloff,float32, 0x610);
+			PROPERTY(m_flFadeInDuration,float32, 0x614);
+			PROPERTY(m_flFadeOutDuration,float32, 0x618);
+			PROPERTY(m_flMaxWeight,float32, 0x61c);
+			PROPERTY(m_flCurWeight,float32, 0x620);
+			PROPERTY_ARRAY(m_netlookupFilename,char, 512 , 0x624);
+			PROPERTY(m_bEnabled,bool, 0x824);
+			PROPERTY(m_bMaster,bool, 0x825);
+			PROPERTY(m_bClientSide,bool, 0x826);
+			PROPERTY(m_bExclusive,bool, 0x827);
+			PROPERTY_ARRAY(m_bEnabledOnClient,bool, 1 , 0x828);
+			PROPERTY_ARRAY(m_flCurWeightOnClient,float32, 1 , 0x82c);
+			PROPERTY_ARRAY(m_bFadingIn,bool, 1 , 0x830);
+			PROPERTY_ARRAY(m_flFadeStartWeight,float32, 1 , 0x834);
+			PROPERTY_ARRAY(m_flFadeStartTime,float32, 1 , 0x838);
+			PROPERTY_ARRAY(m_flFadeDuration,float32, 1 , 0x83c);
 			S2_PAD(0x248);
 		};
-		//static_assert(sizeof(CS2::client::C_ColorCorrection) == 0x850, "C_ColorCorrection size should be 0x850");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_ColorCorrection) == 0x848, "C_ColorCorrection size should be 0x848");
+
+#endif
 	}
 }

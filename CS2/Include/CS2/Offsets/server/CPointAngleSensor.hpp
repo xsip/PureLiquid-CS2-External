@@ -20,7 +20,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bFired = 0x4cc; // bool m_bFired; |  0x4cc | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_OnFacingLookat = 0x4d0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_OnNotFacingLookat = 0x4e8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_TargetDir = 0x500; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_TargetDir = 0x500; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x28
 				constexpr std::ptrdiff_t m_FacingPercentage = 0x528; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
 			}
 		}

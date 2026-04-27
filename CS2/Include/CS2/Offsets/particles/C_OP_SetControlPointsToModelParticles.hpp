@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x2E0
+			// Class size: 0x2E8
 			namespace C_OP_SetControlPointsToModelParticles /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_HitboxSetName = 0x1d0; // char m_HitboxSetName[128]; |  0x1d0 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_AttachmentName = 0x250; // char m_AttachmentName[128]; |  0x250 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nFirstControlPoint = 0x2d0; // int32_t m_nFirstControlPoint; |  0x2d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nNumControlPoints = 0x2d4; // int32_t m_nNumControlPoints; |  0x2d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x2d8; // int32_t m_nFirstSourcePoint; |  0x2d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSkin = 0x2dc; // bool m_bSkin; |  0x2dc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAttachment = 0x2dd; // bool m_bAttachment; |  0x2dd | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_HitboxSetName = 0x1d8; // char m_HitboxSetName[128]; |  0x1d8 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_AttachmentName = 0x258; // char m_AttachmentName[128]; |  0x258 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nFirstControlPoint = 0x2d8; // int32_t m_nFirstControlPoint; |  0x2d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nNumControlPoints = 0x2dc; // int32_t m_nNumControlPoints; |  0x2dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x2e0; // int32_t m_nFirstSourcePoint; |  0x2e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSkin = 0x2e4; // bool m_bSkin; |  0x2e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAttachment = 0x2e5; // bool m_bAttachment; |  0x2e5 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

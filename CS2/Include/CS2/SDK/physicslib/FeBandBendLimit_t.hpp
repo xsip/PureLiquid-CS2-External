@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY_ARRAY(nNode,uint16_t, 6 , 0x8);
 			S2_PAD(0x14);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeBandBendLimit_t) == 0x14, "FeBandBendLimit_t size should be 0x14");
+
+#endif
 	}
 }

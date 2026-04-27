@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x648
+			// Class size: 0x640
 			namespace CFilterMassGreater /*: public CS2::client::CBaseFilter*/ {
-				constexpr std::ptrdiff_t m_fFilterMass = 0x640; // float32 m_fFilterMass; |  0x640 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fFilterMass = 0x638; // float32 m_fFilterMass; |  0x638 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

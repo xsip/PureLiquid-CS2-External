@@ -8,18 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x970
+			// Class size: 0x968
 			namespace C_CSTeam /*: public CS2::client::C_Team*/ {
-				constexpr std::ptrdiff_t m_szTeamMatchStat = 0x6c0; // char m_szTeamMatchStat[512]; |  0x6c0 | Schema_FixedArray | Size: 0x200
-				constexpr std::ptrdiff_t m_numMapVictories = 0x8c0; // int32_t m_numMapVictories; |  0x8c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSurrendered = 0x8c4; // bool m_bSurrendered; |  0x8c4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_scoreFirstHalf = 0x8c8; // int32_t m_scoreFirstHalf; |  0x8c8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_scoreSecondHalf = 0x8cc; // int32_t m_scoreSecondHalf; |  0x8cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_scoreOvertime = 0x8d0; // int32_t m_scoreOvertime; |  0x8d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_szClanTeamname = 0x8d4; // char m_szClanTeamname[129]; |  0x8d4 | Schema_FixedArray | Size: 0x81
-				constexpr std::ptrdiff_t m_iClanID = 0x958; // uint32_t m_iClanID; |  0x958 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_szTeamFlagImage = 0x95c; // char m_szTeamFlagImage[8]; |  0x95c | Schema_FixedArray | Size: 0x8
-				constexpr std::ptrdiff_t m_szTeamLogoImage = 0x964; // char m_szTeamLogoImage[8]; |  0x964 | Schema_FixedArray | Size: 0x8
+				constexpr std::ptrdiff_t m_szTeamMatchStat = 0x6b8; // char m_szTeamMatchStat[512]; |  0x6b8 | Schema_FixedArray | Size: 0x200
+				constexpr std::ptrdiff_t m_numMapVictories = 0x8b8; // int32_t m_numMapVictories; |  0x8b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSurrendered = 0x8bc; // bool m_bSurrendered; |  0x8bc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_scoreFirstHalf = 0x8c0; // int32_t m_scoreFirstHalf; |  0x8c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_scoreSecondHalf = 0x8c4; // int32_t m_scoreSecondHalf; |  0x8c4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_scoreOvertime = 0x8c8; // int32_t m_scoreOvertime; |  0x8c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_szClanTeamname = 0x8cc; // char m_szClanTeamname[129]; |  0x8cc | Schema_FixedArray | Size: 0x81
+				constexpr std::ptrdiff_t m_iClanID = 0x950; // uint32_t m_iClanID; |  0x950 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_szTeamFlagImage = 0x954; // char m_szTeamFlagImage[8]; |  0x954 | Schema_FixedArray | Size: 0x8
+				constexpr std::ptrdiff_t m_szTeamLogoImage = 0x95c; // char m_szTeamLogoImage[8]; |  0x95c | Schema_FixedArray | Size: 0x8
 			}
 		}
 	}

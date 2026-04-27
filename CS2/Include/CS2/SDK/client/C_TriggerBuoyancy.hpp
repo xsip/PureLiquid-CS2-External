@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace client {
 		class C_TriggerBuoyancy : public CS2::client::C_BaseTrigger {
 		public:
-			NESTED_PROPERTY(m_BuoyancyHelper,client::CBuoyancyHelper, 0xf58);
-			PROPERTY(m_flFluidDensity,float32, 0x1070);
+			NESTED_PROPERTY(m_BuoyancyHelper,IDENTITY(client::CBuoyancyHelper), 0x1078);
+			PROPERTY(m_flFluidDensity,float32, 0x1190);
 			S2_PAD(0x120);
 		};
-		//static_assert(sizeof(CS2::client::C_TriggerBuoyancy) == 0x1078, "C_TriggerBuoyancy size should be 0x1078");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_TriggerBuoyancy) == 0x1198, "C_TriggerBuoyancy size should be 0x1198");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CCSGO_WingmanIntroCharacterPosition : public CS2::client::C_CSGO_TeamIntroCharacterPosition {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::CCSGO_WingmanIntroCharacterPosition) == 0x13A8, "CCSGO_WingmanIntroCharacterPosition size should be 0x13A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CCSGO_WingmanIntroCharacterPosition) == 0x13A0, "CCSGO_WingmanIntroCharacterPosition size should be 0x13A0");
+
+#endif
 	}
 }

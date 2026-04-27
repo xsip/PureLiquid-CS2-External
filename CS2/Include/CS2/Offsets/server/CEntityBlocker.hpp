@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x730
+			// Class size: 0x768
 			namespace CEntityBlocker /*: public CS2::server::CBaseModelEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

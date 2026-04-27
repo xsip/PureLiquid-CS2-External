@@ -26,11 +26,14 @@ namespace CS2 {
 		class CEntityComponentHelper  {
 		public:
 			PROPERTY(m_flags,uint32_t, 0x8);
-			PROPERTY(m_pInfo,entity2::EntComponentInfo_t*, 0x10);
+			PROPERTY(m_pInfo,IDENTITY(entity2::EntComponentInfo_t*), 0x10);
 			PROPERTY(m_nPriority,int32_t, 0x18);
-			PROPERTY(m_pNext,entity2::CEntityComponentHelper*, 0x20);
+			PROPERTY(m_pNext,IDENTITY(entity2::CEntityComponentHelper*), 0x20);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::entity2::CEntityComponentHelper) == 0x28, "CEntityComponentHelper size should be 0x28");
+
+#endif
 	}
 }

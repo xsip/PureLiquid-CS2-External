@@ -23,15 +23,18 @@ namespace CS2 {
 	namespace particles {
 		class CReplicationParameters  {
 		public:
-			PROPERTY(m_nReplicationMode,particles::ParticleReplicationMode_t, 0x0);
+			PROPERTY(m_nReplicationMode,IDENTITY(particles::ParticleReplicationMode_t), 0x0);
 			PROPERTY(m_bScaleChildParticleRadii,bool, 0x4);
-			NESTED_PROPERTY(m_flMinRandomRadiusScale,particleslib::CParticleCollectionFloatInput, 0x8);
-			NESTED_PROPERTY(m_flMaxRandomRadiusScale,particleslib::CParticleCollectionFloatInput, 0x178);
-			NESTED_PROPERTY(m_vMinRandomDisplacement,particleslib::CParticleCollectionVecInput, 0x2e8);
-			NESTED_PROPERTY(m_vMaxRandomDisplacement,particleslib::CParticleCollectionVecInput, 0x9a0);
-			NESTED_PROPERTY(m_flModellingScale,particleslib::CParticleCollectionFloatInput, 0x1058);
+			NESTED_PROPERTY(m_flMinRandomRadiusScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x8);
+			NESTED_PROPERTY(m_flMaxRandomRadiusScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x178);
+			NESTED_PROPERTY(m_vMinRandomDisplacement,IDENTITY(particleslib::CParticleCollectionVecInput), 0x2e8);
+			NESTED_PROPERTY(m_vMaxRandomDisplacement,IDENTITY(particleslib::CParticleCollectionVecInput), 0x9a0);
+			NESTED_PROPERTY(m_flModellingScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1058);
 			S2_PAD(0x11C8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CReplicationParameters) == 0x11C8, "CReplicationParameters size should be 0x11C8");
+
+#endif
 	}
 }

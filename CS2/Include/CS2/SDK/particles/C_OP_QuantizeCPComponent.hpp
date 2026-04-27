@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_QuantizeCPComponent : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_flInputValue,particleslib::CParticleCollectionFloatInput, 0x1d8);
-			PROPERTY(m_nCPOutput,int32_t, 0x348);
-			PROPERTY(m_nOutVectorField,int32_t, 0x34c);
-			NESTED_PROPERTY(m_flQuantizeValue,particleslib::CParticleCollectionFloatInput, 0x350);
+			NESTED_PROPERTY(m_flInputValue,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			PROPERTY(m_nCPOutput,int32_t, 0x350);
+			PROPERTY(m_nOutVectorField,int32_t, 0x354);
+			NESTED_PROPERTY(m_flQuantizeValue,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x358);
 			S2_PAD(0x2E8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_QuantizeCPComponent) == 0x4C0, "C_OP_QuantizeCPComponent size should be 0x4C0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_QuantizeCPComponent) == 0x4C8, "C_OP_QuantizeCPComponent size should be 0x4C8");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsPropOverride : public CS2::server::CPhysicsProp {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CPhysicsPropOverride) == 0xCE0, "CPhysicsPropOverride size should be 0xCE0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPhysicsPropOverride) == 0xC10, "CPhysicsPropOverride size should be 0xC10");
+
+#endif
 	}
 }

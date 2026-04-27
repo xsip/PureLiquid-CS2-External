@@ -19,6 +19,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nextShake = 0x4c4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_currentAmp = 0x4c8; // float32 m_currentAmp; |  0x4c8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_maxForce = 0x4cc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_pShakeController = 0x4d8; // client::IPhysicsMotionController**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_shakeCallback = 0x4e0; // server::CPhysicsShake  | Schema_DeclaredClass | Size: 0x18
 			}
 		}

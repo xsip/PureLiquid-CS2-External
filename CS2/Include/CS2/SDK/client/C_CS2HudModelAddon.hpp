@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::client::C_CS2HudModelAddon) == 0x1210, "C_CS2HudModelAddon size should be 0x1210");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CS2HudModelAddon) == 0x1200, "C_CS2HudModelAddon size should be 0x1200");
+
+#endif
 	}
 }

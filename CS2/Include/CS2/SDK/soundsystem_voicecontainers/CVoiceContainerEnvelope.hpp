@@ -29,10 +29,13 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerEnvelope : public CS2::soundsystem_voicecontainers::CVoiceContainerDefault {
 		public:
-			PROPERTY(m_sound,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>, 0xa8);
-			PROPERTY(m_analysisContainer,soundsystem_voicecontainers::CVoiceContainerAnalysisBase*, 0xb0);
+			PROPERTY(m_sound,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>), 0xa8);
+			PROPERTY(m_analysisContainer,IDENTITY(soundsystem_voicecontainers::CVoiceContainerAnalysisBase*), 0xb0);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerEnvelope) == 0xB8, "CVoiceContainerEnvelope size should be 0xB8");
+
+#endif
 	}
 }

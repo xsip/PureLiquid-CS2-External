@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_Value,int8_t, 0x0);
 			S2_PAD(0x1);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::AmmoIndex_t) == 0x1, "AmmoIndex_t size should be 0x1");
+
+#endif
 	}
 }

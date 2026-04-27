@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x20
+			// Class size: 0x28
 			namespace CVoiceContainerSetElement /**/ {
-				constexpr std::ptrdiff_t m_sound = 0x0; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_flVolumeDB = 0x18; // float32 m_flVolumeDB; |  0x18 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_sound = 0x0; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_flVolumeDB = 0x20; // float32 m_flVolumeDB; |  0x20 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

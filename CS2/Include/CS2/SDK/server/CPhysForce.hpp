@@ -16,6 +16,9 @@
 
 
 namespace CS2 {
+	namespace client {
+		class IPhysicsMotionController;
+	}
 	namespace server {
 		class CBaseEntity;
 	}
@@ -27,14 +30,18 @@ namespace CS2 {
 	namespace server {
 		class CPhysForce : public CS2::server::CPointEntity {
 		public:
+			PROPERTY(m_pController,IDENTITY(client::IPhysicsMotionController*), 0x4a8);
 			PROPERTY(m_nameAttach,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
 			PROPERTY(m_force,float32, 0x4b8);
 			PROPERTY(m_forceTime,float32, 0x4bc);
-			PROPERTY(m_attachedObject,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c0);
+			PROPERTY(m_attachedObject,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c0);
 			PROPERTY(m_wasRestored,bool, 0x4c4);
-			NESTED_PROPERTY(m_integrator,server::CConstantForceController, 0x4c8);
+			NESTED_PROPERTY(m_integrator,IDENTITY(server::CConstantForceController), 0x4c8);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysForce) == 0x508, "CPhysForce size should be 0x508");
+
+#endif
 	}
 }

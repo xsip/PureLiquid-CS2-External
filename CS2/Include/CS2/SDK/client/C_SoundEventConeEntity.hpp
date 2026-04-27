@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace client {
 		class C_SoundEventConeEntity : public CS2::client::C_SoundEventEntity {
 		public:
-			PROPERTY(m_flEmitterAngle,float32, 0x6b8);
-			PROPERTY(m_flSweetSpotAngle,float32, 0x6bc);
-			PROPERTY(m_flAttenMin,float32, 0x6c0);
-			PROPERTY(m_flAttenMax,float32, 0x6c4);
-			PROPERTY(m_iszParameterName,GlobalTypes::CUtlSymbolLarge*, 0x6c8);
+			PROPERTY(m_flEmitterAngle,float32, 0x6c0);
+			PROPERTY(m_flSweetSpotAngle,float32, 0x6c4);
+			PROPERTY(m_flAttenMin,float32, 0x6c8);
+			PROPERTY(m_flAttenMax,float32, 0x6cc);
+			PROPERTY(m_iszParameterName,GlobalTypes::CUtlSymbolLarge*, 0x6d0);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundEventConeEntity) == 0x6D0, "C_SoundEventConeEntity size should be 0x6D0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundEventConeEntity) == 0x6D8, "C_SoundEventConeEntity size should be 0x6D8");
+
+#endif
 	}
 }

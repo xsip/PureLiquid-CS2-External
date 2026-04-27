@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1B0
+			// Class size: 0x1A0
 			namespace CBodyComponentPoint /*: public CS2::server::CBodyComponent*/ {
-				constexpr std::ptrdiff_t m_sceneNode = 0x80; // server::CGameSceneNode  | Schema_DeclaredClass | Size: 0x130
+				constexpr std::ptrdiff_t m_sceneNode = 0x80; // server::CGameSceneNode  | Schema_DeclaredClass | Size: 0x120
 			}
 		}
 	}

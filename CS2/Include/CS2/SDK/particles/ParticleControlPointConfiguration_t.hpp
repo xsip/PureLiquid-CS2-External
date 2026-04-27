@@ -23,10 +23,13 @@ namespace CS2 {
 		class ParticleControlPointConfiguration_t  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_drivers,GlobalTypes::CUtlVector<particles::ParticleControlPointDriver_t>, 0x8);
-			NESTED_PROPERTY(m_previewState,particles::ParticlePreviewState_t, 0x20);
+			NESTED_PROPERTY(m_drivers,IDENTITY(GlobalTypes::CUtlVector<particles::ParticleControlPointDriver_t>), 0x8);
+			NESTED_PROPERTY(m_previewState,IDENTITY(particles::ParticlePreviewState_t), 0x20);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::ParticleControlPointConfiguration_t) == 0x88, "ParticleControlPointConfiguration_t size should be 0x88");
+
+#endif
 	}
 }

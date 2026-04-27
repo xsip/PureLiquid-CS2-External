@@ -10,12 +10,12 @@ namespace CS2 {
 		namespace particles {
 			// Class size: 0x230
 			namespace C_OP_MaintainSequentialPath /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_fMaxDistance = 0x1d0; // float32 m_fMaxDistance; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNumToAssign = 0x1d4; // float32 m_flNumToAssign; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flCohesionStrength = 0x1d8; // float32 m_flCohesionStrength; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTolerance = 0x1dc; // float32 m_flTolerance; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLoop = 0x1e0; // bool m_bLoop; |  0x1e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseParticleCount = 0x1e1; // bool m_bUseParticleCount; |  0x1e1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fMaxDistance = 0x1d8; // float32 m_fMaxDistance; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNumToAssign = 0x1dc; // float32 m_flNumToAssign; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCohesionStrength = 0x1e0; // float32 m_flCohesionStrength; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTolerance = 0x1e4; // float32 m_flTolerance; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLoop = 0x1e8; // bool m_bLoop; |  0x1e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseParticleCount = 0x1e9; // bool m_bUseParticleCount; |  0x1e9 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_PathParams = 0x1f0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
 			}
 		}

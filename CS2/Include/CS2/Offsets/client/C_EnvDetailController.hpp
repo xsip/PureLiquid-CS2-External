@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x610
+			// Class size: 0x608
 			namespace C_EnvDetailController /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_flFadeStartDist = 0x608; // float32 m_flFadeStartDist; |  0x608 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeEndDist = 0x60c; // float32 m_flFadeEndDist; |  0x60c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeStartDist = 0x600; // float32 m_flFadeStartDist; |  0x600 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeEndDist = 0x604; // float32 m_flFadeEndDist; |  0x604 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

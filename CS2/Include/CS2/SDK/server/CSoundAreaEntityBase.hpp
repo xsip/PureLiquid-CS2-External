@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_vPos,GlobalTypes::Vector, 0x4b8);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundAreaEntityBase) == 0x4C8, "CSoundAreaEntityBase size should be 0x4C8");
+
+#endif
 	}
 }

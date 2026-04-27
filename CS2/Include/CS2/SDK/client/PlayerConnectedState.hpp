@@ -6,13 +6,13 @@
 namespace CS2 {
 	namespace client {
 		enum PlayerConnectedState : std::uint32_t {
-			PlayerConnectedState_PlayerConnected = 0x0,
-			PlayerConnectedState_PlayerConnecting = 0x1,
-			PlayerConnectedState_PlayerDisconnected = 0x4,
-			PlayerConnectedState_PlayerDisconnecting = 0x3,
-			PlayerConnectedState_PlayerNeverConnected = 0xffffffff,
-			PlayerConnectedState_PlayerReconnecting = 0x2,
-			PlayerConnectedState_PlayerReserved = 0x5
+			PlayerConnectedState_Connected = 0x0,
+			PlayerConnectedState_Connecting = 0x1,
+			PlayerConnectedState_Disconnected = 0x4,
+			PlayerConnectedState_Disconnecting = 0x3,
+			PlayerConnectedState_NeverConnected = 0xffffffff,
+			PlayerConnectedState_Reconnecting = 0x2,
+			PlayerConnectedState_Reserved = 0x5
 		};
 	}
 }

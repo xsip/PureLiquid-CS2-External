@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CFuncTankTrain : public CS2::server::CFuncTrackTrain {
 		public:
-			NESTED_PROPERTY(m_OnDeath,entity2::CEntityIOOutput, 0x858);
+			NESTED_PROPERTY(m_OnDeath,IDENTITY(entity2::CEntityIOOutput), 0x890);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::server::CFuncTankTrain) == 0x870, "CFuncTankTrain size should be 0x870");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncTankTrain) == 0x8A8, "CFuncTankTrain size should be 0x8A8");
+
+#endif
 	}
 }

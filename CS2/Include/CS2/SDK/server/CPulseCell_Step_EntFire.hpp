@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_Input,GlobalTypes::CUtlString*, 0x48);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPulseCell_Step_EntFire) == 0x50, "CPulseCell_Step_EntFire size should be 0x50");
+
+#endif
 	}
 }

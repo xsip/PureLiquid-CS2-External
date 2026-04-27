@@ -21,19 +21,22 @@ namespace CS2 {
 	namespace animlib {
 		class CNmChainLookatTask : public CS2::animlib::CNmPoseTask {
 		public:
-			PROPERTY(m_nChainEndBoneIdx,int32_t, 0x58);
-			PROPERTY(m_nNumBonesInChain,int32_t, 0x5c);
-			PROPERTY(m_chainForwardDir,GlobalTypes::Vector, 0x60);
-			PROPERTY(m_flBlendWeight,float32, 0x6c);
-			PROPERTY(m_flHorizontalAngleLimitDegrees,float32, 0x70);
-			PROPERTY(m_flVerticalAngleLimitDegrees,float32, 0x74);
-			PROPERTY(m_lookatTarget,GlobalTypes::Vector, 0x78);
-			PROPERTY(m_bIsTargetInWorldSpace,bool, 0x84);
-			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0x85);
-			PROPERTY(m_flHorizontalAngleDegrees,float32, 0x88);
-			PROPERTY(m_flVerticalAngleDegrees,float32, 0x8c);
+			PROPERTY(m_nChainEndBoneIdx,int32_t, 0x48);
+			PROPERTY(m_nNumBonesInChain,int32_t, 0x4c);
+			PROPERTY(m_chainForwardDir,GlobalTypes::Vector, 0x50);
+			PROPERTY(m_flBlendWeight,float32, 0x5c);
+			PROPERTY(m_flHorizontalAngleLimitDegrees,float32, 0x60);
+			PROPERTY(m_flVerticalAngleLimitDegrees,float32, 0x64);
+			PROPERTY(m_lookatTarget,GlobalTypes::Vector, 0x68);
+			PROPERTY(m_bIsTargetInWorldSpace,bool, 0x74);
+			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0x75);
+			PROPERTY(m_flHorizontalAngleDegrees,float32, 0x78);
+			PROPERTY(m_flVerticalAngleDegrees,float32, 0x7c);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmChainLookatTask) == 0x90, "CNmChainLookatTask size should be 0x90");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmChainLookatTask) == 0x80, "CNmChainLookatTask size should be 0x80");
+
+#endif
 	}
 }

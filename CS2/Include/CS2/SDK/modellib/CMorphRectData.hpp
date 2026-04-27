@@ -25,9 +25,12 @@ namespace CS2 {
 			PROPERTY(m_nYTopDst,int16_t, 0x2);
 			PROPERTY(m_flUWidthSrc,float32, 0x4);
 			PROPERTY(m_flVHeightSrc,float32, 0x8);
-			NESTED_PROPERTY(m_bundleDatas,GlobalTypes::CUtlVector<modellib::CMorphBundleData>, 0x10);
+			NESTED_PROPERTY(m_bundleDatas,IDENTITY(GlobalTypes::CUtlVector<modellib::CMorphBundleData>), 0x10);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CMorphRectData) == 0x28, "CMorphRectData size should be 0x28");
+
+#endif
 	}
 }

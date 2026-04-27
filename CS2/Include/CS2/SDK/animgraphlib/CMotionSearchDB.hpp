@@ -23,11 +23,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionSearchDB  {
 		public:
-			NESTED_PROPERTY(m_rootNode,animgraphlib::CMotionSearchNode, 0x0);
-			NESTED_PROPERTY(m_residualQuantizer,animgraphlib::CProductQuantizer, 0x80);
-			NESTED_PROPERTY(m_codeIndices,GlobalTypes::CUtlVector<animgraphlib::MotionDBIndex>, 0xa0);
+			NESTED_PROPERTY(m_rootNode,IDENTITY(animgraphlib::CMotionSearchNode), 0x0);
+			NESTED_PROPERTY(m_residualQuantizer,IDENTITY(animgraphlib::CProductQuantizer), 0x80);
+			NESTED_PROPERTY(m_codeIndices,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::MotionDBIndex>), 0xa0);
 			S2_PAD(0xB8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionSearchDB) == 0xB8, "CMotionSearchDB size should be 0xB8");
+
+#endif
 	}
 }

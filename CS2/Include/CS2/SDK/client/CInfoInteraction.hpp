@@ -11,6 +11,8 @@
 
 
 #include <SDK/client/C_PointEntity.hpp>
+#include <SDK/client/SceneRequestHandle_t.hpp>
+#include <SDK/client/SceneOpportunityHandle_t.hpp>
 
 
 
@@ -21,11 +23,26 @@ namespace CS2 {
 	namespace client {
 		class CInfoInteraction : public CS2::client::C_PointEntity {
 		public:
-			PROPERTY_ARRAY(m_strSlotEntityName,GlobalTypes::CUtlSymbolLarge*, 8 , 0x608);
-			PROPERTY(m_strInteractVData,GlobalTypes::CUtlSymbolLarge*, 0x648);
-			PROPERTY(m_flInteractRadius,float32, 0x650);
-			S2_PAD(0x50);
+			NESTED_PROPERTY(m_hSceneRequest,IDENTITY(client::SceneRequestHandle_t), 0x600);
+			NESTED_PROPERTY(m_hSceneOpportunity,IDENTITY(client::SceneOpportunityHandle_t), 0x604);
+			PROPERTY(m_bEnabled,bool, 0x608);
+			PROPERTY(m_bStartDisabled,bool, 0x609);
+			PROPERTY(m_strSceneVDataName,GlobalTypes::CUtlSymbolLarge*, 0x610);
+			PROPERTY(m_strPulseVDataName,GlobalTypes::CUtlSymbolLarge*, 0x618);
+			PROPERTY(m_flRadius,float32, 0x640);
+			PROPERTY(m_flOwnerFOV,float32, 0x644);
+			PROPERTY(m_strLocalInterestReqTags,GlobalTypes::CUtlSymbolLarge*, 0x648);
+			PROPERTY(m_strLocalInterestOptTags,GlobalTypes::CUtlSymbolLarge*, 0x650);
+			PROPERTY(m_strLookTarget,GlobalTypes::CUtlSymbolLarge*, 0x658);
+			PROPERTY(m_flDuration,float32, 0x660);
+			PROPERTY(m_flCooldown,float32, 0x664);
+			PROPERTY(m_nRepeatCount,int32_t, 0x668);
+			PROPERTY(m_bDisableOnExit,bool, 0x66c);
+			S2_PAD(0x70);
 		};
-		//static_assert(sizeof(CS2::client::CInfoInteraction) == 0x658, "CInfoInteraction size should be 0x658");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CInfoInteraction) == 0x670, "CInfoInteraction size should be 0x670");
+
+#endif
 	}
 }

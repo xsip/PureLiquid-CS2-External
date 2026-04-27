@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x228
 			namespace CParticleFunctionRenderer /*: public CS2::particles::CParticleFunction*/ {
-				constexpr std::ptrdiff_t VisibilityInputs = 0x1d0; // particles::CParticleVisibilityInputs  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_bCannotBeRefracted = 0x218; // bool m_bCannotBeRefracted; |  0x218 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSkipRenderingOnMobile = 0x219; // bool m_bSkipRenderingOnMobile; |  0x219 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t VisibilityInputs = 0x1d8; // particles::CParticleVisibilityInputs  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_bCannotBeRefracted = 0x220; // bool m_bCannotBeRefracted; |  0x220 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSkipRenderingOnMobile = 0x221; // bool m_bSkipRenderingOnMobile; |  0x221 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

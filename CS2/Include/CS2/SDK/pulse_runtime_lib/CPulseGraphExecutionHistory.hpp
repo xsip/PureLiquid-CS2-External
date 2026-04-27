@@ -26,13 +26,16 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseGraphExecutionHistory  {
 		public:
-			NESTED_PROPERTY(m_nInstanceID,pulse_runtime_lib::PulseGraphInstanceID_t, 0x0);
+			NESTED_PROPERTY(m_nInstanceID,IDENTITY(pulse_runtime_lib::PulseGraphInstanceID_t), 0x0);
 			PROPERTY(m_strFileName,GlobalTypes::CUtlString*, 0x8);
-			NESTED_PROPERTY(m_vecHistory,GlobalTypes::CUtlVector<pulse_runtime_lib::PulseGraphExecutionHistoryEntry_t*>, 0x10);
-			PROPERTY(m_mapCellDesc,GlobalTypes::CUtlOrderedMap< PulseDocNodeID_t, PulseGraphExecutionHistoryNodeDesc_t >, 0x28);
-			PROPERTY(m_mapCursorDesc,GlobalTypes::CUtlOrderedMap< PulseCursorID_t, PulseGraphExecutionHistoryCursorDesc_t >, 0x50);
+			NESTED_PROPERTY(m_vecHistory,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::PulseGraphExecutionHistoryEntry_t*>), 0x10);
+			// PROPERTY(m_mapCellDesc,IDENTITY(GlobalTypes::CUtlOrderedMap< PulseDocNodeID_t, PulseGraphExecutionHistoryNodeDesc_t >), 0x28);
+			// PROPERTY(m_mapCursorDesc,IDENTITY(GlobalTypes::CUtlOrderedMap< PulseCursorID_t, PulseGraphExecutionHistoryCursorDesc_t >), 0x50);
 			S2_PAD(0x78);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseGraphExecutionHistory) == 0x78, "CPulseGraphExecutionHistory size should be 0x78");
+
+#endif
 	}
 }

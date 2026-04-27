@@ -8,9 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xE0
+			// Class size: 0x1D0
 			namespace CScenePayloadVData /**/ {
-				constexpr std::ptrdiff_t m_sSceneFile = 0x0; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_eNPCBehavior = 0x0; // client::ENPCBehaviorOverride_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_sPulseFile = 0x8; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIPulseGraphDef>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_sSceneFile = 0xe8; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_ePriority = 0x1c8; // client::InteractionPriority_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

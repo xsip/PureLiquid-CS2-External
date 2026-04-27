@@ -34,13 +34,13 @@ namespace CS2 {
 		class CShatterGlassShard  {
 		public:
 			PROPERTY(m_hShardHandle,uint32_t, 0x8);
-			NESTED_PROPERTY(m_vecPanelVertices,GlobalTypes::CUtlVector<GlobalTypes::Vector2D>, 0x10);
+			NESTED_PROPERTY(m_vecPanelVertices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector2D>), 0x10);
 			PROPERTY(m_vLocalPanelSpaceOrigin,GlobalTypes::Vector2D, 0x28);
-			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x30);
-			PROPERTY(m_hPhysicsEntity,GlobalTypes::CHandle<server::CShatterGlassShardPhysics>, 0x38);
-			PROPERTY(m_hParentPanel,GlobalTypes::CHandle<server::CFuncShatterglass>, 0x3c);
+			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x30);
+			PROPERTY(m_hPhysicsEntity,IDENTITY(GlobalTypes::CHandle<server::CShatterGlassShardPhysics>), 0x38);
+			PROPERTY(m_hParentPanel,IDENTITY(GlobalTypes::CHandle<server::CFuncShatterglass>), 0x3c);
 			PROPERTY(m_hParentShard,uint32_t, 0x40);
-			PROPERTY(m_ShatterStressType,client::ShatterGlassStressType, 0x44);
+			PROPERTY(m_ShatterStressType,IDENTITY(client::ShatterGlassStressType), 0x44);
 			PROPERTY(m_vecStressVelocity,GlobalTypes::Vector, 0x48);
 			PROPERTY(m_bCreatedModel,bool, 0x54);
 			PROPERTY(m_flLongestEdge,float32, 0x58);
@@ -49,7 +49,7 @@ namespace CS2 {
 			PROPERTY(m_flShortestAcross,float32, 0x64);
 			PROPERTY(m_flSumOfAllEdges,float32, 0x68);
 			PROPERTY(m_flArea,float32, 0x6c);
-			PROPERTY(m_nOnFrameEdge,client::OnFrame, 0x70);
+			PROPERTY(m_nOnFrameEdge,IDENTITY(client::OnFrame), 0x70);
 			PROPERTY(m_nSubShardGeneration,int32_t, 0x74);
 			PROPERTY(m_vecAverageVertPosition,GlobalTypes::Vector2D, 0x78);
 			PROPERTY(m_bAverageVertPositionIsValid,bool, 0x80);
@@ -58,11 +58,14 @@ namespace CS2 {
 			PROPERTY(m_bStressPositionAIsValid,bool, 0x94);
 			PROPERTY(m_bStressPositionBIsValid,bool, 0x95);
 			PROPERTY(m_bFlaggedForRemoval,bool, 0x96);
-			NESTED_PROPERTY(m_flPhysicsEntitySpawnedAtTime,entity2::GameTime_t, 0x98);
-			PROPERTY(m_hEntityHittingMe,GlobalTypes::CHandle<server::CBaseEntity>, 0x9c);
-			NESTED_PROPERTY(m_vecNeighbors,GlobalTypes::CUtlVector< uint32 >, 0xa0);
+			NESTED_PROPERTY(m_flPhysicsEntitySpawnedAtTime,IDENTITY(entity2::GameTime_t), 0x98);
+			PROPERTY(m_hEntityHittingMe,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x9c);
+			NESTED_PROPERTY(m_vecNeighbors,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0xa0);
 			S2_PAD(0xB8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CShatterGlassShard) == 0xB8, "CShatterGlassShard size should be 0xB8");
+
+#endif
 	}
 }

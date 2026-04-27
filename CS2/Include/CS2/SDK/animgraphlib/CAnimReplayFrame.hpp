@@ -20,13 +20,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimReplayFrame  {
 		public:
-			NESTED_PROPERTY(m_inputDataBlocks,GlobalTypes::CUtlVector<GlobalTypes::CUtlBinaryBlock>, 0x10);
+			NESTED_PROPERTY(m_inputDataBlocks,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlBinaryBlock>), 0x10);
 			PROPERTY(m_instanceData,GlobalTypes::CUtlBinaryBlock, 0x28);
 			PROPERTY(m_startingLocalToWorldTransform,GlobalTypes::CTransform, 0x40);
 			PROPERTY(m_localToWorldTransform,GlobalTypes::CTransform, 0x60);
 			PROPERTY(m_timeStamp,float32, 0x80);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimReplayFrame) == 0x90, "CAnimReplayFrame size should be 0x90");
+
+#endif
 	}
 }

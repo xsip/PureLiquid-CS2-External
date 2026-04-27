@@ -28,19 +28,22 @@ namespace CS2 {
 	namespace worldrenderer {
 		class ClutterSceneObject_t  {
 		public:
-			NESTED_PROPERTY(m_Bounds,mathlib_extended::AABB_t, 0x0);
-			PROPERTY(m_flags,worldrenderer::ObjectTypeFlags_t, 0x18);
+			NESTED_PROPERTY(m_Bounds,IDENTITY(mathlib_extended::AABB_t), 0x0);
+			PROPERTY(m_flags,IDENTITY(worldrenderer::ObjectTypeFlags_t), 0x18);
 			PROPERTY(m_nLayer,int16_t, 0x1c);
-			NESTED_PROPERTY(m_instancePositions,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x20);
-			NESTED_PROPERTY(m_instanceScales,GlobalTypes::CUtlVector< float32 >, 0x50);
-			NESTED_PROPERTY(m_instanceTintSrgb,GlobalTypes::CUtlVector<GlobalTypes::Color>, 0x68);
-			NESTED_PROPERTY(m_tiles,GlobalTypes::CUtlVector<worldrenderer::ClutterTile_t>, 0x80);
-			PROPERTY(m_renderableModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x98);
+			NESTED_PROPERTY(m_instancePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x20);
+			NESTED_PROPERTY(m_instanceScales,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x50);
+			NESTED_PROPERTY(m_instanceTintSrgb,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Color>), 0x68);
+			NESTED_PROPERTY(m_tiles,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::ClutterTile_t>), 0x80);
+			PROPERTY(m_renderableModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x98);
 			PROPERTY(m_materialGroup,GlobalTypes::CUtlStringToken*, 0xa0);
 			PROPERTY(m_flBeginCullSize,float32, 0xa4);
 			PROPERTY(m_flEndCullSize,float32, 0xa8);
 			S2_PAD(0xB0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::ClutterSceneObject_t) == 0xB0, "ClutterSceneObject_t size should be 0xB0");
+
+#endif
 	}
 }

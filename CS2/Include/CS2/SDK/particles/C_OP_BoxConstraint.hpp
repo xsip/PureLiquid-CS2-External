@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_BoxConstraint : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_vecMin,particleslib::CParticleCollectionVecInput, 0x1d0);
-			NESTED_PROPERTY(m_vecMax,particleslib::CParticleCollectionVecInput, 0x888);
-			PROPERTY(m_nCP,int32_t, 0xf40);
-			PROPERTY(m_bLocalSpace,bool, 0xf44);
-			PROPERTY(m_bAccountForRadius,bool, 0xf45);
+			NESTED_PROPERTY(m_vecMin,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1d8);
+			NESTED_PROPERTY(m_vecMax,IDENTITY(particleslib::CParticleCollectionVecInput), 0x890);
+			PROPERTY(m_nCP,int32_t, 0xf48);
+			PROPERTY(m_bLocalSpace,bool, 0xf4c);
+			PROPERTY(m_bAccountForRadius,bool, 0xf4d);
 			S2_PAD(0xD78);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_BoxConstraint) == 0xF48, "C_OP_BoxConstraint size should be 0xF48");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_BoxConstraint) == 0xF50, "C_OP_BoxConstraint size should be 0xF50");
+
+#endif
 	}
 }

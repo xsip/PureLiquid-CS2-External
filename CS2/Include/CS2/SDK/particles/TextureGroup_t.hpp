@@ -32,15 +32,18 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bEnabled,bool, 0x0);
 			PROPERTY(m_bReplaceTextureWithGradient,bool, 0x1);
-			PROPERTY(m_hTexture,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x8);
+			PROPERTY(m_hTexture,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x8);
 			PROPERTY(m_Gradient,GlobalTypes::CColorGradient, 0x10);
-			PROPERTY(m_nTextureType,particles::SpriteCardTextureType_t, 0x28);
-			PROPERTY(m_nTextureChannels,particles::SpriteCardTextureChannel_t, 0x2c);
-			PROPERTY(m_nTextureBlendMode,particles::ParticleTextureLayerBlendType_t, 0x30);
-			NESTED_PROPERTY(m_flTextureBlend,particleslib::CParticleCollectionRendererFloatInput, 0x38);
-			NESTED_PROPERTY(m_TextureControls,particles::TextureControls_t, 0x1a8);
+			PROPERTY(m_nTextureType,IDENTITY(particles::SpriteCardTextureType_t), 0x28);
+			PROPERTY(m_nTextureChannels,IDENTITY(particles::SpriteCardTextureChannel_t), 0x2c);
+			PROPERTY(m_nTextureBlendMode,IDENTITY(particles::ParticleTextureLayerBlendType_t), 0x30);
+			NESTED_PROPERTY(m_flTextureBlend,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x38);
+			NESTED_PROPERTY(m_TextureControls,IDENTITY(particles::TextureControls_t), 0x1a8);
 			S2_PAD(0xBD8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::TextureGroup_t) == 0xBD8, "TextureGroup_t size should be 0xBD8");
+
+#endif
 	}
 }

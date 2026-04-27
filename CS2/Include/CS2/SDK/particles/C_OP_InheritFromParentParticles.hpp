@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_InheritFromParentParticles : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flScale,float32, 0x1d0);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d4);
-			PROPERTY(m_nIncrement,int32_t, 0x1d8);
-			PROPERTY(m_bRandomDistribution,bool, 0x1dc);
+			PROPERTY(m_flScale,float32, 0x1d8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1dc);
+			PROPERTY(m_nIncrement,int32_t, 0x1e0);
+			PROPERTY(m_bRandomDistribution,bool, 0x1e4);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_InheritFromParentParticles) == 0x1E0, "C_OP_InheritFromParentParticles size should be 0x1E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_InheritFromParentParticles) == 0x1E8, "C_OP_InheritFromParentParticles size should be 0x1E8");
+
+#endif
 	}
 }

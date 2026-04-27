@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x90
+			// Class size: 0x88
 			namespace CEmptyGraphController /*: public CS2::client::CAnimGraphControllerBase*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class IKSolverSettings_t  {
 		public:
-			PROPERTY(m_SolverType,animgraphlib::IKSolverType, 0x0);
+			PROPERTY(m_SolverType,IDENTITY(animgraphlib::IKSolverType), 0x0);
 			PROPERTY(m_nNumIterations,int32_t, 0x4);
-			PROPERTY(m_EndEffectorRotationFixUpMode,animgraphlib::EIKEndEffectorRotationFixUpMode, 0x8);
+			PROPERTY(m_EndEffectorRotationFixUpMode,IDENTITY(animgraphlib::EIKEndEffectorRotationFixUpMode), 0x8);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::IKSolverSettings_t) == 0xC, "IKSolverSettings_t size should be 0xC");
+
+#endif
 	}
 }

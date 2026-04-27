@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_bTeleportUseCurrentAngle,bool, 0x4c1);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointTeleport) == 0x4C8, "CPointTeleport size should be 0x4C8");
+
+#endif
 	}
 }

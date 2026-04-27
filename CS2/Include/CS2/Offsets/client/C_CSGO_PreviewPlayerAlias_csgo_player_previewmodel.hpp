@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x3FA0
+			// Class size: 0x34C0
 			namespace C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel /*: public CS2::client::C_CSGO_PreviewPlayer*/ {
 				// NO SCHEMA DATA FOUND!
 			}

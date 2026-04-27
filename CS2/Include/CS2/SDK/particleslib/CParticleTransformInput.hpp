@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleTransformInput : public CS2::particleslib::CParticleInput {
 		public:
-			PROPERTY(m_nType,particleslib::ParticleTransformType_t, 0x10);
+			PROPERTY(m_nType,IDENTITY(particleslib::ParticleTransformType_t), 0x10);
 			PROPERTY(m_NamedValue,GlobalTypes::CParticleNamedValueRef, 0x18);
 			PROPERTY(m_bFollowNamedValue,bool, 0x58);
 			PROPERTY(m_bSupportsDisabled,bool, 0x59);
@@ -32,6 +32,9 @@ namespace CS2 {
 			PROPERTY(m_flEndCPGrowthTime,float32, 0x64);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleTransformInput) == 0x68, "CParticleTransformInput size should be 0x68");
+
+#endif
 	}
 }

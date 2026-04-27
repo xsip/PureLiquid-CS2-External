@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1010
+			// Class size: 0x1018
 			namespace C_OP_WaterImpulseRenderer /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_vecPos = 0x220; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flRadius = 0x8d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMagnitude = 0xa48; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flShape = 0xbb8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flWindSpeed = 0xd28; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flWobble = 0xe98; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bIsRadialWind = 0x1008; // bool m_bIsRadialWind; |  0x1008 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nEventType = 0x100c; // particles::EventTypeSelection_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vecPos = 0x228; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flRadius = 0x8e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMagnitude = 0xa50; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flShape = 0xbc0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flWindSpeed = 0xd30; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flWobble = 0xea0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bIsRadialWind = 0x1010; // bool m_bIsRadialWind; |  0x1010 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nEventType = 0x1014; // particles::EventTypeSelection_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

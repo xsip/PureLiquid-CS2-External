@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class FilterDamageType : public CS2::client::CBaseFilter {
 		public:
-			PROPERTY(m_iDamageType,int32_t, 0x640);
+			PROPERTY(m_iDamageType,int32_t, 0x638);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::FilterDamageType) == 0x648, "FilterDamageType size should be 0x648");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::FilterDamageType) == 0x640, "FilterDamageType size should be 0x640");
+
+#endif
 	}
 }

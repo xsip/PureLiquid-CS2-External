@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xFC0
+			// Class size: 0x10E0
 			namespace CTriggerFan /*: public CS2::client::C_BaseTrigger*/ {
-				constexpr std::ptrdiff_t m_vFanOriginOffset = 0xf58; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vDirection = 0xf64; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bPushTowardsInfoTarget = 0xf70; // bool m_bPushTowardsInfoTarget; |  0xf70 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bPushAwayFromInfoTarget = 0xf71; // bool m_bPushAwayFromInfoTarget; |  0xf71 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_qNoiseDelta = 0xf80; // GlobalTypes::Quaternion  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_hInfoFan = 0xf90; // GlobalTypes::CHandle<client::CInfoFan>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flForce = 0xf94; // float32 m_flForce; |  0xf94 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bFalloff = 0xf98; // bool m_bFalloff; |  0xf98 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_RampTimer = 0xfa0; // client::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_vFanOriginOffset = 0x1078; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vDirection = 0x1084; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bPushTowardsInfoTarget = 0x1090; // bool m_bPushTowardsInfoTarget; |  0x1090 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bPushAwayFromInfoTarget = 0x1091; // bool m_bPushAwayFromInfoTarget; |  0x1091 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_qNoiseDelta = 0x10a0; // GlobalTypes::Quaternion  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_hInfoFan = 0x10b0; // GlobalTypes::CHandle<client::CInfoFan>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flForce = 0x10b4; // float32 m_flForce; |  0x10b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bFalloff = 0x10b8; // bool m_bFalloff; |  0x10b8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_RampTimer = 0x10c0; // client::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

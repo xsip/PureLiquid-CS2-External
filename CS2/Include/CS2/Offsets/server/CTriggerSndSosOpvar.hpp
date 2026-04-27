@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xBF0
+			// Class size: 0xC28
 			namespace CTriggerSndSosOpvar /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_hTouchingPlayers = 0x890; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flPosition = 0x8a8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flCenterSize = 0x8b4; // float32 m_flCenterSize; |  0x8b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMinVal = 0x8b8; // float32 m_flMinVal; |  0x8b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxVal = 0x8bc; // float32 m_flMaxVal; |  0x8bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_opvarName = 0x8c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_stackName = 0x8c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_operatorName = 0x8d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bVolIs2D = 0x8d8; // bool m_bVolIs2D; |  0x8d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_opvarNameChar = 0x8d9; // char m_opvarNameChar[256]; |  0x8d9 | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_stackNameChar = 0x9d9; // char m_stackNameChar[256]; |  0x9d9 | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_operatorNameChar = 0xad9; // char m_operatorNameChar[256]; |  0xad9 | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_VecNormPos = 0xbdc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flNormCenterSize = 0xbe8; // float32 m_flNormCenterSize; |  0xbe8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hTouchingPlayers = 0x8c8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flPosition = 0x8e0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flCenterSize = 0x8ec; // float32 m_flCenterSize; |  0x8ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinVal = 0x8f0; // float32 m_flMinVal; |  0x8f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxVal = 0x8f4; // float32 m_flMaxVal; |  0x8f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_opvarName = 0x8f8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_stackName = 0x900; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_operatorName = 0x908; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bVolIs2D = 0x910; // bool m_bVolIs2D; |  0x910 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_opvarNameChar = 0x911; // char m_opvarNameChar[256]; |  0x911 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_stackNameChar = 0xa11; // char m_stackNameChar[256]; |  0xa11 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_operatorNameChar = 0xb11; // char m_operatorNameChar[256]; |  0xb11 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_VecNormPos = 0xc14; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flNormCenterSize = 0xc20; // float32 m_flNormCenterSize; |  0xc20 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

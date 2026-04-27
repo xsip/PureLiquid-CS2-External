@@ -6,26 +6,27 @@
 namespace CS2 {
 	namespace particleslib {
 		enum ParticleVecType_t : std::uint32_t {
-			ParticleVecType_t_PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x11,
-			ParticleVecType_t_PVEC_TYPE_COUNT = 0x12,
-			ParticleVecType_t_PVEC_TYPE_CP_DELTA = 0x10,
-			ParticleVecType_t_PVEC_TYPE_CP_RELATIVE_DIR = 0x8,
-			ParticleVecType_t_PVEC_TYPE_CP_RELATIVE_POSITION = 0x7,
-			ParticleVecType_t_PVEC_TYPE_CP_RELATIVE_RANDOM_DIR = 0x9,
-			ParticleVecType_t_PVEC_TYPE_CP_VALUE = 0x6,
-			ParticleVecType_t_PVEC_TYPE_FLOAT_COMPONENTS = 0xa,
-			ParticleVecType_t_PVEC_TYPE_FLOAT_INTERP_CLAMPED = 0xb,
-			ParticleVecType_t_PVEC_TYPE_FLOAT_INTERP_GRADIENT = 0xd,
-			ParticleVecType_t_PVEC_TYPE_FLOAT_INTERP_OPEN = 0xc,
+			ParticleVecType_t_PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x12,
+			ParticleVecType_t_PVEC_TYPE_COUNT = 0x13,
+			ParticleVecType_t_PVEC_TYPE_CP_DELTA = 0x11,
+			ParticleVecType_t_PVEC_TYPE_CP_RELATIVE_DIR = 0x9,
+			ParticleVecType_t_PVEC_TYPE_CP_RELATIVE_POSITION = 0x8,
+			ParticleVecType_t_PVEC_TYPE_CP_RELATIVE_RANDOM_DIR = 0xa,
+			ParticleVecType_t_PVEC_TYPE_CP_VALUE = 0x7,
+			ParticleVecType_t_PVEC_TYPE_FLOAT_COMPONENTS = 0xb,
+			ParticleVecType_t_PVEC_TYPE_FLOAT_INTERP_CLAMPED = 0xc,
+			ParticleVecType_t_PVEC_TYPE_FLOAT_INTERP_GRADIENT = 0xe,
+			ParticleVecType_t_PVEC_TYPE_FLOAT_INTERP_OPEN = 0xd,
 			ParticleVecType_t_PVEC_TYPE_INVALID = 0xffffffff,
 			ParticleVecType_t_PVEC_TYPE_LITERAL = 0x0,
 			ParticleVecType_t_PVEC_TYPE_LITERAL_COLOR = 0x1,
 			ParticleVecType_t_PVEC_TYPE_NAMED_VALUE = 0x2,
+			ParticleVecType_t_PVEC_TYPE_PARTICLE_GRAVITY = 0x6,
 			ParticleVecType_t_PVEC_TYPE_PARTICLE_INITIAL_VECTOR = 0x4,
 			ParticleVecType_t_PVEC_TYPE_PARTICLE_VECTOR = 0x3,
 			ParticleVecType_t_PVEC_TYPE_PARTICLE_VELOCITY = 0x5,
-			ParticleVecType_t_PVEC_TYPE_RANDOM_UNIFORM = 0xe,
-			ParticleVecType_t_PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xf
+			ParticleVecType_t_PVEC_TYPE_RANDOM_UNIFORM = 0xf,
+			ParticleVecType_t_PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0x10
 		};
 	}
 }

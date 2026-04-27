@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_forceupdate,bool, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSoundEnvelope) == 0x10, "CSoundEnvelope size should be 0x10");
+
+#endif
 	}
 }

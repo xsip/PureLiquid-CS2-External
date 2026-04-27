@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CRulePointEntity : public CS2::server::CRuleEntity {
 		public:
-			PROPERTY(m_Score,int32_t, 0x738);
+			PROPERTY(m_Score,int32_t, 0x770);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::server::CRulePointEntity) == 0x740, "CRulePointEntity size should be 0x740");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CRulePointEntity) == 0x778, "CRulePointEntity size should be 0x778");
+
+#endif
 	}
 }

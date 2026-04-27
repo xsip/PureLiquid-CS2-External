@@ -27,23 +27,26 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_LockToBone : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_modelInput,particleslib::CParticleModelInput, 0x1d0);
-			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x230);
-			PROPERTY(m_flLifeTimeFadeStart,float32, 0x298);
-			PROPERTY(m_flLifeTimeFadeEnd,float32, 0x29c);
-			PROPERTY(m_flJumpThreshold,float32, 0x2a0);
-			PROPERTY(m_flPrevPosScale,float32, 0x2a4);
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x2a8);
-			PROPERTY(m_bRigid,bool, 0x328);
-			PROPERTY(m_bUseBones,bool, 0x329);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x32c);
-			NESTED_PROPERTY(m_nFieldOutputPrev,particles::ParticleAttributeIndex_t, 0x330);
-			PROPERTY(m_nRotationSetType,particles::ParticleRotationLockType_t, 0x334);
-			PROPERTY(m_bRigidRotationLock,bool, 0x338);
-			NESTED_PROPERTY(m_vecRotation,particleslib::CPerParticleVecInput, 0x340);
-			NESTED_PROPERTY(m_flRotLerp,particleslib::CPerParticleFloatInput, 0x9f8);
+			NESTED_PROPERTY(m_modelInput,IDENTITY(particleslib::CParticleModelInput), 0x1d8);
+			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x238);
+			PROPERTY(m_flLifeTimeFadeStart,float32, 0x2a0);
+			PROPERTY(m_flLifeTimeFadeEnd,float32, 0x2a4);
+			PROPERTY(m_flJumpThreshold,float32, 0x2a8);
+			PROPERTY(m_flPrevPosScale,float32, 0x2ac);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x2b0);
+			PROPERTY(m_bRigid,bool, 0x330);
+			PROPERTY(m_bUseBones,bool, 0x331);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x334);
+			NESTED_PROPERTY(m_nFieldOutputPrev,IDENTITY(particles::ParticleAttributeIndex_t), 0x338);
+			PROPERTY(m_nRotationSetType,IDENTITY(particles::ParticleRotationLockType_t), 0x33c);
+			PROPERTY(m_bRigidRotationLock,bool, 0x340);
+			NESTED_PROPERTY(m_vecRotation,IDENTITY(particleslib::CPerParticleVecInput), 0x348);
+			NESTED_PROPERTY(m_flRotLerp,IDENTITY(particleslib::CPerParticleFloatInput), 0xa00);
 			S2_PAD(0x998);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_LockToBone) == 0xB68, "C_OP_LockToBone size should be 0xB68");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_LockToBone) == 0xB70, "C_OP_LockToBone size should be 0xB70");
+
+#endif
 	}
 }

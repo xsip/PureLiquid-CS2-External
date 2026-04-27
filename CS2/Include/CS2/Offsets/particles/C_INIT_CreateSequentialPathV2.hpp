@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x510
+			// Class size: 0x520
 			namespace C_INIT_CreateSequentialPathV2 /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_fMaxDistance = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flNumToAssign = 0x348; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bLoop = 0x4b8; // bool m_bLoop; |  0x4b8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCPPairs = 0x4b9; // bool m_bCPPairs; |  0x4b9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSaveOffset = 0x4ba; // bool m_bSaveOffset; |  0x4ba | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_PathParams = 0x4c0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
+				constexpr std::ptrdiff_t m_fMaxDistance = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flNumToAssign = 0x350; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bLoop = 0x4c0; // bool m_bLoop; |  0x4c0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCPPairs = 0x4c1; // bool m_bCPPairs; |  0x4c1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSaveOffset = 0x4c2; // bool m_bSaveOffset; |  0x4c2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_PathParams = 0x4d0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
 			}
 		}
 	}

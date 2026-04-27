@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CMolotovGrenade : public CS2::server::CBaseCSGrenade {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CMolotovGrenade) == 0x1170, "CMolotovGrenade size should be 0x1170");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CMolotovGrenade) == 0x1070, "CMolotovGrenade size should be 0x1070");
+
+#endif
 	}
 }

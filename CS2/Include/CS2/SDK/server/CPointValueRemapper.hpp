@@ -35,50 +35,53 @@ namespace CS2 {
 		public:
 			PROPERTY(m_bDisabled,bool, 0x4a8);
 			PROPERTY(m_bUpdateOnClient,bool, 0x4a9);
-			PROPERTY(m_nInputType,client::ValueRemapperInputType_t, 0x4ac);
+			PROPERTY(m_nInputType,IDENTITY(client::ValueRemapperInputType_t), 0x4ac);
 			PROPERTY(m_iszRemapLineStartName,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
 			PROPERTY(m_iszRemapLineEndName,GlobalTypes::CUtlSymbolLarge*, 0x4b8);
-			PROPERTY(m_hRemapLineStart,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c0);
-			PROPERTY(m_hRemapLineEnd,GlobalTypes::CHandle<server::CBaseEntity>, 0x4c4);
+			PROPERTY(m_hRemapLineStart,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c0);
+			PROPERTY(m_hRemapLineEnd,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c4);
 			PROPERTY(m_flMaximumChangePerSecond,float32, 0x4c8);
 			PROPERTY(m_flDisengageDistance,float32, 0x4cc);
 			PROPERTY(m_flEngageDistance,float32, 0x4d0);
 			PROPERTY(m_bRequiresUseKey,bool, 0x4d4);
-			PROPERTY(m_nOutputType,client::ValueRemapperOutputType_t, 0x4d8);
+			PROPERTY(m_nOutputType,IDENTITY(client::ValueRemapperOutputType_t), 0x4d8);
 			PROPERTY(m_iszOutputEntityName,GlobalTypes::CUtlSymbolLarge*, 0x4e0);
 			PROPERTY(m_iszOutputEntity2Name,GlobalTypes::CUtlSymbolLarge*, 0x4e8);
 			PROPERTY(m_iszOutputEntity3Name,GlobalTypes::CUtlSymbolLarge*, 0x4f0);
 			PROPERTY(m_iszOutputEntity4Name,GlobalTypes::CUtlSymbolLarge*, 0x4f8);
-			PROPERTY(m_hOutputEntities,server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>, 0x500);
-			PROPERTY(m_nHapticsType,client::ValueRemapperHapticsType_t, 0x518);
-			PROPERTY(m_nMomentumType,client::ValueRemapperMomentumType_t, 0x51c);
+			// PROPERTY(m_hOutputEntities,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>), 0x500);
+			PROPERTY(m_nHapticsType,IDENTITY(client::ValueRemapperHapticsType_t), 0x518);
+			PROPERTY(m_nMomentumType,IDENTITY(client::ValueRemapperMomentumType_t), 0x51c);
 			PROPERTY(m_flMomentumModifier,float32, 0x520);
 			PROPERTY(m_flSnapValue,float32, 0x524);
 			PROPERTY(m_flCurrentMomentum,float32, 0x528);
-			PROPERTY(m_nRatchetType,client::ValueRemapperRatchetType_t, 0x52c);
+			PROPERTY(m_nRatchetType,IDENTITY(client::ValueRemapperRatchetType_t), 0x52c);
 			PROPERTY(m_flRatchetOffset,float32, 0x530);
 			PROPERTY(m_flInputOffset,float32, 0x534);
 			PROPERTY(m_bEngaged,bool, 0x538);
 			PROPERTY(m_bFirstUpdate,bool, 0x539);
 			PROPERTY(m_flPreviousValue,float32, 0x53c);
-			NESTED_PROPERTY(m_flPreviousUpdateTickTime,entity2::GameTime_t, 0x540);
+			NESTED_PROPERTY(m_flPreviousUpdateTickTime,IDENTITY(entity2::GameTime_t), 0x540);
 			PROPERTY(m_vecPreviousTestPoint,GlobalTypes::Vector, 0x544);
-			PROPERTY(m_hUsingPlayer,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0x550);
+			PROPERTY(m_hUsingPlayer,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0x550);
 			PROPERTY(m_flCustomOutputValue,float32, 0x554);
 			PROPERTY(m_iszSoundEngage,GlobalTypes::CUtlSymbolLarge*, 0x558);
 			PROPERTY(m_iszSoundDisengage,GlobalTypes::CUtlSymbolLarge*, 0x560);
 			PROPERTY(m_iszSoundReachedValueZero,GlobalTypes::CUtlSymbolLarge*, 0x568);
 			PROPERTY(m_iszSoundReachedValueOne,GlobalTypes::CUtlSymbolLarge*, 0x570);
 			PROPERTY(m_iszSoundMovingLoop,GlobalTypes::CUtlSymbolLarge*, 0x578);
-			PROPERTY(m_Position,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x598);
-			PROPERTY(m_PositionDelta,GlobalTypes::CEntityOutputTemplate< float32, float32 >, 0x5b8);
-			NESTED_PROPERTY(m_OnReachedValueZero,entity2::CEntityIOOutput, 0x5d8);
-			NESTED_PROPERTY(m_OnReachedValueOne,entity2::CEntityIOOutput, 0x5f0);
-			NESTED_PROPERTY(m_OnReachedValueCustom,entity2::CEntityIOOutput, 0x608);
-			NESTED_PROPERTY(m_OnEngage,entity2::CEntityIOOutput, 0x620);
-			NESTED_PROPERTY(m_OnDisengage,entity2::CEntityIOOutput, 0x638);
+			// PROPERTY(m_Position,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x598);
+			// PROPERTY(m_PositionDelta,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x5b8);
+			NESTED_PROPERTY(m_OnReachedValueZero,IDENTITY(entity2::CEntityIOOutput), 0x5d8);
+			NESTED_PROPERTY(m_OnReachedValueOne,IDENTITY(entity2::CEntityIOOutput), 0x5f0);
+			NESTED_PROPERTY(m_OnReachedValueCustom,IDENTITY(entity2::CEntityIOOutput), 0x608);
+			NESTED_PROPERTY(m_OnEngage,IDENTITY(entity2::CEntityIOOutput), 0x620);
+			NESTED_PROPERTY(m_OnDisengage,IDENTITY(entity2::CEntityIOOutput), 0x638);
 			S2_PAD(0x1A8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointValueRemapper) == 0x650, "CPointValueRemapper size should be 0x650");
+
+#endif
 	}
 }

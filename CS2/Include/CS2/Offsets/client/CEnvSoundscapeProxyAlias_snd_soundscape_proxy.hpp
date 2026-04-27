@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x6A0
+			// Class size: 0x698
 			namespace CEnvSoundscapeProxyAlias_snd_soundscape_proxy /*: public CS2::client::CEnvSoundscapeProxy*/ {
 				// NO SCHEMA DATA FOUND!
 			}

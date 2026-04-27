@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1D0
+			// Class size: 0x1D8
 			namespace C_OP_WorldCollideConstraint /*: public CS2::particles::CParticleFunctionConstraint*/ {
 				// NO SCHEMA DATA FOUND!
 			}

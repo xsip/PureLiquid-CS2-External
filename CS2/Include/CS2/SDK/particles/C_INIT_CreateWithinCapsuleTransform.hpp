@@ -25,19 +25,22 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateWithinCapsuleTransform : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_fRadiusMin,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_fRadiusMax,particleslib::CPerParticleFloatInput, 0x348);
-			NESTED_PROPERTY(m_fHeight,particleslib::CPerParticleFloatInput, 0x4b8);
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x628);
-			NESTED_PROPERTY(m_fSpeedMin,particleslib::CPerParticleFloatInput, 0x690);
-			NESTED_PROPERTY(m_fSpeedMax,particleslib::CPerParticleFloatInput, 0x800);
-			PROPERTY(m_fSpeedRandExp,float32, 0x970);
-			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMin,particleslib::CPerParticleVecInput, 0x978);
-			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMax,particleslib::CPerParticleVecInput, 0x1030);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x16e8);
-			NESTED_PROPERTY(m_nFieldVelocity,particles::ParticleAttributeIndex_t, 0x16ec);
+			NESTED_PROPERTY(m_fRadiusMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_fRadiusMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
+			NESTED_PROPERTY(m_fHeight,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c0);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x630);
+			NESTED_PROPERTY(m_fSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x698);
+			NESTED_PROPERTY(m_fSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x808);
+			PROPERTY(m_fSpeedRandExp,float32, 0x978);
+			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMin,IDENTITY(particleslib::CPerParticleVecInput), 0x980);
+			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMax,IDENTITY(particleslib::CPerParticleVecInput), 0x1038);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x16f0);
+			NESTED_PROPERTY(m_nFieldVelocity,IDENTITY(particles::ParticleAttributeIndex_t), 0x16f4);
 			S2_PAD(0x1518);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateWithinCapsuleTransform) == 0x16F0, "C_INIT_CreateWithinCapsuleTransform size should be 0x16F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateWithinCapsuleTransform) == 0x16F8, "C_INIT_CreateWithinCapsuleTransform size should be 0x16F8");
+
+#endif
 	}
 }

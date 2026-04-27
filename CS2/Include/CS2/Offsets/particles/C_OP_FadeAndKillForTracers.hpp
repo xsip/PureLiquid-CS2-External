@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E8
+			// Class size: 0x1F0
 			namespace C_OP_FadeAndKillForTracers /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flStartFadeInTime = 0x1d0; // float32 m_flStartFadeInTime; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndFadeInTime = 0x1d4; // float32 m_flEndFadeInTime; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartFadeOutTime = 0x1d8; // float32 m_flStartFadeOutTime; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndFadeOutTime = 0x1dc; // float32 m_flEndFadeOutTime; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartAlpha = 0x1e0; // float32 m_flStartAlpha; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndAlpha = 0x1e4; // float32 m_flEndAlpha; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartFadeInTime = 0x1d8; // float32 m_flStartFadeInTime; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndFadeInTime = 0x1dc; // float32 m_flEndFadeInTime; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartFadeOutTime = 0x1e0; // float32 m_flStartFadeOutTime; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndFadeOutTime = 0x1e4; // float32 m_flEndFadeOutTime; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartAlpha = 0x1e8; // float32 m_flStartAlpha; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndAlpha = 0x1ec; // float32 m_flEndAlpha; |  0x1ec | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

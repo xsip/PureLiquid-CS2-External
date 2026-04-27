@@ -27,10 +27,13 @@ namespace CS2 {
 		class CHintMessageQueue  {
 		public:
 			PROPERTY(m_tmMessageEnd,float32, 0x0);
-			NESTED_PROPERTY(m_messages,GlobalTypes::CUtlVector<server::CHintMessage*>, 0x8);
-			PROPERTY(m_pPlayerController,server::CBasePlayerController*, 0x20);
+			NESTED_PROPERTY(m_messages,IDENTITY(GlobalTypes::CUtlVector<server::CHintMessage*>), 0x8);
+			PROPERTY(m_pPlayerController,IDENTITY(server::CBasePlayerController*), 0x20);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CHintMessageQueue) == 0x28, "CHintMessageQueue size should be 0x28");
+
+#endif
 	}
 }

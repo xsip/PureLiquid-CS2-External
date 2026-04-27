@@ -21,19 +21,22 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_TeleportBeam : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nCPPosition,int32_t, 0x1d0);
-			PROPERTY(m_nCPVelocity,int32_t, 0x1d4);
-			PROPERTY(m_nCPMisc,int32_t, 0x1d8);
-			PROPERTY(m_nCPColor,int32_t, 0x1dc);
-			PROPERTY(m_nCPInvalidColor,int32_t, 0x1e0);
-			PROPERTY(m_nCPExtraArcData,int32_t, 0x1e4);
-			PROPERTY(m_vGravity,GlobalTypes::Vector, 0x1e8);
-			PROPERTY(m_flArcMaxDuration,float32, 0x1f4);
-			PROPERTY(m_flSegmentBreak,float32, 0x1f8);
-			PROPERTY(m_flArcSpeed,float32, 0x1fc);
-			PROPERTY(m_flAlpha,float32, 0x200);
+			PROPERTY(m_nCPPosition,int32_t, 0x1d8);
+			PROPERTY(m_nCPVelocity,int32_t, 0x1dc);
+			PROPERTY(m_nCPMisc,int32_t, 0x1e0);
+			PROPERTY(m_nCPColor,int32_t, 0x1e4);
+			PROPERTY(m_nCPInvalidColor,int32_t, 0x1e8);
+			PROPERTY(m_nCPExtraArcData,int32_t, 0x1ec);
+			PROPERTY(m_vGravity,GlobalTypes::Vector, 0x1f0);
+			PROPERTY(m_flArcMaxDuration,float32, 0x1fc);
+			PROPERTY(m_flSegmentBreak,float32, 0x200);
+			PROPERTY(m_flArcSpeed,float32, 0x204);
+			PROPERTY(m_flAlpha,float32, 0x208);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_TeleportBeam) == 0x208, "C_OP_TeleportBeam size should be 0x208");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_TeleportBeam) == 0x210, "C_OP_TeleportBeam size should be 0x210");
+
+#endif
 	}
 }

@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RandomLifeTime : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_fLifetimeMin,float32, 0x1d8);
-			PROPERTY(m_fLifetimeMax,float32, 0x1dc);
-			PROPERTY(m_fLifetimeRandExponent,float32, 0x1e0);
+			PROPERTY(m_fLifetimeMin,float32, 0x1e0);
+			PROPERTY(m_fLifetimeMax,float32, 0x1e4);
+			PROPERTY(m_fLifetimeRandExponent,float32, 0x1e8);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RandomLifeTime) == 0x1E8, "C_INIT_RandomLifeTime size should be 0x1E8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RandomLifeTime) == 0x1F0, "C_INIT_RandomLifeTime size should be 0x1F0");
+
+#endif
 	}
 }

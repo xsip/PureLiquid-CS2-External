@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace particles {
 			// Class size: 0x6E0
 			namespace C_OP_ControlpointLight /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flScale = 0x1d0; // float32 m_flScale; |  0x1d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flScale = 0x1d8; // float32 m_flScale; |  0x1d8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nControlPoint1 = 0x660; // int32_t m_nControlPoint1; |  0x660 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nControlPoint2 = 0x664; // int32_t m_nControlPoint2; |  0x664 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nControlPoint3 = 0x668; // int32_t m_nControlPoint3; |  0x668 | Schema_Builtin | Size: 0x4

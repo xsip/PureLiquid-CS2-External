@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_PrecipitationBlocker : public CS2::client::C_BaseModelEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_PrecipitationBlocker) == 0xE88, "C_PrecipitationBlocker size should be 0xE88");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PrecipitationBlocker) == 0xFA8, "C_PrecipitationBlocker size should be 0xFA8");
+
+#endif
 	}
 }

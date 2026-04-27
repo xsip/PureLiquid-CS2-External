@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x240
+			// Class size: 0x250
 			namespace C_INIT_CreateAlongPath /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_fMaxDistance = 0x1d8; // float32 m_fMaxDistance; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_PathParams = 0x1e0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
-				constexpr std::ptrdiff_t m_bUseRandomCPs = 0x220; // bool m_bUseRandomCPs; |  0x220 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vEndOffset = 0x224; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bSaveOffset = 0x230; // bool m_bSaveOffset; |  0x230 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fMaxDistance = 0x1e0; // float32 m_fMaxDistance; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_PathParams = 0x1f0; // particles::CPathParameters  | Schema_DeclaredClass | Size: 0x40
+				constexpr std::ptrdiff_t m_bUseRandomCPs = 0x230; // bool m_bUseRandomCPs; |  0x230 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vEndOffset = 0x234; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bSaveOffset = 0x240; // bool m_bSaveOffset; |  0x240 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

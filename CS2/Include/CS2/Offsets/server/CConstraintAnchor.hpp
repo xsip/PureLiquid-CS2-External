@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xA30
+			// Class size: 0x950
 			namespace CConstraintAnchor /*: public CS2::server::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_massScale = 0xa20; // float32 m_massScale; |  0xa20 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_massScale = 0x940; // float32 m_massScale; |  0x940 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

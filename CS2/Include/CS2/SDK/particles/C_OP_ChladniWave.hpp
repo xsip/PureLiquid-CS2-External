@@ -14,7 +14,7 @@
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particleslib/CPerParticleVecInput.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -25,18 +25,21 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ChladniWave : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			NESTED_PROPERTY(m_flInputMin,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_flInputMax,particleslib::CPerParticleFloatInput, 0x348);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CPerParticleFloatInput, 0x4b8);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CPerParticleFloatInput, 0x628);
-			NESTED_PROPERTY(m_vecWaveLength,particleslib::CPerParticleVecInput, 0x798);
-			NESTED_PROPERTY(m_vecHarmonics,particleslib::CPerParticleVecInput, 0xe50);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x1508);
-			PROPERTY(m_nLocalSpaceControlPoint,int32_t, 0x150c);
-			PROPERTY(m_b3D,bool, 0x1510);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			NESTED_PROPERTY(m_flInputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_flInputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c0);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x630);
+			NESTED_PROPERTY(m_vecWaveLength,IDENTITY(particleslib::CPerParticleVecInput), 0x7a0);
+			NESTED_PROPERTY(m_vecHarmonics,IDENTITY(particleslib::CPerParticleVecInput), 0xe58);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x1510);
+			PROPERTY(m_nLocalSpaceControlPoint,int32_t, 0x1514);
+			PROPERTY(m_b3D,bool, 0x1518);
 			S2_PAD(0x1348);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ChladniWave) == 0x1518, "C_OP_ChladniWave size should be 0x1518");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ChladniWave) == 0x1520, "C_OP_ChladniWave size should be 0x1520");
+
+#endif
 	}
 }

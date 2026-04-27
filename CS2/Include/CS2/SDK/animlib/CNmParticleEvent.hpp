@@ -12,7 +12,8 @@
 
 #include <SDK/animlib/CNmEvent.hpp>
 #include <SDK/animlib/CNmEventRelevance_t.hpp>
-#include <SDK/animlib/Type_t.hpp>
+#include <SDK/animlib/CNmParticleEvent_Type_t.hpp>
+#include <SDK/animlib/CNmEventTargetEntity_t.hpp>
 #include <SDK/animationsystem/ParticleAttachment_t.hpp>
 
 
@@ -29,21 +30,25 @@ namespace CS2 {
 	namespace animlib {
 		class CNmParticleEvent : public CS2::animlib::CNmEvent {
 		public:
-			PROPERTY(m_relevance,animlib::CNmEventRelevance_t, 0x20);
-			PROPERTY(m_type,animlib::Type_t, 0x24);
-			PROPERTY(m_hParticleSystem,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x28);
+			PROPERTY(m_relevance,IDENTITY(animlib::CNmEventRelevance_t), 0x18);
+			PROPERTY(m_type,IDENTITY(animlib::CNmParticleEvent_Type_t), 0x1c);
+			PROPERTY(m_target,IDENTITY(animlib::CNmEventTargetEntity_t), 0x20);
+			PROPERTY(m_hParticleSystem,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x28);
 			PROPERTY(m_tags,GlobalTypes::CUtlString*, 0x30);
 			PROPERTY(m_bStopImmediately,bool, 0x38);
 			PROPERTY(m_bDetachFromOwner,bool, 0x39);
 			PROPERTY(m_bPlayEndCap,bool, 0x3a);
 			PROPERTY(m_attachmentPoint0,GlobalTypes::CUtlString*, 0x40);
-			PROPERTY(m_attachmentType0,animationsystem::ParticleAttachment_t, 0x48);
+			PROPERTY(m_attachmentType0,IDENTITY(animationsystem::ParticleAttachment_t), 0x48);
 			PROPERTY(m_attachmentPoint1,GlobalTypes::CUtlString*, 0x50);
-			PROPERTY(m_attachmentType1,animationsystem::ParticleAttachment_t, 0x58);
+			PROPERTY(m_attachmentType1,IDENTITY(animationsystem::ParticleAttachment_t), 0x58);
 			PROPERTY(m_config,GlobalTypes::CUtlString*, 0x60);
 			PROPERTY(m_effectForConfig,GlobalTypes::CUtlString*, 0x68);
-			S2_PAD(0x50);
+			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmParticleEvent) == 0x70, "CNmParticleEvent size should be 0x70");
+
+#endif
 	}
 }

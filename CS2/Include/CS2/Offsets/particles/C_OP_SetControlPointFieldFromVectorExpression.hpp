@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1238
+			// Class size: 0x1240
 			namespace C_OP_SetControlPointFieldFromVectorExpression /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nExpression = 0x1d8; // particles::VectorFloatExpressionType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_vecInput1 = 0x1e0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecInput2 = 0x898; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flLerp = 0xf50; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputRemap = 0x10c0; // particleslib::CParticleRemapFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nOutputCP = 0x1230; // int32_t m_nOutputCP; |  0x1230 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutVectorField = 0x1234; // int32_t m_nOutVectorField; |  0x1234 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nExpression = 0x1e0; // particles::VectorFloatExpressionType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vecInput1 = 0x1e8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecInput2 = 0x8a0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flLerp = 0xf58; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputRemap = 0x10c8; // particleslib::CParticleRemapFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nOutputCP = 0x1238; // int32_t m_nOutputCP; |  0x1238 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutVectorField = 0x123c; // int32_t m_nOutVectorField; |  0x123c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

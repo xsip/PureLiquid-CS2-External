@@ -23,10 +23,13 @@ namespace CS2 {
 			PROPERTY(m_sName,GlobalTypes::CBufferString, 0x0);
 			PROPERTY(m_bRootOffset,bool, 0x10);
 			PROPERTY(m_vRootOffset,GlobalTypes::Vector, 0x14);
-			NESTED_PROPERTY(m_nLocalBoneArray,GlobalTypes::CUtlVector< int16 >, 0x20);
-			NESTED_PROPERTY(m_flBoneScaleArray,GlobalTypes::CUtlVector< float32 >, 0x38);
+			NESTED_PROPERTY(m_nLocalBoneArray,IDENTITY(GlobalTypes::CUtlVector< int16 >), 0x20);
+			NESTED_PROPERTY(m_flBoneScaleArray,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x38);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqScaleSet) == 0x50, "CSeqScaleSet size should be 0x50");
+
+#endif
 	}
 }

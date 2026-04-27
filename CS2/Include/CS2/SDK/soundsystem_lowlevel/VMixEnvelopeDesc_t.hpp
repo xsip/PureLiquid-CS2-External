@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_flReleaseTimeMS,float32, 0x8);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixEnvelopeDesc_t) == 0xC, "VMixEnvelopeDesc_t size should be 0xC");
+
+#endif
 	}
 }

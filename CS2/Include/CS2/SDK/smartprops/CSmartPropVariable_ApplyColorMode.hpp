@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropVariable_ApplyColorMode : public CS2::smartprops::CSmartPropVariable {
 		public:
-			PROPERTY(m_DefaultValue,smartprops::ApplyColorMode_t, 0x38);
+			PROPERTY(m_DefaultValue,IDENTITY(smartprops::ApplyColorMode_t), 0x38);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_ApplyColorMode) == 0x40, "CSmartPropVariable_ApplyColorMode size should be 0x40");
+
+#endif
 	}
 }

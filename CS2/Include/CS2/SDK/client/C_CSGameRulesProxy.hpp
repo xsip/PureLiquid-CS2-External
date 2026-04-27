@@ -26,9 +26,12 @@ namespace CS2 {
 	namespace client {
 		class C_CSGameRulesProxy : public CS2::client::C_GameRulesProxy {
 		public:
-			PROPERTY(m_pGameRules,client::C_CSGameRules*, 0x608);
+			PROPERTY(m_pGameRules,IDENTITY(client::C_CSGameRules*), 0x600);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_CSGameRulesProxy) == 0x610, "C_CSGameRulesProxy size should be 0x610");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSGameRulesProxy) == 0x608, "C_CSGameRulesProxy size should be 0x608");
+
+#endif
 	}
 }

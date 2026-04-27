@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x240
+			// Class size: 0x258
 			namespace CPlayer_MovementServices /*: public CS2::client::CPlayerPawnComponent*/ {
 				constexpr std::ptrdiff_t m_nImpulse = 0x48; // int32_t m_nImpulse; |  0x48 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nButtons = 0x50; // client::CInButtonState  | Schema_DeclaredClass | Size: 0x20
@@ -18,13 +18,16 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_pButtonPressedCmdNumber = 0x88; // uint32_t m_pButtonPressedCmdNumber[64]; |  0x88 | Schema_FixedArray | Size: 0x100
 				constexpr std::ptrdiff_t m_nLastCommandNumberProcessed = 0x188; // uint32_t m_nLastCommandNumberProcessed; |  0x188 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nToggleButtonDownMask = 0x190; // uint64_t m_nToggleButtonDownMask; |  0x190 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_flMaxspeed = 0x1a0; // float32 m_flMaxspeed; |  0x1a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_arrForceSubtickMoveWhen = 0x1a4; // float32 m_arrForceSubtickMoveWhen[4]; |  0x1a4 | Schema_FixedArray | Size: 0x10
-				constexpr std::ptrdiff_t m_flForwardMove = 0x1b4; // float32 m_flForwardMove; |  0x1b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLeftMove = 0x1b8; // float32 m_flLeftMove; |  0x1b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flUpMove = 0x1bc; // float32 m_flUpMove; |  0x1bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecLastMovementImpulses = 0x1c0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecOldViewAngles = 0x228; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flCmdForwardMove = 0x1a0; // float32 m_flCmdForwardMove; |  0x1a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCmdLeftMove = 0x1a4; // float32 m_flCmdLeftMove; |  0x1a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCmdUpMove = 0x1a8; // float32 m_flCmdUpMove; |  0x1a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxspeed = 0x1ac; // float32 m_flMaxspeed; |  0x1ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_arrForceSubtickMoveWhen = 0x1b0; // float32 m_arrForceSubtickMoveWhen[4]; |  0x1b0 | Schema_FixedArray | Size: 0x10
+				constexpr std::ptrdiff_t m_flForwardMove = 0x1c0; // float32 m_flForwardMove; |  0x1c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLeftMove = 0x1c4; // float32 m_flLeftMove; |  0x1c4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flUpMove = 0x1c8; // float32 m_flUpMove; |  0x1c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecLastMovementImpulses = 0x1cc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOldViewAngles = 0x240; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

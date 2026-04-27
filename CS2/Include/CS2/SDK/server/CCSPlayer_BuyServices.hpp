@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayer_BuyServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			PROPERTY(m_vecSellbackPurchaseEntries,server::CUtlVectorEmbeddedNetworkVar<server::SellbackPurchaseEntry_t>, 0xd0);
+			// PROPERTY(m_vecSellbackPurchaseEntries,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::SellbackPurchaseEntry_t>), 0xd0);
 			S2_PAD(0x110);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_BuyServices) == 0x158, "CCSPlayer_BuyServices size should be 0x158");
+
+#endif
 	}
 }

@@ -26,9 +26,12 @@ namespace CS2 {
 			PROPERTY(m_Description,GlobalTypes::CUtlString*, 0x90);
 			PROPERTY(m_bIsPublic,bool, 0x98);
 			PROPERTY(m_ReturnType,GlobalTypes::CPulseValueFullType, 0xa0);
-			PROPERTY(m_Args,GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>, 0xb8);
+			// PROPERTY(m_Args,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>), 0xb8);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Inflow_Method) == 0xC8, "CPulseCell_Inflow_Method size should be 0xC8");
+
+#endif
 	}
 }

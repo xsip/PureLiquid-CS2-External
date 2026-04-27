@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY_ARRAY(flRadius,float32, 2 , 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeTaperedCapsuleStretch_t) == 0x10, "FeTaperedCapsuleStretch_t size should be 0x10");
+
+#endif
 	}
 }

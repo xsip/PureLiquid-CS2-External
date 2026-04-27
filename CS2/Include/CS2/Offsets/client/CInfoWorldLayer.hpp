@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x640
+			// Class size: 0x638
 			namespace CInfoWorldLayer /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_pOutputOnEntitiesSpawned = 0x608; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_worldName = 0x620; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_layerName = 0x628; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bWorldLayerVisible = 0x630; // bool m_bWorldLayerVisible; |  0x630 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEntitiesSpawned = 0x631; // bool m_bEntitiesSpawned; |  0x631 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCreateAsChildSpawnGroup = 0x632; // bool m_bCreateAsChildSpawnGroup; |  0x632 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hLayerSpawnGroup = 0x634; // uint32_t m_hLayerSpawnGroup; |  0x634 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bWorldLayerActuallyVisible = 0x638; // bool m_bWorldLayerActuallyVisible; |  0x638 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pOutputOnEntitiesSpawned = 0x600; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_worldName = 0x618; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_layerName = 0x620; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bWorldLayerVisible = 0x628; // bool m_bWorldLayerVisible; |  0x628 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEntitiesSpawned = 0x629; // bool m_bEntitiesSpawned; |  0x629 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCreateAsChildSpawnGroup = 0x62a; // bool m_bCreateAsChildSpawnGroup; |  0x62a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hLayerSpawnGroup = 0x62c; // uint32_t m_hLayerSpawnGroup; |  0x62c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bWorldLayerActuallyVisible = 0x630; // bool m_bWorldLayerActuallyVisible; |  0x630 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

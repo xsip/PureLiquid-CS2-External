@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace server {
 		class CMarkupVolumeWithRef : public CS2::server::CMarkupVolumeTagged {
 		public:
-			PROPERTY(m_bUseRef,bool, 0x778);
-			PROPERTY(m_vRefPosEntitySpace,GlobalTypes::Vector, 0x77c);
-			PROPERTY(m_vRefPosWorldSpace,GlobalTypes::VectorWS, 0x788);
-			PROPERTY(m_flRefDot,float32, 0x794);
+			PROPERTY(m_bUseRef,bool, 0x7b0);
+			PROPERTY(m_vRefPosEntitySpace,GlobalTypes::Vector, 0x7b4);
+			PROPERTY(m_vRefPosWorldSpace,GlobalTypes::VectorWS, 0x7c0);
+			PROPERTY(m_flRefDot,float32, 0x7cc);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::server::CMarkupVolumeWithRef) == 0x798, "CMarkupVolumeWithRef size should be 0x798");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CMarkupVolumeWithRef) == 0x7D0, "CMarkupVolumeWithRef size should be 0x7D0");
+
+#endif
 	}
 }

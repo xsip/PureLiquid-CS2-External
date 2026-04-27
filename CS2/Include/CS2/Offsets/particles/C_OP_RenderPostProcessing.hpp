@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x3A0
+			// Class size: 0x3A8
 			namespace C_OP_RenderPostProcessing /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_flPostProcessStrength = 0x220; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_hPostTexture = 0x390; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nPriority = 0x398; // particles::ParticlePostProcessPriorityGroup_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flPostProcessStrength = 0x228; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_hPostTexture = 0x398; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nPriority = 0x3a0; // particles::ParticlePostProcessPriorityGroup_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

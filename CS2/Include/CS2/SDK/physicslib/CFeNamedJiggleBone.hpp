@@ -24,9 +24,12 @@ namespace CS2 {
 			PROPERTY(m_strParentBone,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_transform,GlobalTypes::CTransform, 0x10);
 			PROPERTY(m_nJiggleParent,uint32_t, 0x30);
-			NESTED_PROPERTY(m_jiggleBone,physicslib::CFeJiggleBone, 0x34);
+			NESTED_PROPERTY(m_jiggleBone,IDENTITY(physicslib::CFeJiggleBone), 0x34);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::CFeNamedJiggleBone) == 0xD0, "CFeNamedJiggleBone size should be 0xD0");
+
+#endif
 	}
 }

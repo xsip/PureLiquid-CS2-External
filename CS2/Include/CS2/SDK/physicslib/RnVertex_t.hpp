@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_nEdge,uint8_t, 0x0);
 			S2_PAD(0x1);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnVertex_t) == 0x1, "RnVertex_t size should be 0x1");
+
+#endif
 	}
 }

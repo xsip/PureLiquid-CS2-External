@@ -29,13 +29,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_CreateParticleSystemRenderer : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_hEffect,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>, 0x220);
-			PROPERTY(m_nEventType,particles::EventTypeSelection_t, 0x228);
-			PROPERTY(m_vecCPs,GlobalTypes::CUtlLeanVector<particles::CPAssignment_t>, 0x230);
-			PROPERTY(m_szParticleConfig,GlobalTypes::CUtlString*, 0x240);
-			NESTED_PROPERTY(m_AggregationPos,particleslib::CPerParticleVecInput, 0x248);
+			PROPERTY(m_hEffect,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x228);
+			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x230);
+			// PROPERTY(m_vecCPs,IDENTITY(GlobalTypes::CUtlLeanVector<particles::CPAssignment_t>), 0x238);
+			PROPERTY(m_szParticleConfig,GlobalTypes::CUtlString*, 0x248);
+			NESTED_PROPERTY(m_AggregationPos,IDENTITY(particleslib::CPerParticleVecInput), 0x250);
 			S2_PAD(0x6E0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_CreateParticleSystemRenderer) == 0x900, "C_OP_CreateParticleSystemRenderer size should be 0x900");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_CreateParticleSystemRenderer) == 0x908, "C_OP_CreateParticleSystemRenderer size should be 0x908");
+
+#endif
 	}
 }

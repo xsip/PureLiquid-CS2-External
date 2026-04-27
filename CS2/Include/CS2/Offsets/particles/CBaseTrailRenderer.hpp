@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x30E0
+			// Class size: 0x30E8
 			namespace CBaseTrailRenderer /*: public CS2::particles::CBaseRendererSource2*/ {
-				constexpr std::ptrdiff_t m_nOrientationType = 0x2de8; // particles::ParticleOrientationChoiceList_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2dec; // int32_t m_nOrientationControlPoint; |  0x2dec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMinSize = 0x2df0; // float32 m_flMinSize; |  0x2df0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxSize = 0x2df4; // float32 m_flMaxSize; |  0x2df4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartFadeSize = 0x2df8; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flEndFadeSize = 0x2f68; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bClampV = 0x30d8; // bool m_bClampV; |  0x30d8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nOrientationType = 0x2df0; // particles::ParticleOrientationChoiceList_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2df4; // int32_t m_nOrientationControlPoint; |  0x2df4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinSize = 0x2df8; // float32 m_flMinSize; |  0x2df8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxSize = 0x2dfc; // float32 m_flMaxSize; |  0x2dfc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartFadeSize = 0x2e00; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flEndFadeSize = 0x2f70; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bClampV = 0x30e0; // bool m_bClampV; |  0x30e0 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

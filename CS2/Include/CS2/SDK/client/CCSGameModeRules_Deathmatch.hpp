@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace client {
 		class CCSGameModeRules_Deathmatch : public CS2::client::CCSGameModeRules {
 		public:
-			NESTED_PROPERTY(m_flDMBonusStartTime,entity2::GameTime_t, 0x30);
+			NESTED_PROPERTY(m_flDMBonusStartTime,IDENTITY(entity2::GameTime_t), 0x30);
 			PROPERTY(m_flDMBonusTimeLength,float32, 0x34);
 			PROPERTY(m_sDMBonusWeapon,GlobalTypes::CUtlString*, 0x38);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSGameModeRules_Deathmatch) == 0x40, "CCSGameModeRules_Deathmatch size should be 0x40");
+
+#endif
 	}
 }

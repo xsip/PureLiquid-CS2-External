@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class OutflowWithRequirements_t  {
 		public:
-			NESTED_PROPERTY(m_Connection,pulse_runtime_lib::CPulse_OutflowConnection, 0x0);
-			NESTED_PROPERTY(m_DestinationFlowNodeID,pulse_runtime_lib::PulseDocNodeID_t, 0x48);
-			NESTED_PROPERTY(m_RequirementNodeIDs,GlobalTypes::CUtlVector<pulse_runtime_lib::PulseDocNodeID_t>, 0x50);
-			NESTED_PROPERTY(m_nCursorStateBlockIndex,GlobalTypes::CUtlVector< int32 >, 0x68);
+			NESTED_PROPERTY(m_Connection,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x0);
+			NESTED_PROPERTY(m_DestinationFlowNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x48);
+			NESTED_PROPERTY(m_RequirementNodeIDs,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::PulseDocNodeID_t>), 0x50);
+			NESTED_PROPERTY(m_nCursorStateBlockIndex,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x68);
 			S2_PAD(0x80);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::OutflowWithRequirements_t) == 0x80, "OutflowWithRequirements_t size should be 0x80");
+
+#endif
 	}
 }

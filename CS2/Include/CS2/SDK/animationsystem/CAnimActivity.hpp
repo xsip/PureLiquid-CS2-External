@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_nWeight,int32_t, 0x18);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimActivity) == 0x20, "CAnimActivity size should be 0x20");
+
+#endif
 	}
 }

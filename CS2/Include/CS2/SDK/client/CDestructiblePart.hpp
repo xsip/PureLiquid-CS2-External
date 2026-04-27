@@ -23,14 +23,17 @@ namespace CS2 {
 		class CDestructiblePart  {
 		public:
 			PROPERTY(m_DebugName,GlobalTypes::CGlobalSymbol, 0x0);
-			PROPERTY(m_nHitGroup,client::HitGroup_t, 0x8);
+			PROPERTY(m_nHitGroup,IDENTITY(client::HitGroup_t), 0x8);
 			PROPERTY(m_bDisableHitGroupWhenDestroyed,bool, 0xc);
-			NESTED_PROPERTY(m_nOtherHitgroupsToDestroyWhenFullyDestructed,GlobalTypes::CUtlVector< HitGroup_t >, 0x10);
+			NESTED_PROPERTY(m_nOtherHitgroupsToDestroyWhenFullyDestructed,IDENTITY(GlobalTypes::CUtlVector<client::HitGroup_t>), 0x10);
 			PROPERTY(m_bOnlyDestroyWhenGibbing,bool, 0x28);
 			PROPERTY(m_sBodyGroupName,GlobalTypes::CGlobalSymbol, 0x30);
-			NESTED_PROPERTY(m_DamageLevels,GlobalTypes::CUtlVector<client::CDestructiblePart_DamageLevel>, 0x38);
+			NESTED_PROPERTY(m_DamageLevels,IDENTITY(GlobalTypes::CUtlVector<client::CDestructiblePart_DamageLevel>), 0x38);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDestructiblePart) == 0x50, "CDestructiblePart size should be 0x50");
+
+#endif
 	}
 }

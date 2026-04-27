@@ -22,9 +22,12 @@ namespace CS2 {
 		class RotatorQueueEntry_t  {
 		public:
 			PROPERTY(qTarget,GlobalTypes::Quaternion, 0x0);
-			PROPERTY(eSpace,server::RotatorTargetSpace_t, 0x10);
+			PROPERTY(eSpace,IDENTITY(server::RotatorTargetSpace_t), 0x10);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::RotatorQueueEntry_t) == 0x20, "RotatorQueueEntry_t size should be 0x20");
+
+#endif
 	}
 }

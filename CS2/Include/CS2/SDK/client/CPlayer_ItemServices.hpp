@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CPlayer_ItemServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPlayer_ItemServices) == 0x48, "CPlayer_ItemServices size should be 0x48");
+
+#endif
 	}
 }

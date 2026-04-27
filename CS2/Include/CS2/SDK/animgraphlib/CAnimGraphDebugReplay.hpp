@@ -22,12 +22,15 @@ namespace CS2 {
 		class CAnimGraphDebugReplay  {
 		public:
 			PROPERTY(m_animGraphFileName,GlobalTypes::CUtlString*, 0x40);
-			NESTED_PROPERTY(m_frameList,GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimReplayFrame>>, 0x48);
+			NESTED_PROPERTY(m_frameList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPtr<animgraphlib::CAnimReplayFrame>>), 0x48);
 			PROPERTY(m_startIndex,int32_t, 0x60);
 			PROPERTY(m_writeIndex,int32_t, 0x64);
 			PROPERTY(m_frameCount,int32_t, 0x68);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimGraphDebugReplay) == 0x70, "CAnimGraphDebugReplay size should be 0x70");
+
+#endif
 	}
 }

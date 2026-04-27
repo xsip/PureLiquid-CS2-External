@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimStateMachineUpdater  {
 		public:
-			NESTED_PROPERTY(m_states,GlobalTypes::CUtlVector<animgraphlib::CStateUpdateData>, 0x8);
-			NESTED_PROPERTY(m_transitions,GlobalTypes::CUtlVector<animgraphlib::CTransitionUpdateData>, 0x20);
+			NESTED_PROPERTY(m_states,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CStateUpdateData>), 0x8);
+			NESTED_PROPERTY(m_transitions,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CTransitionUpdateData>), 0x20);
 			PROPERTY(m_startStateIndex,int32_t, 0x50);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimStateMachineUpdater) == 0x58, "CAnimStateMachineUpdater size should be 0x58");
+
+#endif
 	}
 }

@@ -24,17 +24,20 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_SetHitboxToClosest : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_nDesiredHitbox,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_vecHitBoxScale,particleslib::CParticleCollectionVecInput, 0x1e0);
-			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x898);
-			PROPERTY(m_bUseBones,bool, 0x918);
-			PROPERTY(m_bUseClosestPointOnHitbox,bool, 0x919);
-			PROPERTY(m_nTestType,particles::ClosestPointTestType_t, 0x91c);
-			NESTED_PROPERTY(m_flHybridRatio,particleslib::CParticleCollectionFloatInput, 0x920);
-			PROPERTY(m_bUpdatePosition,bool, 0xa90);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
+			PROPERTY(m_nDesiredHitbox,int32_t, 0x1e4);
+			NESTED_PROPERTY(m_vecHitBoxScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e8);
+			PROPERTY_ARRAY(m_HitboxSetName,char, 128 , 0x8a0);
+			PROPERTY(m_bUseBones,bool, 0x920);
+			PROPERTY(m_bUseClosestPointOnHitbox,bool, 0x921);
+			PROPERTY(m_nTestType,IDENTITY(particles::ClosestPointTestType_t), 0x924);
+			NESTED_PROPERTY(m_flHybridRatio,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x928);
+			PROPERTY(m_bUpdatePosition,bool, 0xa98);
 			S2_PAD(0x8C0);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_SetHitboxToClosest) == 0xA98, "C_INIT_SetHitboxToClosest size should be 0xA98");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_SetHitboxToClosest) == 0xAA0, "C_INIT_SetHitboxToClosest size should be 0xAA0");
+
+#endif
 	}
 }

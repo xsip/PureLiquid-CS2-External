@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E0
+			// Class size: 0x1E8
 			namespace C_OP_MaxVelocity /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flMaxVelocity = 0x1d0; // float32 m_flMaxVelocity; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMinVelocity = 0x1d4; // float32 m_flMinVelocity; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOverrideCP = 0x1d8; // int32_t m_nOverrideCP; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOverrideCPField = 0x1dc; // int32_t m_nOverrideCPField; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxVelocity = 0x1d8; // float32 m_flMaxVelocity; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinVelocity = 0x1dc; // float32 m_flMinVelocity; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOverrideCP = 0x1e0; // int32_t m_nOverrideCP; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOverrideCPField = 0x1e4; // int32_t m_nOverrideCPField; |  0x1e4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

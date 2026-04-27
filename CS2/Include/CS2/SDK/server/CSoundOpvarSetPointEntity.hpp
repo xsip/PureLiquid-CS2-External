@@ -22,8 +22,8 @@ namespace CS2 {
 	namespace server {
 		class CSoundOpvarSetPointEntity : public CS2::server::CSoundOpvarSetPointBase {
 		public:
-			NESTED_PROPERTY(m_OnEnter,entity2::CEntityIOOutput, 0x550);
-			NESTED_PROPERTY(m_OnExit,entity2::CEntityIOOutput, 0x568);
+			NESTED_PROPERTY(m_OnEnter,IDENTITY(entity2::CEntityIOOutput), 0x550);
+			NESTED_PROPERTY(m_OnExit,IDENTITY(entity2::CEntityIOOutput), 0x568);
 			PROPERTY(m_bAutoDisable,bool, 0x580);
 			PROPERTY(m_flDistanceMin,float32, 0x5c4);
 			PROPERTY(m_flDistanceMax,float32, 0x5c8);
@@ -48,6 +48,9 @@ namespace CS2 {
 			PROPERTY(m_nPathingSourceIndex,int32_t, 0x638);
 			S2_PAD(0xF0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundOpvarSetPointEntity) == 0x640, "CSoundOpvarSetPointEntity size should be 0x640");
+
+#endif
 	}
 }

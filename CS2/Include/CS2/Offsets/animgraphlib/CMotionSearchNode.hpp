@@ -12,8 +12,8 @@ namespace CS2 {
 			namespace CMotionSearchNode /**/ {
 				constexpr std::ptrdiff_t m_children = 0x0; // GlobalTypes::CUtlVector<animgraphlib::CMotionSearchNode*>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_quantizer = 0x18; // animgraphlib::CVectorQuantizer  | Schema_DeclaredClass | Size: 0x20
-				constexpr std::ptrdiff_t m_sampleCodes = 0x38; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_sampleIndices = 0x50; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_sampleCodes = 0x38; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<animgraphlib::SampleCode>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_sampleIndices = 0x50; // GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<int32>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_selectableSamples = 0x68; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 			}
 		}

@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8D0
+			// Class size: 0x908
 			namespace CTriggerDetectExplosion /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_OnDetectedExplosion = 0x8b8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnDetectedExplosion = 0x8f0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

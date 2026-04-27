@@ -22,21 +22,24 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitialRepulsionVelocity : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1d8);
-			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x258);
-			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x25c);
-			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x268);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x274);
-			PROPERTY(m_bPerParticle,bool, 0x278);
-			PROPERTY(m_bTranslate,bool, 0x279);
-			PROPERTY(m_bProportional,bool, 0x27a);
-			PROPERTY(m_flTraceLength,float32, 0x27c);
-			PROPERTY(m_bPerParticleTR,bool, 0x280);
-			PROPERTY(m_bInherit,bool, 0x281);
-			PROPERTY(m_nChildCP,int32_t, 0x284);
-			PROPERTY(m_nChildGroupID,int32_t, 0x288);
+			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x1e0);
+			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x260);
+			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x264);
+			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x270);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x27c);
+			PROPERTY(m_bPerParticle,bool, 0x280);
+			PROPERTY(m_bTranslate,bool, 0x281);
+			PROPERTY(m_bProportional,bool, 0x282);
+			PROPERTY(m_flTraceLength,float32, 0x284);
+			PROPERTY(m_bPerParticleTR,bool, 0x288);
+			PROPERTY(m_bInherit,bool, 0x289);
+			PROPERTY(m_nChildCP,int32_t, 0x28c);
+			PROPERTY(m_nChildGroupID,int32_t, 0x290);
 			S2_PAD(0xB8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitialRepulsionVelocity) == 0x290, "C_INIT_InitialRepulsionVelocity size should be 0x290");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitialRepulsionVelocity) == 0x298, "C_INIT_InitialRepulsionVelocity size should be 0x298");
+
+#endif
 	}
 }

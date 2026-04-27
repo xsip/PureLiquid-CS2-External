@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E8
+			// Class size: 0x1F0
 			namespace C_OP_VelocityMatchingForce /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flDirScale = 0x1d0; // float32 m_flDirScale; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpdScale = 0x1d4; // float32 m_flSpdScale; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNeighborDistance = 0x1d8; // float32 m_flNeighborDistance; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFacingStrength = 0x1dc; // float32 m_flFacingStrength; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseAABB = 0x1e0; // bool m_bUseAABB; |  0x1e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nCPBroadcast = 0x1e4; // int32_t m_nCPBroadcast; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDirScale = 0x1d8; // float32 m_flDirScale; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpdScale = 0x1dc; // float32 m_flSpdScale; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNeighborDistance = 0x1e0; // float32 m_flNeighborDistance; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFacingStrength = 0x1e4; // float32 m_flFacingStrength; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseAABB = 0x1e8; // bool m_bUseAABB; |  0x1e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCPBroadcast = 0x1ec; // int32_t m_nCPBroadcast; |  0x1ec | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

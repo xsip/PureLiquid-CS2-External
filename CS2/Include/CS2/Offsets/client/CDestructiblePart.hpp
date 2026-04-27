@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_DebugName = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nHitGroup = 0x8; // client::HitGroup_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_bDisableHitGroupWhenDestroyed = 0xc; // bool m_bDisableHitGroupWhenDestroyed; |  0xc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nOtherHitgroupsToDestroyWhenFullyDestructed = 0x10; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nOtherHitgroupsToDestroyWhenFullyDestructed = 0x10; // GlobalTypes::CUtlVector<client::HitGroup_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bOnlyDestroyWhenGibbing = 0x28; // bool m_bOnlyDestroyWhenGibbing; |  0x28 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_sBodyGroupName = 0x30; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_DamageLevels = 0x38; // GlobalTypes::CUtlVector<client::CDestructiblePart_DamageLevel>  | Schema_Atomic | Size: 0x18

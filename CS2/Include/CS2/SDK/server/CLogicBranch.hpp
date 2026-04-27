@@ -24,11 +24,14 @@ namespace CS2 {
 		class CLogicBranch : public CS2::server::CLogicalEntity {
 		public:
 			PROPERTY(m_bInValue,bool, 0x4a8);
-			NESTED_PROPERTY(m_Listeners,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x4b0);
-			NESTED_PROPERTY(m_OnTrue,entity2::CEntityIOOutput, 0x4c8);
-			NESTED_PROPERTY(m_OnFalse,entity2::CEntityIOOutput, 0x4e0);
+			NESTED_PROPERTY(m_Listeners,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x4b0);
+			NESTED_PROPERTY(m_OnTrue,IDENTITY(entity2::CEntityIOOutput), 0x4c8);
+			NESTED_PROPERTY(m_OnFalse,IDENTITY(entity2::CEntityIOOutput), 0x4e0);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicBranch) == 0x4F8, "CLogicBranch size should be 0x4F8");
+
+#endif
 	}
 }

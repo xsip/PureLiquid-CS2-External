@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_succeeded,bool, 0x4bb);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLogicCollisionPair) == 0x4C0, "CLogicCollisionPair size should be 0x4C0");
+
+#endif
 	}
 }

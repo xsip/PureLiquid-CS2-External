@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace client {
 		class ragdoll_t  {
 		public:
-			NESTED_PROPERTY(list,GlobalTypes::CUtlVector<client::ragdollelement_t>, 0x0);
-			NESTED_PROPERTY(hierarchyJoints,GlobalTypes::CUtlVector<client::ragdollhierarchyjoint_t>, 0x18);
-			NESTED_PROPERTY(boneIndex,GlobalTypes::CUtlVector< int32 >, 0x30);
+			NESTED_PROPERTY(list,IDENTITY(GlobalTypes::CUtlVector<client::ragdollelement_t>), 0x0);
+			NESTED_PROPERTY(hierarchyJoints,IDENTITY(GlobalTypes::CUtlVector<client::ragdollhierarchyjoint_t>), 0x18);
+			NESTED_PROPERTY(boneIndex,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x30);
 			PROPERTY(allowStretch,bool, 0x48);
 			PROPERTY(unused,bool, 0x49);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ragdoll_t) == 0x50, "ragdoll_t size should be 0x50");
+
+#endif
 	}
 }

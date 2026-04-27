@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_OP_RemapBoundingVolumetoCP /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1d8; // int32_t m_nOutControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMin = 0x1dc; // float32 m_flInputMin; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMax = 0x1e0; // float32 m_flInputMax; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMin = 0x1e4; // float32 m_flOutputMin; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMax = 0x1e8; // float32 m_flOutputMax; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1e0; // int32_t m_nOutControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMin = 0x1e4; // float32 m_flInputMin; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMax = 0x1e8; // float32 m_flInputMax; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMin = 0x1ec; // float32 m_flOutputMin; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMax = 0x1f0; // float32 m_flOutputMax; |  0x1f0 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

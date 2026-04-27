@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x740
+			// Class size: 0x778
 			namespace CRulePointEntity /*: public CS2::server::CRuleEntity*/ {
-				constexpr std::ptrdiff_t m_Score = 0x738; // int32_t m_Score; |  0x738 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_Score = 0x770; // int32_t m_Score; |  0x770 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

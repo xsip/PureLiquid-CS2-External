@@ -22,15 +22,18 @@ namespace CS2 {
 	namespace client {
 		class C_BasePlayerWeapon : public CS2::client::C_EconEntity {
 		public:
-			PROPERTY(m_nNextPrimaryAttackTick,uint32_t, 0x18c0);
-			PROPERTY(m_flNextPrimaryAttackTickRatio,float32, 0x18c4);
-			NESTED_PROPERTY(m_nNextSecondaryAttackTick,entity2::GameTick_t, 0x18c8);
-			PROPERTY(m_flNextSecondaryAttackTickRatio,float32, 0x18cc);
-			PROPERTY(m_iClip1,int32_t, 0x18d0);
-			PROPERTY(m_iClip2,int32_t, 0x18d4);
-			PROPERTY_ARRAY(m_pReserveAmmo,int32_t, 2 , 0x18d8);
+			PROPERTY(m_nNextPrimaryAttackTick,IDENTITY(uint32), 0x16c8);
+			PROPERTY(m_flNextPrimaryAttackTickRatio,float32, 0x16cc);
+			NESTED_PROPERTY(m_nNextSecondaryAttackTick,IDENTITY(entity2::GameTick_t), 0x16d0);
+			PROPERTY(m_flNextSecondaryAttackTickRatio,float32, 0x16d4);
+			PROPERTY(m_iClip1,int32_t, 0x16d8);
+			PROPERTY(m_iClip2,int32_t, 0x16dc);
+			PROPERTY_ARRAY(m_pReserveAmmo,int32_t, 2 , 0x16e0);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::client::C_BasePlayerWeapon) == 0x18F8, "C_BasePlayerWeapon size should be 0x18F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BasePlayerWeapon) == 0x1700, "C_BasePlayerWeapon size should be 0x1700");
+
+#endif
 	}
 }

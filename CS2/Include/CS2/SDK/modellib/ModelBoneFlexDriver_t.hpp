@@ -23,9 +23,12 @@ namespace CS2 {
 		public:
 			PROPERTY(m_boneName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_boneNameToken,uint32_t, 0x8);
-			NESTED_PROPERTY(m_controls,GlobalTypes::CUtlVector<modellib::ModelBoneFlexDriverControl_t>, 0x10);
+			NESTED_PROPERTY(m_controls,IDENTITY(GlobalTypes::CUtlVector<modellib::ModelBoneFlexDriverControl_t>), 0x10);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::ModelBoneFlexDriver_t) == 0x28, "ModelBoneFlexDriver_t size should be 0x28");
+
+#endif
 	}
 }

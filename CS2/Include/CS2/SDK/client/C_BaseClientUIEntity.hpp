@@ -21,12 +21,15 @@ namespace CS2 {
 	namespace client {
 		class C_BaseClientUIEntity : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_bEnabled,bool, 0xe90);
-			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0xe98);
-			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0xea0);
-			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0xea8);
+			PROPERTY(m_bEnabled,bool, 0xfb0);
+			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0xfb8);
+			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0xfc0);
+			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0xfc8);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::client::C_BaseClientUIEntity) == 0xEB8, "C_BaseClientUIEntity size should be 0xEB8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_BaseClientUIEntity) == 0xFD8, "C_BaseClientUIEntity size should be 0xFD8");
+
+#endif
 	}
 }

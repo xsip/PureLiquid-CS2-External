@@ -25,11 +25,14 @@ namespace CS2 {
 	namespace server {
 		class PhysicsRagdollPose_t  {
 		public:
-			PROPERTY(m_Transforms,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CTransform>, 0x8);
-			PROPERTY(m_hOwner,GlobalTypes::CHandle<server::CBaseEntity>, 0x20);
+			// PROPERTY(m_Transforms,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CTransform>), 0x8);
+			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x20);
 			PROPERTY(m_bSetFromDebugHistory,bool, 0x24);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::PhysicsRagdollPose_t) == 0x28, "PhysicsRagdollPose_t size should be 0x28");
+
+#endif
 	}
 }

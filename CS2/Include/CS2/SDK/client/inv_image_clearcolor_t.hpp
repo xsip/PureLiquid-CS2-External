@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(color,GlobalTypes::Vector, 0x0);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::inv_image_clearcolor_t) == 0xC, "inv_image_clearcolor_t size should be 0xC");
+
+#endif
 	}
 }

@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x540
+			// Class size: 0x520
 			namespace CBaseMoveBehavior /*: public CS2::server::CPathKeyFrame*/ {
-				constexpr std::ptrdiff_t m_iPositionInterpolator = 0x500; // int32_t m_iPositionInterpolator; |  0x500 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iRotationInterpolator = 0x504; // int32_t m_iRotationInterpolator; |  0x504 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAnimStartTime = 0x508; // float32 m_flAnimStartTime; |  0x508 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAnimEndTime = 0x50c; // float32 m_flAnimEndTime; |  0x50c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAverageSpeedAcrossFrame = 0x510; // float32 m_flAverageSpeedAcrossFrame; |  0x510 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pCurrentKeyFrame = 0x518; // server::CPathKeyFrame**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pTargetKeyFrame = 0x520; // server::CPathKeyFrame**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pPreKeyFrame = 0x528; // server::CPathKeyFrame**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_pPostKeyFrame = 0x530; // server::CPathKeyFrame**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_flTimeIntoFrame = 0x538; // float32 m_flTimeIntoFrame; |  0x538 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iDirection = 0x53c; // int32_t m_iDirection; |  0x53c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iPositionInterpolator = 0x4f0; // int32_t m_iPositionInterpolator; |  0x4f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iRotationInterpolator = 0x4f4; // int32_t m_iRotationInterpolator; |  0x4f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAnimStartTime = 0x4f8; // float32 m_flAnimStartTime; |  0x4f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAnimEndTime = 0x4fc; // float32 m_flAnimEndTime; |  0x4fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAverageSpeedAcrossFrame = 0x500; // float32 m_flAverageSpeedAcrossFrame; |  0x500 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pCurrentKeyFrame = 0x504; // GlobalTypes::CHandle<server::CPathKeyFrame>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pTargetKeyFrame = 0x508; // GlobalTypes::CHandle<server::CPathKeyFrame>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pPreKeyFrame = 0x50c; // GlobalTypes::CHandle<server::CPathKeyFrame>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pPostKeyFrame = 0x510; // GlobalTypes::CHandle<server::CPathKeyFrame>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flTimeIntoFrame = 0x514; // float32 m_flTimeIntoFrame; |  0x514 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iDirection = 0x518; // int32_t m_iDirection; |  0x518 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

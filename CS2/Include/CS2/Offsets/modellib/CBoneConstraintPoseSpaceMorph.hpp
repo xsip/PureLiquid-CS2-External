@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_sBoneName = 0x20; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_sAttachmentName = 0x28; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_outputMorph = 0x30; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_inputList = 0x48; // GlobalTypes::CUtlVector<modellib::Input_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_inputList = 0x48; // GlobalTypes::CUtlVector<modellib::CBoneConstraintPoseSpaceMorph_Input_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bClamp = 0x60; // bool m_bClamp; |  0x60 | Schema_Builtin | Size: 0x1
 			}
 		}

@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class C_SoundAreaEntityOrientedBox : public CS2::client::C_SoundAreaEntityBase {
 		public:
-			PROPERTY(m_vMin,GlobalTypes::Vector, 0x630);
-			PROPERTY(m_vMax,GlobalTypes::Vector, 0x63c);
+			PROPERTY(m_vMin,GlobalTypes::Vector, 0x628);
+			PROPERTY(m_vMax,GlobalTypes::Vector, 0x634);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundAreaEntityOrientedBox) == 0x648, "C_SoundAreaEntityOrientedBox size should be 0x648");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundAreaEntityOrientedBox) == 0x640, "C_SoundAreaEntityOrientedBox size should be 0x640");
+
+#endif
 	}
 }

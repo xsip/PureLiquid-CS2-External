@@ -23,15 +23,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RotateVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d0);
-			PROPERTY(m_vecRotAxisMin,GlobalTypes::Vector, 0x1d4);
-			PROPERTY(m_vecRotAxisMax,GlobalTypes::Vector, 0x1e0);
-			PROPERTY(m_flRotRateMin,float32, 0x1ec);
-			PROPERTY(m_flRotRateMax,float32, 0x1f0);
-			PROPERTY(m_bNormalize,bool, 0x1f4);
-			NESTED_PROPERTY(m_flScale,particleslib::CPerParticleFloatInput, 0x1f8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
+			PROPERTY(m_vecRotAxisMin,GlobalTypes::Vector, 0x1dc);
+			PROPERTY(m_vecRotAxisMax,GlobalTypes::Vector, 0x1e8);
+			PROPERTY(m_flRotRateMin,float32, 0x1f4);
+			PROPERTY(m_flRotRateMax,float32, 0x1f8);
+			PROPERTY(m_bNormalize,bool, 0x1fc);
+			NESTED_PROPERTY(m_flScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x200);
 			S2_PAD(0x198);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RotateVector) == 0x368, "C_OP_RotateVector size should be 0x368");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RotateVector) == 0x370, "C_OP_RotateVector size should be 0x370");
+
+#endif
 	}
 }

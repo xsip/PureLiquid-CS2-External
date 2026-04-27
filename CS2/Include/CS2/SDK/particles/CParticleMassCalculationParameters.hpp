@@ -22,12 +22,15 @@ namespace CS2 {
 	namespace particles {
 		class CParticleMassCalculationParameters  {
 		public:
-			PROPERTY(m_nMassMode,particles::ParticleMassMode_t, 0x0);
-			NESTED_PROPERTY(m_flRadius,particleslib::CPerParticleFloatInput, 0x8);
-			NESTED_PROPERTY(m_flNominalRadius,particleslib::CPerParticleFloatInput, 0x178);
-			NESTED_PROPERTY(m_flScale,particleslib::CPerParticleFloatInput, 0x2e8);
+			PROPERTY(m_nMassMode,IDENTITY(particles::ParticleMassMode_t), 0x0);
+			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x8);
+			NESTED_PROPERTY(m_flNominalRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x178);
+			NESTED_PROPERTY(m_flScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x2e8);
 			S2_PAD(0x458);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CParticleMassCalculationParameters) == 0x458, "CParticleMassCalculationParameters size should be 0x458");
+
+#endif
 	}
 }

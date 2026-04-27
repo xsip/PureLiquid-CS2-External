@@ -28,7 +28,7 @@ namespace CS2 {
 			PROPERTY(m_flModDepth,float32, 0x10);
 			PROPERTY(m_flModRate,float32, 0x14);
 			PROPERTY(m_bParallel,bool, 0x18);
-			NESTED_PROPERTY(m_filterType,soundsystem_lowlevel::VMixFilterDesc_t, 0x1c);
+			NESTED_PROPERTY(m_filterType,IDENTITY(soundsystem_lowlevel::VMixFilterDesc_t), 0x1c);
 			PROPERTY(m_flWidth,float32, 0x2c);
 			PROPERTY(m_flHeight,float32, 0x30);
 			PROPERTY(m_flDepth,float32, 0x34);
@@ -40,6 +40,9 @@ namespace CS2 {
 			PROPERTY(m_flTaps,float32, 0x4c);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_lowlevel::VMixBoxverbDesc_t) == 0x50, "VMixBoxverbDesc_t size should be 0x50");
+
+#endif
 	}
 }

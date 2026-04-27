@@ -6,10 +6,9 @@
 namespace CS2 {
 	namespace client {
 		enum AnimationAlgorithm_t : std::uint8_t {
-			AnimationAlgorithm_t_eAnimGraph1 = 0x4,
 			AnimationAlgorithm_t_eAnimGraph2 = 0x2,
 			AnimationAlgorithm_t_eAnimGraph2Secondary = 0x3,
-			AnimationAlgorithm_t_eCount = 0x5,
+			AnimationAlgorithm_t_eCount = 0x4,
 			AnimationAlgorithm_t_eInvalid = 0xff,
 			AnimationAlgorithm_t_eNone = 0x0,
 			AnimationAlgorithm_t_eSequence = 0x1

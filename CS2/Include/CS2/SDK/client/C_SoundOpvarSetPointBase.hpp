@@ -21,14 +21,17 @@ namespace CS2 {
 	namespace client {
 		class C_SoundOpvarSetPointBase : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_iszStackName,GlobalTypes::CUtlSymbolLarge*, 0x608);
-			PROPERTY(m_iszOperatorName,GlobalTypes::CUtlSymbolLarge*, 0x610);
-			PROPERTY(m_iszOpvarName,GlobalTypes::CUtlSymbolLarge*, 0x618);
-			PROPERTY(m_iOpvarIndex,int32_t, 0x620);
-			PROPERTY(m_bUseAutoCompare,bool, 0x624);
-			PROPERTY(m_bFastRefresh,bool, 0x625);
+			PROPERTY(m_iszStackName,GlobalTypes::CUtlSymbolLarge*, 0x600);
+			PROPERTY(m_iszOperatorName,GlobalTypes::CUtlSymbolLarge*, 0x608);
+			PROPERTY(m_iszOpvarName,GlobalTypes::CUtlSymbolLarge*, 0x610);
+			PROPERTY(m_iOpvarIndex,int32_t, 0x618);
+			PROPERTY(m_bUseAutoCompare,bool, 0x61c);
+			PROPERTY(m_bFastRefresh,bool, 0x61d);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::client::C_SoundOpvarSetPointBase) == 0x628, "C_SoundOpvarSetPointBase size should be 0x628");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_SoundOpvarSetPointBase) == 0x620, "C_SoundOpvarSetPointBase size should be 0x620");
+
+#endif
 	}
 }

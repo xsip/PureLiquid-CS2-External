@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace C_INIT_NormalOffset /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_OffsetMin = 0x1d8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_OffsetMax = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1f0; // int32_t m_nControlPointNumber; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLocalCoords = 0x1f4; // bool m_bLocalCoords; |  0x1f4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNormalize = 0x1f5; // bool m_bNormalize; |  0x1f5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_OffsetMin = 0x1e0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_OffsetMax = 0x1ec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1f8; // int32_t m_nControlPointNumber; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLocalCoords = 0x1fc; // bool m_bLocalCoords; |  0x1fc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNormalize = 0x1fd; // bool m_bNormalize; |  0x1fd | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

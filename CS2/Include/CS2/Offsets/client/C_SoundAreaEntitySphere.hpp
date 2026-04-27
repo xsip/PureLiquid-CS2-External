@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x638
+			// Class size: 0x630
 			namespace C_SoundAreaEntitySphere /*: public CS2::client::C_SoundAreaEntityBase*/ {
-				constexpr std::ptrdiff_t m_flRadius = 0x630; // float32 m_flRadius; |  0x630 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x628; // float32 m_flRadius; |  0x628 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

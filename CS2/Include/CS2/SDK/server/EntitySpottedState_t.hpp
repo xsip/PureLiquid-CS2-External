@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_bSpottedByMask,uint32_t, 2 , 0xc);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::EntitySpottedState_t) == 0x18, "EntitySpottedState_t size should be 0x18");
+
+#endif
 	}
 }

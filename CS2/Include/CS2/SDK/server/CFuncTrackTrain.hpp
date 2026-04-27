@@ -30,45 +30,48 @@ namespace CS2 {
 	namespace server {
 		class CFuncTrackTrain : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_ppath,GlobalTypes::CHandle<server::CPathTrack>, 0x730);
-			PROPERTY(m_length,float32, 0x734);
-			PROPERTY(m_vPosPrev,GlobalTypes::Vector, 0x738);
-			PROPERTY(m_angPrev,GlobalTypes::QAngle, 0x744);
-			PROPERTY(m_controlMins,GlobalTypes::Vector, 0x750);
-			PROPERTY(m_controlMaxs,GlobalTypes::Vector, 0x75c);
-			PROPERTY(m_lastBlockPos,GlobalTypes::Vector, 0x768);
-			PROPERTY(m_lastBlockTick,int32_t, 0x774);
-			PROPERTY(m_flVolume,float32, 0x778);
-			PROPERTY(m_flBank,float32, 0x77c);
-			PROPERTY(m_oldSpeed,float32, 0x780);
-			PROPERTY(m_flBlockDamage,float32, 0x784);
-			PROPERTY(m_height,float32, 0x788);
-			PROPERTY(m_maxSpeed,float32, 0x78c);
-			PROPERTY(m_dir,float32, 0x790);
-			PROPERTY(m_iszSoundMove,GlobalTypes::CUtlSymbolLarge*, 0x798);
-			PROPERTY(m_iszSoundMovePing,GlobalTypes::CUtlSymbolLarge*, 0x7a0);
-			PROPERTY(m_iszSoundStart,GlobalTypes::CUtlSymbolLarge*, 0x7a8);
-			PROPERTY(m_iszSoundStop,GlobalTypes::CUtlSymbolLarge*, 0x7b0);
-			PROPERTY(m_strPathTarget,GlobalTypes::CUtlSymbolLarge*, 0x7b8);
-			PROPERTY(m_flMoveSoundMinDuration,float32, 0x7c0);
-			PROPERTY(m_flMoveSoundMaxDuration,float32, 0x7c4);
-			NESTED_PROPERTY(m_flNextMoveSoundTime,entity2::GameTime_t, 0x7c8);
-			PROPERTY(m_flMoveSoundMinPitch,float32, 0x7cc);
-			PROPERTY(m_flMoveSoundMaxPitch,float32, 0x7d0);
-			PROPERTY(m_eOrientationType,server::TrainOrientationType_t, 0x7d4);
-			PROPERTY(m_eVelocityType,server::TrainVelocityType_t, 0x7d8);
-			NESTED_PROPERTY(m_OnStart,entity2::CEntityIOOutput, 0x7f0);
-			NESTED_PROPERTY(m_OnNext,entity2::CEntityIOOutput, 0x808);
-			NESTED_PROPERTY(m_OnArrivedAtDestinationNode,entity2::CEntityIOOutput, 0x820);
-			PROPERTY(m_bManualSpeedChanges,bool, 0x838);
-			PROPERTY(m_flDesiredSpeed,float32, 0x83c);
-			NESTED_PROPERTY(m_flSpeedChangeTime,entity2::GameTime_t, 0x840);
-			PROPERTY(m_flAccelSpeed,float32, 0x844);
-			PROPERTY(m_flDecelSpeed,float32, 0x848);
-			PROPERTY(m_bAccelToSpeed,bool, 0x84c);
-			NESTED_PROPERTY(m_flNextMPSoundTime,entity2::GameTime_t, 0x850);
+			PROPERTY(m_ppath,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x768);
+			PROPERTY(m_length,float32, 0x76c);
+			PROPERTY(m_vPosPrev,GlobalTypes::Vector, 0x770);
+			PROPERTY(m_angPrev,GlobalTypes::QAngle, 0x77c);
+			PROPERTY(m_controlMins,GlobalTypes::Vector, 0x788);
+			PROPERTY(m_controlMaxs,GlobalTypes::Vector, 0x794);
+			PROPERTY(m_lastBlockPos,GlobalTypes::Vector, 0x7a0);
+			PROPERTY(m_lastBlockTick,int32_t, 0x7ac);
+			PROPERTY(m_flVolume,float32, 0x7b0);
+			PROPERTY(m_flBank,float32, 0x7b4);
+			PROPERTY(m_oldSpeed,float32, 0x7b8);
+			PROPERTY(m_flBlockDamage,float32, 0x7bc);
+			PROPERTY(m_height,float32, 0x7c0);
+			PROPERTY(m_maxSpeed,float32, 0x7c4);
+			PROPERTY(m_dir,float32, 0x7c8);
+			PROPERTY(m_iszSoundMove,GlobalTypes::CUtlSymbolLarge*, 0x7d0);
+			PROPERTY(m_iszSoundMovePing,GlobalTypes::CUtlSymbolLarge*, 0x7d8);
+			PROPERTY(m_iszSoundStart,GlobalTypes::CUtlSymbolLarge*, 0x7e0);
+			PROPERTY(m_iszSoundStop,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
+			PROPERTY(m_strPathTarget,GlobalTypes::CUtlSymbolLarge*, 0x7f0);
+			PROPERTY(m_flMoveSoundMinDuration,float32, 0x7f8);
+			PROPERTY(m_flMoveSoundMaxDuration,float32, 0x7fc);
+			NESTED_PROPERTY(m_flNextMoveSoundTime,IDENTITY(entity2::GameTime_t), 0x800);
+			PROPERTY(m_flMoveSoundMinPitch,float32, 0x804);
+			PROPERTY(m_flMoveSoundMaxPitch,float32, 0x808);
+			PROPERTY(m_eOrientationType,IDENTITY(server::TrainOrientationType_t), 0x80c);
+			PROPERTY(m_eVelocityType,IDENTITY(server::TrainVelocityType_t), 0x810);
+			NESTED_PROPERTY(m_OnStart,IDENTITY(entity2::CEntityIOOutput), 0x828);
+			NESTED_PROPERTY(m_OnNext,IDENTITY(entity2::CEntityIOOutput), 0x840);
+			NESTED_PROPERTY(m_OnArrivedAtDestinationNode,IDENTITY(entity2::CEntityIOOutput), 0x858);
+			PROPERTY(m_bManualSpeedChanges,bool, 0x870);
+			PROPERTY(m_flDesiredSpeed,float32, 0x874);
+			NESTED_PROPERTY(m_flSpeedChangeTime,IDENTITY(entity2::GameTime_t), 0x878);
+			PROPERTY(m_flAccelSpeed,float32, 0x87c);
+			PROPERTY(m_flDecelSpeed,float32, 0x880);
+			PROPERTY(m_bAccelToSpeed,bool, 0x884);
+			NESTED_PROPERTY(m_flNextMPSoundTime,IDENTITY(entity2::GameTime_t), 0x888);
 			S2_PAD(0x128);
 		};
-		//static_assert(sizeof(CS2::server::CFuncTrackTrain) == 0x858, "CFuncTrackTrain size should be 0x858");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncTrackTrain) == 0x890, "CFuncTrackTrain size should be 0x890");
+
+#endif
 	}
 }

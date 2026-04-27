@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F0
+			// Class size: 0x1F8
 			namespace C_OP_SetPerChildControlPointFromAttribute /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nChildGroupID = 0x1d0; // int32_t m_nChildGroupID; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFirstControlPoint = 0x1d4; // int32_t m_nFirstControlPoint; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nNumControlPoints = 0x1d8; // int32_t m_nNumControlPoints; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nParticleIncrement = 0x1dc; // int32_t m_nParticleIncrement; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x1e0; // int32_t m_nFirstSourcePoint; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bNumBasedOnParticleCount = 0x1e4; // bool m_bNumBasedOnParticleCount; |  0x1e4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nAttributeToRead = 0x1e8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nCPField = 0x1ec; // int32_t m_nCPField; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nChildGroupID = 0x1d8; // int32_t m_nChildGroupID; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFirstControlPoint = 0x1dc; // int32_t m_nFirstControlPoint; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nNumControlPoints = 0x1e0; // int32_t m_nNumControlPoints; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nParticleIncrement = 0x1e4; // int32_t m_nParticleIncrement; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x1e8; // int32_t m_nFirstSourcePoint; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bNumBasedOnParticleCount = 0x1ec; // bool m_bNumBasedOnParticleCount; |  0x1ec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nAttributeToRead = 0x1f0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nCPField = 0x1f4; // int32_t m_nCPField; |  0x1f4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

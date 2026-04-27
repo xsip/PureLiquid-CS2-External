@@ -7,6 +7,7 @@ namespace CS2 {
 	namespace client {
 		enum ShakeCommand_t : std::uint32_t {
 			ShakeCommand_t_SHAKE_AMPLITUDE = 0x2,
+			ShakeCommand_t_SHAKE_DURATION = 0x6,
 			ShakeCommand_t_SHAKE_FREQUENCY = 0x3,
 			ShakeCommand_t_SHAKE_START = 0x0,
 			ShakeCommand_t_SHAKE_START_NORUMBLE = 0x5,

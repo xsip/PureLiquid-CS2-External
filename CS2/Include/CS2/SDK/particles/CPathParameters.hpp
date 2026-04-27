@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_vEndOffset,GlobalTypes::Vector, 0x2c);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::CPathParameters) == 0x40, "CPathParameters size should be 0x40");
+
+#endif
 	}
 }

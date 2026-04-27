@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CSmokeGrenade) == 0x1180, "CSmokeGrenade size should be 0x1180");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CSmokeGrenade) == 0x1080, "CSmokeGrenade size should be 0x1080");
+
+#endif
 	}
 }

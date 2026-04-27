@@ -20,9 +20,12 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimParamHandleMap  {
 		public:
-			PROPERTY(m_list,GlobalTypes::CUtlHashtable< uint16, int16 >, 0x0);
+			// PROPERTY(m_list,IDENTITY(GlobalTypes::CUtlHashtable< uint16, int16 >), 0x0);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimParamHandleMap) == 0x20, "CAnimParamHandleMap size should be 0x20");
+
+#endif
 	}
 }

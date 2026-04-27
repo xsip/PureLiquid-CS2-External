@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x350
+			// Class size: 0x358
 			namespace C_OP_LerpScalar /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutput = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flStartTime = 0x348; // float32 m_flStartTime; |  0x348 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime = 0x34c; // float32 m_flEndTime; |  0x34c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutput = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flStartTime = 0x350; // float32 m_flStartTime; |  0x350 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime = 0x354; // float32 m_flEndTime; |  0x354 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

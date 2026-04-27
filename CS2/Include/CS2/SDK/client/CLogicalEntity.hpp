@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class CLogicalEntity : public CS2::client::C_BaseEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::CLogicalEntity) == 0x608, "CLogicalEntity size should be 0x608");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CLogicalEntity) == 0x600, "CLogicalEntity size should be 0x600");
+
+#endif
 	}
 }

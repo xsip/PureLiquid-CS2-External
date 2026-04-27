@@ -27,17 +27,20 @@ namespace CS2 {
 	namespace server {
 		class CBombTarget : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_OnBombExplode,entity2::CEntityIOOutput, 0x890);
-			NESTED_PROPERTY(m_OnBombPlanted,entity2::CEntityIOOutput, 0x8a8);
-			NESTED_PROPERTY(m_OnBombDefused,entity2::CEntityIOOutput, 0x8c0);
-			PROPERTY(m_bIsBombSiteB,bool, 0x8d8);
-			PROPERTY(m_bIsHeistBombTarget,bool, 0x8d9);
-			PROPERTY(m_bBombPlantedHere,bool, 0x8da);
-			PROPERTY(m_szMountTarget,GlobalTypes::CUtlSymbolLarge*, 0x8e0);
-			PROPERTY(m_hInstructorHint,GlobalTypes::CHandle<server::CBaseEntity>, 0x8e8);
-			PROPERTY(m_nBombSiteDesignation,int32_t, 0x8ec);
+			NESTED_PROPERTY(m_OnBombExplode,IDENTITY(entity2::CEntityIOOutput), 0x8c8);
+			NESTED_PROPERTY(m_OnBombPlanted,IDENTITY(entity2::CEntityIOOutput), 0x8e0);
+			NESTED_PROPERTY(m_OnBombDefused,IDENTITY(entity2::CEntityIOOutput), 0x8f8);
+			PROPERTY(m_bIsBombSiteB,bool, 0x910);
+			PROPERTY(m_bIsHeistBombTarget,bool, 0x911);
+			PROPERTY(m_bBombPlantedHere,bool, 0x912);
+			PROPERTY(m_szMountTarget,GlobalTypes::CUtlSymbolLarge*, 0x918);
+			PROPERTY(m_hInstructorHint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x920);
+			PROPERTY(m_nBombSiteDesignation,int32_t, 0x924);
 			S2_PAD(0x60);
 		};
-		//static_assert(sizeof(CS2::server::CBombTarget) == 0x8F0, "CBombTarget size should be 0x8F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBombTarget) == 0x928, "CBombTarget size should be 0x928");
+
+#endif
 	}
 }

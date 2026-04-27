@@ -8,15 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x630
+			// Class size: 0x638
 			namespace C_OP_InheritFromParentParticlesV2 /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flScale = 0x1d0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x340; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nIncrement = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bRandomDistribution = 0x4b8; // bool m_bRandomDistribution; |  0x4b8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bReverse = 0x4b9; // bool m_bReverse; |  0x4b9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nMissingParentBehavior = 0x4bc; // particles::MissingParentInheritBehavior_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flInterpolation = 0x4c0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flScale = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x348; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nIncrement = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bSubSample = 0x4c0; // bool m_bSubSample; |  0x4c0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRandomDistribution = 0x4c1; // bool m_bRandomDistribution; |  0x4c1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bReverse = 0x4c2; // bool m_bReverse; |  0x4c2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nMissingParentBehavior = 0x4c4; // particles::MissingParentInheritBehavior_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flInterpolation = 0x4c8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

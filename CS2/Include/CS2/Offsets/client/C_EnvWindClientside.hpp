@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x700
+			// Class size: 0x6F8
 			namespace C_EnvWindClientside /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_EnvWindShared = 0x608; // client::C_EnvWindShared  | Schema_DeclaredClass | Size: 0xf8
+				constexpr std::ptrdiff_t m_EnvWindShared = 0x600; // client::C_EnvWindShared  | Schema_DeclaredClass | Size: 0xf8
 			}
 		}
 	}

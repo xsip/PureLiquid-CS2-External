@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7A0
+			// Class size: 0x7D8
 			namespace CCSSprite /*: public CS2::server::CSprite*/ {
 				// NO SCHEMA DATA FOUND!
 			}

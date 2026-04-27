@@ -27,10 +27,13 @@ namespace CS2 {
 	namespace client {
 		class CBodyComponent : public CS2::entity2::CEntityComponent {
 		public:
-			PROPERTY(m_pSceneNode,client::CGameSceneNode*, 0x8);
-			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x48);
+			PROPERTY(m_pSceneNode,IDENTITY(client::CGameSceneNode*), 0x8);
+			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x48);
 			S2_PAD(0x70);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CBodyComponent) == 0x78, "CBodyComponent size should be 0x78");
+
+#endif
 	}
 }

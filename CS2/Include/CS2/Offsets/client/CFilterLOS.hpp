@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x640
+			// Class size: 0x638
 			namespace CFilterLOS /*: public CS2::client::CBaseFilter*/ {
 				// NO SCHEMA DATA FOUND!
 			}

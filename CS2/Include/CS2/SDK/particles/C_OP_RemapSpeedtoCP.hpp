@@ -21,16 +21,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RemapSpeedtoCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nInControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_nOutControlPointNumber,int32_t, 0x1dc);
-			PROPERTY(m_nField,int32_t, 0x1e0);
-			PROPERTY(m_flInputMin,float32, 0x1e4);
-			PROPERTY(m_flInputMax,float32, 0x1e8);
-			PROPERTY(m_flOutputMin,float32, 0x1ec);
-			PROPERTY(m_flOutputMax,float32, 0x1f0);
-			PROPERTY(m_bUseDeltaV,bool, 0x1f4);
+			PROPERTY(m_nInControlPointNumber,int32_t, 0x1e0);
+			PROPERTY(m_nOutControlPointNumber,int32_t, 0x1e4);
+			PROPERTY(m_nField,int32_t, 0x1e8);
+			PROPERTY(m_flInputMin,float32, 0x1ec);
+			PROPERTY(m_flInputMax,float32, 0x1f0);
+			PROPERTY(m_flOutputMin,float32, 0x1f4);
+			PROPERTY(m_flOutputMax,float32, 0x1f8);
+			PROPERTY(m_bUseDeltaV,bool, 0x1fc);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RemapSpeedtoCP) == 0x1F8, "C_OP_RemapSpeedtoCP size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RemapSpeedtoCP) == 0x200, "C_OP_RemapSpeedtoCP size should be 0x200");
+
+#endif
 	}
 }

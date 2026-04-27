@@ -8,20 +8,20 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x2EB0
+			// Class size: 0x2D30
 			namespace CSmokeGrenadeProjectile /*: public CS2::server::CBaseCSGrenadeProjectile*/ {
-				constexpr std::ptrdiff_t m_nSmokeEffectTickBegin = 0xbd8; // int32_t m_nSmokeEffectTickBegin; |  0xbd8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bDidSmokeEffect = 0xbdc; // bool m_bDidSmokeEffect; |  0xbdc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRandomSeed = 0xbe0; // int32_t m_nRandomSeed; |  0xbe0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vSmokeColor = 0xbe4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vSmokeDetonationPos = 0xbf0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_VoxelFrameData = 0xc00; // GlobalTypes::CNetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nVoxelFrameDataSize = 0xc18; // int32_t m_nVoxelFrameDataSize; |  0xc18 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nVoxelUpdate = 0xc1c; // int32_t m_nVoxelUpdate; |  0xc1c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastBounce = 0xc20; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_fllastSimulationTime = 0xc24; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bExplodeFromInferno = 0x2ea8; // bool m_bExplodeFromInferno; |  0x2ea8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDidGroundScorch = 0x2ea9; // bool m_bDidGroundScorch; |  0x2ea9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSmokeEffectTickBegin = 0xa58; // int32_t m_nSmokeEffectTickBegin; |  0xa58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bDidSmokeEffect = 0xa5c; // bool m_bDidSmokeEffect; |  0xa5c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRandomSeed = 0xa60; // int32_t m_nRandomSeed; |  0xa60 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vSmokeColor = 0xa64; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vSmokeDetonationPos = 0xa70; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_VoxelFrameData = 0xa80; // GlobalTypes::CNetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nVoxelFrameDataSize = 0xa98; // int32_t m_nVoxelFrameDataSize; |  0xa98 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVoxelUpdate = 0xa9c; // int32_t m_nVoxelUpdate; |  0xa9c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastBounce = 0xaa0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_fllastSimulationTime = 0xaa4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bExplodeFromInferno = 0x2d28; // bool m_bExplodeFromInferno; |  0x2d28 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDidGroundScorch = 0x2d29; // bool m_bDidGroundScorch; |  0x2d29 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

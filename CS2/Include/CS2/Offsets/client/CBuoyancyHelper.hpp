@@ -10,6 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x118
 			namespace CBuoyancyHelper /**/ {
+				constexpr std::ptrdiff_t m_pController = 0x8; // client::IPhysicsMotionController**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_nFluidType = 0x18; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_flFluidDensity = 0x1c; // float32 m_flFluidDensity; |  0x1c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flNeutrallyBuoyantGravity = 0x20; // float32 m_flNeutrallyBuoyantGravity; |  0x20 | Schema_Builtin | Size: 0x4

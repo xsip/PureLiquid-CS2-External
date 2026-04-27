@@ -29,34 +29,37 @@ namespace CS2 {
 	namespace client {
 		class C_CSPlayerPawnBase : public CS2::client::C_BasePlayerPawn {
 		public:
-			PROPERTY(m_pPingServices,client::CCSPlayer_PingServices*, 0x15c0);
-			PROPERTY(m_previousPlayerState,client::CSPlayerState, 0x15c8);
-			PROPERTY(m_iPlayerState,client::CSPlayerState, 0x15cc);
-			PROPERTY(m_bHasMovedSinceSpawn,bool, 0x15d0);
-			NESTED_PROPERTY(m_flLastSpawnTimeIndex,entity2::GameTime_t, 0x15d4);
-			PROPERTY(m_iProgressBarDuration,int32_t, 0x15d8);
-			PROPERTY(m_flProgressBarStartTime,float32, 0x15dc);
-			NESTED_PROPERTY(m_flClientDeathTime,entity2::GameTime_t, 0x15e0);
-			PROPERTY(m_flFlashBangTime,float32, 0x15e4);
-			PROPERTY(m_flFlashScreenshotAlpha,float32, 0x15e8);
-			PROPERTY(m_flFlashOverlayAlpha,float32, 0x15ec);
-			PROPERTY(m_bFlashBuildUp,bool, 0x15f0);
-			PROPERTY(m_bFlashDspHasBeenCleared,bool, 0x15f1);
-			PROPERTY(m_bFlashScreenshotHasBeenGrabbed,bool, 0x15f2);
-			PROPERTY(m_flFlashMaxAlpha,float32, 0x15f4);
-			PROPERTY(m_flFlashDuration,float32, 0x15f8);
-			NESTED_PROPERTY(m_flClientHealthFadeChangeTimestamp,entity2::GameTime_t, 0x15fc);
-			PROPERTY(m_nClientHealthFadeParityValue,int32_t, 0x1600);
-			PROPERTY(m_fNextThinkPushAway,float32, 0x1604);
-			PROPERTY(m_flCurrentMusicStartTime,float32, 0x160c);
-			PROPERTY(m_flMusicRoundStartTime,float32, 0x1610);
-			PROPERTY(m_bDeferStartMusicOnWarmup,bool, 0x1614);
-			PROPERTY(m_flLastSmokeOverlayAlpha,float32, 0x1618);
-			PROPERTY(m_flLastSmokeAge,float32, 0x161c);
-			PROPERTY(m_vLastSmokeOverlayColor,GlobalTypes::Vector, 0x1620);
-			PROPERTY(m_hOriginalController,GlobalTypes::CHandle<client::CCSPlayerController>, 0x1648);
+			PROPERTY(m_pPingServices,IDENTITY(client::CCSPlayer_PingServices*), 0x13c8);
+			PROPERTY(m_previousPlayerState,IDENTITY(client::CSPlayerState), 0x13d0);
+			PROPERTY(m_iPlayerState,IDENTITY(client::CSPlayerState), 0x13d4);
+			PROPERTY(m_bHasMovedSinceSpawn,bool, 0x13d8);
+			NESTED_PROPERTY(m_flLastSpawnTimeIndex,IDENTITY(entity2::GameTime_t), 0x13dc);
+			PROPERTY(m_iProgressBarDuration,int32_t, 0x13e0);
+			PROPERTY(m_flProgressBarStartTime,float32, 0x13e4);
+			NESTED_PROPERTY(m_flClientDeathTime,IDENTITY(entity2::GameTime_t), 0x13e8);
+			PROPERTY(m_flFlashBangTime,float32, 0x13ec);
+			PROPERTY(m_flFlashScreenshotAlpha,float32, 0x13f0);
+			PROPERTY(m_flFlashOverlayAlpha,float32, 0x13f4);
+			PROPERTY(m_bFlashBuildUp,bool, 0x13f8);
+			PROPERTY(m_bFlashDspHasBeenCleared,bool, 0x13f9);
+			PROPERTY(m_bFlashScreenshotHasBeenGrabbed,bool, 0x13fa);
+			PROPERTY(m_flFlashMaxAlpha,float32, 0x13fc);
+			PROPERTY(m_flFlashDuration,float32, 0x1400);
+			NESTED_PROPERTY(m_flClientHealthFadeChangeTimestamp,IDENTITY(entity2::GameTime_t), 0x1404);
+			PROPERTY(m_nClientHealthFadeParityValue,int32_t, 0x1408);
+			PROPERTY(m_fNextThinkPushAway,float32, 0x140c);
+			PROPERTY(m_flCurrentMusicStartTime,float32, 0x1414);
+			PROPERTY(m_flMusicRoundStartTime,float32, 0x1418);
+			PROPERTY(m_bDeferStartMusicOnWarmup,bool, 0x141c);
+			PROPERTY(m_flLastSmokeOverlayAlpha,float32, 0x1420);
+			PROPERTY(m_flLastSmokeAge,float32, 0x1424);
+			PROPERTY(m_vLastSmokeOverlayColor,GlobalTypes::Vector, 0x1428);
+			PROPERTY(m_hOriginalController,IDENTITY(GlobalTypes::CHandle<client::CCSPlayerController>), 0x1450);
 			S2_PAD(0xA0);
 		};
-		//static_assert(sizeof(CS2::client::C_CSPlayerPawnBase) == 0x1650, "C_CSPlayerPawnBase size should be 0x1650");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSPlayerPawnBase) == 0x1458, "C_CSPlayerPawnBase size should be 0x1458");
+
+#endif
 	}
 }

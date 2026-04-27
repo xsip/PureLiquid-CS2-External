@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimInputDamping  {
 		public:
-			PROPERTY(m_speedFunction,animgraphlib::DampingSpeedFunction, 0x8);
+			PROPERTY(m_speedFunction,IDENTITY(animgraphlib::DampingSpeedFunction), 0x8);
 			PROPERTY(m_fSpeedScale,float32, 0xc);
 			PROPERTY(m_fFallingSpeedScale,float32, 0x10);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimInputDamping) == 0x18, "CAnimInputDamping size should be 0x18");
+
+#endif
 	}
 }

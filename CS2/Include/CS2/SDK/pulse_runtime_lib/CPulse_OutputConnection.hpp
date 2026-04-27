@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_Param,GlobalTypes::PulseSymbol_t, 0x30);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_OutputConnection) == 0x40, "CPulse_OutputConnection size should be 0x40");
+
+#endif
 	}
 }

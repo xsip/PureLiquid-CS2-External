@@ -23,10 +23,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nElementCount,int32_t, 0x0);
 			PROPERTY(m_nElementSizeInBytes,int32_t, 0x4);
-			NESTED_PROPERTY(m_inputLayoutFields,GlobalTypes::CUtlVector<modellib::RenderInputLayoutField_t>, 0x8);
-			NESTED_PROPERTY(m_pData,GlobalTypes::CUtlVector< uint8 >, 0x20);
+			NESTED_PROPERTY(m_inputLayoutFields,IDENTITY(GlobalTypes::CUtlVector<modellib::RenderInputLayoutField_t>), 0x8);
+			NESTED_PROPERTY(m_pData,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x20);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::WorldNodeOnDiskBufferData_t) == 0x38, "WorldNodeOnDiskBufferData_t size should be 0x38");
+
+#endif
 	}
 }

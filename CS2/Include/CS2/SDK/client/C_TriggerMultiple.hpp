@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_TriggerMultiple : public CS2::client::C_BaseTrigger {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_TriggerMultiple) == 0xF58, "C_TriggerMultiple size should be 0xF58");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_TriggerMultiple) == 0x1078, "C_TriggerMultiple size should be 0x1078");
+
+#endif
 	}
 }

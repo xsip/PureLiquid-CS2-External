@@ -8,28 +8,28 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4448
+			// Class size: 0x4450
 			namespace C_OP_RenderTrails /*: public CS2::particles::CBaseTrailRenderer*/ {
-				constexpr std::ptrdiff_t m_bEnableFadingAndClamping = 0x30e0; // bool m_bEnableFadingAndClamping; |  0x30e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flStartFadeDot = 0x30e4; // float32 m_flStartFadeDot; |  0x30e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndFadeDot = 0x30e8; // float32 m_flEndFadeDot; |  0x30e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nPrevPntSource = 0x30ec; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxLength = 0x30f0; // float32 m_flMaxLength; |  0x30f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMinLength = 0x30f4; // float32 m_flMinLength; |  0x30f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bIgnoreDT = 0x30f8; // bool m_bIgnoreDT; |  0x30f8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flConstrainRadiusToLengthRatio = 0x30fc; // float32 m_flConstrainRadiusToLengthRatio; |  0x30fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLengthScale = 0x3100; // float32 m_flLengthScale; |  0x3100 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLengthFadeInTime = 0x3104; // float32 m_flLengthFadeInTime; |  0x3104 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadiusHeadTaper = 0x3108; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_vecHeadColorScale = 0x3278; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flHeadAlphaScale = 0x3930; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flRadiusTaper = 0x3aa0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_vecTailColorScale = 0x3c10; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flTailAlphaScale = 0x42c8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nHorizCropField = 0x4438; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nVertCropField = 0x443c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flForwardShift = 0x4440; // float32 m_flForwardShift; |  0x4440 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bFlipUVBasedOnPitchYaw = 0x4444; // bool m_bFlipUVBasedOnPitchYaw; |  0x4444 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEnableFadingAndClamping = 0x30e8; // bool m_bEnableFadingAndClamping; |  0x30e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flStartFadeDot = 0x30ec; // float32 m_flStartFadeDot; |  0x30ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndFadeDot = 0x30f0; // float32 m_flEndFadeDot; |  0x30f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nPrevPntSource = 0x30f4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxLength = 0x30f8; // float32 m_flMaxLength; |  0x30f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMinLength = 0x30fc; // float32 m_flMinLength; |  0x30fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIgnoreDT = 0x3100; // bool m_bIgnoreDT; |  0x3100 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flConstrainRadiusToLengthRatio = 0x3104; // float32 m_flConstrainRadiusToLengthRatio; |  0x3104 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLengthScale = 0x3108; // float32 m_flLengthScale; |  0x3108 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLengthFadeInTime = 0x310c; // float32 m_flLengthFadeInTime; |  0x310c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadiusHeadTaper = 0x3110; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_vecHeadColorScale = 0x3280; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flHeadAlphaScale = 0x3938; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flRadiusTaper = 0x3aa8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_vecTailColorScale = 0x3c18; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flTailAlphaScale = 0x42d0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nHorizCropField = 0x4440; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nVertCropField = 0x4444; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flForwardShift = 0x4448; // float32 m_flForwardShift; |  0x4448 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bFlipUVBasedOnPitchYaw = 0x444c; // bool m_bFlipUVBasedOnPitchYaw; |  0x444c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

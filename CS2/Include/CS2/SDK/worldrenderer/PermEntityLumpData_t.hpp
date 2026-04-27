@@ -23,10 +23,13 @@ namespace CS2 {
 		class PermEntityLumpData_t  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x8);
-			NESTED_PROPERTY(m_childLumps,GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeCEntityLump>>, 0x10);
-			PROPERTY(m_entityKeyValues,GlobalTypes::CUtlLeanVector<worldrenderer::EntityKeyValueData_t>, 0x28);
+			NESTED_PROPERTY(m_childLumps,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeCEntityLump>>), 0x10);
+			// PROPERTY(m_entityKeyValues,IDENTITY(GlobalTypes::CUtlLeanVector<worldrenderer::EntityKeyValueData_t>), 0x28);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::PermEntityLumpData_t) == 0x38, "PermEntityLumpData_t size should be 0x38");
+
+#endif
 	}
 }

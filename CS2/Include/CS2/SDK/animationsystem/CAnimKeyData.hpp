@@ -24,13 +24,16 @@ namespace CS2 {
 		class CAnimKeyData  {
 		public:
 			PROPERTY(m_name,GlobalTypes::CBufferString, 0x0);
-			NESTED_PROPERTY(m_boneArray,GlobalTypes::CUtlVector<animationsystem::CAnimBone>, 0x10);
-			NESTED_PROPERTY(m_userArray,GlobalTypes::CUtlVector<animationsystem::CAnimUser>, 0x28);
-			NESTED_PROPERTY(m_morphArray,GlobalTypes::CUtlVector<GlobalTypes::CBufferString>, 0x40);
+			NESTED_PROPERTY(m_boneArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimBone>), 0x10);
+			NESTED_PROPERTY(m_userArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimUser>), 0x28);
+			NESTED_PROPERTY(m_morphArray,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CBufferString>), 0x40);
 			PROPERTY(m_nChannelElements,int32_t, 0x58);
-			NESTED_PROPERTY(m_dataChannelArray,GlobalTypes::CUtlVector<animationsystem::CAnimDataChannelDesc>, 0x60);
+			NESTED_PROPERTY(m_dataChannelArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimDataChannelDesc>), 0x60);
 			S2_PAD(0x78);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimKeyData) == 0x78, "CAnimKeyData size should be 0x78");
+
+#endif
 	}
 }

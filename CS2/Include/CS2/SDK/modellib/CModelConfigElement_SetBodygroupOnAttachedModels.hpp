@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_nChoice,int32_t, 0x50);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CModelConfigElement_SetBodygroupOnAttachedModels) == 0x58, "CModelConfigElement_SetBodygroupOnAttachedModels size should be 0x58");
+
+#endif
 	}
 }

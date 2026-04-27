@@ -22,9 +22,12 @@ namespace CS2 {
 		class CDspPresetModifierList  {
 		public:
 			PROPERTY(m_dspName,GlobalTypes::CUtlString*, 0x0);
-			NESTED_PROPERTY(m_modifiers,GlobalTypes::CUtlVector<soundsystem::CDSPMixgroupModifier>, 0x8);
+			NESTED_PROPERTY(m_modifiers,IDENTITY(GlobalTypes::CUtlVector<soundsystem::CDSPMixgroupModifier>), 0x8);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem::CDspPresetModifierList) == 0x20, "CDspPresetModifierList size should be 0x20");
+
+#endif
 	}
 }

@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_nInterpType,int32_t, 0x10);
 			S2_PAD(0x14);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CInterpolatedValue) == 0x14, "CInterpolatedValue size should be 0x14");
+
+#endif
 	}
 }

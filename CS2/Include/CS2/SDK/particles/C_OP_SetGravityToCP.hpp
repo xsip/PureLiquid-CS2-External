@@ -22,13 +22,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetGravityToCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nCPInput,int32_t, 0x1d8);
-			PROPERTY(m_nCPOutput,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_flScale,particleslib::CParticleCollectionFloatInput, 0x1e0);
-			PROPERTY(m_bSetOrientation,bool, 0x350);
-			PROPERTY(m_bSetZDown,bool, 0x351);
+			PROPERTY(m_nCPInput,int32_t, 0x1e0);
+			PROPERTY(m_nCPOutput,int32_t, 0x1e4);
+			NESTED_PROPERTY(m_flScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
+			PROPERTY(m_bSetPosition,bool, 0x358);
+			PROPERTY(m_bSetOrientation,bool, 0x359);
+			PROPERTY(m_bSetZDown,bool, 0x35a);
 			S2_PAD(0x180);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetGravityToCP) == 0x358, "C_OP_SetGravityToCP size should be 0x358");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetGravityToCP) == 0x360, "C_OP_SetGravityToCP size should be 0x360");
+
+#endif
 	}
 }

@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace client {
 		class EventSimulate_t  {
 		public:
-			NESTED_PROPERTY(m_LoopState,client::EngineLoopState_t, 0x0);
+			NESTED_PROPERTY(m_LoopState,IDENTITY(client::EngineLoopState_t), 0x0);
 			PROPERTY(m_bFirstTick,bool, 0x28);
 			PROPERTY(m_bLastTick,bool, 0x29);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::EventSimulate_t) == 0x30, "EventSimulate_t size should be 0x30");
+
+#endif
 	}
 }

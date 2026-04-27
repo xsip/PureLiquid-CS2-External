@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x648
+			// Class size: 0x640
 			namespace FilterDamageType /*: public CS2::client::CBaseFilter*/ {
-				constexpr std::ptrdiff_t m_iDamageType = 0x640; // int32_t m_iDamageType; |  0x640 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iDamageType = 0x638; // int32_t m_iDamageType; |  0x638 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xE70
+			// Class size: 0xD00
 			namespace CCSPlayerPawnBase /*: public CS2::server::CBasePlayerPawn*/ {
-				constexpr std::ptrdiff_t m_CTouchExpansionComponent = 0xd30; // server::CTouchExpansionComponent  | Schema_DeclaredClass | Size: 0x50
-				constexpr std::ptrdiff_t m_pPingServices = 0xd80; // server::CCSPlayer_PingServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_blindUntilTime = 0xd88; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_blindStartTime = 0xd8c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_iPlayerState = 0xd90; // client::CSPlayerState  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bRespawning = 0xe40; // bool m_bRespawning; |  0xe40 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bHasMovedSinceSpawn = 0xe41; // bool m_bHasMovedSinceSpawn; |  0xe41 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iNumSpawns = 0xe44; // int32_t m_iNumSpawns; |  0xe44 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flIdleTimeSinceLastAction = 0xe4c; // float32 m_flIdleTimeSinceLastAction; |  0xe4c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fNextRadarUpdateTime = 0xe50; // float32 m_fNextRadarUpdateTime; |  0xe50 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFlashDuration = 0xe54; // float32 m_flFlashDuration; |  0xe54 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFlashMaxAlpha = 0xe58; // float32 m_flFlashMaxAlpha; |  0xe58 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flProgressBarStartTime = 0xe5c; // float32 m_flProgressBarStartTime; |  0xe5c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iProgressBarDuration = 0xe60; // int32_t m_iProgressBarDuration; |  0xe60 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hOriginalController = 0xe64; // GlobalTypes::CHandle<server::CCSPlayerController>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_CTouchExpansionComponent = 0xbc0; // server::CTouchExpansionComponent  | Schema_DeclaredClass | Size: 0x50
+				constexpr std::ptrdiff_t m_pPingServices = 0xc10; // server::CCSPlayer_PingServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_blindUntilTime = 0xc18; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_blindStartTime = 0xc1c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_iPlayerState = 0xc20; // client::CSPlayerState  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bRespawning = 0xcd0; // bool m_bRespawning; |  0xcd0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bHasMovedSinceSpawn = 0xcd1; // bool m_bHasMovedSinceSpawn; |  0xcd1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iNumSpawns = 0xcd4; // int32_t m_iNumSpawns; |  0xcd4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flIdleTimeSinceLastAction = 0xcdc; // float32 m_flIdleTimeSinceLastAction; |  0xcdc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fNextRadarUpdateTime = 0xce0; // float32 m_fNextRadarUpdateTime; |  0xce0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFlashDuration = 0xce4; // float32 m_flFlashDuration; |  0xce4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFlashMaxAlpha = 0xce8; // float32 m_flFlashMaxAlpha; |  0xce8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flProgressBarStartTime = 0xcec; // float32 m_flProgressBarStartTime; |  0xcec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iProgressBarDuration = 0xcf0; // int32_t m_iProgressBarDuration; |  0xcf0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hOriginalController = 0xcf4; // GlobalTypes::CHandle<server::CCSPlayerController>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

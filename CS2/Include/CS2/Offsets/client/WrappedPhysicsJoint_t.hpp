@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x8
 			namespace WrappedPhysicsJoint_t /**/ {
-				// NO SCHEMA DATA FOUND!
+				constexpr std::ptrdiff_t m_pJoint = 0x0; // vphysics2::IPhysicsJoint**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace client {
 		class C_PhysPropClientside : public CS2::client::C_BreakableProp {
 		public:
-			NESTED_PROPERTY(m_flTouchDelta,entity2::GameTime_t, 0x12d0);
-			NESTED_PROPERTY(m_fDeathTime,entity2::GameTime_t, 0x12d4);
-			PROPERTY(m_vecDamagePosition,GlobalTypes::Vector, 0x12d8);
+			NESTED_PROPERTY(m_flTouchDelta,IDENTITY(entity2::GameTime_t), 0x12d0);
+			NESTED_PROPERTY(m_fDeathTime,IDENTITY(entity2::GameTime_t), 0x12d4);
+			PROPERTY(m_vecDamagePosition,GlobalTypes::VectorWS, 0x12d8);
 			PROPERTY(m_vecDamageDirection,GlobalTypes::Vector, 0x12e4);
-			PROPERTY(m_nDamageType,client::DamageTypes_t, 0x12f0);
+			PROPERTY(m_nDamageType,IDENTITY(client::DamageTypes_t), 0x12f0);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PhysPropClientside) == 0x1300, "C_PhysPropClientside size should be 0x1300");
+
+#endif
 	}
 }

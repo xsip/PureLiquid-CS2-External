@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_bEnabled,bool, 0x4ba);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMessageEntity) == 0x4C0, "CMessageEntity size should be 0x4C0");
+
+#endif
 	}
 }

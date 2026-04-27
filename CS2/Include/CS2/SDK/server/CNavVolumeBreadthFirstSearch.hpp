@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace server {
 		class CNavVolumeBreadthFirstSearch : public CS2::server::CNavVolumeCalculatedVector {
 		public:
-			PROPERTY(m_vStartPos,GlobalTypes::Vector, 0xa8);
+			PROPERTY(m_vStartPos,GlobalTypes::VectorWS, 0xa8);
 			PROPERTY(m_flSearchDist,float32, 0xb4);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CNavVolumeBreadthFirstSearch) == 0xC0, "CNavVolumeBreadthFirstSearch size should be 0xC0");
+
+#endif
 	}
 }

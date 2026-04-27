@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x358
+			// Class size: 0x360
 			namespace C_OP_ExternalGameImpulseForce /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_flForceScale = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bRopes = 0x350; // bool m_bRopes; |  0x350 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRopesZOnly = 0x351; // bool m_bRopesZOnly; |  0x351 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bExplosions = 0x352; // bool m_bExplosions; |  0x352 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bParticles = 0x353; // bool m_bParticles; |  0x353 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flForceScale = 0x1e8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bRopes = 0x358; // bool m_bRopes; |  0x358 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRopesZOnly = 0x359; // bool m_bRopesZOnly; |  0x359 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bExplosions = 0x35a; // bool m_bExplosions; |  0x35a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bParticles = 0x35b; // bool m_bParticles; |  0x35b | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

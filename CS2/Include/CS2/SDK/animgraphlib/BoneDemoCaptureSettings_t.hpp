@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_flErrorQuantizationScaleMax,float32, 0x1c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::BoneDemoCaptureSettings_t) == 0x20, "BoneDemoCaptureSettings_t size should be 0x20");
+
+#endif
 	}
 }

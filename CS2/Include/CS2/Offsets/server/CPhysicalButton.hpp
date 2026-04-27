@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8B0
+			// Class size: 0x8E8
 			namespace CPhysicalButton /*: public CS2::server::CBaseButton*/ {
 				// NO SCHEMA DATA FOUND!
 			}

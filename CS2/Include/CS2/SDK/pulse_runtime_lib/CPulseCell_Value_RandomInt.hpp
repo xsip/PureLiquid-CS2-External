@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Value_RandomInt : public CS2::pulse_runtime_lib::CPulseCell_BaseValue {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Value_RandomInt) == 0x48, "CPulseCell_Value_RandomInt size should be 0x48");
+
+#endif
 	}
 }

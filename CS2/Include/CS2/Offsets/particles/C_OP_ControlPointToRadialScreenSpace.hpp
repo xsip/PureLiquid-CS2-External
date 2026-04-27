@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace C_OP_ControlPointToRadialScreenSpace /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nCPIn = 0x1d8; // int32_t m_nCPIn; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecCP1Pos = 0x1dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nCPOut = 0x1e8; // int32_t m_nCPOut; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCPOutField = 0x1ec; // int32_t m_nCPOutField; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nCPSSPosOut = 0x1f0; // int32_t m_nCPSSPosOut; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCPIn = 0x1e0; // int32_t m_nCPIn; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecCP1Pos = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nCPOut = 0x1f0; // int32_t m_nCPOut; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCPOutField = 0x1f4; // int32_t m_nCPOutField; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCPSSPosOut = 0x1f8; // int32_t m_nCPSSPosOut; |  0x1f8 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

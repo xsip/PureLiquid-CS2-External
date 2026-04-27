@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ForceBasedOnDistanceToPlane : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_flMinDist,float32, 0x1e0);
-			PROPERTY(m_vecForceAtMinDist,GlobalTypes::Vector, 0x1e4);
-			PROPERTY(m_flMaxDist,float32, 0x1f0);
-			PROPERTY(m_vecForceAtMaxDist,GlobalTypes::Vector, 0x1f4);
-			PROPERTY(m_vecPlaneNormal,GlobalTypes::Vector, 0x200);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x20c);
-			PROPERTY(m_flExponent,float32, 0x210);
+			PROPERTY(m_flMinDist,float32, 0x1e8);
+			PROPERTY(m_vecForceAtMinDist,GlobalTypes::Vector, 0x1ec);
+			PROPERTY(m_flMaxDist,float32, 0x1f8);
+			PROPERTY(m_vecForceAtMaxDist,GlobalTypes::Vector, 0x1fc);
+			PROPERTY(m_vecPlaneNormal,GlobalTypes::Vector, 0x208);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x214);
+			PROPERTY(m_flExponent,float32, 0x218);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ForceBasedOnDistanceToPlane) == 0x218, "C_OP_ForceBasedOnDistanceToPlane size should be 0x218");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ForceBasedOnDistanceToPlane) == 0x220, "C_OP_ForceBasedOnDistanceToPlane size should be 0x220");
+
+#endif
 	}
 }

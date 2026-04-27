@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateFromPlaneCache : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_vecOffsetMin,GlobalTypes::Vector, 0x1d8);
-			PROPERTY(m_vecOffsetMax,GlobalTypes::Vector, 0x1e4);
-			PROPERTY(m_bUseNormal,bool, 0x1f1);
+			PROPERTY(m_vecOffsetMin,GlobalTypes::Vector, 0x1e0);
+			PROPERTY(m_vecOffsetMax,GlobalTypes::Vector, 0x1ec);
+			PROPERTY(m_bUseNormal,bool, 0x1f9);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateFromPlaneCache) == 0x1F8, "C_INIT_CreateFromPlaneCache size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateFromPlaneCache) == 0x200, "C_INIT_CreateFromPlaneCache size should be 0x200");
+
+#endif
 	}
 }

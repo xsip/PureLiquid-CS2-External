@@ -20,8 +20,11 @@ namespace CS2 {
 	namespace animlib {
 		class CNmPoseTask  {
 		public:
-			S2_PAD(0x58);
+			S2_PAD(0x48);
 		};
-		//static_assert(sizeof(CS2::animlib::CNmPoseTask) == 0x58, "CNmPoseTask size should be 0x58");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::animlib::CNmPoseTask) == 0x48, "CNmPoseTask size should be 0x48");
+
+#endif
 	}
 }

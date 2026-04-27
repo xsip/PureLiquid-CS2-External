@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1B8
+			// Class size: 0x1D0
 			namespace CPulseGraphInstance_ServerEntity /*: public CS2::pulse_runtime_lib::CBasePulseGraphInstance*/ {
-				constexpr std::ptrdiff_t m_hOwner = 0x190; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bActivated = 0x194; // bool m_bActivated; |  0x194 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_sNameFixupStaticPrefix = 0x198; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sNameFixupParent = 0x1a0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sNameFixupLocal = 0x1a8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sProceduralWorldNameForRelays = 0x1b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hOwner = 0x1a8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bActivated = 0x1ac; // bool m_bActivated; |  0x1ac | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sNameFixupStaticPrefix = 0x1b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sNameFixupParent = 0x1b8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sNameFixupLocal = 0x1c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sProceduralWorldNameForRelays = 0x1c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

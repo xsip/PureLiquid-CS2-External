@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xBB0
+			// Class size: 0xAF0
 			namespace CRagdollPropAttached /*: public CS2::server::CRagdollProp*/ {
-				constexpr std::ptrdiff_t m_boneIndexAttached = 0xb70; // uint32_t m_boneIndexAttached; |  0xb70 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_ragdollAttachedObjectIndex = 0xb74; // uint32_t m_ragdollAttachedObjectIndex; |  0xb74 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_attachmentPointBoneSpace = 0xb78; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_attachmentPointRagdollSpace = 0xb84; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bShouldDetach = 0xb90; // bool m_bShouldDetach; |  0xb90 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bShouldDeleteAttachedActivationRecord = 0xba0; // bool m_bShouldDeleteAttachedActivationRecord; |  0xba0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_boneIndexAttached = 0xab0; // uint32_t m_boneIndexAttached; |  0xab0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ragdollAttachedObjectIndex = 0xab4; // uint32_t m_ragdollAttachedObjectIndex; |  0xab4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_attachmentPointBoneSpace = 0xab8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_attachmentPointRagdollSpace = 0xac4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bShouldDetach = 0xad0; // bool m_bShouldDetach; |  0xad0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bShouldDeleteAttachedActivationRecord = 0xae0; // bool m_bShouldDeleteAttachedActivationRecord; |  0xae0 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

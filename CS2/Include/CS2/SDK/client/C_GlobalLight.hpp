@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_GlobalLight : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_WindClothForceHandle,uint16_t, 0xad0);
-			S2_PAD(0x4F8);
+			PROPERTY(m_WindClothForceHandle,uint16_t, 0xac0);
+			S2_PAD(0x4F0);
 		};
-		//static_assert(sizeof(CS2::client::C_GlobalLight) == 0xB00, "C_GlobalLight size should be 0xB00");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_GlobalLight) == 0xAF0, "C_GlobalLight size should be 0xAF0");
+
+#endif
 	}
 }

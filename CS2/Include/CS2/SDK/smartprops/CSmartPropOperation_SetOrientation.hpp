@@ -23,12 +23,15 @@ namespace CS2 {
 		class CSmartPropOperation_SetOrientation : public CS2::smartprops::CSmartPropTransformOperation {
 		public:
 			PROPERTY(m_vForwardVector,GlobalTypes::CSmartPropAttributeVector, 0x50);
-			NESTED_PROPERTY(m_ForwardDirectionSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x90);
+			NESTED_PROPERTY(m_ForwardDirectionSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x90);
 			PROPERTY(m_vUpVector,GlobalTypes::CSmartPropAttributeVector, 0xd0);
-			NESTED_PROPERTY(m_UpDirectionSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x110);
+			NESTED_PROPERTY(m_UpDirectionSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x110);
 			PROPERTY(m_bPrioritizeUp,GlobalTypes::CSmartPropAttributeBool, 0x150);
 			S2_PAD(0x140);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_SetOrientation) == 0x190, "CSmartPropOperation_SetOrientation size should be 0x190");
+
+#endif
 	}
 }

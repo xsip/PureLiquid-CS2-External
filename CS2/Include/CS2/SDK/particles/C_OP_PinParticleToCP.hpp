@@ -26,22 +26,25 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PinParticleToCP : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_vecOffset,particleslib::CParticleCollectionVecInput, 0x1d8);
-			PROPERTY(m_bOffsetLocal,bool, 0x890);
-			PROPERTY(m_nParticleSelection,particles::ParticleSelection_t, 0x894);
-			NESTED_PROPERTY(m_nParticleNumber,particleslib::CParticleCollectionFloatInput, 0x898);
-			PROPERTY(m_nPinBreakType,particles::ParticlePinDistance_t, 0xa08);
-			NESTED_PROPERTY(m_flBreakDistance,particleslib::CParticleCollectionFloatInput, 0xa10);
-			NESTED_PROPERTY(m_flBreakSpeed,particleslib::CParticleCollectionFloatInput, 0xb80);
-			NESTED_PROPERTY(m_flAge,particleslib::CParticleCollectionFloatInput, 0xcf0);
-			PROPERTY(m_nBreakControlPointNumber,int32_t, 0xe60);
-			PROPERTY(m_nBreakControlPointNumber2,int32_t, 0xe64);
-			NESTED_PROPERTY(m_flBreakValue,particleslib::CParticleCollectionFloatInput, 0xe68);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0xfd8);
-			PROPERTY(m_bRetainInitialVelocity,bool, 0x1148);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
+			NESTED_PROPERTY(m_vecOffset,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			PROPERTY(m_bOffsetLocal,bool, 0x898);
+			PROPERTY(m_nParticleSelection,IDENTITY(particles::ParticleSelection_t), 0x89c);
+			NESTED_PROPERTY(m_nParticleNumber,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x8a0);
+			PROPERTY(m_nPinBreakType,IDENTITY(particles::ParticlePinDistance_t), 0xa10);
+			NESTED_PROPERTY(m_flBreakDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa18);
+			NESTED_PROPERTY(m_flBreakSpeed,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xb88);
+			NESTED_PROPERTY(m_flAge,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xcf8);
+			PROPERTY(m_nBreakControlPointNumber,int32_t, 0xe68);
+			PROPERTY(m_nBreakControlPointNumber2,int32_t, 0xe6c);
+			NESTED_PROPERTY(m_flBreakValue,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xe70);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0xfe0);
+			PROPERTY(m_bRetainInitialVelocity,bool, 0x1150);
 			S2_PAD(0xF80);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PinParticleToCP) == 0x1150, "C_OP_PinParticleToCP size should be 0x1150");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PinParticleToCP) == 0x1158, "C_OP_PinParticleToCP size should be 0x1158");
+
+#endif
 	}
 }

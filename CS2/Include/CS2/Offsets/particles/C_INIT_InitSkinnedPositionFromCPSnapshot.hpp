@@ -8,27 +8,27 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x380
+			// Class size: 0x388
 			namespace C_INIT_InitSkinnedPositionFromCPSnapshot /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nSnapshotControlPointNumber = 0x1d8; // int32_t m_nSnapshotControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1dc; // int32_t m_nControlPointNumber; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRandom = 0x1e0; // bool m_bRandom; |  0x1e0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRandomSeed = 0x1e4; // int32_t m_nRandomSeed; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRigid = 0x1e8; // bool m_bRigid; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetNormal = 0x1e9; // bool m_bSetNormal; |  0x1e9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIgnoreDt = 0x1ea; // bool m_bIgnoreDt; |  0x1ea | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flMinNormalVelocity = 0x1ec; // float32 m_flMinNormalVelocity; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxNormalVelocity = 0x1f0; // float32 m_flMaxNormalVelocity; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nIndexType = 0x1f4; // particles::SnapshotIndexType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flReadIndex = 0x1f8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flIncrement = 0x368; // float32 m_flIncrement; |  0x368 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFullLoopIncrement = 0x36c; // int32_t m_nFullLoopIncrement; |  0x36c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSnapShotStartPoint = 0x370; // int32_t m_nSnapShotStartPoint; |  0x370 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBoneVelocity = 0x374; // float32 m_flBoneVelocity; |  0x374 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBoneVelocityMax = 0x378; // float32 m_flBoneVelocityMax; |  0x378 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bCopyColor = 0x37c; // bool m_bCopyColor; |  0x37c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCopyAlpha = 0x37d; // bool m_bCopyAlpha; |  0x37d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSetRadius = 0x37e; // bool m_bSetRadius; |  0x37e | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSnapshotControlPointNumber = 0x1e0; // int32_t m_nSnapshotControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e4; // int32_t m_nControlPointNumber; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRandom = 0x1e8; // bool m_bRandom; |  0x1e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRandomSeed = 0x1ec; // int32_t m_nRandomSeed; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRigid = 0x1f0; // bool m_bRigid; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetNormal = 0x1f1; // bool m_bSetNormal; |  0x1f1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIgnoreDt = 0x1f2; // bool m_bIgnoreDt; |  0x1f2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flMinNormalVelocity = 0x1f4; // float32 m_flMinNormalVelocity; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxNormalVelocity = 0x1f8; // float32 m_flMaxNormalVelocity; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nIndexType = 0x1fc; // particles::SnapshotIndexType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flReadIndex = 0x200; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flIncrement = 0x370; // float32 m_flIncrement; |  0x370 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFullLoopIncrement = 0x374; // int32_t m_nFullLoopIncrement; |  0x374 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSnapShotStartPoint = 0x378; // int32_t m_nSnapShotStartPoint; |  0x378 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBoneVelocity = 0x37c; // float32 m_flBoneVelocity; |  0x37c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBoneVelocityMax = 0x380; // float32 m_flBoneVelocityMax; |  0x380 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bCopyColor = 0x384; // bool m_bCopyColor; |  0x384 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCopyAlpha = 0x385; // bool m_bCopyAlpha; |  0x385 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSetRadius = 0x386; // bool m_bSetRadius; |  0x386 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

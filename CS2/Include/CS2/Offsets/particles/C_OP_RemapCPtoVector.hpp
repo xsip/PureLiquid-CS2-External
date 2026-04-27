@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x220
+			// Class size: 0x228
 			namespace C_OP_RemapCPtoVector /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nCPInput = 0x1d0; // int32_t m_nCPInput; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1d8; // int32_t m_nLocalSpaceCP; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vInputMin = 0x1dc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vInputMax = 0x1e8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOutputMin = 0x1f4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOutputMax = 0x200; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flStartTime = 0x20c; // float32 m_flStartTime; |  0x20c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime = 0x210; // float32 m_flEndTime; |  0x210 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInterpRate = 0x214; // float32 m_flInterpRate; |  0x214 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSetMethod = 0x218; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bOffset = 0x21c; // bool m_bOffset; |  0x21c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAccelerate = 0x21d; // bool m_bAccelerate; |  0x21d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nCPInput = 0x1d8; // int32_t m_nCPInput; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1dc; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1e0; // int32_t m_nLocalSpaceCP; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vInputMin = 0x1e4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vInputMax = 0x1f0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vOutputMin = 0x1fc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vOutputMax = 0x208; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flStartTime = 0x214; // float32 m_flStartTime; |  0x214 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime = 0x218; // float32 m_flEndTime; |  0x218 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInterpRate = 0x21c; // float32 m_flInterpRate; |  0x21c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetMethod = 0x220; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bOffset = 0x224; // bool m_bOffset; |  0x224 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAccelerate = 0x225; // bool m_bAccelerate; |  0x225 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

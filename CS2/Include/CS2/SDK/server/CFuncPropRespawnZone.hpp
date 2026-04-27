@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CFuncPropRespawnZone : public CS2::server::CBaseEntity {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CFuncPropRespawnZone) == 0x4A8, "CFuncPropRespawnZone size should be 0x4A8");
+
+#endif
 	}
 }

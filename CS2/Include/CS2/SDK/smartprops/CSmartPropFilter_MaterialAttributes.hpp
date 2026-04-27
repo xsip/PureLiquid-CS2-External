@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropFilter_MaterialAttributes : public CS2::smartprops::CSmartPropFilter {
 		public:
-			PROPERTY(m_AllowedMaterialAttributes,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x50);
-			PROPERTY(m_DisallowedMaterialAttributes,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x68);
+			PROPERTY(m_AllowedMaterialAttributes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x50);
+			PROPERTY(m_DisallowedMaterialAttributes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x68);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropFilter_MaterialAttributes) == 0x80, "CSmartPropFilter_MaterialAttributes size should be 0x80");
+
+#endif
 	}
 }

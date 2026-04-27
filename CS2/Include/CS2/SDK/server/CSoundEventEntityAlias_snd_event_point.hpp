@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CSoundEventEntityAlias_snd_event_point : public CS2::server::CSoundEventEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CSoundEventEntityAlias_snd_event_point) == 0x558, "CSoundEventEntityAlias_snd_event_point size should be 0x558");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CSoundEventEntityAlias_snd_event_point) == 0x568, "CSoundEventEntityAlias_snd_event_point size should be 0x568");
+
+#endif
 	}
 }

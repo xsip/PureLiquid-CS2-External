@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(nWeight,uint16_t, 0x2);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeWeightedNode_t) == 0x4, "FeWeightedNode_t size should be 0x4");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1340
+			// Class size: 0x1330
 			namespace C_CS2HudModelArms /*: public CS2::client::C_CS2HudModelBase*/ {
 				// NO SCHEMA DATA FOUND!
 			}

@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8C8
+			// Class size: 0x900
 			namespace CTriggerProximity /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_hMeasureTarget = 0x890; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iszMeasureTarget = 0x898; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_fRadius = 0x8a0; // float32 m_fRadius; |  0x8a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTouchers = 0x8a4; // int32_t m_nTouchers; |  0x8a4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_NearestEntityDistance = 0x8a8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_hMeasureTarget = 0x8c8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iszMeasureTarget = 0x8d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_fRadius = 0x8d8; // float32 m_fRadius; |  0x8d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTouchers = 0x8dc; // int32_t m_nTouchers; |  0x8dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_NearestEntityDistance = 0x8e0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

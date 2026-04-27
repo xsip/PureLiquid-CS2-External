@@ -24,19 +24,22 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitFromCPSnapshot : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x1e0);
-			NESTED_PROPERTY(m_nAttributeToRead,particles::ParticleAttributeIndex_t, 0x1e8);
-			NESTED_PROPERTY(m_nAttributeToWrite,particles::ParticleAttributeIndex_t, 0x1ec);
-			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1f0);
-			PROPERTY(m_bRandom,bool, 0x1f4);
-			PROPERTY(m_bReverse,bool, 0x1f5);
-			NESTED_PROPERTY(m_nSnapShotIncrement,particleslib::CParticleCollectionFloatInput, 0x1f8);
-			NESTED_PROPERTY(m_nManualSnapshotIndex,particleslib::CPerParticleFloatInput, 0x368);
-			PROPERTY(m_nRandomSeed,int32_t, 0x4d8);
-			PROPERTY(m_bLocalSpaceAngles,bool, 0x4dc);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
+			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x1e8);
+			NESTED_PROPERTY(m_nAttributeToRead,IDENTITY(particles::ParticleAttributeIndex_t), 0x1f0);
+			NESTED_PROPERTY(m_nAttributeToWrite,IDENTITY(particles::ParticleAttributeIndex_t), 0x1f4);
+			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1f8);
+			PROPERTY(m_bRandom,bool, 0x1fc);
+			PROPERTY(m_bReverse,bool, 0x1fd);
+			NESTED_PROPERTY(m_nSnapShotIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x200);
+			NESTED_PROPERTY(m_nManualSnapshotIndex,IDENTITY(particleslib::CPerParticleFloatInput), 0x370);
+			PROPERTY(m_nRandomSeed,int32_t, 0x4e0);
+			PROPERTY(m_bLocalSpaceAngles,bool, 0x4e4);
 			S2_PAD(0x308);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitFromCPSnapshot) == 0x4E0, "C_INIT_InitFromCPSnapshot size should be 0x4E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitFromCPSnapshot) == 0x4E8, "C_INIT_InitFromCPSnapshot size should be 0x4E8");
+
+#endif
 	}
 }

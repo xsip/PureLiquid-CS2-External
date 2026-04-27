@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace client {
 		class CBaseFilter : public CS2::client::CLogicalEntity {
 		public:
-			PROPERTY(m_bNegated,bool, 0x608);
-			NESTED_PROPERTY(m_OnPass,entity2::CEntityIOOutput, 0x610);
-			NESTED_PROPERTY(m_OnFail,entity2::CEntityIOOutput, 0x628);
+			PROPERTY(m_bNegated,bool, 0x600);
+			NESTED_PROPERTY(m_OnPass,IDENTITY(entity2::CEntityIOOutput), 0x608);
+			NESTED_PROPERTY(m_OnFail,IDENTITY(entity2::CEntityIOOutput), 0x620);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::client::CBaseFilter) == 0x640, "CBaseFilter size should be 0x640");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CBaseFilter) == 0x638, "CBaseFilter size should be 0x638");
+
+#endif
 	}
 }

@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class FootStepTrigger  {
 		public:
-			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector< int32 >, 0x0);
+			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x0);
 			PROPERTY(m_nFootIndex,int32_t, 0x18);
-			PROPERTY(m_triggerPhase,animgraphlib::StepPhase, 0x1c);
+			PROPERTY(m_triggerPhase,IDENTITY(animgraphlib::StepPhase), 0x1c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::FootStepTrigger) == 0x20, "FootStepTrigger size should be 0x20");
+
+#endif
 	}
 }

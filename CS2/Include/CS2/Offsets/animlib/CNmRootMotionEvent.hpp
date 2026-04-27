@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x28
+			// Class size: 0x20
 			namespace CNmRootMotionEvent /*: public CS2::animlib::CNmEvent*/ {
-				constexpr std::ptrdiff_t m_flBlendTimeSeconds = 0x20; // float32 m_flBlendTimeSeconds; |  0x20 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBlendTimeSeconds = 0x18; // float32 m_flBlendTimeSeconds; |  0x18 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace worldrenderer {
 		class EntityKeyValueData_t  {
 		public:
-			NESTED_PROPERTY(m_connections,GlobalTypes::CUtlVector<worldrenderer::EntityIOConnectionData_t>, 0x8);
+			NESTED_PROPERTY(m_connections,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::EntityIOConnectionData_t>), 0x8);
 			PROPERTY(m_keyValuesData,GlobalTypes::CUtlBinaryBlock, 0x20);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::EntityKeyValueData_t) == 0x38, "EntityKeyValueData_t size should be 0x38");
+
+#endif
 	}
 }

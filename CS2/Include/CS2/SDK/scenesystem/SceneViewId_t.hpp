@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nFrameCount,uint64_t, 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::scenesystem::SceneViewId_t) == 0x10, "SceneViewId_t size should be 0x10");
+
+#endif
 	}
 }

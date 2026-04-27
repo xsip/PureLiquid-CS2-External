@@ -26,15 +26,18 @@ namespace CS2 {
 			PROPERTY(m_flSpacing,GlobalTypes::CSmartPropAttributeFloat, 0xa8);
 			PROPERTY(m_flOffsetAlongPath,GlobalTypes::CSmartPropAttributeFloat, 0xe8);
 			PROPERTY(m_vPathOffset,GlobalTypes::CSmartPropAttributeVector2D, 0x128);
-			NESTED_PROPERTY(m_PathSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x168);
+			NESTED_PROPERTY(m_PathSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x168);
 			PROPERTY(m_bUseFixedUpDirection,GlobalTypes::CSmartPropAttributeBool, 0x1a8);
 			PROPERTY(m_bUseProjectedDistance,GlobalTypes::CSmartPropAttributeBool, 0x1e8);
 			PROPERTY(m_vUpDirection,GlobalTypes::CSmartPropAttributeVector, 0x228);
-			NESTED_PROPERTY(m_UpDirectionSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x268);
+			NESTED_PROPERTY(m_UpDirectionSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x268);
 			PROPERTY(m_DefaultPathInWorldSpace,GlobalTypes::CSmartPropAttributeBool, 0x2a8);
-			NESTED_PROPERTY(m_DefaultPath,GlobalTypes::CUtlVector<GlobalTypes::CSmartPropAttributeVector>, 0x2e8);
+			NESTED_PROPERTY(m_DefaultPath,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CSmartPropAttributeVector>), 0x2e8);
 			S2_PAD(0x260);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropElement_PlaceOnPath) == 0x300, "CSmartPropElement_PlaceOnPath size should be 0x300");
+
+#endif
 	}
 }

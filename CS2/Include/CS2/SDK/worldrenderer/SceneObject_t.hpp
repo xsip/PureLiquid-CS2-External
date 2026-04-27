@@ -33,16 +33,19 @@ namespace CS2 {
 			PROPERTY(m_flFadeEndDistance,float32, 0x38);
 			PROPERTY(m_vTintColor,GlobalTypes::Vector4D, 0x3c);
 			PROPERTY(m_skin,GlobalTypes::CUtlString*, 0x50);
-			PROPERTY(m_nObjectTypeFlags,worldrenderer::ObjectTypeFlags_t, 0x58);
+			PROPERTY(m_nObjectTypeFlags,IDENTITY(worldrenderer::ObjectTypeFlags_t), 0x58);
 			PROPERTY(m_vLightingOrigin,GlobalTypes::Vector, 0x5c);
 			PROPERTY(m_nOverlayRenderOrder,int16_t, 0x68);
 			PROPERTY(m_nLODOverride,int16_t, 0x6a);
 			PROPERTY(m_nCubeMapPrecomputedHandshake,int32_t, 0x6c);
 			PROPERTY(m_nLightProbeVolumePrecomputedHandshake,int32_t, 0x70);
-			PROPERTY(m_renderableModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x78);
-			PROPERTY(m_renderable,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCRenderMesh>, 0x80);
+			PROPERTY(m_renderableModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x78);
+			PROPERTY(m_renderable,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCRenderMesh>), 0x80);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::SceneObject_t) == 0x88, "SceneObject_t size should be 0x88");
+
+#endif
 	}
 }

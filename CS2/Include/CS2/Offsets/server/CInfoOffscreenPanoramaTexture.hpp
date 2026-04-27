@@ -20,7 +20,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nTargetChangeCount = 0x4e8; // int32_t m_nTargetChangeCount; |  0x4e8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_vecCSSClasses = 0x4f0; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_szTargetsName = 0x508; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_AdditionalTargetEntities = 0x510; // server::CUtlVector<GlobalTypes::CHandle<server::CBaseModelEntity>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_AdditionalTargetEntities = 0x510; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseModelEntity>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

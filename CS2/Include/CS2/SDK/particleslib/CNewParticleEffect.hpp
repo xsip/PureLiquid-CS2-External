@@ -30,14 +30,14 @@ namespace CS2 {
 	namespace particleslib {
 		class CNewParticleEffect : public CS2::particleslib::IParticleEffect {
 		public:
-			PROPERTY(m_pNext,particleslib::CNewParticleEffect*, 0x10);
-			PROPERTY(m_pPrev,particleslib::CNewParticleEffect*, 0x18);
-			PROPERTY(m_pParticles,particles::IParticleCollection*, 0x20);
+			PROPERTY(m_pNext,IDENTITY(particleslib::CNewParticleEffect*), 0x10);
+			PROPERTY(m_pPrev,IDENTITY(particleslib::CNewParticleEffect*), 0x18);
+			PROPERTY(m_pParticles,IDENTITY(particles::IParticleCollection*), 0x20);
 			PROPERTY(m_pDebugName,char*, 0x28);
 			PROPERTY(m_vSortOrigin,GlobalTypes::Vector, 0x40);
 			PROPERTY(m_flScale,float32, 0x4c);
-			PROPERTY(m_hOwner,particleslib::PARTICLE_EHANDLE__*, 0x50);
-			PROPERTY(m_pOwningParticleProperty,particleslib::CParticleProperty*, 0x58);
+			PROPERTY(m_hOwner,IDENTITY(particleslib::PARTICLE_EHANDLE__*), 0x50);
+			PROPERTY(m_pOwningParticleProperty,IDENTITY(particleslib::CParticleProperty*), 0x58);
 			PROPERTY(m_flFreezeTransitionStart,float32, 0x70);
 			PROPERTY(m_flFreezeTransitionDuration,float32, 0x74);
 			PROPERTY(m_flFreezeTransitionOverride,float32, 0x78);
@@ -48,6 +48,9 @@ namespace CS2 {
 			PROPERTY(m_RefCount,int32_t, 0xd0);
 			S2_PAD(0xD0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CNewParticleEffect) == 0xD8, "CNewParticleEffect size should be 0xD8");
+
+#endif
 	}
 }

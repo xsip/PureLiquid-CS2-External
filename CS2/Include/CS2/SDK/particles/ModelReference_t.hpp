@@ -25,10 +25,13 @@ namespace CS2 {
 	namespace particles {
 		class ModelReference_t  {
 		public:
-			PROPERTY(m_model,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x0);
+			PROPERTY(m_model,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x0);
 			PROPERTY(m_flRelativeProbabilityOfSpawn,float32, 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::ModelReference_t) == 0x10, "ModelReference_t size should be 0x10");
+
+#endif
 	}
 }

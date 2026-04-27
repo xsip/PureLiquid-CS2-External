@@ -24,28 +24,31 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderTrails : public CS2::particles::CBaseTrailRenderer {
 		public:
-			PROPERTY(m_bEnableFadingAndClamping,bool, 0x30e0);
-			PROPERTY(m_flStartFadeDot,float32, 0x30e4);
-			PROPERTY(m_flEndFadeDot,float32, 0x30e8);
-			NESTED_PROPERTY(m_nPrevPntSource,particles::ParticleAttributeIndex_t, 0x30ec);
-			PROPERTY(m_flMaxLength,float32, 0x30f0);
-			PROPERTY(m_flMinLength,float32, 0x30f4);
-			PROPERTY(m_bIgnoreDT,bool, 0x30f8);
-			PROPERTY(m_flConstrainRadiusToLengthRatio,float32, 0x30fc);
-			PROPERTY(m_flLengthScale,float32, 0x3100);
-			PROPERTY(m_flLengthFadeInTime,float32, 0x3104);
-			NESTED_PROPERTY(m_flRadiusHeadTaper,particleslib::CPerParticleFloatInput, 0x3108);
-			NESTED_PROPERTY(m_vecHeadColorScale,particleslib::CParticleCollectionVecInput, 0x3278);
-			NESTED_PROPERTY(m_flHeadAlphaScale,particleslib::CPerParticleFloatInput, 0x3930);
-			NESTED_PROPERTY(m_flRadiusTaper,particleslib::CPerParticleFloatInput, 0x3aa0);
-			NESTED_PROPERTY(m_vecTailColorScale,particleslib::CParticleCollectionVecInput, 0x3c10);
-			NESTED_PROPERTY(m_flTailAlphaScale,particleslib::CPerParticleFloatInput, 0x42c8);
-			NESTED_PROPERTY(m_nHorizCropField,particles::ParticleAttributeIndex_t, 0x4438);
-			NESTED_PROPERTY(m_nVertCropField,particles::ParticleAttributeIndex_t, 0x443c);
-			PROPERTY(m_flForwardShift,float32, 0x4440);
-			PROPERTY(m_bFlipUVBasedOnPitchYaw,bool, 0x4444);
+			PROPERTY(m_bEnableFadingAndClamping,bool, 0x30e8);
+			PROPERTY(m_flStartFadeDot,float32, 0x30ec);
+			PROPERTY(m_flEndFadeDot,float32, 0x30f0);
+			NESTED_PROPERTY(m_nPrevPntSource,IDENTITY(particles::ParticleAttributeIndex_t), 0x30f4);
+			PROPERTY(m_flMaxLength,float32, 0x30f8);
+			PROPERTY(m_flMinLength,float32, 0x30fc);
+			PROPERTY(m_bIgnoreDT,bool, 0x3100);
+			PROPERTY(m_flConstrainRadiusToLengthRatio,float32, 0x3104);
+			PROPERTY(m_flLengthScale,float32, 0x3108);
+			PROPERTY(m_flLengthFadeInTime,float32, 0x310c);
+			NESTED_PROPERTY(m_flRadiusHeadTaper,IDENTITY(particleslib::CPerParticleFloatInput), 0x3110);
+			NESTED_PROPERTY(m_vecHeadColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3280);
+			NESTED_PROPERTY(m_flHeadAlphaScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x3938);
+			NESTED_PROPERTY(m_flRadiusTaper,IDENTITY(particleslib::CPerParticleFloatInput), 0x3aa8);
+			NESTED_PROPERTY(m_vecTailColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3c18);
+			NESTED_PROPERTY(m_flTailAlphaScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x42d0);
+			NESTED_PROPERTY(m_nHorizCropField,IDENTITY(particles::ParticleAttributeIndex_t), 0x4440);
+			NESTED_PROPERTY(m_nVertCropField,IDENTITY(particles::ParticleAttributeIndex_t), 0x4444);
+			PROPERTY(m_flForwardShift,float32, 0x4448);
+			PROPERTY(m_bFlipUVBasedOnPitchYaw,bool, 0x444c);
 			S2_PAD(0x1368);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderTrails) == 0x4448, "C_OP_RenderTrails size should be 0x4448");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderTrails) == 0x4450, "C_OP_RenderTrails size should be 0x4450");
+
+#endif
 	}
 }

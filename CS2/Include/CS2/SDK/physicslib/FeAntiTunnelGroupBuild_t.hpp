@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_nCollisionMask,uint32_t, 0x4);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeAntiTunnelGroupBuild_t) == 0x8, "FeAntiTunnelGroupBuild_t size should be 0x8");
+
+#endif
 	}
 }

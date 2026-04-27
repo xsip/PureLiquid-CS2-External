@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace pulse_runtime_lib {
 			// Class size: 0xF8
 			namespace CPulseCell_Timeline /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
-				constexpr std::ptrdiff_t m_TimelineEvents = 0x48; // server::CUtlVector<pulse_runtime_lib::TimelineEvent_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_TimelineEvents = 0x48; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulseCell_Timeline_TimelineEvent_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bWaitForChildOutflows = 0x60; // bool m_bWaitForChildOutflows; |  0x60 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_OnFinished = 0x68; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
 				constexpr std::ptrdiff_t m_OnCanceled = 0xb0; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48

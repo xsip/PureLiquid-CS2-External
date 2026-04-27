@@ -28,6 +28,9 @@ namespace CS2 {
 			PROPERTY(m_vColorTint,GlobalTypes::Vector, 0x18);
 			S2_PAD(0x24);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::PostProcessingVignetteParameters_t) == 0x24, "PostProcessingVignetteParameters_t size should be 0x24");
+
+#endif
 	}
 }

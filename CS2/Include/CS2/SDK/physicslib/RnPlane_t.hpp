@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flOffset,float32, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnPlane_t) == 0x10, "RnPlane_t size should be 0x10");
+
+#endif
 	}
 }

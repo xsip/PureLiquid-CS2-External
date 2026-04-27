@@ -29,26 +29,29 @@ namespace CS2 {
 	namespace server {
 		class CPropDoorRotating : public CS2::server::CBasePropDoor {
 		public:
-			PROPERTY(m_vecAxis,GlobalTypes::Vector, 0xe50);
-			PROPERTY(m_flDistance,float32, 0xe5c);
-			PROPERTY(m_eSpawnPosition,server::PropDoorRotatingSpawnPos_t, 0xe60);
-			PROPERTY(m_eOpenDirection,server::PropDoorRotatingOpenDirection_e, 0xe64);
-			PROPERTY(m_eCurrentOpenDirection,server::PropDoorRotatingOpenDirection_e, 0xe68);
-			PROPERTY(m_eDefaultCheckDirection,server::doorCheck_e, 0xe6c);
-			PROPERTY(m_flAjarAngle,float32, 0xe70);
-			PROPERTY(m_angRotationAjarDeprecated,GlobalTypes::QAngle, 0xe74);
-			PROPERTY(m_angRotationClosed,GlobalTypes::QAngle, 0xe80);
-			PROPERTY(m_angRotationOpenForward,GlobalTypes::QAngle, 0xe8c);
-			PROPERTY(m_angRotationOpenBack,GlobalTypes::QAngle, 0xe98);
-			PROPERTY(m_angGoal,GlobalTypes::QAngle, 0xea4);
-			PROPERTY(m_vecForwardBoundsMin,GlobalTypes::Vector, 0xeb0);
-			PROPERTY(m_vecForwardBoundsMax,GlobalTypes::Vector, 0xebc);
-			PROPERTY(m_vecBackBoundsMin,GlobalTypes::Vector, 0xec8);
-			PROPERTY(m_vecBackBoundsMax,GlobalTypes::Vector, 0xed4);
-			PROPERTY(m_bAjarDoorShouldntAlwaysOpen,bool, 0xee0);
-			PROPERTY(m_hEntityBlocker,GlobalTypes::CHandle<server::CEntityBlocker>, 0xee4);
+			PROPERTY(m_vecAxis,GlobalTypes::Vector, 0xd80);
+			PROPERTY(m_flDistance,float32, 0xd8c);
+			PROPERTY(m_eSpawnPosition,IDENTITY(server::PropDoorRotatingSpawnPos_t), 0xd90);
+			PROPERTY(m_eOpenDirection,IDENTITY(server::PropDoorRotatingOpenDirection_e), 0xd94);
+			PROPERTY(m_eCurrentOpenDirection,IDENTITY(server::PropDoorRotatingOpenDirection_e), 0xd98);
+			PROPERTY(m_eDefaultCheckDirection,IDENTITY(server::doorCheck_e), 0xd9c);
+			PROPERTY(m_flAjarAngle,float32, 0xda0);
+			PROPERTY(m_angRotationAjarDeprecated,GlobalTypes::QAngle, 0xda4);
+			PROPERTY(m_angRotationClosed,GlobalTypes::QAngle, 0xdb0);
+			PROPERTY(m_angRotationOpenForward,GlobalTypes::QAngle, 0xdbc);
+			PROPERTY(m_angRotationOpenBack,GlobalTypes::QAngle, 0xdc8);
+			PROPERTY(m_angGoal,GlobalTypes::QAngle, 0xdd4);
+			PROPERTY(m_vecForwardBoundsMin,GlobalTypes::Vector, 0xde0);
+			PROPERTY(m_vecForwardBoundsMax,GlobalTypes::Vector, 0xdec);
+			PROPERTY(m_vecBackBoundsMin,GlobalTypes::Vector, 0xdf8);
+			PROPERTY(m_vecBackBoundsMax,GlobalTypes::Vector, 0xe04);
+			PROPERTY(m_bAjarDoorShouldntAlwaysOpen,bool, 0xe10);
+			PROPERTY(m_hEntityBlocker,IDENTITY(GlobalTypes::CHandle<server::CEntityBlocker>), 0xe14);
 			S2_PAD(0xA0);
 		};
-		//static_assert(sizeof(CS2::server::CPropDoorRotating) == 0xEF0, "CPropDoorRotating size should be 0xEF0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPropDoorRotating) == 0xE20, "CPropDoorRotating size should be 0xE20");
+
+#endif
 	}
 }

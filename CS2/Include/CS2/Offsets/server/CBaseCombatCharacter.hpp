@@ -8,18 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xB70
-			namespace CBaseCombatCharacter /*: public CS2::server::CBaseFlex*/ {
-				constexpr std::ptrdiff_t m_bForceServerRagdoll = 0xab0; // bool m_bForceServerRagdoll; |  0xab0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hMyWearables = 0xab8; // server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CEconWearable>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_impactEnergyScale = 0xad0; // float32 m_impactEnergyScale; |  0xad0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bApplyStressDamage = 0xad4; // bool m_bApplyStressDamage; |  0xad4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDeathEventsDispatched = 0xad5; // bool m_bDeathEventsDispatched; |  0xad5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_pVecRelationships = 0xb18; // GlobalTypes::CUtlVector*  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_strRelationships = 0xb20; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_eHull = 0xb28; // client::Hull_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nNavHullIdx = 0xb2c; // uint32_t m_nNavHullIdx; |  0xb2c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_movementStats = 0xb30; // server::CMovementStatsProperty  | Schema_DeclaredClass | Size: 0x40
+			// Class size: 0xA00
+			namespace CBaseCombatCharacter /*: public CS2::server::CBaseAnimGraph*/ {
+				constexpr std::ptrdiff_t m_bForceServerRagdoll = 0x940; // bool m_bForceServerRagdoll; |  0x940 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hMyWearables = 0x948; // server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CEconWearable>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_impactEnergyScale = 0x960; // float32 m_impactEnergyScale; |  0x960 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bApplyStressDamage = 0x964; // bool m_bApplyStressDamage; |  0x964 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDeathEventsDispatched = 0x965; // bool m_bDeathEventsDispatched; |  0x965 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_pVecRelationships = 0x9a8; // GlobalTypes::CUtlVector*  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_strRelationships = 0x9b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_eHull = 0x9b8; // client::Hull_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nNavHullIdx = 0x9bc; // uint32_t m_nNavHullIdx; |  0x9bc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_movementStats = 0x9c0; // server::CMovementStatsProperty  | Schema_DeclaredClass | Size: 0x40
 			}
 		}
 	}

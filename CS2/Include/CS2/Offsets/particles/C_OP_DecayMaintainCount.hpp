@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x368
+			// Class size: 0x370
 			namespace C_OP_DecayMaintainCount /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nParticlesToMaintain = 0x1d0; // int32_t m_nParticlesToMaintain; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDecayDelay = 0x1d4; // float32 m_flDecayDelay; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x1d8; // int32_t m_nSnapshotControlPoint; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x1e0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bLifespanDecay = 0x1e8; // bool m_bLifespanDecay; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flScale = 0x1f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bKillNewest = 0x360; // bool m_bKillNewest; |  0x360 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nParticlesToMaintain = 0x1d8; // int32_t m_nParticlesToMaintain; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDecayDelay = 0x1dc; // float32 m_flDecayDelay; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x1e0; // int32_t m_nSnapshotControlPoint; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x1e8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bLifespanDecay = 0x1f0; // bool m_bLifespanDecay; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flScale = 0x1f8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bKillNewest = 0x368; // bool m_bKillNewest; |  0x368 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

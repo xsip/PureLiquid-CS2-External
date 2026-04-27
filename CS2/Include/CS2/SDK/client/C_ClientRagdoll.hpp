@@ -23,22 +23,25 @@ namespace CS2 {
 	namespace client {
 		class C_ClientRagdoll : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bFadeOut,bool, 0x1168);
-			PROPERTY(m_bImportant,bool, 0x1169);
-			NESTED_PROPERTY(m_flEffectTime,entity2::GameTime_t, 0x116c);
-			NESTED_PROPERTY(m_gibDespawnTime,entity2::GameTime_t, 0x1170);
-			PROPERTY(m_iCurrentFriction,int32_t, 0x1174);
-			PROPERTY(m_iMinFriction,int32_t, 0x1178);
-			PROPERTY(m_iMaxFriction,int32_t, 0x117c);
-			PROPERTY(m_iFrictionAnimState,int32_t, 0x1180);
-			PROPERTY(m_bReleaseRagdoll,bool, 0x1184);
-			NESTED_PROPERTY(m_iEyeAttachment,modellib::AttachmentHandle_t, 0x1185);
-			PROPERTY(m_bFadingOut,bool, 0x1186);
-			PROPERTY_ARRAY(m_flScaleEnd,float32, 10 , 0x1188);
-			PROPERTY_ARRAY(m_flScaleTimeStart,entity2::GameTime_t, 10 , 0x11b0);
-			PROPERTY_ARRAY(m_flScaleTimeEnd,entity2::GameTime_t, 10 , 0x11d8);
+			PROPERTY(m_bFadeOut,bool, 0x1158);
+			PROPERTY(m_bImportant,bool, 0x1159);
+			NESTED_PROPERTY(m_flEffectTime,IDENTITY(entity2::GameTime_t), 0x115c);
+			NESTED_PROPERTY(m_gibDespawnTime,IDENTITY(entity2::GameTime_t), 0x1160);
+			PROPERTY(m_iCurrentFriction,int32_t, 0x1164);
+			PROPERTY(m_iMinFriction,int32_t, 0x1168);
+			PROPERTY(m_iMaxFriction,int32_t, 0x116c);
+			PROPERTY(m_iFrictionAnimState,int32_t, 0x1170);
+			PROPERTY(m_bReleaseRagdoll,bool, 0x1174);
+			NESTED_PROPERTY(m_iEyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1175);
+			PROPERTY(m_bFadingOut,bool, 0x1176);
+			PROPERTY_ARRAY(m_flScaleEnd,float32, 10 , 0x1178);
+			PROPERTY_ARRAY(m_flScaleTimeStart,IDENTITY(entity2::GameTime_t), 10 , 0x11a0);
+			PROPERTY_ARRAY(m_flScaleTimeEnd,IDENTITY(entity2::GameTime_t), 10 , 0x11c8);
 			S2_PAD(0x98);
 		};
-		//static_assert(sizeof(CS2::client::C_ClientRagdoll) == 0x1200, "C_ClientRagdoll size should be 0x1200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_ClientRagdoll) == 0x11F0, "C_ClientRagdoll size should be 0x11F0");
+
+#endif
 	}
 }

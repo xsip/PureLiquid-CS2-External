@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CWeaponAWP : public CS2::server::CCSWeaponBaseGun {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CWeaponAWP) == 0x1150, "CWeaponAWP size should be 0x1150");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CWeaponAWP) == 0x1050, "CWeaponAWP size should be 0x1050");
+
+#endif
 	}
 }

@@ -27,15 +27,18 @@ namespace CS2 {
 			PROPERTY(m_sName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_sBreakablePieceName,GlobalTypes::CGlobalSymbol, 0x8);
 			PROPERTY(m_nBodyGroupValue,int32_t, 0x10);
-			NESTED_PROPERTY(m_nHealth,client::CSkillInt, 0x14);
+			NESTED_PROPERTY(m_nHealth,IDENTITY(client::CSkillInt), 0x14);
 			PROPERTY(m_flCriticalDamagePercent,float32, 0x24);
-			PROPERTY(m_nDamagePassthroughType,client::EDestructiblePartDamagePassThroughType, 0x28);
-			PROPERTY(m_nDestructionDeathBehavior,client::DestructiblePartDestructionDeathBehavior_t, 0x2c);
+			PROPERTY(m_nDamagePassthroughType,IDENTITY(client::EDestructiblePartDamagePassThroughType), 0x28);
+			PROPERTY(m_nDestructionDeathBehavior,IDENTITY(client::DestructiblePartDestructionDeathBehavior_t), 0x2c);
 			PROPERTY(m_sCustomDeathHandshake,GlobalTypes::CGlobalSymbol, 0x30);
 			PROPERTY(m_bShouldDestroyOnDeath,bool, 0x38);
-			NESTED_PROPERTY(m_flDeathDestroyTime,tier2::CRangeFloat, 0x3c);
+			NESTED_PROPERTY(m_flDeathDestroyTime,IDENTITY(tier2::CRangeFloat), 0x3c);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CDestructiblePart_DamageLevel) == 0x48, "CDestructiblePart_DamageLevel size should be 0x48");
+
+#endif
 	}
 }

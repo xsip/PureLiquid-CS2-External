@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_StopAfterCPDuration : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_flDuration,particleslib::CParticleCollectionFloatInput, 0x1d8);
-			PROPERTY(m_bDestroyImmediately,bool, 0x348);
-			PROPERTY(m_bPlayEndCap,bool, 0x349);
+			NESTED_PROPERTY(m_flDuration,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			PROPERTY(m_bDestroyImmediately,bool, 0x350);
+			PROPERTY(m_bPlayEndCap,bool, 0x351);
 			S2_PAD(0x178);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_StopAfterCPDuration) == 0x350, "C_OP_StopAfterCPDuration size should be 0x350");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_StopAfterCPDuration) == 0x358, "C_OP_StopAfterCPDuration size should be 0x358");
+
+#endif
 	}
 }

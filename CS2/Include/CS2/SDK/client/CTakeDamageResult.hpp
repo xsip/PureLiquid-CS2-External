@@ -10,6 +10,8 @@
 #endif
 
 
+#include <SDK/client/DestructiblePartDamageRequest_t.hpp>
+#include <SDK/client/TakeDamageFlags_t.hpp>
 #include <SDK/client/HitGroup_t.hpp>
 
 
@@ -26,19 +28,25 @@ namespace CS2 {
 	namespace client {
 		class CTakeDamageResult  {
 		public:
-			PROPERTY(m_pOriginatingInfo,client::CTakeDamageInfo*, 0x0);
-			PROPERTY(m_nHealthLost,int32_t, 0x8);
-			PROPERTY(m_nHealthBefore,int32_t, 0xc);
-			PROPERTY(m_nDamageDealt,int32_t, 0x10);
-			PROPERTY(m_flPreModifiedDamage,float32, 0x14);
-			PROPERTY(m_nTotalledHealthLost,int32_t, 0x18);
-			PROPERTY(m_nTotalledDamageDealt,int32_t, 0x1c);
-			PROPERTY(m_flTotalledPreModifiedDamage,float32, 0x20);
-			PROPERTY(m_bWasDamageSuppressed,bool, 0x24);
-			PROPERTY(m_bSuppressFlinch,bool, 0x25);
-			PROPERTY(m_nOverrideFlinchHitGroup,client::HitGroup_t, 0x28);
-			S2_PAD(0x30);
+			PROPERTY(m_pOriginatingInfo,IDENTITY(client::CTakeDamageInfo*), 0x0);
+			// PROPERTY(m_DestructibleHitGroupRequests,IDENTITY(GlobalTypes::CUtlLeanVector<client::DestructiblePartDamageRequest_t>), 0x8);
+			PROPERTY(m_nHealthLost,int32_t, 0x18);
+			PROPERTY(m_nHealthBefore,int32_t, 0x1c);
+			PROPERTY(m_flDamageDealt,float32, 0x20);
+			PROPERTY(m_flPreModifiedDamage,float32, 0x24);
+			PROPERTY(m_nTotalledHealthLost,int32_t, 0x28);
+			PROPERTY(m_flTotalledDamageDealt,float32, 0x2c);
+			PROPERTY(m_flTotalledPreModifiedDamage,float32, 0x30);
+			PROPERTY(m_flNewDamageAccumulatorValue,float32, 0x34);
+			PROPERTY(m_nDamageFlags,IDENTITY(client::TakeDamageFlags_t), 0x38);
+			PROPERTY(m_bWasDamageSuppressed,bool, 0x40);
+			PROPERTY(m_bSuppressFlinch,bool, 0x41);
+			PROPERTY(m_nOverrideFlinchHitGroup,IDENTITY(client::HitGroup_t), 0x44);
+			S2_PAD(0x50);
 		};
-		//static_assert(sizeof(CS2::client::CTakeDamageResult) == 0x30, "CTakeDamageResult size should be 0x30");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CTakeDamageResult) == 0x50, "CTakeDamageResult size should be 0x50");
+
+#endif
 	}
 }

@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RtEnvCull : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_vecTestDir,GlobalTypes::Vector, 0x1d0);
-			PROPERTY(m_vecTestNormal,GlobalTypes::Vector, 0x1dc);
-			PROPERTY(m_bCullOnMiss,bool, 0x1e8);
-			PROPERTY(m_bStickInsteadOfCull,bool, 0x1e9);
-			PROPERTY_ARRAY(m_RtEnvName,char, 128 , 0x1ea);
-			PROPERTY(m_nRTEnvCP,int32_t, 0x26c);
-			PROPERTY(m_nComponent,int32_t, 0x270);
+			PROPERTY(m_vecTestDir,GlobalTypes::Vector, 0x1d8);
+			PROPERTY(m_vecTestNormal,GlobalTypes::Vector, 0x1e4);
+			PROPERTY(m_bCullOnMiss,bool, 0x1f0);
+			PROPERTY(m_bStickInsteadOfCull,bool, 0x1f1);
+			PROPERTY_ARRAY(m_RtEnvName,char, 128 , 0x1f2);
+			PROPERTY(m_nRTEnvCP,int32_t, 0x274);
+			PROPERTY(m_nComponent,int32_t, 0x278);
 			S2_PAD(0xA8);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RtEnvCull) == 0x278, "C_OP_RtEnvCull size should be 0x278");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RtEnvCull) == 0x280, "C_OP_RtEnvCull size should be 0x280");
+
+#endif
 	}
 }

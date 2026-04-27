@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume : public CS2::server::CEnvCombinedLightProbeVolume {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume) == 0x1638, "CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume size should be 0x1638");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume) == 0x15F0, "CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume size should be 0x15F0");
+
+#endif
 	}
 }

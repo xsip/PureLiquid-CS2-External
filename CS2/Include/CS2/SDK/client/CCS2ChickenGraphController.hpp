@@ -21,18 +21,21 @@ namespace CS2 {
 	namespace client {
 		class CCS2ChickenGraphController : public CS2::client::CAnimGraphControllerBase {
 		public:
-			PROPERTY(m_action,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0x90);
-			PROPERTY(m_actionSubtype,GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>, 0xa8);
-			PROPERTY(m_bActionReset,GlobalTypes::CAnimGraph2ParamAutoResetOptionalRef, 0xc0);
-			PROPERTY(m_idleVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0xe0);
-			PROPERTY(m_runVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0xf8);
-			PROPERTY(m_panicVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x110);
-			PROPERTY(m_squatVariation,GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >, 0x128);
-			PROPERTY(m_bInWater,GlobalTypes::CAnimGraph2ParamOptionalRef< bool >, 0x140);
-			PROPERTY(m_bHasActionCompletedEvent,bool, 0x158);
-			PROPERTY(m_bWaitingForCompletedEvent,bool, 0x159);
+			// PROPERTY(m_action,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x88);
+			// PROPERTY(m_actionSubtype,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0xa0);
+			PROPERTY(m_bActionReset,GlobalTypes::CAnimGraph2ParamAutoResetOptionalRef, 0xb8);
+			// PROPERTY(m_idleVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xd8);
+			// PROPERTY(m_runVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xf0);
+			// PROPERTY(m_panicVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x108);
+			// PROPERTY(m_squatVariation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x120);
+			// PROPERTY(m_bInWater,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x138);
+			PROPERTY(m_bHasActionCompletedEvent,bool, 0x150);
+			PROPERTY(m_bWaitingForCompletedEvent,bool, 0x151);
 			S2_PAD(0xD0);
 		};
-		//static_assert(sizeof(CS2::client::CCS2ChickenGraphController) == 0x160, "CCS2ChickenGraphController size should be 0x160");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CCS2ChickenGraphController) == 0x158, "CCS2ChickenGraphController size should be 0x158");
+
+#endif
 	}
 }

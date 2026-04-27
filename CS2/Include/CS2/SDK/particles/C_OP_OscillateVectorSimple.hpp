@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_OscillateVectorSimple : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_Rate,GlobalTypes::Vector, 0x1d0);
-			PROPERTY(m_Frequency,GlobalTypes::Vector, 0x1dc);
-			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x1e8);
-			PROPERTY(m_flOscMult,float32, 0x1ec);
-			PROPERTY(m_flOscAdd,float32, 0x1f0);
-			PROPERTY(m_bOffset,bool, 0x1f4);
+			PROPERTY(m_Rate,GlobalTypes::Vector, 0x1d8);
+			PROPERTY(m_Frequency,GlobalTypes::Vector, 0x1e4);
+			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x1f0);
+			PROPERTY(m_flOscMult,float32, 0x1f4);
+			PROPERTY(m_flOscAdd,float32, 0x1f8);
+			PROPERTY(m_bOffset,bool, 0x1fc);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_OscillateVectorSimple) == 0x1F8, "C_OP_OscillateVectorSimple size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_OscillateVectorSimple) == 0x200, "C_OP_OscillateVectorSimple size should be 0x200");
+
+#endif
 	}
 }

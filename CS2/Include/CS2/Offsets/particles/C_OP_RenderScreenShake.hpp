@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x248
+			// Class size: 0x250
 			namespace C_OP_RenderScreenShake /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_flDurationScale = 0x220; // float32 m_flDurationScale; |  0x220 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadiusScale = 0x224; // float32 m_flRadiusScale; |  0x224 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFrequencyScale = 0x228; // float32 m_flFrequencyScale; |  0x228 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAmplitudeScale = 0x22c; // float32 m_flAmplitudeScale; |  0x22c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRadiusField = 0x230; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nDurationField = 0x234; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nFrequencyField = 0x238; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nAmplitudeField = 0x23c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nFilterCP = 0x240; // int32_t m_nFilterCP; |  0x240 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDurationScale = 0x228; // float32 m_flDurationScale; |  0x228 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadiusScale = 0x22c; // float32 m_flRadiusScale; |  0x22c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFrequencyScale = 0x230; // float32 m_flFrequencyScale; |  0x230 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAmplitudeScale = 0x234; // float32 m_flAmplitudeScale; |  0x234 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRadiusField = 0x238; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nDurationField = 0x23c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nFrequencyField = 0x240; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nAmplitudeField = 0x244; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nFilterCP = 0x248; // int32_t m_nFilterCP; |  0x248 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

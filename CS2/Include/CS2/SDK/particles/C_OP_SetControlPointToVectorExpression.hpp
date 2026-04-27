@@ -24,14 +24,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetControlPointToVectorExpression : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nExpression,particles::VectorExpressionType_t, 0x1d8);
-			PROPERTY(m_nOutputCP,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_vInput1,particleslib::CParticleCollectionVecInput, 0x1e0);
-			NESTED_PROPERTY(m_vInput2,particleslib::CParticleCollectionVecInput, 0x898);
-			NESTED_PROPERTY(m_flLerp,particleslib::CPerParticleFloatInput, 0xf50);
-			PROPERTY(m_bNormalizedOutput,bool, 0x10c0);
+			PROPERTY(m_nExpression,IDENTITY(particles::VectorExpressionType_t), 0x1e0);
+			PROPERTY(m_nOutputCP,int32_t, 0x1e4);
+			NESTED_PROPERTY(m_vInput1,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e8);
+			NESTED_PROPERTY(m_vInput2,IDENTITY(particleslib::CParticleCollectionVecInput), 0x8a0);
+			NESTED_PROPERTY(m_flLerp,IDENTITY(particleslib::CPerParticleFloatInput), 0xf58);
+			PROPERTY(m_bNormalizedOutput,bool, 0x10c8);
 			S2_PAD(0xEF0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToVectorExpression) == 0x10C8, "C_OP_SetControlPointToVectorExpression size should be 0x10C8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetControlPointToVectorExpression) == 0x10D0, "C_OP_SetControlPointToVectorExpression size should be 0x10D0");
+
+#endif
 	}
 }

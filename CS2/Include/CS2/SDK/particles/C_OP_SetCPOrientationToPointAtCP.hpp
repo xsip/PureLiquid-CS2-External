@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetCPOrientationToPointAtCP : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			PROPERTY(m_nInputCP,int32_t, 0x1d8);
-			PROPERTY(m_nOutputCP,int32_t, 0x1dc);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CParticleCollectionFloatInput, 0x1e0);
-			PROPERTY(m_b2DOrientation,bool, 0x350);
-			PROPERTY(m_bAvoidSingularity,bool, 0x351);
-			PROPERTY(m_bPointAway,bool, 0x352);
+			PROPERTY(m_nInputCP,int32_t, 0x1e0);
+			PROPERTY(m_nOutputCP,int32_t, 0x1e4);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e8);
+			PROPERTY(m_b2DOrientation,bool, 0x358);
+			PROPERTY(m_bAvoidSingularity,bool, 0x359);
+			PROPERTY(m_bPointAway,bool, 0x35a);
 			S2_PAD(0x180);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetCPOrientationToPointAtCP) == 0x358, "C_OP_SetCPOrientationToPointAtCP size should be 0x358");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetCPOrientationToPointAtCP) == 0x360, "C_OP_SetCPOrientationToPointAtCP size should be 0x360");
+
+#endif
 	}
 }

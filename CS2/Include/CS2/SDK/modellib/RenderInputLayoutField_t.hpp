@@ -25,10 +25,13 @@ namespace CS2 {
 			PROPERTY(m_nSemanticIndex,int8_t, 0x20);
 			PROPERTY(m_nOffset,int16_t, 0x28);
 			PROPERTY(m_nSlot,int8_t, 0x2a);
-			PROPERTY(m_nSlotType,modellib::RenderSlotType_t, 0x2b);
+			PROPERTY(m_nSlotType,IDENTITY(modellib::RenderSlotType_t), 0x2b);
 			PROPERTY_ARRAY(m_szShaderSemantic,char, 32 , 0x2c);
 			S2_PAD(0x4C);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::RenderInputLayoutField_t) == 0x4C, "RenderInputLayoutField_t size should be 0x4C");
+
+#endif
 	}
 }

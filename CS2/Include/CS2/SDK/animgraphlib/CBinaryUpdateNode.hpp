@@ -23,14 +23,17 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CBinaryUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_pChild1,animgraphlib::CAnimUpdateNodeRef, 0x60);
-			NESTED_PROPERTY(m_pChild2,animgraphlib::CAnimUpdateNodeRef, 0x70);
-			PROPERTY(m_timingBehavior,animgraphlib::BinaryNodeTiming, 0x80);
+			NESTED_PROPERTY(m_pChild1,IDENTITY(animgraphlib::CAnimUpdateNodeRef), 0x60);
+			NESTED_PROPERTY(m_pChild2,IDENTITY(animgraphlib::CAnimUpdateNodeRef), 0x70);
+			PROPERTY(m_timingBehavior,IDENTITY(animgraphlib::BinaryNodeTiming), 0x80);
 			PROPERTY(m_flTimingBlend,float32, 0x84);
 			PROPERTY(m_bResetChild1,bool, 0x88);
 			PROPERTY(m_bResetChild2,bool, 0x89);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBinaryUpdateNode) == 0x90, "CBinaryUpdateNode size should be 0x90");
+
+#endif
 	}
 }

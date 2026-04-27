@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace server {
 		class CFuncBrush : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_iSolidity,client::BrushSolidities_e, 0x730);
-			PROPERTY(m_iDisabled,int32_t, 0x734);
-			PROPERTY(m_bSolidBsp,bool, 0x738);
-			PROPERTY(m_iszExcludedClass,GlobalTypes::CUtlSymbolLarge*, 0x740);
-			PROPERTY(m_bInvertExclusion,bool, 0x748);
-			PROPERTY(m_bScriptedMovement,bool, 0x749);
+			PROPERTY(m_iSolidity,IDENTITY(client::BrushSolidities_e), 0x768);
+			PROPERTY(m_iDisabled,int32_t, 0x76c);
+			PROPERTY(m_bSolidBsp,bool, 0x770);
+			PROPERTY(m_iszExcludedClass,GlobalTypes::CUtlSymbolLarge*, 0x778);
+			PROPERTY(m_bInvertExclusion,bool, 0x780);
+			PROPERTY(m_bScriptedMovement,bool, 0x781);
 			S2_PAD(0x20);
 		};
-		//static_assert(sizeof(CS2::server::CFuncBrush) == 0x750, "CFuncBrush size should be 0x750");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncBrush) == 0x788, "CFuncBrush size should be 0x788");
+
+#endif
 	}
 }

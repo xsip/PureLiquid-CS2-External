@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x628
+			// Class size: 0x620
 			namespace C_SoundOpvarSetOBBEntity /*: public CS2::client::C_SoundOpvarSetAABBEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

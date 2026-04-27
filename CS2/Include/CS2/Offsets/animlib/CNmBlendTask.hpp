@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0xE0
+			// Class size: 0xD0
 			namespace CNmBlendTask /*: public CS2::animlib::CNmBlendTaskBase*/ {
 				// NO SCHEMA DATA FOUND!
 			}

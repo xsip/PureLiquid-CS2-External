@@ -27,13 +27,16 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nWeightListIndex,int32_t, 0x94);
 			PROPERTY(m_flRootMotionBlend,float32, 0x98);
-			PROPERTY(m_blendSpace,animgraphlib::BoneMaskBlendSpace, 0x9c);
-			PROPERTY(m_footMotionTiming,animgraphlib::BinaryNodeChildOption, 0xa0);
+			PROPERTY(m_blendSpace,IDENTITY(animgraphlib::BoneMaskBlendSpace), 0x9c);
+			PROPERTY(m_footMotionTiming,IDENTITY(animgraphlib::BinaryNodeChildOption), 0xa0);
 			PROPERTY(m_bUseBlendScale,bool, 0xa4);
-			PROPERTY(m_blendValueSource,animgraphlib::AnimValueSource, 0xa8);
-			NESTED_PROPERTY(m_hBlendParameter,animgraphlib::CAnimParamHandle, 0xac);
+			PROPERTY(m_blendValueSource,IDENTITY(animgraphlib::AnimValueSource), 0xa8);
+			NESTED_PROPERTY(m_hBlendParameter,IDENTITY(animgraphlib::CAnimParamHandle), 0xac);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBoneMaskUpdateNode) == 0xB0, "CBoneMaskUpdateNode size should be 0xB0");
+
+#endif
 	}
 }

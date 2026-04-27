@@ -32,6 +32,9 @@ namespace CS2 {
 			PROPERTY(m_gainSweep,GlobalTypes::CPiecewiseCurve, 0x140);
 			S2_PAD(0xD8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerShapedNoise) == 0x180, "CVoiceContainerShapedNoise size should be 0x180");
+
+#endif
 	}
 }

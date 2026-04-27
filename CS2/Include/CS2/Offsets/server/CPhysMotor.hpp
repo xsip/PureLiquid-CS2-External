@@ -22,6 +22,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flTorqueScale = 0x4d4; // float32 m_flTorqueScale; |  0x4d4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flTargetSpeed = 0x4d8; // float32 m_flTargetSpeed; |  0x4d8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flSpeedWhenSpinUpOrSpinDownStarted = 0x4dc; // float32 m_flSpeedWhenSpinUpOrSpinDownStarted; |  0x4dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pFixedWorldBody = 0x4e0; // vphysics2::IPhysicsBody**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pMotorJoint = 0x4e8; // vphysics2::IPhysicsJoint**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_motor = 0x4f0; // server::CMotorController  | Schema_DeclaredClass | Size: 0x20
 			}
 		}

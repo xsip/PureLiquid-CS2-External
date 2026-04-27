@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x260
+			// Class size: 0x268
 			namespace C_INIT_ModelCull /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1d8; // int32_t m_nControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bBoundBox = 0x1dc; // bool m_bBoundBox; |  0x1dc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCullOutside = 0x1dd; // bool m_bCullOutside; |  0x1dd | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseBones = 0x1de; // bool m_bUseBones; |  0x1de | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_HitboxSetName = 0x1df; // char m_HitboxSetName[128]; |  0x1df | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nControlPointNumber = 0x1e0; // int32_t m_nControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bBoundBox = 0x1e4; // bool m_bBoundBox; |  0x1e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCullOutside = 0x1e5; // bool m_bCullOutside; |  0x1e5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseBones = 0x1e6; // bool m_bUseBones; |  0x1e6 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_HitboxSetName = 0x1e7; // char m_HitboxSetName[128]; |  0x1e7 | Schema_FixedArray | Size: 0x80
 			}
 		}
 	}

@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x1);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseMathlib) == 0x1, "CPulseMathlib size should be 0x1");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerDefault : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerDefault) == 0xA8, "CVoiceContainerDefault size should be 0xA8");
+
+#endif
 	}
 }

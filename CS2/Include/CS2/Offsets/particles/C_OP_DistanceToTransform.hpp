@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xF50
+			// Class size: 0xF58
 			namespace C_OP_DistanceToTransform /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMin = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInputMax = 0x348; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMin = 0x4b8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMax = 0x628; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_TransformStart = 0x798; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_bLOS = 0x800; // bool m_bLOS; |  0x800 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_CollisionGroupName = 0x801; // char m_CollisionGroupName[128]; |  0x801 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nTraceSet = 0x884; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x888; // float32 m_flMaxTraceLength; |  0x888 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLOSScale = 0x88c; // float32 m_flLOSScale; |  0x88c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSetMethod = 0x890; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bActiveRange = 0x894; // bool m_bActiveRange; |  0x894 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAdditive = 0x895; // bool m_bAdditive; |  0x895 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecComponentScale = 0x898; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMin = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInputMax = 0x350; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMin = 0x4c0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMax = 0x630; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_TransformStart = 0x7a0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_bLOS = 0x808; // bool m_bLOS; |  0x808 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_CollisionGroupName = 0x809; // char m_CollisionGroupName[128]; |  0x809 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nTraceSet = 0x88c; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x890; // float32 m_flMaxTraceLength; |  0x890 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLOSScale = 0x894; // float32 m_flLOSScale; |  0x894 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetMethod = 0x898; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bActiveRange = 0x89c; // bool m_bActiveRange; |  0x89c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAdditive = 0x89d; // bool m_bAdditive; |  0x89d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecComponentScale = 0x8a0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
 			}
 		}
 	}

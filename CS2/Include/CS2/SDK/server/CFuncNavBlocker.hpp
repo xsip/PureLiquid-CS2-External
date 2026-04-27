@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace server {
 		class CFuncNavBlocker : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_bDisabled,bool, 0x738);
-			PROPERTY(m_nBlockedTeamNumber,int32_t, 0x73c);
+			PROPERTY(m_bDisabled,bool, 0x770);
+			PROPERTY(m_nBlockedTeamNumber,int32_t, 0x774);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::server::CFuncNavBlocker) == 0x748, "CFuncNavBlocker size should be 0x748");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncNavBlocker) == 0x780, "CFuncNavBlocker size should be 0x780");
+
+#endif
 	}
 }

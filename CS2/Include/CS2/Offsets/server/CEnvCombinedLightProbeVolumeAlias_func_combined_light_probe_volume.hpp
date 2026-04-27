@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1638
+			// Class size: 0x15F0
 			namespace CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume /*: public CS2::server::CEnvCombinedLightProbeVolume*/ {
 				// NO SCHEMA DATA FOUND!
 			}

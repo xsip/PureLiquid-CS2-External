@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_strEventName = 0x4b8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_bIsEnabled = 0x4c0; // bool m_bIsEnabled; |  0x4c0 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nTeam = 0x4c4; // int32_t m_nTeam; |  0x4c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OnEventFired = 0x4c8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnEventFired = 0x4c8; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_bIgnoreObjectScale,GlobalTypes::CSmartPropAttributeBool, 0x50);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_ResetScale) == 0x90, "CSmartPropOperation_ResetScale size should be 0x90");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_totalHitsOnServer,int32_t, 0x48);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayer_BulletServices) == 0x70, "CCSPlayer_BulletServices size should be 0x70");
+
+#endif
 	}
 }

@@ -23,7 +23,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iGustDirChange = 0x28; // uint16_t m_iGustDirChange; |  0x28 | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_iInitialWindDir = 0x2a; // uint16_t m_iInitialWindDir; |  0x2a | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_flInitialWindSpeed = 0x2c; // float32 m_flInitialWindSpeed; |  0x2c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_location = 0x30; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_location = 0x30; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_hEntOwner = 0x3c; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
 			}
 		}

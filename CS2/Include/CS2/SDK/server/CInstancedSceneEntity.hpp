@@ -26,15 +26,18 @@ namespace CS2 {
 	namespace server {
 		class CInstancedSceneEntity : public CS2::server::CSceneEntity {
 		public:
-			PROPERTY(m_hOwner,GlobalTypes::CHandle<server::CBaseEntity>, 0x730);
-			PROPERTY(m_bHadOwner,bool, 0x734);
-			PROPERTY(m_flPostSpeakDelay,float32, 0x738);
-			PROPERTY(m_flPreDelay,float32, 0x73c);
-			PROPERTY(m_bIsBackground,bool, 0x740);
-			PROPERTY(m_bRemoveOnCompletion,bool, 0x741);
-			PROPERTY(m_hTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x744);
+			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7c0);
+			PROPERTY(m_bHadOwner,bool, 0x7c4);
+			PROPERTY(m_flPostSpeakDelay,float32, 0x7c8);
+			PROPERTY(m_flPreDelay,float32, 0x7cc);
+			PROPERTY(m_bIsBackground,bool, 0x7d0);
+			PROPERTY(m_bRemoveOnCompletion,bool, 0x7d1);
+			PROPERTY(m_hTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7d4);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::server::CInstancedSceneEntity) == 0x748, "CInstancedSceneEntity size should be 0x748");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CInstancedSceneEntity) == 0x7D8, "CInstancedSceneEntity size should be 0x7D8");
+
+#endif
 	}
 }

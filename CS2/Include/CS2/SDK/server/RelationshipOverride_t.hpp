@@ -27,10 +27,13 @@ namespace CS2 {
 	namespace server {
 		class RelationshipOverride_t : public CS2::server::Relationship_t {
 		public:
-			PROPERTY(entity,GlobalTypes::CHandle<server::CBaseEntity>, 0x8);
-			PROPERTY(classType,client::Class_T, 0xc);
+			PROPERTY(entity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8);
+			PROPERTY(classType,IDENTITY(client::Class_T), 0xc);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::RelationshipOverride_t) == 0x10, "RelationshipOverride_t size should be 0x10");
+
+#endif
 	}
 }

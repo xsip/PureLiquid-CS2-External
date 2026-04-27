@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xA10
+			// Class size: 0xA18
 			namespace C_OP_PerParticleForce /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_flForceScale = 0x1e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_vForce = 0x350; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_nCP = 0xa08; // int32_t m_nCP; |  0xa08 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flForceScale = 0x1e8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_vForce = 0x358; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nCP = 0xa10; // int32_t m_nCP; |  0xa10 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

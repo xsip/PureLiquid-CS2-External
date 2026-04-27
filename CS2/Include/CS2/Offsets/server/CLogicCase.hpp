@@ -15,7 +15,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nLastShuffleCase = 0x5ac; // int32_t m_nLastShuffleCase; |  0x5ac | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_uchShuffleCaseMap = 0x5b0; // uint8_t m_uchShuffleCaseMap[32]; |  0x5b0 | Schema_FixedArray | Size: 0x20
 				constexpr std::ptrdiff_t m_OnCase = 0x5d0; // GlobalTypes::CEntityIOOutput[32]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_OnDefault = 0x8d0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnDefault = 0x8d0; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

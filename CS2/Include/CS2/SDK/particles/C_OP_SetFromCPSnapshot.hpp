@@ -24,21 +24,24 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetFromCPSnapshot : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x1d8);
-			NESTED_PROPERTY(m_nAttributeToRead,particles::ParticleAttributeIndex_t, 0x1e0);
-			NESTED_PROPERTY(m_nAttributeToWrite,particles::ParticleAttributeIndex_t, 0x1e4);
-			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1e8);
-			PROPERTY(m_bRandom,bool, 0x1ec);
-			PROPERTY(m_bReverse,bool, 0x1ed);
-			PROPERTY(m_nRandomSeed,int32_t, 0x1f0);
-			NESTED_PROPERTY(m_nSnapShotStartPoint,particleslib::CParticleCollectionFloatInput, 0x1f8);
-			NESTED_PROPERTY(m_nSnapShotIncrement,particleslib::CParticleCollectionFloatInput, 0x368);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x4d8);
-			PROPERTY(m_bSubSample,bool, 0x648);
-			PROPERTY(m_bPrev,bool, 0x649);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
+			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x1e0);
+			NESTED_PROPERTY(m_nAttributeToRead,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e8);
+			NESTED_PROPERTY(m_nAttributeToWrite,IDENTITY(particles::ParticleAttributeIndex_t), 0x1ec);
+			PROPERTY(m_nLocalSpaceCP,int32_t, 0x1f0);
+			PROPERTY(m_bRandom,bool, 0x1f4);
+			PROPERTY(m_bReverse,bool, 0x1f5);
+			PROPERTY(m_nRandomSeed,int32_t, 0x1f8);
+			NESTED_PROPERTY(m_nSnapShotStartPoint,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x200);
+			NESTED_PROPERTY(m_nSnapShotIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x370);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x4e0);
+			PROPERTY(m_bSubSample,bool, 0x650);
+			PROPERTY(m_bPrev,bool, 0x651);
 			S2_PAD(0x480);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetFromCPSnapshot) == 0x650, "C_OP_SetFromCPSnapshot size should be 0x650");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetFromCPSnapshot) == 0x658, "C_OP_SetFromCPSnapshot size should be 0x658");
+
+#endif
 	}
 }

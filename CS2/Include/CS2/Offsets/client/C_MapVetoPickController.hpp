@@ -8,25 +8,25 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xF50
+			// Class size: 0xF48
 			namespace C_MapVetoPickController /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_nDraftType = 0x618; // int32_t m_nDraftType; |  0x618 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTeamWinningCoinToss = 0x61c; // int32_t m_nTeamWinningCoinToss; |  0x61c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTeamWithFirstChoice = 0x620; // int32_t m_nTeamWithFirstChoice[64]; |  0x620 | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nVoteMapIdsList = 0x720; // int32_t m_nVoteMapIdsList[7]; |  0x720 | Schema_FixedArray | Size: 0x1c
-				constexpr std::ptrdiff_t m_nAccountIDs = 0x73c; // int32_t m_nAccountIDs[64]; |  0x73c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nMapId0 = 0x83c; // int32_t m_nMapId0[64]; |  0x83c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nMapId1 = 0x93c; // int32_t m_nMapId1[64]; |  0x93c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nMapId2 = 0xa3c; // int32_t m_nMapId2[64]; |  0xa3c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nMapId3 = 0xb3c; // int32_t m_nMapId3[64]; |  0xb3c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nMapId4 = 0xc3c; // int32_t m_nMapId4[64]; |  0xc3c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nMapId5 = 0xd3c; // int32_t m_nMapId5[64]; |  0xd3c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nStartingSide0 = 0xe3c; // int32_t m_nStartingSide0[64]; |  0xe3c | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_nCurrentPhase = 0xf3c; // int32_t m_nCurrentPhase; |  0xf3c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nPhaseStartTick = 0xf40; // int32_t m_nPhaseStartTick; |  0xf40 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nPhaseDurationTicks = 0xf44; // int32_t m_nPhaseDurationTicks; |  0xf44 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nPostDataUpdateTick = 0xf48; // int32_t m_nPostDataUpdateTick; |  0xf48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bDisabledHud = 0xf4c; // bool m_bDisabledHud; |  0xf4c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nDraftType = 0x610; // int32_t m_nDraftType; |  0x610 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTeamWinningCoinToss = 0x614; // int32_t m_nTeamWinningCoinToss; |  0x614 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTeamWithFirstChoice = 0x618; // int32_t m_nTeamWithFirstChoice[64]; |  0x618 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nVoteMapIdsList = 0x718; // int32_t m_nVoteMapIdsList[7]; |  0x718 | Schema_FixedArray | Size: 0x1c
+				constexpr std::ptrdiff_t m_nAccountIDs = 0x734; // int32_t m_nAccountIDs[64]; |  0x734 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nMapId0 = 0x834; // int32_t m_nMapId0[64]; |  0x834 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nMapId1 = 0x934; // int32_t m_nMapId1[64]; |  0x934 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nMapId2 = 0xa34; // int32_t m_nMapId2[64]; |  0xa34 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nMapId3 = 0xb34; // int32_t m_nMapId3[64]; |  0xb34 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nMapId4 = 0xc34; // int32_t m_nMapId4[64]; |  0xc34 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nMapId5 = 0xd34; // int32_t m_nMapId5[64]; |  0xd34 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nStartingSide0 = 0xe34; // int32_t m_nStartingSide0[64]; |  0xe34 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_nCurrentPhase = 0xf34; // int32_t m_nCurrentPhase; |  0xf34 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nPhaseStartTick = 0xf38; // int32_t m_nPhaseStartTick; |  0xf38 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nPhaseDurationTicks = 0xf3c; // int32_t m_nPhaseDurationTicks; |  0xf3c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nPostDataUpdateTick = 0xf40; // int32_t m_nPostDataUpdateTick; |  0xf40 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bDisabledHud = 0xf44; // bool m_bDisabledHud; |  0xf44 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

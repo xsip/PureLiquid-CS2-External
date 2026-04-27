@@ -22,14 +22,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_MovementMoveAlongSkinnedCPSnapshot : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d0);
-			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1d4);
-			PROPERTY(m_bSetNormal,bool, 0x1d8);
-			PROPERTY(m_bSetRadius,bool, 0x1d9);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x1e0);
-			NESTED_PROPERTY(m_flTValue,particleslib::CPerParticleFloatInput, 0x350);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
+			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1dc);
+			PROPERTY(m_bSetNormal,bool, 0x1e0);
+			PROPERTY(m_bSetRadius,bool, 0x1e1);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_flTValue,IDENTITY(particleslib::CPerParticleFloatInput), 0x358);
 			S2_PAD(0x2F0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_MovementMoveAlongSkinnedCPSnapshot) == 0x4C0, "C_OP_MovementMoveAlongSkinnedCPSnapshot size should be 0x4C0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_MovementMoveAlongSkinnedCPSnapshot) == 0x4C8, "C_OP_MovementMoveAlongSkinnedCPSnapshot size should be 0x4C8");
+
+#endif
 	}
 }

@@ -28,20 +28,23 @@ namespace CS2 {
 		public:
 			PROPERTY(m_materialName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_shaderName,GlobalTypes::CUtlString*, 0x8);
-			NESTED_PROPERTY(m_intParams,GlobalTypes::CUtlVector<materialsystem2::MaterialParamInt_t>, 0x10);
-			NESTED_PROPERTY(m_floatParams,GlobalTypes::CUtlVector<materialsystem2::MaterialParamFloat_t>, 0x28);
-			NESTED_PROPERTY(m_vectorParams,GlobalTypes::CUtlVector<materialsystem2::MaterialParamVector_t>, 0x40);
-			NESTED_PROPERTY(m_textureParams,GlobalTypes::CUtlVector<materialsystem2::MaterialParamTexture_t>, 0x58);
-			NESTED_PROPERTY(m_dynamicParams,GlobalTypes::CUtlVector<materialsystem2::MaterialParamBuffer_t>, 0x70);
-			NESTED_PROPERTY(m_dynamicTextureParams,GlobalTypes::CUtlVector<materialsystem2::MaterialParamBuffer_t>, 0x88);
-			NESTED_PROPERTY(m_intAttributes,GlobalTypes::CUtlVector<materialsystem2::MaterialParamInt_t>, 0xa0);
-			NESTED_PROPERTY(m_floatAttributes,GlobalTypes::CUtlVector<materialsystem2::MaterialParamFloat_t>, 0xb8);
-			NESTED_PROPERTY(m_vectorAttributes,GlobalTypes::CUtlVector<materialsystem2::MaterialParamVector_t>, 0xd0);
-			NESTED_PROPERTY(m_textureAttributes,GlobalTypes::CUtlVector<materialsystem2::MaterialParamTexture_t>, 0xe8);
-			NESTED_PROPERTY(m_stringAttributes,GlobalTypes::CUtlVector<materialsystem2::MaterialParamString_t>, 0x100);
-			PROPERTY(m_renderAttributesUsed,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x118);
+			NESTED_PROPERTY(m_intParams,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamInt_t>), 0x10);
+			NESTED_PROPERTY(m_floatParams,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamFloat_t>), 0x28);
+			NESTED_PROPERTY(m_vectorParams,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamVector_t>), 0x40);
+			NESTED_PROPERTY(m_textureParams,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamTexture_t>), 0x58);
+			NESTED_PROPERTY(m_dynamicParams,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamBuffer_t>), 0x70);
+			NESTED_PROPERTY(m_dynamicTextureParams,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamBuffer_t>), 0x88);
+			NESTED_PROPERTY(m_intAttributes,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamInt_t>), 0xa0);
+			NESTED_PROPERTY(m_floatAttributes,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamFloat_t>), 0xb8);
+			NESTED_PROPERTY(m_vectorAttributes,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamVector_t>), 0xd0);
+			NESTED_PROPERTY(m_textureAttributes,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamTexture_t>), 0xe8);
+			NESTED_PROPERTY(m_stringAttributes,IDENTITY(GlobalTypes::CUtlVector<materialsystem2::MaterialParamString_t>), 0x100);
+			PROPERTY(m_renderAttributesUsed,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x118);
 			S2_PAD(0x130);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::MaterialResourceData_t) == 0x130, "MaterialResourceData_t size should be 0x130");
+
+#endif
 	}
 }

@@ -24,15 +24,18 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_VelocityRandom : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d8);
-			NESTED_PROPERTY(m_fSpeedMin,particleslib::CPerParticleFloatInput, 0x1e0);
-			NESTED_PROPERTY(m_fSpeedMax,particleslib::CPerParticleFloatInput, 0x350);
-			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMin,particleslib::CPerParticleVecInput, 0x4c0);
-			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMax,particleslib::CPerParticleVecInput, 0xb78);
-			PROPERTY(m_bIgnoreDT,bool, 0x1230);
-			NESTED_PROPERTY(m_randomnessParameters,particles::CRandomNumberGeneratorParameters, 0x1234);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1e0);
+			NESTED_PROPERTY(m_fSpeedMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_fSpeedMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x358);
+			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMin,IDENTITY(particleslib::CPerParticleVecInput), 0x4c8);
+			NESTED_PROPERTY(m_LocalCoordinateSystemSpeedMax,IDENTITY(particleslib::CPerParticleVecInput), 0xb80);
+			PROPERTY(m_bIgnoreDT,bool, 0x1238);
+			NESTED_PROPERTY(m_randomnessParameters,IDENTITY(particles::CRandomNumberGeneratorParameters), 0x123c);
 			S2_PAD(0x1068);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_VelocityRandom) == 0x1240, "C_INIT_VelocityRandom size should be 0x1240");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_VelocityRandom) == 0x1248, "C_INIT_VelocityRandom size should be 0x1248");
+
+#endif
 	}
 }

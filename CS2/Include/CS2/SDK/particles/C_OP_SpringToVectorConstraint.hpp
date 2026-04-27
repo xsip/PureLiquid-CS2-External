@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SpringToVectorConstraint : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			NESTED_PROPERTY(m_flRestLength,particleslib::CPerParticleFloatInput, 0x1d0);
-			NESTED_PROPERTY(m_flMinDistance,particleslib::CPerParticleFloatInput, 0x340);
-			NESTED_PROPERTY(m_flMaxDistance,particleslib::CPerParticleFloatInput, 0x4b0);
-			NESTED_PROPERTY(m_flRestingLength,particleslib::CPerParticleFloatInput, 0x620);
-			NESTED_PROPERTY(m_vecAnchorVector,particleslib::CPerParticleVecInput, 0x790);
+			NESTED_PROPERTY(m_flRestLength,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flMinDistance,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
+			NESTED_PROPERTY(m_flMaxDistance,IDENTITY(particleslib::CPerParticleFloatInput), 0x4b8);
+			NESTED_PROPERTY(m_flRestingLength,IDENTITY(particleslib::CPerParticleFloatInput), 0x628);
+			NESTED_PROPERTY(m_vecAnchorVector,IDENTITY(particleslib::CPerParticleVecInput), 0x798);
 			S2_PAD(0xC78);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SpringToVectorConstraint) == 0xE48, "C_OP_SpringToVectorConstraint size should be 0xE48");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SpringToVectorConstraint) == 0xE50, "C_OP_SpringToVectorConstraint size should be 0xE50");
+
+#endif
 	}
 }

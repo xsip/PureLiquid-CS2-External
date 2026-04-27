@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_flOcclusionFactor,float32, 0x1c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CPhysSurfacePropertiesAudio) == 0x20, "CPhysSurfacePropertiesAudio size should be 0x20");
+
+#endif
 	}
 }

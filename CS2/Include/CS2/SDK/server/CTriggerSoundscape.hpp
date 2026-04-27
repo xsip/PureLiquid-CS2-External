@@ -27,11 +27,14 @@ namespace CS2 {
 	namespace server {
 		class CTriggerSoundscape : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_hSoundscape,GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>, 0x890);
-			PROPERTY(m_SoundscapeName,GlobalTypes::CUtlSymbolLarge*, 0x898);
-			NESTED_PROPERTY(m_spectators,server::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerPawn>>, 0x8a0);
+			PROPERTY(m_hSoundscape,IDENTITY(GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>), 0x8c8);
+			PROPERTY(m_SoundscapeName,GlobalTypes::CUtlSymbolLarge*, 0x8d0);
+			NESTED_PROPERTY(m_spectators,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerPawn>>), 0x8d8);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerSoundscape) == 0x8B8, "CTriggerSoundscape size should be 0x8B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerSoundscape) == 0x8F0, "CTriggerSoundscape size should be 0x8F0");
+
+#endif
 	}
 }

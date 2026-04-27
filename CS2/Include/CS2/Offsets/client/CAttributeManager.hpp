@@ -15,7 +15,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hOuter = 0x24; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_bPreventLoopback = 0x28; // bool m_bPreventLoopback; |  0x28 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_ProviderType = 0x2c; // client::attributeprovidertypes_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_CachedResults = 0x30; // GlobalTypes::CUtlVector<client::cached_attribute_float_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_CachedResults = 0x30; // GlobalTypes::CUtlVector<client::CAttributeManager_cached_attribute_float_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

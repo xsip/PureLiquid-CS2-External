@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x230
+			// Class size: 0x238
 			namespace C_OP_CalculateVectorAttribute /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_vStartValue = 0x1d0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nFieldInput1 = 0x1dc; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputScale1 = 0x1e0; // float32 m_flInputScale1; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldInput2 = 0x1e4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputScale2 = 0x1e8; // float32 m_flInputScale2; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nControlPointInput1 = 0x1ec; // particles::ControlPointReference_t  | Schema_DeclaredClass | Size: 0x14
-				constexpr std::ptrdiff_t m_flControlPointScale1 = 0x200; // float32 m_flControlPointScale1; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nControlPointInput2 = 0x204; // particles::ControlPointReference_t  | Schema_DeclaredClass | Size: 0x14
-				constexpr std::ptrdiff_t m_flControlPointScale2 = 0x218; // float32 m_flControlPointScale2; |  0x218 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x21c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vFinalOutputScale = 0x220; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vStartValue = 0x1d8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nFieldInput1 = 0x1e4; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputScale1 = 0x1e8; // float32 m_flInputScale1; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldInput2 = 0x1ec; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputScale2 = 0x1f0; // float32 m_flInputScale2; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nControlPointInput1 = 0x1f4; // particles::ControlPointReference_t  | Schema_DeclaredClass | Size: 0x14
+				constexpr std::ptrdiff_t m_flControlPointScale1 = 0x208; // float32 m_flControlPointScale1; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nControlPointInput2 = 0x20c; // particles::ControlPointReference_t  | Schema_DeclaredClass | Size: 0x14
+				constexpr std::ptrdiff_t m_flControlPointScale2 = 0x220; // float32 m_flControlPointScale2; |  0x220 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x224; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_vFinalOutputScale = 0x228; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

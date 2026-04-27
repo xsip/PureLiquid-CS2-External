@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8B8
+			// Class size: 0x8F0
 			namespace CTriggerSoundscape /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_hSoundscape = 0x890; // GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_SoundscapeName = 0x898; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_spectators = 0x8a0; // server::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerPawn>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_hSoundscape = 0x8c8; // GlobalTypes::CHandle<server::CEnvSoundscapeTriggerable>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_SoundscapeName = 0x8d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_spectators = 0x8d8; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerPawn>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_directionEntityName,GlobalTypes::CUtlSymbolLarge*, 0x4b0);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysImpact) == 0x4B8, "CPhysImpact size should be 0x4B8");
+
+#endif
 	}
 }

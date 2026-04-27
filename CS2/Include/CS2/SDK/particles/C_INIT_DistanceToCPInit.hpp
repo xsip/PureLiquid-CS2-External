@@ -14,7 +14,7 @@
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particles/ParticleTraceSet_t.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -25,23 +25,26 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_DistanceToCPInit : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
-			NESTED_PROPERTY(m_flInputMin,particleslib::CPerParticleFloatInput, 0x1e0);
-			NESTED_PROPERTY(m_flInputMax,particleslib::CPerParticleFloatInput, 0x350);
-			NESTED_PROPERTY(m_flOutputMin,particleslib::CPerParticleFloatInput, 0x4c0);
-			NESTED_PROPERTY(m_flOutputMax,particleslib::CPerParticleFloatInput, 0x630);
-			PROPERTY(m_nStartCP,int32_t, 0x7a0);
-			PROPERTY(m_bLOS,bool, 0x7a4);
-			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x7a5);
-			PROPERTY(m_nTraceSet,particles::ParticleTraceSet_t, 0x828);
-			NESTED_PROPERTY(m_flMaxTraceLength,particleslib::CPerParticleFloatInput, 0x830);
-			PROPERTY(m_flLOSScale,float32, 0x9a0);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x9a4);
-			PROPERTY(m_bActiveRange,bool, 0x9a8);
-			PROPERTY(m_vecDistanceScale,GlobalTypes::Vector, 0x9ac);
-			PROPERTY(m_flRemapBias,float32, 0x9b8);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			NESTED_PROPERTY(m_flInputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_flInputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x358);
+			NESTED_PROPERTY(m_flOutputMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c8);
+			NESTED_PROPERTY(m_flOutputMax,IDENTITY(particleslib::CPerParticleFloatInput), 0x638);
+			PROPERTY(m_nStartCP,int32_t, 0x7a8);
+			PROPERTY(m_bLOS,bool, 0x7ac);
+			PROPERTY_ARRAY(m_CollisionGroupName,char, 128 , 0x7ad);
+			PROPERTY(m_nTraceSet,IDENTITY(particles::ParticleTraceSet_t), 0x830);
+			NESTED_PROPERTY(m_flMaxTraceLength,IDENTITY(particleslib::CPerParticleFloatInput), 0x838);
+			PROPERTY(m_flLOSScale,float32, 0x9a8);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x9ac);
+			PROPERTY(m_bActiveRange,bool, 0x9b0);
+			PROPERTY(m_vecDistanceScale,GlobalTypes::Vector, 0x9b4);
+			PROPERTY(m_flRemapBias,float32, 0x9c0);
 			S2_PAD(0x7E8);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_DistanceToCPInit) == 0x9C0, "C_INIT_DistanceToCPInit size should be 0x9C0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_DistanceToCPInit) == 0x9C8, "C_INIT_DistanceToCPInit size should be 0x9C8");
+
+#endif
 	}
 }

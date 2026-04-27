@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace animlib {
 			// Class size: 0xB0
 			namespace CNmSyncTrack /**/ {
-				constexpr std::ptrdiff_t m_syncEvents = 0x0; // GlobalTypes::CUtlLeanVectorFixedGrowable<animlib::Event_t>  | Schema_Atomic | Size: 0xa8
+				constexpr std::ptrdiff_t m_syncEvents = 0x0; // GlobalTypes::CUtlLeanVectorFixedGrowable<animlib::CNmSyncTrack_Event_t>  | Schema_Atomic | Size: 0xa8
 				constexpr std::ptrdiff_t m_nStartEventOffset = 0xa8; // int32_t m_nStartEventOffset; |  0xa8 | Schema_Builtin | Size: 0x4
 			}
 		}

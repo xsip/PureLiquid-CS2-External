@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace modellib {
-			// Class size: 0xA0
+			// Class size: 0xB0
 			namespace CRenderGroom /**/ {
 				constexpr std::ptrdiff_t m_hairs = 0x0; // GlobalTypes::CUtlVector<modellib::RenderHairStrandInfo_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_hairPositionOffsets = 0x18; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
@@ -23,7 +23,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nAttachBoneIdx = 0x90; // int32_t m_nAttachBoneIdx; |  0x90 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nAttachMeshIdx = 0x94; // int32_t m_nAttachMeshIdx; |  0x94 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nAttachMeshDrawCallIdx = 0x98; // int32_t m_nAttachMeshDrawCallIdx; |  0x98 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bEnableSimulation = 0x9c; // bool m_bEnableSimulation; |  0x9c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEnableSimulation = 0xac; // bool m_bEnableSimulation; |  0xac | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

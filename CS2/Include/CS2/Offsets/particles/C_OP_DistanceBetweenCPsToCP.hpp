@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x290
+			// Class size: 0x298
 			namespace C_OP_DistanceBetweenCPsToCP /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nStartCP = 0x1d8; // int32_t m_nStartCP; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nEndCP = 0x1dc; // int32_t m_nEndCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputCP = 0x1e0; // int32_t m_nOutputCP; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputCPField = 0x1e4; // int32_t m_nOutputCPField; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSetOnce = 0x1e8; // bool m_bSetOnce; |  0x1e8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flInputMin = 0x1ec; // float32 m_flInputMin; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMax = 0x1f0; // float32 m_flInputMax; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMin = 0x1f4; // float32 m_flOutputMin; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutputMax = 0x1f8; // float32 m_flOutputMax; |  0x1f8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x1fc; // float32 m_flMaxTraceLength; |  0x1fc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLOSScale = 0x200; // float32 m_flLOSScale; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLOS = 0x204; // bool m_bLOS; |  0x204 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_CollisionGroupName = 0x205; // char m_CollisionGroupName[128]; |  0x205 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_nTraceSet = 0x288; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nSetParent = 0x28c; // particles::ParticleParentSetMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nStartCP = 0x1e0; // int32_t m_nStartCP; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nEndCP = 0x1e4; // int32_t m_nEndCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputCP = 0x1e8; // int32_t m_nOutputCP; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputCPField = 0x1ec; // int32_t m_nOutputCPField; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSetOnce = 0x1f0; // bool m_bSetOnce; |  0x1f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flInputMin = 0x1f4; // float32 m_flInputMin; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMax = 0x1f8; // float32 m_flInputMax; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMin = 0x1fc; // float32 m_flOutputMin; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutputMax = 0x200; // float32 m_flOutputMax; |  0x200 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxTraceLength = 0x204; // float32 m_flMaxTraceLength; |  0x204 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLOSScale = 0x208; // float32 m_flLOSScale; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLOS = 0x20c; // bool m_bLOS; |  0x20c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_CollisionGroupName = 0x20d; // char m_CollisionGroupName[128]; |  0x20d | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nTraceSet = 0x290; // particles::ParticleTraceSet_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetParent = 0x294; // particles::ParticleParentSetMode_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

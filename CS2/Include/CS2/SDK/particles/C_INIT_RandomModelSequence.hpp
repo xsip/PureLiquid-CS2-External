@@ -26,11 +26,14 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RandomModelSequence : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY_ARRAY(m_ActivityName,char, 256 , 0x1d8);
-			PROPERTY_ARRAY(m_SequenceName,char, 256 , 0x2d8);
-			PROPERTY(m_hModel,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>, 0x3d8);
+			PROPERTY_ARRAY(m_ActivityName,char, 256 , 0x1e0);
+			PROPERTY_ARRAY(m_SequenceName,char, 256 , 0x2e0);
+			PROPERTY(m_hModel,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>), 0x3e0);
 			S2_PAD(0x208);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RandomModelSequence) == 0x3E0, "C_INIT_RandomModelSequence size should be 0x3E0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RandomModelSequence) == 0x3E8, "C_INIT_RandomModelSequence size should be 0x3E8");
+
+#endif
 	}
 }

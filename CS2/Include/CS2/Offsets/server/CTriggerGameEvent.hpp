@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8A8
+			// Class size: 0x8E0
 			namespace CTriggerGameEvent /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_strStartTouchEventName = 0x890; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_strEndTouchEventName = 0x898; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_strTriggerID = 0x8a0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strStartTouchEventName = 0x8c8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strEndTouchEventName = 0x8d0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strTriggerID = 0x8d8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

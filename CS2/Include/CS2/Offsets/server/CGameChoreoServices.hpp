@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x20
 			namespace CGameChoreoServices /*: public CS2::client::IChoreoServices*/ {
-				constexpr std::ptrdiff_t m_hOwner = 0x8; // GlobalTypes::CHandle<server::CBaseAnimGraph>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hOwner = 0x8; // GlobalTypes::CHandle<server::CBaseModelEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hScriptedSequence = 0xc; // GlobalTypes::CHandle<server::CScriptedSequence>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_scriptState = 0x10; // client::IChoreoServices::ScriptState_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_choreoState = 0x14; // client::IChoreoServices::ChoreoState_t  | Schema_DeclaredEnum | Size: 0x4

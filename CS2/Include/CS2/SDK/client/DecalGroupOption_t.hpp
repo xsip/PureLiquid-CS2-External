@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace client {
 		class DecalGroupOption_t  {
 		public:
-			PROPERTY(m_hMaterial,GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeIMaterial2>, 0x0);
+			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandleCopyable<resourcesystem::InfoForResourceTypeIMaterial2>), 0x0);
 			PROPERTY(m_sSequenceName,GlobalTypes::CGlobalSymbol, 0x8);
 			PROPERTY(m_flProbability,float32, 0x10);
 			PROPERTY(m_bEnableAngleBetweenNormalAndGravityRange,bool, 0x14);
@@ -29,6 +29,9 @@ namespace CS2 {
 			PROPERTY(m_flMaxAngleBetweenNormalAndGravity,float32, 0x1c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::DecalGroupOption_t) == 0x20, "DecalGroupOption_t size should be 0x20");
+
+#endif
 	}
 }

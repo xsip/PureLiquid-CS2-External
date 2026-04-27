@@ -24,20 +24,23 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_MovementSkinnedPositionFromCPSnapshot : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1d0);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1d4);
-			PROPERTY(m_bRandom,bool, 0x1d8);
-			PROPERTY(m_nRandomSeed,int32_t, 0x1dc);
-			PROPERTY(m_bSetNormal,bool, 0x1e0);
-			PROPERTY(m_bSetRadius,bool, 0x1e1);
-			PROPERTY(m_nIndexType,particles::SnapshotIndexType_t, 0x1e4);
-			NESTED_PROPERTY(m_flReadIndex,particleslib::CPerParticleFloatInput, 0x1e8);
-			NESTED_PROPERTY(m_flIncrement,particleslib::CParticleCollectionFloatInput, 0x358);
-			NESTED_PROPERTY(m_nFullLoopIncrement,particleslib::CParticleCollectionFloatInput, 0x4c8);
-			NESTED_PROPERTY(m_nSnapShotStartPoint,particleslib::CParticleCollectionFloatInput, 0x638);
-			NESTED_PROPERTY(m_flInterpolation,particleslib::CPerParticleFloatInput, 0x7a8);
+			PROPERTY(m_nSnapshotControlPointNumber,int32_t, 0x1d8);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1dc);
+			PROPERTY(m_bRandom,bool, 0x1e0);
+			PROPERTY(m_nRandomSeed,int32_t, 0x1e4);
+			PROPERTY(m_bSetNormal,bool, 0x1e8);
+			PROPERTY(m_bSetRadius,bool, 0x1e9);
+			PROPERTY(m_nIndexType,IDENTITY(particles::SnapshotIndexType_t), 0x1ec);
+			NESTED_PROPERTY(m_flReadIndex,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f0);
+			NESTED_PROPERTY(m_flIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x360);
+			NESTED_PROPERTY(m_nFullLoopIncrement,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x4d0);
+			NESTED_PROPERTY(m_nSnapShotStartPoint,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x640);
+			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x7b0);
 			S2_PAD(0x748);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_MovementSkinnedPositionFromCPSnapshot) == 0x918, "C_OP_MovementSkinnedPositionFromCPSnapshot size should be 0x918");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_MovementSkinnedPositionFromCPSnapshot) == 0x920, "C_OP_MovementSkinnedPositionFromCPSnapshot size should be 0x920");
+
+#endif
 	}
 }

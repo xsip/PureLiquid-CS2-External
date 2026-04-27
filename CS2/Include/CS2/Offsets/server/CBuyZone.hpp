@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x898
+			// Class size: 0x8D0
 			namespace CBuyZone /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_LegacyTeamNum = 0x890; // int32_t m_LegacyTeamNum; |  0x890 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_LegacyTeamNum = 0x8c8; // int32_t m_LegacyTeamNum; |  0x8c8 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

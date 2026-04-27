@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_nBase,int32_t, 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::resourcefile::CExampleSchemaVData_PolymorphicBase) == 0x10, "CExampleSchemaVData_PolymorphicBase size should be 0x10");
+
+#endif
 	}
 }

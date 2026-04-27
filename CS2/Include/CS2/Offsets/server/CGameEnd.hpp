@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x740
+			// Class size: 0x778
 			namespace CGameEnd /*: public CS2::server::CRulePointEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

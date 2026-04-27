@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_nType,int32_t, 0x14);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimDecoder) == 0x18, "CAnimDecoder size should be 0x18");
+
+#endif
 	}
 }

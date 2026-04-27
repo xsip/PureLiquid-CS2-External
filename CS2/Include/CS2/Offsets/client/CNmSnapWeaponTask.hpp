@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x60
+			// Class size: 0x50
 			namespace CNmSnapWeaponTask /*: public CS2::animlib::CNmPoseTask*/ {
 				// NO SCHEMA DATA FOUND!
 			}

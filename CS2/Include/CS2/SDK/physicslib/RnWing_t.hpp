@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_nIndex,int32_t, 3 , 0x0);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::RnWing_t) == 0xC, "RnWing_t size should be 0xC");
+
+#endif
 	}
 }

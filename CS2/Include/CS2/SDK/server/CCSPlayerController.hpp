@@ -12,7 +12,7 @@
 
 #include <SDK/server/CBasePlayerController.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/Reason.hpp>
+#include <SDK/client/QuestProgress_Reason.hpp>
 #include <SDK/server/IntervalTimer.hpp>
 
 
@@ -34,16 +34,16 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayerController : public CS2::server::CBasePlayerController {
 		public:
-			PROPERTY(m_pInGameMoneyServices,server::CCSPlayerController_InGameMoneyServices*, 0x7d8);
-			PROPERTY(m_pInventoryServices,server::CCSPlayerController_InventoryServices*, 0x7e0);
-			PROPERTY(m_pActionTrackingServices,server::CCSPlayerController_ActionTrackingServices*, 0x7e8);
-			PROPERTY(m_pDamageServices,server::CCSPlayerController_DamageServices*, 0x7f0);
+			PROPERTY(m_pInGameMoneyServices,IDENTITY(server::CCSPlayerController_InGameMoneyServices*), 0x7d8);
+			PROPERTY(m_pInventoryServices,IDENTITY(server::CCSPlayerController_InventoryServices*), 0x7e0);
+			PROPERTY(m_pActionTrackingServices,IDENTITY(server::CCSPlayerController_ActionTrackingServices*), 0x7e8);
+			PROPERTY(m_pDamageServices,IDENTITY(server::CCSPlayerController_DamageServices*), 0x7f0);
 			PROPERTY(m_iPing,uint32_t, 0x7f8);
 			PROPERTY(m_bHasCommunicationAbuseMute,bool, 0x7fc);
 			PROPERTY(m_uiCommunicationMuteFlags,uint32_t, 0x800);
 			PROPERTY(m_szCrosshairCodes,GlobalTypes::CUtlSymbolLarge*, 0x808);
 			PROPERTY(m_iPendingTeamNum,uint8_t, 0x810);
-			NESTED_PROPERTY(m_flForceTeamTime,entity2::GameTime_t, 0x814);
+			NESTED_PROPERTY(m_flForceTeamTime,IDENTITY(entity2::GameTime_t), 0x814);
 			PROPERTY(m_iCompTeammateColor,int32_t, 0x818);
 			PROPERTY(m_bEverPlayedOnTeam,bool, 0x81c);
 			PROPERTY(m_bAttemptedToGetColor,bool, 0x81d);
@@ -54,7 +54,7 @@ namespace CS2 {
 			PROPERTY(m_bJustBecameSpectator,bool, 0x827);
 			PROPERTY(m_bSwitchTeamsOnNextRoundReset,bool, 0x828);
 			PROPERTY(m_bRemoveAllItemsOnNextRoundReset,bool, 0x829);
-			NESTED_PROPERTY(m_flLastJoinTeamTime,entity2::GameTime_t, 0x82c);
+			NESTED_PROPERTY(m_flLastJoinTeamTime,IDENTITY(entity2::GameTime_t), 0x82c);
 			PROPERTY(m_szClan,GlobalTypes::CUtlSymbolLarge*, 0x830);
 			PROPERTY(m_iCoachingTeam,int32_t, 0x838);
 			PROPERTY(m_nPlayerDominated,uint64_t, 0x840);
@@ -68,7 +68,7 @@ namespace CS2 {
 			PROPERTY(m_nEndMatchNextMapVote,int32_t, 0x868);
 			PROPERTY(m_unActiveQuestId,uint16_t, 0x86c);
 			PROPERTY(m_rtActiveMissionPeriod,uint32_t, 0x870);
-			PROPERTY(m_nQuestProgressReason,client::Reason, 0x874);
+			PROPERTY(m_nQuestProgressReason,IDENTITY(client::QuestProgress_Reason), 0x874);
 			PROPERTY(m_unPlayerTvControlFlags,uint32_t, 0x878);
 			PROPERTY(m_iDraftIndex,int32_t, 0x8a8);
 			PROPERTY(m_msQueuedModeDisconnectionTimestamp,uint32_t, 0x8ac);
@@ -86,8 +86,8 @@ namespace CS2 {
 			PROPERTY(m_bHasBeenControlledByPlayerThisRound,bool, 0x8d2);
 			PROPERTY(m_nBotsControlledThisRound,int32_t, 0x8d4);
 			PROPERTY(m_bCanControlObservedBot,bool, 0x8d8);
-			PROPERTY(m_hPlayerPawn,GlobalTypes::CHandle<server::CCSPlayerPawn>, 0x8dc);
-			PROPERTY(m_hObserverPawn,GlobalTypes::CHandle<server::CCSObserverPawn>, 0x8e0);
+			PROPERTY(m_hPlayerPawn,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x8dc);
+			PROPERTY(m_hObserverPawn,IDENTITY(GlobalTypes::CHandle<server::CCSObserverPawn>), 0x8e0);
 			PROPERTY(m_DesiredObserverMode,int32_t, 0x8e4);
 			PROPERTY(m_hDesiredObserverTarget,GlobalTypes::CEntityHandle, 0x8e8);
 			PROPERTY(m_bPawnIsAlive,bool, 0x8ec);
@@ -99,7 +99,7 @@ namespace CS2 {
 			PROPERTY(m_iPawnLifetimeStart,int32_t, 0x8fc);
 			PROPERTY(m_iPawnLifetimeEnd,int32_t, 0x900);
 			PROPERTY(m_iPawnBotDifficulty,int32_t, 0x904);
-			PROPERTY(m_hOriginalControllerOfCurrentPawn,GlobalTypes::CHandle<server::CCSPlayerController>, 0x908);
+			PROPERTY(m_hOriginalControllerOfCurrentPawn,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerController>), 0x908);
 			PROPERTY(m_iScore,int32_t, 0x90c);
 			PROPERTY(m_iRoundScore,int32_t, 0x910);
 			PROPERTY(m_iRoundsWon,int32_t, 0x914);
@@ -113,7 +113,7 @@ namespace CS2 {
 			PROPERTY(m_iMVPs,int32_t, 0x930);
 			PROPERTY(m_nUpdateCounter,int32_t, 0x934);
 			PROPERTY(m_flSmoothedPing,float32, 0x938);
-			NESTED_PROPERTY(m_lastHeldVoteTimer,server::IntervalTimer, 0x940);
+			NESTED_PROPERTY(m_lastHeldVoteTimer,IDENTITY(server::IntervalTimer), 0x940);
 			PROPERTY(m_bShowHints,bool, 0x958);
 			PROPERTY(m_iNextTimeCheck,int32_t, 0x95c);
 			PROPERTY(m_bJustDidTeamKill,bool, 0x960);
@@ -121,13 +121,16 @@ namespace CS2 {
 			PROPERTY(m_bGaveTeamDamageWarning,bool, 0x962);
 			PROPERTY(m_bGaveTeamDamageWarningThisRound,bool, 0x963);
 			PROPERTY(m_dblLastReceivedPacketPlatFloatTime,float64, 0x968);
-			NESTED_PROPERTY(m_LastTeamDamageWarningTime,entity2::GameTime_t, 0x970);
-			NESTED_PROPERTY(m_LastTimePlayerWasDisconnectedForPawnsRemove,entity2::GameTime_t, 0x974);
+			NESTED_PROPERTY(m_LastTeamDamageWarningTime,IDENTITY(entity2::GameTime_t), 0x970);
+			NESTED_PROPERTY(m_LastTimePlayerWasDisconnectedForPawnsRemove,IDENTITY(entity2::GameTime_t), 0x974);
 			PROPERTY(m_nSuspiciousHitCount,uint32_t, 0x978);
 			PROPERTY(m_nNonSuspiciousHitStreak,uint32_t, 0x97c);
 			PROPERTY(m_bFireBulletsSeedSynchronized,bool, 0xa21);
 			S2_PAD(0x2D8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CCSPlayerController) == 0xAA0, "CCSPlayerController size should be 0xAA0");
+
+#endif
 	}
 }

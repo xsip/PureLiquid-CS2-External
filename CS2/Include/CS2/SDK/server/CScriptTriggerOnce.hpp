@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CScriptTriggerOnce : public CS2::server::CTriggerOnce {
 		public:
-			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x8a8);
+			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x8e0);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CScriptTriggerOnce) == 0x8B8, "CScriptTriggerOnce size should be 0x8B8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CScriptTriggerOnce) == 0x8F0, "CScriptTriggerOnce size should be 0x8F0");
+
+#endif
 	}
 }

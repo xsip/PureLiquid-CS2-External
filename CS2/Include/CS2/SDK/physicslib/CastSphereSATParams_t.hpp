@@ -30,9 +30,12 @@ namespace CS2 {
 			PROPERTY(m_flRadius,float32, 0x18);
 			PROPERTY(m_flMaxFraction,float32, 0x1c);
 			PROPERTY(m_flScale,float32, 0x20);
-			PROPERTY(m_pHull,physicslib::RnHull_t*, 0x28);
+			PROPERTY(m_pHull,IDENTITY(physicslib::RnHull_t*), 0x28);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::CastSphereSATParams_t) == 0x30, "CastSphereSATParams_t size should be 0x30");
+
+#endif
 	}
 }

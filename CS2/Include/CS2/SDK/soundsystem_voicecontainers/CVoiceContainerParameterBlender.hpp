@@ -22,16 +22,19 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerParameterBlender : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_firstSound,soundsystem_voicecontainers::CSoundContainerReference, 0xa8);
-			NESTED_PROPERTY(m_secondSound,soundsystem_voicecontainers::CSoundContainerReference, 0xc0);
-			PROPERTY(m_bEnableOcclusionBlend,bool, 0xd8);
-			PROPERTY(m_curve1,GlobalTypes::CPiecewiseCurve, 0xe0);
-			PROPERTY(m_curve2,GlobalTypes::CPiecewiseCurve, 0x120);
-			PROPERTY(m_bEnableDistanceBlend,bool, 0x160);
-			PROPERTY(m_curve3,GlobalTypes::CPiecewiseCurve, 0x168);
-			PROPERTY(m_curve4,GlobalTypes::CPiecewiseCurve, 0x1a8);
-			S2_PAD(0x140);
+			NESTED_PROPERTY(m_firstSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xa8);
+			NESTED_PROPERTY(m_secondSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xc8);
+			PROPERTY(m_bEnableOcclusionBlend,bool, 0xe8);
+			PROPERTY(m_curve1,GlobalTypes::CPiecewiseCurve, 0xf0);
+			PROPERTY(m_curve2,GlobalTypes::CPiecewiseCurve, 0x130);
+			PROPERTY(m_bEnableDistanceBlend,bool, 0x170);
+			PROPERTY(m_curve3,GlobalTypes::CPiecewiseCurve, 0x178);
+			PROPERTY(m_curve4,GlobalTypes::CPiecewiseCurve, 0x1b8);
+			S2_PAD(0x150);
 		};
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerParameterBlender) == 0x1E8, "CVoiceContainerParameterBlender size should be 0x1E8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerParameterBlender) == 0x1F8, "CVoiceContainerParameterBlender size should be 0x1F8");
+
+#endif
 	}
 }

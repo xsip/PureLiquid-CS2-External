@@ -23,6 +23,9 @@ namespace CS2 {
 			PROPERTY(m_flCycle,float32, 0x0);
 			S2_PAD(0x4);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CCycleBase) == 0x4, "CCycleBase size should be 0x4");
+
+#endif
 	}
 }

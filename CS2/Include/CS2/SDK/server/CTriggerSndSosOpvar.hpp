@@ -22,22 +22,25 @@ namespace CS2 {
 	namespace server {
 		class CTriggerSndSosOpvar : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_hTouchingPlayers,server::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>, 0x890);
-			PROPERTY(m_flPosition,GlobalTypes::Vector, 0x8a8);
-			PROPERTY(m_flCenterSize,float32, 0x8b4);
-			PROPERTY(m_flMinVal,float32, 0x8b8);
-			PROPERTY(m_flMaxVal,float32, 0x8bc);
-			PROPERTY(m_opvarName,GlobalTypes::CUtlSymbolLarge*, 0x8c0);
-			PROPERTY(m_stackName,GlobalTypes::CUtlSymbolLarge*, 0x8c8);
-			PROPERTY(m_operatorName,GlobalTypes::CUtlSymbolLarge*, 0x8d0);
-			PROPERTY(m_bVolIs2D,bool, 0x8d8);
-			PROPERTY_ARRAY(m_opvarNameChar,char, 256 , 0x8d9);
-			PROPERTY_ARRAY(m_stackNameChar,char, 256 , 0x9d9);
-			PROPERTY_ARRAY(m_operatorNameChar,char, 256 , 0xad9);
-			PROPERTY(m_VecNormPos,GlobalTypes::Vector, 0xbdc);
-			PROPERTY(m_flNormCenterSize,float32, 0xbe8);
+			NESTED_PROPERTY(m_hTouchingPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x8c8);
+			PROPERTY(m_flPosition,GlobalTypes::Vector, 0x8e0);
+			PROPERTY(m_flCenterSize,float32, 0x8ec);
+			PROPERTY(m_flMinVal,float32, 0x8f0);
+			PROPERTY(m_flMaxVal,float32, 0x8f4);
+			PROPERTY(m_opvarName,GlobalTypes::CUtlSymbolLarge*, 0x8f8);
+			PROPERTY(m_stackName,GlobalTypes::CUtlSymbolLarge*, 0x900);
+			PROPERTY(m_operatorName,GlobalTypes::CUtlSymbolLarge*, 0x908);
+			PROPERTY(m_bVolIs2D,bool, 0x910);
+			PROPERTY_ARRAY(m_opvarNameChar,char, 256 , 0x911);
+			PROPERTY_ARRAY(m_stackNameChar,char, 256 , 0xa11);
+			PROPERTY_ARRAY(m_operatorNameChar,char, 256 , 0xb11);
+			PROPERTY(m_VecNormPos,GlobalTypes::Vector, 0xc14);
+			PROPERTY(m_flNormCenterSize,float32, 0xc20);
 			S2_PAD(0x360);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerSndSosOpvar) == 0xBF0, "CTriggerSndSosOpvar size should be 0xBF0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerSndSosOpvar) == 0xC28, "CTriggerSndSosOpvar size should be 0xC28");
+
+#endif
 	}
 }

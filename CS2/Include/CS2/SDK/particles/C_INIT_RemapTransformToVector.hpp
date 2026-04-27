@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionInitializer.hpp>
 #include <SDK/particles/ParticleAttributeIndex_t.hpp>
 #include <SDK/particleslib/CParticleTransformInput.hpp>
-#include <SDK/particles/ParticleSetMethod_t.hpp>
+#include <SDK/particleslib/ParticleSetMethod_t.hpp>
 
 
 
@@ -24,21 +24,24 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_RemapTransformToVector : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1d8);
-			PROPERTY(m_vInputMin,GlobalTypes::Vector, 0x1dc);
-			PROPERTY(m_vInputMax,GlobalTypes::Vector, 0x1e8);
-			PROPERTY(m_vOutputMin,GlobalTypes::Vector, 0x1f4);
-			PROPERTY(m_vOutputMax,GlobalTypes::Vector, 0x200);
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x210);
-			NESTED_PROPERTY(m_LocalSpaceTransform,particleslib::CParticleTransformInput, 0x278);
-			PROPERTY(m_flStartTime,float32, 0x2e0);
-			PROPERTY(m_flEndTime,float32, 0x2e4);
-			PROPERTY(m_nSetMethod,particles::ParticleSetMethod_t, 0x2e8);
-			PROPERTY(m_bOffset,bool, 0x2ec);
-			PROPERTY(m_bAccelerate,bool, 0x2ed);
-			PROPERTY(m_flRemapBias,float32, 0x2f0);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			PROPERTY(m_vInputMin,GlobalTypes::Vector, 0x1e4);
+			PROPERTY(m_vInputMax,GlobalTypes::Vector, 0x1f0);
+			PROPERTY(m_vOutputMin,GlobalTypes::Vector, 0x1fc);
+			PROPERTY(m_vOutputMax,GlobalTypes::Vector, 0x208);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x218);
+			NESTED_PROPERTY(m_LocalSpaceTransform,IDENTITY(particleslib::CParticleTransformInput), 0x280);
+			PROPERTY(m_flStartTime,float32, 0x2e8);
+			PROPERTY(m_flEndTime,float32, 0x2ec);
+			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x2f0);
+			PROPERTY(m_bOffset,bool, 0x2f4);
+			PROPERTY(m_bAccelerate,bool, 0x2f5);
+			PROPERTY(m_flRemapBias,float32, 0x2f8);
 			S2_PAD(0x120);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_RemapTransformToVector) == 0x2F8, "C_INIT_RemapTransformToVector size should be 0x2F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_RemapTransformToVector) == 0x300, "C_INIT_RemapTransformToVector size should be 0x300");
+
+#endif
 	}
 }

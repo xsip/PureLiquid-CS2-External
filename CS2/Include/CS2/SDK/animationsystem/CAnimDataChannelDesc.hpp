@@ -26,11 +26,14 @@ namespace CS2 {
 			PROPERTY(m_nType,int32_t, 0x24);
 			PROPERTY(m_szGrouping,GlobalTypes::CBufferString, 0x28);
 			PROPERTY(m_szDescription,GlobalTypes::CBufferString, 0x38);
-			NESTED_PROPERTY(m_szElementNameArray,GlobalTypes::CUtlVector<GlobalTypes::CBufferString>, 0x48);
-			NESTED_PROPERTY(m_nElementIndexArray,GlobalTypes::CUtlVector< int32 >, 0x60);
-			NESTED_PROPERTY(m_nElementMaskArray,GlobalTypes::CUtlVector< uint32 >, 0x78);
+			NESTED_PROPERTY(m_szElementNameArray,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CBufferString>), 0x48);
+			NESTED_PROPERTY(m_nElementIndexArray,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x60);
+			NESTED_PROPERTY(m_nElementMaskArray,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x78);
 			S2_PAD(0x90);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CAnimDataChannelDesc) == 0x90, "CAnimDataChannelDesc size should be 0x90");
+
+#endif
 	}
 }

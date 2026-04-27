@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x610
+			// Class size: 0x608
 			namespace C_CSGameRulesProxy /*: public CS2::client::C_GameRulesProxy*/ {
-				constexpr std::ptrdiff_t m_pGameRules = 0x608; // client::C_CSGameRules**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_pGameRules = 0x600; // client::C_CSGameRules**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

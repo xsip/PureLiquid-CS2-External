@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace client {
 		class C_FootstepControl : public CS2::client::C_BaseTrigger {
 		public:
-			PROPERTY(m_source,GlobalTypes::CUtlSymbolLarge*, 0xf58);
-			PROPERTY(m_destination,GlobalTypes::CUtlSymbolLarge*, 0xf60);
+			PROPERTY(m_source,GlobalTypes::CUtlSymbolLarge*, 0x1078);
+			PROPERTY(m_destination,GlobalTypes::CUtlSymbolLarge*, 0x1080);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::client::C_FootstepControl) == 0xF68, "C_FootstepControl size should be 0xF68");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_FootstepControl) == 0x1088, "C_FootstepControl size should be 0x1088");
+
+#endif
 	}
 }

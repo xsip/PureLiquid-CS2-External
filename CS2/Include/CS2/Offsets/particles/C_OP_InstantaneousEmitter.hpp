@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x640
+			// Class size: 0x648
 			namespace C_OP_InstantaneousEmitter /*: public CS2::particles::CParticleFunctionEmitter*/ {
-				constexpr std::ptrdiff_t m_nParticlesToEmit = 0x1d8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flStartTime = 0x348; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInitFromKilledParentParticles = 0x4b8; // float32 m_flInitFromKilledParentParticles; |  0x4b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nEventType = 0x4bc; // particles::EventTypeSelection_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flParentParticleScale = 0x4c0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nMaxEmittedPerFrame = 0x630; // int32_t m_nMaxEmittedPerFrame; |  0x630 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x634; // int32_t m_nSnapshotControlPoint; |  0x634 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x638; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nParticlesToEmit = 0x1e0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flStartTime = 0x350; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInitFromKilledParentParticles = 0x4c0; // float32 m_flInitFromKilledParentParticles; |  0x4c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nEventType = 0x4c4; // particles::EventTypeSelection_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flParentParticleScale = 0x4c8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nMaxEmittedPerFrame = 0x638; // int32_t m_nMaxEmittedPerFrame; |  0x638 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x63c; // int32_t m_nSnapshotControlPoint; |  0x63c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_strSnapshotSubset = 0x640; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

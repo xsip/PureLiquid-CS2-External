@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x228
+			// Class size: 0x230
 			namespace C_OP_RenderScreenVelocityRotate /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_flRotateRateDegrees = 0x220; // float32 m_flRotateRateDegrees; |  0x220 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flForwardDegrees = 0x224; // float32 m_flForwardDegrees; |  0x224 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRotateRateDegrees = 0x228; // float32 m_flRotateRateDegrees; |  0x228 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flForwardDegrees = 0x22c; // float32 m_flForwardDegrees; |  0x22c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

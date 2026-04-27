@@ -30,13 +30,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nInButtonsWhichAreToggles,uint64_t, 0x4b0);
 			PROPERTY(m_nTickBase,uint32_t, 0x4b8);
-			PROPERTY(m_hPawn,GlobalTypes::CHandle<server::CBasePlayerPawn>, 0x4e0);
+			PROPERTY(m_hPawn,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0x4e0);
 			PROPERTY(m_bKnownTeamMismatch,bool, 0x4e4);
 			PROPERTY(m_nSplitScreenSlot,GlobalTypes::CSplitScreenSlot, 0x4e8);
-			PROPERTY(m_hSplitOwner,GlobalTypes::CHandle<server::CBasePlayerController>, 0x4ec);
-			NESTED_PROPERTY(m_hSplitScreenPlayers,server::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerController>>, 0x4f0);
+			PROPERTY(m_hSplitOwner,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0x4ec);
+			NESTED_PROPERTY(m_hSplitScreenPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerController>>), 0x4f0);
 			PROPERTY(m_bIsHLTV,bool, 0x508);
-			PROPERTY(m_iConnected,client::PlayerConnectedState, 0x50c);
+			PROPERTY(m_iConnected,IDENTITY(client::PlayerConnectedState), 0x50c);
 			PROPERTY_ARRAY(m_iszPlayerName,char, 128 , 0x510);
 			PROPERTY(m_szNetworkIDString,GlobalTypes::CUtlString*, 0x590);
 			PROPERTY(m_fLerpTime,float32, 0x598);
@@ -44,7 +44,7 @@ namespace CS2 {
 			PROPERTY(m_bPredict,bool, 0x59d);
 			PROPERTY(m_bIsLowViolence,bool, 0x5a4);
 			PROPERTY(m_bGamePaused,bool, 0x5a5);
-			PROPERTY(m_iIgnoreGlobalChat,client::ChatIgnoreType_t, 0x6e0);
+			PROPERTY(m_iIgnoreGlobalChat,IDENTITY(client::ChatIgnoreType_t), 0x6e0);
 			PROPERTY(m_flLastPlayerTalkTime,float32, 0x6e4);
 			PROPERTY(m_flLastEntitySteadyState,float32, 0x6e8);
 			PROPERTY(m_nAvailableEntitySteadyState,int32_t, 0x6ec);
@@ -54,6 +54,9 @@ namespace CS2 {
 			PROPERTY(m_iDesiredFOV,uint32_t, 0x70c);
 			S2_PAD(0x320);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBasePlayerController) == 0x7C8, "CBasePlayerController size should be 0x7C8");
+
+#endif
 	}
 }

@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1F8
+			// Class size: 0x200
 			namespace CGeneralRandomRotation /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flDegrees = 0x1dc; // float32 m_flDegrees; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDegreesMin = 0x1e0; // float32 m_flDegreesMin; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDegreesMax = 0x1e4; // float32 m_flDegreesMax; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRotationRandExponent = 0x1e8; // float32 m_flRotationRandExponent; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRandomlyFlipDirection = 0x1ec; // bool m_bRandomlyFlipDirection; |  0x1ec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1e0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flDegrees = 0x1e4; // float32 m_flDegrees; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDegreesMin = 0x1e8; // float32 m_flDegreesMin; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDegreesMax = 0x1ec; // float32 m_flDegreesMax; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRotationRandExponent = 0x1f0; // float32 m_flRotationRandExponent; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRandomlyFlipDirection = 0x1f4; // bool m_bRandomlyFlipDirection; |  0x1f4 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

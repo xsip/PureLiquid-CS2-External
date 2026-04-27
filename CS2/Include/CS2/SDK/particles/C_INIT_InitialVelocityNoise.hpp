@@ -24,18 +24,21 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_InitialVelocityNoise : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_vecAbsVal,GlobalTypes::Vector, 0x1d8);
-			PROPERTY(m_vecAbsValInv,GlobalTypes::Vector, 0x1e4);
-			NESTED_PROPERTY(m_vecOffsetLoc,particleslib::CPerParticleVecInput, 0x1f0);
-			NESTED_PROPERTY(m_flOffset,particleslib::CPerParticleFloatInput, 0x8a8);
-			NESTED_PROPERTY(m_vecOutputMin,particleslib::CPerParticleVecInput, 0xa18);
-			NESTED_PROPERTY(m_vecOutputMax,particleslib::CPerParticleVecInput, 0x10d0);
-			NESTED_PROPERTY(m_flNoiseScale,particleslib::CPerParticleFloatInput, 0x1788);
-			NESTED_PROPERTY(m_flNoiseScaleLoc,particleslib::CPerParticleFloatInput, 0x18f8);
-			NESTED_PROPERTY(m_TransformInput,particleslib::CParticleTransformInput, 0x1a68);
-			PROPERTY(m_bIgnoreDt,bool, 0x1ad0);
+			PROPERTY(m_vecAbsVal,GlobalTypes::Vector, 0x1e0);
+			PROPERTY(m_vecAbsValInv,GlobalTypes::Vector, 0x1ec);
+			NESTED_PROPERTY(m_vecOffsetLoc,IDENTITY(particleslib::CPerParticleVecInput), 0x1f8);
+			NESTED_PROPERTY(m_flOffset,IDENTITY(particleslib::CPerParticleFloatInput), 0x8b0);
+			NESTED_PROPERTY(m_vecOutputMin,IDENTITY(particleslib::CPerParticleVecInput), 0xa20);
+			NESTED_PROPERTY(m_vecOutputMax,IDENTITY(particleslib::CPerParticleVecInput), 0x10d8);
+			NESTED_PROPERTY(m_flNoiseScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1790);
+			NESTED_PROPERTY(m_flNoiseScaleLoc,IDENTITY(particleslib::CPerParticleFloatInput), 0x1900);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x1a70);
+			PROPERTY(m_bIgnoreDt,bool, 0x1ad8);
 			S2_PAD(0x1900);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_InitialVelocityNoise) == 0x1AD8, "C_INIT_InitialVelocityNoise size should be 0x1AD8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_InitialVelocityNoise) == 0x1AE0, "C_INIT_InitialVelocityNoise size should be 0x1AE0");
+
+#endif
 	}
 }

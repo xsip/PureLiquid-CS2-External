@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x368
+			// Class size: 0x370
 			namespace C_OP_SetControlPointToWaterSurface /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nSourceCP = 0x1d8; // int32_t m_nSourceCP; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDestCP = 0x1dc; // int32_t m_nDestCP; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFlowCP = 0x1e0; // int32_t m_nFlowCP; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nActiveCP = 0x1e4; // int32_t m_nActiveCP; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nActiveCPField = 0x1e8; // int32_t m_nActiveCPField; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRetestRate = 0x1f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bAdaptiveThreshold = 0x360; // bool m_bAdaptiveThreshold; |  0x360 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nSourceCP = 0x1e0; // int32_t m_nSourceCP; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDestCP = 0x1e4; // int32_t m_nDestCP; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFlowCP = 0x1e8; // int32_t m_nFlowCP; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nActiveCP = 0x1ec; // int32_t m_nActiveCP; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nActiveCPField = 0x1f0; // int32_t m_nActiveCPField; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRetestRate = 0x1f8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bAdaptiveThreshold = 0x368; // bool m_bAdaptiveThreshold; |  0x368 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

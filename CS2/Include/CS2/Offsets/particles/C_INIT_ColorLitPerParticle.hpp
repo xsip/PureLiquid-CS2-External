@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x210
+			// Class size: 0x218
 			namespace C_INIT_ColorLitPerParticle /*: public CS2::particles::CParticleFunctionInitializer*/ {
-				constexpr std::ptrdiff_t m_ColorMin = 0x1f0; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_ColorMax = 0x1f4; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_TintMin = 0x1f8; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_TintMax = 0x1fc; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flTintPerc = 0x200; // float32 m_flTintPerc; |  0x200 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTintBlendMode = 0x204; // particles::ParticleColorBlendMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flLightAmplification = 0x208; // float32 m_flLightAmplification; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ColorMin = 0x1f8; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_ColorMax = 0x1fc; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_TintMin = 0x200; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_TintMax = 0x204; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flTintPerc = 0x208; // float32 m_flTintPerc; |  0x208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTintBlendMode = 0x20c; // particleslib::ParticleColorBlendMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flLightAmplification = 0x210; // float32 m_flLightAmplification; |  0x210 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -23,23 +23,26 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_OscillateVector : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_RateMin,GlobalTypes::Vector, 0x1d0);
-			PROPERTY(m_RateMax,GlobalTypes::Vector, 0x1dc);
-			PROPERTY(m_FrequencyMin,GlobalTypes::Vector, 0x1e8);
-			PROPERTY(m_FrequencyMax,GlobalTypes::Vector, 0x1f4);
-			NESTED_PROPERTY(m_nField,particles::ParticleAttributeIndex_t, 0x200);
-			PROPERTY(m_bProportional,bool, 0x204);
-			PROPERTY(m_bProportionalOp,bool, 0x205);
-			PROPERTY(m_bOffset,bool, 0x206);
-			PROPERTY(m_flStartTime_min,float32, 0x208);
-			PROPERTY(m_flStartTime_max,float32, 0x20c);
-			PROPERTY(m_flEndTime_min,float32, 0x210);
-			PROPERTY(m_flEndTime_max,float32, 0x214);
-			NESTED_PROPERTY(m_flOscMult,particleslib::CPerParticleFloatInput, 0x218);
-			NESTED_PROPERTY(m_flOscAdd,particleslib::CPerParticleFloatInput, 0x388);
-			NESTED_PROPERTY(m_flRateScale,particleslib::CPerParticleFloatInput, 0x4f8);
+			PROPERTY(m_RateMin,GlobalTypes::Vector, 0x1d8);
+			PROPERTY(m_RateMax,GlobalTypes::Vector, 0x1e4);
+			PROPERTY(m_FrequencyMin,GlobalTypes::Vector, 0x1f0);
+			PROPERTY(m_FrequencyMax,GlobalTypes::Vector, 0x1fc);
+			NESTED_PROPERTY(m_nField,IDENTITY(particles::ParticleAttributeIndex_t), 0x208);
+			PROPERTY(m_bProportional,bool, 0x20c);
+			PROPERTY(m_bProportionalOp,bool, 0x20d);
+			PROPERTY(m_bOffset,bool, 0x20e);
+			PROPERTY(m_flStartTime_min,float32, 0x210);
+			PROPERTY(m_flStartTime_max,float32, 0x214);
+			PROPERTY(m_flEndTime_min,float32, 0x218);
+			PROPERTY(m_flEndTime_max,float32, 0x21c);
+			NESTED_PROPERTY(m_flOscMult,IDENTITY(particleslib::CPerParticleFloatInput), 0x220);
+			NESTED_PROPERTY(m_flOscAdd,IDENTITY(particleslib::CPerParticleFloatInput), 0x390);
+			NESTED_PROPERTY(m_flRateScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x500);
 			S2_PAD(0x498);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_OscillateVector) == 0x668, "C_OP_OscillateVector size should be 0x668");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_OscillateVector) == 0x670, "C_OP_OscillateVector size should be 0x670");
+
+#endif
 	}
 }

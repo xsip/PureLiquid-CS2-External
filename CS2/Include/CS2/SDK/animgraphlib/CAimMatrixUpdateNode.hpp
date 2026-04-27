@@ -25,14 +25,17 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAimMatrixUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_opFixedSettings,animgraphlib::AimMatrixOpFixedSettings_t, 0x70);
-			PROPERTY(m_target,animgraphlib::AnimVectorSource, 0x168);
-			NESTED_PROPERTY(m_paramIndex,animgraphlib::CAnimParamHandle, 0x16c);
-			NESTED_PROPERTY(m_hSequence,animationsystem::HSequence, 0x170);
+			NESTED_PROPERTY(m_opFixedSettings,IDENTITY(animgraphlib::AimMatrixOpFixedSettings_t), 0x70);
+			PROPERTY(m_target,IDENTITY(animgraphlib::AnimVectorSource), 0x168);
+			NESTED_PROPERTY(m_paramIndex,IDENTITY(animgraphlib::CAnimParamHandle), 0x16c);
+			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x170);
 			PROPERTY(m_bResetChild,bool, 0x174);
 			PROPERTY(m_bLockWhenWaning,bool, 0x175);
 			S2_PAD(0x110);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAimMatrixUpdateNode) == 0x180, "CAimMatrixUpdateNode size should be 0x180");
+
+#endif
 	}
 }

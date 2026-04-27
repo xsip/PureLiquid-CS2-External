@@ -23,14 +23,17 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CConcreteAnimParameter : public CS2::animgraphlib::CAnimParameterBase {
 		public:
-			PROPERTY(m_previewButton,animgraphlib::AnimParamButton_t, 0x70);
-			PROPERTY(m_eNetworkSetting,animgraphlib::AnimParamNetworkSetting, 0x74);
+			PROPERTY(m_previewButton,IDENTITY(animgraphlib::AnimParamButton_t), 0x70);
+			PROPERTY(m_eNetworkSetting,IDENTITY(animgraphlib::AnimParamNetworkSetting), 0x74);
 			PROPERTY(m_bUseMostRecentValue,bool, 0x78);
 			PROPERTY(m_bAutoReset,bool, 0x79);
 			PROPERTY(m_bGameWritable,bool, 0x7a);
 			PROPERTY(m_bGraphWritable,bool, 0x7b);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CConcreteAnimParameter) == 0x80, "CConcreteAnimParameter size should be 0x80");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xAE0
+			// Class size: 0xA00
 			namespace CItemDefuserAlias_item_defuser /*: public CS2::server::CItemDefuser*/ {
 				// NO SCHEMA DATA FOUND!
 			}

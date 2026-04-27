@@ -23,14 +23,17 @@ namespace CS2 {
 	namespace mathlib_extended {
 		class CFuseSymbolTable  {
 		public:
-			NESTED_PROPERTY(m_constants,GlobalTypes::CUtlVector<mathlib_extended::ConstantInfo_t>, 0x0);
-			NESTED_PROPERTY(m_variables,GlobalTypes::CUtlVector<mathlib_extended::VariableInfo_t>, 0x18);
-			NESTED_PROPERTY(m_functions,GlobalTypes::CUtlVector<mathlib_extended::FunctionInfo_t>, 0x30);
-			PROPERTY(m_constantMap,GlobalTypes::CUtlHashtable< CUtlStringToken, int32 >*, 0x48);
-			PROPERTY(m_variableMap,GlobalTypes::CUtlHashtable< CUtlStringToken, int32 >*, 0x68);
-			PROPERTY(m_functionMap,GlobalTypes::CUtlHashtable< CUtlStringToken, int32 >*, 0x88);
+			NESTED_PROPERTY(m_constants,IDENTITY(GlobalTypes::CUtlVector<mathlib_extended::ConstantInfo_t>), 0x0);
+			NESTED_PROPERTY(m_variables,IDENTITY(GlobalTypes::CUtlVector<mathlib_extended::VariableInfo_t>), 0x18);
+			NESTED_PROPERTY(m_functions,IDENTITY(GlobalTypes::CUtlVector<mathlib_extended::FunctionInfo_t>), 0x30);
+			// PROPERTY(m_constantMap,IDENTITY(GlobalTypes::CUtlHashtable< CUtlStringToken, int32 >*), 0x48);
+			// PROPERTY(m_variableMap,IDENTITY(GlobalTypes::CUtlHashtable< CUtlStringToken, int32 >*), 0x68);
+			// PROPERTY(m_functionMap,IDENTITY(GlobalTypes::CUtlHashtable< CUtlStringToken, int32 >*), 0x88);
 			S2_PAD(0xB0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::mathlib_extended::CFuseSymbolTable) == 0xB0, "CFuseSymbolTable size should be 0xB0");
+
+#endif
 	}
 }

@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(m_flDirection,float32, 0xc);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::StanceInfo_t) == 0x10, "StanceInfo_t size should be 0x10");
+
+#endif
 	}
 }

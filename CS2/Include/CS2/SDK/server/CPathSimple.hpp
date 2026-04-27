@@ -22,11 +22,14 @@ namespace CS2 {
 	namespace server {
 		class CPathSimple : public CS2::server::CBaseEntity {
 		public:
-			NESTED_PROPERTY(m_CPathQueryComponent,server::CPathQueryComponent, 0x4b0);
+			NESTED_PROPERTY(m_CPathQueryComponent,IDENTITY(server::CPathQueryComponent), 0x4b0);
 			PROPERTY(m_pathString,GlobalTypes::CUtlString*, 0x5a0);
 			PROPERTY(m_bClosedLoop,bool, 0x5a8);
 			S2_PAD(0x108);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPathSimple) == 0x5B0, "CPathSimple size should be 0x5B0");
+
+#endif
 	}
 }

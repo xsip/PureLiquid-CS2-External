@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CModelPointEntity : public CS2::server::CBaseModelEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CModelPointEntity) == 0x730, "CModelPointEntity size should be 0x730");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CModelPointEntity) == 0x768, "CModelPointEntity size should be 0x768");
+
+#endif
 	}
 }

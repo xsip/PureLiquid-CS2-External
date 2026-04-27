@@ -21,14 +21,17 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_LockPoints : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nMinCol,int32_t, 0x1d0);
-			PROPERTY(m_nMaxCol,int32_t, 0x1d4);
-			PROPERTY(m_nMinRow,int32_t, 0x1d8);
-			PROPERTY(m_nMaxRow,int32_t, 0x1dc);
-			PROPERTY(m_nControlPoint,int32_t, 0x1e0);
-			PROPERTY(m_flBlendValue,float32, 0x1e4);
+			PROPERTY(m_nMinCol,int32_t, 0x1d8);
+			PROPERTY(m_nMaxCol,int32_t, 0x1dc);
+			PROPERTY(m_nMinRow,int32_t, 0x1e0);
+			PROPERTY(m_nMaxRow,int32_t, 0x1e4);
+			PROPERTY(m_nControlPoint,int32_t, 0x1e8);
+			PROPERTY(m_flBlendValue,float32, 0x1ec);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_LockPoints) == 0x1E8, "C_OP_LockPoints size should be 0x1E8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_LockPoints) == 0x1F0, "C_OP_LockPoints size should be 0x1F0");
+
+#endif
 	}
 }

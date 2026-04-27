@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x658
+			// Class size: 0x650
 			namespace C_PlayerPing /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_hPlayer = 0x638; // GlobalTypes::CHandle<client::C_CSPlayerPawn>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hPingedEntity = 0x63c; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iType = 0x640; // int32_t m_iType; |  0x640 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUrgent = 0x644; // bool m_bUrgent; |  0x644 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_szPlaceName = 0x645; // char m_szPlaceName[18]; |  0x645 | Schema_FixedArray | Size: 0x12
+				constexpr std::ptrdiff_t m_hPlayer = 0x630; // GlobalTypes::CHandle<client::C_CSPlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hPingedEntity = 0x634; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iType = 0x638; // int32_t m_iType; |  0x638 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUrgent = 0x63c; // bool m_bUrgent; |  0x63c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_szPlaceName = 0x63d; // char m_szPlaceName[18]; |  0x63d | Schema_FixedArray | Size: 0x12
 			}
 		}
 	}

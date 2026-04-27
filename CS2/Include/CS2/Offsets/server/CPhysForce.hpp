@@ -10,6 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x508
 			namespace CPhysForce /*: public CS2::server::CPointEntity*/ {
+				constexpr std::ptrdiff_t m_pController = 0x4a8; // client::IPhysicsMotionController**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_nameAttach = 0x4b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_force = 0x4b8; // float32 m_force; |  0x4b8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_forceTime = 0x4bc; // float32 m_forceTime; |  0x4bc | Schema_Builtin | Size: 0x4

@@ -8,19 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x30
+			// Class size: 0x50
 			namespace CTakeDamageResult /**/ {
 				constexpr std::ptrdiff_t m_pOriginatingInfo = 0x0; // client::CTakeDamageInfo**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_nHealthLost = 0x8; // int32_t m_nHealthLost; |  0x8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nHealthBefore = 0xc; // int32_t m_nHealthBefore; |  0xc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDamageDealt = 0x10; // int32_t m_nDamageDealt; |  0x10 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flPreModifiedDamage = 0x14; // float32 m_flPreModifiedDamage; |  0x14 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTotalledHealthLost = 0x18; // int32_t m_nTotalledHealthLost; |  0x18 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nTotalledDamageDealt = 0x1c; // int32_t m_nTotalledDamageDealt; |  0x1c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTotalledPreModifiedDamage = 0x20; // float32 m_flTotalledPreModifiedDamage; |  0x20 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bWasDamageSuppressed = 0x24; // bool m_bWasDamageSuppressed; |  0x24 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSuppressFlinch = 0x25; // bool m_bSuppressFlinch; |  0x25 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nOverrideFlinchHitGroup = 0x28; // client::HitGroup_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_DestructibleHitGroupRequests = 0x8; // GlobalTypes::CUtlLeanVector<client::DestructiblePartDamageRequest_t>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_nHealthLost = 0x18; // int32_t m_nHealthLost; |  0x18 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nHealthBefore = 0x1c; // int32_t m_nHealthBefore; |  0x1c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDamageDealt = 0x20; // float32 m_flDamageDealt; |  0x20 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flPreModifiedDamage = 0x24; // float32 m_flPreModifiedDamage; |  0x24 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nTotalledHealthLost = 0x28; // int32_t m_nTotalledHealthLost; |  0x28 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTotalledDamageDealt = 0x2c; // float32 m_flTotalledDamageDealt; |  0x2c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTotalledPreModifiedDamage = 0x30; // float32 m_flTotalledPreModifiedDamage; |  0x30 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNewDamageAccumulatorValue = 0x34; // float32 m_flNewDamageAccumulatorValue; |  0x34 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDamageFlags = 0x38; // client::TakeDamageFlags_t  | Schema_DeclaredEnum | Size: 0x8
+				constexpr std::ptrdiff_t m_bWasDamageSuppressed = 0x40; // bool m_bWasDamageSuppressed; |  0x40 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSuppressFlinch = 0x41; // bool m_bSuppressFlinch; |  0x41 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nOverrideFlinchHitGroup = 0x44; // client::HitGroup_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

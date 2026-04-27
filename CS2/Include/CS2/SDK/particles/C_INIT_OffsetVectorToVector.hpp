@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_OffsetVectorToVector : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_nFieldInput,particles::ParticleAttributeIndex_t, 0x1d8);
-			NESTED_PROPERTY(m_nFieldOutput,particles::ParticleAttributeIndex_t, 0x1dc);
-			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1e0);
-			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1ec);
-			NESTED_PROPERTY(m_randomnessParameters,particles::CRandomNumberGeneratorParameters, 0x1f8);
+			NESTED_PROPERTY(m_nFieldInput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e4);
+			PROPERTY(m_vecOutputMin,GlobalTypes::Vector, 0x1e8);
+			PROPERTY(m_vecOutputMax,GlobalTypes::Vector, 0x1f4);
+			NESTED_PROPERTY(m_randomnessParameters,IDENTITY(particles::CRandomNumberGeneratorParameters), 0x200);
 			S2_PAD(0x28);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_OffsetVectorToVector) == 0x200, "C_INIT_OffsetVectorToVector size should be 0x200");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_OffsetVectorToVector) == 0x208, "C_INIT_OffsetVectorToVector size should be 0x208");
+
+#endif
 	}
 }

@@ -28,10 +28,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nSubSceneObject,uint32_t, 0x4);
 			PROPERTY(m_nDrawCallIndex,uint32_t, 0x8);
-			PROPERTY(m_pMaterial,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x10);
+			PROPERTY(m_pMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x10);
 			PROPERTY(m_vLinearTintColor,GlobalTypes::Vector, 0x18);
 			S2_PAD(0x24);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::worldrenderer::MaterialOverride_t) == 0x28, "MaterialOverride_t size should be 0x28");
+
+#endif
 	}
 }

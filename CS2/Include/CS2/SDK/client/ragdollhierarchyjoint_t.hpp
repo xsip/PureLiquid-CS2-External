@@ -24,6 +24,9 @@ namespace CS2 {
 			PROPERTY(childIndex,int32_t, 0x4);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::ragdollhierarchyjoint_t) == 0x10, "ragdollhierarchyjoint_t size should be 0x10");
+
+#endif
 	}
 }

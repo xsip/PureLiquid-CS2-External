@@ -13,6 +13,7 @@
 #include <SDK/client/CEntitySubclassVDataBase.hpp>
 #include <SDK/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp>
 #include <SDK/animationsystem/ParticleAttachment_t.hpp>
+#include <SDK/client/PrecipitationFilter_t.hpp>
 
 
 
@@ -23,15 +24,20 @@ namespace CS2 {
 	namespace client {
 		class CPrecipitationVData : public CS2::client::CEntitySubclassVDataBase {
 		public:
-			PROPERTY(m_szParticlePrecipitationEffect,GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>, 0x28);
+			PROPERTY(m_szParticlePrecipitationEffect,IDENTITY(GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>), 0x28);
 			PROPERTY(m_flInnerDistance,float32, 0x108);
-			PROPERTY(m_nAttachType,animationsystem::ParticleAttachment_t, 0x10c);
+			PROPERTY(m_nAttachType,IDENTITY(animationsystem::ParticleAttachment_t), 0x10c);
 			PROPERTY(m_bBatchSameVolumeType,bool, 0x110);
 			PROPERTY(m_nRTEnvCP,int32_t, 0x114);
 			PROPERTY(m_nRTEnvCPComponent,int32_t, 0x118);
 			PROPERTY(m_szModifier,GlobalTypes::CUtlString*, 0x120);
-			S2_PAD(0x100);
+			PROPERTY(m_nUseSnapshotFromSurfaceGraph,int32_t, 0x128);
+			NESTED_PROPERTY(m_snapshotFilter,IDENTITY(client::PrecipitationFilter_t), 0x12c);
+			S2_PAD(0x108);
 		};
-		//static_assert(sizeof(CS2::client::CPrecipitationVData) == 0x128, "CPrecipitationVData size should be 0x128");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPrecipitationVData) == 0x130, "CPrecipitationVData size should be 0x130");
+
+#endif
 	}
 }

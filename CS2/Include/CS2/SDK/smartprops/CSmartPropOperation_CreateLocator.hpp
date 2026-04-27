@@ -30,6 +30,9 @@ namespace CS2 {
 			PROPERTY(m_bAllowScale,GlobalTypes::CSmartPropAttributeBool, 0x198);
 			S2_PAD(0x188);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_CreateLocator) == 0x1D8, "CSmartPropOperation_CreateLocator size should be 0x1D8");
+
+#endif
 	}
 }

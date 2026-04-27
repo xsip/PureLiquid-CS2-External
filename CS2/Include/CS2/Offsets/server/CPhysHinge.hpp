@@ -15,7 +15,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_NotifyMaxLimitReached = 0x5c0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_bAtMinLimit = 0x5d8; // bool m_bAtMinLimit; |  0x5d8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bAtMaxLimit = 0x5d9; // bool m_bAtMaxLimit; |  0x5d9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hinge = 0x5dc; // vphysics2::constraint_hingeparams_t  | Schema_DeclaredClass | Size: 0x40
+				constexpr std::ptrdiff_t m_hinge = 0x5dc; // client::constraint_hingeparams_t  | Schema_DeclaredClass | Size: 0x40
 				constexpr std::ptrdiff_t m_hingeFriction = 0x61c; // float32 m_hingeFriction; |  0x61c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_systemLoadScale = 0x620; // float32 m_systemLoadScale; |  0x620 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bIsAxisLocal = 0x624; // bool m_bIsAxisLocal; |  0x624 | Schema_Builtin | Size: 0x1

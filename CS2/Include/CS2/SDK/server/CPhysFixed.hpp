@@ -31,6 +31,9 @@ namespace CS2 {
 			PROPERTY(m_sBoneName2,GlobalTypes::CUtlSymbolLarge*, 0x528);
 			S2_PAD(0x28);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPhysFixed) == 0x530, "CPhysFixed size should be 0x530");
+
+#endif
 	}
 }

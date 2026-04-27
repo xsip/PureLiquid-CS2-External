@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ParentVortices : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_flForceScale,float32, 0x1e0);
-			PROPERTY(m_vecTwistAxis,GlobalTypes::Vector, 0x1e4);
-			PROPERTY(m_bFlipBasedOnYaw,bool, 0x1f0);
+			PROPERTY(m_flForceScale,float32, 0x1e8);
+			PROPERTY(m_vecTwistAxis,GlobalTypes::Vector, 0x1ec);
+			PROPERTY(m_bFlipBasedOnYaw,bool, 0x1f8);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_ParentVortices) == 0x1F8, "C_OP_ParentVortices size should be 0x1F8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_ParentVortices) == 0x200, "C_OP_ParentVortices size should be 0x200");
+
+#endif
 	}
 }

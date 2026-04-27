@@ -26,10 +26,13 @@ namespace CS2 {
 	namespace client {
 		class C_PointClientUIDialog : public CS2::client::C_BaseClientUIEntity {
 		public:
-			PROPERTY(m_hActivator,GlobalTypes::CHandle<client::C_BaseEntity>, 0xeb8);
-			PROPERTY(m_bStartEnabled,bool, 0xebc);
+			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xfd8);
+			PROPERTY(m_bStartEnabled,bool, 0xfdc);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::client::C_PointClientUIDialog) == 0xEC0, "C_PointClientUIDialog size should be 0xEC0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_PointClientUIDialog) == 0xFE0, "C_PointClientUIDialog size should be 0xFE0");
+
+#endif
 	}
 }

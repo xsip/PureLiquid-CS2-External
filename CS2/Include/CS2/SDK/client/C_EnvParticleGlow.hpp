@@ -26,13 +26,16 @@ namespace CS2 {
 	namespace client {
 		class C_EnvParticleGlow : public CS2::client::C_ParticleSystem {
 		public:
-			PROPERTY(m_flAlphaScale,float32, 0x1438);
-			PROPERTY(m_flRadiusScale,float32, 0x143c);
-			PROPERTY(m_flSelfIllumScale,float32, 0x1440);
-			PROPERTY(m_ColorTint,GlobalTypes::Color, 0x1444);
-			PROPERTY(m_hTextureOverride,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x1448);
+			PROPERTY(m_flAlphaScale,float32, 0x1558);
+			PROPERTY(m_flRadiusScale,float32, 0x155c);
+			PROPERTY(m_flSelfIllumScale,float32, 0x1560);
+			PROPERTY(m_ColorTint,GlobalTypes::Color, 0x1564);
+			PROPERTY(m_hTextureOverride,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1568);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::client::C_EnvParticleGlow) == 0x1450, "C_EnvParticleGlow size should be 0x1450");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_EnvParticleGlow) == 0x1570, "C_EnvParticleGlow size should be 0x1570");
+
+#endif
 	}
 }

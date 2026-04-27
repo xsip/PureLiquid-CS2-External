@@ -25,7 +25,7 @@ namespace CS2 {
 			PROPERTY(m_Name,GlobalTypes::CUtlString*, 0x50);
 			PROPERTY(m_vOffset,GlobalTypes::CSmartPropAttributeVector, 0x58);
 			PROPERTY(m_vRotationAxis,GlobalTypes::CSmartPropAttributeVector, 0x98);
-			NESTED_PROPERTY(m_CoordinateSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0xd8);
+			NESTED_PROPERTY(m_CoordinateSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0xd8);
 			PROPERTY(m_flDisplayRadius,GlobalTypes::CSmartPropAttributeFloat, 0x118);
 			PROPERTY(m_DisplayColor,GlobalTypes::CSmartPropAttributeColor, 0x158);
 			PROPERTY(m_bApplyToCurrentTransform,GlobalTypes::CSmartPropAttributeBool, 0x198);
@@ -37,6 +37,9 @@ namespace CS2 {
 			PROPERTY(m_OutputVariable,GlobalTypes::CUtlString*, 0x318);
 			S2_PAD(0x2D0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_CreateRotator) == 0x320, "CSmartPropOperation_CreateRotator size should be 0x320");
+
+#endif
 	}
 }

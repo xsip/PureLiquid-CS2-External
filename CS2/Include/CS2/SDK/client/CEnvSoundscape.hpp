@@ -22,19 +22,22 @@ namespace CS2 {
 	namespace client {
 		class CEnvSoundscape : public CS2::client::C_BaseEntity {
 		public:
-			NESTED_PROPERTY(m_OnPlay,entity2::CEntityIOOutput, 0x608);
-			PROPERTY(m_flRadius,float32, 0x620);
-			PROPERTY(m_soundEventName,GlobalTypes::CUtlSymbolLarge*, 0x628);
-			PROPERTY(m_bOverrideWithEvent,bool, 0x630);
-			PROPERTY(m_soundscapeIndex,int32_t, 0x634);
-			PROPERTY(m_soundscapeEntityListId,int32_t, 0x638);
-			PROPERTY_ARRAY(m_positionNames,GlobalTypes::CUtlSymbolLarge*, 8 , 0x640);
-			PROPERTY(m_hProxySoundscape,GlobalTypes::CHandle<client::CEnvSoundscape>, 0x680);
-			PROPERTY(m_bDisabled,bool, 0x684);
-			PROPERTY(m_soundscapeName,GlobalTypes::CUtlSymbolLarge*, 0x688);
-			PROPERTY(m_soundEventHash,uint32_t, 0x690);
+			NESTED_PROPERTY(m_OnPlay,IDENTITY(entity2::CEntityIOOutput), 0x600);
+			PROPERTY(m_flRadius,float32, 0x618);
+			PROPERTY(m_soundEventName,GlobalTypes::CUtlSymbolLarge*, 0x620);
+			PROPERTY(m_bOverrideWithEvent,bool, 0x628);
+			PROPERTY(m_soundscapeIndex,int32_t, 0x62c);
+			PROPERTY(m_soundscapeEntityListId,int32_t, 0x630);
+			PROPERTY_ARRAY(m_positionNames,GlobalTypes::CUtlSymbolLarge*, 8 , 0x638);
+			PROPERTY(m_hProxySoundscape,IDENTITY(GlobalTypes::CHandle<client::CEnvSoundscape>), 0x678);
+			PROPERTY(m_bDisabled,bool, 0x67c);
+			PROPERTY(m_soundscapeName,GlobalTypes::CUtlSymbolLarge*, 0x680);
+			PROPERTY(m_soundEventHash,uint32_t, 0x688);
 			S2_PAD(0x90);
 		};
-		//static_assert(sizeof(CS2::client::CEnvSoundscape) == 0x698, "CEnvSoundscape size should be 0x698");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CEnvSoundscape) == 0x690, "CEnvSoundscape size should be 0x690");
+
+#endif
 	}
 }

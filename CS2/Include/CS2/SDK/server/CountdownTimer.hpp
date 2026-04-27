@@ -22,11 +22,14 @@ namespace CS2 {
 		class CountdownTimer  {
 		public:
 			PROPERTY(m_duration,float32, 0x8);
-			NESTED_PROPERTY(m_timestamp,entity2::GameTime_t, 0xc);
+			NESTED_PROPERTY(m_timestamp,IDENTITY(entity2::GameTime_t), 0xc);
 			PROPERTY(m_timescale,float32, 0x10);
 			PROPERTY(m_nWorldGroupId,GlobalTypes::WorldGroupId_t, 0x14);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CountdownTimer) == 0x18, "CountdownTimer size should be 0x18");
+
+#endif
 	}
 }

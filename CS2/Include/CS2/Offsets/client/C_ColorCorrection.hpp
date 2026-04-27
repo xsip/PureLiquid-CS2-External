@@ -8,26 +8,26 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x850
+			// Class size: 0x848
 			namespace C_ColorCorrection /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_vecOrigin = 0x608; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_MinFalloff = 0x614; // float32 m_MinFalloff; |  0x614 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_MaxFalloff = 0x618; // float32 m_MaxFalloff; |  0x618 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeInDuration = 0x61c; // float32 m_flFadeInDuration; |  0x61c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutDuration = 0x620; // float32 m_flFadeOutDuration; |  0x620 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxWeight = 0x624; // float32 m_flMaxWeight; |  0x624 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flCurWeight = 0x628; // float32 m_flCurWeight; |  0x628 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_netlookupFilename = 0x62c; // char m_netlookupFilename[512]; |  0x62c | Schema_FixedArray | Size: 0x200
-				constexpr std::ptrdiff_t m_bEnabled = 0x82c; // bool m_bEnabled; |  0x82c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bMaster = 0x82d; // bool m_bMaster; |  0x82d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bClientSide = 0x82e; // bool m_bClientSide; |  0x82e | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bExclusive = 0x82f; // bool m_bExclusive; |  0x82f | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEnabledOnClient = 0x830; // bool m_bEnabledOnClient[1]; |  0x830 | Schema_FixedArray | Size: 0x1
-				constexpr std::ptrdiff_t m_flCurWeightOnClient = 0x834; // float32 m_flCurWeightOnClient[1]; |  0x834 | Schema_FixedArray | Size: 0x4
-				constexpr std::ptrdiff_t m_bFadingIn = 0x838; // bool m_bFadingIn[1]; |  0x838 | Schema_FixedArray | Size: 0x1
-				constexpr std::ptrdiff_t m_flFadeStartWeight = 0x83c; // float32 m_flFadeStartWeight[1]; |  0x83c | Schema_FixedArray | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeStartTime = 0x840; // float32 m_flFadeStartTime[1]; |  0x840 | Schema_FixedArray | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeDuration = 0x844; // float32 m_flFadeDuration[1]; |  0x844 | Schema_FixedArray | Size: 0x4
+				constexpr std::ptrdiff_t m_vecOrigin = 0x600; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_MinFalloff = 0x60c; // float32 m_MinFalloff; |  0x60c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_MaxFalloff = 0x610; // float32 m_MaxFalloff; |  0x610 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeInDuration = 0x614; // float32 m_flFadeInDuration; |  0x614 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutDuration = 0x618; // float32 m_flFadeOutDuration; |  0x618 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxWeight = 0x61c; // float32 m_flMaxWeight; |  0x61c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCurWeight = 0x620; // float32 m_flCurWeight; |  0x620 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_netlookupFilename = 0x624; // char m_netlookupFilename[512]; |  0x624 | Schema_FixedArray | Size: 0x200
+				constexpr std::ptrdiff_t m_bEnabled = 0x824; // bool m_bEnabled; |  0x824 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bMaster = 0x825; // bool m_bMaster; |  0x825 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bClientSide = 0x826; // bool m_bClientSide; |  0x826 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bExclusive = 0x827; // bool m_bExclusive; |  0x827 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEnabledOnClient = 0x828; // bool m_bEnabledOnClient[1]; |  0x828 | Schema_FixedArray | Size: 0x1
+				constexpr std::ptrdiff_t m_flCurWeightOnClient = 0x82c; // float32 m_flCurWeightOnClient[1]; |  0x82c | Schema_FixedArray | Size: 0x4
+				constexpr std::ptrdiff_t m_bFadingIn = 0x830; // bool m_bFadingIn[1]; |  0x830 | Schema_FixedArray | Size: 0x1
+				constexpr std::ptrdiff_t m_flFadeStartWeight = 0x834; // float32 m_flFadeStartWeight[1]; |  0x834 | Schema_FixedArray | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeStartTime = 0x838; // float32 m_flFadeStartTime[1]; |  0x838 | Schema_FixedArray | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeDuration = 0x83c; // float32 m_flFadeDuration[1]; |  0x83c | Schema_FixedArray | Size: 0x4
 			}
 		}
 	}

@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_iszPathCornerEntityName,GlobalTypes::CUtlSymbolLarge*, 0x668);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSoundOpvarSetPathCornerEntity) == 0x670, "CSoundOpvarSetPathCornerEntity size should be 0x670");
+
+#endif
 	}
 }

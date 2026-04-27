@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x228
+			// Class size: 0x230
 			namespace C_INIT_RemapParticleCountToNamedModelElementScalar /*: public CS2::particles::C_INIT_RemapParticleCountToScalar*/ {
-				constexpr std::ptrdiff_t m_hModel = 0x208; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_outputMinName = 0x210; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_outputMaxName = 0x218; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bModelFromRenderer = 0x220; // bool m_bModelFromRenderer; |  0x220 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hModel = 0x210; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCModel>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_outputMinName = 0x218; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_outputMaxName = 0x220; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bModelFromRenderer = 0x228; // bool m_bModelFromRenderer; |  0x228 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

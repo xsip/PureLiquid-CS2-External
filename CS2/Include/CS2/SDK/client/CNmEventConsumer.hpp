@@ -20,8 +20,11 @@ namespace CS2 {
 	namespace client {
 		class CNmEventConsumer  {
 		public:
-			S2_PAD(0x10);
+			S2_PAD(0xB0);
 		};
-		//static_assert(sizeof(CS2::client::CNmEventConsumer) == 0x10, "CNmEventConsumer size should be 0x10");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CNmEventConsumer) == 0xB0, "CNmEventConsumer size should be 0xB0");
+
+#endif
 	}
 }

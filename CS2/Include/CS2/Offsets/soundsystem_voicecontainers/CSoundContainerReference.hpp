@@ -8,11 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x18
+			// Class size: 0x20
 			namespace CSoundContainerReference /**/ {
-				constexpr std::ptrdiff_t m_bUseReference = 0x0; // bool m_bUseReference; |  0x0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_sound = 0x8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pSound = 0x10; // soundsystem_voicecontainers::CVoiceContainerBase**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_namespace = 0x0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bUseReference = 0x8; // bool m_bUseReference; |  0x8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sound = 0x10; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_pSound = 0x18; // soundsystem_voicecontainers::CVoiceContainerBase**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

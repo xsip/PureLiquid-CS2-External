@@ -21,15 +21,18 @@ namespace CS2 {
 	namespace server {
 		class CPlayer_MovementServices_Humanoid : public CS2::server::CPlayer_MovementServices {
 		public:
-			PROPERTY(m_flStepSoundTime,float32, 0x240);
-			PROPERTY(m_flFallVelocity,float32, 0x244);
-			PROPERTY(m_groundNormal,GlobalTypes::Vector, 0x248);
-			PROPERTY(m_flSurfaceFriction,float32, 0x254);
-			PROPERTY(m_surfaceProps,GlobalTypes::CUtlStringToken*, 0x258);
-			PROPERTY(m_nStepside,int32_t, 0x268);
-			PROPERTY(m_vecSmoothedVelocity,GlobalTypes::Vector, 0x26c);
+			PROPERTY(m_flStepSoundTime,float32, 0x258);
+			PROPERTY(m_flFallVelocity,float32, 0x25c);
+			PROPERTY(m_groundNormal,GlobalTypes::Vector, 0x260);
+			PROPERTY(m_flSurfaceFriction,float32, 0x26c);
+			PROPERTY(m_surfaceProps,GlobalTypes::CUtlStringToken*, 0x270);
+			PROPERTY(m_nStepside,int32_t, 0x280);
+			PROPERTY(m_vecSmoothedVelocity,GlobalTypes::Vector, 0x284);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CPlayer_MovementServices_Humanoid) == 0x278, "CPlayer_MovementServices_Humanoid size should be 0x278");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPlayer_MovementServices_Humanoid) == 0x290, "CPlayer_MovementServices_Humanoid size should be 0x290");
+
+#endif
 	}
 }

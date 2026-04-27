@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_Color,GlobalTypes::Color, 0x60);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimationGraphVisualizerLine) == 0x70, "CAnimationGraphVisualizerLine size should be 0x70");
+
+#endif
 	}
 }

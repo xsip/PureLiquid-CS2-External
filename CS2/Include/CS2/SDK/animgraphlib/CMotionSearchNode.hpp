@@ -21,13 +21,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CMotionSearchNode  {
 		public:
-			NESTED_PROPERTY(m_children,GlobalTypes::CUtlVector<animgraphlib::CMotionSearchNode*>, 0x0);
-			NESTED_PROPERTY(m_quantizer,animgraphlib::CVectorQuantizer, 0x18);
-			NESTED_PROPERTY(m_sampleCodes,GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>, 0x38);
-			NESTED_PROPERTY(m_sampleIndices,GlobalTypes::CUtlVector<GlobalTypes::CUtlVector>, 0x50);
-			NESTED_PROPERTY(m_selectableSamples,GlobalTypes::CUtlVector< int32 >, 0x68);
+			NESTED_PROPERTY(m_children,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::CMotionSearchNode*>), 0x0);
+			NESTED_PROPERTY(m_quantizer,IDENTITY(animgraphlib::CVectorQuantizer), 0x18);
+			NESTED_PROPERTY(m_sampleCodes,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<animgraphlib::SampleCode>>), 0x38);
+			NESTED_PROPERTY(m_sampleIndices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<int32>>), 0x50);
+			NESTED_PROPERTY(m_selectableSamples,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x68);
 			S2_PAD(0x80);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CMotionSearchNode) == 0x80, "CMotionSearchNode size should be 0x80");
+
+#endif
 	}
 }

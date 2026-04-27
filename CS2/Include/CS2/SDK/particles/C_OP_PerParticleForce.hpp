@@ -23,11 +23,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PerParticleForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			NESTED_PROPERTY(m_flForceScale,particleslib::CPerParticleFloatInput, 0x1e0);
-			NESTED_PROPERTY(m_vForce,particleslib::CPerParticleVecInput, 0x350);
-			PROPERTY(m_nCP,int32_t, 0xa08);
+			NESTED_PROPERTY(m_flForceScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e8);
+			NESTED_PROPERTY(m_vForce,IDENTITY(particleslib::CPerParticleVecInput), 0x358);
+			PROPERTY(m_nCP,int32_t, 0xa10);
 			S2_PAD(0x830);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PerParticleForce) == 0xA10, "C_OP_PerParticleForce size should be 0xA10");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PerParticleForce) == 0xA18, "C_OP_PerParticleForce size should be 0xA18");
+
+#endif
 	}
 }

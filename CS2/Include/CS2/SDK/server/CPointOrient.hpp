@@ -25,14 +25,17 @@ namespace CS2 {
 		class CPointOrient : public CS2::server::CBaseEntity {
 		public:
 			PROPERTY(m_iszSpawnTargetName,GlobalTypes::CUtlSymbolLarge*, 0x4a8);
-			PROPERTY(m_hTarget,GlobalTypes::CHandle<server::CBaseEntity>, 0x4b0);
+			PROPERTY(m_hTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4b0);
 			PROPERTY(m_bActive,bool, 0x4b4);
-			PROPERTY(m_nGoalDirection,client::PointOrientGoalDirectionType_t, 0x4b8);
-			PROPERTY(m_nConstraint,client::PointOrientConstraint_t, 0x4bc);
+			PROPERTY(m_nGoalDirection,IDENTITY(client::PointOrientGoalDirectionType_t), 0x4b8);
+			PROPERTY(m_nConstraint,IDENTITY(client::PointOrientConstraint_t), 0x4bc);
 			PROPERTY(m_flMaxTurnRate,float32, 0x4c0);
-			NESTED_PROPERTY(m_flLastGameTime,entity2::GameTime_t, 0x4c4);
+			NESTED_PROPERTY(m_flLastGameTime,IDENTITY(entity2::GameTime_t), 0x4c4);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CPointOrient) == 0x4C8, "CPointOrient size should be 0x4C8");
+
+#endif
 	}
 }

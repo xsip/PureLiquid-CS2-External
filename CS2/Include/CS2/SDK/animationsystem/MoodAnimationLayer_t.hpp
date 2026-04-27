@@ -25,17 +25,20 @@ namespace CS2 {
 			PROPERTY(m_sName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_bActiveListening,bool, 0x8);
 			PROPERTY(m_bActiveTalking,bool, 0x9);
-			NESTED_PROPERTY(m_layerAnimations,GlobalTypes::CUtlVector<animationsystem::MoodAnimation_t>, 0x10);
-			NESTED_PROPERTY(m_flIntensity,tier2::CRangeFloat, 0x28);
-			NESTED_PROPERTY(m_flDurationScale,tier2::CRangeFloat, 0x30);
+			NESTED_PROPERTY(m_layerAnimations,IDENTITY(GlobalTypes::CUtlVector<animationsystem::MoodAnimation_t>), 0x10);
+			NESTED_PROPERTY(m_flIntensity,IDENTITY(tier2::CRangeFloat), 0x28);
+			NESTED_PROPERTY(m_flDurationScale,IDENTITY(tier2::CRangeFloat), 0x30);
 			PROPERTY(m_bScaleWithInts,bool, 0x38);
-			NESTED_PROPERTY(m_flNextStart,tier2::CRangeFloat, 0x3c);
-			NESTED_PROPERTY(m_flStartOffset,tier2::CRangeFloat, 0x44);
-			NESTED_PROPERTY(m_flEndOffset,tier2::CRangeFloat, 0x4c);
+			NESTED_PROPERTY(m_flNextStart,IDENTITY(tier2::CRangeFloat), 0x3c);
+			NESTED_PROPERTY(m_flStartOffset,IDENTITY(tier2::CRangeFloat), 0x44);
+			NESTED_PROPERTY(m_flEndOffset,IDENTITY(tier2::CRangeFloat), 0x4c);
 			PROPERTY(m_flFadeIn,float32, 0x54);
 			PROPERTY(m_flFadeOut,float32, 0x58);
 			S2_PAD(0x60);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::MoodAnimationLayer_t) == 0x60, "MoodAnimationLayer_t size should be 0x60");
+
+#endif
 	}
 }

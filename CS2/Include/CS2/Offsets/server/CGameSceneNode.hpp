@@ -8,32 +8,31 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x130
+			// Class size: 0x120
 			namespace CGameSceneNode /**/ {
 				constexpr std::ptrdiff_t m_nodeToWorld = 0x10; // GlobalTypes::CTransformWS  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_pOwner = 0x30; // entity2::CEntityInstance**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_pParent = 0x38; // server::CGameSceneNode**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_pChild = 0x40; // server::CGameSceneNode**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_pNextSibling = 0x48; // server::CGameSceneNode**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_hParent = 0x78; // server::CGameSceneNodeHandle  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_vecOrigin = 0x88; // client::CNetworkOriginCellCoordQuantizedVector  | Schema_DeclaredClass | Size: 0x30
-				constexpr std::ptrdiff_t m_angRotation = 0xc0; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flScale = 0xcc; // float32 m_flScale; |  0xcc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecAbsOrigin = 0xd0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angAbsRotation = 0xdc; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flAbsScale = 0xe8; // float32 m_flAbsScale; |  0xe8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nParentAttachmentOrBone = 0xec; // int16_t m_nParentAttachmentOrBone; |  0xec | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_bDebugAbsOriginChanges = 0xee; // bool m_bDebugAbsOriginChanges; |  0xee | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDormant = 0xef; // bool m_bDormant; |  0xef | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceParentToBeNetworked = 0xf0; // bool m_bForceParentToBeNetworked; |  0xf0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nHierarchicalDepth = 0xf3; // uint8_t m_nHierarchicalDepth; |  0xf3 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nHierarchyType = 0xf4; // uint8_t m_nHierarchyType; |  0xf4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount = 0xf5; // uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; |  0xf5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_name = 0xf8; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hierarchyAttachName = 0x10c; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flZOffset = 0x110; // float32 m_flZOffset; |  0x110 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flClientLocalScale = 0x114; // float32 m_flClientLocalScale; |  0x114 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vRenderOrigin = 0x118; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_hParent = 0x70; // server::CGameSceneNodeHandle  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_vecOrigin = 0x80; // client::CNetworkOriginCellCoordQuantizedVector  | Schema_DeclaredClass | Size: 0x30
+				constexpr std::ptrdiff_t m_angRotation = 0xb8; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flScale = 0xc4; // float32 m_flScale; |  0xc4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecAbsOrigin = 0xc8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angAbsRotation = 0xd4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flAbsScale = 0xe0; // float32 m_flAbsScale; |  0xe0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nParentAttachmentOrBone = 0xe4; // int16_t m_nParentAttachmentOrBone; |  0xe4 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_bDebugAbsOriginChanges = 0xe6; // bool m_bDebugAbsOriginChanges; |  0xe6 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDormant = 0xe7; // bool m_bDormant; |  0xe7 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceParentToBeNetworked = 0xe8; // bool m_bForceParentToBeNetworked; |  0xe8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nHierarchicalDepth = 0xeb; // uint8_t m_nHierarchicalDepth; |  0xeb | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nHierarchyType = 0xec; // uint8_t m_nHierarchyType; |  0xec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount = 0xed; // uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; |  0xed | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_name = 0xf0; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hierarchyAttachName = 0x104; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flClientLocalScale = 0x108; // float32 m_flClientLocalScale; |  0x108 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vRenderOrigin = 0x10c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

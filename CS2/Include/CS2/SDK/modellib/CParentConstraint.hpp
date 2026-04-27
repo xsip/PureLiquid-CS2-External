@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace modellib {
 		class CParentConstraint : public CS2::modellib::CBaseConstraint {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CParentConstraint) == 0x60, "CParentConstraint size should be 0x60");
+
+#endif
 	}
 }

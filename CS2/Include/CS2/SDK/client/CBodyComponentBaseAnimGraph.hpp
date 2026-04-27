@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace client {
 		class CBodyComponentBaseAnimGraph : public CS2::client::CBodyComponentSkeletonInstance {
 		public:
-			NESTED_PROPERTY(m_animationController,client::CBaseAnimGraphController, 0x550);
-			S2_PAD(0x1B40);
+			NESTED_PROPERTY(m_animationController,IDENTITY(client::CBaseAnimGraphController), 0x4e0);
+			S2_PAD(0x690);
 		};
-		//static_assert(sizeof(CS2::client::CBodyComponentBaseAnimGraph) == 0x2090, "CBodyComponentBaseAnimGraph size should be 0x2090");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CBodyComponentBaseAnimGraph) == 0xB70, "CBodyComponentBaseAnimGraph size should be 0xB70");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_EndOfMatchCharacterPosition : public CS2::client::C_CSGO_TeamPreviewCharacterPosition {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::client::C_CSGO_EndOfMatchCharacterPosition) == 0x13A8, "C_CSGO_EndOfMatchCharacterPosition size should be 0x13A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSGO_EndOfMatchCharacterPosition) == 0x13A0, "C_CSGO_EndOfMatchCharacterPosition size should be 0x13A0");
+
+#endif
 	}
 }

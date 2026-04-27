@@ -21,14 +21,17 @@ namespace CS2 {
 	namespace client {
 		class CPlayer_MovementServices_Humanoid : public CS2::client::CPlayer_MovementServices {
 		public:
-			PROPERTY(m_flStepSoundTime,float32, 0x240);
-			PROPERTY(m_flFallVelocity,float32, 0x244);
-			PROPERTY(m_groundNormal,GlobalTypes::Vector, 0x248);
-			PROPERTY(m_flSurfaceFriction,float32, 0x254);
-			PROPERTY(m_surfaceProps,GlobalTypes::CUtlStringToken*, 0x258);
-			PROPERTY(m_nStepside,int32_t, 0x268);
+			PROPERTY(m_flStepSoundTime,float32, 0x258);
+			PROPERTY(m_flFallVelocity,float32, 0x25c);
+			PROPERTY(m_groundNormal,GlobalTypes::Vector, 0x260);
+			PROPERTY(m_flSurfaceFriction,float32, 0x26c);
+			PROPERTY(m_surfaceProps,GlobalTypes::CUtlStringToken*, 0x270);
+			PROPERTY(m_nStepside,int32_t, 0x280);
 			S2_PAD(0x30);
 		};
-		//static_assert(sizeof(CS2::client::CPlayer_MovementServices_Humanoid) == 0x270, "CPlayer_MovementServices_Humanoid size should be 0x270");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::CPlayer_MovementServices_Humanoid) == 0x288, "CPlayer_MovementServices_Humanoid size should be 0x288");
+
+#endif
 	}
 }

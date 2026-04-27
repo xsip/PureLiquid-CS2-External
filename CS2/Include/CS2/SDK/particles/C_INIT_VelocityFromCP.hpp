@@ -23,12 +23,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_VelocityFromCP : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_velocityInput,particleslib::CParticleCollectionVecInput, 0x1d8);
-			NESTED_PROPERTY(m_transformInput,particleslib::CParticleTransformInput, 0x890);
-			PROPERTY(m_flVelocityScale,float32, 0x8f8);
-			PROPERTY(m_bDirectionOnly,bool, 0x8fc);
+			NESTED_PROPERTY(m_velocityInput,IDENTITY(particleslib::CParticleCollectionVecInput), 0x1e0);
+			NESTED_PROPERTY(m_transformInput,IDENTITY(particleslib::CParticleTransformInput), 0x898);
+			PROPERTY(m_flVelocityScale,float32, 0x900);
+			PROPERTY(m_bDirectionOnly,bool, 0x904);
 			S2_PAD(0x728);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_VelocityFromCP) == 0x900, "C_INIT_VelocityFromCP size should be 0x900");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_VelocityFromCP) == 0x908, "C_INIT_VelocityFromCP size should be 0x908");
+
+#endif
 	}
 }

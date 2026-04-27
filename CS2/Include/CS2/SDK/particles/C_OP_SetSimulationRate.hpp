@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_SetSimulationRate : public CS2::particles::CParticleFunctionPreEmission {
 		public:
-			NESTED_PROPERTY(m_flSimulationScale,particleslib::CParticleCollectionFloatInput, 0x1d8);
+			NESTED_PROPERTY(m_flSimulationScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
 			S2_PAD(0x170);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_SetSimulationRate) == 0x348, "C_OP_SetSimulationRate size should be 0x348");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_SetSimulationRate) == 0x350, "C_OP_SetSimulationRate size should be 0x350");
+
+#endif
 	}
 }

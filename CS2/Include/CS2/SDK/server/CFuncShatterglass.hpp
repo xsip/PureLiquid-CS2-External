@@ -28,34 +28,37 @@ namespace CS2 {
 	namespace server {
 		class CFuncShatterglass : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_matPanelTransform,GlobalTypes::matrix3x4_t, 0x730);
-			PROPERTY(m_matPanelTransformWsTemp,GlobalTypes::matrix3x4_t, 0x760);
-			NESTED_PROPERTY(m_vecShatterGlassShards,GlobalTypes::CUtlVector< uint32 >, 0x790);
-			PROPERTY(m_PanelSize,GlobalTypes::Vector2D, 0x7a8);
-			NESTED_PROPERTY(m_flLastShatterSoundEmitTime,entity2::GameTime_t, 0x7b0);
-			NESTED_PROPERTY(m_flLastCleanupTime,entity2::GameTime_t, 0x7b4);
-			NESTED_PROPERTY(m_flInitAtTime,entity2::GameTime_t, 0x7b8);
-			PROPERTY(m_flGlassThickness,float32, 0x7bc);
-			PROPERTY(m_flSpawnInvulnerability,float32, 0x7c0);
-			PROPERTY(m_bBreakSilent,bool, 0x7c4);
-			PROPERTY(m_bBreakShardless,bool, 0x7c5);
-			PROPERTY(m_bBroken,bool, 0x7c6);
-			PROPERTY(m_bGlassNavIgnore,bool, 0x7c7);
-			PROPERTY(m_bGlassInFrame,bool, 0x7c8);
-			PROPERTY(m_bStartBroken,bool, 0x7c9);
-			PROPERTY(m_iInitialDamageType,uint8_t, 0x7ca);
-			PROPERTY(m_szDamagePositioningEntityName01,GlobalTypes::CUtlSymbolLarge*, 0x7d0);
-			PROPERTY(m_szDamagePositioningEntityName02,GlobalTypes::CUtlSymbolLarge*, 0x7d8);
-			PROPERTY(m_szDamagePositioningEntityName03,GlobalTypes::CUtlSymbolLarge*, 0x7e0);
-			PROPERTY(m_szDamagePositioningEntityName04,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
-			NESTED_PROPERTY(m_vInitialDamagePositions,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x7f0);
-			NESTED_PROPERTY(m_vExtraDamagePositions,GlobalTypes::CUtlVector<GlobalTypes::Vector>, 0x808);
-			NESTED_PROPERTY(m_vInitialPanelVertices,GlobalTypes::CUtlVector<GlobalTypes::Vector4D>, 0x820);
-			NESTED_PROPERTY(m_OnBroken,entity2::CEntityIOOutput, 0x838);
-			PROPERTY(m_iSurfaceType,uint8_t, 0x850);
-			PROPERTY(m_hMaterialDamageBase,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>, 0x858);
+			PROPERTY(m_matPanelTransform,GlobalTypes::matrix3x4_t, 0x768);
+			PROPERTY(m_matPanelTransformWsTemp,GlobalTypes::matrix3x4_t, 0x798);
+			NESTED_PROPERTY(m_vecShatterGlassShards,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x7c8);
+			PROPERTY(m_PanelSize,GlobalTypes::Vector2D, 0x7e0);
+			NESTED_PROPERTY(m_flLastShatterSoundEmitTime,IDENTITY(entity2::GameTime_t), 0x7e8);
+			NESTED_PROPERTY(m_flLastCleanupTime,IDENTITY(entity2::GameTime_t), 0x7ec);
+			NESTED_PROPERTY(m_flInitAtTime,IDENTITY(entity2::GameTime_t), 0x7f0);
+			PROPERTY(m_flGlassThickness,float32, 0x7f4);
+			PROPERTY(m_flSpawnInvulnerability,float32, 0x7f8);
+			PROPERTY(m_bBreakSilent,bool, 0x7fc);
+			PROPERTY(m_bBreakShardless,bool, 0x7fd);
+			PROPERTY(m_bBroken,bool, 0x7fe);
+			PROPERTY(m_bGlassNavIgnore,bool, 0x7ff);
+			PROPERTY(m_bGlassInFrame,bool, 0x800);
+			PROPERTY(m_bStartBroken,bool, 0x801);
+			PROPERTY(m_iInitialDamageType,uint8_t, 0x802);
+			PROPERTY(m_szDamagePositioningEntityName01,GlobalTypes::CUtlSymbolLarge*, 0x808);
+			PROPERTY(m_szDamagePositioningEntityName02,GlobalTypes::CUtlSymbolLarge*, 0x810);
+			PROPERTY(m_szDamagePositioningEntityName03,GlobalTypes::CUtlSymbolLarge*, 0x818);
+			PROPERTY(m_szDamagePositioningEntityName04,GlobalTypes::CUtlSymbolLarge*, 0x820);
+			NESTED_PROPERTY(m_vInitialDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x828);
+			NESTED_PROPERTY(m_vExtraDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x840);
+			NESTED_PROPERTY(m_vInitialPanelVertices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector4D>), 0x858);
+			NESTED_PROPERTY(m_OnBroken,IDENTITY(entity2::CEntityIOOutput), 0x870);
+			PROPERTY(m_iSurfaceType,uint8_t, 0x888);
+			PROPERTY(m_hMaterialDamageBase,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x890);
 			S2_PAD(0x130);
 		};
-		//static_assert(sizeof(CS2::server::CFuncShatterglass) == 0x860, "CFuncShatterglass size should be 0x860");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncShatterglass) == 0x898, "CFuncShatterglass size should be 0x898");
+
+#endif
 	}
 }

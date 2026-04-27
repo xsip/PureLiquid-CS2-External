@@ -25,6 +25,9 @@ namespace CS2 {
 			PROPERTY(m_vBoxMaxs,GlobalTypes::Vector, 0x4cc);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CInfoDynamicShadowHintBox) == 0x4D8, "CInfoDynamicShadowHintBox size should be 0x4D8");
+
+#endif
 	}
 }

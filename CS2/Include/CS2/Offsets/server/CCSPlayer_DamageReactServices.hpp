@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x50
+			// Class size: 0x68
 			namespace CCSPlayer_DamageReactServices /*: public CS2::client::CPlayerPawnComponent*/ {
 				// NO SCHEMA DATA FOUND!
 			}

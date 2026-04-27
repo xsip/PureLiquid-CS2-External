@@ -27,12 +27,15 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayer_ActionTrackingServices : public CS2::client::CPlayerPawnComponent {
 		public:
-			PROPERTY(m_hLastWeaponBeforeC4AutoSwitch,GlobalTypes::CHandle<client::C_BasePlayerWeapon>, 0x48);
+			PROPERTY(m_hLastWeaponBeforeC4AutoSwitch,IDENTITY(GlobalTypes::CHandle<client::C_BasePlayerWeapon>), 0x48);
 			PROPERTY(m_bIsRescuing,bool, 0x4c);
-			NESTED_PROPERTY(m_weaponPurchasesThisMatch,client::WeaponPurchaseTracker_t, 0x50);
-			NESTED_PROPERTY(m_weaponPurchasesThisRound,client::WeaponPurchaseTracker_t, 0xc0);
+			NESTED_PROPERTY(m_weaponPurchasesThisMatch,IDENTITY(client::WeaponPurchaseTracker_t), 0x50);
+			NESTED_PROPERTY(m_weaponPurchasesThisRound,IDENTITY(client::WeaponPurchaseTracker_t), 0xc0);
 			S2_PAD(0xE8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CCSPlayer_ActionTrackingServices) == 0x130, "CCSPlayer_ActionTrackingServices size should be 0x130");
+
+#endif
 	}
 }

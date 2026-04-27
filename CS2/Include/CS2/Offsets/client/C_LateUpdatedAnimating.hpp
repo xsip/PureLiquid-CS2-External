@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1200
+			// Class size: 0x11F0
 			namespace C_LateUpdatedAnimating /*: public CS2::client::CBaseAnimGraph*/ {
 				// NO SCHEMA DATA FOUND!
 			}

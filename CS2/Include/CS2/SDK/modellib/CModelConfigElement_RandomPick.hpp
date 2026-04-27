@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace modellib {
 		class CModelConfigElement_RandomPick : public CS2::modellib::CModelConfigElement {
 		public:
-			PROPERTY(m_Choices,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x48);
-			NESTED_PROPERTY(m_ChoiceWeights,GlobalTypes::CUtlVector< float32 >, 0x60);
+			PROPERTY(m_Choices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x48);
+			NESTED_PROPERTY(m_ChoiceWeights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x60);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CModelConfigElement_RandomPick) == 0x80, "CModelConfigElement_RandomPick size should be 0x80");
+
+#endif
 	}
 }

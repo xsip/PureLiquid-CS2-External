@@ -25,7 +25,7 @@ namespace CS2 {
 	namespace client {
 		class C_fogplayerparams_t  {
 		public:
-			PROPERTY(m_hCtrl,GlobalTypes::CHandle<client::C_FogController>, 0x8);
+			PROPERTY(m_hCtrl,IDENTITY(GlobalTypes::CHandle<client::C_FogController>), 0x8);
 			PROPERTY(m_flTransitionTime,float32, 0xc);
 			PROPERTY(m_OldColor,GlobalTypes::Color, 0x10);
 			PROPERTY(m_flOldStart,float32, 0x14);
@@ -41,6 +41,9 @@ namespace CS2 {
 			PROPERTY(m_flNewFarZ,float32, 0x3c);
 			S2_PAD(0x40);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_fogplayerparams_t) == 0x40, "C_fogplayerparams_t size should be 0x40");
+
+#endif
 	}
 }

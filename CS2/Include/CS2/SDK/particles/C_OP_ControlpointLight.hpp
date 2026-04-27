@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_ControlpointLight : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flScale,float32, 0x1d0);
+			PROPERTY(m_flScale,float32, 0x1d8);
 			PROPERTY(m_nControlPoint1,int32_t, 0x660);
 			PROPERTY(m_nControlPoint2,int32_t, 0x664);
 			PROPERTY(m_nControlPoint3,int32_t, 0x668);
@@ -54,8 +54,11 @@ namespace CS2 {
 			PROPERTY(m_bUseHLambert,bool, 0x6d9);
 			PROPERTY(m_bClampLowerRange,bool, 0x6de);
 			PROPERTY(m_bClampUpperRange,bool, 0x6df);
-			S2_PAD(0x510);
+			S2_PAD(0x508);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particles::C_OP_ControlpointLight) == 0x6E0, "C_OP_ControlpointLight size should be 0x6E0");
+
+#endif
 	}
 }

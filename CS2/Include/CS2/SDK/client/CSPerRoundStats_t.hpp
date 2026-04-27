@@ -35,6 +35,9 @@ namespace CS2 {
 			PROPERTY(m_iEnemiesFlashed,int32_t, 0x60);
 			S2_PAD(0x68);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CSPerRoundStats_t) == 0x68, "CSPerRoundStats_t size should be 0x68");
+
+#endif
 	}
 }

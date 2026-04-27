@@ -23,14 +23,17 @@ namespace CS2 {
 		class CSmartPropOperation_ComputeVectorBetweenPoints3D : public CS2::smartprops::CSmartPropOperation {
 		public:
 			PROPERTY(m_OutputVariableName,GlobalTypes::CUtlString*, 0x50);
-			NESTED_PROPERTY(m_OutputCoordinateSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x58);
+			NESTED_PROPERTY(m_OutputCoordinateSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x58);
 			PROPERTY(m_bNormalized,GlobalTypes::CSmartPropAttributeBool, 0x98);
 			PROPERTY(m_InputPositionA,GlobalTypes::CSmartPropAttributeVector, 0xd8);
-			NESTED_PROPERTY(m_CoordinateSpaceA,smartprops::CSmartPropAttributeCoordinateSpace, 0x118);
+			NESTED_PROPERTY(m_CoordinateSpaceA,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x118);
 			PROPERTY(m_InputPositionB,GlobalTypes::CSmartPropAttributeVector, 0x158);
-			NESTED_PROPERTY(m_CoordinateSpaceB,smartprops::CSmartPropAttributeCoordinateSpace, 0x198);
+			NESTED_PROPERTY(m_CoordinateSpaceB,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x198);
 			S2_PAD(0x188);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_ComputeVectorBetweenPoints3D) == 0x1D8, "CSmartPropOperation_ComputeVectorBetweenPoints3D size should be 0x1D8");
+
+#endif
 	}
 }

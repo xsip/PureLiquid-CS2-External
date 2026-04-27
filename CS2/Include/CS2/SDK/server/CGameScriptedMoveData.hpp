@@ -35,18 +35,21 @@ namespace CS2 {
 			PROPERTY(m_flLockedSpeed,float32, 0x3c);
 			PROPERTY(m_flAngRate,float32, 0x40);
 			PROPERTY(m_flDuration,float32, 0x44);
-			NESTED_PROPERTY(m_flStartTime,entity2::GameTime_t, 0x48);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x48);
 			PROPERTY(m_bActive,bool, 0x4c);
 			PROPERTY(m_bTeleportOnEnd,bool, 0x4d);
 			PROPERTY(m_bIgnoreRotation,bool, 0x4e);
 			PROPERTY(m_bSuccess,bool, 0x4f);
-			PROPERTY(m_nForcedCrouchState,client::ForcedCrouchState_t, 0x50);
+			PROPERTY(m_nForcedCrouchState,IDENTITY(client::ForcedCrouchState_t), 0x50);
 			PROPERTY(m_bIgnoreCollisions,bool, 0x54);
 			PROPERTY(m_vDest,GlobalTypes::Vector, 0x58);
 			PROPERTY(m_angDst,GlobalTypes::QAngle, 0x64);
-			PROPERTY(m_hDestEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x70);
+			PROPERTY(m_hDestEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x70);
 			S2_PAD(0x74);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CGameScriptedMoveData) == 0x74, "CGameScriptedMoveData size should be 0x74");
+
+#endif
 	}
 }

@@ -10,11 +10,18 @@
 #endif
 
 
-#include <SDK/server/SceneRequestHandle_t.hpp>
-#include <SDK/server/ESceneRequestState_t.hpp>
+#include <SDK/client/SceneRequestHandle_t.hpp>
+#include <SDK/client/ESceneRequestState_t.hpp>
+#include <SDK/client/ENPCBehaviorOverride_t.hpp>
+#include <SDK/server/SceneRequestTargetMapPair_t.hpp>
 
 
 
+namespace CS2 {
+	namespace server {
+		class CBaseEntity;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -22,11 +29,20 @@ namespace CS2 {
 	namespace server {
 		class CSceneRequest  {
 		public:
-			PROPERTY(m_szPayloadTypeName,GlobalTypes::CUtlSymbolLarge*, 0x0);
-			NESTED_PROPERTY(m_uHandle,server::SceneRequestHandle_t, 0x8);
-			PROPERTY(m_state,server::ESceneRequestState_t, 0xc);
-			S2_PAD(0x20);
+			PROPERTY(m_szPayloadVDataName,GlobalTypes::CUtlSymbolLarge*, 0x0);
+			NESTED_PROPERTY(m_uHandle,IDENTITY(client::SceneRequestHandle_t), 0x8);
+			PROPERTY(m_state,IDENTITY(client::ESceneRequestState_t), 0xc);
+			PROPERTY(m_nNPCBehaviorOverride,IDENTITY(client::ENPCBehaviorOverride_t), 0x10);
+			NESTED_PROPERTY(m_vecActorMap,IDENTITY(GlobalTypes::CUtlVector<server::SceneRequestTargetMapPair_t>), 0x18);
+			NESTED_PROPERTY(m_vecAnchorMap,IDENTITY(GlobalTypes::CUtlVector<server::SceneRequestTargetMapPair_t>), 0x30);
+			NESTED_PROPERTY(m_vecGraphMap,IDENTITY(GlobalTypes::CUtlVector<server::SceneRequestTargetMapPair_t>), 0x48);
+			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x60);
+			PROPERTY(m_nameMapKV3,GlobalTypes::KeyValues3, 0x68);
+			S2_PAD(0x88);
 		};
-		//static_assert(sizeof(CS2::server::CSceneRequest) == 0x20, "CSceneRequest size should be 0x20");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CSceneRequest) == 0x88, "CSceneRequest size should be 0x88");
+
+#endif
 	}
 }

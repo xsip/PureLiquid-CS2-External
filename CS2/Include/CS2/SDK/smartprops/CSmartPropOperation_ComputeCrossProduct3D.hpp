@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_InputVectorB,GlobalTypes::CSmartPropAttributeVector, 0x98);
 			S2_PAD(0x88);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_ComputeCrossProduct3D) == 0xD8, "CSmartPropOperation_ComputeCrossProduct3D size should be 0xD8");
+
+#endif
 	}
 }

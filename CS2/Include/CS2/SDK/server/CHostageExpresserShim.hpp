@@ -26,9 +26,12 @@ namespace CS2 {
 	namespace server {
 		class CHostageExpresserShim : public CS2::server::CBaseCombatCharacter {
 		public:
-			PROPERTY(m_pExpresser,server::CAI_Expresser*, 0xb70);
+			PROPERTY(m_pExpresser,IDENTITY(server::CAI_Expresser*), 0xa00);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::server::CHostageExpresserShim) == 0xB80, "CHostageExpresserShim size should be 0xB80");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CHostageExpresserShim) == 0xA10, "CHostageExpresserShim size should be 0xA10");
+
+#endif
 	}
 }

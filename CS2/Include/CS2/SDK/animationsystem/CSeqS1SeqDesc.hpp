@@ -28,18 +28,21 @@ namespace CS2 {
 		class CSeqS1SeqDesc  {
 		public:
 			PROPERTY(m_sName,GlobalTypes::CBufferString, 0x0);
-			NESTED_PROPERTY(m_flags,animationsystem::CSeqSeqDescFlag, 0x10);
-			NESTED_PROPERTY(m_fetch,animationsystem::CSeqMultiFetch, 0x20);
+			NESTED_PROPERTY(m_flags,IDENTITY(animationsystem::CSeqSeqDescFlag), 0x10);
+			NESTED_PROPERTY(m_fetch,IDENTITY(animationsystem::CSeqMultiFetch), 0x20);
 			PROPERTY(m_nLocalWeightlist,int32_t, 0x90);
-			NESTED_PROPERTY(m_autoLayerArray,GlobalTypes::CUtlVector<animationsystem::CSeqAutoLayer>, 0x98);
-			NESTED_PROPERTY(m_IKLockArray,GlobalTypes::CUtlVector<animationsystem::CSeqIKLock>, 0xb0);
-			NESTED_PROPERTY(m_transition,animationsystem::CSeqTransition, 0xc8);
+			NESTED_PROPERTY(m_autoLayerArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqAutoLayer>), 0x98);
+			NESTED_PROPERTY(m_IKLockArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CSeqIKLock>), 0xb0);
+			NESTED_PROPERTY(m_transition,IDENTITY(animationsystem::CSeqTransition), 0xc8);
 			PROPERTY(m_SequenceKeys,GlobalTypes::KeyValues3, 0xd0);
 			PROPERTY(m_LegacyKeyValueText,GlobalTypes::CBufferString, 0xe0);
-			NESTED_PROPERTY(m_activityArray,GlobalTypes::CUtlVector<animationsystem::CAnimActivity>, 0xf0);
-			NESTED_PROPERTY(m_footMotion,GlobalTypes::CUtlVector<modellib::CFootMotion>, 0x108);
+			NESTED_PROPERTY(m_activityArray,IDENTITY(GlobalTypes::CUtlVector<animationsystem::CAnimActivity>), 0xf0);
+			NESTED_PROPERTY(m_footMotion,IDENTITY(GlobalTypes::CUtlVector<modellib::CFootMotion>), 0x108);
 			S2_PAD(0x120);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animationsystem::CSeqS1SeqDesc) == 0x120, "CSeqS1SeqDesc size should be 0x120");
+
+#endif
 	}
 }

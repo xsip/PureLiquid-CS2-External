@@ -31,42 +31,42 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleFloatInput : public CS2::particleslib::CParticleInput {
 		public:
-			PROPERTY(m_nType,particleslib::ParticleFloatType_t, 0x10);
-			PROPERTY(m_nMapType,particleslib::ParticleFloatMapType_t, 0x14);
+			PROPERTY(m_nType,IDENTITY(particleslib::ParticleFloatType_t), 0x10);
+			PROPERTY(m_nMapType,IDENTITY(particleslib::ParticleFloatMapType_t), 0x14);
 			PROPERTY(m_flLiteralValue,float32, 0x18);
 			PROPERTY(m_NamedValue,GlobalTypes::CParticleNamedValueRef, 0x20);
 			PROPERTY(m_nControlPoint,int32_t, 0x60);
-			NESTED_PROPERTY(m_nScalarAttribute,particles::ParticleAttributeIndex_t, 0x64);
-			NESTED_PROPERTY(m_nVectorAttribute,particles::ParticleAttributeIndex_t, 0x68);
+			NESTED_PROPERTY(m_nScalarAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x64);
+			NESTED_PROPERTY(m_nVectorAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x68);
 			PROPERTY(m_nVectorComponent,int32_t, 0x6c);
 			PROPERTY(m_bReverseOrder,bool, 0x70);
 			PROPERTY(m_flRandomMin,float32, 0x74);
 			PROPERTY(m_flRandomMax,float32, 0x78);
 			PROPERTY(m_bHasRandomSignFlip,bool, 0x7c);
 			PROPERTY(m_nRandomSeed,int32_t, 0x80);
-			PROPERTY(m_nRandomMode,particleslib::ParticleFloatRandomMode_t, 0x84);
+			PROPERTY(m_nRandomMode,IDENTITY(particleslib::ParticleFloatRandomMode_t), 0x84);
 			PROPERTY(m_strSnapshotSubset,GlobalTypes::CUtlString*, 0x90);
 			PROPERTY(m_flLOD0,float32, 0x98);
 			PROPERTY(m_flLOD1,float32, 0x9c);
 			PROPERTY(m_flLOD2,float32, 0xa0);
 			PROPERTY(m_flLOD3,float32, 0xa4);
-			NESTED_PROPERTY(m_nNoiseInputVectorAttribute,particles::ParticleAttributeIndex_t, 0xa8);
+			NESTED_PROPERTY(m_nNoiseInputVectorAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0xa8);
 			PROPERTY(m_flNoiseOutputMin,float32, 0xac);
 			PROPERTY(m_flNoiseOutputMax,float32, 0xb0);
 			PROPERTY(m_flNoiseScale,float32, 0xb4);
 			PROPERTY(m_vecNoiseOffsetRate,GlobalTypes::Vector, 0xb8);
 			PROPERTY(m_flNoiseOffset,float32, 0xc4);
 			PROPERTY(m_nNoiseOctaves,int32_t, 0xc8);
-			PROPERTY(m_nNoiseTurbulence,particleslib::PFNoiseTurbulence_t, 0xcc);
-			PROPERTY(m_nNoiseType,particleslib::PFNoiseType_t, 0xd0);
-			PROPERTY(m_nNoiseModifier,particleslib::PFNoiseModifier_t, 0xd4);
+			PROPERTY(m_nNoiseTurbulence,IDENTITY(particleslib::PFNoiseTurbulence_t), 0xcc);
+			PROPERTY(m_nNoiseType,IDENTITY(particleslib::PFNoiseType_t), 0xd0);
+			PROPERTY(m_nNoiseModifier,IDENTITY(particleslib::PFNoiseModifier_t), 0xd4);
 			PROPERTY(m_flNoiseTurbulenceScale,float32, 0xd8);
 			PROPERTY(m_flNoiseTurbulenceMix,float32, 0xdc);
 			PROPERTY(m_flNoiseImgPreviewScale,float32, 0xe0);
 			PROPERTY(m_bNoiseImgPreviewLive,bool, 0xe4);
 			PROPERTY(m_flNoCameraFallback,float32, 0xf0);
 			PROPERTY(m_bUseBoundsCenter,bool, 0xf4);
-			PROPERTY(m_nInputMode,particleslib::ParticleFloatInputMode_t, 0xf8);
+			PROPERTY(m_nInputMode,IDENTITY(particleslib::ParticleFloatInputMode_t), 0xf8);
 			PROPERTY(m_flMultFactor,float32, 0xfc);
 			PROPERTY(m_flInput0,float32, 0x100);
 			PROPERTY(m_flInput1,float32, 0x104);
@@ -76,12 +76,15 @@ namespace CS2 {
 			PROPERTY(m_flNotchedRangeMax,float32, 0x114);
 			PROPERTY(m_flNotchedOutputOutside,float32, 0x118);
 			PROPERTY(m_flNotchedOutputInside,float32, 0x11c);
-			PROPERTY(m_nRoundType,particleslib::ParticleFloatRoundType_t, 0x120);
-			PROPERTY(m_nBiasType,particleslib::ParticleFloatBiasType_t, 0x124);
+			PROPERTY(m_nRoundType,IDENTITY(particleslib::ParticleFloatRoundType_t), 0x120);
+			PROPERTY(m_nBiasType,IDENTITY(particleslib::ParticleFloatBiasType_t), 0x124);
 			PROPERTY(m_flBiasParameter,float32, 0x128);
 			PROPERTY(m_Curve,GlobalTypes::CPiecewiseCurve, 0x130);
 			S2_PAD(0x160);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleFloatInput) == 0x170, "CParticleFloatInput size should be 0x170");
+
+#endif
 	}
 }

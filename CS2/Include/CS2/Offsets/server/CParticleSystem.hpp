@@ -8,30 +8,30 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xCA8
+			// Class size: 0xCE0
 			namespace CParticleSystem /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_szSnapshotFileName = 0x730; // char m_szSnapshotFileName[512]; |  0x730 | Schema_FixedArray | Size: 0x200
-				constexpr std::ptrdiff_t m_bActive = 0x930; // bool m_bActive; |  0x930 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFrozen = 0x931; // bool m_bFrozen; |  0x931 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flFreezeTransitionDuration = 0x934; // float32 m_flFreezeTransitionDuration; |  0x934 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nStopType = 0x938; // int32_t m_nStopType; |  0x938 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAnimateDuringGameplayPause = 0x93c; // bool m_bAnimateDuringGameplayPause; |  0x93c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iEffectIndex = 0x940; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flStartTime = 0x948; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flPreSimTime = 0x94c; // float32 m_flPreSimTime; |  0x94c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vServerControlPoints = 0x950; // GlobalTypes::Vector[4]  | Schema_FixedArray | Size: 0x30
-				constexpr std::ptrdiff_t m_iServerControlPointAssignments = 0x980; // uint8_t m_iServerControlPointAssignments[4]; |  0x980 | Schema_FixedArray | Size: 0x4
-				constexpr std::ptrdiff_t m_hControlPointEnts = 0x984; // GlobalTypes::CHandle  | Schema_FixedArray | Size: 0x100
-				constexpr std::ptrdiff_t m_bNoSave = 0xa84; // bool m_bNoSave; |  0xa84 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNoFreeze = 0xa85; // bool m_bNoFreeze; |  0xa85 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNoRamp = 0xa86; // bool m_bNoRamp; |  0xa86 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bStartActive = 0xa87; // bool m_bStartActive; |  0xa87 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iszEffectName = 0xa88; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszControlPointNames = 0xa90; // GlobalTypes::CUtlSymbolLarge[64]  | Schema_FixedArray | Size: 0x200
-				constexpr std::ptrdiff_t m_nDataCP = 0xc90; // int32_t m_nDataCP; |  0xc90 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecDataCPValue = 0xc94; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nTintCP = 0xca0; // int32_t m_nTintCP; |  0xca0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_clrTint = 0xca4; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_szSnapshotFileName = 0x768; // char m_szSnapshotFileName[512]; |  0x768 | Schema_FixedArray | Size: 0x200
+				constexpr std::ptrdiff_t m_bActive = 0x968; // bool m_bActive; |  0x968 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFrozen = 0x969; // bool m_bFrozen; |  0x969 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flFreezeTransitionDuration = 0x96c; // float32 m_flFreezeTransitionDuration; |  0x96c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nStopType = 0x970; // int32_t m_nStopType; |  0x970 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAnimateDuringGameplayPause = 0x974; // bool m_bAnimateDuringGameplayPause; |  0x974 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iEffectIndex = 0x978; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flStartTime = 0x980; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flPreSimTime = 0x984; // float32 m_flPreSimTime; |  0x984 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vServerControlPoints = 0x988; // GlobalTypes::Vector[4]  | Schema_FixedArray | Size: 0x30
+				constexpr std::ptrdiff_t m_iServerControlPointAssignments = 0x9b8; // uint8_t m_iServerControlPointAssignments[4]; |  0x9b8 | Schema_FixedArray | Size: 0x4
+				constexpr std::ptrdiff_t m_hControlPointEnts = 0x9bc; // GlobalTypes::CHandle  | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_bNoSave = 0xabc; // bool m_bNoSave; |  0xabc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNoFreeze = 0xabd; // bool m_bNoFreeze; |  0xabd | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNoRamp = 0xabe; // bool m_bNoRamp; |  0xabe | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStartActive = 0xabf; // bool m_bStartActive; |  0xabf | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iszEffectName = 0xac0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszControlPointNames = 0xac8; // GlobalTypes::CUtlSymbolLarge[64]  | Schema_FixedArray | Size: 0x200
+				constexpr std::ptrdiff_t m_nDataCP = 0xcc8; // int32_t m_nDataCP; |  0xcc8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecDataCPValue = 0xccc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nTintCP = 0xcd8; // int32_t m_nTintCP; |  0xcd8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_clrTint = 0xcdc; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

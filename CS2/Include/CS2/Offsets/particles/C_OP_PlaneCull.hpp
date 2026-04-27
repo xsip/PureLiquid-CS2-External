@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x898
+			// Class size: 0x8A0
 			namespace C_OP_PlaneCull /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nPlaneControlPoint = 0x1d0; // int32_t m_nPlaneControlPoint; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecPlaneDirection = 0x1d8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_bLocalSpace = 0x890; // bool m_bLocalSpace; |  0x890 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flPlaneOffset = 0x894; // float32 m_flPlaneOffset; |  0x894 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nPlaneControlPoint = 0x1d8; // int32_t m_nPlaneControlPoint; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecPlaneDirection = 0x1e0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_bLocalSpace = 0x898; // bool m_bLocalSpace; |  0x898 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flPlaneOffset = 0x89c; // float32 m_flPlaneOffset; |  0x89c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

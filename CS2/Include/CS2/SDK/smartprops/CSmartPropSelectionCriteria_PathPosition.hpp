@@ -22,13 +22,16 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropSelectionCriteria_PathPosition : public CS2::smartprops::CSmartPropSelectionCriteria {
 		public:
-			NESTED_PROPERTY(m_PlaceAtPositions,smartprops::CSmartPropAttributePathPositions, 0x48);
+			NESTED_PROPERTY(m_PlaceAtPositions,IDENTITY(smartprops::CSmartPropAttributePathPositions), 0x48);
 			PROPERTY(m_nPlaceEveryNthPosition,GlobalTypes::CSmartPropAttributeInt, 0x88);
 			PROPERTY(m_nNthPositionIndexOffset,GlobalTypes::CSmartPropAttributeInt, 0xc8);
 			PROPERTY(m_bAllowAtStart,GlobalTypes::CSmartPropAttributeBool, 0x108);
 			PROPERTY(m_bAllowAtEnd,GlobalTypes::CSmartPropAttributeBool, 0x148);
 			S2_PAD(0x140);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropSelectionCriteria_PathPosition) == 0x188, "CSmartPropSelectionCriteria_PathPosition size should be 0x188");
+
+#endif
 	}
 }

@@ -24,13 +24,16 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateParticleImpulse : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_InputRadius,particleslib::CPerParticleFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_InputMagnitude,particleslib::CPerParticleFloatInput, 0x348);
-			PROPERTY(m_nFalloffFunction,particles::ParticleFalloffFunction_t, 0x4b8);
-			NESTED_PROPERTY(m_InputFalloffExp,particleslib::CPerParticleFloatInput, 0x4c0);
-			PROPERTY(m_nImpulseType,particles::ParticleImpulseType_t, 0x630);
+			NESTED_PROPERTY(m_InputRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_InputMagnitude,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
+			PROPERTY(m_nFalloffFunction,IDENTITY(particles::ParticleFalloffFunction_t), 0x4c0);
+			NESTED_PROPERTY(m_InputFalloffExp,IDENTITY(particleslib::CPerParticleFloatInput), 0x4c8);
+			PROPERTY(m_nImpulseType,IDENTITY(particles::ParticleImpulseType_t), 0x638);
 			S2_PAD(0x460);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateParticleImpulse) == 0x638, "C_INIT_CreateParticleImpulse size should be 0x638");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateParticleImpulse) == 0x640, "C_INIT_CreateParticleImpulse size should be 0x640");
+
+#endif
 	}
 }

@@ -21,14 +21,17 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_CreateFromParentParticles : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			PROPERTY(m_flVelocityScale,float32, 0x1d8);
-			PROPERTY(m_flIncrement,float32, 0x1dc);
-			PROPERTY(m_bRandomDistribution,bool, 0x1e0);
-			PROPERTY(m_nRandomSeed,int32_t, 0x1e4);
-			PROPERTY(m_bSubFrame,bool, 0x1e8);
-			PROPERTY(m_bSetRopeSegmentID,bool, 0x1e9);
+			PROPERTY(m_flVelocityScale,float32, 0x1e0);
+			PROPERTY(m_flIncrement,float32, 0x1e4);
+			PROPERTY(m_bRandomDistribution,bool, 0x1e8);
+			PROPERTY(m_nRandomSeed,int32_t, 0x1ec);
+			PROPERTY(m_bSubFrame,bool, 0x1f0);
+			PROPERTY(m_bSetRopeSegmentID,bool, 0x1f1);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_CreateFromParentParticles) == 0x1F0, "C_INIT_CreateFromParentParticles size should be 0x1F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_CreateFromParentParticles) == 0x1F8, "C_INIT_CreateFromParentParticles size should be 0x1F8");
+
+#endif
 	}
 }

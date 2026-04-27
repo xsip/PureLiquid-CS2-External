@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_nAntitunnelGroupBits,uint32_t, 0x28);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeBuildSphereRigid_t) == 0x30, "FeBuildSphereRigid_t size should be 0x30");
+
+#endif
 	}
 }

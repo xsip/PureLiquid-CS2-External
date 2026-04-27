@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(nListEnd,uint16_t, 0xa);
 			S2_PAD(0xC);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::physicslib::FeWorldCollisionParams_t) == 0xC, "FeWorldCollisionParams_t size should be 0xC");
+
+#endif
 	}
 }

@@ -23,16 +23,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_PlanarConstraint : public CS2::particles::CParticleFunctionConstraint {
 		public:
-			PROPERTY(m_PointOnPlane,GlobalTypes::Vector, 0x1d0);
-			PROPERTY(m_PlaneNormal,GlobalTypes::Vector, 0x1dc);
-			PROPERTY(m_nControlPointNumber,int32_t, 0x1e8);
-			PROPERTY(m_bGlobalOrigin,bool, 0x1ec);
-			PROPERTY(m_bGlobalNormal,bool, 0x1ed);
-			NESTED_PROPERTY(m_flRadiusScale,particleslib::CPerParticleFloatInput, 0x1f0);
-			NESTED_PROPERTY(m_flMaximumDistanceToCP,particleslib::CParticleCollectionFloatInput, 0x360);
-			PROPERTY(m_bUseOldCode,bool, 0x4d0);
+			PROPERTY(m_PointOnPlane,GlobalTypes::Vector, 0x1d8);
+			PROPERTY(m_PlaneNormal,GlobalTypes::Vector, 0x1e4);
+			PROPERTY(m_nControlPointNumber,int32_t, 0x1f0);
+			PROPERTY(m_bGlobalOrigin,bool, 0x1f4);
+			PROPERTY(m_bGlobalNormal,bool, 0x1f5);
+			NESTED_PROPERTY(m_flRadiusScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f8);
+			NESTED_PROPERTY(m_flMaximumDistanceToCP,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x368);
+			PROPERTY(m_bUseOldCode,bool, 0x4d8);
 			S2_PAD(0x308);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_PlanarConstraint) == 0x4D8, "C_OP_PlanarConstraint size should be 0x4D8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_PlanarConstraint) == 0x4E0, "C_OP_PlanarConstraint size should be 0x4E0");
+
+#endif
 	}
 }

@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CTriggerMultiple : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_OnTrigger,entity2::CEntityIOOutput, 0x890);
+			NESTED_PROPERTY(m_OnTrigger,IDENTITY(entity2::CEntityIOOutput), 0x8c8);
 			S2_PAD(0x18);
 		};
-		//static_assert(sizeof(CS2::server::CTriggerMultiple) == 0x8A8, "CTriggerMultiple size should be 0x8A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTriggerMultiple) == 0x8E0, "CTriggerMultiple size should be 0x8E0");
+
+#endif
 	}
 }

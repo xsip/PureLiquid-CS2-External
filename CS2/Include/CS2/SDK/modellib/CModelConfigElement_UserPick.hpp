@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace modellib {
 		class CModelConfigElement_UserPick : public CS2::modellib::CModelConfigElement {
 		public:
-			PROPERTY(m_Choices,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x48);
+			PROPERTY(m_Choices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x48);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CModelConfigElement_UserPick) == 0x60, "CModelConfigElement_UserPick size should be 0x60");
+
+#endif
 	}
 }

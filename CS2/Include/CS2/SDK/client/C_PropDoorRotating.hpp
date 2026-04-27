@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class C_PropDoorRotating : public CS2::client::C_BasePropDoor {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::C_PropDoorRotating) == 0x13E0, "C_PropDoorRotating size should be 0x13E0");
+
+#endif
 	}
 }

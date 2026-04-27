@@ -22,10 +22,13 @@ namespace CS2 {
 		public:
 			PROPERTY(m_flULeftSrc,float32, 0x0);
 			PROPERTY(m_flVTopSrc,float32, 0x4);
-			NESTED_PROPERTY(m_offsets,GlobalTypes::CUtlVector< float32 >, 0x8);
-			NESTED_PROPERTY(m_ranges,GlobalTypes::CUtlVector< float32 >, 0x20);
+			NESTED_PROPERTY(m_offsets,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x8);
+			NESTED_PROPERTY(m_ranges,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0x20);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CMorphBundleData) == 0x38, "CMorphBundleData size should be 0x38");
+
+#endif
 	}
 }

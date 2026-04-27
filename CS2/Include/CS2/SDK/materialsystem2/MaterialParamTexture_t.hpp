@@ -26,9 +26,12 @@ namespace CS2 {
 	namespace materialsystem2 {
 		class MaterialParamTexture_t : public CS2::materialsystem2::MaterialParam_t {
 		public:
-			PROPERTY(m_pValue,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x8);
+			PROPERTY(m_pValue,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x8);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::materialsystem2::MaterialParamTexture_t) == 0x10, "MaterialParamTexture_t size should be 0x10");
+
+#endif
 	}
 }

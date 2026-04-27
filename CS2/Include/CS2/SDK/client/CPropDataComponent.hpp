@@ -33,6 +33,9 @@ namespace CS2 {
 			PROPERTY(m_nMotionDisabledSpawnFlag,int32_t, 0x3c);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::CPropDataComponent) == 0x40, "CPropDataComponent size should be 0x40");
+
+#endif
 	}
 }

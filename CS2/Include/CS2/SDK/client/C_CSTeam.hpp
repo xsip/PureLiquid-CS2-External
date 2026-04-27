@@ -21,18 +21,21 @@ namespace CS2 {
 	namespace client {
 		class C_CSTeam : public CS2::client::C_Team {
 		public:
-			PROPERTY_ARRAY(m_szTeamMatchStat,char, 512 , 0x6c0);
-			PROPERTY(m_numMapVictories,int32_t, 0x8c0);
-			PROPERTY(m_bSurrendered,bool, 0x8c4);
-			PROPERTY(m_scoreFirstHalf,int32_t, 0x8c8);
-			PROPERTY(m_scoreSecondHalf,int32_t, 0x8cc);
-			PROPERTY(m_scoreOvertime,int32_t, 0x8d0);
-			PROPERTY_ARRAY(m_szClanTeamname,char, 129 , 0x8d4);
-			PROPERTY(m_iClanID,uint32_t, 0x958);
-			PROPERTY_ARRAY(m_szTeamFlagImage,char, 8 , 0x95c);
-			PROPERTY_ARRAY(m_szTeamLogoImage,char, 8 , 0x964);
+			PROPERTY_ARRAY(m_szTeamMatchStat,char, 512 , 0x6b8);
+			PROPERTY(m_numMapVictories,int32_t, 0x8b8);
+			PROPERTY(m_bSurrendered,bool, 0x8bc);
+			PROPERTY(m_scoreFirstHalf,int32_t, 0x8c0);
+			PROPERTY(m_scoreSecondHalf,int32_t, 0x8c4);
+			PROPERTY(m_scoreOvertime,int32_t, 0x8c8);
+			PROPERTY_ARRAY(m_szClanTeamname,char, 129 , 0x8cc);
+			PROPERTY(m_iClanID,uint32_t, 0x950);
+			PROPERTY_ARRAY(m_szTeamFlagImage,char, 8 , 0x954);
+			PROPERTY_ARRAY(m_szTeamLogoImage,char, 8 , 0x95c);
 			S2_PAD(0x2B0);
 		};
-		//static_assert(sizeof(CS2::client::C_CSTeam) == 0x970, "C_CSTeam size should be 0x970");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CSTeam) == 0x968, "C_CSTeam size should be 0x968");
+
+#endif
 	}
 }

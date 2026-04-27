@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace particleslib {
 		class CParticleRemapFloatInput : public CS2::particleslib::CParticleFloatInput {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::particleslib::CParticleRemapFloatInput) == 0x170, "CParticleRemapFloatInput size should be 0x170");
+
+#endif
 	}
 }

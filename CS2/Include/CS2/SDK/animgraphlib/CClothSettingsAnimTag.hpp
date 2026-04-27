@@ -27,6 +27,9 @@ namespace CS2 {
 			PROPERTY(m_nVertexSet,GlobalTypes::CUtlString*, 0x68);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CClothSettingsAnimTag) == 0x70, "CClothSettingsAnimTag size should be 0x70");
+
+#endif
 	}
 }

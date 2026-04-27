@@ -23,13 +23,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CFootstepLandedAnimTag : public CS2::animgraphlib::CAnimTagBase {
 		public:
-			PROPERTY(m_FootstepType,animgraphlib::FootstepLandedFootSoundType_t, 0x58);
+			PROPERTY(m_FootstepType,IDENTITY(animgraphlib::FootstepLandedFootSoundType_t), 0x58);
 			PROPERTY(m_OverrideSoundName,GlobalTypes::CUtlString*, 0x60);
 			PROPERTY(m_DebugAnimSourceString,GlobalTypes::CUtlString*, 0x68);
 			PROPERTY(m_BoneName,GlobalTypes::CUtlString*, 0x70);
-			PROPERTY(m_footstepJumpPhase,animgraphlib::FootstepJumpPhase_t, 0x78);
+			PROPERTY(m_footstepJumpPhase,IDENTITY(animgraphlib::FootstepJumpPhase_t), 0x78);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFootstepLandedAnimTag) == 0x80, "CFootstepLandedAnimTag size should be 0x80");
+
+#endif
 	}
 }

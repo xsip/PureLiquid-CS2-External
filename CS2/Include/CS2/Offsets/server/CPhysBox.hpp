@@ -8,23 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8D0
+			// Class size: 0x908
 			namespace CPhysBox /*: public CS2::server::CBreakable*/ {
-				constexpr std::ptrdiff_t m_damageType = 0x808; // int32_t m_damageType; |  0x808 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_damageToEnableMotion = 0x80c; // int32_t m_damageToEnableMotion; |  0x80c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flForceToEnableMotion = 0x810; // float32 m_flForceToEnableMotion; |  0x810 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vHoverPosePosition = 0x814; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angHoverPoseAngles = 0x820; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bNotSolidToWorld = 0x82c; // bool m_bNotSolidToWorld; |  0x82c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEnableUseOutput = 0x82d; // bool m_bEnableUseOutput; |  0x82d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nHoverPoseFlags = 0x82e; // server::HoverPoseFlags_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_flTouchOutputPerEntityDelay = 0x830; // float32 m_flTouchOutputPerEntityDelay; |  0x830 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OnDamaged = 0x838; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnAwakened = 0x850; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnMotionEnabled = 0x868; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnPlayerUse = 0x880; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnStartTouch = 0x898; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_hCarryingPlayer = 0x8b0; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_damageType = 0x840; // int32_t m_damageType; |  0x840 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_damageToEnableMotion = 0x844; // int32_t m_damageToEnableMotion; |  0x844 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flForceToEnableMotion = 0x848; // float32 m_flForceToEnableMotion; |  0x848 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vHoverPosePosition = 0x84c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angHoverPoseAngles = 0x858; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bNotSolidToWorld = 0x864; // bool m_bNotSolidToWorld; |  0x864 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEnableUseOutput = 0x865; // bool m_bEnableUseOutput; |  0x865 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nHoverPoseFlags = 0x866; // server::HoverPoseFlags_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_flTouchOutputPerEntityDelay = 0x868; // float32 m_flTouchOutputPerEntityDelay; |  0x868 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnDamaged = 0x870; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnAwakened = 0x888; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnMotionEnabled = 0x8a0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnPlayerUse = 0x8b8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnStartTouch = 0x8d0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_hCarryingPlayer = 0x8e8; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

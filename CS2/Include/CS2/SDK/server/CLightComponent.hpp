@@ -28,7 +28,7 @@ namespace CS2 {
 	namespace server {
 		class CLightComponent : public CS2::entity2::CEntityComponent {
 		public:
-			NESTED_PROPERTY(__m_pChainEntity,entity2::CNetworkVarChainer, 0x38);
+			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x38);
 			PROPERTY(m_Color,GlobalTypes::Color, 0x75);
 			PROPERTY(m_SecondaryColor,GlobalTypes::Color, 0x79);
 			PROPERTY(m_flBrightness,float32, 0x80);
@@ -41,7 +41,7 @@ namespace CS2 {
 			PROPERTY(m_flAttenuation2,float32, 0x9c);
 			PROPERTY(m_flTheta,float32, 0xa0);
 			PROPERTY(m_flPhi,float32, 0xa4);
-			PROPERTY(m_hLightCookie,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0xa8);
+			PROPERTY(m_hLightCookie,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xa8);
 			PROPERTY(m_nCascades,int32_t, 0xb0);
 			PROPERTY(m_nCastShadows,int32_t, 0xb4);
 			PROPERTY(m_nShadowWidth,int32_t, 0xb8);
@@ -72,8 +72,8 @@ namespace CS2 {
 			PROPERTY(m_bRenderToCubemaps,bool, 0x120);
 			PROPERTY(m_bAllowSSTGeneration,bool, 0x121);
 			PROPERTY(m_nDirectLight,int32_t, 0x124);
-			PROPERTY(m_nIndirectLight,int32_t, 0x128);
-			PROPERTY(m_bDynamicBounce,bool, 0x12c);
+			PROPERTY(m_nBounceLight,int32_t, 0x128);
+			PROPERTY(m_flBounceScale,float32, 0x12c);
 			PROPERTY(m_flFadeMinDist,float32, 0x130);
 			PROPERTY(m_flFadeMaxDist,float32, 0x134);
 			PROPERTY(m_flShadowFadeMinDist,float32, 0x138);
@@ -95,12 +95,15 @@ namespace CS2 {
 			PROPERTY(m_SkyAmbientBounce,GlobalTypes::Color, 0x198);
 			PROPERTY(m_bUseSecondaryColor,bool, 0x19c);
 			PROPERTY(m_bMixedShadows,bool, 0x19d);
-			NESTED_PROPERTY(m_flLightStyleStartTime,entity2::GameTime_t, 0x1a0);
+			NESTED_PROPERTY(m_flLightStyleStartTime,IDENTITY(entity2::GameTime_t), 0x1a0);
 			PROPERTY(m_flCapsuleLength,float32, 0x1a4);
 			PROPERTY(m_flMinRoughness,float32, 0x1a8);
 			PROPERTY(m_bPvsModifyEntity,bool, 0x1b8);
 			S2_PAD(0x1B8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CLightComponent) == 0x1C0, "CLightComponent size should be 0x1C0");
+
+#endif
 	}
 }

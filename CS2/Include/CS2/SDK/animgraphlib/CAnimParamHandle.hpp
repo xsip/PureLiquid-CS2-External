@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CAnimParamHandle  {
 		public:
-			PROPERTY(m_type,animgraphlib::AnimParamType_t, 0x0);
+			PROPERTY(m_type,IDENTITY(animgraphlib::AnimParamType_t), 0x0);
 			PROPERTY(m_index,uint8_t, 0x1);
 			S2_PAD(0x2);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CAnimParamHandle) == 0x2, "CAnimParamHandle size should be 0x2");
+
+#endif
 	}
 }

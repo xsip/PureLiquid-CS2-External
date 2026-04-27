@@ -27,9 +27,12 @@ namespace CS2 {
 			PROPERTY(m_MessageAttenuation,int32_t, 0x4b4);
 			PROPERTY(m_Radius,float32, 0x4b8);
 			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x4c0);
-			NESTED_PROPERTY(m_OnShowMessage,entity2::CEntityIOOutput, 0x4c8);
+			NESTED_PROPERTY(m_OnShowMessage,IDENTITY(entity2::CEntityIOOutput), 0x4c8);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CMessage) == 0x4E0, "CMessage size should be 0x4E0");
+
+#endif
 	}
 }

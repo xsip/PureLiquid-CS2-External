@@ -21,10 +21,13 @@ namespace CS2 {
 	namespace server {
 		class CHandleTest : public CS2::server::CBaseEntity {
 		public:
-			PROPERTY(m_Handle,GlobalTypes::CHandle<server::CBaseEntity>, 0x4a8);
+			PROPERTY(m_Handle,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4a8);
 			PROPERTY(m_bSendHandle,bool, 0x4ac);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CHandleTest) == 0x4B0, "CHandleTest size should be 0x4B0");
+
+#endif
 	}
 }

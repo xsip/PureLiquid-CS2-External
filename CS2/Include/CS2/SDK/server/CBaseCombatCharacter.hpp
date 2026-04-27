@@ -10,7 +10,7 @@
 #endif
 
 
-#include <SDK/server/CBaseFlex.hpp>
+#include <SDK/server/CBaseAnimGraph.hpp>
 #include <SDK/server/CEconWearable.hpp>
 #include <SDK/client/Hull_t.hpp>
 #include <SDK/server/CMovementStatsProperty.hpp>
@@ -22,20 +22,23 @@
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace server {
-		class CBaseCombatCharacter : public CS2::server::CBaseFlex {
+		class CBaseCombatCharacter : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bForceServerRagdoll,bool, 0xab0);
-			PROPERTY(m_hMyWearables,server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CEconWearable>>, 0xab8);
-			PROPERTY(m_impactEnergyScale,float32, 0xad0);
-			PROPERTY(m_bApplyStressDamage,bool, 0xad4);
-			PROPERTY(m_bDeathEventsDispatched,bool, 0xad5);
-			PROPERTY(m_pVecRelationships,GlobalTypes::CUtlVector< RelationshipOverride_t >**, 0xb18);
-			PROPERTY(m_strRelationships,GlobalTypes::CUtlSymbolLarge*, 0xb20);
-			PROPERTY(m_eHull,client::Hull_t, 0xb28);
-			PROPERTY(m_nNavHullIdx,uint32_t, 0xb2c);
-			NESTED_PROPERTY(m_movementStats,server::CMovementStatsProperty, 0xb30);
+			PROPERTY(m_bForceServerRagdoll,bool, 0x940);
+			// PROPERTY(m_hMyWearables,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CEconWearable>>), 0x948);
+			PROPERTY(m_impactEnergyScale,float32, 0x960);
+			PROPERTY(m_bApplyStressDamage,bool, 0x964);
+			PROPERTY(m_bDeathEventsDispatched,bool, 0x965);
+			PROPERTY(m_pVecRelationships,IDENTITY(GlobalTypes::CUtlVector< RelationshipOverride_t >**), 0x9a8);
+			PROPERTY(m_strRelationships,GlobalTypes::CUtlSymbolLarge*, 0x9b0);
+			PROPERTY(m_eHull,IDENTITY(client::Hull_t), 0x9b8);
+			PROPERTY(m_nNavHullIdx,uint32_t, 0x9bc);
+			NESTED_PROPERTY(m_movementStats,IDENTITY(server::CMovementStatsProperty), 0x9c0);
 			S2_PAD(0xC0);
 		};
-		//static_assert(sizeof(CS2::server::CBaseCombatCharacter) == 0xB70, "CBaseCombatCharacter size should be 0xB70");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CBaseCombatCharacter) == 0xA00, "CBaseCombatCharacter size should be 0xA00");
+
+#endif
 	}
 }

@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CRootUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CRootUpdateNode) == 0x70, "CRootUpdateNode size should be 0x70");
+
+#endif
 	}
 }

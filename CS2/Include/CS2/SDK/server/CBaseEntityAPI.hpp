@@ -22,6 +22,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CBaseEntityAPI) == 0x8, "CBaseEntityAPI size should be 0x8");
+
+#endif
 	}
 }

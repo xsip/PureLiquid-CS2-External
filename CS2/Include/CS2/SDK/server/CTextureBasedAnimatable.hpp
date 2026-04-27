@@ -26,16 +26,19 @@ namespace CS2 {
 	namespace server {
 		class CTextureBasedAnimatable : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_bLoop,bool, 0x730);
-			PROPERTY(m_flFPS,float32, 0x734);
-			PROPERTY(m_hPositionKeys,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x738);
-			PROPERTY(m_hRotationKeys,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>, 0x740);
-			PROPERTY(m_vAnimationBoundsMin,GlobalTypes::Vector, 0x748);
-			PROPERTY(m_vAnimationBoundsMax,GlobalTypes::Vector, 0x754);
-			PROPERTY(m_flStartTime,float32, 0x760);
-			PROPERTY(m_flStartFrame,float32, 0x764);
+			PROPERTY(m_bLoop,bool, 0x768);
+			PROPERTY(m_flFPS,float32, 0x76c);
+			PROPERTY(m_hPositionKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x770);
+			PROPERTY(m_hRotationKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x778);
+			PROPERTY(m_vAnimationBoundsMin,GlobalTypes::Vector, 0x780);
+			PROPERTY(m_vAnimationBoundsMax,GlobalTypes::Vector, 0x78c);
+			PROPERTY(m_flStartTime,float32, 0x798);
+			PROPERTY(m_flStartFrame,float32, 0x79c);
 			S2_PAD(0x38);
 		};
-		//static_assert(sizeof(CS2::server::CTextureBasedAnimatable) == 0x768, "CTextureBasedAnimatable size should be 0x768");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CTextureBasedAnimatable) == 0x7A0, "CTextureBasedAnimatable size should be 0x7A0");
+
+#endif
 	}
 }

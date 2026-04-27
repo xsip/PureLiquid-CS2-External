@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x620
 			namespace CPathMover /*: public CS2::server::CPathWithDynamicNodes*/ {
-				constexpr std::ptrdiff_t m_vecMovers = 0x5f0; // server::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecMovers = 0x5f0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_hMoverSpawner = 0x608; // GlobalTypes::CHandle<server::CPathMoverEntitySpawner>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_iszMoverSpawnerName = 0x610; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}

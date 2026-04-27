@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x90
+			// Class size: 0x88
 			namespace CAnimGraphControllerBase /**/ {
-				constexpr std::ptrdiff_t m_hExternalGraph = 0x18; // client::ExternalAnimGraphHandle_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_hExternalGraph = 0x10; // client::ExternalAnimGraphHandle_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

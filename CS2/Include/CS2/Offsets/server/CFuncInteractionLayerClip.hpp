@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x748
+			// Class size: 0x780
 			namespace CFuncInteractionLayerClip /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_bDisabled = 0x730; // bool m_bDisabled; |  0x730 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iszInteractsAs = 0x738; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszInteractsWith = 0x740; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bDisabled = 0x768; // bool m_bDisabled; |  0x768 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iszInteractsAs = 0x770; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszInteractsWith = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

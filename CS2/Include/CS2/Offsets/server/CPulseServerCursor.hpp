@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xE0
+			// Class size: 0xF0
 			namespace CPulseServerCursor /*: public CS2::pulse_runtime_lib::CPulseExecCursor*/ {
-				constexpr std::ptrdiff_t m_hActivator = 0xd8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hCaller = 0xdc; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hActivator = 0xe8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hCaller = 0xec; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

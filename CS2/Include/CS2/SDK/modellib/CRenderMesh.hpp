@@ -29,15 +29,18 @@ namespace CS2 {
 	namespace modellib {
 		class CRenderMesh  {
 		public:
-			PROPERTY(m_sceneObjects,GlobalTypes::CUtlLeanVectorFixedGrowable<modellib::CSceneObjectData>, 0x10);
-			PROPERTY(m_constraints,GlobalTypes::CUtlLeanVector<modellib::CBaseConstraint*>, 0xb8);
-			NESTED_PROPERTY(m_skeleton,modellib::CRenderSkeleton, 0xc8);
+			// PROPERTY(m_sceneObjects,IDENTITY(GlobalTypes::CUtlLeanVectorFixedGrowable<modellib::CSceneObjectData>), 0x10);
+			// PROPERTY(m_constraints,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CBaseConstraint*>), 0xb8);
+			NESTED_PROPERTY(m_skeleton,IDENTITY(modellib::CRenderSkeleton), 0xc8);
 			PROPERTY(m_bUseUV2ForCharting,bool, 0x1d4);
 			PROPERTY(m_bEmbeddedMapMesh,bool, 0x1d5);
-			NESTED_PROPERTY(m_meshDeformParams,modellib::DynamicMeshDeformParams_t, 0x1f8);
-			PROPERTY(m_pGroomData,modellib::CRenderGroom*, 0x208);
+			NESTED_PROPERTY(m_meshDeformParams,IDENTITY(modellib::DynamicMeshDeformParams_t), 0x1f8);
+			PROPERTY(m_pGroomData,IDENTITY(modellib::CRenderGroom*), 0x208);
 			S2_PAD(0x210);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CRenderMesh) == 0x210, "CRenderMesh size should be 0x210");
+
+#endif
 	}
 }

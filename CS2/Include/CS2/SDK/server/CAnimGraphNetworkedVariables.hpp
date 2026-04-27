@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,32 +20,35 @@ namespace CS2 {
 	namespace server {
 		class CAnimGraphNetworkedVariables  {
 		public:
-			PROPERTY(m_PredNetBoolVariables,GlobalTypes::CNetworkUtlVectorBase< uint32 >, 0x8);
-			PROPERTY(m_PredNetByteVariables,GlobalTypes::CNetworkUtlVectorBase< uint8 >, 0x20);
-			PROPERTY(m_PredNetUInt16Variables,GlobalTypes::CNetworkUtlVectorBase< uint16 >, 0x38);
-			PROPERTY(m_PredNetIntVariables,GlobalTypes::CNetworkUtlVectorBase< int32 >, 0x50);
-			PROPERTY(m_PredNetUInt32Variables,GlobalTypes::CNetworkUtlVectorBase< uint32 >, 0x68);
-			PROPERTY(m_PredNetUInt64Variables,GlobalTypes::CNetworkUtlVectorBase< uint64 >, 0x80);
-			PROPERTY(m_PredNetFloatVariables,GlobalTypes::CNetworkUtlVectorBase< float32 >, 0x98);
-			PROPERTY(m_PredNetVectorVariables,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0xb0);
-			PROPERTY(m_PredNetQuaternionVariables,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Quaternion>, 0xc8);
-			PROPERTY(m_PredNetGlobalSymbolVariables,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CGlobalSymbol>, 0xe0);
-			PROPERTY(m_OwnerOnlyPredNetBoolVariables,GlobalTypes::CNetworkUtlVectorBase< uint32 >, 0xf8);
-			PROPERTY(m_OwnerOnlyPredNetByteVariables,GlobalTypes::CNetworkUtlVectorBase< uint8 >, 0x110);
-			PROPERTY(m_OwnerOnlyPredNetUInt16Variables,GlobalTypes::CNetworkUtlVectorBase< uint16 >, 0x128);
-			PROPERTY(m_OwnerOnlyPredNetIntVariables,GlobalTypes::CNetworkUtlVectorBase< int32 >, 0x140);
-			PROPERTY(m_OwnerOnlyPredNetUInt32Variables,GlobalTypes::CNetworkUtlVectorBase< uint32 >, 0x158);
-			PROPERTY(m_OwnerOnlyPredNetUInt64Variables,GlobalTypes::CNetworkUtlVectorBase< uint64 >, 0x170);
-			PROPERTY(m_OwnerOnlyPredNetFloatVariables,GlobalTypes::CNetworkUtlVectorBase< float32 >, 0x188);
-			PROPERTY(m_OwnerOnlyPredNetVectorVariables,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>, 0x1a0);
-			PROPERTY(m_OwnerOnlyPredNetQuaternionVariables,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Quaternion>, 0x1b8);
-			PROPERTY(m_OwnerOnlyPredNetGlobalSymbolVariables,GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CGlobalSymbol>, 0x1d0);
+			// PROPERTY(m_PredNetBoolVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint32 >), 0x8);
+			// PROPERTY(m_PredNetByteVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0x20);
+			// PROPERTY(m_PredNetUInt16Variables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint16 >), 0x38);
+			// PROPERTY(m_PredNetIntVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< int32 >), 0x50);
+			// PROPERTY(m_PredNetUInt32Variables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint32 >), 0x68);
+			// PROPERTY(m_PredNetUInt64Variables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint64 >), 0x80);
+			// PROPERTY(m_PredNetFloatVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< float32 >), 0x98);
+			// PROPERTY(m_PredNetVectorVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0xb0);
+			// PROPERTY(m_PredNetQuaternionVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Quaternion>), 0xc8);
+			// PROPERTY(m_PredNetGlobalSymbolVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CGlobalSymbol>), 0xe0);
+			// PROPERTY(m_OwnerOnlyPredNetBoolVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint32 >), 0xf8);
+			// PROPERTY(m_OwnerOnlyPredNetByteVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0x110);
+			// PROPERTY(m_OwnerOnlyPredNetUInt16Variables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint16 >), 0x128);
+			// PROPERTY(m_OwnerOnlyPredNetIntVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< int32 >), 0x140);
+			// PROPERTY(m_OwnerOnlyPredNetUInt32Variables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint32 >), 0x158);
+			// PROPERTY(m_OwnerOnlyPredNetUInt64Variables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint64 >), 0x170);
+			// PROPERTY(m_OwnerOnlyPredNetFloatVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< float32 >), 0x188);
+			// PROPERTY(m_OwnerOnlyPredNetVectorVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0x1a0);
+			// PROPERTY(m_OwnerOnlyPredNetQuaternionVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Quaternion>), 0x1b8);
+			// PROPERTY(m_OwnerOnlyPredNetGlobalSymbolVariables,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CGlobalSymbol>), 0x1d0);
 			PROPERTY(m_nBoolVariablesCount,int32_t, 0x1e8);
 			PROPERTY(m_nOwnerOnlyBoolVariablesCount,int32_t, 0x1ec);
 			PROPERTY(m_nRandomSeedOffset,int32_t, 0x1f0);
 			PROPERTY(m_flLastTeleportTime,float32, 0x1f4);
 			S2_PAD(0x208);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CAnimGraphNetworkedVariables) == 0x208, "CAnimGraphNetworkedVariables size should be 0x208");
+
+#endif
 	}
 }

@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1320
+			// Class size: 0x1440
 			namespace CGrenadeTracer /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_flTracerDuration = 0xea0; // float32 m_flTracerDuration; |  0xea0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nType = 0xea4; // client::GrenadeType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flTracerDuration = 0xfc0; // float32 m_flTracerDuration; |  0xfc0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nType = 0xfc4; // client::GrenadeType_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

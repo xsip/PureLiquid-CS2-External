@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CFootStepTriggerUpdateNode : public CS2::animgraphlib::CUnaryUpdateNode {
 		public:
-			NESTED_PROPERTY(m_triggers,GlobalTypes::CUtlVector<animgraphlib::FootStepTrigger>, 0x70);
+			NESTED_PROPERTY(m_triggers,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::FootStepTrigger>), 0x70);
 			PROPERTY(m_flTolerance,float32, 0x8c);
 			S2_PAD(0x20);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CFootStepTriggerUpdateNode) == 0x90, "CFootStepTriggerUpdateNode size should be 0x90");
+
+#endif
 	}
 }

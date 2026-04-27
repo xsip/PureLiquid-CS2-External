@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x638
+			// Class size: 0x630
 			namespace C_PlayerVisibility /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_flVisibilityStrength = 0x608; // float32 m_flVisibilityStrength; |  0x608 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFogDistanceMultiplier = 0x60c; // float32 m_flFogDistanceMultiplier; |  0x60c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFogMaxDensityMultiplier = 0x610; // float32 m_flFogMaxDensityMultiplier; |  0x610 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeTime = 0x614; // float32 m_flFadeTime; |  0x614 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bStartDisabled = 0x618; // bool m_bStartDisabled; |  0x618 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsEnabled = 0x619; // bool m_bIsEnabled; |  0x619 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flVisibilityStrength = 0x600; // float32 m_flVisibilityStrength; |  0x600 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFogDistanceMultiplier = 0x604; // float32 m_flFogDistanceMultiplier; |  0x604 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFogMaxDensityMultiplier = 0x608; // float32 m_flFogMaxDensityMultiplier; |  0x608 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeTime = 0x60c; // float32 m_flFadeTime; |  0x60c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bStartDisabled = 0x610; // bool m_bStartDisabled; |  0x610 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsEnabled = 0x611; // bool m_bIsEnabled; |  0x611 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

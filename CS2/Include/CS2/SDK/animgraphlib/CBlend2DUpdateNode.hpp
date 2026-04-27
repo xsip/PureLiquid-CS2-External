@@ -28,16 +28,16 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CBlend2DUpdateNode : public CS2::animgraphlib::CAnimUpdateNodeBase {
 		public:
-			NESTED_PROPERTY(m_items,GlobalTypes::CUtlVector<animgraphlib::BlendItem_t>, 0x60);
-			NESTED_PROPERTY(m_tags,GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>, 0x78);
-			NESTED_PROPERTY(m_paramSpans,animgraphlib::CParamSpanUpdater, 0x90);
-			NESTED_PROPERTY(m_nodeItemIndices,GlobalTypes::CUtlVector< int32 >, 0xa8);
-			NESTED_PROPERTY(m_damping,animgraphlib::CAnimInputDamping, 0xc0);
-			PROPERTY(m_blendSourceX,animgraphlib::AnimValueSource, 0xd8);
-			NESTED_PROPERTY(m_paramX,animgraphlib::CAnimParamHandle, 0xdc);
-			PROPERTY(m_blendSourceY,animgraphlib::AnimValueSource, 0xe0);
-			NESTED_PROPERTY(m_paramY,animgraphlib::CAnimParamHandle, 0xe4);
-			PROPERTY(m_eBlendMode,animgraphlib::Blend2DMode, 0xe8);
+			NESTED_PROPERTY(m_items,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::BlendItem_t>), 0x60);
+			NESTED_PROPERTY(m_tags,IDENTITY(GlobalTypes::CUtlVector<animgraphlib::TagSpan_t>), 0x78);
+			NESTED_PROPERTY(m_paramSpans,IDENTITY(animgraphlib::CParamSpanUpdater), 0x90);
+			NESTED_PROPERTY(m_nodeItemIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0xa8);
+			NESTED_PROPERTY(m_damping,IDENTITY(animgraphlib::CAnimInputDamping), 0xc0);
+			PROPERTY(m_blendSourceX,IDENTITY(animgraphlib::AnimValueSource), 0xd8);
+			NESTED_PROPERTY(m_paramX,IDENTITY(animgraphlib::CAnimParamHandle), 0xdc);
+			PROPERTY(m_blendSourceY,IDENTITY(animgraphlib::AnimValueSource), 0xe0);
+			NESTED_PROPERTY(m_paramY,IDENTITY(animgraphlib::CAnimParamHandle), 0xe4);
+			PROPERTY(m_eBlendMode,IDENTITY(animgraphlib::Blend2DMode), 0xe8);
 			PROPERTY(m_playbackSpeed,float32, 0xec);
 			PROPERTY(m_bLoop,bool, 0xf0);
 			PROPERTY(m_bLockBlendOnReset,bool, 0xf1);
@@ -45,6 +45,9 @@ namespace CS2 {
 			PROPERTY(m_bAnimEventsAndTagsOnMostWeightedOnly,bool, 0xf3);
 			S2_PAD(0xA0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CBlend2DUpdateNode) == 0xF8, "CBlend2DUpdateNode size should be 0xF8");
+
+#endif
 	}
 }

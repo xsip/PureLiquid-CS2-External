@@ -10,12 +10,12 @@ namespace CS2 {
 		namespace particles {
 			// Class size: 0x220
 			namespace C_OP_RampScalarLinear /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_RateMin = 0x1d0; // float32 m_RateMin; |  0x1d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_RateMax = 0x1d4; // float32 m_RateMax; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime_min = 0x1d8; // float32 m_flStartTime_min; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime_max = 0x1dc; // float32 m_flStartTime_max; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_min = 0x1e0; // float32 m_flEndTime_min; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndTime_max = 0x1e4; // float32 m_flEndTime_max; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_RateMin = 0x1d8; // float32 m_RateMin; |  0x1d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_RateMax = 0x1dc; // float32 m_RateMax; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime_min = 0x1e0; // float32 m_flStartTime_min; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime_max = 0x1e4; // float32 m_flStartTime_max; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_min = 0x1e8; // float32 m_flEndTime_min; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndTime_max = 0x1ec; // float32 m_flEndTime_max; |  0x1ec | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nField = 0x210; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_bProportionalOp = 0x214; // bool m_bProportionalOp; |  0x214 | Schema_Builtin | Size: 0x1
 			}

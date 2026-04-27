@@ -21,16 +21,19 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_TurbulenceForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_flNoiseCoordScale0,float32, 0x1e0);
-			PROPERTY(m_flNoiseCoordScale1,float32, 0x1e4);
-			PROPERTY(m_flNoiseCoordScale2,float32, 0x1e8);
-			PROPERTY(m_flNoiseCoordScale3,float32, 0x1ec);
-			PROPERTY(m_vecNoiseAmount0,GlobalTypes::Vector, 0x1f0);
-			PROPERTY(m_vecNoiseAmount1,GlobalTypes::Vector, 0x1fc);
-			PROPERTY(m_vecNoiseAmount2,GlobalTypes::Vector, 0x208);
-			PROPERTY(m_vecNoiseAmount3,GlobalTypes::Vector, 0x214);
+			PROPERTY(m_flNoiseCoordScale0,float32, 0x1e8);
+			PROPERTY(m_flNoiseCoordScale1,float32, 0x1ec);
+			PROPERTY(m_flNoiseCoordScale2,float32, 0x1f0);
+			PROPERTY(m_flNoiseCoordScale3,float32, 0x1f4);
+			PROPERTY(m_vecNoiseAmount0,GlobalTypes::Vector, 0x1f8);
+			PROPERTY(m_vecNoiseAmount1,GlobalTypes::Vector, 0x204);
+			PROPERTY(m_vecNoiseAmount2,GlobalTypes::Vector, 0x210);
+			PROPERTY(m_vecNoiseAmount3,GlobalTypes::Vector, 0x21c);
 			S2_PAD(0x40);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_TurbulenceForce) == 0x220, "C_OP_TurbulenceForce size should be 0x220");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_TurbulenceForce) == 0x228, "C_OP_TurbulenceForce size should be 0x228");
+
+#endif
 	}
 }

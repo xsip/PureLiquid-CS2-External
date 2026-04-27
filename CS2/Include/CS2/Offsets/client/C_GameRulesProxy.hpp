@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x608
+			// Class size: 0x600
 			namespace C_GameRulesProxy /*: public CS2::client::C_BaseEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

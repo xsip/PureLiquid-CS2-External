@@ -22,33 +22,36 @@ namespace CS2 {
 	namespace client {
 		class C_LocalTempEntity : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(flags,int32_t, 0x1168);
-			NESTED_PROPERTY(die,entity2::GameTime_t, 0x116c);
-			PROPERTY(m_flFrameMax,float32, 0x1170);
-			PROPERTY(x,float32, 0x1174);
-			PROPERTY(y,float32, 0x1178);
-			PROPERTY(fadeSpeed,float32, 0x117c);
-			PROPERTY(bounceFactor,float32, 0x1180);
-			PROPERTY(hitSound,int32_t, 0x1184);
-			PROPERTY(priority,int32_t, 0x1188);
-			PROPERTY(tentOffset,GlobalTypes::Vector, 0x118c);
-			PROPERTY(m_vecTempEntAngVelocity,GlobalTypes::QAngle, 0x1198);
-			PROPERTY(tempent_renderamt,int32_t, 0x11a4);
-			PROPERTY(m_vecNormal,GlobalTypes::Vector, 0x11a8);
-			PROPERTY(m_flSpriteScale,float32, 0x11b4);
-			PROPERTY(m_nFlickerFrame,int32_t, 0x11b8);
-			PROPERTY(m_flFrameRate,float32, 0x11bc);
-			PROPERTY(m_flFrame,float32, 0x11c0);
-			PROPERTY(m_pszImpactEffect,char*, 0x11c8);
-			PROPERTY(m_pszParticleEffect,char*, 0x11d0);
-			PROPERTY(m_bParticleCollision,bool, 0x11d8);
-			PROPERTY(m_iLastCollisionFrame,int32_t, 0x11dc);
-			PROPERTY(m_vLastCollisionOrigin,GlobalTypes::Vector, 0x11e0);
-			PROPERTY(m_vecTempEntVelocity,GlobalTypes::Vector, 0x11ec);
-			PROPERTY(m_vecPrevAbsOrigin,GlobalTypes::Vector, 0x11f8);
-			PROPERTY(m_vecTempEntAcceleration,GlobalTypes::Vector, 0x1204);
+			PROPERTY(flags,int32_t, 0x1158);
+			NESTED_PROPERTY(die,IDENTITY(entity2::GameTime_t), 0x115c);
+			PROPERTY(m_flFrameMax,float32, 0x1160);
+			PROPERTY(x,float32, 0x1164);
+			PROPERTY(y,float32, 0x1168);
+			PROPERTY(fadeSpeed,float32, 0x116c);
+			PROPERTY(bounceFactor,float32, 0x1170);
+			PROPERTY(hitSound,int32_t, 0x1174);
+			PROPERTY(priority,int32_t, 0x1178);
+			PROPERTY(tentOffset,GlobalTypes::Vector, 0x117c);
+			PROPERTY(m_vecTempEntAngVelocity,GlobalTypes::QAngle, 0x1188);
+			PROPERTY(tempent_renderamt,int32_t, 0x1194);
+			PROPERTY(m_vecNormal,GlobalTypes::Vector, 0x1198);
+			PROPERTY(m_flSpriteScale,float32, 0x11a4);
+			PROPERTY(m_nFlickerFrame,int32_t, 0x11a8);
+			PROPERTY(m_flFrameRate,float32, 0x11ac);
+			PROPERTY(m_flFrame,float32, 0x11b0);
+			PROPERTY(m_pszImpactEffect,char*, 0x11b8);
+			PROPERTY(m_pszParticleEffect,char*, 0x11c0);
+			PROPERTY(m_bParticleCollision,bool, 0x11c8);
+			PROPERTY(m_iLastCollisionFrame,int32_t, 0x11cc);
+			PROPERTY(m_vLastCollisionOrigin,GlobalTypes::Vector, 0x11d0);
+			PROPERTY(m_vecTempEntVelocity,GlobalTypes::Vector, 0x11dc);
+			PROPERTY(m_vecPrevAbsOrigin,GlobalTypes::Vector, 0x11e8);
+			PROPERTY(m_vecTempEntAcceleration,GlobalTypes::Vector, 0x11f4);
 			S2_PAD(0xA8);
 		};
-		//static_assert(sizeof(CS2::client::C_LocalTempEntity) == 0x1210, "C_LocalTempEntity size should be 0x1210");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_LocalTempEntity) == 0x1200, "C_LocalTempEntity size should be 0x1200");
+
+#endif
 	}
 }

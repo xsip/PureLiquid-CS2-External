@@ -44,6 +44,9 @@ namespace CS2 {
 			PROPERTY(m_iEntryWins,int32_t, 0xb8);
 			S2_PAD(0x58);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CSMatchStats_t) == 0xC0, "CSMatchStats_t size should be 0xC0");
+
+#endif
 	}
 }

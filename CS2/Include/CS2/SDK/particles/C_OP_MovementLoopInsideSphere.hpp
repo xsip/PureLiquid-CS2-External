@@ -24,12 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_MovementLoopInsideSphere : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_nCP,int32_t, 0x1d0);
-			NESTED_PROPERTY(m_flDistance,particleslib::CParticleCollectionFloatInput, 0x1d8);
-			NESTED_PROPERTY(m_vecScale,particleslib::CParticleCollectionVecInput, 0x348);
-			NESTED_PROPERTY(m_nDistSqrAttr,particles::ParticleAttributeIndex_t, 0xa00);
+			PROPERTY(m_nCP,int32_t, 0x1d8);
+			NESTED_PROPERTY(m_flDistance,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1e0);
+			NESTED_PROPERTY(m_vecScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x350);
+			NESTED_PROPERTY(m_nDistSqrAttr,IDENTITY(particles::ParticleAttributeIndex_t), 0xa08);
 			S2_PAD(0x838);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_MovementLoopInsideSphere) == 0xA08, "C_OP_MovementLoopInsideSphere size should be 0xA08");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_MovementLoopInsideSphere) == 0xA10, "C_OP_MovementLoopInsideSphere size should be 0xA10");
+
+#endif
 	}
 }

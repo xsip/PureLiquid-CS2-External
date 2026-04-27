@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace client {
 		class EventClientPreOutputParallelWithServer_t : public CS2::client::EventClientPreOutput_t {
 		public:
-			S2_PAD(0x0);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::client::EventClientPreOutputParallelWithServer_t) == 0x48, "EventClientPreOutputParallelWithServer_t size should be 0x48");
+
+#endif
 	}
 }

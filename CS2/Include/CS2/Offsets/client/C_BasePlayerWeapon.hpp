@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x18F8
+			// Class size: 0x1700
 			namespace C_BasePlayerWeapon /*: public CS2::client::C_EconEntity*/ {
-				constexpr std::ptrdiff_t m_nNextPrimaryAttackTick = 0x18c0; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextPrimaryAttackTickRatio = 0x18c4; // float32 m_flNextPrimaryAttackTickRatio; |  0x18c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nNextSecondaryAttackTick = 0x18c8; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextSecondaryAttackTickRatio = 0x18cc; // float32 m_flNextSecondaryAttackTickRatio; |  0x18cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iClip1 = 0x18d0; // int32_t m_iClip1; |  0x18d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iClip2 = 0x18d4; // int32_t m_iClip2; |  0x18d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pReserveAmmo = 0x18d8; // int32_t m_pReserveAmmo[2]; |  0x18d8 | Schema_FixedArray | Size: 0x8
+				constexpr std::ptrdiff_t m_nNextPrimaryAttackTick = 0x16c8; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextPrimaryAttackTickRatio = 0x16cc; // float32 m_flNextPrimaryAttackTickRatio; |  0x16cc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nNextSecondaryAttackTick = 0x16d0; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextSecondaryAttackTickRatio = 0x16d4; // float32 m_flNextSecondaryAttackTickRatio; |  0x16d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iClip1 = 0x16d8; // int32_t m_iClip1; |  0x16d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iClip2 = 0x16dc; // int32_t m_iClip2; |  0x16dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pReserveAmmo = 0x16e0; // int32_t m_pReserveAmmo[2]; |  0x16e0 | Schema_FixedArray | Size: 0x8
 			}
 		}
 	}

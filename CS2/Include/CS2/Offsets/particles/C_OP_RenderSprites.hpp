@@ -8,38 +8,38 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x5240
+			// Class size: 0x5248
 			namespace C_OP_RenderSprites /*: public CS2::particles::CBaseRendererSource2*/ {
-				constexpr std::ptrdiff_t m_nSequenceOverride = 0x2de8; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bSequenceNumbersAreRawSequenceIndices = 0x2f58; // bool m_bSequenceNumbersAreRawSequenceIndices; |  0x2f58 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nOrientationType = 0x2f5c; // particles::ParticleOrientationChoiceList_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2f60; // int32_t m_nOrientationControlPoint; |  0x2f60 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseYawWithNormalAligned = 0x2f64; // bool m_bUseYawWithNormalAligned; |  0x2f64 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flMinSize = 0x2f68; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMaxSize = 0x30d8; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flAlphaAdjustWithSizeAdjust = 0x3248; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flStartFadeSize = 0x33b8; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flEndFadeSize = 0x3528; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flStartFadeDot = 0x3698; // float32 m_flStartFadeDot; |  0x3698 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEndFadeDot = 0x369c; // float32 m_flEndFadeDot; |  0x369c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bDistanceAlpha = 0x36a0; // bool m_bDistanceAlpha; |  0x36a0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSoftEdges = 0x36a1; // bool m_bSoftEdges; |  0x36a1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flEdgeSoftnessStart = 0x36a4; // float32 m_flEdgeSoftnessStart; |  0x36a4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flEdgeSoftnessEnd = 0x36a8; // float32 m_flEdgeSoftnessEnd; |  0x36a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bOutline = 0x36ac; // bool m_bOutline; |  0x36ac | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_OutlineColor = 0x36ad; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutlineAlpha = 0x36b4; // int32_t m_nOutlineAlpha; |  0x36b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutlineStart0 = 0x36b8; // float32 m_flOutlineStart0; |  0x36b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutlineStart1 = 0x36bc; // float32 m_flOutlineStart1; |  0x36bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutlineEnd0 = 0x36c0; // float32 m_flOutlineEnd0; |  0x36c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flOutlineEnd1 = 0x36c4; // float32 m_flOutlineEnd1; |  0x36c4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nLightingMode = 0x36c8; // particles::ParticleLightingQuality_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_vecLightingOverride = 0x36d0; // particleslib::CParticleCollectionRendererVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flLightingTessellation = 0x3d88; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flLightingDirectionality = 0x3ef8; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bParticleShadows = 0x4068; // bool m_bParticleShadows; |  0x4068 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flShadowDensity = 0x406c; // float32 m_flShadowDensity; |  0x406c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_replicationParameters = 0x4070; // particles::CReplicationParameters  | Schema_DeclaredClass | Size: 0x11c8
+				constexpr std::ptrdiff_t m_nSequenceOverride = 0x2df0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bSequenceNumbersAreRawSequenceIndices = 0x2f60; // bool m_bSequenceNumbersAreRawSequenceIndices; |  0x2f60 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nOrientationType = 0x2f64; // particles::ParticleOrientationChoiceList_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2f68; // int32_t m_nOrientationControlPoint; |  0x2f68 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseYawWithNormalAligned = 0x2f6c; // bool m_bUseYawWithNormalAligned; |  0x2f6c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flMinSize = 0x2f70; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMaxSize = 0x30e0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flAlphaAdjustWithSizeAdjust = 0x3250; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flStartFadeSize = 0x33c0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flEndFadeSize = 0x3530; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flStartFadeDot = 0x36a0; // float32 m_flStartFadeDot; |  0x36a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEndFadeDot = 0x36a4; // float32 m_flEndFadeDot; |  0x36a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bDistanceAlpha = 0x36a8; // bool m_bDistanceAlpha; |  0x36a8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSoftEdges = 0x36a9; // bool m_bSoftEdges; |  0x36a9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flEdgeSoftnessStart = 0x36ac; // float32 m_flEdgeSoftnessStart; |  0x36ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flEdgeSoftnessEnd = 0x36b0; // float32 m_flEdgeSoftnessEnd; |  0x36b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bOutline = 0x36b4; // bool m_bOutline; |  0x36b4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_OutlineColor = 0x36b5; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutlineAlpha = 0x36bc; // int32_t m_nOutlineAlpha; |  0x36bc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutlineStart0 = 0x36c0; // float32 m_flOutlineStart0; |  0x36c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutlineStart1 = 0x36c4; // float32 m_flOutlineStart1; |  0x36c4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutlineEnd0 = 0x36c8; // float32 m_flOutlineEnd0; |  0x36c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flOutlineEnd1 = 0x36cc; // float32 m_flOutlineEnd1; |  0x36cc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nLightingMode = 0x36d0; // particles::ParticleLightingQuality_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vecLightingOverride = 0x36d8; // particleslib::CParticleCollectionRendererVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flLightingTessellation = 0x3d90; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flLightingDirectionality = 0x3f00; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bParticleShadows = 0x4070; // bool m_bParticleShadows; |  0x4070 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flShadowDensity = 0x4074; // float32 m_flShadowDensity; |  0x4074 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_replicationParameters = 0x4078; // particles::CReplicationParameters  | Schema_DeclaredClass | Size: 0x11c8
 			}
 		}
 	}

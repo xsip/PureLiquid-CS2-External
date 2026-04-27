@@ -24,12 +24,15 @@ namespace CS2 {
 	namespace particles {
 		class C_INIT_ScreenSpacePositionOfTarget : public CS2::particles::CParticleFunctionInitializer {
 		public:
-			NESTED_PROPERTY(m_vecTargetPosition,particleslib::CPerParticleVecInput, 0x1d8);
-			PROPERTY(m_bOututBehindness,bool, 0x890);
-			NESTED_PROPERTY(m_nBehindFieldOutput,particles::ParticleAttributeIndex_t, 0x894);
-			NESTED_PROPERTY(m_flBehindOutputRemap,particleslib::CParticleRemapFloatInput, 0x898);
+			NESTED_PROPERTY(m_vecTargetPosition,IDENTITY(particleslib::CPerParticleVecInput), 0x1e0);
+			PROPERTY(m_bOututBehindness,bool, 0x898);
+			NESTED_PROPERTY(m_nBehindFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x89c);
+			NESTED_PROPERTY(m_flBehindOutputRemap,IDENTITY(particleslib::CParticleRemapFloatInput), 0x8a0);
 			S2_PAD(0x830);
 		};
-		//static_assert(sizeof(CS2::particles::C_INIT_ScreenSpacePositionOfTarget) == 0xA08, "C_INIT_ScreenSpacePositionOfTarget size should be 0xA08");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_INIT_ScreenSpacePositionOfTarget) == 0xA10, "C_INIT_ScreenSpacePositionOfTarget size should be 0xA10");
+
+#endif
 	}
 }

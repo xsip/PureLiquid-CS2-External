@@ -17,7 +17,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iszSoundScriptName = 0x48; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hEnt = 0x50; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_soundEntityIndex = 0x54; // GlobalTypes::CEntityIndex  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_soundOrigin = 0x58; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_soundOrigin = 0x58; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_isPlaying = 0x64; // int32_t m_isPlaying; |  0x64 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_Filter = 0x68; // client::CCopyRecipientFilter  | Schema_DeclaredClass | Size: 0x38
 				constexpr std::ptrdiff_t m_flCloseCaptionDuration = 0xa0; // float32 m_flCloseCaptionDuration; |  0xa0 | Schema_Builtin | Size: 0x4

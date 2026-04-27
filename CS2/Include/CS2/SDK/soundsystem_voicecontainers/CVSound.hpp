@@ -23,18 +23,21 @@ namespace CS2 {
 		class CVSound  {
 		public:
 			PROPERTY(m_nRate,int32_t, 0x0);
-			PROPERTY(m_nFormat,soundsystem_voicecontainers::CVSoundFormat_t, 0x4);
+			PROPERTY(m_nFormat,IDENTITY(soundsystem_voicecontainers::CVSoundFormat_t), 0x4);
 			PROPERTY(m_nChannels,uint32_t, 0x8);
 			PROPERTY(m_nLoopStart,int32_t, 0xc);
 			PROPERTY(m_nSampleCount,uint32_t, 0x10);
 			PROPERTY(m_flDuration,float32, 0x14);
-			NESTED_PROPERTY(m_Sentences,GlobalTypes::CUtlVector<soundsystem_voicecontainers::CAudioSentence>, 0x18);
+			NESTED_PROPERTY(m_Sentences,IDENTITY(GlobalTypes::CUtlVector<soundsystem_voicecontainers::CAudioSentence>), 0x18);
 			PROPERTY(m_nStreamingSize,uint32_t, 0x30);
-			NESTED_PROPERTY(m_nSeekTable,GlobalTypes::CUtlVector< int32 >, 0x38);
+			NESTED_PROPERTY(m_nSeekTable,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x38);
 			PROPERTY(m_nLoopEnd,int32_t, 0x50);
 			PROPERTY(m_encodedHeader,GlobalTypes::CUtlBinaryBlock, 0x58);
 			S2_PAD(0x78);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVSound) == 0x78, "CVSound size should be 0x78");
+
+#endif
 	}
 }

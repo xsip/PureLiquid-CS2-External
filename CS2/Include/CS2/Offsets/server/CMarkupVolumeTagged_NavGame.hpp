@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7A0
+			// Class size: 0x7D8
 			namespace CMarkupVolumeTagged_NavGame /*: public CS2::server::CMarkupVolumeWithRef*/ {
-				constexpr std::ptrdiff_t m_nScopes = 0x798; // server::NavScopeFlags_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_bFloodFillAttribute = 0x799; // bool m_bFloodFillAttribute; |  0x799 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSplitNavSpace = 0x79a; // bool m_bSplitNavSpace; |  0x79a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nScopes = 0x7d0; // server::NavScopeFlags_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_bFloodFillAttribute = 0x7d1; // bool m_bFloodFillAttribute; |  0x7d1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSplitNavSpace = 0x7d2; // bool m_bSplitNavSpace; |  0x7d2 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

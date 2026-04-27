@@ -12,6 +12,8 @@
 
 #include <SDK/server/CLogicalEntity.hpp>
 #include <SDK/entity2/GameTime_t.hpp>
+#include <SDK/server/CFuncMover.hpp>
+#include <SDK/entity2/CEntityIOOutput.hpp>
 
 
 
@@ -29,15 +31,23 @@ namespace CS2 {
 		public:
 			PROPERTY_ARRAY(m_szSpawnTemplates,GlobalTypes::CUtlSymbolLarge*, 4 , 0x4a8);
 			PROPERTY(m_nSpawnIndex,int32_t, 0x4c8);
-			PROPERTY(m_hPathMover,GlobalTypes::CHandle<server::CPathMover>, 0x4cc);
+			PROPERTY(m_hPathMover,IDENTITY(GlobalTypes::CHandle<server::CPathMover>), 0x4cc);
 			PROPERTY(m_flSpawnFrequencySeconds,float32, 0x4d0);
 			PROPERTY(m_flSpawnFrequencyDistToNearestMover,float32, 0x4d4);
-			PROPERTY(m_mapSpawnedMoverTemplates,server::CUtlHashtable< CHandle< CFuncMover >, CPathMoverEntitySpawn >, 0x4d8);
+			// PROPERTY(m_mapSpawnedMoverTemplates,IDENTITY(GlobalTypes::CUtlHashtable< CHandle< CFuncMover >, PathMoverEntitySpawn >), 0x4d8);
 			PROPERTY(m_nMaxActive,int32_t, 0x4f8);
-			NESTED_PROPERTY(m_flLastSpawnTime,entity2::GameTime_t, 0x4fc);
-			PROPERTY(m_bEnabled,bool, 0x500);
-			S2_PAD(0x60);
+			PROPERTY(m_nSpawnNum,int32_t, 0x4fc);
+			NESTED_PROPERTY(m_flLastSpawnTime,IDENTITY(entity2::GameTime_t), 0x500);
+			PROPERTY(m_bEnabled,bool, 0x504);
+			PROPERTY(m_bDestroyMoverOnArrivedAtEnd,bool, 0x505);
+			NESTED_PROPERTY(m_vecQueuedRemovals,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>), 0x508);
+			NESTED_PROPERTY(m_OnTemplateSpawned,IDENTITY(entity2::CEntityIOOutput), 0x520);
+			NESTED_PROPERTY(m_OnTemplateGroupSpawned,IDENTITY(entity2::CEntityIOOutput), 0x538);
+			S2_PAD(0xB8);
 		};
-		//static_assert(sizeof(CS2::server::CPathMoverEntitySpawner) == 0x508, "CPathMoverEntitySpawner size should be 0x508");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CPathMoverEntitySpawner) == 0x560, "CPathMoverEntitySpawner size should be 0x560");
+
+#endif
 	}
 }

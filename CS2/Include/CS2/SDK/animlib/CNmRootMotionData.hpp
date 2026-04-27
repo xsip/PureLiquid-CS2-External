@@ -20,13 +20,16 @@ namespace CS2 {
 	namespace animlib {
 		class CNmRootMotionData  {
 		public:
-			NESTED_PROPERTY(m_transforms,GlobalTypes::CUtlVector<GlobalTypes::CTransform>, 0x0);
+			NESTED_PROPERTY(m_transforms,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CTransform>), 0x0);
 			PROPERTY(m_nNumFrames,int32_t, 0x18);
 			PROPERTY(m_flAverageLinearVelocity,float32, 0x1c);
 			PROPERTY(m_flAverageAngularVelocityRadians,float32, 0x20);
 			PROPERTY(m_totalDelta,GlobalTypes::CTransform, 0x30);
 			S2_PAD(0x50);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmRootMotionData) == 0x50, "CNmRootMotionData size should be 0x50");
+
+#endif
 	}
 }

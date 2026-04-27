@@ -24,40 +24,43 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderRopes : public CS2::particles::CBaseRendererSource2 {
 		public:
-			PROPERTY(m_bEnableFadingAndClamping,bool, 0x2de8);
-			PROPERTY(m_flMinSize,float32, 0x2dec);
-			PROPERTY(m_flMaxSize,float32, 0x2df0);
-			PROPERTY(m_flStartFadeSize,float32, 0x2df4);
-			PROPERTY(m_flEndFadeSize,float32, 0x2df8);
-			PROPERTY(m_flStartFadeDot,float32, 0x2dfc);
-			PROPERTY(m_flEndFadeDot,float32, 0x2e00);
-			PROPERTY(m_flRadiusTaper,float32, 0x2e04);
-			PROPERTY(m_nMinTesselation,int32_t, 0x2e08);
-			PROPERTY(m_nMaxTesselation,int32_t, 0x2e0c);
-			PROPERTY(m_flTessScale,float32, 0x2e10);
-			NESTED_PROPERTY(m_flTextureVWorldSize,particleslib::CParticleCollectionRendererFloatInput, 0x2e18);
-			NESTED_PROPERTY(m_flTextureVScrollRate,particleslib::CParticleCollectionRendererFloatInput, 0x2f88);
-			NESTED_PROPERTY(m_flTextureVOffset,particleslib::CParticleCollectionRendererFloatInput, 0x30f8);
-			PROPERTY(m_nTextureVParamsCP,int32_t, 0x3268);
-			PROPERTY(m_bClampV,bool, 0x326c);
-			PROPERTY(m_nScaleCP1,int32_t, 0x3270);
-			PROPERTY(m_nScaleCP2,int32_t, 0x3274);
-			PROPERTY(m_flScaleVSizeByControlPointDistance,float32, 0x3278);
-			PROPERTY(m_flScaleVScrollByControlPointDistance,float32, 0x327c);
-			PROPERTY(m_flScaleVOffsetByControlPointDistance,float32, 0x3280);
-			PROPERTY(m_bUseScalarForTextureCoordinate,bool, 0x3285);
-			NESTED_PROPERTY(m_nScalarFieldForTextureCoordinate,particles::ParticleAttributeIndex_t, 0x3288);
-			PROPERTY(m_flScalarAttributeTextureCoordScale,float32, 0x328c);
-			PROPERTY(m_bReverseOrder,bool, 0x3290);
-			PROPERTY(m_bClosedLoop,bool, 0x3291);
-			NESTED_PROPERTY(m_nSplitField,particles::ParticleAttributeIndex_t, 0x3294);
-			PROPERTY(m_bSortBySegmentID,bool, 0x3298);
-			PROPERTY(m_nOrientationType,particles::ParticleOrientationChoiceList_t, 0x329c);
-			NESTED_PROPERTY(m_nVectorFieldForOrientation,particles::ParticleAttributeIndex_t, 0x32a0);
-			PROPERTY(m_bDrawAsOpaque,bool, 0x32a4);
-			PROPERTY(m_bGenerateNormals,bool, 0x32a5);
+			PROPERTY(m_bEnableFadingAndClamping,bool, 0x2df0);
+			PROPERTY(m_flMinSize,float32, 0x2df4);
+			PROPERTY(m_flMaxSize,float32, 0x2df8);
+			PROPERTY(m_flStartFadeSize,float32, 0x2dfc);
+			PROPERTY(m_flEndFadeSize,float32, 0x2e00);
+			PROPERTY(m_flStartFadeDot,float32, 0x2e04);
+			PROPERTY(m_flEndFadeDot,float32, 0x2e08);
+			PROPERTY(m_flRadiusTaper,float32, 0x2e0c);
+			PROPERTY(m_nMinTesselation,int32_t, 0x2e10);
+			PROPERTY(m_nMaxTesselation,int32_t, 0x2e14);
+			PROPERTY(m_flTessScale,float32, 0x2e18);
+			NESTED_PROPERTY(m_flTextureVWorldSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2e20);
+			NESTED_PROPERTY(m_flTextureVScrollRate,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f90);
+			NESTED_PROPERTY(m_flTextureVOffset,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3100);
+			PROPERTY(m_nTextureVParamsCP,int32_t, 0x3270);
+			PROPERTY(m_bClampV,bool, 0x3274);
+			PROPERTY(m_nScaleCP1,int32_t, 0x3278);
+			PROPERTY(m_nScaleCP2,int32_t, 0x327c);
+			PROPERTY(m_flScaleVSizeByControlPointDistance,float32, 0x3280);
+			PROPERTY(m_flScaleVScrollByControlPointDistance,float32, 0x3284);
+			PROPERTY(m_flScaleVOffsetByControlPointDistance,float32, 0x3288);
+			PROPERTY(m_bUseScalarForTextureCoordinate,bool, 0x328d);
+			NESTED_PROPERTY(m_nScalarFieldForTextureCoordinate,IDENTITY(particles::ParticleAttributeIndex_t), 0x3290);
+			PROPERTY(m_flScalarAttributeTextureCoordScale,float32, 0x3294);
+			PROPERTY(m_bReverseOrder,bool, 0x3298);
+			PROPERTY(m_bClosedLoop,bool, 0x3299);
+			NESTED_PROPERTY(m_nSplitField,IDENTITY(particles::ParticleAttributeIndex_t), 0x329c);
+			PROPERTY(m_bSortBySegmentID,bool, 0x32a0);
+			PROPERTY(m_nOrientationType,IDENTITY(particles::ParticleOrientationChoiceList_t), 0x32a4);
+			NESTED_PROPERTY(m_nVectorFieldForOrientation,IDENTITY(particles::ParticleAttributeIndex_t), 0x32a8);
+			PROPERTY(m_bDrawAsOpaque,bool, 0x32ac);
+			PROPERTY(m_bGenerateNormals,bool, 0x32ad);
 			S2_PAD(0x4C0);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderRopes) == 0x32A8, "C_OP_RenderRopes size should be 0x32A8");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderRopes) == 0x32B0, "C_OP_RenderRopes size should be 0x32B0");
+
+#endif
 	}
 }

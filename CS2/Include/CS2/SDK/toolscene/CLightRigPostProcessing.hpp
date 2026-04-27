@@ -25,9 +25,12 @@ namespace CS2 {
 	namespace toolscene {
 		class CLightRigPostProcessing  {
 		public:
-			PROPERTY(m_hPostProcessing,GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>, 0x0);
+			PROPERTY(m_hPostProcessing,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0x0);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::toolscene::CLightRigPostProcessing) == 0x8, "CLightRigPostProcessing size should be 0x8");
+
+#endif
 	}
 }

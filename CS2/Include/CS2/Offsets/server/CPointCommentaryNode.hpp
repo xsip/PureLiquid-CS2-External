@@ -8,38 +8,38 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xB00
+			// Class size: 0xA20
 			namespace CPointCommentaryNode /*: public CS2::server::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_iszPreCommands = 0xa20; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszPostCommands = 0xa28; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszCommentaryFile = 0xa30; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszViewTarget = 0xa38; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hViewTarget = 0xa40; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hViewTargetAngles = 0xa44; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iszViewPosition = 0xa48; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hViewPosition = 0xa50; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hViewPositionMover = 0xa54; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bPreventMovement = 0xa58; // bool m_bPreventMovement; |  0xa58 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUnderCrosshair = 0xa59; // bool m_bUnderCrosshair; |  0xa59 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUnstoppable = 0xa5a; // bool m_bUnstoppable; |  0xa5a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flFinishedTime = 0xa5c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vecFinishOrigin = 0xa60; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecOriginalAngles = 0xa6c; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecFinishAngles = 0xa78; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bPreventChangesWhileMoving = 0xa84; // bool m_bPreventChangesWhileMoving; |  0xa84 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisabled = 0xa85; // bool m_bDisabled; |  0xa85 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecTeleportOrigin = 0xa88; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flAbortedPlaybackAt = 0xa94; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_pOnCommentaryStarted = 0xa98; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_pOnCommentaryStopped = 0xab0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_bActive = 0xac8; // bool m_bActive; |  0xac8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flStartTime = 0xacc; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTimeInCommentary = 0xad0; // float32 m_flStartTimeInCommentary; |  0xad0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iszTitle = 0xad8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszSpeakers = 0xae0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iNodeNumber = 0xae8; // int32_t m_iNodeNumber; |  0xae8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iNodeNumberMax = 0xaec; // int32_t m_iNodeNumberMax; |  0xaec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bListenedTo = 0xaf0; // bool m_bListenedTo; |  0xaf0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iszPreCommands = 0x940; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszPostCommands = 0x948; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszCommentaryFile = 0x950; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszViewTarget = 0x958; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hViewTarget = 0x960; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hViewTargetAngles = 0x964; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iszViewPosition = 0x968; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hViewPosition = 0x970; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hViewPositionMover = 0x974; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bPreventMovement = 0x978; // bool m_bPreventMovement; |  0x978 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUnderCrosshair = 0x979; // bool m_bUnderCrosshair; |  0x979 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUnstoppable = 0x97a; // bool m_bUnstoppable; |  0x97a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flFinishedTime = 0x97c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_vecFinishOrigin = 0x980; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOriginalAngles = 0x98c; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecFinishAngles = 0x998; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bPreventChangesWhileMoving = 0x9a4; // bool m_bPreventChangesWhileMoving; |  0x9a4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisabled = 0x9a5; // bool m_bDisabled; |  0x9a5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecTeleportOrigin = 0x9a8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flAbortedPlaybackAt = 0x9b4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_pOnCommentaryStarted = 0x9b8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_pOnCommentaryStopped = 0x9d0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_bActive = 0x9e8; // bool m_bActive; |  0x9e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flStartTime = 0x9ec; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTimeInCommentary = 0x9f0; // float32 m_flStartTimeInCommentary; |  0x9f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszTitle = 0x9f8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszSpeakers = 0xa00; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iNodeNumber = 0xa08; // int32_t m_iNodeNumber; |  0xa08 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iNodeNumberMax = 0xa0c; // int32_t m_iNodeNumberMax; |  0xa0c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bListenedTo = 0xa10; // bool m_bListenedTo; |  0xa10 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

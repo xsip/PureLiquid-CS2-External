@@ -23,6 +23,9 @@ namespace CS2 {
 		public:
 			S2_PAD(0x110);
 		};
-		//static_assert(sizeof(CS2::client::C_CS2HudModelArms) == 0x1340, "C_CS2HudModelArms size should be 0x1340");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::client::C_CS2HudModelArms) == 0x1330, "C_CS2HudModelArms size should be 0x1330");
+
+#endif
 	}
 }

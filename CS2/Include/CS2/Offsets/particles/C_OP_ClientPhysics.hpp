@@ -8,21 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x530
+			// Class size: 0x538
 			namespace C_OP_ClientPhysics /*: public CS2::particles::CParticleFunctionRenderer*/ {
-				constexpr std::ptrdiff_t m_strPhysicsType = 0x220; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bStartAsleep = 0x228; // bool m_bStartAsleep; |  0x228 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flPlayerWakeRadius = 0x230; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flVehicleWakeRadius = 0x3a0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bUseHighQualitySimulation = 0x510; // bool m_bUseHighQualitySimulation; |  0x510 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nMaxParticleCount = 0x514; // int32_t m_nMaxParticleCount; |  0x514 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRespectExclusionVolumes = 0x518; // bool m_bRespectExclusionVolumes; |  0x518 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bKillParticles = 0x519; // bool m_bKillParticles; |  0x519 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDeleteSim = 0x51a; // bool m_bDeleteSim; |  0x51a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nControlPoint = 0x51c; // int32_t m_nControlPoint; |  0x51c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nForcedSimId = 0x520; // int32_t m_nForcedSimId; |  0x520 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nColorBlendType = 0x524; // particles::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nForcedStatusEffects = 0x528; // particles::ParticleAttrBoxFlags_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_strPhysicsType = 0x228; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bStartAsleep = 0x230; // bool m_bStartAsleep; |  0x230 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flPlayerWakeRadius = 0x238; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flVehicleWakeRadius = 0x3a8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bUseHighQualitySimulation = 0x518; // bool m_bUseHighQualitySimulation; |  0x518 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nMaxParticleCount = 0x51c; // int32_t m_nMaxParticleCount; |  0x51c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRespectExclusionVolumes = 0x520; // bool m_bRespectExclusionVolumes; |  0x520 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bKillParticles = 0x521; // bool m_bKillParticles; |  0x521 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDeleteSim = 0x522; // bool m_bDeleteSim; |  0x522 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nControlPoint = 0x524; // int32_t m_nControlPoint; |  0x524 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nForcedSimId = 0x528; // int32_t m_nForcedSimId; |  0x528 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nColorBlendType = 0x52c; // particleslib::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nForcedStatusEffects = 0x530; // particles::ParticleAttrBoxFlags_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

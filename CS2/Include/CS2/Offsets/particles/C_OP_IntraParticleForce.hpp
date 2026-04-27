@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x200
+			// Class size: 0x208
 			namespace C_OP_IntraParticleForce /*: public CS2::particles::CParticleFunctionForce*/ {
-				constexpr std::ptrdiff_t m_flAttractionMinDistance = 0x1e0; // float32 m_flAttractionMinDistance; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAttractionMaxDistance = 0x1e4; // float32 m_flAttractionMaxDistance; |  0x1e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAttractionMaxStrength = 0x1e8; // float32 m_flAttractionMaxStrength; |  0x1e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRepulsionMinDistance = 0x1ec; // float32 m_flRepulsionMinDistance; |  0x1ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRepulsionMaxDistance = 0x1f0; // float32 m_flRepulsionMaxDistance; |  0x1f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRepulsionMaxStrength = 0x1f4; // float32 m_flRepulsionMaxStrength; |  0x1f4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseAABB = 0x1f8; // bool m_bUseAABB; |  0x1f8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flAttractionMinDistance = 0x1e8; // float32 m_flAttractionMinDistance; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAttractionMaxDistance = 0x1ec; // float32 m_flAttractionMaxDistance; |  0x1ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAttractionMaxStrength = 0x1f0; // float32 m_flAttractionMaxStrength; |  0x1f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRepulsionMinDistance = 0x1f4; // float32 m_flRepulsionMinDistance; |  0x1f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRepulsionMaxDistance = 0x1f8; // float32 m_flRepulsionMaxDistance; |  0x1f8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRepulsionMaxStrength = 0x1fc; // float32 m_flRepulsionMaxStrength; |  0x1fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseAABB = 0x200; // bool m_bUseAABB; |  0x200 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

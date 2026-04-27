@@ -8,20 +8,20 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x2C8
+			// Class size: 0x2D0
 			namespace C_OP_PercentageBetweenTransformLerpCPs /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMin = 0x1d4; // float32 m_flInputMin; |  0x1d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMax = 0x1d8; // float32 m_flInputMax; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_TransformStart = 0x1e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_TransformEnd = 0x248; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_nOutputStartCP = 0x2b0; // int32_t m_nOutputStartCP; |  0x2b0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputStartField = 0x2b4; // int32_t m_nOutputStartField; |  0x2b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputEndCP = 0x2b8; // int32_t m_nOutputEndCP; |  0x2b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputEndField = 0x2bc; // int32_t m_nOutputEndField; |  0x2bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSetMethod = 0x2c0; // particles::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bActiveRange = 0x2c4; // bool m_bActiveRange; |  0x2c4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRadialCheck = 0x2c5; // bool m_bRadialCheck; |  0x2c5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x1d8; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMin = 0x1dc; // float32 m_flInputMin; |  0x1dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMax = 0x1e0; // float32 m_flInputMax; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_TransformStart = 0x1e8; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_TransformEnd = 0x250; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_nOutputStartCP = 0x2b8; // int32_t m_nOutputStartCP; |  0x2b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputStartField = 0x2bc; // int32_t m_nOutputStartField; |  0x2bc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputEndCP = 0x2c0; // int32_t m_nOutputEndCP; |  0x2c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutputEndField = 0x2c4; // int32_t m_nOutputEndField; |  0x2c4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSetMethod = 0x2c8; // particleslib::ParticleSetMethod_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bActiveRange = 0x2cc; // bool m_bActiveRange; |  0x2cc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRadialCheck = 0x2cd; // bool m_bRadialCheck; |  0x2cd | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

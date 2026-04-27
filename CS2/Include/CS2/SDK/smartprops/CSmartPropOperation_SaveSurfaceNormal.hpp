@@ -22,10 +22,13 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropOperation_SaveSurfaceNormal : public CS2::smartprops::CSmartPropOperation {
 		public:
-			NESTED_PROPERTY(m_CoordinateSpace,smartprops::CSmartPropAttributeCoordinateSpace, 0x50);
+			NESTED_PROPERTY(m_CoordinateSpace,IDENTITY(smartprops::CSmartPropAttributeCoordinateSpace), 0x50);
 			PROPERTY(m_VariableName,GlobalTypes::CUtlString*, 0x90);
 			S2_PAD(0x48);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropOperation_SaveSurfaceNormal) == 0x98, "CSmartPropOperation_SaveSurfaceNormal size should be 0x98");
+
+#endif
 	}
 }

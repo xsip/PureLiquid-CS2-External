@@ -13,7 +13,7 @@
 #include <SDK/particles/CParticleFunctionRenderer.hpp>
 #include <SDK/particles/ParticleLightTypeChoiceList_t.hpp>
 #include <SDK/particleslib/CParticleCollectionVecInput.hpp>
-#include <SDK/particles/ParticleColorBlendType_t.hpp>
+#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
 #include <SDK/particleslib/CPerParticleFloatInput.hpp>
 #include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
 #include <SDK/particles/StandardLightingAttenuationStyle_t.hpp>
@@ -31,37 +31,43 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderStandardLight : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_nLightType,particles::ParticleLightTypeChoiceList_t, 0x220);
-			NESTED_PROPERTY(m_vecColorScale,particleslib::CParticleCollectionVecInput, 0x228);
-			PROPERTY(m_nColorBlendType,particles::ParticleColorBlendType_t, 0x8e0);
-			NESTED_PROPERTY(m_flIntensity,particleslib::CPerParticleFloatInput, 0x8e8);
-			PROPERTY(m_bCastShadows,bool, 0xa58);
-			NESTED_PROPERTY(m_flTheta,particleslib::CParticleCollectionFloatInput, 0xa60);
-			NESTED_PROPERTY(m_flPhi,particleslib::CParticleCollectionFloatInput, 0xbd0);
-			NESTED_PROPERTY(m_flRadiusMultiplier,particleslib::CParticleCollectionFloatInput, 0xd40);
-			PROPERTY(m_nAttenuationStyle,particles::StandardLightingAttenuationStyle_t, 0xeb0);
-			NESTED_PROPERTY(m_flFalloffLinearity,particleslib::CParticleCollectionFloatInput, 0xeb8);
-			NESTED_PROPERTY(m_flFiftyPercentFalloff,particleslib::CParticleCollectionFloatInput, 0x1028);
-			NESTED_PROPERTY(m_flZeroPercentFalloff,particleslib::CParticleCollectionFloatInput, 0x1198);
-			PROPERTY(m_bRenderDiffuse,bool, 0x1308);
-			PROPERTY(m_bRenderSpecular,bool, 0x1309);
-			PROPERTY(m_lightCookie,GlobalTypes::CUtlString*, 0x1310);
-			PROPERTY(m_nPriority,int32_t, 0x1318);
-			PROPERTY(m_nFogLightingMode,particles::ParticleLightFogLightingMode_t, 0x131c);
-			NESTED_PROPERTY(m_flFogContribution,particleslib::CParticleCollectionRendererFloatInput, 0x1320);
-			PROPERTY(m_nCapsuleLightBehavior,particles::ParticleLightBehaviorChoiceList_t, 0x1490);
-			PROPERTY(m_flCapsuleLength,float32, 0x1494);
-			PROPERTY(m_bReverseOrder,bool, 0x1498);
-			PROPERTY(m_bClosedLoop,bool, 0x1499);
-			NESTED_PROPERTY(m_nPrevPntSource,particles::ParticleAttributeIndex_t, 0x149c);
-			PROPERTY(m_flMaxLength,float32, 0x14a0);
-			PROPERTY(m_flMinLength,float32, 0x14a4);
-			PROPERTY(m_bIgnoreDT,bool, 0x14a8);
-			PROPERTY(m_flConstrainRadiusToLengthRatio,float32, 0x14ac);
-			PROPERTY(m_flLengthScale,float32, 0x14b0);
-			PROPERTY(m_flLengthFadeInTime,float32, 0x14b4);
-			S2_PAD(0x12A0);
+			PROPERTY(m_nLightType,IDENTITY(particles::ParticleLightTypeChoiceList_t), 0x228);
+			PROPERTY(m_nMaxAllowed,uint16_t, 0x22c);
+			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x230);
+			PROPERTY(m_nColorBlendType,IDENTITY(particleslib::ParticleColorBlendType_t), 0x8e8);
+			NESTED_PROPERTY(m_flIntensity,IDENTITY(particleslib::CPerParticleFloatInput), 0x8f0);
+			PROPERTY(m_bCastShadows,bool, 0xa60);
+			PROPERTY(m_bDynamicBounce,bool, 0xa61);
+			NESTED_PROPERTY(m_flBounceScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa68);
+			NESTED_PROPERTY(m_flTheta,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xbd8);
+			NESTED_PROPERTY(m_flPhi,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd48);
+			NESTED_PROPERTY(m_flRadiusMultiplier,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xeb8);
+			PROPERTY(m_nAttenuationStyle,IDENTITY(particles::StandardLightingAttenuationStyle_t), 0x1028);
+			NESTED_PROPERTY(m_flFalloffLinearity,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1030);
+			NESTED_PROPERTY(m_flFiftyPercentFalloff,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x11a0);
+			NESTED_PROPERTY(m_flZeroPercentFalloff,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1310);
+			PROPERTY(m_bRenderDiffuse,bool, 0x1480);
+			PROPERTY(m_bRenderSpecular,bool, 0x1481);
+			PROPERTY(m_lightCookie,GlobalTypes::CUtlString*, 0x1488);
+			PROPERTY(m_nPriority,int32_t, 0x1490);
+			PROPERTY(m_nFogLightingMode,IDENTITY(particles::ParticleLightFogLightingMode_t), 0x1494);
+			NESTED_PROPERTY(m_flFogContribution,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1498);
+			PROPERTY(m_nCapsuleLightBehavior,IDENTITY(particles::ParticleLightBehaviorChoiceList_t), 0x1608);
+			PROPERTY(m_flCapsuleLength,float32, 0x160c);
+			PROPERTY(m_bReverseOrder,bool, 0x1610);
+			PROPERTY(m_bClosedLoop,bool, 0x1611);
+			NESTED_PROPERTY(m_nPrevPntSource,IDENTITY(particles::ParticleAttributeIndex_t), 0x1614);
+			PROPERTY(m_flMaxLength,float32, 0x1618);
+			PROPERTY(m_flMinLength,float32, 0x161c);
+			PROPERTY(m_bIgnoreDT,bool, 0x1620);
+			PROPERTY(m_flConstrainRadiusToLengthRatio,float32, 0x1624);
+			PROPERTY(m_flLengthScale,float32, 0x1628);
+			PROPERTY(m_flLengthFadeInTime,float32, 0x162c);
+			S2_PAD(0x1410);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderStandardLight) == 0x14C0, "C_OP_RenderStandardLight size should be 0x14C0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderStandardLight) == 0x1638, "C_OP_RenderStandardLight size should be 0x1638");
+
+#endif
 	}
 }

@@ -22,20 +22,23 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderSound : public CS2::particles::CParticleFunctionRenderer {
 		public:
-			PROPERTY(m_flDurationScale,float32, 0x220);
-			PROPERTY(m_flSndLvlScale,float32, 0x224);
-			PROPERTY(m_flPitchScale,float32, 0x228);
-			PROPERTY(m_flVolumeScale,float32, 0x22c);
-			NESTED_PROPERTY(m_nSndLvlField,particles::ParticleAttributeIndex_t, 0x230);
-			NESTED_PROPERTY(m_nDurationField,particles::ParticleAttributeIndex_t, 0x234);
-			NESTED_PROPERTY(m_nPitchField,particles::ParticleAttributeIndex_t, 0x238);
-			NESTED_PROPERTY(m_nVolumeField,particles::ParticleAttributeIndex_t, 0x23c);
-			PROPERTY(m_nChannel,int32_t, 0x240);
-			PROPERTY(m_nCPReference,int32_t, 0x244);
-			PROPERTY_ARRAY(m_pszSoundName,char, 256 , 0x248);
-			PROPERTY(m_bSuppressStopSoundEvent,bool, 0x348);
+			PROPERTY(m_flDurationScale,float32, 0x228);
+			PROPERTY(m_flSndLvlScale,float32, 0x22c);
+			PROPERTY(m_flPitchScale,float32, 0x230);
+			PROPERTY(m_flVolumeScale,float32, 0x234);
+			NESTED_PROPERTY(m_nSndLvlField,IDENTITY(particles::ParticleAttributeIndex_t), 0x238);
+			NESTED_PROPERTY(m_nDurationField,IDENTITY(particles::ParticleAttributeIndex_t), 0x23c);
+			NESTED_PROPERTY(m_nPitchField,IDENTITY(particles::ParticleAttributeIndex_t), 0x240);
+			NESTED_PROPERTY(m_nVolumeField,IDENTITY(particles::ParticleAttributeIndex_t), 0x244);
+			PROPERTY(m_nChannel,int32_t, 0x248);
+			PROPERTY(m_nCPReference,int32_t, 0x24c);
+			PROPERTY_ARRAY(m_pszSoundName,char, 256 , 0x250);
+			PROPERTY(m_bSuppressStopSoundEvent,bool, 0x350);
 			S2_PAD(0x130);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_RenderSound) == 0x350, "C_OP_RenderSound size should be 0x350");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_RenderSound) == 0x358, "C_OP_RenderSound size should be 0x358");
+
+#endif
 	}
 }

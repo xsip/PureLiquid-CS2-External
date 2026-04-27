@@ -8,19 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0xEE8
+			// Class size: 0xEF0
 			namespace C_OP_RemapAverageHitboxSpeedtoCP /*: public CS2::particles::CParticleFunctionPreEmission*/ {
-				constexpr std::ptrdiff_t m_nInControlPointNumber = 0x1d8; // int32_t m_nInControlPointNumber; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1dc; // int32_t m_nOutControlPointNumber; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nField = 0x1e0; // int32_t m_nField; |  0x1e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nHitboxDataType = 0x1e4; // particles::ParticleHitboxDataSelection_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flInputMin = 0x1e8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flInputMax = 0x358; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMin = 0x4c8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flOutputMax = 0x638; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nHeightControlPointNumber = 0x7a8; // int32_t m_nHeightControlPointNumber; |  0x7a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecComparisonVelocity = 0x7b0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_HitboxSetName = 0xe68; // char m_HitboxSetName[128]; |  0xe68 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_nInControlPointNumber = 0x1e0; // int32_t m_nInControlPointNumber; |  0x1e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1e4; // int32_t m_nOutControlPointNumber; |  0x1e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nField = 0x1e8; // int32_t m_nField; |  0x1e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nHitboxDataType = 0x1ec; // particles::ParticleHitboxDataSelection_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flInputMin = 0x1f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInputMax = 0x360; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMin = 0x4d0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOutputMax = 0x640; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_nHeightControlPointNumber = 0x7b0; // int32_t m_nHeightControlPointNumber; |  0x7b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecComparisonVelocity = 0x7b8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_HitboxSetName = 0xe70; // char m_HitboxSetName[128]; |  0xe70 | Schema_FixedArray | Size: 0x80
 			}
 		}
 	}

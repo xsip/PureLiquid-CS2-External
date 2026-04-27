@@ -25,9 +25,12 @@ namespace CS2 {
 	namespace server {
 		class magnetted_objects_t  {
 		public:
-			PROPERTY(hEntity,GlobalTypes::CHandle<server::CBaseEntity>, 0x8);
+			PROPERTY(hEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8);
 			S2_PAD(0x10);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::magnetted_objects_t) == 0x10, "magnetted_objects_t size should be 0x10");
+
+#endif
 	}
 }

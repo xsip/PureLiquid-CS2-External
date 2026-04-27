@@ -20,9 +20,12 @@ namespace CS2 {
 	namespace navlib {
 		class CNavHullPresetVData  {
 		public:
-			PROPERTY(m_vecNavHulls,GlobalTypes::CUtlVector<GlobalTypes::CUtlString>, 0x0);
+			PROPERTY(m_vecNavHulls,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x0);
 			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::navlib::CNavHullPresetVData) == 0x18, "CNavHullPresetVData size should be 0x18");
+
+#endif
 	}
 }

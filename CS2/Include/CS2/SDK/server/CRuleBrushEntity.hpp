@@ -21,8 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CRuleBrushEntity : public CS2::server::CRuleEntity {
 		public:
-			S2_PAD(0x0);
 		};
-		//static_assert(sizeof(CS2::server::CRuleBrushEntity) == 0x738, "CRuleBrushEntity size should be 0x738");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CRuleBrushEntity) == 0x770, "CRuleBrushEntity size should be 0x770");
+
+#endif
 	}
 }

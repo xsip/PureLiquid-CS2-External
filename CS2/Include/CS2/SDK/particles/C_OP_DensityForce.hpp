@@ -21,11 +21,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_DensityForce : public CS2::particles::CParticleFunctionForce {
 		public:
-			PROPERTY(m_flRadiusScale,float32, 0x1e0);
-			PROPERTY(m_flForceScale,float32, 0x1e4);
-			PROPERTY(m_flTargetDensity,float32, 0x1e8);
+			PROPERTY(m_flRadiusScale,float32, 0x1e8);
+			PROPERTY(m_flForceScale,float32, 0x1ec);
+			PROPERTY(m_flTargetDensity,float32, 0x1f0);
 			S2_PAD(0x10);
 		};
-		//static_assert(sizeof(CS2::particles::C_OP_DensityForce) == 0x1F0, "C_OP_DensityForce size should be 0x1F0");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::particles::C_OP_DensityForce) == 0x1F8, "C_OP_DensityForce size should be 0x1F8");
+
+#endif
 	}
 }

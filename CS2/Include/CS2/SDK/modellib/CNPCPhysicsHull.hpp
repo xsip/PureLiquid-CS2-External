@@ -22,7 +22,7 @@ namespace CS2 {
 		class CNPCPhysicsHull  {
 		public:
 			PROPERTY(m_sName,GlobalTypes::CGlobalSymbol, 0x0);
-			PROPERTY(m_eType,modellib::NPCPhysicsHullType_t, 0x8);
+			PROPERTY(m_eType,IDENTITY(modellib::NPCPhysicsHullType_t), 0x8);
 			PROPERTY(m_flCapsuleHeight,float32, 0xc);
 			PROPERTY(m_flCapsuleRadius,float32, 0x10);
 			PROPERTY(m_vCapsuleCenter1,GlobalTypes::Vector, 0x14);
@@ -31,6 +31,9 @@ namespace CS2 {
 			PROPERTY(m_flGroundBoxWidth,float32, 0x30);
 			S2_PAD(0x38);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CNPCPhysicsHull) == 0x38, "CNPCPhysicsHull size should be 0x38");
+
+#endif
 	}
 }

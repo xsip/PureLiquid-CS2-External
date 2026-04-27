@@ -21,9 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CFuncWall : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_nState,int32_t, 0x730);
+			PROPERTY(m_nState,int32_t, 0x768);
 			S2_PAD(0x8);
 		};
-		//static_assert(sizeof(CS2::server::CFuncWall) == 0x738, "CFuncWall size should be 0x738");
+#ifdef USE_STATIC_ASSERTS
+		//static_assert(sizeof(CS2::server::CFuncWall) == 0x770, "CFuncWall size should be 0x770");
+
+#endif
 	}
 }

@@ -26,6 +26,9 @@ namespace CS2 {
 			PROPERTY(m_qChildBindRotation,GlobalTypes::Quaternion, 0x80);
 			S2_PAD(0x30);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::modellib::CTwistConstraint) == 0x90, "CTwistConstraint size should be 0x90");
+
+#endif
 	}
 }

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x510
+			// Class size: 0x540
 			namespace CPointTemplate /*: public CS2::server::CLogicalEntity*/ {
 				constexpr std::ptrdiff_t m_iszWorldName = 0x4a8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_iszSource2EntityLumpName = 0x4b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
@@ -21,6 +21,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_SpawnedEntityHandles = 0x4e8; // GlobalTypes::CUtlVector<GlobalTypes::CEntityHandle>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_ScriptSpawnCallback = 0x500; // GlobalTypes::HSCRIPT  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_ScriptCallbackScope = 0x508; // GlobalTypes::HSCRIPT  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_OnEntitySpawned = 0x510; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlVector<CEntityHandle>>  | Schema_Atomic | Size: 0x30
 			}
 		}
 	}

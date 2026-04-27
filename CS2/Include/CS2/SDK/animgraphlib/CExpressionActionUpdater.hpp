@@ -24,11 +24,14 @@ namespace CS2 {
 	namespace animgraphlib {
 		class CExpressionActionUpdater : public CS2::animgraphlib::CAnimActionUpdater {
 		public:
-			NESTED_PROPERTY(m_hParam,animgraphlib::CAnimParamHandle, 0x18);
-			PROPERTY(m_eParamType,animgraphlib::AnimParamType_t, 0x1a);
-			NESTED_PROPERTY(m_hScript,modellib::AnimScriptHandle, 0x1c);
+			NESTED_PROPERTY(m_hParam,IDENTITY(animgraphlib::CAnimParamHandle), 0x18);
+			PROPERTY(m_eParamType,IDENTITY(animgraphlib::AnimParamType_t), 0x1a);
+			NESTED_PROPERTY(m_hScript,IDENTITY(modellib::AnimScriptHandle), 0x1c);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animgraphlib::CExpressionActionUpdater) == 0x20, "CExpressionActionUpdater size should be 0x20");
+
+#endif
 	}
 }

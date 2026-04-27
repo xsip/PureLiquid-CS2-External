@@ -22,9 +22,12 @@ namespace CS2 {
 	namespace smartprops {
 		class CSmartPropVariable_TraceNoHit : public CS2::smartprops::CSmartPropVariable {
 		public:
-			PROPERTY(m_DefaultValue,smartprops::TraceNoHitResult_t, 0x38);
+			PROPERTY(m_DefaultValue,IDENTITY(smartprops::TraceNoHitResult_t), 0x38);
 			S2_PAD(0x8);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::smartprops::CSmartPropVariable_TraceNoHit) == 0x40, "CSmartPropVariable_TraceNoHit size should be 0x40");
+
+#endif
 	}
 }

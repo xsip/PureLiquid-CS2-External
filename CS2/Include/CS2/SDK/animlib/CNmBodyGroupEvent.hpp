@@ -11,6 +11,7 @@
 
 
 #include <SDK/animlib/CNmEvent.hpp>
+#include <SDK/animlib/CNmEventTargetEntity_t.hpp>
 
 
 
@@ -21,10 +22,14 @@ namespace CS2 {
 	namespace animlib {
 		class CNmBodyGroupEvent : public CS2::animlib::CNmEvent {
 		public:
+			PROPERTY(m_target,IDENTITY(animlib::CNmEventTargetEntity_t), 0x18);
 			PROPERTY(m_groupName,GlobalTypes::CUtlString*, 0x20);
 			PROPERTY(m_nGroupValue,int32_t, 0x28);
-			S2_PAD(0x10);
+			S2_PAD(0x18);
 		};
+#ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::animlib::CNmBodyGroupEvent) == 0x30, "CNmBodyGroupEvent size should be 0x30");
+
+#endif
 	}
 }
