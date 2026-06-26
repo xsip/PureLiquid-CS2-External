@@ -138,19 +138,16 @@ namespace CS2 {
 			PROPERTY(m_angStashedShootAngles,GlobalTypes::QAngle, 0x1300);
 			PROPERTY(m_vecStashedGrenadeThrowPosition,GlobalTypes::Vector, 0x130c);
 			PROPERTY(m_vecStashedVelocity,GlobalTypes::Vector, 0x1318);
-			PROPERTY_ARRAY(m_angShootAngleHistory,GlobalTypes::QAngle, 2 , 0x1324);
-			PROPERTY_ARRAY(m_vecThrowPositionHistory,GlobalTypes::Vector, 2 , 0x133c);
-			PROPERTY_ARRAY(m_vecVelocityHistory,GlobalTypes::Vector, 2 , 0x1354);
-			PROPERTY(m_bCommittingSuicideOnTeamChange,bool, 0x1378);
-			PROPERTY(m_wasNotKilledNaturally,bool, 0x1379);
-			NESTED_PROPERTY(m_fImmuneToGunGameDamageTime,IDENTITY(entity2::GameTime_t), 0x137c);
-			PROPERTY(m_bGunGameImmunity,bool, 0x1380);
-			PROPERTY(m_fMolotovDamageTime,float32, 0x1384);
-			PROPERTY(m_angEyeAngles,GlobalTypes::QAngle, 0x1388);
-			S2_PAD(0x6A0);
+			PROPERTY(m_bCommittingSuicideOnTeamChange,bool, 0x1330);
+			PROPERTY(m_wasNotKilledNaturally,bool, 0x1331);
+			NESTED_PROPERTY(m_fImmuneToGunGameDamageTime,IDENTITY(entity2::GameTime_t), 0x1334);
+			PROPERTY(m_bGunGameImmunity,bool, 0x1338);
+			PROPERTY(m_fMolotovDamageTime,float32, 0x133c);
+			PROPERTY(m_angEyeAngles,GlobalTypes::QAngle, 0x1340);
+			S2_PAD(0x650);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSPlayerPawn) == 0x13A0, "CCSPlayerPawn size should be 0x13A0");
+		//static_assert(sizeof(CS2::server::CCSPlayerPawn) == 0x1350, "CCSPlayerPawn size should be 0x1350");
 
 #endif
 	}

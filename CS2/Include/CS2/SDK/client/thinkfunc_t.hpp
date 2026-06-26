@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace client {
 		class thinkfunc_t  {
 		public:
-			// PROPERTY(m_think,GlobalTypes::BASEPTR, 0x0);
+			PROPERTY(m_think,GlobalTypes::BASEPTR, 0x0);
 			PROPERTY(m_hFn,GlobalTypes::HSCRIPT, 0x8);
 			PROPERTY(m_nContext,GlobalTypes::CUtlStringToken*, 0x10);
 			NESTED_PROPERTY(m_nNextThinkTick,IDENTITY(entity2::GameTick_t), 0x14);

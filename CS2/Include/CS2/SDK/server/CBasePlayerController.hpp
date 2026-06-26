@@ -37,25 +37,26 @@ namespace CS2 {
 			NESTED_PROPERTY(m_hSplitScreenPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerController>>), 0x4f0);
 			PROPERTY(m_bIsHLTV,bool, 0x508);
 			PROPERTY(m_iConnected,IDENTITY(client::PlayerConnectedState), 0x50c);
-			PROPERTY_ARRAY(m_iszPlayerName,char, 128 , 0x510);
-			PROPERTY(m_szNetworkIDString,GlobalTypes::CUtlString*, 0x590);
-			PROPERTY(m_fLerpTime,float32, 0x598);
-			PROPERTY(m_bLagCompensation,bool, 0x59c);
-			PROPERTY(m_bPredict,bool, 0x59d);
-			PROPERTY(m_bIsLowViolence,bool, 0x5a4);
-			PROPERTY(m_bGamePaused,bool, 0x5a5);
-			PROPERTY(m_iIgnoreGlobalChat,IDENTITY(client::ChatIgnoreType_t), 0x6e0);
-			PROPERTY(m_flLastPlayerTalkTime,float32, 0x6e4);
-			PROPERTY(m_flLastEntitySteadyState,float32, 0x6e8);
-			PROPERTY(m_nAvailableEntitySteadyState,int32_t, 0x6ec);
-			PROPERTY(m_bHasAnySteadyStateEnts,bool, 0x6f0);
-			PROPERTY(m_steamID,uint64_t, 0x700);
-			PROPERTY(m_bNoClipEnabled,bool, 0x708);
-			PROPERTY(m_iDesiredFOV,uint32_t, 0x70c);
-			S2_PAD(0x320);
+			PROPERTY(m_iMostConnected,IDENTITY(client::PlayerConnectedState), 0x510);
+			PROPERTY_ARRAY(m_iszPlayerName,char, 128 , 0x514);
+			PROPERTY(m_szNetworkIDString,GlobalTypes::CUtlString*, 0x598);
+			PROPERTY(m_fLerpTime,float32, 0x5a0);
+			PROPERTY(m_bLagCompensation,bool, 0x5a4);
+			PROPERTY(m_bPredict,bool, 0x5a5);
+			PROPERTY(m_bIsLowViolence,bool, 0x5ac);
+			PROPERTY(m_bGamePaused,bool, 0x5ad);
+			PROPERTY(m_iIgnoreGlobalChat,IDENTITY(client::ChatIgnoreType_t), 0x6e8);
+			PROPERTY(m_flLastPlayerTalkTime,float32, 0x6ec);
+			PROPERTY(m_flLastEntitySteadyState,float32, 0x6f0);
+			PROPERTY(m_nAvailableEntitySteadyState,int32_t, 0x6f4);
+			PROPERTY(m_bHasAnySteadyStateEnts,bool, 0x6f8);
+			PROPERTY(m_steamID,uint64_t, 0x708);
+			PROPERTY(m_bNoClipEnabled,bool, 0x710);
+			PROPERTY(m_iDesiredFOV,uint32_t, 0x714);
+			S2_PAD(0x328);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBasePlayerController) == 0x7C8, "CBasePlayerController size should be 0x7C8");
+		//static_assert(sizeof(CS2::server::CBasePlayerController) == 0x7D0, "CBasePlayerController size should be 0x7D0");
 
 #endif
 	}

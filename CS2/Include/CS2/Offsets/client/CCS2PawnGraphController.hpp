@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x558
+			// Class size: 0x540
 			namespace CCS2PawnGraphController /*: public CS2::client::CCS2WeaponGraphController*/ {
 				constexpr std::ptrdiff_t m_bIsDefusing = 0x2a0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_moveType = 0x2b8; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
@@ -19,26 +19,25 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_flPreviousMoveSpeedHorizontal = 0x330; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_flCrouchAmount = 0x348; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bIsWalking = 0x360; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bIsStutterStep = 0x378; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flWeaponDropAmount = 0x390; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_groundAction = 0x3a8; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_groundActionDirectionID = 0x3c0; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flGroundTurnAngleOrVelocity = 0x3d8; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flLadderCycle = 0x3f0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flLadderYaw = 0x408; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flLadderYawBackwards = 0x420; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_airAction = 0x438; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flAirHeightAboveGround = 0x450; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_leftFootTarget = 0x468; // GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_rightFootTarget = 0x480; // GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flFlashedAmount = 0x498; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flAimPitchAngle = 0x4b0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flAimYawAngle = 0x4c8; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flinchHead = 0x4e0; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flinchHeadRestart = 0x4f8; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flinchBody = 0x510; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flinchBodyRestart = 0x528; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_flinchIsOnFire = 0x540; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flWeaponDropAmount = 0x378; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_groundAction = 0x390; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_groundActionDirectionID = 0x3a8; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flGroundTurnAngleOrVelocity = 0x3c0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flLadderCycle = 0x3d8; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flLadderYaw = 0x3f0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flLadderYawBackwards = 0x408; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_airAction = 0x420; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flAirHeightAboveGround = 0x438; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_leftFootTarget = 0x450; // GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_rightFootTarget = 0x468; // GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flFlashedAmount = 0x480; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flAimPitchAngle = 0x498; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flAimYawAngle = 0x4b0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flinchHead = 0x4c8; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flinchHeadRestart = 0x4e0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flinchBody = 0x4f8; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flinchBodyRestart = 0x510; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flinchIsOnFire = 0x528; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

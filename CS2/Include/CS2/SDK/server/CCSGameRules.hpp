@@ -219,10 +219,10 @@ namespace CS2 {
 			PROPERTY(m_iRoundStartRoundNumber,int32_t, 0x1410);
 			PROPERTY(m_nRoundStartCount,uint8_t, 0x1414);
 			PROPERTY(m_flLastPerfSampleTime,float64, 0x5420);
-			S2_PAD(0x11370);
+			S2_PAD(0x11378);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSGameRules) == 0x11440, "CCSGameRules size should be 0x11440");
+		//static_assert(sizeof(CS2::server::CCSGameRules) == 0x11448, "CCSGameRules size should be 0x11448");
 
 #endif
 	}

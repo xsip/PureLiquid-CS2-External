@@ -19,6 +19,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iHostageCount = 0x614; // int32_t m_iHostageCount; |  0x614 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bFadePlayerVisibilityFarZ = 0x618; // bool m_bFadePlayerVisibilityFarZ; |  0x618 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bRainTraceToSkyEnabled = 0x619; // bool m_bRainTraceToSkyEnabled; |  0x619 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGPUCullSkybox = 0x61a; // bool m_bGPUCullSkybox; |  0x61a | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_flEnvRainStrength = 0x61c; // float32 m_flEnvRainStrength; |  0x61c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flEnvPuddleRippleStrength = 0x620; // float32 m_flEnvPuddleRippleStrength; |  0x620 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flEnvPuddleRippleDirection = 0x624; // float32 m_flEnvPuddleRippleDirection; |  0x624 | Schema_Builtin | Size: 0x4

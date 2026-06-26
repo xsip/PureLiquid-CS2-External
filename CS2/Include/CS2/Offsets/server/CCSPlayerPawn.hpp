@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x13A0
+			// Class size: 0x1350
 			namespace CCSPlayerPawn /*: public CS2::server::CCSPlayerPawnBase*/ {
 				constexpr std::ptrdiff_t m_pBulletServices = 0xd08; // server::CCSPlayer_BulletServices**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_pHostageServices = 0xd10; // server::CCSPlayer_HostageServices**  | Schema_Ptr | Size: 0x8
@@ -109,15 +109,12 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_angStashedShootAngles = 0x1300; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x130c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vecStashedVelocity = 0x1318; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angShootAngleHistory = 0x1324; // GlobalTypes::QAngle[2]  | Schema_FixedArray | Size: 0x18
-				constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x133c; // GlobalTypes::Vector[2]  | Schema_FixedArray | Size: 0x18
-				constexpr std::ptrdiff_t m_vecVelocityHistory = 0x1354; // GlobalTypes::Vector[2]  | Schema_FixedArray | Size: 0x18
-				constexpr std::ptrdiff_t m_bCommittingSuicideOnTeamChange = 0x1378; // bool m_bCommittingSuicideOnTeamChange; |  0x1378 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_wasNotKilledNaturally = 0x1379; // bool m_wasNotKilledNaturally; |  0x1379 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x137c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bGunGameImmunity = 0x1380; // bool m_bGunGameImmunity; |  0x1380 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x1384; // float32 m_fMolotovDamageTime; |  0x1384 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_angEyeAngles = 0x1388; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bCommittingSuicideOnTeamChange = 0x1330; // bool m_bCommittingSuicideOnTeamChange; |  0x1330 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_wasNotKilledNaturally = 0x1331; // bool m_wasNotKilledNaturally; |  0x1331 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x1334; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bGunGameImmunity = 0x1338; // bool m_bGunGameImmunity; |  0x1338 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x133c; // float32 m_fMolotovDamageTime; |  0x133c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_angEyeAngles = 0x1340; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

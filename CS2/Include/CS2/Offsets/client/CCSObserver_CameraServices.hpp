@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x2A8
+			// Class size: 0x2B0
 			namespace CCSObserver_CameraServices /*: public CS2::client::CCSPlayerBase_CameraServices*/ {
-				// NO SCHEMA DATA FOUND!
+				constexpr std::ptrdiff_t m_hPrevPostProcessingVolume = 0x2a8; // GlobalTypes::CHandle<client::C_PostProcessingVolume>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

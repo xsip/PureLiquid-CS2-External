@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace client {
 		class CCSObserver_ObserverServices : public CS2::client::CPlayer_ObserverServices {
 		public:
-			PROPERTY(m_obsInterpState,IDENTITY(client::ObserverInterpState_t), 0x64);
+			PROPERTY(m_obsInterpState,IDENTITY(client::ObserverInterpState_t), 0x68);
 			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS

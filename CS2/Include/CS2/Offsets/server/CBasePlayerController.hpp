@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7C8
+			// Class size: 0x7D0
 			namespace CBasePlayerController /*: public CS2::server::CBaseEntity*/ {
 				constexpr std::ptrdiff_t m_nInButtonsWhichAreToggles = 0x4b0; // uint64_t m_nInButtonsWhichAreToggles; |  0x4b0 | Schema_Builtin | Size: 0x8
 				constexpr std::ptrdiff_t m_nTickBase = 0x4b8; // uint32_t m_nTickBase; |  0x4b8 | Schema_Builtin | Size: 0x4
@@ -19,21 +19,22 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x4f0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBasePlayerController>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bIsHLTV = 0x508; // bool m_bIsHLTV; |  0x508 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_iConnected = 0x50c; // client::PlayerConnectedState  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iszPlayerName = 0x510; // char m_iszPlayerName[128]; |  0x510 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_szNetworkIDString = 0x590; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_fLerpTime = 0x598; // float32 m_fLerpTime; |  0x598 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bLagCompensation = 0x59c; // bool m_bLagCompensation; |  0x59c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bPredict = 0x59d; // bool m_bPredict; |  0x59d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsLowViolence = 0x5a4; // bool m_bIsLowViolence; |  0x5a4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bGamePaused = 0x5a5; // bool m_bGamePaused; |  0x5a5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iIgnoreGlobalChat = 0x6e0; // client::ChatIgnoreType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastPlayerTalkTime = 0x6e4; // float32 m_flLastPlayerTalkTime; |  0x6e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastEntitySteadyState = 0x6e8; // float32 m_flLastEntitySteadyState; |  0x6e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nAvailableEntitySteadyState = 0x6ec; // int32_t m_nAvailableEntitySteadyState; |  0x6ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bHasAnySteadyStateEnts = 0x6f0; // bool m_bHasAnySteadyStateEnts; |  0x6f0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_steamID = 0x700; // uint64_t m_steamID; |  0x700 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_bNoClipEnabled = 0x708; // bool m_bNoClipEnabled; |  0x708 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iDesiredFOV = 0x70c; // uint32_t m_iDesiredFOV; |  0x70c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iMostConnected = 0x510; // client::PlayerConnectedState  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iszPlayerName = 0x514; // char m_iszPlayerName[128]; |  0x514 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_szNetworkIDString = 0x598; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_fLerpTime = 0x5a0; // float32 m_fLerpTime; |  0x5a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLagCompensation = 0x5a4; // bool m_bLagCompensation; |  0x5a4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bPredict = 0x5a5; // bool m_bPredict; |  0x5a5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsLowViolence = 0x5ac; // bool m_bIsLowViolence; |  0x5ac | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGamePaused = 0x5ad; // bool m_bGamePaused; |  0x5ad | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iIgnoreGlobalChat = 0x6e8; // client::ChatIgnoreType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastPlayerTalkTime = 0x6ec; // float32 m_flLastPlayerTalkTime; |  0x6ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastEntitySteadyState = 0x6f0; // float32 m_flLastEntitySteadyState; |  0x6f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nAvailableEntitySteadyState = 0x6f4; // int32_t m_nAvailableEntitySteadyState; |  0x6f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bHasAnySteadyStateEnts = 0x6f8; // bool m_bHasAnySteadyStateEnts; |  0x6f8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_steamID = 0x708; // uint64_t m_steamID; |  0x708 | Schema_Builtin | Size: 0x8
+				constexpr std::ptrdiff_t m_bNoClipEnabled = 0x710; // bool m_bNoClipEnabled; |  0x710 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iDesiredFOV = 0x714; // uint32_t m_iDesiredFOV; |  0x714 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

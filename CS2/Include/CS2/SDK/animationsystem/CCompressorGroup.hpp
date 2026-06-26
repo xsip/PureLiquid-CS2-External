@@ -31,13 +31,13 @@ namespace CS2 {
 			NESTED_PROPERTY(m_szElementNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<char*>>), 0x98);
 			NESTED_PROPERTY(m_nElementUniqueID,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlVector<int32>>), 0xb0);
 			NESTED_PROPERTY(m_nElementMask,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0xc8);
-			NESTED_PROPERTY(m_vectorCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<Vector>>), 0xf8);
-			NESTED_PROPERTY(m_quaternionCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<QuaternionStorage>>), 0x110);
-			NESTED_PROPERTY(m_intCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<int32>>), 0x128);
-			NESTED_PROPERTY(m_boolCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<bool>>), 0x140);
-			NESTED_PROPERTY(m_colorCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<Color>>), 0x158);
-			NESTED_PROPERTY(m_vector2DCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<Vector2D>>), 0x170);
-			NESTED_PROPERTY(m_vector4DCompressor,IDENTITY(GlobalTypes::CUtlVector<xL���::CCompressor*<Vector4D>>), 0x188);
+			NESTED_PROPERTY(m_vectorCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<Vector>>), 0xf8);
+			NESTED_PROPERTY(m_quaternionCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<QuaternionStorage>>), 0x110);
+			NESTED_PROPERTY(m_intCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<int32>>), 0x128);
+			NESTED_PROPERTY(m_boolCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<bool>>), 0x140);
+			NESTED_PROPERTY(m_colorCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<Color>>), 0x158);
+			NESTED_PROPERTY(m_vector2DCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<Vector2D>>), 0x170);
+			NESTED_PROPERTY(m_vector4DCompressor,IDENTITY(GlobalTypes::CUtlVector<xL��::CCompressor*<Vector4D>>), 0x188);
 			S2_PAD(0x1A0);
 		};
 #ifdef USE_STATIC_ASSERTS

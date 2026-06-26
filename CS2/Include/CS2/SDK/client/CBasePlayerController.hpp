@@ -39,15 +39,16 @@ namespace CS2 {
 			NESTED_PROPERTY(m_hSplitScreenPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::CBasePlayerController>>), 0x6d0);
 			PROPERTY(m_bIsHLTV,bool, 0x6e8);
 			PROPERTY(m_iConnected,IDENTITY(client::PlayerConnectedState), 0x6ec);
-			PROPERTY_ARRAY(m_iszPlayerName,char, 128 , 0x6f0);
-			PROPERTY(m_steamID,uint64_t, 0x778);
-			PROPERTY(m_bIsLocalPlayerController,bool, 0x780);
-			PROPERTY(m_bNoClipEnabled,bool, 0x781);
-			PROPERTY(m_iDesiredFOV,uint32_t, 0x784);
-			S2_PAD(0x1F0);
+			PROPERTY(m_iMostConnected,IDENTITY(client::PlayerConnectedState), 0x6f0);
+			PROPERTY_ARRAY(m_iszPlayerName,char, 128 , 0x6f4);
+			PROPERTY(m_steamID,uint64_t, 0x780);
+			PROPERTY(m_bIsLocalPlayerController,bool, 0x788);
+			PROPERTY(m_bNoClipEnabled,bool, 0x789);
+			PROPERTY(m_iDesiredFOV,uint32_t, 0x78c);
+			S2_PAD(0x1F8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CBasePlayerController) == 0x7F0, "CBasePlayerController size should be 0x7F0");
+		//static_assert(sizeof(CS2::client::CBasePlayerController) == 0x7F8, "CBasePlayerController size should be 0x7F8");
 
 #endif
 	}

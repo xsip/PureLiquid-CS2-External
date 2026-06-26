@@ -77,7 +77,7 @@ namespace CS2 {
 			PROPERTY(m_nObjectCulling,uint8_t, 0xe44);
 			PROPERTY(m_nRequiredDecalRtEncoding,IDENTITY(client::DecalRtEncoding_t), 0xe45);
 			// PROPERTY(m_bodyGroupChoices,IDENTITY(GlobalTypes::CUtlOrderedMap< CGlobalSymbol, int32 >), 0xe48);
-			PROPERTY(m_vecViewOffset,IDENTITY(GlobalTypes::Vector), 0xe70);
+			PROPERTY(m_vecViewOffset,IDENTITY(Vector), 0xe70);
 			PROPERTY(m_pClientAlphaProperty,IDENTITY(client::CClientAlphaProperty*), 0xf50);
 			PROPERTY(m_ClientOverrideTint,GlobalTypes::Color, 0xf58);
 			PROPERTY(m_bUseClientOverrideTint,bool, 0xf5c);

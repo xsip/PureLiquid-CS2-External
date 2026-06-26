@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel) == 0x34C0, "C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel size should be 0x34C0");
+		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel) == 0x34E0, "C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel size should be 0x34E0");
 
 #endif
 	}

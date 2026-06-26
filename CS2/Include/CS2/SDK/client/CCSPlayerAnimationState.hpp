@@ -33,20 +33,18 @@ namespace CS2 {
 			PROPERTY(m_bWasStationaryLastUpdate,bool, 0x1d);
 			NESTED_PROPERTY(m_actionStartTick,IDENTITY(entity2::GameTick_t), 0x20);
 			NESTED_PROPERTY(m_staticAimTimerStartTick,IDENTITY(entity2::GameTick_t), 0x24);
-			NESTED_PROPERTY(m_stutterStepStartTick,IDENTITY(entity2::GameTick_t), 0x28);
-			NESTED_PROPERTY(m_plantAndTurnStartTick,IDENTITY(entity2::GameTick_t), 0x2c);
-			PROPERTY(m_bIsStutterStep,bool, 0x30);
-			PROPERTY(m_flTurnOnSpotAngle,float32, 0x34);
-			PROPERTY(m_flPreviousAimYaw,float32, 0x38);
-			PROPERTY(m_flPreviousHorizontalSpeed,float32, 0x3c);
-			PROPERTY(m_flFootIKOffsetLeft,float32, 0x40);
-			PROPERTY(m_flFootIKOffsetRight,float32, 0x44);
-			PROPERTY(m_flWeaponDropPercentageDueToMovement,float32, 0x48);
-			PROPERTY(m_flWeaponDropSmoothDampVelocity,float32, 0x4c);
-			S2_PAD(0xF0);
+			NESTED_PROPERTY(m_plantAndTurnStartTick,IDENTITY(entity2::GameTick_t), 0x28);
+			PROPERTY(m_flTurnOnSpotAngle,float32, 0x2c);
+			PROPERTY(m_flPreviousAimYaw,float32, 0x30);
+			PROPERTY(m_flPreviousHorizontalSpeed,float32, 0x34);
+			PROPERTY(m_flFootIKOffsetLeft,float32, 0x38);
+			PROPERTY(m_flFootIKOffsetRight,float32, 0x3c);
+			PROPERTY(m_flWeaponDropPercentageDueToMovement,float32, 0x40);
+			PROPERTY(m_flWeaponDropSmoothDampVelocity,float32, 0x44);
+			S2_PAD(0xE0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CCSPlayerAnimationState) == 0xF0, "CCSPlayerAnimationState size should be 0xF0");
+		//static_assert(sizeof(CS2::client::CCSPlayerAnimationState) == 0xE0, "CCSPlayerAnimationState size should be 0xE0");
 
 #endif
 	}

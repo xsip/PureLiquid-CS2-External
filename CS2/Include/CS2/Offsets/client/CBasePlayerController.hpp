@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x7F0
+			// Class size: 0x7F8
 			namespace CBasePlayerController /*: public CS2::client::C_BaseEntity*/ {
 				constexpr std::ptrdiff_t m_CommandContext = 0x608; // client::C_CommandContext  | Schema_DeclaredClass | Size: 0xa8
 				constexpr std::ptrdiff_t m_nInButtonsWhichAreToggles = 0x6b0; // uint64_t m_nInButtonsWhichAreToggles; |  0x6b0 | Schema_Builtin | Size: 0x8
@@ -21,11 +21,12 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x6d0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::CBasePlayerController>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bIsHLTV = 0x6e8; // bool m_bIsHLTV; |  0x6e8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_iConnected = 0x6ec; // client::PlayerConnectedState  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iszPlayerName = 0x6f0; // char m_iszPlayerName[128]; |  0x6f0 | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_steamID = 0x778; // uint64_t m_steamID; |  0x778 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_bIsLocalPlayerController = 0x780; // bool m_bIsLocalPlayerController; |  0x780 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNoClipEnabled = 0x781; // bool m_bNoClipEnabled; |  0x781 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iDesiredFOV = 0x784; // uint32_t m_iDesiredFOV; |  0x784 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iMostConnected = 0x6f0; // client::PlayerConnectedState  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iszPlayerName = 0x6f4; // char m_iszPlayerName[128]; |  0x6f4 | Schema_FixedArray | Size: 0x80
+				constexpr std::ptrdiff_t m_steamID = 0x780; // uint64_t m_steamID; |  0x780 | Schema_Builtin | Size: 0x8
+				constexpr std::ptrdiff_t m_bIsLocalPlayerController = 0x788; // bool m_bIsLocalPlayerController; |  0x788 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNoClipEnabled = 0x789; // bool m_bNoClipEnabled; |  0x789 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iDesiredFOV = 0x78c; // uint32_t m_iDesiredFOV; |  0x78c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

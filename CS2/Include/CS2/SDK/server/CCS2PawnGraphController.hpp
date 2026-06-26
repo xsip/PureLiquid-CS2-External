@@ -31,30 +31,29 @@ namespace CS2 {
 			// PROPERTY(m_flPreviousMoveSpeedHorizontal,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x618);
 			// PROPERTY(m_flCrouchAmount,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x630);
 			// PROPERTY(m_bIsWalking,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x648);
-			// PROPERTY(m_bIsStutterStep,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x660);
-			// PROPERTY(m_flWeaponDropAmount,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x678);
-			// PROPERTY(m_groundAction,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x690);
-			// PROPERTY(m_groundActionDirectionID,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x6a8);
-			// PROPERTY(m_flGroundTurnAngleOrVelocity,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6c0);
-			// PROPERTY(m_flLadderCycle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6d8);
-			// PROPERTY(m_flLadderYaw,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6f0);
-			// PROPERTY(m_flLadderYawBackwards,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x708);
-			// PROPERTY(m_airAction,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x720);
-			// PROPERTY(m_flAirHeightAboveGround,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x738);
-			// PROPERTY(m_leftFootTarget,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>), 0x750);
-			// PROPERTY(m_rightFootTarget,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>), 0x768);
-			// PROPERTY(m_flFlashedAmount,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x780);
-			// PROPERTY(m_flAimPitchAngle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x798);
-			// PROPERTY(m_flAimYawAngle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x7b0);
-			// PROPERTY(m_flinchHead,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x7c8);
-			// PROPERTY(m_flinchHeadRestart,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x7e0);
-			// PROPERTY(m_flinchBody,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x7f8);
-			// PROPERTY(m_flinchBodyRestart,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x810);
-			// PROPERTY(m_flinchIsOnFire,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x828);
-			S2_PAD(0x2B8);
+			// PROPERTY(m_flWeaponDropAmount,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x660);
+			// PROPERTY(m_groundAction,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x678);
+			// PROPERTY(m_groundActionDirectionID,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x690);
+			// PROPERTY(m_flGroundTurnAngleOrVelocity,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6a8);
+			// PROPERTY(m_flLadderCycle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6c0);
+			// PROPERTY(m_flLadderYaw,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6d8);
+			// PROPERTY(m_flLadderYawBackwards,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x6f0);
+			// PROPERTY(m_airAction,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x708);
+			// PROPERTY(m_flAirHeightAboveGround,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x720);
+			// PROPERTY(m_leftFootTarget,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>), 0x738);
+			// PROPERTY(m_rightFootTarget,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<animlib::CNmTarget>), 0x750);
+			// PROPERTY(m_flFlashedAmount,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x768);
+			// PROPERTY(m_flAimPitchAngle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x780);
+			// PROPERTY(m_flAimYawAngle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x798);
+			// PROPERTY(m_flinchHead,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x7b0);
+			// PROPERTY(m_flinchHeadRestart,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x7c8);
+			// PROPERTY(m_flinchBody,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x7e0);
+			// PROPERTY(m_flinchBodyRestart,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x7f8);
+			// PROPERTY(m_flinchIsOnFire,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x810);
+			S2_PAD(0x2A0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCS2PawnGraphController) == 0x840, "CCS2PawnGraphController size should be 0x840");
+		//static_assert(sizeof(CS2::server::CCS2PawnGraphController) == 0x828, "CCS2PawnGraphController size should be 0x828");
 
 #endif
 	}

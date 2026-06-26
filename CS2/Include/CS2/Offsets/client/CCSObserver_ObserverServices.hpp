@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0xF0
 			namespace CCSObserver_ObserverServices /*: public CS2::client::CPlayer_ObserverServices*/ {
-				constexpr std::ptrdiff_t m_obsInterpState = 0x64; // client::ObserverInterpState_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_obsInterpState = 0x68; // client::ObserverInterpState_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

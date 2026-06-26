@@ -30,6 +30,7 @@ namespace CS2 {
 			PROPERTY(m_iHostageCount,int32_t, 0x614);
 			PROPERTY(m_bFadePlayerVisibilityFarZ,bool, 0x618);
 			PROPERTY(m_bRainTraceToSkyEnabled,bool, 0x619);
+			PROPERTY(m_bGPUCullSkybox,bool, 0x61a);
 			PROPERTY(m_flEnvRainStrength,float32, 0x61c);
 			PROPERTY(m_flEnvPuddleRippleStrength,float32, 0x620);
 			PROPERTY(m_flEnvPuddleRippleDirection,float32, 0x624);

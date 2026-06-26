@@ -223,6 +223,6 @@ namespace GlobalTypes {
 	using DegreeEuler /*DegreeEuler*/ = char[0xc]; //  Schema_Atomic
 	using CUtlStringTokenWithStorage /*CUtlStringTokenWithStorage*/ = char[0x18]; //  Schema_Atomic
 
-
+	using BASEPTR /*BASEPTR*/ = uintptr_t; //  Schema_Atomic
 
 }

@@ -21,12 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_PreviewPlayer : public CS2::client::C_CSPlayerPawn {
 		public:
-			PROPERTY(m_animgraphCharacterModeString,GlobalTypes::CGlobalSymbol, 0x3420);
-			PROPERTY(m_flInitialModelScale,float32, 0x3428);
+			PROPERTY(m_animgraphCharacterModeString,GlobalTypes::CGlobalSymbol, 0x3440);
+			PROPERTY(m_flInitialModelScale,float32, 0x3448);
 			S2_PAD(0xA0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayer) == 0x34C0, "C_CSGO_PreviewPlayer size should be 0x34C0");
+		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayer) == 0x34E0, "C_CSGO_PreviewPlayer size should be 0x34E0");
 
 #endif
 	}

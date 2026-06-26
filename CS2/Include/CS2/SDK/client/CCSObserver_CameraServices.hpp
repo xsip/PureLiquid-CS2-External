@@ -14,6 +14,11 @@
 
 
 
+namespace CS2 {
+	namespace client {
+		class C_PostProcessingVolume;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -21,9 +26,11 @@ namespace CS2 {
 	namespace client {
 		class CCSObserver_CameraServices : public CS2::client::CCSPlayerBase_CameraServices {
 		public:
+			PROPERTY(m_hPrevPostProcessingVolume,IDENTITY(GlobalTypes::CHandle<client::C_PostProcessingVolume>), 0x2a8);
+			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CCSObserver_CameraServices) == 0x2A8, "CCSObserver_CameraServices size should be 0x2A8");
+		//static_assert(sizeof(CS2::client::CCSObserver_CameraServices) == 0x2B0, "CCSObserver_CameraServices size should be 0x2B0");
 
 #endif
 	}
