@@ -14,7 +14,7 @@ namespace CS2 {
 					return NULL;
 				}
 				// TODO: Update Pattern
-				auto bonesDisp = reinterpret_cast<uint8_t*>(0x0);// hClient->ScanMemory(BONES_PTR_OFFSET_PATTERN);
+				auto bonesDisp = hClient->ScanMemory(BONES_PTR_OFFSET_PATTERN);
 				dwBonesOffset = hClient->ResolveDisp32(bonesDisp, 2);
 				if (!dwBonesOffset)
 					return NULL;

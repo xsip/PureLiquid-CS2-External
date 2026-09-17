@@ -37,7 +37,7 @@ text:0000000000763044 48 8D 15 35 8F EF 00                    lea     rdx, aAtte
 .text:000000000076308C E8 DF 08 FF FF                          call    sub_753970
 .text:0000000000763091 4C 8B A3 10 02 00 00                    mov     r12, [rbx+210h] ; bone matrix Pointer
 */
-#define BONES_PTR_OFFSET_PATTERN "4C 8B A3 ?? ?? ?? ?? 4D 85 E4"
+#define BONES_PTR_OFFSET_PATTERN "48 8B 83 C0 01 00 00 48 89 84 24 10 01 00 00"
 
 
 
