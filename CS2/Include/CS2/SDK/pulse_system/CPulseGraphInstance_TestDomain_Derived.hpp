@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_system/CPulseGraphInstance_TestDomain.hpp>
+#include "CPulseGraphInstance_TestDomain.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace pulse_system {
 		class CPulseGraphInstance_TestDomain_Derived : public CS2::pulse_system::CPulseGraphInstance_TestDomain {
 		public:
-			PROPERTY(m_nInstanceValueX,int32_t, 0x160);
+			PROPERTY(m_nInstanceValueX,int32_t, 0x158);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain_Derived) == 0x168, "CPulseGraphInstance_TestDomain_Derived size should be 0x168");
+		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain_Derived) == 0x160, "CPulseGraphInstance_TestDomain_Derived size should be 0x160");
 
 #endif
 	}

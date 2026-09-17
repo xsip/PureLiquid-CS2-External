@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_vOutTangentLocal = 0x4b4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_strParentPathUniqueID = 0x4c0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_strPathNodeParameter = 0x4c8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_xWSPrevParent = 0x4d0; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_xWSPrevParent = 0x4d0; // GlobalTypes::CTransformWS  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_hPath = 0x4f0; // GlobalTypes::CHandle<server::CPathWithDynamicNodes>  | Schema_Atomic | Size: 0x4
 			}
 		}

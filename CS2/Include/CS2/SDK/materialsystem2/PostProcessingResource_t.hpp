@@ -4,17 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/materialsystem2/PostProcessingTonemapParameters_t.hpp>
-#include <SDK/materialsystem2/PostProcessingBloomParameters_t.hpp>
-#include <SDK/materialsystem2/PostProcessingVignetteParameters_t.hpp>
-#include <SDK/materialsystem2/PostProcessingLocalContrastParameters_t.hpp>
-#include <SDK/materialsystem2/PostProcessingFogScatteringParameters_t.hpp>
+#include "PostProcessingTonemapParameters_t.hpp"
+#include "PostProcessingBloomParameters_t.hpp"
+#include "PostProcessingVignetteParameters_t.hpp"
+#include "PostProcessingLocalContrastParameters_t.hpp"
+#include "PostProcessingFogScatteringParameters_t.hpp"
+#include "PostProcessingLocalExposureParameters_t.hpp"
 
 
 
@@ -38,10 +39,12 @@ namespace CS2 {
 			PROPERTY(m_bHasColorCorrection,bool, 0x120);
 			PROPERTY(m_bHasFogScatteringParams,bool, 0x121);
 			NESTED_PROPERTY(m_fogScatteringParams,IDENTITY(materialsystem2::PostProcessingFogScatteringParameters_t), 0x124);
-			S2_PAD(0x138);
+			PROPERTY(m_bHasLocalExposureParams,bool, 0x144);
+			NESTED_PROPERTY(m_localExposureParams,IDENTITY(materialsystem2::PostProcessingLocalExposureParameters_t), 0x148);
+			S2_PAD(0x158);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::materialsystem2::PostProcessingResource_t) == 0x138, "PostProcessingResource_t size should be 0x138");
+		//static_assert(sizeof(CS2::materialsystem2::PostProcessingResource_t) == 0x158, "PostProcessingResource_t size should be 0x158");
 
 #endif
 	}

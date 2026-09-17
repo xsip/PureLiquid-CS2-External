@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/IKSolverSettings_t.hpp>
-#include <SDK/animgraphlib/IKTargetSettings_t.hpp>
-#include <SDK/animgraphlib/SolveIKChainAnimNodeDebugSetting.hpp>
+#include "IKSolverSettings_t.hpp"
+#include "IKTargetSettings_t.hpp"
+#include "SolveIKChainAnimNodeDebugSetting.hpp"
 
 
 

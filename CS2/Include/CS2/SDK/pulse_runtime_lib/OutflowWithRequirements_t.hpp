@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
-#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
+#include "CPulse_OutflowConnection.hpp"
+#include "PulseDocNodeID_t.hpp"
 
 
 

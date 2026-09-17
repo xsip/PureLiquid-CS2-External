@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLogicalEntity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/server/CFuncMover.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CLogicalEntity.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "CFuncMover.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -43,10 +43,12 @@ namespace CS2 {
 			NESTED_PROPERTY(m_vecQueuedRemovals,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>), 0x508);
 			NESTED_PROPERTY(m_OnTemplateSpawned,IDENTITY(entity2::CEntityIOOutput), 0x520);
 			NESTED_PROPERTY(m_OnTemplateGroupSpawned,IDENTITY(entity2::CEntityIOOutput), 0x538);
-			S2_PAD(0xB8);
+			PROPERTY(m_iszPathMoverName,GlobalTypes::CUtlSymbolLarge*, 0x550);
+			PROPERTY(m_bPrepopulateOnSpawn,bool, 0x558);
+			S2_PAD(0xC0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPathMoverEntitySpawner) == 0x560, "CPathMoverEntitySpawner size should be 0x560");
+		//static_assert(sizeof(CS2::server::CPathMoverEntitySpawner) == 0x568, "CPathMoverEntitySpawner size should be 0x568");
 
 #endif
 	}

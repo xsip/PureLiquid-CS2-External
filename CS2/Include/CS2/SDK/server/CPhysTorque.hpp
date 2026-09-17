@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPhysForce.hpp>
+#include "CPhysForce.hpp"
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace server {
 		class CPhysTorque : public CS2::server::CPhysForce {
 		public:
-			PROPERTY(m_axis,GlobalTypes::VectorWS, 0x508);
+			PROPERTY(m_axis,GlobalTypes::Vector, 0x508);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS

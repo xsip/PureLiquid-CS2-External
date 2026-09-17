@@ -4,13 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/DebugSnapshotBaseStructuredData_t.hpp>
+#include "DebugSnapshotBaseStructuredData_t.hpp"
+#include "AI_BaseNPCAnimGraph_DebugSnapshotData_t.hpp"
+#include "AI_Navigator_DebugSnapshotData_t.hpp"
+#include "AI_MotorServices_DebugSnapshotData_t.hpp"
+#include "AI_FacingServices_DebugSnapshotData_t.hpp"
 
 
 
@@ -30,16 +34,19 @@ namespace CS2 {
 			PROPERTY(current_enemy,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x10);
 			PROPERTY(s_current_schedule,GlobalTypes::CUtlString*, 0x18);
 			PROPERTY(s_current_task,GlobalTypes::CGlobalSymbol, 0x20);
-			PROPERTY(s_schedule_interrupt_reason,GlobalTypes::CUtlString*, 0x28);
-			PROPERTY(s_schedule_fail_reason,GlobalTypes::CUtlString*, 0x30);
-			NESTED_PROPERTY(conditions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x38);
-			NESTED_PROPERTY(anim_events,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x50);
-			PROPERTY(e_action_body_section,GlobalTypes::CGlobalSymbol, 0x68);
-			PROPERTY(e_movement_body_section,GlobalTypes::CGlobalSymbol, 0x70);
-			S2_PAD(0x70);
+			PROPERTY(s_prev_schedule,GlobalTypes::CUtlString*, 0x28);
+			PROPERTY(s_npc_current_movement,GlobalTypes::CUtlString*, 0x30);
+			PROPERTY(s_last_task_end_location,GlobalTypes::CUtlString*, 0x38);
+			NESTED_PROPERTY(conditions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x40);
+			NESTED_PROPERTY(anim_events,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x58);
+			NESTED_PROPERTY(animgraph,IDENTITY(client::AI_BaseNPCAnimGraph_DebugSnapshotData_t), 0x70);
+			NESTED_PROPERTY(navigator,IDENTITY(client::AI_Navigator_DebugSnapshotData_t), 0xb0);
+			NESTED_PROPERTY(motorServices,IDENTITY(client::AI_MotorServices_DebugSnapshotData_t), 0x100);
+			NESTED_PROPERTY(facingServices,IDENTITY(client::AI_FacingServices_DebugSnapshotData_t), 0x130);
+			S2_PAD(0x170);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::AI_BaseNPC_DebugSnapshotData_t) == 0x78, "AI_BaseNPC_DebugSnapshotData_t size should be 0x78");
+		//static_assert(sizeof(CS2::client::AI_BaseNPC_DebugSnapshotData_t) == 0x178, "AI_BaseNPC_DebugSnapshotData_t size should be 0x178");
 
 #endif
 	}

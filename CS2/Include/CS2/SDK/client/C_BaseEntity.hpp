@@ -4,24 +4,24 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/CEntityInstance.hpp>
-#include <SDK/client/CNetworkTransmitComponent.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/client/TakeDamageFlags_t.hpp>
-#include <SDK/client/EntityPlatformTypes_t.hpp>
-#include <SDK/client/thinkfunc_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/CNetworkVelocityVector.hpp>
-#include <SDK/client/MoveCollide_t.hpp>
-#include <SDK/client/MoveType_t.hpp>
-#include <SDK/particleslib/CParticleProperty.hpp>
-#include <SDK/client/BloodType.hpp>
+#include "../entity2/CEntityInstance.hpp"
+#include "CNetworkTransmitComponent.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "TakeDamageFlags_t.hpp"
+#include "EntityPlatformTypes_t.hpp"
+#include "thinkfunc_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "CNetworkVelocityVector.hpp"
+#include "MoveCollide_t.hpp"
+#include "MoveType_t.hpp"
+#include "../particleslib/CParticleProperty.hpp"
+#include "BloodType.hpp"
 
 
 
@@ -78,15 +78,14 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_nInterpolationLatchDirtyFlags,int32_t, 2 , 0x3c0);
 			PROPERTY_ARRAY(m_ListEntry,uint16_t, 11 , 0x3c8);
 			NESTED_PROPERTY(m_flCreateTime,IDENTITY(entity2::GameTime_t), 0x3e0);
-			PROPERTY(m_flSpeed,float32, 0x3e4);
-			PROPERTY(m_EntClientFlags,uint16_t, 0x3e8);
-			PROPERTY(m_bClientSideRagdoll,bool, 0x3ea);
-			PROPERTY(m_iTeamNum,uint8_t, 0x3eb);
-			PROPERTY(m_spawnflags,uint32_t, 0x3ec);
-			NESTED_PROPERTY(m_nNextThinkTick,IDENTITY(entity2::GameTick_t), 0x3f0);
-			PROPERTY(m_fFlags,uint32_t, 0x3f8);
-			PROPERTY(m_vecAbsVelocity,GlobalTypes::Vector, 0x3fc);
-			NESTED_PROPERTY(m_vecServerVelocity,IDENTITY(client::CNetworkVelocityVector), 0x408);
+			PROPERTY(m_EntClientFlags,uint16_t, 0x3e4);
+			PROPERTY(m_bClientSideRagdoll,bool, 0x3e6);
+			PROPERTY(m_iTeamNum,uint8_t, 0x3e7);
+			PROPERTY(m_spawnflags,uint32_t, 0x3e8);
+			NESTED_PROPERTY(m_nNextThinkTick,IDENTITY(entity2::GameTick_t), 0x3ec);
+			PROPERTY(m_fFlags,uint32_t, 0x3f4);
+			PROPERTY(m_vecAbsVelocity,GlobalTypes::Vector, 0x3f8);
+			NESTED_PROPERTY(m_vecServerVelocity,IDENTITY(client::CNetworkVelocityVector), 0x404);
 			NESTED_PROPERTY(m_vecVelocity,IDENTITY(client::CNetworkVelocityVector), 0x430);
 			PROPERTY(m_vecBaseVelocity,GlobalTypes::Vector, 0x510);
 			PROPERTY(m_hEffectEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x51c);

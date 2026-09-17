@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace worldrenderer {
-			// Class size: 0x178
+			// Class size: 0x190
 			namespace WorldNode_t /**/ {
 				constexpr std::ptrdiff_t m_sceneObjects = 0x0; // GlobalTypes::CUtlVector<worldrenderer::SceneObject_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_visClusterMembership = 0x18; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
@@ -20,11 +20,12 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_extraVertexStreams = 0xa8; // GlobalTypes::CUtlVector<worldrenderer::WorldNodeOnDiskBufferData_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_aggregateInstanceStreams = 0xc0; // GlobalTypes::CUtlVector<worldrenderer::AggregateInstanceStreamOnDiskData_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_vertexAlbedoStreams = 0xd8; // GlobalTypes::CUtlVector<worldrenderer::AggregateVertexAlbedoStreamOnDiskData_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_layerNames = 0xf0; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0x108; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_grassFileName = 0x120; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nodeLightingInfo = 0x128; // worldrenderer::BakedLightingInfo_t  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x170; // bool m_bHasBakedGeometryFlag; |  0x170 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vertexEmissiveStreams = 0xf0; // GlobalTypes::CUtlVector<worldrenderer::AggregateVertexEmissiveStreamOnDiskData_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_layerNames = 0x108; // GlobalTypes::CUtlVector<GlobalTypes::CUtlString>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0x120; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_grassFileName = 0x138; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nodeLightingInfo = 0x140; // worldrenderer::BakedLightingInfo_t  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x188; // bool m_bHasBakedGeometryFlag; |  0x188 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

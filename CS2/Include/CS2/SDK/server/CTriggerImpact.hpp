@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CTriggerMultiple.hpp>
+#include "CTriggerMultiple.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CTriggerImpact : public CS2::server::CTriggerMultiple {
 		public:
-			PROPERTY(m_flMagnitude,float32, 0x8e0);
-			PROPERTY(m_flNoise,float32, 0x8e4);
-			PROPERTY(m_flViewkick,float32, 0x8e8);
-			// PROPERTY(m_pOutputForce,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>), 0x8f0);
+			PROPERTY(m_flMagnitude,float32, 0x900);
+			PROPERTY(m_flNoise,float32, 0x904);
+			PROPERTY(m_flViewkick,float32, 0x908);
+			// PROPERTY(m_pOutputForce,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>), 0x910);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerImpact) == 0x918, "CTriggerImpact size should be 0x918");
+		//static_assert(sizeof(CS2::server::CTriggerImpact) == 0x938, "CTriggerImpact size should be 0x938");
 
 #endif
 	}

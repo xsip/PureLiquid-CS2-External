@@ -4,22 +4,22 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/toolscene/LightRigType_t.hpp>
-#include <SDK/toolscene/CLightRigSunLight.hpp>
-#include <SDK/toolscene/CLightRigPointLight.hpp>
-#include <SDK/toolscene/CLightRigSpotLight.hpp>
-#include <SDK/toolscene/CLightRigBackground.hpp>
-#include <SDK/toolscene/CLightRigGrid.hpp>
-#include <SDK/toolscene/CLightRigExposure.hpp>
-#include <SDK/toolscene/CLightRigPostProcessing.hpp>
-#include <SDK/toolscene/CLightRigSky.hpp>
-#include <SDK/toolscene/CLightRigVMap.hpp>
+#include "LightRigType_t.hpp"
+#include "CLightRigSunLight.hpp"
+#include "CLightRigPointLight.hpp"
+#include "CLightRigSpotLight.hpp"
+#include "CLightRigBackground.hpp"
+#include "CLightRigGrid.hpp"
+#include "CLightRigExposure.hpp"
+#include "CLightRigPostProcessing.hpp"
+#include "CLightRigSky.hpp"
+#include "CLightRigVMap.hpp"
 
 
 

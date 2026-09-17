@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/scenesystem/SceneViewId_t.hpp>
-#include <SDK/scenesystem/CSSDSMsg_ViewTarget.hpp>
+#include "SceneViewId_t.hpp"
+#include "CSSDSMsg_ViewTarget.hpp"
 
 
 

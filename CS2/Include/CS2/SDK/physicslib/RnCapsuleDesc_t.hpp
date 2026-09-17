@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/physicslib/RnShapeDesc_t.hpp>
-#include <SDK/physicslib/RnCapsule_t.hpp>
+#include "RnShapeDesc_t.hpp"
+#include "RnCapsule_t.hpp"
 
 
 

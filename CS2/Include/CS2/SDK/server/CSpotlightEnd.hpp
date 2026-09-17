@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
+#include "CBaseModelEntity.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CSpotlightEnd : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_flLightScale,float32, 0x768);
-			PROPERTY(m_Radius,float32, 0x76c);
-			PROPERTY(m_vSpotlightDir,GlobalTypes::Vector, 0x770);
-			PROPERTY(m_vSpotlightOrg,GlobalTypes::VectorWS, 0x77c);
+			PROPERTY(m_flLightScale,float32, 0x770);
+			PROPERTY(m_Radius,float32, 0x774);
+			PROPERTY(m_vSpotlightDir,GlobalTypes::Vector, 0x778);
+			PROPERTY(m_vSpotlightOrg,GlobalTypes::VectorWS, 0x784);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CSpotlightEnd) == 0x788, "CSpotlightEnd size should be 0x788");
+		//static_assert(sizeof(CS2::server::CSpotlightEnd) == 0x790, "CSpotlightEnd size should be 0x790");
 
 #endif
 	}

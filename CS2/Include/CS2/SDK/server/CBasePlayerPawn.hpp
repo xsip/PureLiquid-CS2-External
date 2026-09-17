@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseCombatCharacter.hpp>
-#include <SDK/server/ViewAngleServerChange_t.hpp>
-#include <SDK/server/sky3dparams_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/sndopvarlatchdata_t.hpp>
+#include "CBaseCombatCharacter.hpp"
+#include "ViewAngleServerChange_t.hpp"
+#include "sky3dparams_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/sndopvarlatchdata_t.hpp"
 
 
 
@@ -40,35 +40,35 @@ namespace CS2 {
 	namespace server {
 		class CBasePlayerPawn : public CS2::server::CBaseCombatCharacter {
 		public:
-			PROPERTY(m_pWeaponServices,IDENTITY(server::CPlayer_WeaponServices*), 0xa00);
-			PROPERTY(m_pItemServices,IDENTITY(server::CPlayer_ItemServices*), 0xa08);
-			PROPERTY(m_pAutoaimServices,IDENTITY(server::CPlayer_AutoaimServices*), 0xa10);
-			PROPERTY(m_pObserverServices,IDENTITY(server::CPlayer_ObserverServices*), 0xa18);
-			PROPERTY(m_pWaterServices,IDENTITY(server::CPlayer_WaterServices*), 0xa20);
-			PROPERTY(m_pUseServices,IDENTITY(server::CPlayer_UseServices*), 0xa28);
-			PROPERTY(m_pFlashlightServices,IDENTITY(server::CPlayer_FlashlightServices*), 0xa30);
-			PROPERTY(m_pCameraServices,IDENTITY(server::CPlayer_CameraServices*), 0xa38);
-			PROPERTY(m_pMovementServices,IDENTITY(server::CPlayer_MovementServices*), 0xa40);
-			// PROPERTY(m_ServerViewAngleChanges,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::ViewAngleServerChange_t>), 0xa50);
-			PROPERTY(v_angle,GlobalTypes::QAngle, 0xab8);
-			PROPERTY(v_anglePrevious,GlobalTypes::QAngle, 0xac4);
-			PROPERTY(m_iHideHUD,uint32_t, 0xad0);
-			NESTED_PROPERTY(m_skybox3d,IDENTITY(server::sky3dparams_t), 0xad8);
-			NESTED_PROPERTY(m_fTimeLastHurt,IDENTITY(entity2::GameTime_t), 0xb68);
-			NESTED_PROPERTY(m_flDeathTime,IDENTITY(entity2::GameTime_t), 0xb6c);
-			NESTED_PROPERTY(m_fNextSuicideTime,IDENTITY(entity2::GameTime_t), 0xb70);
-			PROPERTY(m_fInitHUD,bool, 0xb74);
-			PROPERTY(m_pExpresser,IDENTITY(server::CAI_Expresser*), 0xb78);
-			PROPERTY(m_hController,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0xb80);
-			PROPERTY(m_hDefaultController,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0xb84);
-			PROPERTY(m_fHltvReplayDelay,float32, 0xb8c);
-			PROPERTY(m_fHltvReplayEnd,float32, 0xb90);
-			PROPERTY(m_iHltvReplayEntity,GlobalTypes::CEntityIndex, 0xb94);
-			NESTED_PROPERTY(m_sndOpvarLatchData,IDENTITY(GlobalTypes::CUtlVector<client::sndopvarlatchdata_t>), 0xb98);
+			PROPERTY(m_pWeaponServices,IDENTITY(server::CPlayer_WeaponServices*), 0xa30);
+			PROPERTY(m_pItemServices,IDENTITY(server::CPlayer_ItemServices*), 0xa38);
+			PROPERTY(m_pAutoaimServices,IDENTITY(server::CPlayer_AutoaimServices*), 0xa40);
+			PROPERTY(m_pObserverServices,IDENTITY(server::CPlayer_ObserverServices*), 0xa48);
+			PROPERTY(m_pWaterServices,IDENTITY(server::CPlayer_WaterServices*), 0xa50);
+			PROPERTY(m_pUseServices,IDENTITY(server::CPlayer_UseServices*), 0xa58);
+			PROPERTY(m_pFlashlightServices,IDENTITY(server::CPlayer_FlashlightServices*), 0xa60);
+			PROPERTY(m_pCameraServices,IDENTITY(server::CPlayer_CameraServices*), 0xa68);
+			PROPERTY(m_pMovementServices,IDENTITY(server::CPlayer_MovementServices*), 0xa70);
+			// PROPERTY(m_ServerViewAngleChanges,IDENTITY(server::CUtlVectorEmbeddedNetworkVar<server::ViewAngleServerChange_t>), 0xa80);
+			PROPERTY(v_angle,GlobalTypes::QAngle, 0xae8);
+			PROPERTY(v_anglePrevious,GlobalTypes::QAngle, 0xaf4);
+			PROPERTY(m_iHideHUD,uint32_t, 0xb00);
+			NESTED_PROPERTY(m_skybox3d,IDENTITY(server::sky3dparams_t), 0xb08);
+			NESTED_PROPERTY(m_fTimeLastHurt,IDENTITY(entity2::GameTime_t), 0xb98);
+			NESTED_PROPERTY(m_flDeathTime,IDENTITY(entity2::GameTime_t), 0xb9c);
+			NESTED_PROPERTY(m_fNextSuicideTime,IDENTITY(entity2::GameTime_t), 0xba0);
+			PROPERTY(m_fInitHUD,bool, 0xba4);
+			PROPERTY(m_pExpresser,IDENTITY(server::CAI_Expresser*), 0xba8);
+			PROPERTY(m_hController,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0xbb0);
+			PROPERTY(m_hDefaultController,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerController>), 0xbb4);
+			PROPERTY(m_fHltvReplayDelay,float32, 0xbbc);
+			PROPERTY(m_fHltvReplayEnd,float32, 0xbc0);
+			PROPERTY(m_iHltvReplayEntity,GlobalTypes::CEntityIndex, 0xbc4);
+			NESTED_PROPERTY(m_sndOpvarLatchData,IDENTITY(GlobalTypes::CUtlVector<client::sndopvarlatchdata_t>), 0xbc8);
 			S2_PAD(0x1B0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBasePlayerPawn) == 0xBB0, "CBasePlayerPawn size should be 0xBB0");
+		//static_assert(sizeof(CS2::server::CBasePlayerPawn) == 0xBE0, "CBasePlayerPawn size should be 0xBE0");
 
 #endif
 	}

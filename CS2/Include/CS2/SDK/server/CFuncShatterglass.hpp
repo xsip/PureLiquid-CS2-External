@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -28,36 +28,36 @@ namespace CS2 {
 	namespace server {
 		class CFuncShatterglass : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_matPanelTransform,GlobalTypes::matrix3x4_t, 0x768);
-			PROPERTY(m_matPanelTransformWsTemp,GlobalTypes::matrix3x4_t, 0x798);
-			NESTED_PROPERTY(m_vecShatterGlassShards,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x7c8);
-			PROPERTY(m_PanelSize,GlobalTypes::Vector2D, 0x7e0);
-			NESTED_PROPERTY(m_flLastShatterSoundEmitTime,IDENTITY(entity2::GameTime_t), 0x7e8);
-			NESTED_PROPERTY(m_flLastCleanupTime,IDENTITY(entity2::GameTime_t), 0x7ec);
-			NESTED_PROPERTY(m_flInitAtTime,IDENTITY(entity2::GameTime_t), 0x7f0);
-			PROPERTY(m_flGlassThickness,float32, 0x7f4);
-			PROPERTY(m_flSpawnInvulnerability,float32, 0x7f8);
-			PROPERTY(m_bBreakSilent,bool, 0x7fc);
-			PROPERTY(m_bBreakShardless,bool, 0x7fd);
-			PROPERTY(m_bBroken,bool, 0x7fe);
-			PROPERTY(m_bGlassNavIgnore,bool, 0x7ff);
-			PROPERTY(m_bGlassInFrame,bool, 0x800);
-			PROPERTY(m_bStartBroken,bool, 0x801);
-			PROPERTY(m_iInitialDamageType,uint8_t, 0x802);
-			PROPERTY(m_szDamagePositioningEntityName01,GlobalTypes::CUtlSymbolLarge*, 0x808);
-			PROPERTY(m_szDamagePositioningEntityName02,GlobalTypes::CUtlSymbolLarge*, 0x810);
-			PROPERTY(m_szDamagePositioningEntityName03,GlobalTypes::CUtlSymbolLarge*, 0x818);
-			PROPERTY(m_szDamagePositioningEntityName04,GlobalTypes::CUtlSymbolLarge*, 0x820);
-			NESTED_PROPERTY(m_vInitialDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x828);
-			NESTED_PROPERTY(m_vExtraDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x840);
-			NESTED_PROPERTY(m_vInitialPanelVertices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector4D>), 0x858);
-			NESTED_PROPERTY(m_OnBroken,IDENTITY(entity2::CEntityIOOutput), 0x870);
-			PROPERTY(m_iSurfaceType,uint8_t, 0x888);
-			PROPERTY(m_hMaterialDamageBase,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x890);
+			PROPERTY(m_matPanelTransform,GlobalTypes::matrix3x4_t, 0x770);
+			PROPERTY(m_matPanelTransformWsTemp,GlobalTypes::matrix3x4_t, 0x7a0);
+			NESTED_PROPERTY(m_vecShatterGlassShards,IDENTITY(GlobalTypes::CUtlVector< uint32 >), 0x7d0);
+			PROPERTY(m_PanelSize,GlobalTypes::Vector2D, 0x7e8);
+			NESTED_PROPERTY(m_flLastShatterSoundEmitTime,IDENTITY(entity2::GameTime_t), 0x7f0);
+			NESTED_PROPERTY(m_flLastCleanupTime,IDENTITY(entity2::GameTime_t), 0x7f4);
+			NESTED_PROPERTY(m_flInitAtTime,IDENTITY(entity2::GameTime_t), 0x7f8);
+			PROPERTY(m_flGlassThickness,float32, 0x7fc);
+			PROPERTY(m_flSpawnInvulnerability,float32, 0x800);
+			PROPERTY(m_bBreakSilent,bool, 0x804);
+			PROPERTY(m_bBreakShardless,bool, 0x805);
+			PROPERTY(m_bBroken,bool, 0x806);
+			PROPERTY(m_bGlassNavIgnore,bool, 0x807);
+			PROPERTY(m_bGlassInFrame,bool, 0x808);
+			PROPERTY(m_bStartBroken,bool, 0x809);
+			PROPERTY(m_iInitialDamageType,uint8_t, 0x80a);
+			PROPERTY(m_szDamagePositioningEntityName01,GlobalTypes::CUtlSymbolLarge*, 0x810);
+			PROPERTY(m_szDamagePositioningEntityName02,GlobalTypes::CUtlSymbolLarge*, 0x818);
+			PROPERTY(m_szDamagePositioningEntityName03,GlobalTypes::CUtlSymbolLarge*, 0x820);
+			PROPERTY(m_szDamagePositioningEntityName04,GlobalTypes::CUtlSymbolLarge*, 0x828);
+			NESTED_PROPERTY(m_vInitialDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::VectorWS>), 0x830);
+			NESTED_PROPERTY(m_vExtraDamagePositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::VectorWS>), 0x848);
+			NESTED_PROPERTY(m_vInitialPanelVertices,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector4D>), 0x860);
+			NESTED_PROPERTY(m_OnBroken,IDENTITY(entity2::CEntityIOOutput), 0x878);
+			PROPERTY(m_iSurfaceType,uint8_t, 0x890);
+			PROPERTY(m_hMaterialDamageBase,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x898);
 			S2_PAD(0x130);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncShatterglass) == 0x898, "CFuncShatterglass size should be 0x898");
+		//static_assert(sizeof(CS2::server::CFuncShatterglass) == 0x8A0, "CFuncShatterglass size should be 0x8A0");
 
 #endif
 	}

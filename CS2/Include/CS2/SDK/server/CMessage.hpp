@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPointEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CPointEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -26,7 +26,7 @@ namespace CS2 {
 			PROPERTY(m_MessageVolume,float32, 0x4b0);
 			PROPERTY(m_MessageAttenuation,int32_t, 0x4b4);
 			PROPERTY(m_Radius,float32, 0x4b8);
-			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x4c0);
+			PROPERTY(m_sNoise,GlobalTypes::CGameSoundEventName, 0x4c0);
 			NESTED_PROPERTY(m_OnShowMessage,IDENTITY(entity2::CEntityIOOutput), 0x4c8);
 			S2_PAD(0x38);
 		};

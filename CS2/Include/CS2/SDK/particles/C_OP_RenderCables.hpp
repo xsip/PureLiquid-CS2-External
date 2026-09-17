@@ -4,20 +4,20 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
-#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
-#include <SDK/particles/TextureRepetitionMode_t.hpp>
-#include <SDK/particleslib/CParticleTransformInput.hpp>
-#include <SDK/particles/FloatInputMaterialVariable_t.hpp>
-#include <SDK/particles/VecInputMaterialVariable_t.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include "../particleslib/ParticleColorBlendType_t.hpp"
+#include "TextureRepetitionMode_t.hpp"
+#include "../particleslib/CParticleTransformInput.hpp"
+#include "FloatInputMaterialVariable_t.hpp"
+#include "VecInputMaterialVariable_t.hpp"
 
 
 
@@ -53,6 +53,7 @@ namespace CS2 {
 			PROPERTY(m_nMaxTesselation,int32_t, 0x148c);
 			PROPERTY(m_nRoundness,int32_t, 0x1490);
 			PROPERTY(m_nForceRoundnessFixed,bool, 0x1494);
+			PROPERTY(m_bOnlyRenderInEffectsBloomPass,bool, 0x1495);
 			NESTED_PROPERTY(m_LightingTransform,IDENTITY(particleslib::CParticleTransformInput), 0x1498);
 			// PROPERTY(m_MaterialFloatVars,IDENTITY(GlobalTypes::CUtlLeanVector<particles::FloatInputMaterialVariable_t>), 0x1500);
 			// PROPERTY(m_MaterialVecVars,IDENTITY(GlobalTypes::CUtlLeanVector<particles::VecInputMaterialVariable_t>), 0x1520);

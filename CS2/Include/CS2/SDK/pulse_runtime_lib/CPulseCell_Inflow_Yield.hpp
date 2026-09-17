@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
+#include "CPulseCell_BaseYieldingInflow.hpp"
+#include "CPulse_ResumePoint.hpp"
 
 
 
@@ -22,11 +22,11 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Inflow_Yield : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_UnyieldResume,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x48);
+			NESTED_PROPERTY(m_UnyieldResume,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xd8);
 			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Inflow_Yield) == 0x90, "CPulseCell_Inflow_Yield size should be 0x90");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Inflow_Yield) == 0x120, "CPulseCell_Inflow_Yield size should be 0x120");
 
 #endif
 	}

@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
-#include <SDK/animgraphlib/OrientationWarpMode_t.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animgraphlib/OrientationWarpTargetOffsetMode_t.hpp>
-#include <SDK/animgraphlib/CAnimInputDamping.hpp>
-#include <SDK/animgraphlib/OrientationWarpRootMotionSource_t.hpp>
-#include <SDK/animgraphlib/AnimValueSource.hpp>
+#include "CUnaryUpdateNode.hpp"
+#include "OrientationWarpMode_t.hpp"
+#include "CAnimParamHandle.hpp"
+#include "OrientationWarpTargetOffsetMode_t.hpp"
+#include "CAnimInputDamping.hpp"
+#include "OrientationWarpRootMotionSource_t.hpp"
+#include "AnimValueSource.hpp"
 
 
 

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBodyComponent.hpp>
-#include <SDK/server/CSkeletonInstance.hpp>
+#include "CBodyComponent.hpp"
+#include "CSkeletonInstance.hpp"
 
 
 
@@ -23,10 +23,10 @@ namespace CS2 {
 		class CBodyComponentSkeletonInstance : public CS2::server::CBodyComponent {
 		public:
 			NESTED_PROPERTY(m_skeletonInstance,IDENTITY(server::CSkeletonInstance), 0x80);
-			S2_PAD(0x428);
+			S2_PAD(0x468);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBodyComponentSkeletonInstance) == 0x4A0, "CBodyComponentSkeletonInstance size should be 0x4A0");
+		//static_assert(sizeof(CS2::server::CBodyComponentSkeletonInstance) == 0x4E0, "CBodyComponentSkeletonInstance size should be 0x4E0");
 
 #endif
 	}

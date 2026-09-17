@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseTrigger.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -22,12 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CTriggerDetectBulletFire : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_bPlayerFireOnly,bool, 0x8c8);
-			NESTED_PROPERTY(m_OnDetectedBulletFire,IDENTITY(entity2::CEntityIOOutput), 0x8d0);
+			PROPERTY(m_bPlayerFireOnly,bool, 0x8e8);
+			NESTED_PROPERTY(m_OnDetectedBulletFire,IDENTITY(entity2::CEntityIOOutput), 0x8f0);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerDetectBulletFire) == 0x8E8, "CTriggerDetectBulletFire size should be 0x8E8");
+		//static_assert(sizeof(CS2::server::CTriggerDetectBulletFire) == 0x908, "CTriggerDetectBulletFire size should be 0x908");
 
 #endif
 	}

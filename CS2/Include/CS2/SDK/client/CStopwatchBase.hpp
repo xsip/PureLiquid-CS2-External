@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CSimpleSimTimer.hpp>
+#include "CSimpleSimTimer.hpp"
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace client {
 		class CStopwatchBase : public CS2::client::CSimpleSimTimer {
 		public:
-			PROPERTY(m_fIsRunning,bool, 0x8);
+			PROPERTY(m_bIsRunning,bool, 0x8);
 			S2_PAD(0x4);
 		};
 #ifdef USE_STATIC_ASSERTS

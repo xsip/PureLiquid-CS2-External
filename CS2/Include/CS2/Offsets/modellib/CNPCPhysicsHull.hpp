@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace modellib {
-			// Class size: 0x38
+			// Class size: 0x40
 			namespace CNPCPhysicsHull /**/ {
 				constexpr std::ptrdiff_t m_sName = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_eType = 0x8; // modellib::NPCPhysicsHullType_t  | Schema_DeclaredEnum | Size: 0x4

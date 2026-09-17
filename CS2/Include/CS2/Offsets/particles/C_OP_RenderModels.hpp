@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x2CA8
+			// Class size: 0x2E20
 			namespace C_OP_RenderModels /*: public CS2::particles::CParticleFunctionRenderer*/ {
 				constexpr std::ptrdiff_t m_bOnlyRenderInEffectsBloomPass = 0x228; // bool m_bOnlyRenderInEffectsBloomPass; |  0x228 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bOnlyRenderInEffectsWaterPass = 0x229; // bool m_bOnlyRenderInEffectsWaterPass; |  0x229 | Schema_Builtin | Size: 0x1
@@ -66,6 +66,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nAlpha2Field = 0x25a0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_vecColorScale = 0x25a8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
 				constexpr std::ptrdiff_t m_nColorBlendType = 0x2c60; // particleslib::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_strLightStyle = 0x2c68; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flLightStyleTime = 0x2c70; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -36,16 +36,16 @@ namespace CS2 {
 			PROPERTY(m_flRootBoneOffset_z,float32, 0xf0);
 			PROPERTY(m_nRootBoneOffsetResetSerialNumber,uint8_t, 0xf4);
 			PROPERTY(m_bClientClothCreationSuppressed,bool, 0xf5);
-			PROPERTY(m_nAnimStateNoInterpSerialNumber,uint8_t, 0x1a0);
-			PROPERTY(m_MeshGroupMask,uint64_t, 0x1a8);
-			// PROPERTY(m_nBodyGroupChoices,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< int32 >), 0x1f8);
-			PROPERTY(m_nIdealMotionType,int8_t, 0x242);
-			PROPERTY(m_nForceLOD,int8_t, 0x243);
-			PROPERTY(m_nClothUpdateFlags,int8_t, 0x244);
-			S2_PAD(0x250);
+			PROPERTY(m_nAnimStateNoInterpSerialNumber,uint8_t, 0x1e0);
+			PROPERTY(m_MeshGroupMask,uint64_t, 0x1e8);
+			// PROPERTY(m_nBodyGroupChoices,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< int32 >), 0x238);
+			PROPERTY(m_nIdealMotionType,int8_t, 0x282);
+			PROPERTY(m_nForceLOD,int8_t, 0x283);
+			PROPERTY(m_nClothUpdateFlags,int8_t, 0x284);
+			S2_PAD(0x290);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CModelState) == 0x250, "CModelState size should be 0x250");
+		//static_assert(sizeof(CS2::server::CModelState) == 0x290, "CModelState size should be 0x290");
 
 #endif
 	}

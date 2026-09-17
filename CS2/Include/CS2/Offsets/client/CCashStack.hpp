@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xFB0
+			// Class size: 0xFB8
 			namespace CCashStack /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_nCashStackValue = 0xfa8; // int32_t m_nCashStackValue; |  0xfa8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCashStackValue = 0xfb0; // int32_t m_nCashStackValue; |  0xfb0 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

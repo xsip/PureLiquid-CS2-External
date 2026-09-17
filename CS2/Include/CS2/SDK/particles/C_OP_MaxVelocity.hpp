@@ -4,13 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionOperator.hpp>
+#include "CParticleFunctionOperator.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
 
 
 
@@ -21,14 +22,12 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_MaxVelocity : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flMaxVelocity,float32, 0x1d8);
-			PROPERTY(m_flMinVelocity,float32, 0x1dc);
-			PROPERTY(m_nOverrideCP,int32_t, 0x1e0);
-			PROPERTY(m_nOverrideCPField,int32_t, 0x1e4);
-			S2_PAD(0x10);
+			NESTED_PROPERTY(m_flMaxVelocity,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d8);
+			NESTED_PROPERTY(m_flMinVelocity,IDENTITY(particleslib::CPerParticleFloatInput), 0x348);
+			S2_PAD(0x2E0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_MaxVelocity) == 0x1E8, "C_OP_MaxVelocity size should be 0x1E8");
+		//static_assert(sizeof(CS2::particles::C_OP_MaxVelocity) == 0x4B8, "C_OP_MaxVelocity size should be 0x4B8");
 
 #endif
 	}

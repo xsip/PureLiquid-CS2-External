@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "C_BaseEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 		public:
 			NESTED_PROPERTY(m_OnPlay,IDENTITY(entity2::CEntityIOOutput), 0x600);
 			PROPERTY(m_flRadius,float32, 0x618);
-			PROPERTY(m_soundEventName,GlobalTypes::CUtlSymbolLarge*, 0x620);
+			PROPERTY(m_soundEventName,GlobalTypes::CGameSoundEventName, 0x620);
 			PROPERTY(m_bOverrideWithEvent,bool, 0x628);
 			PROPERTY(m_soundscapeIndex,int32_t, 0x62c);
 			PROPERTY(m_soundscapeEntityListId,int32_t, 0x630);

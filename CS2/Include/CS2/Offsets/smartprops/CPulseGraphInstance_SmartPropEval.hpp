@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace smartprops {
-			// Class size: 0x128
+			// Class size: 0x120
 			namespace CPulseGraphInstance_SmartPropEval /*: public CS2::pulse_runtime_lib::CBasePulseGraphInstance*/ {
 				// NO SCHEMA DATA FOUND!
 			}

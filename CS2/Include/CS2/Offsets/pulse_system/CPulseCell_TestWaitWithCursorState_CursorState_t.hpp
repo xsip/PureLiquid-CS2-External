@@ -8,10 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0x8
+			// Class size: 0x24
 			namespace CPulseCell_TestWaitWithCursorState_CursorState_t /**/ {
 				constexpr std::ptrdiff_t flWaitValue = 0x0; // float32 flWaitValue; |  0x0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t bFailOnCancel = 0x4; // bool bFailOnCancel; |  0x4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t bFail = 0x4; // bool bFail; |  0x4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hSelfCursor = 0x8; // GlobalTypes::HYieldedCursor  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_hSelfCellInstanceUntyped = 0x14; // GlobalTypes::HPulseCellBase  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hSelfCellInstance = 0x1c; // pulse_system::HPulseCell<pulse_system::CPulseCell_TestWaitWithCursorState>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

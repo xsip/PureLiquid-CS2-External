@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x830
+			// Class size: 0x840
 			namespace CFuncPlatRot /*: public CS2::server::CFuncPlat*/ {
-				constexpr std::ptrdiff_t m_end = 0x818; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_start = 0x824; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_end = 0x828; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_start = 0x834; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

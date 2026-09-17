@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/physicslib/RnSoftbodyParticle_t.hpp>
-#include <SDK/physicslib/RnSoftbodySpring_t.hpp>
-#include <SDK/physicslib/RnSoftbodyCapsule_t.hpp>
+#include "../physicslib/RnSoftbodyParticle_t.hpp"
+#include "../physicslib/RnSoftbodySpring_t.hpp"
+#include "../physicslib/RnSoftbodyCapsule_t.hpp"
 
 
 

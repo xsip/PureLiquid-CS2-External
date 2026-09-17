@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x788
+			// Class size: 0x790
 			namespace CEnvDecal /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_hDecalMaterial = 0x768; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flWidth = 0x770; // float32 m_flWidth; |  0x770 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flHeight = 0x774; // float32 m_flHeight; |  0x774 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDepth = 0x778; // float32 m_flDepth; |  0x778 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRenderOrder = 0x77c; // uint32_t m_nRenderOrder; |  0x77c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bProjectOnWorld = 0x780; // bool m_bProjectOnWorld; |  0x780 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bProjectOnCharacters = 0x781; // bool m_bProjectOnCharacters; |  0x781 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bProjectOnWater = 0x782; // bool m_bProjectOnWater; |  0x782 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flDepthSortBias = 0x784; // float32 m_flDepthSortBias; |  0x784 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hDecalMaterial = 0x770; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flWidth = 0x778; // float32 m_flWidth; |  0x778 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flHeight = 0x77c; // float32 m_flHeight; |  0x77c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDepth = 0x780; // float32 m_flDepth; |  0x780 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRenderOrder = 0x784; // uint32_t m_nRenderOrder; |  0x784 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bProjectOnWorld = 0x788; // bool m_bProjectOnWorld; |  0x788 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bProjectOnCharacters = 0x789; // bool m_bProjectOnCharacters; |  0x789 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bProjectOnWater = 0x78a; // bool m_bProjectOnWater; |  0x78a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flDepthSortBias = 0x78c; // float32 m_flDepthSortBias; |  0x78c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

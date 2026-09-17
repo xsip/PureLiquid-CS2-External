@@ -12,7 +12,7 @@ namespace CS2 {
 			namespace CMotorController /**/ {
 				constexpr std::ptrdiff_t m_speed = 0x8; // float32 m_speed; |  0x8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_maxTorque = 0xc; // float32 m_maxTorque; |  0xc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_axis = 0x10; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_axis = 0x10; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_inertiaFactor = 0x1c; // float32 m_inertiaFactor; |  0x1c | Schema_Builtin | Size: 0x4
 			}
 		}

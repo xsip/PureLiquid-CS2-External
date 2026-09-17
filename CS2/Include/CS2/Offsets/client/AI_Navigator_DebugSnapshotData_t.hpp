@@ -9,13 +9,14 @@ namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
 			// Class size: 0x50
-			namespace AI_Navigator_DebugSnapshotData_t /*: public CS2::client::DebugSnapshotBaseStructuredData_t*/ {
-				constexpr std::ptrdiff_t s_npc_nav_authority = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t s_goal_nav_search_id = 0x10; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t s_goal_source_location = 0x18; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t goal_actual_pos = 0x20; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t goal_base_pos = 0x2c; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t waypoints = 0x38; // GlobalTypes::CUtlVector<client::AI_Navigator_DebugSnapshotData_t_Waypoint_t>  | Schema_Atomic | Size: 0x18
+			namespace AI_Navigator_DebugSnapshotData_t /**/ {
+				constexpr std::ptrdiff_t s_movement_id = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t s_movement_serial_number = 0x8; // uint32_t s_movement_serial_number; |  0x8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t s_goal_source_location = 0x10; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t last_waypoint_pos = 0x18; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t goal_location = 0x24; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t waypoints = 0x30; // GlobalTypes::CUtlVector<client::AI_Navigator_DebugSnapshotData_t_Waypoint_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t s_arrival_movement_gait_set = 0x48; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

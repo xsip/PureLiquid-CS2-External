@@ -53,7 +53,6 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iTeamNum = 0x344; // uint8_t m_iTeamNum; |  0x344 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_iGlobalname = 0x348; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_iSentToClients = 0x350; // int32_t m_iSentToClients; |  0x350 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpeed = 0x354; // float32 m_flSpeed; |  0x354 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_sUniqueHammerID = 0x358; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_spawnflags = 0x360; // uint32_t m_spawnflags; |  0x360 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nNextThinkTick = 0x364; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4

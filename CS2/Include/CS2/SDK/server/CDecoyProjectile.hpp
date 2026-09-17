@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseCSGrenadeProjectile.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseCSGrenadeProjectile.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -22,14 +22,14 @@ namespace CS2 {
 	namespace server {
 		class CDecoyProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nDecoyShotTick,int32_t, 0xa48);
-			PROPERTY(m_shotsRemaining,int32_t, 0xa4c);
-			NESTED_PROPERTY(m_fExpireTime,IDENTITY(entity2::GameTime_t), 0xa50);
-			PROPERTY(m_decoyWeaponDefIndex,uint16_t, 0xa60);
+			PROPERTY(m_nDecoyShotTick,int32_t, 0xa78);
+			PROPERTY(m_shotsRemaining,int32_t, 0xa7c);
+			NESTED_PROPERTY(m_fExpireTime,IDENTITY(entity2::GameTime_t), 0xa80);
+			PROPERTY(m_decoyWeaponDefIndex,uint16_t, 0xa90);
 			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CDecoyProjectile) == 0xA70, "CDecoyProjectile size should be 0xA70");
+		//static_assert(sizeof(CS2::server::CDecoyProjectile) == 0xAA0, "CDecoyProjectile size should be 0xAA0");
 
 #endif
 	}

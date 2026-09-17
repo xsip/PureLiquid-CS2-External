@@ -4,24 +4,24 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/server/CHitboxComponent.hpp>
-#include <SDK/client/HitGroup_t.hpp>
-#include <SDK/server/CBaseModelEntity_OnDamageLevelChangedArgs_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/client/RenderMode_t.hpp>
-#include <SDK/client/RenderFx_t.hpp>
-#include <SDK/server/EntityRenderAttribute_t.hpp>
-#include <SDK/server/CCollisionProperty.hpp>
-#include <SDK/server/CGlowProperty.hpp>
-#include <SDK/client/CNetworkViewOffsetVector.hpp>
+#include "CBaseEntity.hpp"
+#include "CHitboxComponent.hpp"
+#include "../client/HitGroup_t.hpp"
+#include "CBaseModelEntity_OnDamageLevelChangedArgs_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "../client/RenderMode_t.hpp"
+#include "../client/RenderFx_t.hpp"
+#include "EntityRenderAttribute_t.hpp"
+#include "CCollisionProperty.hpp"
+#include "CGlowProperty.hpp"
+#include "../client/CNetworkViewOffsetVector.hpp"
 
 
 
@@ -69,20 +69,20 @@ namespace CS2 {
 			PROPERTY(m_bRenderToCubemaps,bool, 0x5e0);
 			PROPERTY(m_bNoInterpolate,bool, 0x5e1);
 			NESTED_PROPERTY(m_Collision,IDENTITY(server::CCollisionProperty), 0x5e8);
-			NESTED_PROPERTY(m_Glow,IDENTITY(server::CGlowProperty), 0x698);
-			PROPERTY(m_flGlowBackfaceMult,float32, 0x6f0);
-			PROPERTY(m_fadeMinDist,float32, 0x6f4);
-			PROPERTY(m_fadeMaxDist,float32, 0x6f8);
-			PROPERTY(m_flFadeScale,float32, 0x6fc);
-			PROPERTY(m_flShadowStrength,float32, 0x700);
-			PROPERTY(m_nObjectCulling,uint8_t, 0x704);
-			// PROPERTY(m_bodyGroupChoices,IDENTITY(GlobalTypes::CUtlOrderedMap< CGlobalSymbol, int32 >), 0x708);
-			NESTED_PROPERTY(m_vecViewOffset,IDENTITY(client::CNetworkViewOffsetVector), 0x730);
-			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0x760);
-			S2_PAD(0x2C0);
+			NESTED_PROPERTY(m_Glow,IDENTITY(server::CGlowProperty), 0x6a0);
+			PROPERTY(m_flGlowBackfaceMult,float32, 0x6f8);
+			PROPERTY(m_fadeMinDist,float32, 0x6fc);
+			PROPERTY(m_fadeMaxDist,float32, 0x700);
+			PROPERTY(m_flFadeScale,float32, 0x704);
+			PROPERTY(m_flShadowStrength,float32, 0x708);
+			PROPERTY(m_nObjectCulling,uint8_t, 0x70c);
+			// PROPERTY(m_bodyGroupChoices,IDENTITY(GlobalTypes::CUtlOrderedMap< CGlobalSymbol, int32 >), 0x710);
+			NESTED_PROPERTY(m_vecViewOffset,IDENTITY(client::CNetworkViewOffsetVector), 0x738);
+			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0x768);
+			S2_PAD(0x2C8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseModelEntity) == 0x768, "CBaseModelEntity size should be 0x768");
+		//static_assert(sizeof(CS2::server::CBaseModelEntity) == 0x770, "CBaseModelEntity size should be 0x770");
 
 #endif
 	}

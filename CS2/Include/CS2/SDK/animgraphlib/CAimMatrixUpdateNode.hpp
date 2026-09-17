@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
-#include <SDK/animgraphlib/AimMatrixOpFixedSettings_t.hpp>
-#include <SDK/animgraphlib/AnimVectorSource.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animationsystem/HSequence.hpp>
+#include "CUnaryUpdateNode.hpp"
+#include "AimMatrixOpFixedSettings_t.hpp"
+#include "AnimVectorSource.hpp"
+#include "CAnimParamHandle.hpp"
+#include "../animationsystem/HSequence.hpp"
 
 
 

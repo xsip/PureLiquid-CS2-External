@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xE40
+			// Class size: 0xE60
 			namespace CPropDoorRotatingBreakable /*: public CS2::server::CPropDoorRotating*/ {
-				constexpr std::ptrdiff_t m_bBreakable = 0xe20; // bool m_bBreakable; |  0xe20 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_isAbleToCloseAreaPortals = 0xe21; // bool m_isAbleToCloseAreaPortals; |  0xe21 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_currentDamageState = 0xe24; // int32_t m_currentDamageState; |  0xe24 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_damageStates = 0xe28; // GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bBreakable = 0xe40; // bool m_bBreakable; |  0xe40 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_isAbleToCloseAreaPortals = 0xe41; // bool m_isAbleToCloseAreaPortals; |  0xe41 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_currentDamageState = 0xe44; // int32_t m_currentDamageState; |  0xe44 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_damageStates = 0xe48; // GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

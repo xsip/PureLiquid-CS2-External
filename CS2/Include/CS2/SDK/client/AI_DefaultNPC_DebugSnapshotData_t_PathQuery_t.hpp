@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,8 +20,8 @@ namespace CS2 {
 	namespace client {
 		class AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t  {
 		public:
-			PROPERTY(m_sInitialQueryName,GlobalTypes::CGlobalSymbol, 0x0);
-			PROPERTY(m_sCurrentQueryName,GlobalTypes::CGlobalSymbol, 0x8);
+			PROPERTY(m_nInitialMovementId,GlobalTypes::CGlobalSymbol, 0x0);
+			PROPERTY(m_nCurrentMovementId,GlobalTypes::CGlobalSymbol, 0x8);
 			PROPERTY(m_nMode,GlobalTypes::CGlobalSymbol, 0x10);
 			PROPERTY(m_nType,GlobalTypes::CGlobalSymbol, 0x18);
 			PROPERTY(m_nState,GlobalTypes::CGlobalSymbol, 0x20);

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CSprite.hpp>
+#include "CSprite.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CSpriteOriented) == 0x7D8, "CSpriteOriented size should be 0x7D8");
+		//static_assert(sizeof(CS2::server::CSpriteOriented) == 0x7E0, "CSpriteOriented size should be 0x7E0");
 
 #endif
 	}

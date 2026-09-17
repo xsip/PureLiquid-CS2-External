@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerGenerator.hpp>
+#include "CVoiceContainerGenerator.hpp"
 
 
 
@@ -21,12 +21,12 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerDecayingSineWave : public CS2::soundsystem_voicecontainers::CVoiceContainerGenerator {
 		public:
-			PROPERTY(m_flFrequency,float32, 0xa8);
-			PROPERTY(m_flDecayTime,float32, 0xac);
+			PROPERTY(m_flFrequency,float32, 0x70);
+			PROPERTY(m_flDecayTime,float32, 0x74);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerDecayingSineWave) == 0xB0, "CVoiceContainerDecayingSineWave size should be 0xB0");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerDecayingSineWave) == 0x78, "CVoiceContainerDecayingSineWave size should be 0x78");
 
 #endif
 	}

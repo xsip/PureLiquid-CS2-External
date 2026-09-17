@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
+#include "CBaseModelEntity.hpp"
 
 
 
@@ -21,12 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CFuncNavObstruction : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_bDisabled,bool, 0x780);
-			PROPERTY(m_bUseAsyncObstacleUpdate,bool, 0x781);
+			PROPERTY(m_bDisabled,bool, 0x788);
+			PROPERTY(m_bUseAsyncObstacleUpdate,bool, 0x789);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncNavObstruction) == 0x788, "CFuncNavObstruction size should be 0x788");
+		//static_assert(sizeof(CS2::server::CFuncNavObstruction) == 0x790, "CFuncNavObstruction size should be 0x790");
 
 #endif
 	}

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/IKTargetSource.hpp>
-#include <SDK/animgraphlib/IKBoneNameAndIndex_t.hpp>
-#include <SDK/modellib/AnimParamID.hpp>
-#include <SDK/animgraphlib/IKTargetCoordinateSystem.hpp>
+#include "IKTargetSource.hpp"
+#include "IKBoneNameAndIndex_t.hpp"
+#include "../modellib/AnimParamID.hpp"
+#include "IKTargetCoordinateSystem.hpp"
 
 
 

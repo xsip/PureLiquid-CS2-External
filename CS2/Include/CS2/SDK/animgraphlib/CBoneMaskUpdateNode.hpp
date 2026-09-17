@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CBinaryUpdateNode.hpp>
-#include <SDK/animgraphlib/BoneMaskBlendSpace.hpp>
-#include <SDK/animgraphlib/BinaryNodeChildOption.hpp>
-#include <SDK/animgraphlib/AnimValueSource.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include "CBinaryUpdateNode.hpp"
+#include "BoneMaskBlendSpace.hpp"
+#include "BinaryNodeChildOption.hpp"
+#include "AnimValueSource.hpp"
+#include "CAnimParamHandle.hpp"
 
 
 

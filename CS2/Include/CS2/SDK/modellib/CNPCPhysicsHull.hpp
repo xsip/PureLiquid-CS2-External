@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/NPCPhysicsHullType_t.hpp>
+#include "NPCPhysicsHullType_t.hpp"
 
 
 
@@ -29,10 +29,10 @@ namespace CS2 {
 			PROPERTY(m_vCapsuleCenter2,GlobalTypes::Vector, 0x20);
 			PROPERTY(m_flGroundBoxHeight,float32, 0x2c);
 			PROPERTY(m_flGroundBoxWidth,float32, 0x30);
-			S2_PAD(0x38);
+			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::modellib::CNPCPhysicsHull) == 0x38, "CNPCPhysicsHull size should be 0x38");
+		//static_assert(sizeof(CS2::modellib::CNPCPhysicsHull) == 0x40, "CNPCPhysicsHull size should be 0x40");
 
 #endif
 	}

@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x788
+			// Class size: 0x790
 			namespace CSpotlightEnd /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_flLightScale = 0x768; // float32 m_flLightScale; |  0x768 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_Radius = 0x76c; // float32 m_Radius; |  0x76c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vSpotlightDir = 0x770; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vSpotlightOrg = 0x77c; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flLightScale = 0x770; // float32 m_flLightScale; |  0x770 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_Radius = 0x774; // float32 m_Radius; |  0x774 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vSpotlightDir = 0x778; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vSpotlightOrg = 0x784; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x1E0
+			// Class size: 0x1A8
 			namespace CVoiceContainerRandomSampler /*: public CS2::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator*/ {
-				constexpr std::ptrdiff_t m_flAmplitude = 0xb8; // float32 m_flAmplitude; |  0xb8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAmplitudeJitter = 0xbc; // float32 m_flAmplitudeJitter; |  0xbc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTimeJitter = 0xc0; // float32 m_flTimeJitter; |  0xc0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxLength = 0xc4; // float32 m_flMaxLength; |  0xc4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nNumDelayVariations = 0xc8; // int32_t m_nNumDelayVariations; |  0xc8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_grainResources = 0xd0; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_flAmplitude = 0x80; // float32 m_flAmplitude; |  0x80 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAmplitudeJitter = 0x84; // float32 m_flAmplitudeJitter; |  0x84 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTimeJitter = 0x88; // float32 m_flTimeJitter; |  0x88 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxLength = 0x8c; // float32 m_flMaxLength; |  0x8c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nNumDelayVariations = 0x90; // int32_t m_nNumDelayVariations; |  0x90 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_grainResources = 0x98; // GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

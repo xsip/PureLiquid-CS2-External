@@ -8,39 +8,42 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xAB0
+			// Class size: 0xB20
 			namespace CRagdollProp /*: public CS2::server::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_ragdoll = 0x950; // client::ragdoll_t  | Schema_DeclaredClass | Size: 0x50
-				constexpr std::ptrdiff_t m_bStartDisabled = 0x9a0; // bool m_bStartDisabled; |  0x9a0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_ragEnabled = 0x9a8; // GlobalTypes::CNetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_ragPos = 0x9c0; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_ragAngles = 0x9d8; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::QAngle>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_lastUpdateTickCount = 0x9f0; // uint32_t m_lastUpdateTickCount; |  0x9f0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_allAsleep = 0x9f4; // bool m_allAsleep; |  0x9f4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0x9f5; // bool m_bFirstCollisionAfterLaunch; |  0x9f5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nNavObstacleType = 0x9f8; // server::INavObstacle::NavObstacleType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bUpdateNavWhenMoving = 0x9fc; // bool m_bUpdateNavWhenMoving; |  0x9fc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceNavObstacleCut = 0x9fd; // bool m_bForceNavObstacleCut; |  0x9fd | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAttachedToReferenceFrame = 0x9fe; // bool m_bAttachedToReferenceFrame; |  0x9fe | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hDamageEntity = 0xa00; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hKiller = 0xa04; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hPhysicsAttacker = 0xa08; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0xa0c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeOutStartTime = 0xa10; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeTime = 0xa14; // float32 m_flFadeTime; |  0xa14 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecLastOrigin = 0xa18; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flAwakeTime = 0xa24; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastOriginChangeTime = 0xa28; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_strOriginClassName = 0xa30; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_strSourceClassName = 0xa38; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bHasBeenPhysgunned = 0xa40; // bool m_bHasBeenPhysgunned; |  0xa40 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAllowStretch = 0xa41; // bool m_bAllowStretch; |  0xa41 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flBlendWeight = 0xa44; // float32 m_flBlendWeight; |  0xa44 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDefaultFadeScale = 0xa48; // float32 m_flDefaultFadeScale; |  0xa48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_ragdollMins = 0xa50; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_ragdollMaxs = 0xa68; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bShouldDeleteActivationRecord = 0xa80; // bool m_bShouldDeleteActivationRecord; |  0xa80 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecNavObstacles = 0xa98; // GlobalTypes::CUtlVector<server::INavObstacle*>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_CPropDataComponent = 0x970; // server::CPropDataComponent  | Schema_DeclaredClass | Size: 0x40
+				constexpr std::ptrdiff_t m_ragdoll = 0x9b0; // client::ragdoll_t  | Schema_DeclaredClass | Size: 0x50
+				constexpr std::ptrdiff_t m_bStartDisabled = 0xa00; // bool m_bStartDisabled; |  0xa00 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_massScale = 0xa04; // float32 m_massScale; |  0xa04 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_buoyancyScale = 0xa08; // float32 m_buoyancyScale; |  0xa08 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ragEnabled = 0xa10; // GlobalTypes::CNetworkUtlVectorBase  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ragPos = 0xa28; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ragAngles = 0xa40; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::QAngle>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_lastUpdateTickCount = 0xa58; // uint32_t m_lastUpdateTickCount; |  0xa58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_allAsleep = 0xa5c; // bool m_allAsleep; |  0xa5c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0xa5d; // bool m_bFirstCollisionAfterLaunch; |  0xa5d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nNavObstacleType = 0xa60; // server::INavObstacle::NavObstacleType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bUpdateNavWhenMoving = 0xa64; // bool m_bUpdateNavWhenMoving; |  0xa64 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceNavObstacleCut = 0xa65; // bool m_bForceNavObstacleCut; |  0xa65 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAttachedToReferenceFrame = 0xa66; // bool m_bAttachedToReferenceFrame; |  0xa66 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hDamageEntity = 0xa68; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hKiller = 0xa6c; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hPhysicsAttacker = 0xa70; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0xa74; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeOutStartTime = 0xa78; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeTime = 0xa7c; // float32 m_flFadeTime; |  0xa7c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecLastOrigin = 0xa80; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flAwakeTime = 0xa8c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastOriginChangeTime = 0xa90; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_strOriginClassName = 0xa98; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strSourceClassName = 0xaa0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bHasBeenPhysgunned = 0xaa8; // bool m_bHasBeenPhysgunned; |  0xaa8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAllowStretch = 0xaa9; // bool m_bAllowStretch; |  0xaa9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flBlendWeight = 0xaac; // float32 m_flBlendWeight; |  0xaac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDefaultFadeScale = 0xab0; // float32 m_flDefaultFadeScale; |  0xab0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ragdollMins = 0xab8; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_ragdollMaxs = 0xad0; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bShouldDeleteActivationRecord = 0xae8; // bool m_bShouldDeleteActivationRecord; |  0xae8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecNavObstacles = 0xb00; // GlobalTypes::CUtlVector<server::INavObstacle*>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

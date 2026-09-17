@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_DynamicProp.hpp>
+#include "C_DynamicProp.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CFuncRetakeBarrier) == 0x13C0, "CFuncRetakeBarrier size should be 0x13C0");
+		//static_assert(sizeof(CS2::client::CFuncRetakeBarrier) == 0x13E0, "CFuncRetakeBarrier size should be 0x13E0");
 
 #endif
 	}

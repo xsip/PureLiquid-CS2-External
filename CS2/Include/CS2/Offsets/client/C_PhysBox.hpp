@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xFA8
+			// Class size: 0xFB0
 			namespace C_PhysBox /*: public CS2::client::C_Breakable*/ {
 				// NO SCHEMA DATA FOUND!
 			}

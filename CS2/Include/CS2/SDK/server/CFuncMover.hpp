@@ -4,23 +4,24 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/server/CFuncMover_Move_t.hpp>
-#include <SDK/client/SolidType_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/server/CFuncMover_OrientationUpdate_t.hpp>
-#include <SDK/server/CFuncMover_TransitionToPathNodeAction_t.hpp>
-#include <SDK/server/CFuncMover_FollowEntityDirection_t.hpp>
-#include <SDK/server/CFuncMover_FollowConstraint_t.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/server/FuncMoverMovementSummary_t.hpp>
+#include "CBaseModelEntity.hpp"
+#include "CFuncMover_Move_t.hpp"
+#include "../client/SolidType_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "CFuncMover_OrientationUpdate_t.hpp"
+#include "CFuncMover_TransitionToPathNodeAction_t.hpp"
+#include "CFuncMover_FollowEntityDirection_t.hpp"
+#include "CFuncMover_FollowConstraint_t.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "FuncMoverMovementSummary_t.hpp"
+#include "CFuncMover_PathRebuildStrategy_t.hpp"
 
 
 
@@ -38,71 +39,74 @@ namespace CS2 {
 	namespace server {
 		class CFuncMover : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_iszPathName,GlobalTypes::CUtlSymbolLarge*, 0x768);
-			PROPERTY(m_hPathMover,IDENTITY(GlobalTypes::CHandle<server::CPathMover>), 0x770);
-			PROPERTY(m_hPrevPathMover,IDENTITY(GlobalTypes::CHandle<server::CPathMover>), 0x774);
-			PROPERTY(m_iszPathNodeStart,GlobalTypes::CUtlSymbolLarge*, 0x778);
-			PROPERTY(m_iszPathNodeEnd,GlobalTypes::CUtlSymbolLarge*, 0x780);
-			PROPERTY(m_bIgnoreEndNode,bool, 0x788);
-			PROPERTY(m_eMoveType,IDENTITY(server::CFuncMover_Move_t), 0x78c);
-			PROPERTY(m_bIsReversing,bool, 0x790);
-			PROPERTY(m_flStartSpeed,float32, 0x794);
-			PROPERTY(m_flPathLocation,float32, 0x798);
-			PROPERTY(m_flT,float32, 0x79c);
-			PROPERTY(m_nCurrentNodeIndex,int32_t, 0x7a0);
-			PROPERTY(m_nPreviousNodeIndex,int32_t, 0x7a4);
-			PROPERTY(m_eSolidType,IDENTITY(client::SolidType_t), 0x7a8);
-			PROPERTY(m_bIsMoving,bool, 0x7a9);
-			PROPERTY(m_flTimeToReachMaxSpeed,float32, 0x7ac);
-			PROPERTY(m_flDistanceToReachMaxSpeed,float32, 0x7b0);
-			PROPERTY(m_flTimeToReachZeroSpeed,float32, 0x7b4);
-			PROPERTY(m_flComputedDistanceToReachMaxSpeed,float32, 0x7b8);
-			PROPERTY(m_flComputedDistanceToReachZeroSpeed,float32, 0x7bc);
-			PROPERTY(m_flStartCurveScale,float32, 0x7c0);
-			PROPERTY(m_flStopCurveScale,float32, 0x7c4);
-			PROPERTY(m_flDistanceToReachZeroSpeed,float32, 0x7c8);
-			NESTED_PROPERTY(m_flTimeMovementStart,IDENTITY(entity2::GameTime_t), 0x7cc);
-			NESTED_PROPERTY(m_flTimeMovementStop,IDENTITY(entity2::GameTime_t), 0x7d0);
-			PROPERTY(m_hStopAtNode,IDENTITY(GlobalTypes::CHandle<server::CMoverPathNode>), 0x7d4);
-			PROPERTY(m_flPathLocationToBeginStop,float32, 0x7d8);
-			PROPERTY(m_flPathLocationStart,float32, 0x7dc);
-			PROPERTY(m_flBeginStopT,float32, 0x7e0);
-			PROPERTY(m_iszStartForwardSound,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
-			PROPERTY(m_iszLoopForwardSound,GlobalTypes::CUtlSymbolLarge*, 0x7f0);
-			PROPERTY(m_iszStopForwardSound,GlobalTypes::CUtlSymbolLarge*, 0x7f8);
-			PROPERTY(m_iszStartReverseSound,GlobalTypes::CUtlSymbolLarge*, 0x800);
-			PROPERTY(m_iszLoopReverseSound,GlobalTypes::CUtlSymbolLarge*, 0x808);
-			PROPERTY(m_iszStopReverseSound,GlobalTypes::CUtlSymbolLarge*, 0x810);
-			PROPERTY(m_iszArriveAtDestinationSound,GlobalTypes::CUtlSymbolLarge*, 0x818);
-			NESTED_PROPERTY(m_OnMovementEnd,IDENTITY(entity2::CEntityIOOutput), 0x838);
-			PROPERTY(m_bStartAtClosestPoint,bool, 0x850);
-			PROPERTY(m_bStartAtEnd,bool, 0x851);
-			PROPERTY(m_bStartFollowingClosestMover,bool, 0x852);
-			PROPERTY(m_eOrientationUpdate,IDENTITY(server::CFuncMover_OrientationUpdate_t), 0x854);
-			NESTED_PROPERTY(m_flTimeStartOrientationChange,IDENTITY(entity2::GameTime_t), 0x858);
-			PROPERTY(m_flTimeToBlendToNewOrientation,float32, 0x85c);
-			PROPERTY(m_flDurationBlendToNewOrientationRan,float32, 0x860);
-			PROPERTY(m_bCreateMovableNavMesh,bool, 0x864);
-			PROPERTY(m_bAllowMovableNavMeshDockingOnEntireEntity,bool, 0x865);
-			// PROPERTY(m_OnNodePassed,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x868);
-			PROPERTY(m_iszOrientationMatchEntityName,GlobalTypes::CUtlSymbolLarge*, 0x888);
-			PROPERTY(m_hOrientationMatchEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x890);
-			PROPERTY(m_flTimeToTraverseToNextNode,float32, 0x894);
-			PROPERTY(m_vLerpToNewPosStartInPathEntitySpace,GlobalTypes::Vector, 0x898);
-			PROPERTY(m_vLerpToNewPosEndInPathEntitySpace,GlobalTypes::Vector, 0x8a4);
-			PROPERTY(m_flLerpToPositionT,float32, 0x8b0);
-			PROPERTY(m_flLerpToPositionDeltaT,float32, 0x8b4);
-			NESTED_PROPERTY(m_OnLerpToPositionComplete,IDENTITY(entity2::CEntityIOOutput), 0x8b8);
-			PROPERTY(m_bIsPaused,bool, 0x8d0);
-			PROPERTY(m_eTransitionedToPathNodeAction,IDENTITY(server::CFuncMover_TransitionToPathNodeAction_t), 0x8d4);
+			PROPERTY(m_iszPathName,GlobalTypes::CUtlSymbolLarge*, 0x770);
+			PROPERTY(m_hPathMover,IDENTITY(GlobalTypes::CHandle<server::CPathMover>), 0x778);
+			PROPERTY(m_hPrevPathMover,IDENTITY(GlobalTypes::CHandle<server::CPathMover>), 0x77c);
+			PROPERTY(m_iszPathNodeStart,GlobalTypes::CUtlSymbolLarge*, 0x780);
+			PROPERTY(m_iszPathNodeEnd,GlobalTypes::CUtlSymbolLarge*, 0x788);
+			PROPERTY(m_bIgnoreEndNode,bool, 0x790);
+			PROPERTY(m_eMoveType,IDENTITY(server::CFuncMover_Move_t), 0x794);
+			PROPERTY(m_bIsReversing,bool, 0x798);
+			PROPERTY(m_flStartSpeed,float32, 0x79c);
+			PROPERTY(m_flPathLocation,float32, 0x7a0);
+			PROPERTY(m_flT,float32, 0x7a4);
+			PROPERTY(m_nCurrentNodeIndex,int32_t, 0x7a8);
+			PROPERTY(m_nPreviousNodeIndex,int32_t, 0x7ac);
+			PROPERTY(m_eSolidType,IDENTITY(client::SolidType_t), 0x7b0);
+			PROPERTY(m_bIsMoving,bool, 0x7b1);
+			PROPERTY(m_flTimeToReachMaxSpeed,float32, 0x7b4);
+			PROPERTY(m_flDistanceToReachMaxSpeed,float32, 0x7b8);
+			PROPERTY(m_flTimeToReachZeroSpeed,float32, 0x7bc);
+			PROPERTY(m_flComputedDistanceToReachMaxSpeed,float32, 0x7c0);
+			PROPERTY(m_flComputedDistanceToReachZeroSpeed,float32, 0x7c4);
+			PROPERTY(m_flStartCurveScale,float32, 0x7c8);
+			PROPERTY(m_flStopCurveScale,float32, 0x7cc);
+			PROPERTY(m_flDistanceToReachZeroSpeed,float32, 0x7d0);
+			NESTED_PROPERTY(m_flTimeMovementStart,IDENTITY(entity2::GameTime_t), 0x7d4);
+			NESTED_PROPERTY(m_flTimeMovementStop,IDENTITY(entity2::GameTime_t), 0x7d8);
+			PROPERTY(m_hStopAtNode,IDENTITY(GlobalTypes::CHandle<server::CMoverPathNode>), 0x7dc);
+			PROPERTY(m_flPathLocationToBeginStop,float32, 0x7e0);
+			PROPERTY(m_flPathLocationStart,float32, 0x7e4);
+			PROPERTY(m_flBeginStopT,float32, 0x7e8);
+			PROPERTY(m_iszStartForwardSound,GlobalTypes::CGameSoundEventName, 0x7f0);
+			PROPERTY(m_iszLoopForwardSound,GlobalTypes::CGameSoundEventName, 0x7f8);
+			PROPERTY(m_iszStopForwardSound,GlobalTypes::CGameSoundEventName, 0x800);
+			PROPERTY(m_iszStartReverseSound,GlobalTypes::CGameSoundEventName, 0x808);
+			PROPERTY(m_iszLoopReverseSound,GlobalTypes::CGameSoundEventName, 0x810);
+			PROPERTY(m_iszStopReverseSound,GlobalTypes::CGameSoundEventName, 0x818);
+			PROPERTY(m_iszArriveAtDestinationSound,GlobalTypes::CGameSoundEventName, 0x820);
+			NESTED_PROPERTY(m_OnMovementEnd,IDENTITY(entity2::CEntityIOOutput), 0x840);
+			PROPERTY(m_bStartAtClosestPoint,bool, 0x858);
+			PROPERTY(m_bStartAtEnd,bool, 0x859);
+			PROPERTY(m_bStartFollowingClosestMover,bool, 0x85a);
+			PROPERTY(m_eOrientationUpdate,IDENTITY(server::CFuncMover_OrientationUpdate_t), 0x85c);
+			NESTED_PROPERTY(m_flTimeStartOrientationChange,IDENTITY(entity2::GameTime_t), 0x860);
+			PROPERTY(m_flTimeToBlendToNewOrientation,float32, 0x864);
+			PROPERTY(m_flDurationBlendToNewOrientationRan,float32, 0x868);
+			PROPERTY(m_bCreateMovableNavMesh,bool, 0x86c);
+			PROPERTY(m_bCreateMovableSurfaceGraph,bool, 0x86d);
+			PROPERTY(m_bAllowMovableNavMeshDockingOnEntireEntity,bool, 0x86e);
+			// PROPERTY(m_OnNodePassed,IDENTITY(GlobalTypes::CEntityOutputTemplate<GlobalTypes::CUtlString>), 0x870);
+			PROPERTY(m_iszOrientationMatchEntityName,GlobalTypes::CUtlSymbolLarge*, 0x890);
+			PROPERTY(m_hOrientationMatchEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x898);
+			PROPERTY(m_flTimeToTraverseToNextNode,float32, 0x89c);
+			PROPERTY(m_vLerpToNewPosStartInPathEntitySpace,GlobalTypes::Vector, 0x8a0);
+			PROPERTY(m_vLerpToNewPosEndInPathEntitySpace,GlobalTypes::Vector, 0x8ac);
+			PROPERTY(m_flLerpToPositionT,float32, 0x8b8);
+			PROPERTY(m_flLerpToPositionDeltaT,float32, 0x8bc);
+			NESTED_PROPERTY(m_OnLerpToPositionComplete,IDENTITY(entity2::CEntityIOOutput), 0x8c0);
+			PROPERTY(m_bIsPaused,bool, 0x8d8);
+			PROPERTY(m_eTransitionedToPathNodeAction,IDENTITY(server::CFuncMover_TransitionToPathNodeAction_t), 0x8dc);
 			PROPERTY(m_qTransitionSourceOrientation,GlobalTypes::Quaternion, 0x8e0);
 			PROPERTY(m_nDelayedTeleportToNode,int32_t, 0x8f0);
 			PROPERTY(m_bIsImGuiLogging,bool, 0x8f4);
-			PROPERTY(m_hFollowEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8f8);
-			PROPERTY(m_flFollowDistance,float32, 0x8fc);
-			PROPERTY(m_flFollowMinimumSpeed,float32, 0x900);
-			PROPERTY(m_flCurFollowEntityT,float32, 0x904);
-			PROPERTY(m_flCurFollowSpeed,float32, 0x908);
+			PROPERTY(m_bIsImGuiEntTextLogging,bool, 0x8f5);
+			PROPERTY(m_flSpeed,float32, 0x8f8);
+			PROPERTY(m_hFollowEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8fc);
+			PROPERTY(m_flFollowDistance,float32, 0x900);
+			PROPERTY(m_flFollowMinimumSpeed,float32, 0x904);
+			PROPERTY(m_flCurFollowEntityT,float32, 0x908);
+			PROPERTY(m_flCurFollowSpeed,float32, 0x90c);
 			PROPERTY(m_strOrientationFaceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x910);
 			PROPERTY(m_hOrientationFaceEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x918);
 			NESTED_PROPERTY(m_OnStart,IDENTITY(entity2::CEntityIOOutput), 0x920);
@@ -114,25 +118,29 @@ namespace CS2 {
 			PROPERTY(m_bStartedMoving,bool, 0x999);
 			PROPERTY(m_eFollowEntityDirection,IDENTITY(server::CFuncMover_FollowEntityDirection_t), 0x9b8);
 			PROPERTY(m_hFollowMover,IDENTITY(GlobalTypes::CHandle<server::CFuncMover>), 0x9bc);
-			PROPERTY(m_iszFollowMoverEntityName,GlobalTypes::CUtlSymbolLarge*, 0x9c0);
-			PROPERTY(m_flFollowMoverDistance,float32, 0x9c8);
-			PROPERTY(m_flFollowMoverRatio,float32, 0x9cc);
-			PROPERTY(m_flFollowMoverCalculatedDistance,float32, 0x9d0);
-			PROPERTY(m_flFollowMoverSpringStrength,float32, 0x9d4);
-			PROPERTY(m_nFollowMoverConstraintPriority,int32_t, 0x9d8);
-			PROPERTY(m_bFollowConstraintsInitialized,bool, 0x9dc);
-			PROPERTY(m_eFollowConstraint,IDENTITY(server::CFuncMover_FollowConstraint_t), 0x9e0);
-			PROPERTY(m_flFollowMoverSpeed,float32, 0x9e4);
-			PROPERTY(m_flFollowMoverVelocity,float32, 0x9e8);
-			NESTED_PROPERTY(m_nTickMovementRan,IDENTITY(entity2::GameTick_t), 0x9ec);
-			NESTED_PROPERTY(m_movementSummary,IDENTITY(server::FuncMoverMovementSummary_t), 0x9f0);
-			PROPERTY(m_bStopFromBeginStopTarget,bool, 0xa10);
-			PROPERTY(m_bQueueStop,bool, 0xa11);
-			PROPERTY(m_bQueueStopMoving,bool, 0xa12);
-			S2_PAD(0x2B8);
+			PROPERTY(m_iszFollowEntityName,GlobalTypes::CUtlSymbolLarge*, 0x9c0);
+			PROPERTY(m_iszFollowMoverEntityName,GlobalTypes::CUtlSymbolLarge*, 0x9c8);
+			PROPERTY(m_flFollowMoverDistance,float32, 0x9d0);
+			PROPERTY(m_flFollowMoverRatio,float32, 0x9d4);
+			PROPERTY(m_flFollowMoverCalculatedDistance,float32, 0x9d8);
+			PROPERTY(m_flFollowMoverSpringStrength,float32, 0x9dc);
+			PROPERTY(m_nFollowMoverConstraintPriority,int32_t, 0x9e0);
+			PROPERTY(m_vecFollowMoverCouplerRange,GlobalTypes::Vector2D, 0x9e4);
+			PROPERTY(m_bFollowConstraintsInitialized,bool, 0x9ec);
+			PROPERTY(m_eFollowConstraint,IDENTITY(server::CFuncMover_FollowConstraint_t), 0x9f0);
+			PROPERTY(m_flFollowMoverSpeed,float32, 0x9f4);
+			PROPERTY(m_flFollowMoverVelocity,float32, 0x9f8);
+			NESTED_PROPERTY(m_nTickMovementRan,IDENTITY(entity2::GameTick_t), 0x9fc);
+			NESTED_PROPERTY(m_movementSummary,IDENTITY(server::FuncMoverMovementSummary_t), 0xa00);
+			PROPERTY(m_bStopFromBeginStopTarget,bool, 0xa20);
+			PROPERTY(m_bQueueStop,bool, 0xa21);
+			PROPERTY(m_bQueueStopMoving,bool, 0xa22);
+			PROPERTY(m_bQueueSetupPathMover,bool, 0xa23);
+			PROPERTY(m_ePathRebuildStrategy,IDENTITY(server::CFuncMover_PathRebuildStrategy_t), 0xa24);
+			S2_PAD(0x2C0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncMover) == 0xA20, "CFuncMover size should be 0xA20");
+		//static_assert(sizeof(CS2::server::CFuncMover) == 0xA30, "CFuncMover size should be 0xA30");
 
 #endif
 	}

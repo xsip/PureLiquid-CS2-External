@@ -7,7 +7,7 @@
 #ifdef DEMO_MODE
 #define USE_CHAMS
 #define USE_CREATE_MOVE
-#define USE_GET_INACCURACY
+// #define USE_GET_INACCURACY
 // #define USE_RANDOM_SEED
 #define USE_SILENT_AIM
 #define USE_POPUP_MSGS

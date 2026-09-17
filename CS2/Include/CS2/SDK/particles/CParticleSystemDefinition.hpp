@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/IParticleSystemDefinition.hpp>
-#include <SDK/particles/ParticleChildrenInfo_t.hpp>
-#include <SDK/particles/InheritableBoolType_t.hpp>
-#include <SDK/particles/ParticleControlPointConfiguration_t.hpp>
+#include "IParticleSystemDefinition.hpp"
+#include "ParticleChildrenInfo_t.hpp"
+#include "InheritableBoolType_t.hpp"
+#include "ParticleControlPointConfiguration_t.hpp"
 
 
 

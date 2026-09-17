@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_CSWeaponBaseGun.hpp>
+#include "C_CSWeaponBaseGun.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_WeaponCZ75a : public CS2::client::C_CSWeaponBaseGun {
 		public:
-			PROPERTY(m_bMagazineRemoved,bool, 0x1ce0);
+			PROPERTY(m_bMagazineRemoved,bool, 0x1d10);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_WeaponCZ75a) == 0x1CF0, "C_WeaponCZ75a size should be 0x1CF0");
+		//static_assert(sizeof(CS2::client::C_WeaponCZ75a) == 0x1D20, "C_WeaponCZ75a size should be 0x1D20");
 
 #endif
 	}

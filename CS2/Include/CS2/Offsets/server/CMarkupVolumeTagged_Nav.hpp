@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7B0
+			// Class size: 0x7B8
 			namespace CMarkupVolumeTagged_Nav /*: public CS2::server::CMarkupVolumeTagged*/ {
-				constexpr std::ptrdiff_t m_nScopes = 0x7a8; // server::NavScopeFlags_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_nScopes = 0x7b0; // server::NavScopeFlags_t  | Schema_DeclaredEnum | Size: 0x1
 			}
 		}
 	}

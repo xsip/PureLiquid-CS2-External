@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
+#include "C_BaseModelEntity.hpp"
 
 
 
@@ -21,17 +21,17 @@ namespace CS2 {
 	namespace client {
 		class C_DynamicLight : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_Flags,uint8_t, 0xfa8);
-			PROPERTY(m_LightStyle,uint8_t, 0xfa9);
-			PROPERTY(m_Radius,float32, 0xfac);
-			PROPERTY(m_Exponent,int32_t, 0xfb0);
-			PROPERTY(m_InnerAngle,float32, 0xfb4);
-			PROPERTY(m_OuterAngle,float32, 0xfb8);
-			PROPERTY(m_SpotRadius,float32, 0xfbc);
+			PROPERTY(m_Flags,uint8_t, 0xfb0);
+			PROPERTY(m_LightStyle,uint8_t, 0xfb1);
+			PROPERTY(m_Radius,float32, 0xfb4);
+			PROPERTY(m_Exponent,int32_t, 0xfb8);
+			PROPERTY(m_InnerAngle,float32, 0xfbc);
+			PROPERTY(m_OuterAngle,float32, 0xfc0);
+			PROPERTY(m_SpotRadius,float32, 0xfc4);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_DynamicLight) == 0xFD0, "C_DynamicLight size should be 0xFD0");
+		//static_assert(sizeof(CS2::client::C_DynamicLight) == 0xFD8, "C_DynamicLight size should be 0xFD8");
 
 #endif
 	}

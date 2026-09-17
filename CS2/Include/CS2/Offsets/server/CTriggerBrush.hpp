@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7B8
+			// Class size: 0x7C0
 			namespace CTriggerBrush /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_OnStartTouch = 0x768; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnEndTouch = 0x780; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnUse = 0x798; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_iInputFilter = 0x7b0; // int32_t m_iInputFilter; |  0x7b0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iDontMessageParent = 0x7b4; // int32_t m_iDontMessageParent; |  0x7b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnStartTouch = 0x770; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnEndTouch = 0x788; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnUse = 0x7a0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_iInputFilter = 0x7b8; // int32_t m_iInputFilter; |  0x7b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iDontMessageParent = 0x7bc; // int32_t m_iDontMessageParent; |  0x7bc | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

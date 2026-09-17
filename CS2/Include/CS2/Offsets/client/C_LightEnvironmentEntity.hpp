@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xFB0
+			// Class size: 0xFB8
 			namespace C_LightEnvironmentEntity /*: public CS2::client::C_LightDirectionalEntity*/ {
 				// NO SCHEMA DATA FOUND!
 			}

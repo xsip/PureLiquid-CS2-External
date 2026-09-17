@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/modellib/ScriptedMoveTo_t.hpp>
-#include <SDK/modellib/SharedMovementGait_t.hpp>
-#include <SDK/modellib/ScriptedHeldWeaponBehavior_t.hpp>
-#include <SDK/client/ForcedCrouchState_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/ScriptedOnDeath_t.hpp>
-#include <SDK/server/ScriptedConflictResponse_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseEntity.hpp"
+#include "../modellib/ScriptedMoveTo_t.hpp"
+#include "../modellib/SharedMovementGait_t.hpp"
+#include "../modellib/ScriptedHeldWeaponBehavior_t.hpp"
+#include "../client/ForcedCrouchState_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/ScriptedOnDeath_t.hpp"
+#include "ScriptedConflictResponse_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 

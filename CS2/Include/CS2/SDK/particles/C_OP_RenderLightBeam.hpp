@@ -4,16 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
-#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include "../particleslib/ParticleColorBlendType_t.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "ParticleLightFogLightingMode_t.hpp"
+#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
 
 
 
@@ -27,17 +30,27 @@ namespace CS2 {
 			PROPERTY(m_nMaxAllowed,uint16_t, 0x228);
 			NESTED_PROPERTY(m_vColorBlend,IDENTITY(particleslib::CParticleCollectionVecInput), 0x230);
 			PROPERTY(m_nColorBlendType,IDENTITY(particleslib::ParticleColorBlendType_t), 0x8e8);
-			NESTED_PROPERTY(m_flBrightnessLumensPerMeter,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x8f0);
-			PROPERTY(m_bCastShadows,bool, 0xa60);
-			PROPERTY(m_bDynamicBounce,bool, 0xa61);
-			NESTED_PROPERTY(m_flBounceScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa68);
-			NESTED_PROPERTY(m_flSkirt,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xbd8);
-			NESTED_PROPERTY(m_flRange,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd48);
-			NESTED_PROPERTY(m_flThickness,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xeb8);
-			S2_PAD(0xE00);
+			PROPERTY(m_strLightStyle,GlobalTypes::CUtlString*, 0x8f0);
+			NESTED_PROPERTY(m_flLightStyleTime,IDENTITY(particleslib::CPerParticleFloatInput), 0x8f8);
+			NESTED_PROPERTY(m_flBrightnessLumensPerMeter,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa68);
+			NESTED_PROPERTY(m_flNumberOfLightsToCreate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xbd8);
+			PROPERTY(m_bCastShadows,bool, 0xd48);
+			PROPERTY(m_bDynamicBounce,bool, 0xd49);
+			NESTED_PROPERTY(m_flBounceScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd50);
+			NESTED_PROPERTY(m_flSkirt,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xec0);
+			NESTED_PROPERTY(m_flRange,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1030);
+			NESTED_PROPERTY(m_flThickness,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x11a0);
+			NESTED_PROPERTY(m_flInnerConeAngle,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1310);
+			NESTED_PROPERTY(m_flOuterConeAngle,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1480);
+			NESTED_PROPERTY(m_vecConeRotationOffset,IDENTITY(particleslib::CParticleCollectionVecInput), 0x15f0);
+			PROPERTY(m_nFogLightingMode,IDENTITY(particles::ParticleLightFogLightingMode_t), 0x1ca8);
+			NESTED_PROPERTY(m_flFogContribution,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x1cb0);
+			NESTED_PROPERTY(m_flRenderFilter,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e20);
+			PROPERTY(m_bDebugOrientation,bool, 0x1f90);
+			S2_PAD(0x1D70);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_RenderLightBeam) == 0x1028, "C_OP_RenderLightBeam size should be 0x1028");
+		//static_assert(sizeof(CS2::particles::C_OP_RenderLightBeam) == 0x1F98, "C_OP_RenderLightBeam size should be 0x1F98");
 
 #endif
 	}

@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iIndex = 0x4; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_flStartTime = 0x8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_flGrowthDuration = 0xc; // float32 m_flGrowthDuration; |  0xc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecGrowthOrigin = 0x10; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecGrowthOrigin = 0x10; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_flEndcapTime = 0x1c; // float32 m_flEndcapTime; |  0x1c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bMarkedForDelete = 0x20; // bool m_bMarkedForDelete; |  0x20 | Schema_Builtin | Size: 0x1
 			}

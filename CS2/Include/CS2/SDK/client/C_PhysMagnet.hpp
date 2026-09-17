@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseAnimGraph.hpp>
-#include <SDK/client/C_BaseEntity.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "C_BaseEntity.hpp"
 
 
 
@@ -22,12 +22,12 @@ namespace CS2 {
 	namespace client {
 		class C_PhysMagnet : public CS2::client::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_aAttachedObjectsFromServer,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x1158);
-			NESTED_PROPERTY(m_aAttachedObjects,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>), 0x1170);
+			NESTED_PROPERTY(m_aAttachedObjectsFromServer,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x1180);
+			NESTED_PROPERTY(m_aAttachedObjects,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>), 0x1198);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PhysMagnet) == 0x1188, "C_PhysMagnet size should be 0x1188");
+		//static_assert(sizeof(CS2::client::C_PhysMagnet) == 0x11B0, "C_PhysMagnet size should be 0x11B0");
 
 #endif
 	}

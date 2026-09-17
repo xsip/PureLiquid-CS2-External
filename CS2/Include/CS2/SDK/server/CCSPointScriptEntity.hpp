@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseEntity.hpp"
 
 
 
@@ -21,10 +21,10 @@ namespace CS2 {
 	namespace server {
 		class CCSPointScriptEntity : public CS2::server::CBaseEntity {
 		public:
-			S2_PAD(0x168);
+			S2_PAD(0x180);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSPointScriptEntity) == 0x610, "CCSPointScriptEntity size should be 0x610");
+		//static_assert(sizeof(CS2::server::CCSPointScriptEntity) == 0x628, "CCSPointScriptEntity size should be 0x628");
 
 #endif
 	}

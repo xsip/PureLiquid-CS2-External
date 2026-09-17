@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/ParticleIndex_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "ParticleIndex_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -31,7 +31,7 @@ namespace CS2 {
 			NESTED_PROPERTY(m_iIndex,IDENTITY(client::ParticleIndex_t), 0x4);
 			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x8);
 			PROPERTY(m_flGrowthDuration,float32, 0xc);
-			PROPERTY(m_vecGrowthOrigin,GlobalTypes::Vector, 0x10);
+			PROPERTY(m_vecGrowthOrigin,GlobalTypes::VectorWS, 0x10);
 			PROPERTY(m_flEndcapTime,float32, 0x1c);
 			PROPERTY(m_bMarkedForDelete,bool, 0x20);
 			S2_PAD(0x24);

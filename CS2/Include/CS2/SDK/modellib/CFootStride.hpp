@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CFootCycleDefinition.hpp>
-#include <SDK/modellib/CFootTrajectories.hpp>
+#include "CFootCycleDefinition.hpp"
+#include "CFootTrajectories.hpp"
 
 
 

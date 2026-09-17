@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseButton.hpp>
+#include "CBaseButton.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPhysicalButton) == 0x8E8, "CPhysicalButton size should be 0x8E8");
+		//static_assert(sizeof(CS2::server::CPhysicalButton) == 0x8F0, "CPhysicalButton size should be 0x8F0");
 
 #endif
 	}

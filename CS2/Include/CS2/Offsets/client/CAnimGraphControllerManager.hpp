@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xB0
+			// Class size: 0x98
 			namespace CAnimGraphControllerManager /**/ {
 				constexpr std::ptrdiff_t m_controllers = 0x0; // GlobalTypes::CUtlVector<client::CAnimGraphControllerBase*>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bGraphBindingsCreated = 0xa8; // bool m_bGraphBindingsCreated; |  0xa8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGraphBindingsCreated = 0x90; // bool m_bGraphBindingsCreated; |  0x90 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

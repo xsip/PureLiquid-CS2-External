@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BarnLight.hpp>
+#include "C_BarnLight.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_RectLight : public CS2::client::C_BarnLight {
 		public:
-			PROPERTY(m_bShowLight,bool, 0x12b8);
+			PROPERTY(m_bShowLight,bool, 0x12c0);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_RectLight) == 0x12C0, "C_RectLight size should be 0x12C0");
+		//static_assert(sizeof(CS2::client::C_RectLight) == 0x12C8, "C_RectLight size should be 0x12C8");
 
 #endif
 	}

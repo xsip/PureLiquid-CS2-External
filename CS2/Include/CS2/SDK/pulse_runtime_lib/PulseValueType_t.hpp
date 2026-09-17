@@ -6,10 +6,11 @@
 namespace CS2 {
 	namespace pulse_runtime_lib {
 		enum PulseValueType_t : std::uint32_t {
+			PulseValueType_t_PVAL_ANIM_SEQUENCE = 0x1f,
 			PulseValueType_t_PVAL_ARRAY = 0x1c,
 			PulseValueType_t_PVAL_BOOL = 0x0,
 			PulseValueType_t_PVAL_COLOR_RGB = 0xb,
-			PulseValueType_t_PVAL_COUNT = 0x1f,
+			PulseValueType_t_PVAL_COUNT = 0x21,
 			PulseValueType_t_PVAL_CURSOR_FLOW = 0x16,
 			PulseValueType_t_PVAL_EHANDLE = 0xd,
 			PulseValueType_t_PVAL_ENTITY_NAME = 0x12,
@@ -34,6 +35,7 @@ namespace CS2 {
 			PulseValueType_t_PVAL_TYPESAFE_INT64 = 0x1d,
 			PulseValueType_t_PVAL_UNKNOWN = 0x18,
 			PulseValueType_t_PVAL_VARIANT = 0x17,
+			PulseValueType_t_PVAL_VDATA_CHOICE = 0x20,
 			PulseValueType_t_PVAL_VEC2 = 0x4,
 			PulseValueType_t_PVAL_VEC3 = 0x5,
 			PulseValueType_t_PVAL_VEC3_WORLDSPACE = 0x7,

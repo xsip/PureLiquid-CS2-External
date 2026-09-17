@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CPlayerPawnComponent.hpp>
-#include <SDK/client/ObserverMode_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CPlayerPawnComponent.hpp"
+#include "ObserverMode_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 

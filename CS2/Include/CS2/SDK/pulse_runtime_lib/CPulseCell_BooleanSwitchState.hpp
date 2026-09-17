@@ -4,15 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseState.hpp>
-#include <SDK/pulse_runtime_lib/PulseObservableBoolExpression_t.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
+#include "CPulseCell_BaseState.hpp"
+#include "CPulse_OutflowConnection.hpp"
 
 
 
@@ -23,14 +22,13 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_BooleanSwitchState : public CS2::pulse_runtime_lib::CPulseCell_BaseState {
 		public:
-			NESTED_PROPERTY(m_Condition,IDENTITY(pulse_runtime_lib::PulseObservableBoolExpression_t), 0x48);
-			NESTED_PROPERTY(m_Always,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0xc0);
-			NESTED_PROPERTY(m_WhenTrue,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x108);
-			NESTED_PROPERTY(m_WhenFalse,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x150);
-			S2_PAD(0x150);
+			PROPERTY(m_Condition,IDENTITY(GlobalTypes::CPulseObservableExpression< bool >), 0xd8);
+			NESTED_PROPERTY(m_WhenTrue,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x150);
+			NESTED_PROPERTY(m_WhenFalse,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x198);
+			S2_PAD(0x108);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_BooleanSwitchState) == 0x198, "CPulseCell_BooleanSwitchState size should be 0x198");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_BooleanSwitchState) == 0x1E0, "CPulseCell_BooleanSwitchState size should be 0x1E0");
 
 #endif
 	}

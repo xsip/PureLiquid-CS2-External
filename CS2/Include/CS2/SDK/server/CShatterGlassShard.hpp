@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/ShatterGlassStressType.hpp>
-#include <SDK/client/OnFrame.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "../client/ShatterGlassStressType.hpp"
+#include "../client/OnFrame.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 

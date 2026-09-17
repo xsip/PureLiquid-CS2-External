@@ -30,8 +30,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hDynamicEntity = 0x600; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_iszDynamicEntityName = 0x608; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_flPathingDistanceNormFactor = 0x610; // float32 m_flPathingDistanceNormFactor; |  0x610 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vPathingSourcePos = 0x614; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vPathingListenerPos = 0x620; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vPathingSourcePos = 0x614; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vPathingListenerPos = 0x620; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vPathingDirection = 0x62c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_nPathingSourceIndex = 0x638; // int32_t m_nPathingSourceIndex; |  0x638 | Schema_Builtin | Size: 0x4
 			}

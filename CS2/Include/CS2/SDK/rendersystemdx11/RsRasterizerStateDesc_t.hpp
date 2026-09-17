@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/rendersystemdx11/RsFillMode_t.hpp>
-#include <SDK/rendersystemdx11/RsCullMode_t.hpp>
+#include "RsFillMode_t.hpp"
+#include "RsCullMode_t.hpp"
 
 
 

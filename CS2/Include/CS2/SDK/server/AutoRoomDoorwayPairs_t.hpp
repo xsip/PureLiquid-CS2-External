@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,8 +20,8 @@ namespace CS2 {
 	namespace server {
 		class AutoRoomDoorwayPairs_t  {
 		public:
-			PROPERTY(vP1,GlobalTypes::Vector, 0x0);
-			PROPERTY(vP2,GlobalTypes::Vector, 0xc);
+			PROPERTY(vP1,GlobalTypes::VectorWS, 0x0);
+			PROPERTY(vP2,GlobalTypes::VectorWS, 0xc);
 			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/compositematerialslib/CompMatPropertyMutatorType_t.hpp>
-#include <SDK/compositematerialslib/CompositeMaterialInputLooseVariable_t.hpp>
-#include <SDK/compositematerialslib/CompMatMutatorCondition_t.hpp>
+#include "CompMatPropertyMutatorType_t.hpp"
+#include "CompositeMaterialInputLooseVariable_t.hpp"
+#include "CompMatMutatorCondition_t.hpp"
 
 
 

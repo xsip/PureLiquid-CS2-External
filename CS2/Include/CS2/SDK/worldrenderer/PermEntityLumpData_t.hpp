@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/resourcesystem/InfoForResourceTypeCEntityLump.hpp>
-#include <SDK/worldrenderer/EntityKeyValueData_t.hpp>
+#include "../resourcesystem/InfoForResourceTypeCEntityLump.hpp"
+#include "EntityKeyValueData_t.hpp"
 
 
 

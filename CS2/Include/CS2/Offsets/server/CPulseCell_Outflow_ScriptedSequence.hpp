@@ -8,18 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x150
+			// Class size: 0x198
 			namespace CPulseCell_Outflow_ScriptedSequence /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
-				constexpr std::ptrdiff_t m_szSyncGroup = 0x48; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nExpectedNumSequencesInSyncGroup = 0x50; // int32_t m_nExpectedNumSequencesInSyncGroup; |  0x50 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bEnsureOnNavmeshOnFinish = 0x54; // bool m_bEnsureOnNavmeshOnFinish; |  0x54 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDontTeleportAtEnd = 0x55; // bool m_bDontTeleportAtEnd; |  0x55 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisallowInterrupts = 0x56; // bool m_bDisallowInterrupts; |  0x56 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_scriptedSequenceDataMain = 0x58; // server::PulseScriptedSequenceData_t  | Schema_DeclaredClass | Size: 0x38
-				constexpr std::ptrdiff_t m_vecAdditionalActors = 0x90; // GlobalTypes::CUtlVector<server::PulseScriptedSequenceData_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_OnFinished = 0xa8; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_OnCanceled = 0xf0; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_Triggers = 0x138; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_szSyncGroup = 0xd8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nExpectedNumSequencesInSyncGroup = 0xe0; // int32_t m_nExpectedNumSequencesInSyncGroup; |  0xe0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bEnsureOnNavmeshOnFinish = 0xe4; // bool m_bEnsureOnNavmeshOnFinish; |  0xe4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDontTeleportAtEnd = 0xe5; // bool m_bDontTeleportAtEnd; |  0xe5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisallowInterrupts = 0xe6; // bool m_bDisallowInterrupts; |  0xe6 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_scriptedSequenceDataMain = 0xe8; // server::PulseScriptedSequenceData_t  | Schema_DeclaredClass | Size: 0x38
+				constexpr std::ptrdiff_t m_vecAdditionalActors = 0x120; // GlobalTypes::CUtlVector<server::PulseScriptedSequenceData_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_OnFinished = 0x138; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_Triggers = 0x180; // GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

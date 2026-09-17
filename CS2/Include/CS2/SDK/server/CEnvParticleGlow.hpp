@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CParticleSystem.hpp>
+#include "CParticleSystem.hpp"
 
 
 
@@ -26,15 +26,15 @@ namespace CS2 {
 	namespace server {
 		class CEnvParticleGlow : public CS2::server::CParticleSystem {
 		public:
-			PROPERTY(m_flAlphaScale,float32, 0xce0);
-			PROPERTY(m_flRadiusScale,float32, 0xce4);
-			PROPERTY(m_flSelfIllumScale,float32, 0xce8);
-			PROPERTY(m_ColorTint,GlobalTypes::Color, 0xcec);
-			PROPERTY(m_hTextureOverride,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xcf0);
+			PROPERTY(m_flAlphaScale,float32, 0xcf8);
+			PROPERTY(m_flRadiusScale,float32, 0xcfc);
+			PROPERTY(m_flSelfIllumScale,float32, 0xd00);
+			PROPERTY(m_ColorTint,GlobalTypes::Color, 0xd04);
+			PROPERTY(m_hTextureOverride,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xd08);
 			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEnvParticleGlow) == 0xCF8, "CEnvParticleGlow size should be 0xCF8");
+		//static_assert(sizeof(CS2::server::CEnvParticleGlow) == 0xD10, "CEnvParticleGlow size should be 0xD10");
 
 #endif
 	}

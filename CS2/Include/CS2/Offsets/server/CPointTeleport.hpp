@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x4C8
 			namespace CPointTeleport /*: public CS2::server::CServerOnlyPointEntity*/ {
-				constexpr std::ptrdiff_t m_vSaveOrigin = 0x4a8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vSaveOrigin = 0x4a8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vSaveAngles = 0x4b4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_bTeleportParentedEntities = 0x4c0; // bool m_bTeleportParentedEntities; |  0x4c0 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bTeleportUseCurrentAngle = 0x4c1; // bool m_bTeleportUseCurrentAngle; |  0x4c1 | Schema_Builtin | Size: 0x1

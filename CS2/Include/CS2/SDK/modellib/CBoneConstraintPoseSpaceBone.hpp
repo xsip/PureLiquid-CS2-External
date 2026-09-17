@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CBaseConstraint.hpp>
-#include <SDK/modellib/CBoneConstraintPoseSpaceBone_Input_t.hpp>
+#include "CBaseConstraint.hpp"
+#include "CBoneConstraintPoseSpaceBone_Input_t.hpp"
 
 
 

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CTakeDamageInfo.hpp>
-#include <SDK/client/CTakeDamageResult.hpp>
+#include "CTakeDamageInfo.hpp"
+#include "CTakeDamageResult.hpp"
 
 
 
@@ -30,11 +30,11 @@ namespace CS2 {
 			PROPERTY(nSummarisedCount,int32_t, 0x0);
 			NESTED_PROPERTY(info,IDENTITY(client::CTakeDamageInfo), 0x8);
 			NESTED_PROPERTY(result,IDENTITY(client::CTakeDamageResult), 0x120);
-			PROPERTY(hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x170);
-			S2_PAD(0x178);
+			PROPERTY(hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x180);
+			S2_PAD(0x188);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::SummaryTakeDamageInfo_t) == 0x178, "SummaryTakeDamageInfo_t size should be 0x178");
+		//static_assert(sizeof(CS2::client::SummaryTakeDamageInfo_t) == 0x188, "SummaryTakeDamageInfo_t size should be 0x188");
 
 #endif
 	}

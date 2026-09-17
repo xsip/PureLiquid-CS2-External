@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/smartprops/CSmartPropOperation.hpp>
-#include <SDK/smartprops/CSmartPropAttributeChoiceSelectionMode.hpp>
-#include <SDK/smartprops/ApplyColorMode_t.hpp>
+#include "CSmartPropOperation.hpp"
+#include "CSmartPropAttributeChoiceSelectionMode.hpp"
+#include "ApplyColorMode_t.hpp"
 
 
 

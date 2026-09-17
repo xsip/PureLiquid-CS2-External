@@ -10,7 +10,6 @@ namespace CS2 {
 		namespace rendersystemdx11 {
 			// Class size: 0x8
 			namespace RsDepthStencilStateDesc_t /**/ {
-				constexpr std::ptrdiff_t m_depthFunc = 0x1; // rendersystemdx11::RsComparison_t  | Schema_DeclaredEnum | Size: 0x1
 				constexpr std::ptrdiff_t m_stencilState = 0x2; // rendersystemdx11::RsStencilStateDesc_t  | Schema_DeclaredClass | Size: 0x6
 			}
 		}

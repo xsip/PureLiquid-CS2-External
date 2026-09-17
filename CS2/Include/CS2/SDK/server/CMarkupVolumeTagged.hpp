@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CMarkupVolume.hpp>
+#include "CMarkupVolume.hpp"
 
 
 
@@ -21,17 +21,17 @@ namespace CS2 {
 	namespace server {
 		class CMarkupVolumeTagged : public CS2::server::CMarkupVolume {
 		public:
-			NESTED_PROPERTY(m_GroupNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x770);
-			NESTED_PROPERTY(m_Tags,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x788);
-			PROPERTY(m_bIsGroup,bool, 0x7a0);
-			PROPERTY(m_bGroupByPrefab,bool, 0x7a1);
-			PROPERTY(m_bGroupByVolume,bool, 0x7a2);
-			PROPERTY(m_bGroupOtherGroups,bool, 0x7a3);
-			PROPERTY(m_bIsInGroup,bool, 0x7a4);
+			NESTED_PROPERTY(m_GroupNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x778);
+			NESTED_PROPERTY(m_Tags,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x790);
+			PROPERTY(m_bIsGroup,bool, 0x7a8);
+			PROPERTY(m_bGroupByPrefab,bool, 0x7a9);
+			PROPERTY(m_bGroupByVolume,bool, 0x7aa);
+			PROPERTY(m_bGroupOtherGroups,bool, 0x7ab);
+			PROPERTY(m_bIsInGroup,bool, 0x7ac);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CMarkupVolumeTagged) == 0x7A8, "CMarkupVolumeTagged size should be 0x7A8");
+		//static_assert(sizeof(CS2::server::CMarkupVolumeTagged) == 0x7B0, "CMarkupVolumeTagged size should be 0x7B0");
 
 #endif
 	}

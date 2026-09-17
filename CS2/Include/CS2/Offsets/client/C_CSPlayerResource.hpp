@@ -13,8 +13,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bHostageAlive = 0x600; // bool m_bHostageAlive[12]; |  0x600 | Schema_FixedArray | Size: 0xc
 				constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x60c; // bool m_isHostageFollowingSomeone[12]; |  0x60c | Schema_FixedArray | Size: 0xc
 				constexpr std::ptrdiff_t m_iHostageEntityIDs = 0x618; // GlobalTypes::CEntityIndex[12]  | Schema_FixedArray | Size: 0x30
-				constexpr std::ptrdiff_t m_bombsiteCenterA = 0x648; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bombsiteCenterB = 0x654; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bombsiteCenterA = 0x648; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bombsiteCenterB = 0x654; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_hostageRescueX = 0x660; // int32_t m_hostageRescueX[4]; |  0x660 | Schema_FixedArray | Size: 0x10
 				constexpr std::ptrdiff_t m_hostageRescueY = 0x670; // int32_t m_hostageRescueY[4]; |  0x670 | Schema_FixedArray | Size: 0x10
 				constexpr std::ptrdiff_t m_hostageRescueZ = 0x680; // int32_t m_hostageRescueZ[4]; |  0x680 | Schema_FixedArray | Size: 0x10

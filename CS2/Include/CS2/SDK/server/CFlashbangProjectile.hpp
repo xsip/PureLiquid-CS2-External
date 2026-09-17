@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseCSGrenadeProjectile.hpp>
+#include "CBaseCSGrenadeProjectile.hpp"
 
 
 
@@ -21,13 +21,13 @@ namespace CS2 {
 	namespace server {
 		class CFlashbangProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_flTimeToDetonate,float32, 0xa30);
-			PROPERTY(m_numOpponentsHit,uint8_t, 0xa34);
-			PROPERTY(m_numTeammatesHit,uint8_t, 0xa35);
+			PROPERTY(m_flTimeToDetonate,float32, 0xa60);
+			PROPERTY(m_numOpponentsHit,uint8_t, 0xa64);
+			PROPERTY(m_numTeammatesHit,uint8_t, 0xa65);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFlashbangProjectile) == 0xA40, "CFlashbangProjectile size should be 0xA40");
+		//static_assert(sizeof(CS2::server::CFlashbangProjectile) == 0xA70, "CFlashbangProjectile size should be 0xA70");
 
 #endif
 	}

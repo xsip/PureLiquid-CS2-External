@@ -10,8 +10,8 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x18
 			namespace AutoRoomDoorwayPairs_t /**/ {
-				constexpr std::ptrdiff_t vP1 = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t vP2 = 0xc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t vP1 = 0x0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t vP2 = 0xc; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

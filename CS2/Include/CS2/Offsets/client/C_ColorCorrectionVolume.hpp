@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x12A0
+			// Class size: 0x12C0
 			namespace C_ColorCorrectionVolume /*: public CS2::client::C_BaseTrigger*/ {
-				constexpr std::ptrdiff_t m_LastEnterWeight = 0x1078; // float32 m_LastEnterWeight; |  0x1078 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_LastEnterTime = 0x107c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_LastExitWeight = 0x1080; // float32 m_LastExitWeight; |  0x1080 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_LastExitTime = 0x1084; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bEnabled = 0x1088; // bool m_bEnabled; |  0x1088 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_MaxWeight = 0x108c; // float32 m_MaxWeight; |  0x108c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_FadeDuration = 0x1090; // float32 m_FadeDuration; |  0x1090 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_Weight = 0x1094; // float32 m_Weight; |  0x1094 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_lookupFilename = 0x1098; // char m_lookupFilename[512]; |  0x1098 | Schema_FixedArray | Size: 0x200
+				constexpr std::ptrdiff_t m_LastEnterWeight = 0x1098; // float32 m_LastEnterWeight; |  0x1098 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_LastEnterTime = 0x109c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_LastExitWeight = 0x10a0; // float32 m_LastExitWeight; |  0x10a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_LastExitTime = 0x10a4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bEnabled = 0x10a8; // bool m_bEnabled; |  0x10a8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_MaxWeight = 0x10ac; // float32 m_MaxWeight; |  0x10ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_FadeDuration = 0x10b0; // float32 m_FadeDuration; |  0x10b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_Weight = 0x10b4; // float32 m_Weight; |  0x10b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_lookupFilename = 0x10b8; // char m_lookupFilename[512]; |  0x10b8 | Schema_FixedArray | Size: 0x200
 			}
 		}
 	}

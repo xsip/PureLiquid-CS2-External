@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/smartprops/CSmartPropElement_Group.hpp>
-#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
-#include <SDK/smartprops/CSmartPropAttributeScaleMode.hpp>
-#include <SDK/smartprops/CSmartPropAttributePickMode.hpp>
+#include "CSmartPropElement_Group.hpp"
+#include "CSmartPropAttributeCoordinateSpace.hpp"
+#include "CSmartPropAttributeScaleMode.hpp"
+#include "CSmartPropAttributePickMode.hpp"
 
 
 

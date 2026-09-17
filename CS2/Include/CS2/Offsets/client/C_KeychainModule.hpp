@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1168
+			// Class size: 0x1190
 			namespace C_KeychainModule /*: public CS2::client::C_CS2WeaponModuleBase*/ {
-				constexpr std::ptrdiff_t m_nKeychainDefID = 0x1160; // uint32_t m_nKeychainDefID; |  0x1160 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nKeychainSeed = 0x1164; // uint32_t m_nKeychainSeed; |  0x1164 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nKeychainDefID = 0x1188; // uint32_t m_nKeychainDefID; |  0x1188 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nKeychainSeed = 0x118c; // uint32_t m_nKeychainSeed; |  0x118c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

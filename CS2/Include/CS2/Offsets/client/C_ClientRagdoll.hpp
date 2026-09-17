@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x11F0
+			// Class size: 0x1218
 			namespace C_ClientRagdoll /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_bFadeOut = 0x1158; // bool m_bFadeOut; |  0x1158 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bImportant = 0x1159; // bool m_bImportant; |  0x1159 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flEffectTime = 0x115c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_gibDespawnTime = 0x1160; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_iCurrentFriction = 0x1164; // int32_t m_iCurrentFriction; |  0x1164 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iMinFriction = 0x1168; // int32_t m_iMinFriction; |  0x1168 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iMaxFriction = 0x116c; // int32_t m_iMaxFriction; |  0x116c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iFrictionAnimState = 0x1170; // int32_t m_iFrictionAnimState; |  0x1170 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bReleaseRagdoll = 0x1174; // bool m_bReleaseRagdoll; |  0x1174 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iEyeAttachment = 0x1175; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_bFadingOut = 0x1176; // bool m_bFadingOut; |  0x1176 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flScaleEnd = 0x1178; // float32 m_flScaleEnd[10]; |  0x1178 | Schema_FixedArray | Size: 0x28
-				constexpr std::ptrdiff_t m_flScaleTimeStart = 0x11a0; // GlobalTypes::GameTime_t[10]  | Schema_FixedArray | Size: 0x28
-				constexpr std::ptrdiff_t m_flScaleTimeEnd = 0x11c8; // GlobalTypes::GameTime_t[10]  | Schema_FixedArray | Size: 0x28
+				constexpr std::ptrdiff_t m_bFadeOut = 0x1180; // bool m_bFadeOut; |  0x1180 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bImportant = 0x1181; // bool m_bImportant; |  0x1181 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flEffectTime = 0x1184; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_gibDespawnTime = 0x1188; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_iCurrentFriction = 0x118c; // int32_t m_iCurrentFriction; |  0x118c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iMinFriction = 0x1190; // int32_t m_iMinFriction; |  0x1190 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iMaxFriction = 0x1194; // int32_t m_iMaxFriction; |  0x1194 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iFrictionAnimState = 0x1198; // int32_t m_iFrictionAnimState; |  0x1198 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bReleaseRagdoll = 0x119c; // bool m_bReleaseRagdoll; |  0x119c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iEyeAttachment = 0x119d; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_bFadingOut = 0x119e; // bool m_bFadingOut; |  0x119e | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flScaleEnd = 0x11a0; // float32 m_flScaleEnd[10]; |  0x11a0 | Schema_FixedArray | Size: 0x28
+				constexpr std::ptrdiff_t m_flScaleTimeStart = 0x11c8; // GlobalTypes::GameTime_t[10]  | Schema_FixedArray | Size: 0x28
+				constexpr std::ptrdiff_t m_flScaleTimeEnd = 0x11f0; // GlobalTypes::GameTime_t[10]  | Schema_FixedArray | Size: 0x28
 			}
 		}
 	}

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
+#include "C_BaseModelEntity.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_World) == 0xFA8, "C_World size should be 0xFA8");
+		//static_assert(sizeof(CS2::client::C_World) == 0xFB0, "C_World size should be 0xFB0");
 
 #endif
 	}

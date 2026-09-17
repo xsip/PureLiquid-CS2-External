@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace worldrenderer {
-			// Class size: 0x68
+			// Class size: 0x78
 			namespace AggregateRTProxySceneObject_t /**/ {
 				constexpr std::ptrdiff_t m_nLayer = 0x0; // int16_t m_nLayer; |  0x0 | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_BLASes = 0x8; // GlobalTypes::CUtlVector<worldrenderer::RTProxyBLAS_t>  | Schema_Atomic | Size: 0x18
@@ -16,6 +16,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_VBData = 0x38; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_IBData = 0x48; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_InstanceAlbedoData = 0x58; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_InstanceEmissiveData = 0x68; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
 			}
 		}
 	}

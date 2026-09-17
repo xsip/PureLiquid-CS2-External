@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerBase.hpp>
-#include <SDK/soundsystem_voicecontainers/CSoundContainerReference.hpp>
+#include "CVoiceContainerBase.hpp"
+#include "CSoundContainerReference.hpp"
 
 
 
@@ -22,18 +22,18 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerLoopXFade : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_sound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xa8);
-			PROPERTY(m_flLoopEnd,float32, 0xc8);
-			PROPERTY(m_flLoopStart,float32, 0xcc);
-			PROPERTY(m_flFadeOut,float32, 0xd0);
-			PROPERTY(m_flFadeIn,float32, 0xd4);
-			PROPERTY(m_bPlayHead,bool, 0xd8);
-			PROPERTY(m_bPlayTail,bool, 0xd9);
-			PROPERTY(m_bEqualPow,bool, 0xda);
+			NESTED_PROPERTY(m_sound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0x70);
+			PROPERTY(m_flLoopEnd,float32, 0x90);
+			PROPERTY(m_flLoopStart,float32, 0x94);
+			PROPERTY(m_flFadeOut,float32, 0x98);
+			PROPERTY(m_flFadeIn,float32, 0x9c);
+			PROPERTY(m_bPlayHead,bool, 0xa0);
+			PROPERTY(m_bPlayTail,bool, 0xa1);
+			PROPERTY(m_bEqualPow,bool, 0xa2);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerLoopXFade) == 0xE0, "CVoiceContainerLoopXFade size should be 0xE0");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerLoopXFade) == 0xA8, "CVoiceContainerLoopXFade size should be 0xA8");
 
 #endif
 	}

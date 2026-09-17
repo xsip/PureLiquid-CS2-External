@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x40
 			namespace constraint_hingeparams_t /**/ {
-				constexpr std::ptrdiff_t worldPosition = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t worldPosition = 0x0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t worldAxisDirection = 0xc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t hingeAxis = 0x18; // client::constraint_axislimit_t  | Schema_DeclaredClass | Size: 0x10
 				constexpr std::ptrdiff_t constraint = 0x28; // client::constraint_breakableparams_t  | Schema_DeclaredClass | Size: 0x18

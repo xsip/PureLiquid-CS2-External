@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPassthroughNode_CDefinition.hpp>
-#include <SDK/animlib/CNmBitFlags.hpp>
+#include "CNmPassthroughNode_CDefinition.hpp"
+#include "CNmBitFlags.hpp"
 
 
 
@@ -26,9 +26,10 @@ namespace CS2 {
 			PROPERTY(m_desiredFacingDirectionNodeIdx,int16_t, 0x1a);
 			PROPERTY(m_linearVelocityLimitNodeIdx,int16_t, 0x1c);
 			PROPERTY(m_angularVelocityLimitNodeIdx,int16_t, 0x1e);
-			PROPERTY(m_maxLinearVelocity,float32, 0x20);
-			PROPERTY(m_maxAngularVelocityRadians,float32, 0x24);
-			NESTED_PROPERTY(m_overrideFlags,IDENTITY(animlib::CNmBitFlags), 0x28);
+			PROPERTY(m_enabledNodeIdx,int16_t, 0x20);
+			PROPERTY(m_maxLinearVelocity,float32, 0x24);
+			PROPERTY(m_maxAngularVelocityRadians,float32, 0x28);
+			NESTED_PROPERTY(m_overrideFlags,IDENTITY(animlib::CNmBitFlags), 0x2c);
 			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS

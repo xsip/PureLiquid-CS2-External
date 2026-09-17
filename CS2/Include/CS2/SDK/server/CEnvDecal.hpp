@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
+#include "CBaseModelEntity.hpp"
 
 
 
@@ -26,19 +26,19 @@ namespace CS2 {
 	namespace server {
 		class CEnvDecal : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_hDecalMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x768);
-			PROPERTY(m_flWidth,float32, 0x770);
-			PROPERTY(m_flHeight,float32, 0x774);
-			PROPERTY(m_flDepth,float32, 0x778);
-			PROPERTY(m_nRenderOrder,uint32_t, 0x77c);
-			PROPERTY(m_bProjectOnWorld,bool, 0x780);
-			PROPERTY(m_bProjectOnCharacters,bool, 0x781);
-			PROPERTY(m_bProjectOnWater,bool, 0x782);
-			PROPERTY(m_flDepthSortBias,float32, 0x784);
+			PROPERTY(m_hDecalMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x770);
+			PROPERTY(m_flWidth,float32, 0x778);
+			PROPERTY(m_flHeight,float32, 0x77c);
+			PROPERTY(m_flDepth,float32, 0x780);
+			PROPERTY(m_nRenderOrder,uint32_t, 0x784);
+			PROPERTY(m_bProjectOnWorld,bool, 0x788);
+			PROPERTY(m_bProjectOnCharacters,bool, 0x789);
+			PROPERTY(m_bProjectOnWater,bool, 0x78a);
+			PROPERTY(m_flDepthSortBias,float32, 0x78c);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEnvDecal) == 0x788, "CEnvDecal size should be 0x788");
+		//static_assert(sizeof(CS2::server::CEnvDecal) == 0x790, "CEnvDecal size should be 0x790");
 
 #endif
 	}

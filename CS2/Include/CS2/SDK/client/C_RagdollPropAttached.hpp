@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_RagdollProp.hpp>
+#include "C_RagdollProp.hpp"
 
 
 
@@ -21,17 +21,17 @@ namespace CS2 {
 	namespace client {
 		class C_RagdollPropAttached : public CS2::client::C_RagdollProp {
 		public:
-			PROPERTY(m_boneIndexAttached,uint32_t, 0x11e0);
-			PROPERTY(m_ragdollAttachedObjectIndex,uint32_t, 0x11e4);
-			PROPERTY(m_attachmentPointBoneSpace,GlobalTypes::Vector, 0x11e8);
-			PROPERTY(m_attachmentPointRagdollSpace,GlobalTypes::Vector, 0x11f4);
-			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x1200);
-			PROPERTY(m_parentTime,float32, 0x120c);
-			PROPERTY(m_bHasParent,bool, 0x1210);
+			PROPERTY(m_boneIndexAttached,uint32_t, 0x1208);
+			PROPERTY(m_ragdollAttachedObjectIndex,uint32_t, 0x120c);
+			PROPERTY(m_attachmentPointBoneSpace,GlobalTypes::Vector, 0x1210);
+			PROPERTY(m_attachmentPointRagdollSpace,GlobalTypes::Vector, 0x121c);
+			PROPERTY(m_vecOffset,GlobalTypes::Vector, 0x1228);
+			PROPERTY(m_parentTime,float32, 0x1234);
+			PROPERTY(m_bHasParent,bool, 0x1238);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_RagdollPropAttached) == 0x1218, "C_RagdollPropAttached size should be 0x1218");
+		//static_assert(sizeof(CS2::client::C_RagdollPropAttached) == 0x1240, "C_RagdollPropAttached size should be 0x1240");
 
 #endif
 	}

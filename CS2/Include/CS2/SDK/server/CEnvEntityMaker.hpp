@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPointEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CPointEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -31,7 +31,7 @@ namespace CS2 {
 			PROPERTY(m_vecEntityMaxs,GlobalTypes::Vector, 0x4b4);
 			PROPERTY(m_hCurrentInstance,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c0);
 			PROPERTY(m_hCurrentBlocker,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c4);
-			PROPERTY(m_vecBlockerOrigin,GlobalTypes::Vector, 0x4c8);
+			PROPERTY(m_vecBlockerOrigin,GlobalTypes::VectorWS, 0x4c8);
 			PROPERTY(m_angPostSpawnDirection,GlobalTypes::QAngle, 0x4d4);
 			PROPERTY(m_flPostSpawnDirectionVariance,float32, 0x4e0);
 			PROPERTY(m_flPostSpawnSpeed,float32, 0x4e4);

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CBasePulseGraphInstance.hpp>
+#include "../pulse_runtime_lib/CBasePulseGraphInstance.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particleslib::CParticleCollectionBindingInstance) == 0x138, "CParticleCollectionBindingInstance size should be 0x138");
+		//static_assert(sizeof(CS2::particleslib::CParticleCollectionBindingInstance) == 0x130, "CParticleCollectionBindingInstance size should be 0x130");
 
 #endif
 	}

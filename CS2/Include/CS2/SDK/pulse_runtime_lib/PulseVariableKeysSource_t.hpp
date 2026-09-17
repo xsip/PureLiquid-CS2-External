@@ -6,9 +6,10 @@
 namespace CS2 {
 	namespace pulse_runtime_lib {
 		enum PulseVariableKeysSource_t : std::uint32_t {
-			PulseVariableKeysSource_t_COUNT = 0x5,
+			PulseVariableKeysSource_t_COUNT = 0x6,
 			PulseVariableKeysSource_t_CPP = 0x1,
 			PulseVariableKeysSource_t_PRIVATE = 0x0,
+			PulseVariableKeysSource_t_VDATA = 0x5,
 			PulseVariableKeysSource_t_VMAP = 0x2,
 			PulseVariableKeysSource_t_VMDL = 0x3,
 			PulseVariableKeysSource_t_XML = 0x4

@@ -7,7 +7,13 @@ namespace CS2 {
 	namespace rendersystemdx11 {
 		enum RsComparison_t : std::uint8_t {
 			RsComparison_t_RS_CMP_ALWAYS = 0x7,
+			RsComparison_t_RS_CMP_CLOSER = 0x9,
+			RsComparison_t_RS_CMP_CLOSER_EQUAL = 0xb,
+			RsComparison_t_RS_CMP_CLOSER_FARTHER_FLAG = 0x8,
 			RsComparison_t_RS_CMP_EQUAL = 0x2,
+			RsComparison_t_RS_CMP_FARTHER = 0xc,
+			RsComparison_t_RS_CMP_FARTHER_EQUAL = 0xe,
+			RsComparison_t_RS_CMP_FUNC_MASK = 0x7,
 			RsComparison_t_RS_CMP_GREATER = 0x4,
 			RsComparison_t_RS_CMP_GREATER_EQUAL = 0x6,
 			RsComparison_t_RS_CMP_LESS = 0x1,

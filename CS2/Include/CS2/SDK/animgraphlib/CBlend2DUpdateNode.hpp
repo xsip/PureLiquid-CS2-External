@@ -4,20 +4,20 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
-#include <SDK/animgraphlib/BlendItem_t.hpp>
-#include <SDK/animgraphlib/TagSpan_t.hpp>
-#include <SDK/animgraphlib/CParamSpanUpdater.hpp>
-#include <SDK/animgraphlib/CAnimInputDamping.hpp>
-#include <SDK/animgraphlib/AnimValueSource.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animgraphlib/Blend2DMode.hpp>
+#include "CAnimUpdateNodeBase.hpp"
+#include "BlendItem_t.hpp"
+#include "TagSpan_t.hpp"
+#include "CParamSpanUpdater.hpp"
+#include "CAnimInputDamping.hpp"
+#include "AnimValueSource.hpp"
+#include "CAnimParamHandle.hpp"
+#include "Blend2DMode.hpp"
 
 
 

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/GameTime_t.hpp>
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -21,8 +21,8 @@ namespace CS2 {
 	namespace server {
 		class locksound_t  {
 		public:
-			PROPERTY(sLockedSound,GlobalTypes::CUtlSymbolLarge*, 0x8);
-			PROPERTY(sUnlockedSound,GlobalTypes::CUtlSymbolLarge*, 0x10);
+			PROPERTY(sLockedSound,GlobalTypes::CGameSoundEventName, 0x8);
+			PROPERTY(sUnlockedSound,GlobalTypes::CGameSoundEventName, 0x10);
 			NESTED_PROPERTY(flwaitSound,IDENTITY(entity2::GameTime_t), 0x18);
 			S2_PAD(0x20);
 		};

@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0xD8
+			// Class size: 0xA0
 			namespace CVoiceContainerLoopTrigger /*: public CS2::soundsystem_voicecontainers::CVoiceContainerBase*/ {
-				constexpr std::ptrdiff_t m_sound = 0xa8; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x20
-				constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0xc8; // float32 m_flRetriggerTimeMin; |  0xc8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0xcc; // float32 m_flRetriggerTimeMax; |  0xcc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeTime = 0xd0; // float32 m_flFadeTime; |  0xd0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bCrossFade = 0xd4; // bool m_bCrossFade; |  0xd4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0x70; // float32 m_flRetriggerTimeMin; |  0x70 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0x74; // float32 m_flRetriggerTimeMax; |  0x74 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeTime = 0x78; // float32 m_flFadeTime; |  0x78 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bCrossFade = 0x7c; // bool m_bCrossFade; |  0x7c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sound = 0x80; // soundsystem_voicecontainers::CSoundContainerReference  | Schema_DeclaredClass | Size: 0x20
 			}
 		}
 	}

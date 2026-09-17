@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/PhysInterfaceId_t.hpp>
-#include <SDK/mathlib_extended/AABB_t.hpp>
-#include <SDK/client/physics_save_sphere_t.hpp>
+#include "PhysInterfaceId_t.hpp"
+#include "../mathlib_extended/AABB_t.hpp"
+#include "physics_save_sphere_t.hpp"
 
 
 
@@ -31,7 +31,7 @@ namespace CS2 {
 			PROPERTY(type,IDENTITY(client::PhysInterfaceId_t), 0x0);
 			PROPERTY(hEntity,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x4);
 			PROPERTY(fieldName,GlobalTypes::CUtlSymbolLarge*, 0x8);
-			PROPERTY(nObjects,int32_t, 0x10);
+			PROPERTY(bSaveObject,bool, 0x10);
 			PROPERTY(modelName,GlobalTypes::CUtlSymbolLarge*, 0x18);
 			NESTED_PROPERTY(bbox,IDENTITY(mathlib_extended::AABB_t), 0x20);
 			NESTED_PROPERTY(sphere,IDENTITY(client::physics_save_sphere_t), 0x38);

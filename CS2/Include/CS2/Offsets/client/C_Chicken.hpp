@@ -8,15 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x18A0
+			// Class size: 0x18B0
 			namespace C_Chicken /*: public CS2::client::C_DynamicProp*/ {
-				constexpr std::ptrdiff_t m_hHolidayHatAddon = 0x13a8; // GlobalTypes::CHandle<client::CBaseAnimGraph>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_jumpedThisFrame = 0x13ac; // bool m_jumpedThisFrame; |  0x13ac | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_leader = 0x13b0; // GlobalTypes::CHandle<client::C_CSPlayerPawn>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_AttributeManager = 0x13b8; // client::C_AttributeContainer  | Schema_DeclaredClass | Size: 0x4d0
-				constexpr std::ptrdiff_t m_bAttributesInitialized = 0x1888; // bool m_bAttributesInitialized; |  0x1888 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hWaterWakeParticles = 0x188c; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bIsPreviewModel = 0x1890; // bool m_bIsPreviewModel; |  0x1890 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_leader = 0x13c8; // GlobalTypes::CHandle<client::C_CSPlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_AttributeManager = 0x13d0; // client::C_AttributeContainer  | Schema_DeclaredClass | Size: 0x4d0
+				constexpr std::ptrdiff_t m_bAttributesInitialized = 0x18a0; // bool m_bAttributesInitialized; |  0x18a0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hWaterWakeParticles = 0x18a4; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bIsPreviewModel = 0x18a8; // bool m_bIsPreviewModel; |  0x18a8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

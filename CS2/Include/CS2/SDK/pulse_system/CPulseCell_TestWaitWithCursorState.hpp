@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
+#include "../pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp"
+#include "../pulse_runtime_lib/CPulse_ResumePoint.hpp"
 
 
 
@@ -22,13 +22,12 @@ namespace CS2 {
 	namespace pulse_system {
 		class CPulseCell_TestWaitWithCursorState : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_WakeResume,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x48);
-			NESTED_PROPERTY(m_WakeCancel,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x90);
-			NESTED_PROPERTY(m_WakeFail,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xd8);
-			S2_PAD(0xD8);
+			NESTED_PROPERTY(m_WakeResume,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xd8);
+			NESTED_PROPERTY(m_WakeFail,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x120);
+			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_system::CPulseCell_TestWaitWithCursorState) == 0x120, "CPulseCell_TestWaitWithCursorState size should be 0x120");
+		//static_assert(sizeof(CS2::pulse_system::CPulseCell_TestWaitWithCursorState) == 0x168, "CPulseCell_TestWaitWithCursorState size should be 0x168");
 
 #endif
 	}

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x100
+			// Class size: 0x130
 			namespace CNmAimCSTask /*: public CS2::animlib::CNmPoseTask*/ {
 				// NO SCHEMA DATA FOUND!
 			}

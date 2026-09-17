@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmParameterizedBlendNode_CDefinition.hpp>
-#include <SDK/animlib/CNmParameterizedBlendNode_Parameterization_t.hpp>
+#include "CNmParameterizedBlendNode_CDefinition.hpp"
+#include "CNmParameterizedBlendNode_Parameterization_t.hpp"
 
 
 

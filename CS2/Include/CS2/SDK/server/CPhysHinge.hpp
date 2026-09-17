@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPhysConstraint.hpp>
-#include <SDK/server/ConstraintSoundInfo.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/client/constraint_hingeparams_t.hpp>
+#include "CPhysConstraint.hpp"
+#include "ConstraintSoundInfo.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "../client/constraint_hingeparams_t.hpp"
 
 
 

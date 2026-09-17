@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/EntityDisolveType_t.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/EntityDissolveType_t.hpp"
 
 
 
@@ -23,20 +23,20 @@ namespace CS2 {
 	namespace server {
 		class CEntityDissolve : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_flFadeInStart,float32, 0x768);
-			PROPERTY(m_flFadeInLength,float32, 0x76c);
-			PROPERTY(m_flFadeOutModelStart,float32, 0x770);
-			PROPERTY(m_flFadeOutModelLength,float32, 0x774);
-			PROPERTY(m_flFadeOutStart,float32, 0x778);
-			PROPERTY(m_flFadeOutLength,float32, 0x77c);
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x780);
-			PROPERTY(m_nDissolveType,IDENTITY(client::EntityDisolveType_t), 0x784);
-			PROPERTY(m_vDissolverOrigin,GlobalTypes::Vector, 0x788);
-			PROPERTY(m_nMagnitude,uint32_t, 0x794);
+			PROPERTY(m_flFadeInStart,float32, 0x770);
+			PROPERTY(m_flFadeInLength,float32, 0x774);
+			PROPERTY(m_flFadeOutModelStart,float32, 0x778);
+			PROPERTY(m_flFadeOutModelLength,float32, 0x77c);
+			PROPERTY(m_flFadeOutStart,float32, 0x780);
+			PROPERTY(m_flFadeOutLength,float32, 0x784);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x788);
+			PROPERTY(m_nDissolveType,IDENTITY(client::EntityDissolveType_t), 0x78c);
+			PROPERTY(m_vDissolverOrigin,GlobalTypes::VectorWS, 0x790);
+			PROPERTY(m_nMagnitude,uint32_t, 0x79c);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEntityDissolve) == 0x798, "CEntityDissolve size should be 0x798");
+		//static_assert(sizeof(CS2::server::CEntityDissolve) == 0x7A0, "CEntityDissolve size should be 0x7A0");
 
 #endif
 	}

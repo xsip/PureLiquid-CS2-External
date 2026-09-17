@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerBase.hpp>
-#include <SDK/soundsystem_voicecontainers/PlayBackMode_t.hpp>
-#include <SDK/soundsystem_voicecontainers/CSoundContainerReferenceArray.hpp>
+#include "CVoiceContainerBase.hpp"
+#include "PlayBackMode_t.hpp"
+#include "CSoundContainerReferenceArray.hpp"
 
 
 
@@ -23,13 +23,13 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerSelector : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			PROPERTY(m_mode,IDENTITY(soundsystem_voicecontainers::PlayBackMode_t), 0xa8);
-			NESTED_PROPERTY(m_soundsToPlay,IDENTITY(soundsystem_voicecontainers::CSoundContainerReferenceArray), 0xb0);
-			NESTED_PROPERTY(m_fProbabilityWeights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0xe8);
+			PROPERTY(m_mode,IDENTITY(soundsystem_voicecontainers::PlayBackMode_t), 0x70);
+			NESTED_PROPERTY(m_soundsToPlay,IDENTITY(soundsystem_voicecontainers::CSoundContainerReferenceArray), 0x78);
+			NESTED_PROPERTY(m_fProbabilityWeights,IDENTITY(GlobalTypes::CUtlVector< float32 >), 0xb0);
 			S2_PAD(0x78);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerSelector) == 0x120, "CVoiceContainerSelector size should be 0x120");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerSelector) == 0xE8, "CVoiceContainerSelector size should be 0xE8");
 
 #endif
 	}

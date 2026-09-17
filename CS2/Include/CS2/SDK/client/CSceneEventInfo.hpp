@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/HSequence.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/SceneEventId_t.hpp>
+#include "../animationsystem/HSequence.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "SceneEventId_t.hpp"
 
 
 
@@ -35,22 +35,26 @@ namespace CS2 {
 			PROPERTY(m_iPriority,int32_t, 0x4);
 			NESTED_PROPERTY(m_hSequence,IDENTITY(animationsystem::HSequence), 0x8);
 			PROPERTY(m_flWeight,float32, 0xc);
-			PROPERTY(m_hAnimClip,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmClip>), 0x10);
-			PROPERTY(m_sAnimClipSlot,GlobalTypes::CGlobalSymbol, 0x18);
-			PROPERTY(m_sAnimClipSlotWeight,GlobalTypes::CGlobalSymbol, 0x20);
-			PROPERTY(m_bHasArrived,bool, 0x28);
-			PROPERTY(m_nType,int32_t, 0x2c);
-			NESTED_PROPERTY(m_flNext,IDENTITY(entity2::GameTime_t), 0x30);
-			PROPERTY(m_bIsGesture,bool, 0x34);
-			PROPERTY(m_bShouldRemove,bool, 0x35);
-			PROPERTY(m_hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x5c);
-			NESTED_PROPERTY(m_nSceneEventId,IDENTITY(client::SceneEventId_t), 0x60);
-			PROPERTY(m_bClientSide,bool, 0x64);
-			PROPERTY(m_bStarted,bool, 0x65);
-			S2_PAD(0x68);
+			PROPERTY(m_flLastAccumulatedTime,float32, 0x10);
+			PROPERTY(m_flLastJumpFromTime,float32, 0x14);
+			PROPERTY(m_flLastJumpToTime,float32, 0x18);
+			PROPERTY(m_flLastCycle,float32, 0x1c);
+			PROPERTY(m_hAnimClip,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmClip>), 0x20);
+			PROPERTY(m_sAnimClipSlot,GlobalTypes::CGlobalSymbol, 0x28);
+			PROPERTY(m_sAnimClipSlotWeight,GlobalTypes::CGlobalSymbol, 0x30);
+			PROPERTY(m_bHasArrived,bool, 0x38);
+			PROPERTY(m_nType,int32_t, 0x3c);
+			NESTED_PROPERTY(m_flNext,IDENTITY(entity2::GameTime_t), 0x40);
+			PROPERTY(m_bIsGesture,bool, 0x44);
+			PROPERTY(m_bShouldRemove,bool, 0x45);
+			PROPERTY(m_hTarget,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x6c);
+			NESTED_PROPERTY(m_nSceneEventId,IDENTITY(client::SceneEventId_t), 0x70);
+			PROPERTY(m_bClientSide,bool, 0x74);
+			PROPERTY(m_bStarted,bool, 0x75);
+			S2_PAD(0x78);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CSceneEventInfo) == 0x68, "CSceneEventInfo size should be 0x68");
+		//static_assert(sizeof(CS2::client::CSceneEventInfo) == 0x78, "CSceneEventInfo size should be 0x78");
 
 #endif
 	}

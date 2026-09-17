@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCSWeaponBase.hpp>
+#include "CCSWeaponBase.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CKnife : public CS2::server::CCSWeaponBase {
 		public:
-			PROPERTY(m_bFirstAttack,bool, 0x1030);
+			PROPERTY(m_bFirstAttack,bool, 0x1050);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CKnife) == 0x1040, "CKnife size should be 0x1040");
+		//static_assert(sizeof(CS2::server::CKnife) == 0x1060, "CKnife size should be 0x1060");
 
 #endif
 	}

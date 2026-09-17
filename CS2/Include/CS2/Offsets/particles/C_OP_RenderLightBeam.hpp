@@ -8,18 +8,28 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1028
+			// Class size: 0x1F98
 			namespace C_OP_RenderLightBeam /*: public CS2::particles::CParticleFunctionRenderer*/ {
 				constexpr std::ptrdiff_t m_nMaxAllowed = 0x228; // uint16_t m_nMaxAllowed; |  0x228 | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_vColorBlend = 0x230; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
 				constexpr std::ptrdiff_t m_nColorBlendType = 0x8e8; // particleslib::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flBrightnessLumensPerMeter = 0x8f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bCastShadows = 0xa60; // bool m_bCastShadows; |  0xa60 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDynamicBounce = 0xa61; // bool m_bDynamicBounce; |  0xa61 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flBounceScale = 0xa68; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flSkirt = 0xbd8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flRange = 0xd48; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flThickness = 0xeb8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_strLightStyle = 0x8f0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flLightStyleTime = 0x8f8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flBrightnessLumensPerMeter = 0xa68; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flNumberOfLightsToCreate = 0xbd8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bCastShadows = 0xd48; // bool m_bCastShadows; |  0xd48 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDynamicBounce = 0xd49; // bool m_bDynamicBounce; |  0xd49 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flBounceScale = 0xd50; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flSkirt = 0xec0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flRange = 0x1030; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flThickness = 0x11a0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flInnerConeAngle = 0x1310; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flOuterConeAngle = 0x1480; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_vecConeRotationOffset = 0x15f0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_nFogLightingMode = 0x1ca8; // particles::ParticleLightFogLightingMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flFogContribution = 0x1cb0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flRenderFilter = 0x1e20; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bDebugOrientation = 0x1f90; // bool m_bDebugOrientation; |  0x1f90 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

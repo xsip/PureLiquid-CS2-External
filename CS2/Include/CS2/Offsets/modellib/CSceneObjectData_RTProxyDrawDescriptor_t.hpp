@@ -8,14 +8,21 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace modellib {
-			// Class size: 0x140
+			// Class size: 0x160
 			namespace CSceneObjectData_RTProxyDrawDescriptor_t /**/ {
-				constexpr std::ptrdiff_t m_drawDesc = 0x0; // modellib::CMaterialDrawDescriptor  | Schema_DeclaredClass | Size: 0x108
-				constexpr std::ptrdiff_t m_mWorldFromLocal = 0x108; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
-				constexpr std::ptrdiff_t m_nVertexAlbedoFormat = 0x138; // modellib::VertexAlbedoFormat_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_nVertexAlbedoVB = 0x139; // int8_t m_nVertexAlbedoVB; |  0x139 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nVertexAlbedoOffset = 0x13a; // uint16_t m_nVertexAlbedoOffset; |  0x13a | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_nVertexAlbedoStride = 0x13c; // uint16_t m_nVertexAlbedoStride; |  0x13c | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_materialGroupToken = 0x0; // uint32_t m_materialGroupToken; |  0x0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSrcDrawIndex = 0x4; // int32_t m_nSrcDrawIndex; |  0x4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_drawDesc = 0x8; // modellib::CMaterialDrawDescriptor  | Schema_DeclaredClass | Size: 0x118
+				constexpr std::ptrdiff_t m_mWorldFromLocal = 0x120; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
+				constexpr std::ptrdiff_t m_nVertexAlbedoFormat = 0x150; // modellib::VertexAlbedoFormat_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_nVertexAlbedoVB = 0x151; // int8_t m_nVertexAlbedoVB; |  0x151 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nVertexAlbedoOffset = 0x152; // uint16_t m_nVertexAlbedoOffset; |  0x152 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_nVertexAlbedoStride = 0x154; // uint16_t m_nVertexAlbedoStride; |  0x154 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_nVertexEmissiveFormat = 0x156; // modellib::VertexAlbedoFormat_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_nVertexEmissiveVB = 0x157; // int8_t m_nVertexEmissiveVB; |  0x157 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nVertexEmissiveOffset = 0x158; // uint16_t m_nVertexEmissiveOffset; |  0x158 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_nVertexEmissiveStride = 0x15a; // uint16_t m_nVertexEmissiveStride; |  0x15a | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_fEmissiveFactor = 0x15c; // float32 m_fEmissiveFactor; |  0x15c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

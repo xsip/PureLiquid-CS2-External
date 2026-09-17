@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0x160
+			// Class size: 0x158
 			namespace CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView /*: public CS2::pulse_system::CPulseGraphInstance_TestDomain*/ {
 				// NO SCHEMA DATA FOUND!
 			}

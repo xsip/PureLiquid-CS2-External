@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_CSWeaponBase.hpp>
+#include "C_CSWeaponBase.hpp"
 
 
 
@@ -21,17 +21,17 @@ namespace CS2 {
 	namespace client {
 		class C_CSWeaponBaseGun : public CS2::client::C_CSWeaponBase {
 		public:
-			PROPERTY(m_zoomLevel,int32_t, 0x1cb0);
-			PROPERTY(m_iBurstShotsRemaining,int32_t, 0x1cb4);
-			PROPERTY(m_iSilencerBodygroup,int32_t, 0x1cb8);
-			PROPERTY(m_silencedModelIndex,int32_t, 0x1cc8);
-			PROPERTY(m_inPrecache,bool, 0x1ccc);
-			PROPERTY(m_bNeedsBoltAction,bool, 0x1ccd);
-			PROPERTY(m_nRevolverCylinderIdx,int32_t, 0x1cd0);
+			PROPERTY(m_zoomLevel,int32_t, 0x1ce0);
+			PROPERTY(m_iBurstShotsRemaining,int32_t, 0x1ce4);
+			PROPERTY(m_iSilencerBodygroup,int32_t, 0x1ce8);
+			PROPERTY(m_silencedModelIndex,int32_t, 0x1cf8);
+			PROPERTY(m_inPrecache,bool, 0x1cfc);
+			PROPERTY(m_bNeedsBoltAction,bool, 0x1cfd);
+			PROPERTY(m_nRevolverCylinderIdx,int32_t, 0x1d00);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CSWeaponBaseGun) == 0x1CE0, "C_CSWeaponBaseGun size should be 0x1CE0");
+		//static_assert(sizeof(CS2::client::C_CSWeaponBaseGun) == 0x1D10, "C_CSWeaponBaseGun size should be 0x1D10");
 
 #endif
 	}

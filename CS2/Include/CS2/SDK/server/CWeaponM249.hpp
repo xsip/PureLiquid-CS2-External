@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCSWeaponBaseGun.hpp>
+#include "CCSWeaponBaseGun.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CWeaponM249) == 0x1050, "CWeaponM249 size should be 0x1050");
+		//static_assert(sizeof(CS2::server::CWeaponM249) == 0x1070, "CWeaponM249 size should be 0x1070");
 
 #endif
 	}

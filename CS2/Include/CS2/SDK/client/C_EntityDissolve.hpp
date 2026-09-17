@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/EntityDisolveType_t.hpp>
+#include "C_BaseModelEntity.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "EntityDissolveType_t.hpp"
 
 
 
@@ -23,23 +23,23 @@ namespace CS2 {
 	namespace client {
 		class C_EntityDissolve : public CS2::client::C_BaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0xfb0);
-			PROPERTY(m_flFadeInStart,float32, 0xfb4);
-			PROPERTY(m_flFadeInLength,float32, 0xfb8);
-			PROPERTY(m_flFadeOutModelStart,float32, 0xfbc);
-			PROPERTY(m_flFadeOutModelLength,float32, 0xfc0);
-			PROPERTY(m_flFadeOutStart,float32, 0xfc4);
-			PROPERTY(m_flFadeOutLength,float32, 0xfc8);
-			NESTED_PROPERTY(m_flNextSparkTime,IDENTITY(entity2::GameTime_t), 0xfcc);
-			PROPERTY(m_nDissolveType,IDENTITY(client::EntityDisolveType_t), 0xfd0);
-			PROPERTY(m_vDissolverOrigin,GlobalTypes::Vector, 0xfd4);
-			PROPERTY(m_nMagnitude,uint32_t, 0xfe0);
-			PROPERTY(m_bCoreExplode,bool, 0xfe4);
-			PROPERTY(m_bLinkedToServerEnt,bool, 0xfe5);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0xfb8);
+			PROPERTY(m_flFadeInStart,float32, 0xfbc);
+			PROPERTY(m_flFadeInLength,float32, 0xfc0);
+			PROPERTY(m_flFadeOutModelStart,float32, 0xfc4);
+			PROPERTY(m_flFadeOutModelLength,float32, 0xfc8);
+			PROPERTY(m_flFadeOutStart,float32, 0xfcc);
+			PROPERTY(m_flFadeOutLength,float32, 0xfd0);
+			NESTED_PROPERTY(m_flNextSparkTime,IDENTITY(entity2::GameTime_t), 0xfd4);
+			PROPERTY(m_nDissolveType,IDENTITY(client::EntityDissolveType_t), 0xfd8);
+			PROPERTY(m_vDissolverOrigin,GlobalTypes::VectorWS, 0xfdc);
+			PROPERTY(m_nMagnitude,uint32_t, 0xfe8);
+			PROPERTY(m_bCoreExplode,bool, 0xfec);
+			PROPERTY(m_bLinkedToServerEnt,bool, 0xfed);
 			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_EntityDissolve) == 0xFF0, "C_EntityDissolve size should be 0xFF0");
+		//static_assert(sizeof(CS2::client::C_EntityDissolve) == 0xFF8, "C_EntityDissolve size should be 0xFF8");
 
 #endif
 	}

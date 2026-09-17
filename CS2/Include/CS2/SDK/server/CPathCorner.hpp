@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPointEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CPointEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -22,13 +22,14 @@ namespace CS2 {
 	namespace server {
 		class CPathCorner : public CS2::server::CPointEntity {
 		public:
-			PROPERTY(m_flWait,float32, 0x4a8);
-			PROPERTY(m_flRadius,float32, 0x4ac);
-			NESTED_PROPERTY(m_OnPass,IDENTITY(entity2::CEntityIOOutput), 0x4b0);
-			S2_PAD(0x20);
+			PROPERTY(m_flSpeed,float32, 0x4a8);
+			PROPERTY(m_flWait,float32, 0x4ac);
+			PROPERTY(m_flRadius,float32, 0x4b0);
+			NESTED_PROPERTY(m_OnPass,IDENTITY(entity2::CEntityIOOutput), 0x4b8);
+			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPathCorner) == 0x4C8, "CPathCorner size should be 0x4C8");
+		//static_assert(sizeof(CS2::server::CPathCorner) == 0x4D0, "CPathCorner size should be 0x4D0");
 
 #endif
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CSoundOpvarSetPointEntity.hpp>
-#include <SDK/server/SoundOpvarTraceResult_t.hpp>
-#include <SDK/server/AutoRoomDoorwayPairs_t.hpp>
+#include "CSoundOpvarSetPointEntity.hpp"
+#include "SoundOpvarTraceResult_t.hpp"
+#include "AutoRoomDoorwayPairs_t.hpp"
 
 
 

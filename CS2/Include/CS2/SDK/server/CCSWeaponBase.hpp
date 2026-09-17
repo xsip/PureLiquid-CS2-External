@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBasePlayerWeapon.hpp>
-#include <SDK/client/WeaponGameplayAnimState.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/client/CSWeaponMode.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/server/CIronSightController.hpp>
+#include "CBasePlayerWeapon.hpp"
+#include "../client/WeaponGameplayAnimState.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "../client/CSWeaponMode.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "CIronSightController.hpp"
 
 
 
@@ -32,62 +32,62 @@ namespace CS2 {
 	namespace server {
 		class CCSWeaponBase : public CS2::server::CBasePlayerWeapon {
 		public:
-			PROPERTY(m_bRemoveable,bool, 0xcb8);
-			PROPERTY(m_bPlayerAmmoStockOnPickup,bool, 0xcb9);
-			PROPERTY(m_bRequireUseToTouch,bool, 0xcba);
-			PROPERTY(m_iWeaponGameplayAnimState,IDENTITY(client::WeaponGameplayAnimState), 0xcbc);
-			NESTED_PROPERTY(m_flWeaponGameplayAnimStateTimestamp,IDENTITY(entity2::GameTime_t), 0xcc0);
-			NESTED_PROPERTY(m_flInspectCancelCompleteTime,IDENTITY(entity2::GameTime_t), 0xcc4);
-			PROPERTY(m_bInspectPending,bool, 0xcc8);
-			PROPERTY(m_bInspectShouldLoop,bool, 0xcc9);
-			PROPERTY(m_nLastEmptySoundCmdNum,int32_t, 0xcf4);
-			PROPERTY(m_bFireOnEmpty,bool, 0xd10);
-			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xd18);
-			PROPERTY(m_weaponMode,IDENTITY(client::CSWeaponMode), 0xd30);
-			PROPERTY(m_flTurningInaccuracyDelta,float32, 0xd34);
-			PROPERTY(m_vecTurningInaccuracyEyeDirLast,GlobalTypes::Vector, 0xd38);
-			PROPERTY(m_flTurningInaccuracy,float32, 0xd44);
-			PROPERTY(m_fAccuracyPenalty,float32, 0xd48);
-			NESTED_PROPERTY(m_flLastAccuracyUpdateTime,IDENTITY(entity2::GameTime_t), 0xd4c);
-			PROPERTY(m_fAccuracySmoothedForZoom,float32, 0xd50);
-			PROPERTY(m_iRecoilIndex,int32_t, 0xd54);
-			PROPERTY(m_flRecoilIndex,float32, 0xd58);
-			PROPERTY(m_bBurstMode,bool, 0xd5c);
-			NESTED_PROPERTY(m_nPostponeFireReadyTicks,IDENTITY(entity2::GameTick_t), 0xd60);
-			PROPERTY(m_flPostponeFireReadyFrac,float32, 0xd64);
-			PROPERTY(m_bInReload,bool, 0xd68);
-			NESTED_PROPERTY(m_nDeployTick,IDENTITY(entity2::GameTick_t), 0xd6c);
-			NESTED_PROPERTY(m_flDroppedAtTime,IDENTITY(entity2::GameTime_t), 0xd70);
-			PROPERTY(m_bIsHauledBack,bool, 0xd78);
-			PROPERTY(m_bSilencerOn,bool, 0xd79);
-			NESTED_PROPERTY(m_flTimeSilencerSwitchComplete,IDENTITY(entity2::GameTime_t), 0xd7c);
-			PROPERTY(m_flWeaponActionPlaybackRate,float32, 0xd80);
-			PROPERTY(m_iOriginalTeamNumber,int32_t, 0xd84);
-			PROPERTY(m_iMostRecentTeamNumber,int32_t, 0xd88);
-			PROPERTY(m_bDroppedNearBuyZone,bool, 0xd8c);
-			PROPERTY(m_flNextAttackRenderTimeOffset,float32, 0xd90);
-			PROPERTY(m_bCanBePickedUp,bool, 0xda8);
-			PROPERTY(m_bUseCanOverrideNextOwnerTouchTime,bool, 0xda9);
-			NESTED_PROPERTY(m_nextOwnerTouchTime,IDENTITY(entity2::GameTime_t), 0xdac);
-			NESTED_PROPERTY(m_nextPrevOwnerTouchTime,IDENTITY(entity2::GameTime_t), 0xdb0);
-			NESTED_PROPERTY(m_nextPrevOwnerUseTime,IDENTITY(entity2::GameTime_t), 0xdb8);
-			PROPERTY(m_hPrevOwner,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0xdbc);
-			NESTED_PROPERTY(m_nDropTick,IDENTITY(entity2::GameTick_t), 0xdc0);
-			PROPERTY(m_bWasActiveWeaponWhenDropped,bool, 0xdc4);
-			PROPERTY(m_donated,bool, 0xde4);
-			NESTED_PROPERTY(m_fLastShotTime,IDENTITY(entity2::GameTime_t), 0xde8);
-			PROPERTY(m_bWasOwnedByCT,bool, 0xdec);
-			PROPERTY(m_bWasOwnedByTerrorist,bool, 0xded);
-			PROPERTY(m_numRemoveUnownedWeaponThink,int32_t, 0xdf0);
-			NESTED_PROPERTY(m_IronSightController,IDENTITY(server::CIronSightController), 0xe50);
-			PROPERTY(m_iIronSightMode,int32_t, 0xe68);
-			NESTED_PROPERTY(m_flLastLOSTraceFailureTime,IDENTITY(entity2::GameTime_t), 0xe6c);
-			PROPERTY(m_flWatTickOffset,float32, 0xe70);
-			NESTED_PROPERTY(m_flLastShakeTime,IDENTITY(entity2::GameTime_t), 0xe80);
+			PROPERTY(m_bRemoveable,bool, 0xcd8);
+			PROPERTY(m_bPlayerAmmoStockOnPickup,bool, 0xcd9);
+			PROPERTY(m_bRequireUseToTouch,bool, 0xcda);
+			PROPERTY(m_iWeaponGameplayAnimState,IDENTITY(client::WeaponGameplayAnimState), 0xcdc);
+			NESTED_PROPERTY(m_flWeaponGameplayAnimStateTimestamp,IDENTITY(entity2::GameTime_t), 0xce0);
+			NESTED_PROPERTY(m_flInspectCancelCompleteTime,IDENTITY(entity2::GameTime_t), 0xce4);
+			PROPERTY(m_bInspectPending,bool, 0xce8);
+			PROPERTY(m_bInspectShouldLoop,bool, 0xce9);
+			PROPERTY(m_nLastEmptySoundCmdNum,int32_t, 0xd14);
+			PROPERTY(m_bFireOnEmpty,bool, 0xd30);
+			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xd38);
+			PROPERTY(m_weaponMode,IDENTITY(client::CSWeaponMode), 0xd50);
+			PROPERTY(m_flTurningInaccuracyDelta,float32, 0xd54);
+			PROPERTY(m_vecTurningInaccuracyEyeDirLast,GlobalTypes::Vector, 0xd58);
+			PROPERTY(m_flTurningInaccuracy,float32, 0xd64);
+			PROPERTY(m_fAccuracyPenalty,float32, 0xd68);
+			NESTED_PROPERTY(m_flLastAccuracyUpdateTime,IDENTITY(entity2::GameTime_t), 0xd6c);
+			PROPERTY(m_fAccuracySmoothedForZoom,float32, 0xd70);
+			PROPERTY(m_iRecoilIndex,int32_t, 0xd74);
+			PROPERTY(m_flRecoilIndex,float32, 0xd78);
+			PROPERTY(m_bBurstMode,bool, 0xd7c);
+			NESTED_PROPERTY(m_nPostponeFireReadyTicks,IDENTITY(entity2::GameTick_t), 0xd80);
+			PROPERTY(m_flPostponeFireReadyFrac,float32, 0xd84);
+			PROPERTY(m_bInReload,bool, 0xd88);
+			NESTED_PROPERTY(m_nDeployTick,IDENTITY(entity2::GameTick_t), 0xd8c);
+			NESTED_PROPERTY(m_flDroppedAtTime,IDENTITY(entity2::GameTime_t), 0xd90);
+			PROPERTY(m_bIsHauledBack,bool, 0xd98);
+			PROPERTY(m_bSilencerOn,bool, 0xd99);
+			NESTED_PROPERTY(m_flTimeSilencerSwitchComplete,IDENTITY(entity2::GameTime_t), 0xd9c);
+			PROPERTY(m_flWeaponActionPlaybackRate,float32, 0xda0);
+			PROPERTY(m_iOriginalTeamNumber,int32_t, 0xda4);
+			PROPERTY(m_iMostRecentTeamNumber,int32_t, 0xda8);
+			PROPERTY(m_bDroppedNearBuyZone,bool, 0xdac);
+			PROPERTY(m_flNextAttackRenderTimeOffset,float32, 0xdb0);
+			PROPERTY(m_bCanBePickedUp,bool, 0xdc8);
+			PROPERTY(m_bUseCanOverrideNextOwnerTouchTime,bool, 0xdc9);
+			NESTED_PROPERTY(m_nextOwnerTouchTime,IDENTITY(entity2::GameTime_t), 0xdcc);
+			NESTED_PROPERTY(m_nextPrevOwnerTouchTime,IDENTITY(entity2::GameTime_t), 0xdd0);
+			NESTED_PROPERTY(m_nextPrevOwnerUseTime,IDENTITY(entity2::GameTime_t), 0xdd8);
+			PROPERTY(m_hPrevOwner,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0xddc);
+			NESTED_PROPERTY(m_nDropTick,IDENTITY(entity2::GameTick_t), 0xde0);
+			PROPERTY(m_bWasActiveWeaponWhenDropped,bool, 0xde4);
+			PROPERTY(m_donated,bool, 0xe04);
+			NESTED_PROPERTY(m_fLastShotTime,IDENTITY(entity2::GameTime_t), 0xe08);
+			PROPERTY(m_bWasOwnedByCT,bool, 0xe0c);
+			PROPERTY(m_bWasOwnedByTerrorist,bool, 0xe0d);
+			PROPERTY(m_numRemoveUnownedWeaponThink,int32_t, 0xe10);
+			NESTED_PROPERTY(m_IronSightController,IDENTITY(server::CIronSightController), 0xe70);
+			PROPERTY(m_iIronSightMode,int32_t, 0xe88);
+			NESTED_PROPERTY(m_flLastLOSTraceFailureTime,IDENTITY(entity2::GameTime_t), 0xe8c);
+			PROPERTY(m_flWatTickOffset,float32, 0xe90);
+			NESTED_PROPERTY(m_flLastShakeTime,IDENTITY(entity2::GameTime_t), 0xea0);
 			S2_PAD(0x380);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSWeaponBase) == 0x1030, "CCSWeaponBase size should be 0x1030");
+		//static_assert(sizeof(CS2::server::CCSWeaponBase) == 0x1050, "CCSWeaponBase size should be 0x1050");
 
 #endif
 	}

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseCSGrenadeProjectile.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "C_BaseCSGrenadeProjectile.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -22,13 +22,13 @@ namespace CS2 {
 	namespace client {
 		class C_DecoyProjectile : public CS2::client::C_BaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nDecoyShotTick,int32_t, 0x1238);
-			PROPERTY(m_nClientLastKnownDecoyShotTick,int32_t, 0x123c);
-			NESTED_PROPERTY(m_flTimeParticleEffectSpawn,IDENTITY(entity2::GameTime_t), 0x1260);
+			PROPERTY(m_nDecoyShotTick,int32_t, 0x1260);
+			PROPERTY(m_nClientLastKnownDecoyShotTick,int32_t, 0x1264);
+			NESTED_PROPERTY(m_flTimeParticleEffectSpawn,IDENTITY(entity2::GameTime_t), 0x1288);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_DecoyProjectile) == 0x1268, "C_DecoyProjectile size should be 0x1268");
+		//static_assert(sizeof(CS2::client::C_DecoyProjectile) == 0x1290, "C_DecoyProjectile size should be 0x1290");
 
 #endif
 	}

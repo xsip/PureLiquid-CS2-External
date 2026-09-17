@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/IntervalTimer.hpp>
-#include <SDK/client/TimelineCompression_t.hpp>
+#include "IntervalTimer.hpp"
+#include "../client/TimelineCompression_t.hpp"
 
 
 

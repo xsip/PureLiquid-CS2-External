@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmStateNode_TimedEvent_t_Comparison_t.hpp>
+#include "CNmStateNode_TimedEvent_t_Comparison_t.hpp"
 
 
 

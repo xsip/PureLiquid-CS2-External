@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7F8
+			// Class size: 0x800
 			namespace CFuncLadderAlias_func_useableladder /*: public CS2::server::CFuncLadder*/ {
 				// NO SCHEMA DATA FOUND!
 			}

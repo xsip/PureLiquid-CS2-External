@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x210
+			// Class size: 0x228
 			namespace C_INIT_RandomSequence /*: public CS2::particles::CParticleFunctionInitializer*/ {
 				constexpr std::ptrdiff_t m_nSequenceMin = 0x1e0; // int32_t m_nSequenceMin; |  0x1e0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nSequenceMax = 0x1e4; // int32_t m_nSequenceMax; |  0x1e4 | Schema_Builtin | Size: 0x4

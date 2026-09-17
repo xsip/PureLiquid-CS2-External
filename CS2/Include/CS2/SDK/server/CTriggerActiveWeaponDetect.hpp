@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseTrigger.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -22,12 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CTriggerActiveWeaponDetect : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_OnTouchedActiveWeapon,IDENTITY(entity2::CEntityIOOutput), 0x8c8);
-			PROPERTY(m_iszWeaponClassName,GlobalTypes::CUtlSymbolLarge*, 0x8e0);
+			NESTED_PROPERTY(m_OnTouchedActiveWeapon,IDENTITY(entity2::CEntityIOOutput), 0x8e8);
+			PROPERTY(m_iszWeaponClassName,GlobalTypes::CUtlSymbolLarge*, 0x900);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerActiveWeaponDetect) == 0x8E8, "CTriggerActiveWeaponDetect size should be 0x8E8");
+		//static_assert(sizeof(CS2::server::CTriggerActiveWeaponDetect) == 0x908, "CTriggerActiveWeaponDetect size should be 0x908");
 
 #endif
 	}

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/physicslib/DynamicContinuousContactBehavior_t.hpp>
+#include "DynamicContinuousContactBehavior_t.hpp"
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 		class RnBodyDesc_t  {
 		public:
 			PROPERTY(m_sDebugName,GlobalTypes::CUtlString*, 0x0);
-			PROPERTY(m_vPosition,GlobalTypes::Vector, 0x8);
+			PROPERTY(m_vPosition,GlobalTypes::VectorWS, 0x8);
 			PROPERTY(m_qOrientation,GlobalTypes::QuaternionStorage, 0x14);
 			PROPERTY(m_vLinearVelocity,GlobalTypes::Vector, 0x24);
 			PROPERTY(m_vAngularVelocity,GlobalTypes::Vector, 0x30);

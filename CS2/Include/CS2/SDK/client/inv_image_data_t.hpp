@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/inv_image_map_t.hpp>
-#include <SDK/client/inv_image_item_t.hpp>
-#include <SDK/client/inv_image_camera_t.hpp>
-#include <SDK/client/inv_image_light_sun_t.hpp>
-#include <SDK/client/inv_image_light_fill_t.hpp>
-#include <SDK/client/inv_image_light_barn_t.hpp>
-#include <SDK/client/inv_image_clearcolor_t.hpp>
+#include "inv_image_map_t.hpp"
+#include "inv_image_item_t.hpp"
+#include "inv_image_camera_t.hpp"
+#include "inv_image_light_sun_t.hpp"
+#include "inv_image_light_fill_t.hpp"
+#include "inv_image_light_barn_t.hpp"
+#include "inv_image_clearcolor_t.hpp"
 
 
 

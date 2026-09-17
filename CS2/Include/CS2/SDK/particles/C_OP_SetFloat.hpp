@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionOperator.hpp>
-#include <SDK/particleslib/CPerParticleFloatInput.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/ParticleSetMethod_t.hpp>
+#include "CParticleFunctionOperator.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "../particleslib/ParticleSetMethod_t.hpp"
 
 
 
@@ -28,10 +28,10 @@ namespace CS2 {
 			NESTED_PROPERTY(m_nOutputField,IDENTITY(particles::ParticleAttributeIndex_t), 0x348);
 			PROPERTY(m_nSetMethod,IDENTITY(particleslib::ParticleSetMethod_t), 0x34c);
 			NESTED_PROPERTY(m_Lerp,IDENTITY(particleslib::CPerParticleFloatInput), 0x350);
-			S2_PAD(0x308);
+			S2_PAD(0x318);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_SetFloat) == 0x4E0, "C_OP_SetFloat size should be 0x4E0");
+		//static_assert(sizeof(CS2::particles::C_OP_SetFloat) == 0x4F0, "C_OP_SetFloat size should be 0x4F0");
 
 #endif
 	}

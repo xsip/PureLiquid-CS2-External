@@ -4,16 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/client/ragdoll_t.hpp>
-#include <SDK/server/INavObstacle_NavObstacleType_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "CPropDataComponent.hpp"
+#include "../client/ragdoll_t.hpp"
+#include "INavObstacle_NavObstacleType_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -31,41 +32,44 @@ namespace CS2 {
 	namespace server {
 		class CRagdollProp : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_ragdoll,IDENTITY(client::ragdoll_t), 0x950);
-			PROPERTY(m_bStartDisabled,bool, 0x9a0);
-			// PROPERTY(m_ragEnabled,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< bool >), 0x9a8);
-			// PROPERTY(m_ragPos,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0x9c0);
-			// PROPERTY(m_ragAngles,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::QAngle>), 0x9d8);
-			PROPERTY(m_lastUpdateTickCount,uint32_t, 0x9f0);
-			PROPERTY(m_allAsleep,bool, 0x9f4);
-			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0x9f5);
-			PROPERTY(m_nNavObstacleType,IDENTITY(server::INavObstacle_NavObstacleType_t), 0x9f8);
-			PROPERTY(m_bUpdateNavWhenMoving,bool, 0x9fc);
-			PROPERTY(m_bForceNavObstacleCut,bool, 0x9fd);
-			PROPERTY(m_bAttachedToReferenceFrame,bool, 0x9fe);
-			PROPERTY(m_hDamageEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xa00);
-			PROPERTY(m_hKiller,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xa04);
-			PROPERTY(m_hPhysicsAttacker,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0xa08);
-			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,IDENTITY(entity2::GameTime_t), 0xa0c);
-			NESTED_PROPERTY(m_flFadeOutStartTime,IDENTITY(entity2::GameTime_t), 0xa10);
-			PROPERTY(m_flFadeTime,float32, 0xa14);
-			PROPERTY(m_vecLastOrigin,GlobalTypes::VectorWS, 0xa18);
-			NESTED_PROPERTY(m_flAwakeTime,IDENTITY(entity2::GameTime_t), 0xa24);
-			NESTED_PROPERTY(m_flLastOriginChangeTime,IDENTITY(entity2::GameTime_t), 0xa28);
-			PROPERTY(m_strOriginClassName,GlobalTypes::CUtlSymbolLarge*, 0xa30);
-			PROPERTY(m_strSourceClassName,GlobalTypes::CUtlSymbolLarge*, 0xa38);
-			PROPERTY(m_bHasBeenPhysgunned,bool, 0xa40);
-			PROPERTY(m_bAllowStretch,bool, 0xa41);
-			PROPERTY(m_flBlendWeight,float32, 0xa44);
-			PROPERTY(m_flDefaultFadeScale,float32, 0xa48);
-			NESTED_PROPERTY(m_ragdollMins,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0xa50);
-			NESTED_PROPERTY(m_ragdollMaxs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0xa68);
-			PROPERTY(m_bShouldDeleteActivationRecord,bool, 0xa80);
-			NESTED_PROPERTY(m_vecNavObstacles,IDENTITY(GlobalTypes::CUtlVector<server::INavObstacle*>), 0xa98);
-			S2_PAD(0x170);
+			NESTED_PROPERTY(m_CPropDataComponent,IDENTITY(server::CPropDataComponent), 0x970);
+			NESTED_PROPERTY(m_ragdoll,IDENTITY(client::ragdoll_t), 0x9b0);
+			PROPERTY(m_bStartDisabled,bool, 0xa00);
+			PROPERTY(m_massScale,float32, 0xa04);
+			PROPERTY(m_buoyancyScale,float32, 0xa08);
+			// PROPERTY(m_ragEnabled,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< bool >), 0xa10);
+			// PROPERTY(m_ragPos,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::Vector>), 0xa28);
+			// PROPERTY(m_ragAngles,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::QAngle>), 0xa40);
+			PROPERTY(m_lastUpdateTickCount,uint32_t, 0xa58);
+			PROPERTY(m_allAsleep,bool, 0xa5c);
+			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xa5d);
+			PROPERTY(m_nNavObstacleType,IDENTITY(server::INavObstacle_NavObstacleType_t), 0xa60);
+			PROPERTY(m_bUpdateNavWhenMoving,bool, 0xa64);
+			PROPERTY(m_bForceNavObstacleCut,bool, 0xa65);
+			PROPERTY(m_bAttachedToReferenceFrame,bool, 0xa66);
+			PROPERTY(m_hDamageEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xa68);
+			PROPERTY(m_hKiller,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xa6c);
+			PROPERTY(m_hPhysicsAttacker,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0xa70);
+			NESTED_PROPERTY(m_flLastPhysicsInfluenceTime,IDENTITY(entity2::GameTime_t), 0xa74);
+			NESTED_PROPERTY(m_flFadeOutStartTime,IDENTITY(entity2::GameTime_t), 0xa78);
+			PROPERTY(m_flFadeTime,float32, 0xa7c);
+			PROPERTY(m_vecLastOrigin,GlobalTypes::VectorWS, 0xa80);
+			NESTED_PROPERTY(m_flAwakeTime,IDENTITY(entity2::GameTime_t), 0xa8c);
+			NESTED_PROPERTY(m_flLastOriginChangeTime,IDENTITY(entity2::GameTime_t), 0xa90);
+			PROPERTY(m_strOriginClassName,GlobalTypes::CUtlSymbolLarge*, 0xa98);
+			PROPERTY(m_strSourceClassName,GlobalTypes::CUtlSymbolLarge*, 0xaa0);
+			PROPERTY(m_bHasBeenPhysgunned,bool, 0xaa8);
+			PROPERTY(m_bAllowStretch,bool, 0xaa9);
+			PROPERTY(m_flBlendWeight,float32, 0xaac);
+			PROPERTY(m_flDefaultFadeScale,float32, 0xab0);
+			NESTED_PROPERTY(m_ragdollMins,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0xab8);
+			NESTED_PROPERTY(m_ragdollMaxs,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0xad0);
+			PROPERTY(m_bShouldDeleteActivationRecord,bool, 0xae8);
+			NESTED_PROPERTY(m_vecNavObstacles,IDENTITY(GlobalTypes::CUtlVector<server::INavObstacle*>), 0xb00);
+			S2_PAD(0x1C0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CRagdollProp) == 0xAB0, "CRagdollProp size should be 0xAB0");
+		//static_assert(sizeof(CS2::server::CRagdollProp) == 0xB20, "CRagdollProp size should be 0xB20");
 
 #endif
 	}

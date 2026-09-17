@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCSWeaponBase.hpp>
+#include "CCSWeaponBase.hpp"
 
 
 
@@ -21,20 +21,20 @@ namespace CS2 {
 	namespace server {
 		class CCSWeaponBaseGun : public CS2::server::CCSWeaponBase {
 		public:
-			PROPERTY(m_zoomLevel,int32_t, 0x1030);
-			PROPERTY(m_iBurstShotsRemaining,int32_t, 0x1034);
-			PROPERTY(m_silencedModelIndex,int32_t, 0x1040);
-			PROPERTY(m_inPrecache,bool, 0x1044);
-			PROPERTY(m_bNeedsBoltAction,bool, 0x1045);
-			PROPERTY(m_nRevolverCylinderIdx,int32_t, 0x1048);
-			PROPERTY(m_bSkillReloadAvailable,bool, 0x104c);
-			PROPERTY(m_bSkillReloadLiftedReloadKey,bool, 0x104d);
-			PROPERTY(m_bSkillBoltInterruptAvailable,bool, 0x104e);
-			PROPERTY(m_bSkillBoltLiftedFireKey,bool, 0x104f);
+			PROPERTY(m_zoomLevel,int32_t, 0x1050);
+			PROPERTY(m_iBurstShotsRemaining,int32_t, 0x1054);
+			PROPERTY(m_silencedModelIndex,int32_t, 0x1060);
+			PROPERTY(m_inPrecache,bool, 0x1064);
+			PROPERTY(m_bNeedsBoltAction,bool, 0x1065);
+			PROPERTY(m_nRevolverCylinderIdx,int32_t, 0x1068);
+			PROPERTY(m_bSkillReloadAvailable,bool, 0x106c);
+			PROPERTY(m_bSkillReloadLiftedReloadKey,bool, 0x106d);
+			PROPERTY(m_bSkillBoltInterruptAvailable,bool, 0x106e);
+			PROPERTY(m_bSkillBoltLiftedFireKey,bool, 0x106f);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSWeaponBaseGun) == 0x1050, "CCSWeaponBaseGun size should be 0x1050");
+		//static_assert(sizeof(CS2::server::CCSWeaponBaseGun) == 0x1070, "CCSWeaponBaseGun size should be 0x1070");
 
 #endif
 	}

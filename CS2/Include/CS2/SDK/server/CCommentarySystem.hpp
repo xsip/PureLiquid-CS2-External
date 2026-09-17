@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/server/modifiedconvars_t.hpp>
-#include <SDK/server/CPointCommentaryNode.hpp>
+#include "../entity2/GameTime_t.hpp"
+#include "modifiedconvars_t.hpp"
+#include "CPointCommentaryNode.hpp"
 
 
 

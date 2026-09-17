@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseEntity.hpp"
 
 
 
@@ -24,8 +24,8 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_bHostageAlive,bool, 12 , 0x4a8);
 			PROPERTY_ARRAY(m_isHostageFollowingSomeone,bool, 12 , 0x4b4);
 			PROPERTY_ARRAY(m_iHostageEntityIDs,GlobalTypes::CEntityIndex, 12 , 0x4c0);
-			PROPERTY(m_bombsiteCenterA,GlobalTypes::Vector, 0x4f0);
-			PROPERTY(m_bombsiteCenterB,GlobalTypes::Vector, 0x4fc);
+			PROPERTY(m_bombsiteCenterA,GlobalTypes::VectorWS, 0x4f0);
+			PROPERTY(m_bombsiteCenterB,GlobalTypes::VectorWS, 0x4fc);
 			PROPERTY_ARRAY(m_hostageRescueX,int32_t, 4 , 0x508);
 			PROPERTY_ARRAY(m_hostageRescueY,int32_t, 4 , 0x518);
 			PROPERTY_ARRAY(m_hostageRescueZ,int32_t, 4 , 0x528);

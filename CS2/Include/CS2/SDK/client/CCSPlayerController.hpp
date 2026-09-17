@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBasePlayerController.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/QuestProgress_Reason.hpp>
+#include "CBasePlayerController.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "QuestProgress_Reason.hpp"
 
 
 
@@ -33,78 +33,78 @@ namespace CS2 {
 	namespace client {
 		class CCSPlayerController : public CS2::client::CBasePlayerController {
 		public:
-			PROPERTY(m_pInGameMoneyServices,IDENTITY(client::CCSPlayerController_InGameMoneyServices*), 0x808);
-			PROPERTY(m_pInventoryServices,IDENTITY(client::CCSPlayerController_InventoryServices*), 0x810);
-			PROPERTY(m_pActionTrackingServices,IDENTITY(client::CCSPlayerController_ActionTrackingServices*), 0x818);
-			PROPERTY(m_pDamageServices,IDENTITY(client::CCSPlayerController_DamageServices*), 0x820);
-			PROPERTY(m_iPing,uint32_t, 0x828);
-			PROPERTY(m_bHasCommunicationAbuseMute,bool, 0x82c);
-			PROPERTY(m_uiCommunicationMuteFlags,uint32_t, 0x830);
-			PROPERTY(m_szCrosshairCodes,GlobalTypes::CUtlSymbolLarge*, 0x838);
-			PROPERTY(m_iPendingTeamNum,uint8_t, 0x840);
-			NESTED_PROPERTY(m_flForceTeamTime,IDENTITY(entity2::GameTime_t), 0x844);
-			PROPERTY(m_iCompTeammateColor,int32_t, 0x848);
-			PROPERTY(m_bEverPlayedOnTeam,bool, 0x84c);
-			NESTED_PROPERTY(m_flPreviousForceJoinTeamTime,IDENTITY(entity2::GameTime_t), 0x850);
-			PROPERTY(m_szClan,GlobalTypes::CUtlSymbolLarge*, 0x858);
-			PROPERTY(m_sSanitizedPlayerName,GlobalTypes::CUtlString*, 0x860);
-			PROPERTY(m_iCoachingTeam,int32_t, 0x868);
-			PROPERTY(m_nPlayerDominated,uint64_t, 0x870);
-			PROPERTY(m_nPlayerDominatingMe,uint64_t, 0x878);
-			PROPERTY(m_iCompetitiveRanking,int32_t, 0x880);
-			PROPERTY(m_iCompetitiveWins,int32_t, 0x884);
-			PROPERTY(m_iCompetitiveRankType,int8_t, 0x888);
-			PROPERTY(m_iCompetitiveRankingPredicted_Win,int32_t, 0x88c);
-			PROPERTY(m_iCompetitiveRankingPredicted_Loss,int32_t, 0x890);
-			PROPERTY(m_iCompetitiveRankingPredicted_Tie,int32_t, 0x894);
-			PROPERTY(m_nEndMatchNextMapVote,int32_t, 0x898);
-			PROPERTY(m_unActiveQuestId,uint16_t, 0x89c);
-			PROPERTY(m_rtActiveMissionPeriod,uint32_t, 0x8a0);
-			PROPERTY(m_nQuestProgressReason,IDENTITY(client::QuestProgress_Reason), 0x8a4);
-			PROPERTY(m_unPlayerTvControlFlags,uint32_t, 0x8a8);
-			PROPERTY(m_iDraftIndex,int32_t, 0x8d8);
-			PROPERTY(m_msQueuedModeDisconnectionTimestamp,uint32_t, 0x8dc);
-			PROPERTY(m_uiAbandonRecordedReason,uint32_t, 0x8e0);
-			PROPERTY(m_eNetworkDisconnectionReason,uint32_t, 0x8e4);
-			PROPERTY(m_bCannotBeKicked,bool, 0x8e8);
-			PROPERTY(m_bEverFullyConnected,bool, 0x8e9);
-			PROPERTY(m_bAbandonAllowsSurrender,bool, 0x8ea);
-			PROPERTY(m_bAbandonOffersInstantSurrender,bool, 0x8eb);
-			PROPERTY(m_bDisconnection1MinWarningPrinted,bool, 0x8ec);
-			PROPERTY(m_bScoreReported,bool, 0x8ed);
-			PROPERTY(m_nDisconnectionTick,int32_t, 0x8f0);
-			PROPERTY(m_bControllingBot,bool, 0x900);
-			PROPERTY(m_bHasControlledBotThisRound,bool, 0x901);
-			PROPERTY(m_bHasBeenControlledByPlayerThisRound,bool, 0x902);
-			PROPERTY(m_nBotsControlledThisRound,int32_t, 0x904);
-			PROPERTY(m_bCanControlObservedBot,bool, 0x908);
-			PROPERTY(m_hPlayerPawn,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x90c);
-			PROPERTY(m_hObserverPawn,IDENTITY(GlobalTypes::CHandle<client::C_CSObserverPawn>), 0x910);
-			PROPERTY(m_bPawnIsAlive,bool, 0x914);
-			PROPERTY(m_iPawnHealth,uint32_t, 0x918);
-			PROPERTY(m_iPawnArmor,int32_t, 0x91c);
-			PROPERTY(m_bPawnHasDefuser,bool, 0x920);
-			PROPERTY(m_bPawnHasHelmet,bool, 0x921);
-			PROPERTY(m_nPawnCharacterDefIndex,uint16_t, 0x922);
-			PROPERTY(m_iPawnLifetimeStart,int32_t, 0x924);
-			PROPERTY(m_iPawnLifetimeEnd,int32_t, 0x928);
-			PROPERTY(m_iPawnBotDifficulty,int32_t, 0x92c);
-			PROPERTY(m_hOriginalControllerOfCurrentPawn,IDENTITY(GlobalTypes::CHandle<client::CCSPlayerController>), 0x930);
-			PROPERTY(m_iScore,int32_t, 0x934);
-			PROPERTY_ARRAY(m_recentKillQueue,uint8_t, 8 , 0x938);
-			PROPERTY(m_nFirstKill,uint8_t, 0x940);
-			PROPERTY(m_nKillCount,uint8_t, 0x941);
-			PROPERTY(m_bMvpNoMusic,bool, 0x942);
-			PROPERTY(m_eMvpReason,int32_t, 0x944);
-			PROPERTY(m_iMusicKitID,int32_t, 0x948);
-			PROPERTY(m_iMusicKitMVPs,int32_t, 0x94c);
-			PROPERTY(m_iMVPs,int32_t, 0x950);
-			PROPERTY(m_bIsPlayerNameDirty,bool, 0x954);
-			PROPERTY(m_bFireBulletsSeedSynchronized,bool, 0x955);
-			S2_PAD(0x160);
+			PROPERTY(m_pInGameMoneyServices,IDENTITY(client::CCSPlayerController_InGameMoneyServices*), 0x810);
+			PROPERTY(m_pInventoryServices,IDENTITY(client::CCSPlayerController_InventoryServices*), 0x818);
+			PROPERTY(m_pActionTrackingServices,IDENTITY(client::CCSPlayerController_ActionTrackingServices*), 0x820);
+			PROPERTY(m_pDamageServices,IDENTITY(client::CCSPlayerController_DamageServices*), 0x828);
+			PROPERTY(m_iPing,uint32_t, 0x830);
+			PROPERTY(m_bHasCommunicationAbuseMute,bool, 0x834);
+			PROPERTY(m_uiCommunicationMuteFlags,uint32_t, 0x838);
+			PROPERTY(m_szCrosshairCodes,GlobalTypes::CUtlSymbolLarge*, 0x840);
+			PROPERTY(m_iPendingTeamNum,uint8_t, 0x848);
+			NESTED_PROPERTY(m_flForceTeamTime,IDENTITY(entity2::GameTime_t), 0x84c);
+			PROPERTY(m_iCompTeammateColor,int32_t, 0x850);
+			PROPERTY(m_bEverPlayedOnTeam,bool, 0x854);
+			NESTED_PROPERTY(m_flPreviousForceJoinTeamTime,IDENTITY(entity2::GameTime_t), 0x858);
+			PROPERTY(m_szClan,GlobalTypes::CUtlSymbolLarge*, 0x860);
+			PROPERTY(m_sSanitizedPlayerName,GlobalTypes::CUtlString*, 0x868);
+			PROPERTY(m_iCoachingTeam,int32_t, 0x870);
+			PROPERTY(m_nPlayerDominated,uint64_t, 0x878);
+			PROPERTY(m_nPlayerDominatingMe,uint64_t, 0x880);
+			PROPERTY(m_iCompetitiveRanking,int32_t, 0x888);
+			PROPERTY(m_iCompetitiveWins,int32_t, 0x88c);
+			PROPERTY(m_iCompetitiveRankType,int8_t, 0x890);
+			PROPERTY(m_iCompetitiveRankingPredicted_Win,int32_t, 0x894);
+			PROPERTY(m_iCompetitiveRankingPredicted_Loss,int32_t, 0x898);
+			PROPERTY(m_iCompetitiveRankingPredicted_Tie,int32_t, 0x89c);
+			PROPERTY(m_nEndMatchNextMapVote,int32_t, 0x8a0);
+			PROPERTY(m_unActiveQuestId,uint16_t, 0x8a4);
+			PROPERTY(m_rtActiveMissionPeriod,uint32_t, 0x8a8);
+			PROPERTY(m_nQuestProgressReason,IDENTITY(client::QuestProgress_Reason), 0x8ac);
+			PROPERTY(m_unPlayerTvControlFlags,uint32_t, 0x8b0);
+			PROPERTY(m_iDraftIndex,int32_t, 0x8e0);
+			PROPERTY(m_msQueuedModeDisconnectionTimestamp,uint32_t, 0x8e4);
+			PROPERTY(m_uiAbandonRecordedReason,uint32_t, 0x8e8);
+			PROPERTY(m_eNetworkDisconnectionReason,uint32_t, 0x8ec);
+			PROPERTY(m_bCannotBeKicked,bool, 0x8f0);
+			PROPERTY(m_bEverFullyConnected,bool, 0x8f1);
+			PROPERTY(m_bAbandonAllowsSurrender,bool, 0x8f2);
+			PROPERTY(m_bAbandonOffersInstantSurrender,bool, 0x8f3);
+			PROPERTY(m_bDisconnection1MinWarningPrinted,bool, 0x8f4);
+			PROPERTY(m_bScoreReported,bool, 0x8f5);
+			PROPERTY(m_nDisconnectionTick,int32_t, 0x8f8);
+			PROPERTY(m_bControllingBot,bool, 0x908);
+			PROPERTY(m_bHasControlledBotThisRound,bool, 0x909);
+			PROPERTY(m_bHasBeenControlledByPlayerThisRound,bool, 0x90a);
+			PROPERTY(m_nBotsControlledThisRound,int32_t, 0x90c);
+			PROPERTY(m_bCanControlObservedBot,bool, 0x910);
+			PROPERTY(m_hPlayerPawn,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x914);
+			PROPERTY(m_hObserverPawn,IDENTITY(GlobalTypes::CHandle<client::C_CSObserverPawn>), 0x918);
+			PROPERTY(m_bPawnIsAlive,bool, 0x91c);
+			PROPERTY(m_iPawnHealth,uint32_t, 0x920);
+			PROPERTY(m_iPawnArmor,int32_t, 0x924);
+			PROPERTY(m_bPawnHasDefuser,bool, 0x928);
+			PROPERTY(m_bPawnHasHelmet,bool, 0x929);
+			PROPERTY(m_nPawnCharacterDefIndex,uint16_t, 0x92a);
+			PROPERTY(m_iPawnLifetimeStart,int32_t, 0x92c);
+			PROPERTY(m_iPawnLifetimeEnd,int32_t, 0x930);
+			PROPERTY(m_iPawnBotDifficulty,int32_t, 0x934);
+			PROPERTY(m_hOriginalControllerOfCurrentPawn,IDENTITY(GlobalTypes::CHandle<client::CCSPlayerController>), 0x938);
+			PROPERTY(m_iScore,int32_t, 0x93c);
+			PROPERTY_ARRAY(m_recentKillQueue,uint8_t, 8 , 0x940);
+			PROPERTY(m_nFirstKill,uint8_t, 0x948);
+			PROPERTY(m_nKillCount,uint8_t, 0x949);
+			PROPERTY(m_bMvpNoMusic,bool, 0x94a);
+			PROPERTY(m_eMvpReason,int32_t, 0x94c);
+			PROPERTY(m_iMusicKitID,int32_t, 0x950);
+			PROPERTY(m_iMusicKitMVPs,int32_t, 0x954);
+			PROPERTY(m_iMVPs,int32_t, 0x958);
+			PROPERTY(m_bIsPlayerNameDirty,bool, 0x95c);
+			PROPERTY(m_bFireBulletsSeedSynchronized,bool, 0x95d);
+			S2_PAD(0x168);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CCSPlayerController) == 0x958, "CCSPlayerController size should be 0x958");
+		//static_assert(sizeof(CS2::client::CCSPlayerController) == 0x960, "CCSPlayerController size should be 0x960");
 
 #endif
 	}

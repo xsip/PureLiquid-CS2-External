@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmEvent.hpp>
-#include <SDK/animlib/NmTargetWarpRule_t.hpp>
-#include <SDK/animlib/NmTargetWarpAlgorithm_t.hpp>
+#include "CNmEvent.hpp"
+#include "NmTargetWarpRule_t.hpp"
+#include "NmTargetWarpAlgorithm_t.hpp"
 
 
 

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x48
+			// Class size: 0xD8
 			namespace CPulseCell_BaseState /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
 				// NO SCHEMA DATA FOUND!
 			}

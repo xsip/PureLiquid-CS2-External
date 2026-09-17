@@ -8,50 +8,50 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xC10
+			// Class size: 0xC30
 			namespace CPhysicsProp /*: public CS2::server::CBreakableProp*/ {
-				constexpr std::ptrdiff_t m_MotionEnabled = 0xae0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnAwakened = 0xaf8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnAwake = 0xb10; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnAsleep = 0xb28; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnPlayerUse = 0xb40; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnOutOfWorld = 0xb58; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnPlayerPickup = 0xb70; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_bForceNavIgnore = 0xb88; // bool m_bForceNavIgnore; |  0xb88 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNoNavmeshBlocker = 0xb89; // bool m_bNoNavmeshBlocker; |  0xb89 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceNpcExclude = 0xb8a; // bool m_bForceNpcExclude; |  0xb8a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_massScale = 0xb8c; // float32 m_massScale; |  0xb8c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_buoyancyScale = 0xb90; // float32 m_buoyancyScale; |  0xb90 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_damageType = 0xb94; // int32_t m_damageType; |  0xb94 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_damageToEnableMotion = 0xb98; // int32_t m_damageToEnableMotion; |  0xb98 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flForceToEnableMotion = 0xb9c; // float32 m_flForceToEnableMotion; |  0xb9c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bThrownByPlayer = 0xba0; // bool m_bThrownByPlayer; |  0xba0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDroppedByPlayer = 0xba1; // bool m_bDroppedByPlayer; |  0xba1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bTouchedByPlayer = 0xba2; // bool m_bTouchedByPlayer; |  0xba2 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0xba3; // bool m_bFirstCollisionAfterLaunch; |  0xba3 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bHasBeenAwakened = 0xba4; // bool m_bHasBeenAwakened; |  0xba4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsOverrideProp = 0xba5; // bool m_bIsOverrideProp; |  0xba5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flLastBurn = 0xba8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nDynamicContinuousContactBehavior = 0xbac; // physicslib::DynamicContinuousContactBehavior_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_fNextCheckDisableMotionContactsTime = 0xbb0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_iInitialGlowState = 0xbb4; // int32_t m_iInitialGlowState; |  0xbb4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nGlowRange = 0xbb8; // int32_t m_nGlowRange; |  0xbb8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nGlowRangeMin = 0xbbc; // int32_t m_nGlowRangeMin; |  0xbbc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_glowColor = 0xbc0; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bShouldAutoConvertBackFromDebris = 0xbc4; // bool m_bShouldAutoConvertBackFromDebris; |  0xbc4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bMuteImpactEffects = 0xbc5; // bool m_bMuteImpactEffects; |  0xbc5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nNavObstacleType = 0xbc8; // server::INavObstacle::NavObstacleType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bUpdateNavWhenMoving = 0xbcc; // bool m_bUpdateNavWhenMoving; |  0xbcc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceNavObstacleCut = 0xbcd; // bool m_bForceNavObstacleCut; |  0xbcd | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAllowObstacleConvexHullMerging = 0xbce; // bool m_bAllowObstacleConvexHullMerging; |  0xbce | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAcceptDamageFromHeldObjects = 0xbcf; // bool m_bAcceptDamageFromHeldObjects; |  0xbcf | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEnableUseOutput = 0xbd0; // bool m_bEnableUseOutput; |  0xbd0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_CrateType = 0xbd4; // server::CPhysicsProp::CrateType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_strItemClass = 0xbd8; // GlobalTypes::CUtlSymbolLarge[4]  | Schema_FixedArray | Size: 0x20
-				constexpr std::ptrdiff_t m_nItemCount = 0xbf8; // int32_t m_nItemCount[4]; |  0xbf8 | Schema_FixedArray | Size: 0x10
-				constexpr std::ptrdiff_t m_bRemovableForAmmoBalancing = 0xc08; // bool m_bRemovableForAmmoBalancing; |  0xc08 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAwake = 0xc09; // bool m_bAwake; |  0xc09 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAttachedToReferenceFrame = 0xc0a; // bool m_bAttachedToReferenceFrame; |  0xc0a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_MotionEnabled = 0xb00; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnAwakened = 0xb18; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnAwake = 0xb30; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnAsleep = 0xb48; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnPlayerUse = 0xb60; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnOutOfWorld = 0xb78; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnPlayerPickup = 0xb90; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_bForceNavIgnore = 0xba8; // bool m_bForceNavIgnore; |  0xba8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNoNavmeshBlocker = 0xba9; // bool m_bNoNavmeshBlocker; |  0xba9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceNpcExclude = 0xbaa; // bool m_bForceNpcExclude; |  0xbaa | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_massScale = 0xbac; // float32 m_massScale; |  0xbac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_buoyancyScale = 0xbb0; // float32 m_buoyancyScale; |  0xbb0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_damageType = 0xbb4; // int32_t m_damageType; |  0xbb4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_damageToEnableMotion = 0xbb8; // int32_t m_damageToEnableMotion; |  0xbb8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flForceToEnableMotion = 0xbbc; // float32 m_flForceToEnableMotion; |  0xbbc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bThrownByPlayer = 0xbc0; // bool m_bThrownByPlayer; |  0xbc0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDroppedByPlayer = 0xbc1; // bool m_bDroppedByPlayer; |  0xbc1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bTouchedByPlayer = 0xbc2; // bool m_bTouchedByPlayer; |  0xbc2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0xbc3; // bool m_bFirstCollisionAfterLaunch; |  0xbc3 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bHasBeenAwakened = 0xbc4; // bool m_bHasBeenAwakened; |  0xbc4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsOverrideProp = 0xbc5; // bool m_bIsOverrideProp; |  0xbc5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flLastBurn = 0xbc8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nDynamicContinuousContactBehavior = 0xbcc; // physicslib::DynamicContinuousContactBehavior_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_fNextCheckDisableMotionContactsTime = 0xbd0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_iInitialGlowState = 0xbd4; // int32_t m_iInitialGlowState; |  0xbd4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nGlowRange = 0xbd8; // int32_t m_nGlowRange; |  0xbd8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nGlowRangeMin = 0xbdc; // int32_t m_nGlowRangeMin; |  0xbdc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_glowColor = 0xbe0; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bShouldAutoConvertBackFromDebris = 0xbe4; // bool m_bShouldAutoConvertBackFromDebris; |  0xbe4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bMuteImpactEffects = 0xbe5; // bool m_bMuteImpactEffects; |  0xbe5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nNavObstacleType = 0xbe8; // server::INavObstacle::NavObstacleType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bUpdateNavWhenMoving = 0xbec; // bool m_bUpdateNavWhenMoving; |  0xbec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceNavObstacleCut = 0xbed; // bool m_bForceNavObstacleCut; |  0xbed | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAllowObstacleConvexHullMerging = 0xbee; // bool m_bAllowObstacleConvexHullMerging; |  0xbee | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAcceptDamageFromHeldObjects = 0xbef; // bool m_bAcceptDamageFromHeldObjects; |  0xbef | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEnableUseOutput = 0xbf0; // bool m_bEnableUseOutput; |  0xbf0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_CrateType = 0xbf4; // server::CPhysicsProp::CrateType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_strItemClass = 0xbf8; // GlobalTypes::CUtlSymbolLarge[4]  | Schema_FixedArray | Size: 0x20
+				constexpr std::ptrdiff_t m_nItemCount = 0xc18; // int32_t m_nItemCount[4]; |  0xc18 | Schema_FixedArray | Size: 0x10
+				constexpr std::ptrdiff_t m_bRemovableForAmmoBalancing = 0xc28; // bool m_bRemovableForAmmoBalancing; |  0xc28 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAwake = 0xc29; // bool m_bAwake; |  0xc29 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAttachedToReferenceFrame = 0xc2a; // bool m_bAttachedToReferenceFrame; |  0xc2a | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

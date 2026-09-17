@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseCSGrenade.hpp>
+#include "C_BaseCSGrenade.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_Flashbang) == 0x1D70, "C_Flashbang size should be 0x1D70");
+		//static_assert(sizeof(CS2::client::C_Flashbang) == 0x1DA0, "C_Flashbang size should be 0x1DA0");
 
 #endif
 	}

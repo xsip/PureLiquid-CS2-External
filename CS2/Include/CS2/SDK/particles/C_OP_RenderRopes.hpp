@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CBaseRendererSource2.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particles/ParticleOrientationChoiceList_t.hpp>
+#include "CBaseRendererSource2.hpp"
+#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "ParticleOrientationChoiceList_t.hpp"
 
 
 
@@ -31,35 +31,36 @@ namespace CS2 {
 			PROPERTY(m_flEndFadeSize,float32, 0x2e00);
 			PROPERTY(m_flStartFadeDot,float32, 0x2e04);
 			PROPERTY(m_flEndFadeDot,float32, 0x2e08);
-			PROPERTY(m_flRadiusTaper,float32, 0x2e0c);
-			PROPERTY(m_nMinTesselation,int32_t, 0x2e10);
-			PROPERTY(m_nMaxTesselation,int32_t, 0x2e14);
-			PROPERTY(m_flTessScale,float32, 0x2e18);
-			NESTED_PROPERTY(m_flTextureVWorldSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2e20);
-			NESTED_PROPERTY(m_flTextureVScrollRate,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f90);
-			NESTED_PROPERTY(m_flTextureVOffset,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3100);
-			PROPERTY(m_nTextureVParamsCP,int32_t, 0x3270);
-			PROPERTY(m_bClampV,bool, 0x3274);
-			PROPERTY(m_nScaleCP1,int32_t, 0x3278);
-			PROPERTY(m_nScaleCP2,int32_t, 0x327c);
-			PROPERTY(m_flScaleVSizeByControlPointDistance,float32, 0x3280);
-			PROPERTY(m_flScaleVScrollByControlPointDistance,float32, 0x3284);
-			PROPERTY(m_flScaleVOffsetByControlPointDistance,float32, 0x3288);
-			PROPERTY(m_bUseScalarForTextureCoordinate,bool, 0x328d);
-			NESTED_PROPERTY(m_nScalarFieldForTextureCoordinate,IDENTITY(particles::ParticleAttributeIndex_t), 0x3290);
-			PROPERTY(m_flScalarAttributeTextureCoordScale,float32, 0x3294);
-			PROPERTY(m_bReverseOrder,bool, 0x3298);
-			PROPERTY(m_bClosedLoop,bool, 0x3299);
-			NESTED_PROPERTY(m_nSplitField,IDENTITY(particles::ParticleAttributeIndex_t), 0x329c);
-			PROPERTY(m_bSortBySegmentID,bool, 0x32a0);
-			PROPERTY(m_nOrientationType,IDENTITY(particles::ParticleOrientationChoiceList_t), 0x32a4);
-			NESTED_PROPERTY(m_nVectorFieldForOrientation,IDENTITY(particles::ParticleAttributeIndex_t), 0x32a8);
-			PROPERTY(m_bDrawAsOpaque,bool, 0x32ac);
-			PROPERTY(m_bGenerateNormals,bool, 0x32ad);
-			S2_PAD(0x4C0);
+			NESTED_PROPERTY(m_flSubPixelAAScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2e10);
+			PROPERTY(m_flRadiusTaper,float32, 0x2f80);
+			PROPERTY(m_nMinTesselation,int32_t, 0x2f84);
+			PROPERTY(m_nMaxTesselation,int32_t, 0x2f88);
+			PROPERTY(m_flTessScale,float32, 0x2f8c);
+			NESTED_PROPERTY(m_flTextureVWorldSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f90);
+			NESTED_PROPERTY(m_flTextureVScrollRate,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3100);
+			NESTED_PROPERTY(m_flTextureVOffset,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3270);
+			PROPERTY(m_nTextureVParamsCP,int32_t, 0x33e0);
+			PROPERTY(m_bClampV,bool, 0x33e4);
+			PROPERTY(m_nScaleCP1,int32_t, 0x33e8);
+			PROPERTY(m_nScaleCP2,int32_t, 0x33ec);
+			PROPERTY(m_flScaleVSizeByControlPointDistance,float32, 0x33f0);
+			PROPERTY(m_flScaleVScrollByControlPointDistance,float32, 0x33f4);
+			PROPERTY(m_flScaleVOffsetByControlPointDistance,float32, 0x33f8);
+			PROPERTY(m_bUseScalarForTextureCoordinate,bool, 0x33fd);
+			NESTED_PROPERTY(m_nScalarFieldForTextureCoordinate,IDENTITY(particles::ParticleAttributeIndex_t), 0x3400);
+			PROPERTY(m_flScalarAttributeTextureCoordScale,float32, 0x3404);
+			PROPERTY(m_bReverseOrder,bool, 0x3408);
+			PROPERTY(m_bClosedLoop,bool, 0x3409);
+			NESTED_PROPERTY(m_nSplitField,IDENTITY(particles::ParticleAttributeIndex_t), 0x340c);
+			PROPERTY(m_bSortBySegmentID,bool, 0x3410);
+			PROPERTY(m_nOrientationType,IDENTITY(particles::ParticleOrientationChoiceList_t), 0x3414);
+			NESTED_PROPERTY(m_nVectorFieldForOrientation,IDENTITY(particles::ParticleAttributeIndex_t), 0x3418);
+			PROPERTY(m_bDrawAsOpaque,bool, 0x341c);
+			PROPERTY(m_bGenerateNormals,bool, 0x341d);
+			S2_PAD(0x630);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_RenderRopes) == 0x32B0, "C_OP_RenderRopes size should be 0x32B0");
+		//static_assert(sizeof(CS2::particles::C_OP_RenderRopes) == 0x3420, "C_OP_RenderRopes size should be 0x3420");
 
 #endif
 	}

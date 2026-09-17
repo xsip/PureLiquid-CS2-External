@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/EDemoBoneSelectionMode.hpp>
-#include <SDK/animgraphlib/BoneDemoCaptureSettings_t.hpp>
-#include <SDK/animgraphlib/IKDemoCaptureSettings_t.hpp>
+#include "EDemoBoneSelectionMode.hpp"
+#include "BoneDemoCaptureSettings_t.hpp"
+#include "IKDemoCaptureSettings_t.hpp"
 
 
 

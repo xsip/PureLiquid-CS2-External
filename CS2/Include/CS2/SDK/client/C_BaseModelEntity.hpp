@@ -4,22 +4,22 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseEntity.hpp>
-#include <SDK/client/CHitboxComponent.hpp>
-#include <SDK/client/HitGroup_t.hpp>
-#include <SDK/client/RenderMode_t.hpp>
-#include <SDK/client/RenderFx_t.hpp>
-#include <SDK/client/EntityRenderAttribute_t.hpp>
-#include <SDK/client/CCollisionProperty.hpp>
-#include <SDK/client/CGlowProperty.hpp>
-#include <SDK/client/DecalRtEncoding_t.hpp>
-#include <SDK/client/CNetworkViewOffsetVector.hpp>
+#include "C_BaseEntity.hpp"
+#include "CHitboxComponent.hpp"
+#include "HitGroup_t.hpp"
+#include "RenderMode_t.hpp"
+#include "RenderFx_t.hpp"
+#include "EntityRenderAttribute_t.hpp"
+#include "CCollisionProperty.hpp"
+#include "CGlowProperty.hpp"
+#include "DecalRtEncoding_t.hpp"
+#include "CNetworkViewOffsetVector.hpp"
 
 
 
@@ -68,24 +68,24 @@ namespace CS2 {
 			PROPERTY(m_bRenderToCubemaps,bool, 0xd20);
 			PROPERTY(m_bNoInterpolate,bool, 0xd21);
 			NESTED_PROPERTY(m_Collision,IDENTITY(client::CCollisionProperty), 0xd28);
-			NESTED_PROPERTY(m_Glow,IDENTITY(client::CGlowProperty), 0xdd8);
-			PROPERTY(m_flGlowBackfaceMult,float32, 0xe30);
-			PROPERTY(m_fadeMinDist,float32, 0xe34);
-			PROPERTY(m_fadeMaxDist,float32, 0xe38);
-			PROPERTY(m_flFadeScale,float32, 0xe3c);
-			PROPERTY(m_flShadowStrength,float32, 0xe40);
-			PROPERTY(m_nObjectCulling,uint8_t, 0xe44);
-			PROPERTY(m_nRequiredDecalRtEncoding,IDENTITY(client::DecalRtEncoding_t), 0xe45);
-			// PROPERTY(m_bodyGroupChoices,IDENTITY(GlobalTypes::CUtlOrderedMap< CGlobalSymbol, int32 >), 0xe48);
-			PROPERTY(m_vecViewOffset,IDENTITY(Vector), 0xe70);
-			PROPERTY(m_pClientAlphaProperty,IDENTITY(client::CClientAlphaProperty*), 0xf50);
-			PROPERTY(m_ClientOverrideTint,GlobalTypes::Color, 0xf58);
-			PROPERTY(m_bUseClientOverrideTint,bool, 0xf5c);
-			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0xf98);
-			S2_PAD(0x9A8);
+			NESTED_PROPERTY(m_Glow,IDENTITY(client::CGlowProperty), 0xde0);
+			PROPERTY(m_flGlowBackfaceMult,float32, 0xe38);
+			PROPERTY(m_fadeMinDist,float32, 0xe3c);
+			PROPERTY(m_fadeMaxDist,float32, 0xe40);
+			PROPERTY(m_flFadeScale,float32, 0xe44);
+			PROPERTY(m_flShadowStrength,float32, 0xe48);
+			PROPERTY(m_nObjectCulling,uint8_t, 0xe4c);
+			PROPERTY(m_nRequiredDecalRtEncoding,IDENTITY(client::DecalRtEncoding_t), 0xe4d);
+			// PROPERTY(m_bodyGroupChoices,IDENTITY(GlobalTypes::CUtlOrderedMap< CGlobalSymbol, int32 >), 0xe50);
+			PROPERTY(m_vecViewOffset,IDENTITY(Vector), 0xe78);
+			PROPERTY(m_pClientAlphaProperty,IDENTITY(client::CClientAlphaProperty*), 0xf58);
+			PROPERTY(m_ClientOverrideTint,GlobalTypes::Color, 0xf60);
+			PROPERTY(m_bUseClientOverrideTint,bool, 0xf64);
+			PROPERTY_ARRAY(m_bvDisabledHitGroups,uint32_t, 1 , 0xfa0);
+			S2_PAD(0x9B0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BaseModelEntity) == 0xFA8, "C_BaseModelEntity size should be 0xFA8");
+		//static_assert(sizeof(CS2::client::C_BaseModelEntity) == 0xFB0, "C_BaseModelEntity size should be 0xFB0");
 
 #endif
 	}

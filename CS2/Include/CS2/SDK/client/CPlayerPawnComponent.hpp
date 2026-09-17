@@ -4,13 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/CNetworkVarChainer.hpp>
+#include "../entity2/CNetworkVarChainer.hpp"
+#include "CAnimGraphControllerPtr.hpp"
 
 
 
@@ -22,6 +23,7 @@ namespace CS2 {
 		class CPlayerPawnComponent  {
 		public:
 			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x8);
+			NESTED_PROPERTY(m_pComponentGraphController,IDENTITY(client::CAnimGraphControllerPtr), 0x30);
 			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS

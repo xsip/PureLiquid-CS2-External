@@ -8,12 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x28
-			namespace AI_BaseNPCAnimGraph_DebugSnapshotData_t /*: public CS2::client::DebugSnapshotBaseStructuredData_t*/ {
-				constexpr std::ptrdiff_t e_action_desired = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t b_action_restart = 0x10; // bool b_action_restart; |  0x10 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t e_movement_type_desired = 0x18; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t b_movement_type_restart = 0x20; // bool b_movement_type_restart; |  0x20 | Schema_Builtin | Size: 0x1
+			// Class size: 0x40
+			namespace AI_BaseNPCAnimGraph_DebugSnapshotData_t /**/ {
+				constexpr std::ptrdiff_t e_action_desired = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_action_handshake_restart = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_action_handshake_body_authority_current = 0x10; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_action_handshake_body_authority_desired = 0x18; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_movement_type_desired = 0x20; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_movement_handshake_restart = 0x28; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_movement_handshake_body_authority_current = 0x30; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t e_movement_handshake_body_authority_desired = 0x38; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

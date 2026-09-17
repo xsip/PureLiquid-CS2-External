@@ -4,20 +4,20 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/client/ValueRemapperInputType_t.hpp>
-#include <SDK/client/ValueRemapperOutputType_t.hpp>
-#include <SDK/client/ValueRemapperHapticsType_t.hpp>
-#include <SDK/client/ValueRemapperMomentumType_t.hpp>
-#include <SDK/client/ValueRemapperRatchetType_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseEntity.hpp"
+#include "../client/ValueRemapperInputType_t.hpp"
+#include "../client/ValueRemapperOutputType_t.hpp"
+#include "../client/ValueRemapperHapticsType_t.hpp"
+#include "../client/ValueRemapperMomentumType_t.hpp"
+#include "../client/ValueRemapperRatchetType_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -62,7 +62,7 @@ namespace CS2 {
 			PROPERTY(m_bFirstUpdate,bool, 0x539);
 			PROPERTY(m_flPreviousValue,float32, 0x53c);
 			NESTED_PROPERTY(m_flPreviousUpdateTickTime,IDENTITY(entity2::GameTime_t), 0x540);
-			PROPERTY(m_vecPreviousTestPoint,GlobalTypes::Vector, 0x544);
+			PROPERTY(m_vecPreviousTestPoint,GlobalTypes::VectorWS, 0x544);
 			PROPERTY(m_hUsingPlayer,IDENTITY(GlobalTypes::CHandle<server::CBasePlayerPawn>), 0x550);
 			PROPERTY(m_flCustomOutputValue,float32, 0x554);
 			PROPERTY(m_iszSoundEngage,GlobalTypes::CUtlSymbolLarge*, 0x558);

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/client/PlayerConnectedState.hpp>
-#include <SDK/client/ChatIgnoreType_t.hpp>
+#include "CBaseEntity.hpp"
+#include "../client/PlayerConnectedState.hpp"
+#include "../client/ChatIgnoreType_t.hpp"
 
 
 

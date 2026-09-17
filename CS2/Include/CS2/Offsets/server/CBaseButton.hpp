@@ -8,33 +8,34 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8E8
+			// Class size: 0x8F0
 			namespace CBaseButton /*: public CS2::server::CBaseToggle*/ {
-				constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7e8; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_fStayPushed = 0x7f4; // bool m_fStayPushed; |  0x7f4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fRotating = 0x7f5; // bool m_fRotating; |  0x7f5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_ls = 0x7f8; // server::locksound_t  | Schema_DeclaredClass | Size: 0x20
-				constexpr std::ptrdiff_t m_sUseSound = 0x818; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sLockedSound = 0x820; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sUnlockedSound = 0x828; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sOverrideAnticipationName = 0x830; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bLocked = 0x838; // bool m_bLocked; |  0x838 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisabled = 0x839; // bool m_bDisabled; |  0x839 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flUseLockedTime = 0x83c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bSolidBsp = 0x840; // bool m_bSolidBsp; |  0x840 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_OnDamaged = 0x848; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnPressed = 0x860; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnUseLocked = 0x878; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnIn = 0x890; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnOut = 0x8a8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_nState = 0x8c0; // int32_t m_nState; |  0x8c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hConstraint = 0x8c4; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hConstraintParent = 0x8c8; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bForceNpcExclude = 0x8cc; // bool m_bForceNpcExclude; |  0x8cc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_sGlowEntity = 0x8d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_glowEntity = 0x8d8; // GlobalTypes::CHandle<server::CBaseModelEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_usable = 0x8dc; // bool m_usable; |  0x8dc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_szDisplayText = 0x8e0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7f0; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_fStayPushed = 0x7fc; // bool m_fStayPushed; |  0x7fc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fRotating = 0x7fd; // bool m_fRotating; |  0x7fd | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_ls = 0x800; // server::locksound_t  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_sUseSound = 0x820; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sLockedSound = 0x828; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sUnlockedSound = 0x830; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sOverrideAnticipationName = 0x838; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bLocked = 0x840; // bool m_bLocked; |  0x840 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisabled = 0x841; // bool m_bDisabled; |  0x841 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flSpeed = 0x844; // float32 m_flSpeed; |  0x844 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flUseLockedTime = 0x848; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_bSolidBsp = 0x84c; // bool m_bSolidBsp; |  0x84c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_OnDamaged = 0x850; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnPressed = 0x868; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnUseLocked = 0x880; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnIn = 0x898; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnOut = 0x8b0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_nState = 0x8c8; // int32_t m_nState; |  0x8c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hConstraint = 0x8cc; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hConstraintParent = 0x8d0; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bForceNpcExclude = 0x8d4; // bool m_bForceNpcExclude; |  0x8d4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sGlowEntity = 0x8d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_glowEntity = 0x8e0; // GlobalTypes::CHandle<server::CBaseModelEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_usable = 0x8e4; // bool m_usable; |  0x8e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_szDisplayText = 0x8e8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

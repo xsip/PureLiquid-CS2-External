@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/worldrenderer/WorldBuilderParams_t.hpp>
-#include <SDK/worldrenderer/NodeData_t.hpp>
-#include <SDK/worldrenderer/BakedLightingInfo_t.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCEntityLump.hpp>
+#include "WorldBuilderParams_t.hpp"
+#include "NodeData_t.hpp"
+#include "BakedLightingInfo_t.hpp"
+#include "../resourcesystem/InfoForResourceTypeCEntityLump.hpp"
 
 
 

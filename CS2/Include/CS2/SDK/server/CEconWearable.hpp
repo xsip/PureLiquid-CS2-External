@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CEconEntity.hpp>
+#include "CEconEntity.hpp"
 
 
 
@@ -21,12 +21,12 @@ namespace CS2 {
 	namespace server {
 		class CEconWearable : public CS2::server::CEconEntity {
 		public:
-			PROPERTY(m_nForceSkin,int32_t, 0xc70);
-			PROPERTY(m_bAlwaysAllow,bool, 0xc74);
+			PROPERTY(m_nForceSkin,int32_t, 0xc90);
+			PROPERTY(m_bAlwaysAllow,bool, 0xc94);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEconWearable) == 0xC80, "CEconWearable size should be 0xC80");
+		//static_assert(sizeof(CS2::server::CEconWearable) == 0xCA0, "CEconWearable size should be 0xCA0");
 
 #endif
 	}

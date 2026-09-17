@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCS2WeaponGraphController.hpp>
-#include <SDK/animlib/CNmTarget.hpp>
+#include "CCS2WeaponGraphController.hpp"
+#include "../animlib/CNmTarget.hpp"
 
 
 

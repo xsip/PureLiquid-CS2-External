@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/smartprops/CSmartPropVariable.hpp>
-#include <SDK/smartprops/SmartPropRadiusPlacementMode_t.hpp>
+#include "CSmartPropVariable.hpp"
+#include "SmartPropRadiusPlacementMode_t.hpp"
 
 
 

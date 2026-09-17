@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1A0
-			namespace CPulseCell_Outflow_PlayVCD /*: public CS2::server::CPulseCell_Outflow_PlaySceneBase*/ {
-				constexpr std::ptrdiff_t m_hChoreoScene = 0xf0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_OnPaused = 0xf8; // pulse_runtime_lib::CPulse_OutflowConnection  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_OnResumed = 0x140; // pulse_runtime_lib::CPulse_OutflowConnection  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_OutRequirements = 0x188; // GlobalTypes::CUtlVector<server::CPulseCell_Outflow_PlayVCD_VCDRequirementInfo_t>  | Schema_Atomic | Size: 0x18
+			// Class size: 0x1E8
+			namespace CPulseCell_Outflow_PlayVCD /*: public CS2::server::CPulseCell_Outflow_PlayVCDBase*/ {
+				constexpr std::ptrdiff_t m_hChoreoScene = 0x138; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_OnPaused = 0x140; // pulse_runtime_lib::CPulse_OutflowConnection  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_OnResumed = 0x188; // pulse_runtime_lib::CPulse_OutflowConnection  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_OutRequirements = 0x1d0; // GlobalTypes::CUtlVector<server::CPulseCell_Outflow_PlayVCD_VCDRequirementInfo_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

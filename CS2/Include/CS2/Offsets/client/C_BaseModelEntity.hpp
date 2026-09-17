@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xFA8
+			// Class size: 0xFB0
 			namespace C_BaseModelEntity /*: public CS2::client::C_BaseEntity*/ {
 				constexpr std::ptrdiff_t m_CRenderComponent = 0xaf0; // client::CRenderComponent**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_CHitboxComponent = 0xaf8; // client::CHitboxComponent  | Schema_DeclaredClass | Size: 0x18
@@ -39,21 +39,21 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_vecRenderAttributes = 0xca0; // GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::EntityRenderAttribute_t>  | Schema_Atomic | Size: 0x68
 				constexpr std::ptrdiff_t m_bRenderToCubemaps = 0xd20; // bool m_bRenderToCubemaps; |  0xd20 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bNoInterpolate = 0xd21; // bool m_bNoInterpolate; |  0xd21 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_Collision = 0xd28; // client::CCollisionProperty  | Schema_DeclaredClass | Size: 0xb0
-				constexpr std::ptrdiff_t m_Glow = 0xdd8; // client::CGlowProperty  | Schema_DeclaredClass | Size: 0x58
-				constexpr std::ptrdiff_t m_flGlowBackfaceMult = 0xe30; // float32 m_flGlowBackfaceMult; |  0xe30 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fadeMinDist = 0xe34; // float32 m_fadeMinDist; |  0xe34 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fadeMaxDist = 0xe38; // float32 m_fadeMaxDist; |  0xe38 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFadeScale = 0xe3c; // float32 m_flFadeScale; |  0xe3c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flShadowStrength = 0xe40; // float32 m_flShadowStrength; |  0xe40 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nObjectCulling = 0xe44; // uint8_t m_nObjectCulling; |  0xe44 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRequiredDecalRtEncoding = 0xe45; // client::DecalRtEncoding_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_bodyGroupChoices = 0xe48; // GlobalTypes::CUtlOrderedMap  | Schema_Atomic | Size: 0x28
-				constexpr std::ptrdiff_t m_vecViewOffset = 0xe70; // client::CNetworkViewOffsetVector  | Schema_DeclaredClass | Size: 0x28
-				constexpr std::ptrdiff_t m_pClientAlphaProperty = 0xf50; // client::CClientAlphaProperty**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_ClientOverrideTint = 0xf58; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bUseClientOverrideTint = 0xf5c; // bool m_bUseClientOverrideTint; |  0xf5c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bvDisabledHitGroups = 0xf98; // uint32_t m_bvDisabledHitGroups[1]; |  0xf98 | Schema_FixedArray | Size: 0x4
+				constexpr std::ptrdiff_t m_Collision = 0xd28; // client::CCollisionProperty  | Schema_DeclaredClass | Size: 0xb8
+				constexpr std::ptrdiff_t m_Glow = 0xde0; // client::CGlowProperty  | Schema_DeclaredClass | Size: 0x58
+				constexpr std::ptrdiff_t m_flGlowBackfaceMult = 0xe38; // float32 m_flGlowBackfaceMult; |  0xe38 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fadeMinDist = 0xe3c; // float32 m_fadeMinDist; |  0xe3c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fadeMaxDist = 0xe40; // float32 m_fadeMaxDist; |  0xe40 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFadeScale = 0xe44; // float32 m_flFadeScale; |  0xe44 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flShadowStrength = 0xe48; // float32 m_flShadowStrength; |  0xe48 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nObjectCulling = 0xe4c; // uint8_t m_nObjectCulling; |  0xe4c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRequiredDecalRtEncoding = 0xe4d; // client::DecalRtEncoding_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_bodyGroupChoices = 0xe50; // GlobalTypes::CUtlOrderedMap  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_vecViewOffset = 0xe78; // client::CNetworkViewOffsetVector  | Schema_DeclaredClass | Size: 0x28
+				constexpr std::ptrdiff_t m_pClientAlphaProperty = 0xf58; // client::CClientAlphaProperty**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_ClientOverrideTint = 0xf60; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bUseClientOverrideTint = 0xf64; // bool m_bUseClientOverrideTint; |  0xf64 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bvDisabledHitGroups = 0xfa0; // uint32_t m_bvDisabledHitGroups[1]; |  0xfa0 | Schema_FixedArray | Size: 0x4
 			}
 		}
 	}

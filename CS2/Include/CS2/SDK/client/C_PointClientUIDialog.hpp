@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseClientUIEntity.hpp>
+#include "C_BaseClientUIEntity.hpp"
 
 
 
@@ -26,12 +26,12 @@ namespace CS2 {
 	namespace client {
 		class C_PointClientUIDialog : public CS2::client::C_BaseClientUIEntity {
 		public:
-			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xfd8);
-			PROPERTY(m_bStartEnabled,bool, 0xfdc);
+			PROPERTY(m_hActivator,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xfe0);
+			PROPERTY(m_bStartEnabled,bool, 0xfe4);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PointClientUIDialog) == 0xFE0, "C_PointClientUIDialog size should be 0xFE0");
+		//static_assert(sizeof(CS2::client::C_PointClientUIDialog) == 0xFE8, "C_PointClientUIDialog size should be 0xFE8");
 
 #endif
 	}

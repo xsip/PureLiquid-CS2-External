@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CBaseTrailRenderer.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/CPerParticleFloatInput.hpp>
-#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include "CBaseTrailRenderer.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
+#include "../particleslib/CParticleCollectionVecInput.hpp"
 
 
 
@@ -24,30 +24,30 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_RenderTrails : public CS2::particles::CBaseTrailRenderer {
 		public:
-			PROPERTY(m_bEnableFadingAndClamping,bool, 0x30e8);
-			PROPERTY(m_flStartFadeDot,float32, 0x30ec);
-			PROPERTY(m_flEndFadeDot,float32, 0x30f0);
-			NESTED_PROPERTY(m_nPrevPntSource,IDENTITY(particles::ParticleAttributeIndex_t), 0x30f4);
-			PROPERTY(m_flMaxLength,float32, 0x30f8);
-			PROPERTY(m_flMinLength,float32, 0x30fc);
-			PROPERTY(m_bIgnoreDT,bool, 0x3100);
-			PROPERTY(m_flConstrainRadiusToLengthRatio,float32, 0x3104);
-			PROPERTY(m_flLengthScale,float32, 0x3108);
-			PROPERTY(m_flLengthFadeInTime,float32, 0x310c);
-			NESTED_PROPERTY(m_flRadiusHeadTaper,IDENTITY(particleslib::CPerParticleFloatInput), 0x3110);
-			NESTED_PROPERTY(m_vecHeadColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3280);
-			NESTED_PROPERTY(m_flHeadAlphaScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x3938);
-			NESTED_PROPERTY(m_flRadiusTaper,IDENTITY(particleslib::CPerParticleFloatInput), 0x3aa8);
-			NESTED_PROPERTY(m_vecTailColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3c18);
-			NESTED_PROPERTY(m_flTailAlphaScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x42d0);
-			NESTED_PROPERTY(m_nHorizCropField,IDENTITY(particles::ParticleAttributeIndex_t), 0x4440);
-			NESTED_PROPERTY(m_nVertCropField,IDENTITY(particles::ParticleAttributeIndex_t), 0x4444);
-			PROPERTY(m_flForwardShift,float32, 0x4448);
-			PROPERTY(m_bFlipUVBasedOnPitchYaw,bool, 0x444c);
+			PROPERTY(m_bEnableFadingAndClamping,bool, 0x3258);
+			PROPERTY(m_flStartFadeDot,float32, 0x325c);
+			PROPERTY(m_flEndFadeDot,float32, 0x3260);
+			NESTED_PROPERTY(m_nPrevPntSource,IDENTITY(particles::ParticleAttributeIndex_t), 0x3264);
+			PROPERTY(m_flMaxLength,float32, 0x3268);
+			PROPERTY(m_flMinLength,float32, 0x326c);
+			PROPERTY(m_bIgnoreDT,bool, 0x3270);
+			PROPERTY(m_flConstrainRadiusToLengthRatio,float32, 0x3274);
+			PROPERTY(m_flLengthScale,float32, 0x3278);
+			PROPERTY(m_flLengthFadeInTime,float32, 0x327c);
+			NESTED_PROPERTY(m_flRadiusHeadTaper,IDENTITY(particleslib::CPerParticleFloatInput), 0x3280);
+			NESTED_PROPERTY(m_vecHeadColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x33f0);
+			NESTED_PROPERTY(m_flHeadAlphaScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x3aa8);
+			NESTED_PROPERTY(m_flRadiusTaper,IDENTITY(particleslib::CPerParticleFloatInput), 0x3c18);
+			NESTED_PROPERTY(m_vecTailColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x3d88);
+			NESTED_PROPERTY(m_flTailAlphaScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x4440);
+			NESTED_PROPERTY(m_nHorizCropField,IDENTITY(particles::ParticleAttributeIndex_t), 0x45b0);
+			NESTED_PROPERTY(m_nVertCropField,IDENTITY(particles::ParticleAttributeIndex_t), 0x45b4);
+			PROPERTY(m_flForwardShift,float32, 0x45b8);
+			PROPERTY(m_bFlipUVBasedOnPitchYaw,bool, 0x45bc);
 			S2_PAD(0x1368);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_RenderTrails) == 0x4450, "C_OP_RenderTrails size should be 0x4450");
+		//static_assert(sizeof(CS2::particles::C_OP_RenderTrails) == 0x45C0, "C_OP_RenderTrails size should be 0x45C0");
 
 #endif
 	}

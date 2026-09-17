@@ -8,18 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x158
+			// Class size: 0x140
 			namespace CCS2ChickenGraphController /*: public CS2::client::CAnimGraphControllerBase*/ {
 				constexpr std::ptrdiff_t m_action = 0x88; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_actionSubtype = 0xa0; // GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bActionReset = 0xb8; // GlobalTypes::CAnimGraph2ParamAutoResetOptionalRef  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_idleVariation = 0xd8; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_runVariation = 0xf0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_panicVariation = 0x108; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_squatVariation = 0x120; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bInWater = 0x138; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bHasActionCompletedEvent = 0x150; // bool m_bHasActionCompletedEvent; |  0x150 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bWaitingForCompletedEvent = 0x151; // bool m_bWaitingForCompletedEvent; |  0x151 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bActionReset = 0xa0; // GlobalTypes::CAnimGraph2ParamAutoResetOptionalRef  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_idleVariation = 0xc0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_runVariation = 0xd8; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_panicVariation = 0xf0; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_squatVariation = 0x108; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bInWater = 0x120; // GlobalTypes::CAnimGraph2ParamOptionalRef  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bHasActionCompletedEvent = 0x138; // bool m_bHasActionCompletedEvent; |  0x138 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bWaitingForCompletedEvent = 0x139; // bool m_bWaitingForCompletedEvent; |  0x139 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

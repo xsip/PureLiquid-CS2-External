@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0x90
 			namespace sky3dparams_t /**/ {
 				constexpr std::ptrdiff_t scale = 0x8; // int16_t scale; |  0x8 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t origin = 0xc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t origin = 0xc; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t bClip3DSkyBoxNearToWorldFar = 0x18; // bool bClip3DSkyBoxNearToWorldFar; |  0x18 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t flClip3DSkyBoxNearToWorldFarOffset = 0x1c; // float32 flClip3DSkyBoxNearToWorldFarOffset; |  0x1c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t fog = 0x20; // client::fogparams_t  | Schema_DeclaredClass | Size: 0x68

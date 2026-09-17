@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCSWeaponBase.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
+#include "CCSWeaponBase.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/GameTick_t.hpp"
 
 
 
@@ -23,23 +23,23 @@ namespace CS2 {
 	namespace server {
 		class CBaseCSGrenade : public CS2::server::CCSWeaponBase {
 		public:
-			PROPERTY(m_bRedraw,bool, 0x1030);
-			PROPERTY(m_bIsHeldByPlayer,bool, 0x1031);
-			PROPERTY(m_bPinPulled,bool, 0x1032);
-			PROPERTY(m_bJumpThrow,bool, 0x1033);
-			PROPERTY(m_bThrowAnimating,bool, 0x1034);
-			NESTED_PROPERTY(m_fThrowTime,IDENTITY(entity2::GameTime_t), 0x1038);
-			PROPERTY(m_flThrowStrength,float32, 0x103c);
-			NESTED_PROPERTY(m_fDropTime,IDENTITY(entity2::GameTime_t), 0x1040);
-			NESTED_PROPERTY(m_fPinPullTime,IDENTITY(entity2::GameTime_t), 0x1044);
-			PROPERTY(m_bJustPulledPin,bool, 0x1048);
-			NESTED_PROPERTY(m_nNextHoldTick,IDENTITY(entity2::GameTick_t), 0x104c);
-			PROPERTY(m_flNextHoldFrac,float32, 0x1050);
-			PROPERTY(m_hSwitchToWeaponAfterThrow,IDENTITY(GlobalTypes::CHandle<server::CCSWeaponBase>), 0x1054);
+			PROPERTY(m_bRedraw,bool, 0x1050);
+			PROPERTY(m_bIsHeldByPlayer,bool, 0x1051);
+			PROPERTY(m_bPinPulled,bool, 0x1052);
+			PROPERTY(m_bJumpThrow,bool, 0x1053);
+			PROPERTY(m_bThrowAnimating,bool, 0x1054);
+			NESTED_PROPERTY(m_fThrowTime,IDENTITY(entity2::GameTime_t), 0x1058);
+			PROPERTY(m_flThrowStrength,float32, 0x105c);
+			NESTED_PROPERTY(m_fDropTime,IDENTITY(entity2::GameTime_t), 0x1060);
+			NESTED_PROPERTY(m_fPinPullTime,IDENTITY(entity2::GameTime_t), 0x1064);
+			PROPERTY(m_bJustPulledPin,bool, 0x1068);
+			NESTED_PROPERTY(m_nNextHoldTick,IDENTITY(entity2::GameTick_t), 0x106c);
+			PROPERTY(m_flNextHoldFrac,float32, 0x1070);
+			PROPERTY(m_hSwitchToWeaponAfterThrow,IDENTITY(GlobalTypes::CHandle<server::CCSWeaponBase>), 0x1074);
 			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseCSGrenade) == 0x1070, "CBaseCSGrenade size should be 0x1070");
+		//static_assert(sizeof(CS2::server::CBaseCSGrenade) == 0x1090, "CBaseCSGrenade size should be 0x1090");
 
 #endif
 	}

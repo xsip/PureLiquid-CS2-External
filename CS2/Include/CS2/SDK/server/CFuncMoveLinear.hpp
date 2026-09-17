@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseToggle.hpp>
-#include <SDK/server/MoveLinearAuthoredPos_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseToggle.hpp"
+#include "MoveLinearAuthoredPos_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -23,23 +23,24 @@ namespace CS2 {
 	namespace server {
 		class CFuncMoveLinear : public CS2::server::CBaseToggle {
 		public:
-			PROPERTY(m_authoredPosition,IDENTITY(server::MoveLinearAuthoredPos_t), 0x7e8);
-			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x7ec);
-			PROPERTY(m_vecMoveDirParentSpace,GlobalTypes::Vector, 0x7f8);
-			PROPERTY(m_soundStart,GlobalTypes::CUtlSymbolLarge*, 0x808);
-			PROPERTY(m_soundStop,GlobalTypes::CUtlSymbolLarge*, 0x810);
-			PROPERTY(m_currentSound,GlobalTypes::CUtlSymbolLarge*, 0x818);
-			PROPERTY(m_flBlockDamage,float32, 0x820);
-			PROPERTY(m_flStartPosition,float32, 0x824);
-			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0x830);
-			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0x848);
-			PROPERTY(m_bCreateMovableNavMesh,bool, 0x860);
-			PROPERTY(m_bAllowMovableNavMeshDockingOnEntireEntity,bool, 0x861);
-			PROPERTY(m_bCreateNavObstacle,bool, 0x862);
+			PROPERTY(m_authoredPosition,IDENTITY(server::MoveLinearAuthoredPos_t), 0x7f0);
+			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x7f4);
+			PROPERTY(m_vecMoveDirParentSpace,GlobalTypes::Vector, 0x800);
+			PROPERTY(m_soundStart,GlobalTypes::CGameSoundEventName, 0x810);
+			PROPERTY(m_soundStop,GlobalTypes::CGameSoundEventName, 0x818);
+			PROPERTY(m_currentSound,GlobalTypes::CUtlSymbolLarge*, 0x820);
+			PROPERTY(m_flBlockDamage,float32, 0x828);
+			PROPERTY(m_flStartPosition,float32, 0x82c);
+			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0x838);
+			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0x850);
+			PROPERTY(m_flSpeed,float32, 0x868);
+			PROPERTY(m_bCreateMovableNavMesh,bool, 0x86c);
+			PROPERTY(m_bAllowMovableNavMeshDockingOnEntireEntity,bool, 0x86d);
+			PROPERTY(m_bCreateNavObstacle,bool, 0x86e);
 			S2_PAD(0x88);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncMoveLinear) == 0x870, "CFuncMoveLinear size should be 0x870");
+		//static_assert(sizeof(CS2::server::CFuncMoveLinear) == 0x878, "CFuncMoveLinear size should be 0x878");
 
 #endif
 	}

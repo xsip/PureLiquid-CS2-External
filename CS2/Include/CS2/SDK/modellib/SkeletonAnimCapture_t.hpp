@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/SkeletonAnimCapture_t_Bone_t.hpp>
-#include <SDK/modellib/SkeletonAnimCapture_t_Frame_t.hpp>
+#include "SkeletonAnimCapture_t_Bone_t.hpp"
+#include "SkeletonAnimCapture_t_Frame_t.hpp"
 
 
 

@@ -4,12 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
+#include "CPhysicsBodyGameMarkup.hpp"
 
 
 
@@ -20,7 +21,7 @@ namespace CS2 {
 	namespace client {
 		class CPhysicsBodyGameMarkupData  {
 		public:
-			// PROPERTY(m_PhysicsBodyMarkupByBoneName,IDENTITY(GlobalTypes::CUtlOrderedMap< CUtlString, CPhysicsBodyGameMarkup >*), 0x0);
+			PROPERTY(m_PhysicsBodyMarkupByBoneName,IDENTITY(GlobalTypes::CUtlDict<client::CPhysicsBodyGameMarkup>), 0x0);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS

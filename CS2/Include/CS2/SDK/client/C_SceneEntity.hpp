@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_PointEntity.hpp>
-#include <SDK/client/C_BaseModelEntity.hpp>
-#include <SDK/client/C_SceneEntity_QueuedEvents_t.hpp>
+#include "C_PointEntity.hpp"
+#include "C_BaseModelEntity.hpp"
+#include "C_SceneEntity_QueuedEvents_t.hpp"
 
 
 

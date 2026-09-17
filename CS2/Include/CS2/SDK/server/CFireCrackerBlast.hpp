@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CInferno.hpp>
+#include "CInferno.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFireCrackerBlast) == 0x13F0, "CFireCrackerBlast size should be 0x13F0");
+		//static_assert(sizeof(CS2::server::CFireCrackerBlast) == 0x13F8, "CFireCrackerBlast size should be 0x13F8");
 
 #endif
 	}

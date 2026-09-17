@@ -30,6 +30,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nMaxTesselation = 0x148c; // int32_t m_nMaxTesselation; |  0x148c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nRoundness = 0x1490; // int32_t m_nRoundness; |  0x1490 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nForceRoundnessFixed = 0x1494; // bool m_nForceRoundnessFixed; |  0x1494 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bOnlyRenderInEffectsBloomPass = 0x1495; // bool m_bOnlyRenderInEffectsBloomPass; |  0x1495 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_LightingTransform = 0x1498; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
 				constexpr std::ptrdiff_t m_MaterialFloatVars = 0x1500; // GlobalTypes::CUtlLeanVector<particles::FloatInputMaterialVariable_t>  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_MaterialVecVars = 0x1520; // GlobalTypes::CUtlLeanVector<particles::VecInputMaterialVariable_t>  | Schema_Atomic | Size: 0x10

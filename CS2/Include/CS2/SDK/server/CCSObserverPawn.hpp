@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCSPlayerPawnBase.hpp>
+#include "CCSPlayerPawnBase.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSObserverPawn) == 0xD30, "CCSObserverPawn size should be 0xD30");
+		//static_assert(sizeof(CS2::server::CCSObserverPawn) == 0xD60, "CCSObserverPawn size should be 0xD60");
 
 #endif
 	}

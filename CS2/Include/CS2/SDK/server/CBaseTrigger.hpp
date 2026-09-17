@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseToggle.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseToggle.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "CBaseEntity.hpp"
 
 
 
@@ -28,22 +28,23 @@ namespace CS2 {
 	namespace server {
 		class CBaseTrigger : public CS2::server::CBaseToggle {
 		public:
-			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0x7e8);
-			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x800);
-			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0x818);
-			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x830);
-			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x848);
-			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x860);
-			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x878);
-			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x890);
-			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x8a8);
-			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0x8b0);
-			PROPERTY(m_bDisabled,bool, 0x8b4);
-			PROPERTY(m_bUseAsyncQueries,bool, 0x8c0);
-			S2_PAD(0xE0);
+			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0x7f0);
+			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x808);
+			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0x820);
+			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0x838);
+			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x850);
+			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x868);
+			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x880);
+			NESTED_PROPERTY(m_OnTouchingChanged,IDENTITY(entity2::CEntityIOOutput), 0x898);
+			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x8b0);
+			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x8c8);
+			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<server::CBaseFilter>), 0x8d0);
+			PROPERTY(m_bDisabled,bool, 0x8d4);
+			PROPERTY(m_bUseAsyncQueries,bool, 0x8e0);
+			S2_PAD(0xF8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseTrigger) == 0x8C8, "CBaseTrigger size should be 0x8C8");
+		//static_assert(sizeof(CS2::server::CBaseTrigger) == 0x8E8, "CBaseTrigger size should be 0x8E8");
 
 #endif
 	}

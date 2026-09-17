@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseEntity.hpp>
+#include "C_BaseEntity.hpp"
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace client {
 		class C_ColorCorrection : public CS2::client::C_BaseEntity {
 		public:
-			PROPERTY(m_vecOrigin,GlobalTypes::Vector, 0x600);
+			PROPERTY(m_vecOrigin,GlobalTypes::VectorWS, 0x600);
 			PROPERTY(m_MinFalloff,float32, 0x60c);
 			PROPERTY(m_MaxFalloff,float32, 0x610);
 			PROPERTY(m_flFadeInDuration,float32, 0x614);

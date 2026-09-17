@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CServerRagdollTrigger) == 0x8C8, "CServerRagdollTrigger size should be 0x8C8");
+		//static_assert(sizeof(CS2::server::CServerRagdollTrigger) == 0x8E8, "CServerRagdollTrigger size should be 0x8E8");
 
 #endif
 	}

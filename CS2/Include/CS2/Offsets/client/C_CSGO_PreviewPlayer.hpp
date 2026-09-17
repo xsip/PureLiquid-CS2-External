@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x34E0
+			// Class size: 0x3510
 			namespace C_CSGO_PreviewPlayer /*: public CS2::client::C_CSPlayerPawn*/ {
-				constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x3440; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flInitialModelScale = 0x3448; // float32 m_flInitialModelScale; |  0x3448 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x3470; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flInitialModelScale = 0x3478; // float32 m_flInitialModelScale; |  0x3478 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

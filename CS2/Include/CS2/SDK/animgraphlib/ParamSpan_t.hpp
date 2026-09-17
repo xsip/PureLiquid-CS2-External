@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/ParamSpanSample_t.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animgraphlib/AnimParamType_t.hpp>
+#include "ParamSpanSample_t.hpp"
+#include "CAnimParamHandle.hpp"
+#include "AnimParamType_t.hpp"
 
 
 

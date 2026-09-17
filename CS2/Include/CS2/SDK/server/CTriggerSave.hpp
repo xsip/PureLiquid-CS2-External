@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -21,13 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CTriggerSave : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_bForceNewLevelUnit,bool, 0x8c8);
-			PROPERTY(m_fDangerousTimer,float32, 0x8cc);
-			PROPERTY(m_minHitPoints,int32_t, 0x8d0);
+			PROPERTY(m_bForceNewLevelUnit,bool, 0x8e8);
+			PROPERTY(m_fDangerousTimer,float32, 0x8ec);
+			PROPERTY(m_minHitPoints,int32_t, 0x8f0);
+			PROPERTY(m_flRetriggerDelay,float32, 0x8f4);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerSave) == 0x8D8, "CTriggerSave size should be 0x8D8");
+		//static_assert(sizeof(CS2::server::CTriggerSave) == 0x8F8, "CTriggerSave size should be 0x8F8");
 
 #endif
 	}

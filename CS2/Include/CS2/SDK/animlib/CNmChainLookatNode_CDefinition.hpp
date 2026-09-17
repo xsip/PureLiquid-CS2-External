@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPassthroughNode_CDefinition.hpp>
+#include "CNmPassthroughNode_CDefinition.hpp"
 
 
 
@@ -21,17 +21,19 @@ namespace CS2 {
 	namespace animlib {
 		class CNmChainLookatNode_CDefinition : public CS2::animlib::CNmPassthroughNode_CDefinition {
 		public:
-			PROPERTY(m_chainEndBoneID,GlobalTypes::CGlobalSymbol, 0x18);
-			PROPERTY(m_nLookatTargetNodeIdx,int16_t, 0x20);
-			PROPERTY(m_nEnabledNodeIdx,int16_t, 0x22);
-			PROPERTY(m_flBlendTimeSeconds,float32, 0x24);
-			PROPERTY(m_nChainLength,uint8_t, 0x28);
-			PROPERTY(m_bIsTargetInWorldSpace,bool, 0x29);
-			PROPERTY(m_chainForwardDir,GlobalTypes::Vector, 0x2c);
-			S2_PAD(0x20);
+			PROPERTY(m_endEffectorBoneID,GlobalTypes::CGlobalSymbol, 0x18);
+			PROPERTY(m_endEffectorForwardAxis,GlobalTypes::Vector, 0x20);
+			PROPERTY(m_endEffectorOffset,GlobalTypes::Vector, 0x2c);
+			PROPERTY(m_nLookatTargetNodeIdx,int16_t, 0x38);
+			PROPERTY(m_nEnabledNodeIdx,int16_t, 0x3a);
+			PROPERTY(m_flBlendTimeSeconds,float32, 0x3c);
+			// PROPERTY(m_chainWeights,IDENTITY(GlobalTypes::CUtlVectorFixedGrowable< float32, 5 >), 0x40);
+			PROPERTY(m_nChainLength,uint8_t, 0x70);
+			PROPERTY(m_bIsTargetInWorldSpace,bool, 0x71);
+			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::animlib::CNmChainLookatNode_CDefinition) == 0x38, "CNmChainLookatNode::CDefinition size should be 0x38");
+		//static_assert(sizeof(CS2::animlib::CNmChainLookatNode_CDefinition) == 0x78, "CNmChainLookatNode::CDefinition size should be 0x78");
 
 #endif
 	}

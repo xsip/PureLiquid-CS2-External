@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x870
+			// Class size: 0x878
 			namespace CFuncMoveLinearAlias_momentary_door /*: public CS2::server::CFuncMoveLinear*/ {
 				// NO SCHEMA DATA FOUND!
 			}

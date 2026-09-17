@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/HSequence.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/AnimLoopMode_t.hpp>
+#include "../animationsystem/HSequence.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/AnimLoopMode_t.hpp"
 
 
 

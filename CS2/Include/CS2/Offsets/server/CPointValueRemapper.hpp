@@ -39,7 +39,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bFirstUpdate = 0x539; // bool m_bFirstUpdate; |  0x539 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_flPreviousValue = 0x53c; // float32 m_flPreviousValue; |  0x53c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flPreviousUpdateTickTime = 0x540; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x544; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x544; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_hUsingPlayer = 0x550; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_flCustomOutputValue = 0x554; // float32 m_flCustomOutputValue; |  0x554 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_iszSoundEngage = 0x558; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8

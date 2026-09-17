@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -29,7 +29,7 @@ namespace CS2 {
 			PROPERTY(m_bMuzzleFlashEnabled,bool, 0x20);
 			PROPERTY(m_flMuzzleFlashBrightness,float32, 0x24);
 			PROPERTY(m_quatMuzzleFlashOrientation,GlobalTypes::Quaternion, 0x30);
-			PROPERTY(m_vecMuzzleFlashOrigin,GlobalTypes::Vector, 0x40);
+			PROPERTY(m_vecMuzzleFlashOrigin,GlobalTypes::VectorWS, 0x40);
 			PROPERTY(m_flFov,float32, 0x4c);
 			PROPERTY(m_flFarZ,float32, 0x50);
 			PROPERTY(m_flLinearAtten,float32, 0x54);

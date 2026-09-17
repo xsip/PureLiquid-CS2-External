@@ -8,11 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x620
+			// Class size: 0x640
 			namespace CPathMover /*: public CS2::server::CPathWithDynamicNodes*/ {
 				constexpr std::ptrdiff_t m_vecMovers = 0x5f0; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CFuncMover>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_hMoverSpawner = 0x608; // GlobalTypes::CHandle<server::CPathMoverEntitySpawner>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_iszMoverSpawnerName = 0x610; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_vecSpawners = 0x608; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CPathMoverEntitySpawner>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_iszMoverSpawnerName = 0x620; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hMoverRouter = 0x628; // GlobalTypes::CHandle<server::CFuncMoverRouter>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_iszMoverRouterName = 0x630; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flSampleSpacing = 0x638; // float32 m_flSampleSpacing; |  0x638 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

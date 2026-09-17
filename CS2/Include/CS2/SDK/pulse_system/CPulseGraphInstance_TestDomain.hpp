@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CBasePulseGraphInstance.hpp>
+#include "../pulse_runtime_lib/CBasePulseGraphInstance.hpp"
 
 
 
@@ -21,19 +21,19 @@ namespace CS2 {
 	namespace pulse_system {
 		class CPulseGraphInstance_TestDomain : public CS2::pulse_runtime_lib::CBasePulseGraphInstance {
 		public:
-			PROPERTY(m_bIsRunningUnitTests,bool, 0x130);
-			PROPERTY(m_bExplicitTimeStepping,bool, 0x131);
-			PROPERTY(m_bExpectingToDestroyWithYieldedCursors,bool, 0x132);
-			PROPERTY(m_bQuietTracepoints,bool, 0x133);
-			PROPERTY(m_bExpectingCursorTerminatedDueToMaxInstructions,bool, 0x134);
-			PROPERTY(m_nCursorsTerminatedDueToMaxInstructions,int32_t, 0x138);
-			PROPERTY(m_nNextValidateIndex,int32_t, 0x13c);
-			PROPERTY(m_Tracepoints,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x140);
-			PROPERTY(m_bTestYesOrNoPath,bool, 0x158);
+			PROPERTY(m_bIsRunningUnitTests,bool, 0x128);
+			PROPERTY(m_bExplicitTimeStepping,bool, 0x129);
+			PROPERTY(m_bExpectingToDestroyWithYieldedCursors,bool, 0x12a);
+			PROPERTY(m_bQuietTracepoints,bool, 0x12b);
+			PROPERTY(m_bExpectingCursorTerminatedDueToMaxInstructions,bool, 0x12c);
+			PROPERTY(m_nCursorsTerminatedDueToMaxInstructions,int32_t, 0x130);
+			PROPERTY(m_nNextValidateIndex,int32_t, 0x134);
+			PROPERTY(m_Tracepoints,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x138);
+			PROPERTY(m_bTestYesOrNoPath,bool, 0x150);
 			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain) == 0x160, "CPulseGraphInstance_TestDomain size should be 0x160");
+		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain) == 0x158, "CPulseGraphInstance_TestDomain size should be 0x158");
 
 #endif
 	}

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particles/EventTypeSelection_t.hpp>
-#include <SDK/particles/CPAssignment_t.hpp>
-#include <SDK/particleslib/CPerParticleVecInput.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "EventTypeSelection_t.hpp"
+#include "CPAssignment_t.hpp"
+#include "../particleslib/CPerParticleVecInput.hpp"
 
 
 

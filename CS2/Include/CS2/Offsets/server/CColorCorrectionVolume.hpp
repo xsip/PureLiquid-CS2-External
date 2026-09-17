@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xAE8
+			// Class size: 0xB08
 			namespace CColorCorrectionVolume /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_MaxWeight = 0x8c8; // float32 m_MaxWeight; |  0x8c8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_FadeDuration = 0x8cc; // float32 m_FadeDuration; |  0x8cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_Weight = 0x8d0; // float32 m_Weight; |  0x8d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_lookupFilename = 0x8d4; // char m_lookupFilename[512]; |  0x8d4 | Schema_FixedArray | Size: 0x200
-				constexpr std::ptrdiff_t m_LastEnterWeight = 0xad4; // float32 m_LastEnterWeight; |  0xad4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_LastEnterTime = 0xad8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_LastExitWeight = 0xadc; // float32 m_LastExitWeight; |  0xadc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_LastExitTime = 0xae0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_MaxWeight = 0x8e8; // float32 m_MaxWeight; |  0x8e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_FadeDuration = 0x8ec; // float32 m_FadeDuration; |  0x8ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_Weight = 0x8f0; // float32 m_Weight; |  0x8f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_lookupFilename = 0x8f4; // char m_lookupFilename[512]; |  0x8f4 | Schema_FixedArray | Size: 0x200
+				constexpr std::ptrdiff_t m_LastEnterWeight = 0xaf4; // float32 m_LastEnterWeight; |  0xaf4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_LastEnterTime = 0xaf8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_LastExitWeight = 0xafc; // float32 m_LastExitWeight; |  0xafc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_LastExitTime = 0xb00; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

@@ -17,7 +17,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_hAttach2 = 0x4c4; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_nameAttachment1 = 0x4c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nameAttachment2 = 0x4d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_breakSound = 0x4d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_breakSound = 0x4d8; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_forceLimit = 0x4e0; // float32 m_forceLimit; |  0x4e0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_torqueLimit = 0x4e4; // float32 m_torqueLimit; |  0x4e4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_minTeleportDistance = 0x4e8; // float32 m_minTeleportDistance; |  0x4e8 | Schema_Builtin | Size: 0x4

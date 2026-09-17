@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
-#include <SDK/pulse_runtime_lib/SignatureOutflow_Continue.hpp>
+#include "../pulse_runtime_lib/CPulseCell_BaseFlow.hpp"
+#include "../pulse_runtime_lib/SignatureOutflow_Continue.hpp"
 
 
 

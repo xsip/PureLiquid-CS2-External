@@ -6,12 +6,14 @@
 namespace CS2 {
 	namespace client {
 		enum ChoreoExternalAnimgraphControlState_t : std::uint32_t {
-			ChoreoExternalAnimgraphControlState_t_eAbort = 0x4,
-			ChoreoExternalAnimgraphControlState_t_eBegin = 0x1,
-			ChoreoExternalAnimgraphControlState_t_eCount = 0x5,
-			ChoreoExternalAnimgraphControlState_t_eExit = 0x3,
-			ChoreoExternalAnimgraphControlState_t_eLooping = 0x2,
-			ChoreoExternalAnimgraphControlState_t_eNone = 0x0
+			ChoreoExternalAnimgraphControlState_t_eCount = 0x7,
+			ChoreoExternalAnimgraphControlState_t_eExit = 0x1,
+			ChoreoExternalAnimgraphControlState_t_eNone = 0x0,
+			ChoreoExternalAnimgraphControlState_t_eState01 = 0x2,
+			ChoreoExternalAnimgraphControlState_t_eState02 = 0x3,
+			ChoreoExternalAnimgraphControlState_t_eState03 = 0x4,
+			ChoreoExternalAnimgraphControlState_t_eState04 = 0x5,
+			ChoreoExternalAnimgraphControlState_t_eState05 = 0x6
 		};
 	}
 }

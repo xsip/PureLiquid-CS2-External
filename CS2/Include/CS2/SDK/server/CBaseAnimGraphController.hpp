@@ -4,33 +4,31 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CSkeletonAnimationController.hpp>
-#include <SDK/client/AnimationAlgorithm_t.hpp>
-#include <SDK/client/ExternalAnimGraphHandle_t.hpp>
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/animationsystem/HSequence.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/AnimLoopMode_t.hpp>
-#include <SDK/client/SequenceFinishNotifyState_t.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/server/AnimGraph2SerializedPoseRecipeSlot_t.hpp>
-#include <SDK/resourcefile/ResourceId_t.hpp>
-#include <SDK/client/ExternalAnimGraph_t.hpp>
+#include "../client/CSkeletonAnimationController.hpp"
+#include "../client/AnimationAlgorithm_t.hpp"
+#include "../client/ExternalAnimGraphHandle_t.hpp"
+#include "CBaseAnimGraph.hpp"
+#include "../animationsystem/HSequence.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/AnimLoopMode_t.hpp"
+#include "../client/SequenceFinishNotifyState_t.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "AnimGraph2SerializedPoseRecipeSlot_t.hpp"
+#include "../resourcefile/ResourceId_t.hpp"
+#include "../client/CAnimGraph2InstancePtr.hpp"
+#include "../client/CExternalAnimGraphList.hpp"
 
 
 
 namespace CS2 {
 	namespace resourcesystem {
 		class InfoForResourceTypeCNmGraphDefinition;
-	}
-	namespace animlib {
-		class CNmGraphInstance;
 	}
 }
 
@@ -69,12 +67,12 @@ namespace CS2 {
 			// PROPERTY(m_vecExternalGraphIds,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<resourcefile::ResourceId_t>), 0x3d0);
 			// PROPERTY(m_vecExternalClipIds,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<resourcefile::ResourceId_t>), 0x3e8);
 			PROPERTY(m_sAnimGraph2Identifier,GlobalTypes::CGlobalSymbol, 0x400);
-			PROPERTY(m_pGraphInstanceAG2,IDENTITY(animlib::CNmGraphInstance*), 0x408);
-			NESTED_PROPERTY(m_vecExternalGraphs,IDENTITY(GlobalTypes::CUtlVector<client::ExternalAnimGraph_t>), 0x620);
-			S2_PAD(0x630);
+			NESTED_PROPERTY(m_pGraphInstanceAG2,IDENTITY(client::CAnimGraph2InstancePtr), 0x408);
+			NESTED_PROPERTY(m_vecExternalGraphs,IDENTITY(client::CExternalAnimGraphList), 0x628);
+			S2_PAD(0x640);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseAnimGraphController) == 0x640, "CBaseAnimGraphController size should be 0x640");
+		//static_assert(sizeof(CS2::server::CBaseAnimGraphController) == 0x650, "CBaseAnimGraphController size should be 0x650");
 
 #endif
 	}

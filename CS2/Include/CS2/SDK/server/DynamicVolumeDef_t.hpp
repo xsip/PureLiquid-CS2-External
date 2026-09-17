@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -28,8 +28,8 @@ namespace CS2 {
 			PROPERTY(m_source,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x0);
 			PROPERTY(m_target,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4);
 			PROPERTY(m_nHullIdx,int32_t, 0x8);
-			PROPERTY(m_vSourceAnchorPos,GlobalTypes::Vector, 0xc);
-			PROPERTY(m_vTargetAnchorPos,GlobalTypes::Vector, 0x18);
+			PROPERTY(m_vSourceAnchorPos,GlobalTypes::VectorWS, 0xc);
+			PROPERTY(m_vTargetAnchorPos,GlobalTypes::VectorWS, 0x18);
 			PROPERTY(m_nAreaSrc,uint32_t, 0x24);
 			PROPERTY(m_nAreaDst,uint32_t, 0x28);
 			PROPERTY(m_bAttached,bool, 0x2c);

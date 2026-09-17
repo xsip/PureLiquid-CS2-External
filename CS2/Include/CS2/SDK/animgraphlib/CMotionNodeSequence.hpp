@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CMotionNode.hpp>
-#include <SDK/animgraphlib/TagSpan_t.hpp>
-#include <SDK/animationsystem/HSequence.hpp>
+#include "CMotionNode.hpp"
+#include "TagSpan_t.hpp"
+#include "../animationsystem/HSequence.hpp"
 
 
 

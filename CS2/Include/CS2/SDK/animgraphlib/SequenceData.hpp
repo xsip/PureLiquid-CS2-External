@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/HSequence.hpp>
-#include <SDK/animgraphlib/CNetworkedCycle.hpp>
+#include "../animationsystem/HSequence.hpp"
+#include "CNetworkedCycle.hpp"
 
 
 

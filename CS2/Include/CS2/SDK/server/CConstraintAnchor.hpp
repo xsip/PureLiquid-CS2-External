@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
+#include "CBaseAnimGraph.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CConstraintAnchor : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_massScale,float32, 0x940);
+			PROPERTY(m_massScale,float32, 0x960);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CConstraintAnchor) == 0x950, "CConstraintAnchor size should be 0x950");
+		//static_assert(sizeof(CS2::server::CConstraintAnchor) == 0x970, "CConstraintAnchor size should be 0x970");
 
 #endif
 	}

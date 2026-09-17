@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseTrigger.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "C_BaseTrigger.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -22,19 +22,19 @@ namespace CS2 {
 	namespace client {
 		class C_ColorCorrectionVolume : public CS2::client::C_BaseTrigger {
 		public:
-			PROPERTY(m_LastEnterWeight,float32, 0x1078);
-			NESTED_PROPERTY(m_LastEnterTime,IDENTITY(entity2::GameTime_t), 0x107c);
-			PROPERTY(m_LastExitWeight,float32, 0x1080);
-			NESTED_PROPERTY(m_LastExitTime,IDENTITY(entity2::GameTime_t), 0x1084);
-			PROPERTY(m_bEnabled,bool, 0x1088);
-			PROPERTY(m_MaxWeight,float32, 0x108c);
-			PROPERTY(m_FadeDuration,float32, 0x1090);
-			PROPERTY(m_Weight,float32, 0x1094);
-			PROPERTY_ARRAY(m_lookupFilename,char, 512 , 0x1098);
+			PROPERTY(m_LastEnterWeight,float32, 0x1098);
+			NESTED_PROPERTY(m_LastEnterTime,IDENTITY(entity2::GameTime_t), 0x109c);
+			PROPERTY(m_LastExitWeight,float32, 0x10a0);
+			NESTED_PROPERTY(m_LastExitTime,IDENTITY(entity2::GameTime_t), 0x10a4);
+			PROPERTY(m_bEnabled,bool, 0x10a8);
+			PROPERTY(m_MaxWeight,float32, 0x10ac);
+			PROPERTY(m_FadeDuration,float32, 0x10b0);
+			PROPERTY(m_Weight,float32, 0x10b4);
+			PROPERTY_ARRAY(m_lookupFilename,char, 512 , 0x10b8);
 			S2_PAD(0x228);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_ColorCorrectionVolume) == 0x12A0, "C_ColorCorrectionVolume size should be 0x12A0");
+		//static_assert(sizeof(CS2::client::C_ColorCorrectionVolume) == 0x12C0, "C_ColorCorrectionVolume size should be 0x12C0");
 
 #endif
 	}

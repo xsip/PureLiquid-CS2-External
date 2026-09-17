@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CFuncBrush.hpp>
+#include "CFuncBrush.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CFuncElectrifiedVolume : public CS2::server::CFuncBrush {
 		public:
-			PROPERTY(m_EffectName,GlobalTypes::CUtlSymbolLarge*, 0x788);
-			PROPERTY(m_EffectInterpenetrateName,GlobalTypes::CUtlSymbolLarge*, 0x790);
-			PROPERTY(m_EffectZapName,GlobalTypes::CUtlSymbolLarge*, 0x798);
-			PROPERTY(m_iszEffectSource,GlobalTypes::CUtlSymbolLarge*, 0x7a0);
+			PROPERTY(m_EffectName,GlobalTypes::CUtlSymbolLarge*, 0x790);
+			PROPERTY(m_EffectInterpenetrateName,GlobalTypes::CUtlSymbolLarge*, 0x798);
+			PROPERTY(m_EffectZapName,GlobalTypes::CUtlSymbolLarge*, 0x7a0);
+			PROPERTY(m_iszEffectSource,GlobalTypes::CUtlSymbolLarge*, 0x7a8);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncElectrifiedVolume) == 0x7C0, "CFuncElectrifiedVolume size should be 0x7C0");
+		//static_assert(sizeof(CS2::server::CFuncElectrifiedVolume) == 0x7C8, "CFuncElectrifiedVolume size should be 0x7C8");
 
 #endif
 	}

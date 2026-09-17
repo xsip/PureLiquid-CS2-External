@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CModelPointEntity.hpp>
-#include <SDK/client/PointWorldTextJustifyHorizontal_t.hpp>
-#include <SDK/client/PointWorldTextJustifyVertical_t.hpp>
-#include <SDK/client/PointWorldTextReorientMode_t.hpp>
+#include "CModelPointEntity.hpp"
+#include "../client/PointWorldTextJustifyHorizontal_t.hpp"
+#include "../client/PointWorldTextJustifyVertical_t.hpp"
+#include "../client/PointWorldTextReorientMode_t.hpp"
 
 
 
@@ -24,26 +24,26 @@ namespace CS2 {
 	namespace server {
 		class CPointWorldText : public CS2::server::CModelPointEntity {
 		public:
-			PROPERTY_ARRAY(m_messageText,char, 512 , 0x768);
-			PROPERTY_ARRAY(m_FontName,char, 64 , 0x968);
-			PROPERTY_ARRAY(m_BackgroundMaterialName,char, 64 , 0x9a8);
-			PROPERTY(m_bEnabled,bool, 0x9e8);
-			PROPERTY(m_bFullbright,bool, 0x9e9);
-			PROPERTY(m_flWorldUnitsPerPx,float32, 0x9ec);
-			PROPERTY(m_flFontSize,float32, 0x9f0);
-			PROPERTY(m_flDepthOffset,float32, 0x9f4);
-			PROPERTY(m_bDrawBackground,bool, 0x9f8);
-			PROPERTY(m_flBackgroundBorderWidth,float32, 0x9fc);
-			PROPERTY(m_flBackgroundBorderHeight,float32, 0xa00);
-			PROPERTY(m_flBackgroundWorldToUV,float32, 0xa04);
-			PROPERTY(m_Color,GlobalTypes::Color, 0xa08);
-			PROPERTY(m_nJustifyHorizontal,IDENTITY(client::PointWorldTextJustifyHorizontal_t), 0xa0c);
-			PROPERTY(m_nJustifyVertical,IDENTITY(client::PointWorldTextJustifyVertical_t), 0xa10);
-			PROPERTY(m_nReorientMode,IDENTITY(client::PointWorldTextReorientMode_t), 0xa14);
+			PROPERTY_ARRAY(m_messageText,char, 512 , 0x770);
+			PROPERTY_ARRAY(m_FontName,char, 64 , 0x970);
+			PROPERTY_ARRAY(m_BackgroundMaterialName,char, 64 , 0x9b0);
+			PROPERTY(m_bEnabled,bool, 0x9f0);
+			PROPERTY(m_bFullbright,bool, 0x9f1);
+			PROPERTY(m_flWorldUnitsPerPx,float32, 0x9f4);
+			PROPERTY(m_flFontSize,float32, 0x9f8);
+			PROPERTY(m_flDepthOffset,float32, 0x9fc);
+			PROPERTY(m_bDrawBackground,bool, 0xa00);
+			PROPERTY(m_flBackgroundBorderWidth,float32, 0xa04);
+			PROPERTY(m_flBackgroundBorderHeight,float32, 0xa08);
+			PROPERTY(m_flBackgroundWorldToUV,float32, 0xa0c);
+			PROPERTY(m_Color,GlobalTypes::Color, 0xa10);
+			PROPERTY(m_nJustifyHorizontal,IDENTITY(client::PointWorldTextJustifyHorizontal_t), 0xa14);
+			PROPERTY(m_nJustifyVertical,IDENTITY(client::PointWorldTextJustifyVertical_t), 0xa18);
+			PROPERTY(m_nReorientMode,IDENTITY(client::PointWorldTextReorientMode_t), 0xa1c);
 			S2_PAD(0x2B0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPointWorldText) == 0xA18, "CPointWorldText size should be 0xA18");
+		//static_assert(sizeof(CS2::server::CPointWorldText) == 0xA20, "CPointWorldText size should be 0xA20");
 
 #endif
 	}

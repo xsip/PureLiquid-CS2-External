@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseAnimGraph.hpp>
+#include "CBaseAnimGraph.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CS2WeaponModuleBase) == 0x1160, "C_CS2WeaponModuleBase size should be 0x1160");
+		//static_assert(sizeof(CS2::client::C_CS2WeaponModuleBase) == 0x1188, "C_CS2WeaponModuleBase size should be 0x1188");
 
 #endif
 	}

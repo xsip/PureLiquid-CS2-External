@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CAnimTagBase.hpp>
-#include <SDK/animgraphlib/FootstepLandedFootSoundType_t.hpp>
-#include <SDK/animgraphlib/FootstepJumpPhase_t.hpp>
+#include "CAnimTagBase.hpp"
+#include "FootstepLandedFootSoundType_t.hpp"
+#include "FootstepJumpPhase_t.hpp"
 
 
 

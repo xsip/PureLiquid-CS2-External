@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerAsyncGenerator.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp>
+#include "CVoiceContainerAsyncGenerator.hpp"
+#include "../resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp"
 
 
 
@@ -22,16 +22,16 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerRandomSampler : public CS2::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator {
 		public:
-			PROPERTY(m_flAmplitude,float32, 0xb8);
-			PROPERTY(m_flAmplitudeJitter,float32, 0xbc);
-			PROPERTY(m_flTimeJitter,float32, 0xc0);
-			PROPERTY(m_flMaxLength,float32, 0xc4);
-			PROPERTY(m_nNumDelayVariations,int32_t, 0xc8);
-			NESTED_PROPERTY(m_grainResources,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>), 0xd0);
+			PROPERTY(m_flAmplitude,float32, 0x80);
+			PROPERTY(m_flAmplitudeJitter,float32, 0x84);
+			PROPERTY(m_flTimeJitter,float32, 0x88);
+			PROPERTY(m_flMaxLength,float32, 0x8c);
+			PROPERTY(m_nNumDelayVariations,int32_t, 0x90);
+			NESTED_PROPERTY(m_grainResources,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>>), 0x98);
 			S2_PAD(0x128);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerRandomSampler) == 0x1E0, "CVoiceContainerRandomSampler size should be 0x1E0");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerRandomSampler) == 0x1A8, "CVoiceContainerRandomSampler size should be 0x1A8");
 
 #endif
 	}

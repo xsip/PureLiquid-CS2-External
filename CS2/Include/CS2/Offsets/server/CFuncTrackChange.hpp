@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x868
+			// Class size: 0x878
 			namespace CFuncTrackChange /*: public CS2::server::CFuncPlatRot*/ {
-				constexpr std::ptrdiff_t m_trackTop = 0x830; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_trackBottom = 0x834; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_train = 0x838; // GlobalTypes::CHandle<server::CFuncTrackTrain>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_trackTopName = 0x840; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_trackBottomName = 0x848; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_trainName = 0x850; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_code = 0x858; // server::TRAIN_CODE  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_targetState = 0x85c; // int32_t m_targetState; |  0x85c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_use = 0x860; // int32_t m_use; |  0x860 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_trackTop = 0x840; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_trackBottom = 0x844; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_train = 0x848; // GlobalTypes::CHandle<server::CFuncTrackTrain>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_trackTopName = 0x850; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_trackBottomName = 0x858; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_trainName = 0x860; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_code = 0x868; // server::TRAIN_CODE  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_targetState = 0x86c; // int32_t m_targetState; |  0x86c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_use = 0x870; // int32_t m_use; |  0x870 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

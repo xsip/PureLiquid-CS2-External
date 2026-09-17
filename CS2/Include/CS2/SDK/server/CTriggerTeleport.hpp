@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CTriggerTeleport : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_iLandmark,GlobalTypes::CUtlSymbolLarge*, 0x8c8);
-			PROPERTY(m_bUseLandmarkAngles,bool, 0x8d0);
-			PROPERTY(m_bMirrorPlayer,bool, 0x8d1);
-			PROPERTY(m_bCheckDestIfClearForPlayer,bool, 0x8d2);
+			PROPERTY(m_iLandmark,GlobalTypes::CUtlSymbolLarge*, 0x8e8);
+			PROPERTY(m_bUseLandmarkAngles,bool, 0x8f0);
+			PROPERTY(m_bMirrorPlayer,bool, 0x8f1);
+			PROPERTY(m_bCheckDestIfClearForPlayer,bool, 0x8f2);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerTeleport) == 0x8D8, "CTriggerTeleport size should be 0x8D8");
+		//static_assert(sizeof(CS2::server::CTriggerTeleport) == 0x8F8, "CTriggerTeleport size should be 0x8F8");
 
 #endif
 	}

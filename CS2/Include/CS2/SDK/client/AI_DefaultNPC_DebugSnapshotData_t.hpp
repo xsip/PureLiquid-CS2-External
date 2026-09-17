@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/DebugSnapshotBaseStructuredData_t.hpp>
-#include <SDK/client/AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t.hpp>
+#include "DebugSnapshotBaseStructuredData_t.hpp"
+#include "AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t.hpp"
 
 
 
@@ -26,14 +26,12 @@ namespace CS2 {
 			PROPERTY(s_npc_tactic_current,GlobalTypes::CGlobalSymbol, 0x10);
 			PROPERTY(s_npc_tactic_phase,GlobalTypes::CGlobalSymbol, 0x18);
 			NESTED_PROPERTY(tactic_interrupt_conditions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>), 0x20);
-			PROPERTY(s_npc_current_movement,GlobalTypes::CUtlString*, 0x38);
-			NESTED_PROPERTY(path_query_schedule,IDENTITY(client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t), 0x40);
-			NESTED_PROPERTY(path_query_tactic,IDENTITY(client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t), 0x68);
-			NESTED_PROPERTY(path_queries_speculative,IDENTITY(GlobalTypes::CUtlVector<client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t>), 0x90);
-			S2_PAD(0xA0);
+			NESTED_PROPERTY(path_query,IDENTITY(client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t), 0x38);
+			NESTED_PROPERTY(path_queries_speculative,IDENTITY(GlobalTypes::CUtlVector<client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t>), 0x60);
+			S2_PAD(0x70);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::AI_DefaultNPC_DebugSnapshotData_t) == 0xA8, "AI_DefaultNPC_DebugSnapshotData_t size should be 0xA8");
+		//static_assert(sizeof(CS2::client::AI_DefaultNPC_DebugSnapshotData_t) == 0x78, "AI_DefaultNPC_DebugSnapshotData_t size should be 0x78");
 
 #endif
 	}

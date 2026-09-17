@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionOperator.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include "CParticleFunctionOperator.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "ParticleAttributeIndex_t.hpp"
 
 
 

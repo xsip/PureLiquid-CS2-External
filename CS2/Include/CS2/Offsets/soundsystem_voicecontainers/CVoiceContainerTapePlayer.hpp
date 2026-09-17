@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0xF8
+			// Class size: 0xC0
 			namespace CVoiceContainerTapePlayer /*: public CS2::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator*/ {
-				constexpr std::ptrdiff_t m_bShouldWraparound = 0xb8; // bool m_bShouldWraparound; |  0xb8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_sourceAudio = 0xc0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flTapeSpeedAttackTime = 0xc8; // float32 m_flTapeSpeedAttackTime; |  0xc8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flTapeSpeedReleaseTime = 0xcc; // float32 m_flTapeSpeedReleaseTime; |  0xcc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bShouldWraparound = 0x80; // bool m_bShouldWraparound; |  0x80 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sourceAudio = 0x88; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flTapeSpeedAttackTime = 0x90; // float32 m_flTapeSpeedAttackTime; |  0x90 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flTapeSpeedReleaseTime = 0x94; // float32 m_flTapeSpeedReleaseTime; |  0x94 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

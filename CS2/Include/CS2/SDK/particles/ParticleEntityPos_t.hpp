@@ -8,6 +8,7 @@ namespace CS2 {
 		enum ParticleEntityPos_t : std::uint32_t {
 			ParticleEntityPos_t_PARTICLE_ABS_ORIGIN = 0x0,
 			ParticleEntityPos_t_PARTICLE_EYES = 0x2,
+			ParticleEntityPos_t_PARTICLE_FLASHLIGHT = 0x3,
 			ParticleEntityPos_t_PARTICLE_WORLDSPACE_CENTER = 0x1
 		};
 	}

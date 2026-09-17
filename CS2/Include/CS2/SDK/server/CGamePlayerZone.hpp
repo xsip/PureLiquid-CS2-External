@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CRuleBrushEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CRuleBrushEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -22,14 +22,14 @@ namespace CS2 {
 	namespace server {
 		class CGamePlayerZone : public CS2::server::CRuleBrushEntity {
 		public:
-			NESTED_PROPERTY(m_OnPlayerInZone,IDENTITY(entity2::CEntityIOOutput), 0x770);
-			NESTED_PROPERTY(m_OnPlayerOutZone,IDENTITY(entity2::CEntityIOOutput), 0x788);
-			// PROPERTY(m_PlayersInCount,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0x7a0);
-			// PROPERTY(m_PlayersOutCount,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0x7c0);
+			NESTED_PROPERTY(m_OnPlayerInZone,IDENTITY(entity2::CEntityIOOutput), 0x778);
+			NESTED_PROPERTY(m_OnPlayerOutZone,IDENTITY(entity2::CEntityIOOutput), 0x790);
+			// PROPERTY(m_PlayersInCount,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0x7a8);
+			// PROPERTY(m_PlayersOutCount,IDENTITY(GlobalTypes::CEntityOutputTemplate< int32 >), 0x7c8);
 			S2_PAD(0x70);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CGamePlayerZone) == 0x7E0, "CGamePlayerZone size should be 0x7E0");
+		//static_assert(sizeof(CS2::server::CGamePlayerZone) == 0x7E8, "CGamePlayerZone size should be 0x7E8");
 
 #endif
 	}

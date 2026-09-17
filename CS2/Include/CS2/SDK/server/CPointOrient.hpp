@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/client/PointOrientGoalDirectionType_t.hpp>
-#include <SDK/client/PointOrientConstraint_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseEntity.hpp"
+#include "../client/PointOrientGoalDirectionType_t.hpp"
+#include "../client/PointOrientConstraint_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 

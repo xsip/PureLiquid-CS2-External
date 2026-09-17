@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLightEntity.hpp>
+#include "CLightEntity.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CLightOrthoEntity) == 0x770, "CLightOrthoEntity size should be 0x770");
+		//static_assert(sizeof(CS2::server::CLightOrthoEntity) == 0x778, "CLightOrthoEntity size should be 0x778");
 
 #endif
 	}

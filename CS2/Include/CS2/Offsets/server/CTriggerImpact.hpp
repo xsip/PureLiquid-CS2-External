@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x918
+			// Class size: 0x938
 			namespace CTriggerImpact /*: public CS2::server::CTriggerMultiple*/ {
-				constexpr std::ptrdiff_t m_flMagnitude = 0x8e0; // float32 m_flMagnitude; |  0x8e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNoise = 0x8e4; // float32 m_flNoise; |  0x8e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flViewkick = 0x8e8; // float32 m_flViewkick; |  0x8e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pOutputForce = 0x8f0; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_flMagnitude = 0x900; // float32 m_flMagnitude; |  0x900 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNoise = 0x904; // float32 m_flNoise; |  0x904 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flViewkick = 0x908; // float32 m_flViewkick; |  0x908 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pOutputForce = 0x910; // GlobalTypes::CEntityOutputTemplate<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x28
 			}
 		}
 	}

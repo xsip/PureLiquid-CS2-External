@@ -29,7 +29,7 @@ namespace CS2 {
 
 	void CUIEngineSource2::RunScript(const char* szScript, CUIPanel* panel) {
 
-
+		return; // TODO: remove after pattern fixing
 		if (!pRunScriptFn) {
 
 
@@ -38,7 +38,7 @@ namespace CS2 {
 				printf("ERROR: Failed to get panorama.dll\n");
 				return;
 			}
-
+			// TODO: update pattern
 			pRunScriptFn = reinterpret_cast<RunScriptFn>(pPanorama->ScanMemory(RUN_SCRIPT_PATTERN));
 			if (!pRunScriptFn) {
 				printf("Error Finding RunScript Function!!\n");

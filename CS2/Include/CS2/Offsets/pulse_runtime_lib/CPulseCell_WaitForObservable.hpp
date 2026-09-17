@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x108
+			// Class size: 0x198
 			namespace CPulseCell_WaitForObservable /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
-				constexpr std::ptrdiff_t m_Condition = 0x48; // pulse_runtime_lib::PulseObservableBoolExpression_t  | Schema_DeclaredClass | Size: 0x78
-				constexpr std::ptrdiff_t m_OnTrue = 0xc0; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_Condition = 0xd8; // GlobalTypes::CPulseObservableExpression  | Schema_Atomic | Size: 0x78
+				constexpr std::ptrdiff_t m_OnTrue = 0x150; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
 			}
 		}
 	}

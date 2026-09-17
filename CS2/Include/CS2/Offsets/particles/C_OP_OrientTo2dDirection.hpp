@@ -8,11 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1E8
+			// Class size: 0x8A0
 			namespace C_OP_OrientTo2dDirection /*: public CS2::particles::CParticleFunctionOperator*/ {
-				constexpr std::ptrdiff_t m_flRotOffset = 0x1d8; // float32 m_flRotOffset; |  0x1d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpinStrength = 0x1dc; // float32 m_flSpinStrength; |  0x1dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFieldOutput = 0x1e0; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_vecInput = 0x1d8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flRotOffset = 0x890; // float32 m_flRotOffset; |  0x890 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpinStrength = 0x894; // float32 m_flSpinStrength; |  0x894 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFieldOutput = 0x898; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

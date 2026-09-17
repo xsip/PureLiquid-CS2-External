@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x14
 			namespace SoundOpvarTraceResult_t /**/ {
-				constexpr std::ptrdiff_t vPos = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t vPos = 0x0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t bDidHit = 0xc; // bool bDidHit; |  0xc | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t flDistSqrToCenter = 0x10; // float32 flDistSqrToCenter; |  0x10 | Schema_Builtin | Size: 0x4
 			}

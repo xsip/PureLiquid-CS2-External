@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0xC0
+			// Class size: 0xD0
 			namespace CNmSkeleton /**/ {
 				constexpr std::ptrdiff_t m_ID = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_boneIDs = 0x8; // GlobalTypes::CUtlLeanVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x10
@@ -18,7 +18,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_numBonesToSampleAtLowLOD = 0x60; // int32_t m_numBonesToSampleAtLowLOD; |  0x60 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_maskDefinitions = 0x88; // GlobalTypes::CUtlLeanVector<animlib::NmBoneMaskSetDefinition_t>  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_secondarySkeletons = 0xa8; // GlobalTypes::CUtlLeanVector<animlib::CNmSkeleton_SecondarySkeleton_t>  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_bIsPropSkeleton = 0xb8; // bool m_bIsPropSkeleton; |  0xb8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_floatChannelSets = 0xb8; // GlobalTypes::CUtlLeanVector<animlib::CNmFloatChannelSet_t>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_bIsPropSkeleton = 0xc8; // bool m_bIsPropSkeleton; |  0xc8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

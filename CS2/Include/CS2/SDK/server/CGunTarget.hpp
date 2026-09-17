@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseToggle.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseToggle.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -27,13 +27,14 @@ namespace CS2 {
 	namespace server {
 		class CGunTarget : public CS2::server::CBaseToggle {
 		public:
-			PROPERTY(m_on,bool, 0x7e8);
-			PROPERTY(m_hTargetEnt,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7ec);
-			NESTED_PROPERTY(m_OnDeath,IDENTITY(entity2::CEntityIOOutput), 0x7f0);
-			S2_PAD(0x20);
+			PROPERTY(m_flSpeed,float32, 0x7f0);
+			PROPERTY(m_on,bool, 0x7f4);
+			PROPERTY(m_hTargetEnt,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7f8);
+			NESTED_PROPERTY(m_OnDeath,IDENTITY(entity2::CEntityIOOutput), 0x800);
+			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CGunTarget) == 0x808, "CGunTarget size should be 0x808");
+		//static_assert(sizeof(CS2::server::CGunTarget) == 0x818, "CGunTarget size should be 0x818");
 
 #endif
 	}

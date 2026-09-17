@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPathCorner.hpp>
+#include "CPathCorner.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPathCornerCrash) == 0x4C8, "CPathCornerCrash size should be 0x4C8");
+		//static_assert(sizeof(CS2::server::CPathCornerCrash) == 0x4D0, "CPathCornerCrash size should be 0x4D0");
 
 #endif
 	}

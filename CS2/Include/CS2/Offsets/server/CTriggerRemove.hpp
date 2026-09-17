@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8E0
+			// Class size: 0x900
 			namespace CTriggerRemove /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_OnRemove = 0x8c8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnRemove = 0x8e8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

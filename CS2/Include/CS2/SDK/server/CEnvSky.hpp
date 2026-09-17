@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
+#include "CBaseModelEntity.hpp"
 
 
 
@@ -26,22 +26,22 @@ namespace CS2 {
 	namespace server {
 		class CEnvSky : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x768);
-			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x770);
-			PROPERTY(m_bStartDisabled,bool, 0x778);
-			PROPERTY(m_vTintColor,GlobalTypes::Color, 0x779);
-			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0x77d);
-			PROPERTY(m_flBrightnessScale,float32, 0x784);
-			PROPERTY(m_nFogType,int32_t, 0x788);
-			PROPERTY(m_flFogMinStart,float32, 0x78c);
-			PROPERTY(m_flFogMinEnd,float32, 0x790);
-			PROPERTY(m_flFogMaxStart,float32, 0x794);
-			PROPERTY(m_flFogMaxEnd,float32, 0x798);
-			PROPERTY(m_bEnabled,bool, 0x79c);
+			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x770);
+			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x778);
+			PROPERTY(m_bStartDisabled,bool, 0x780);
+			PROPERTY(m_vTintColor,GlobalTypes::Color, 0x781);
+			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0x785);
+			PROPERTY(m_flBrightnessScale,float32, 0x78c);
+			PROPERTY(m_nFogType,int32_t, 0x790);
+			PROPERTY(m_flFogMinStart,float32, 0x794);
+			PROPERTY(m_flFogMinEnd,float32, 0x798);
+			PROPERTY(m_flFogMaxStart,float32, 0x79c);
+			PROPERTY(m_flFogMaxEnd,float32, 0x7a0);
+			PROPERTY(m_bEnabled,bool, 0x7a4);
 			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEnvSky) == 0x7C8, "CEnvSky size should be 0x7C8");
+		//static_assert(sizeof(CS2::server::CEnvSky) == 0x7D0, "CEnvSky size should be 0x7D0");
 
 #endif
 	}

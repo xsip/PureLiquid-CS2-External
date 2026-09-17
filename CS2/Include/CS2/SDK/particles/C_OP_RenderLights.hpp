@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/C_OP_RenderPoints.hpp>
-#include <SDK/particleslib/AnimationType_t.hpp>
+#include "C_OP_RenderPoints.hpp"
+#include "../particleslib/AnimationType_t.hpp"
 
 
 

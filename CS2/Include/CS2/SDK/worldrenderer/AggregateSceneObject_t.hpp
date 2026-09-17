@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/worldrenderer/ObjectTypeFlags_t.hpp>
-#include <SDK/worldrenderer/AggregateMeshInfo_t.hpp>
-#include <SDK/worldrenderer/AggregateLODSetup_t.hpp>
+#include "ObjectTypeFlags_t.hpp"
+#include "AggregateMeshInfo_t.hpp"
+#include "AggregateLODSetup_t.hpp"
 
 
 
@@ -33,6 +33,7 @@ namespace CS2 {
 			PROPERTY(m_nLayer,int16_t, 0x8);
 			PROPERTY(m_instanceStream,int16_t, 0xa);
 			PROPERTY(m_vertexAlbedoStream,int16_t, 0xc);
+			PROPERTY(m_vertexEmissiveStream,int16_t, 0xe);
 			NESTED_PROPERTY(m_aggregateMeshes,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateMeshInfo_t>), 0x10);
 			NESTED_PROPERTY(m_lodSetups,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateLODSetup_t>), 0x28);
 			NESTED_PROPERTY(m_visClusterMembership,IDENTITY(GlobalTypes::CUtlVector< uint16 >), 0x40);

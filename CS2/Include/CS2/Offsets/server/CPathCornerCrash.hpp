@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x4C8
+			// Class size: 0x4D0
 			namespace CPathCornerCrash /*: public CS2::server::CPathCorner*/ {
 				// NO SCHEMA DATA FOUND!
 			}

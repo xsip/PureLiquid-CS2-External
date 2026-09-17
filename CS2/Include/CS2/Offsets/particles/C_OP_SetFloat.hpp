@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x4E0
+			// Class size: 0x4F0
 			namespace C_OP_SetFloat /*: public CS2::particles::CParticleFunctionOperator*/ {
 				constexpr std::ptrdiff_t m_InputValue = 0x1d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_nOutputField = 0x348; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4

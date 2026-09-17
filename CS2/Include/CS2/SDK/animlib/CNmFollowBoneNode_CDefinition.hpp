@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPassthroughNode_CDefinition.hpp>
-#include <SDK/animlib/NmFollowBoneMode_t.hpp>
+#include "CNmPassthroughNode_CDefinition.hpp"
+#include "NmFollowBoneMode_t.hpp"
 
 
 

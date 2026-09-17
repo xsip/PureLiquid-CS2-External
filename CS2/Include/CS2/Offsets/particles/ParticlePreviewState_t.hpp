@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x68
+			// Class size: 0x70
 			namespace ParticlePreviewState_t /**/ {
 				constexpr std::ptrdiff_t m_previewModel = 0x0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nModSpecificData = 0x8; // uint32_t m_nModSpecificData; |  0x8 | Schema_Builtin | Size: 0x4
@@ -27,6 +27,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bAnimationNonLooping = 0x54; // bool m_bAnimationNonLooping; |  0x54 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bSequenceNameIsAnimClipPath = 0x55; // bool m_bSequenceNameIsAnimClipPath; |  0x55 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_vecPreviewGravity = 0x58; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecPreviewWind = 0x64; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

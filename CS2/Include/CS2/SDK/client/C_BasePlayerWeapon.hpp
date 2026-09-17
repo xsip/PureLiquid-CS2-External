@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_EconEntity.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
+#include "C_EconEntity.hpp"
+#include "../entity2/GameTick_t.hpp"
 
 
 
@@ -22,17 +22,17 @@ namespace CS2 {
 	namespace client {
 		class C_BasePlayerWeapon : public CS2::client::C_EconEntity {
 		public:
-			PROPERTY(m_nNextPrimaryAttackTick,IDENTITY(uint32_t), 0x16c8);
-			PROPERTY(m_flNextPrimaryAttackTickRatio,float32, 0x16cc);
-			NESTED_PROPERTY(m_nNextSecondaryAttackTick,IDENTITY(entity2::GameTick_t), 0x16d0);
-			PROPERTY(m_flNextSecondaryAttackTickRatio,float32, 0x16d4);
-			PROPERTY(m_iClip1,int32_t, 0x16d8);
-			PROPERTY(m_iClip2,int32_t, 0x16dc);
-			PROPERTY_ARRAY(m_pReserveAmmo,int32_t, 2 , 0x16e0);
+			PROPERTY(m_nNextPrimaryAttackTick,IDENTITY(uint32_t), 0x16f0);
+			PROPERTY(m_flNextPrimaryAttackTickRatio,float32, 0x16f4);
+			NESTED_PROPERTY(m_nNextSecondaryAttackTick,IDENTITY(entity2::GameTick_t), 0x16f8);
+			PROPERTY(m_flNextSecondaryAttackTickRatio,float32, 0x16fc);
+			PROPERTY(m_iClip1,int32_t, 0x1700);
+			PROPERTY(m_iClip2,int32_t, 0x1704);
+			PROPERTY_ARRAY(m_pReserveAmmo,int32_t, 2 , 0x1708);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BasePlayerWeapon) == 0x1700, "C_BasePlayerWeapon size should be 0x1700");
+		//static_assert(sizeof(CS2::client::C_BasePlayerWeapon) == 0x1728, "C_BasePlayerWeapon size should be 0x1728");
 
 #endif
 	}

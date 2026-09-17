@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CPhysSurfacePropertiesPhysics.hpp>
-#include <SDK/modellib/CPhysSurfacePropertiesVehicle.hpp>
-#include <SDK/modellib/CPhysSurfacePropertiesSoundNames.hpp>
-#include <SDK/modellib/CPhysSurfacePropertiesAudio.hpp>
+#include "CPhysSurfacePropertiesPhysics.hpp"
+#include "CPhysSurfacePropertiesVehicle.hpp"
+#include "CPhysSurfacePropertiesSoundNames.hpp"
+#include "CPhysSurfacePropertiesAudio.hpp"
 
 
 

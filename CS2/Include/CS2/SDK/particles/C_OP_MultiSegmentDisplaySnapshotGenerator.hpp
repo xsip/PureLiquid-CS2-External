@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionPreEmission.hpp>
-#include <SDK/particles/ParticleMultiSegmentCountSelection_t.hpp>
-#include <SDK/particles/ParticleMultiSegmentInputSelection_t.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particles/ParticleMultiSegmentSpecialCharacter_t.hpp>
-#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include "CParticleFunctionPreEmission.hpp"
+#include "ParticleMultiSegmentCountSelection_t.hpp"
+#include "ParticleMultiSegmentInputSelection_t.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "ParticleMultiSegmentSpecialCharacter_t.hpp"
+#include "../particleslib/CParticleCollectionVecInput.hpp"
 
 
 
@@ -31,19 +31,20 @@ namespace CS2 {
 			PROPERTY(m_nInputType,IDENTITY(particles::ParticleMultiSegmentInputSelection_t), 0x1e8);
 			PROPERTY(m_strDefaultString,GlobalTypes::CUtlString*, 0x1f0);
 			NESTED_PROPERTY(m_flValue,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1f8);
-			NESTED_PROPERTY(m_SpecialCharList,IDENTITY(GlobalTypes::CUtlVector<particles::ParticleMultiSegmentSpecialCharacter_t>), 0x368);
-			NESTED_PROPERTY(m_vecColorUnlit,IDENTITY(particleslib::CParticleCollectionVecInput), 0x380);
-			NESTED_PROPERTY(m_vecColorLit,IDENTITY(particleslib::CParticleCollectionVecInput), 0xa38);
-			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x10f0);
-			NESTED_PROPERTY(m_flSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1260);
-			NESTED_PROPERTY(m_flMinCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x13d0);
-			NESTED_PROPERTY(m_flMaxCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1540);
-			PROPERTY(m_bPrependEmpty,bool, 0x16b0);
-			NESTED_PROPERTY(m_flDigitsAfterDecimal,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x16b8);
-			S2_PAD(0x1648);
+			NESTED_PROPERTY(m_flScollOffset,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x368);
+			NESTED_PROPERTY(m_SpecialCharList,IDENTITY(GlobalTypes::CUtlVector<particles::ParticleMultiSegmentSpecialCharacter_t>), 0x4d8);
+			NESTED_PROPERTY(m_vecColorUnlit,IDENTITY(particleslib::CParticleCollectionVecInput), 0x4f0);
+			NESTED_PROPERTY(m_vecColorLit,IDENTITY(particleslib::CParticleCollectionVecInput), 0xba8);
+			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1260);
+			NESTED_PROPERTY(m_flSpacing,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x13d0);
+			NESTED_PROPERTY(m_flMinCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1540);
+			NESTED_PROPERTY(m_flMaxCount,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x16b0);
+			PROPERTY(m_bPrependEmpty,bool, 0x1820);
+			NESTED_PROPERTY(m_flDigitsAfterDecimal,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1828);
+			S2_PAD(0x17B8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_MultiSegmentDisplaySnapshotGenerator) == 0x1828, "C_OP_MultiSegmentDisplaySnapshotGenerator size should be 0x1828");
+		//static_assert(sizeof(CS2::particles::C_OP_MultiSegmentDisplaySnapshotGenerator) == 0x1998, "C_OP_MultiSegmentDisplaySnapshotGenerator size should be 0x1998");
 
 #endif
 	}

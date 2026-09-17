@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseClientUIEntity.hpp>
+#include "CBaseClientUIEntity.hpp"
 
 
 
@@ -21,34 +21,35 @@ namespace CS2 {
 	namespace server {
 		class CPointClientUIWorldPanel : public CS2::server::CBaseClientUIEntity {
 		public:
-			PROPERTY(m_bIgnoreInput,bool, 0x8c8);
-			PROPERTY(m_bLit,bool, 0x8c9);
-			PROPERTY(m_bFollowPlayerAcrossTeleport,bool, 0x8ca);
-			PROPERTY(m_flWidth,float32, 0x8cc);
-			PROPERTY(m_flHeight,float32, 0x8d0);
-			PROPERTY(m_flDPI,float32, 0x8d4);
-			PROPERTY(m_flInteractDistance,float32, 0x8d8);
-			PROPERTY(m_flDepthOffset,float32, 0x8dc);
-			PROPERTY(m_unOwnerContext,uint32_t, 0x8e0);
-			PROPERTY(m_unHorizontalAlign,uint32_t, 0x8e4);
-			PROPERTY(m_unVerticalAlign,uint32_t, 0x8e8);
-			PROPERTY(m_unOrientation,uint32_t, 0x8ec);
-			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x8f0);
-			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x8f8);
-			PROPERTY(m_bOpaque,bool, 0x910);
-			PROPERTY(m_bNoDepth,bool, 0x911);
-			PROPERTY(m_bVisibleWhenParentNoDraw,bool, 0x912);
-			PROPERTY(m_bRenderBackface,bool, 0x913);
-			PROPERTY(m_bUseOffScreenIndicator,bool, 0x914);
-			PROPERTY(m_bExcludeFromSaveGames,bool, 0x915);
-			PROPERTY(m_bGrabbable,bool, 0x916);
-			PROPERTY(m_bOnlyRenderToTexture,bool, 0x917);
-			PROPERTY(m_bDisableMipGen,bool, 0x918);
-			PROPERTY(m_nExplicitImageLayout,int32_t, 0x91c);
-			S2_PAD(0x58);
+			PROPERTY(m_bIgnoreInput,bool, 0x8d0);
+			PROPERTY(m_bLit,bool, 0x8d1);
+			PROPERTY(m_bFollowPlayerAcrossTeleport,bool, 0x8d2);
+			PROPERTY(m_flWidth,float32, 0x8d4);
+			PROPERTY(m_flHeight,float32, 0x8d8);
+			PROPERTY(m_flDPI,float32, 0x8dc);
+			PROPERTY(m_flInteractDistance,float32, 0x8e0);
+			PROPERTY(m_flDepthOffset,float32, 0x8e4);
+			PROPERTY(m_unOwnerContext,uint32_t, 0x8e8);
+			PROPERTY(m_unHorizontalAlign,uint32_t, 0x8ec);
+			PROPERTY(m_unVerticalAlign,uint32_t, 0x8f0);
+			PROPERTY(m_unOrientation,uint32_t, 0x8f4);
+			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x8f8);
+			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x900);
+			PROPERTY(m_bOpaque,bool, 0x918);
+			PROPERTY(m_bNoDepth,bool, 0x919);
+			PROPERTY(m_bVisibleWhenParentNoDraw,bool, 0x91a);
+			PROPERTY(m_bRenderBackface,bool, 0x91b);
+			PROPERTY(m_bUseOffScreenIndicator,bool, 0x91c);
+			PROPERTY(m_bExcludeFromSaveGames,bool, 0x91d);
+			PROPERTY(m_bGrabbable,bool, 0x91e);
+			PROPERTY(m_bOnlyRenderToTexture,bool, 0x91f);
+			PROPERTY(m_bDisableMipGen,bool, 0x920);
+			PROPERTY(m_nExplicitImageLayout,int32_t, 0x924);
+			PROPERTY(m_bIgnoreParentOrientation,bool, 0x928);
+			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPointClientUIWorldPanel) == 0x920, "CPointClientUIWorldPanel size should be 0x920");
+		//static_assert(sizeof(CS2::server::CPointClientUIWorldPanel) == 0x930, "CPointClientUIWorldPanel size should be 0x930");
 
 #endif
 	}

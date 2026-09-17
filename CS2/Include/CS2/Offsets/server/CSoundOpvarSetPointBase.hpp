@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bDisabled = 0x4a8; // bool m_bDisabled; |  0x4a8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_hSource = 0x4ac; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_iszSourceEntityName = 0x4c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vLastPosition = 0x520; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vLastPosition = 0x520; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_flRefreshTime = 0x52c; // float32 m_flRefreshTime; |  0x52c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_iszStackName = 0x530; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_iszOperatorName = 0x538; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8

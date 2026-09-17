@@ -4,12 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
+#include "CPulseCell_TestWaitWithCursorState.hpp"
 
 
 
@@ -21,11 +22,14 @@ namespace CS2 {
 		class CPulseCell_TestWaitWithCursorState_CursorState_t  {
 		public:
 			PROPERTY(flWaitValue,float32, 0x0);
-			PROPERTY(bFailOnCancel,bool, 0x4);
-			S2_PAD(0x8);
+			PROPERTY(bFail,bool, 0x4);
+			PROPERTY(m_hSelfCursor,GlobalTypes::HYieldedCursor, 0x8);
+			PROPERTY(m_hSelfCellInstanceUntyped,GlobalTypes::HPulseCellBase, 0x14);
+			PROPERTY(m_hSelfCellInstance,IDENTITY(pulse_system::HPulseCell<pulse_system::CPulseCell_TestWaitWithCursorState>), 0x1c);
+			S2_PAD(0x24);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_system::CPulseCell_TestWaitWithCursorState_CursorState_t) == 0x8, "CPulseCell_TestWaitWithCursorState::CursorState_t size should be 0x8");
+		//static_assert(sizeof(CS2::pulse_system::CPulseCell_TestWaitWithCursorState_CursorState_t) == 0x24, "CPulseCell_TestWaitWithCursorState::CursorState_t size should be 0x24");
 
 #endif
 	}

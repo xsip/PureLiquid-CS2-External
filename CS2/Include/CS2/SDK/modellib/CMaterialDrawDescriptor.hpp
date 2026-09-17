@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CMaterialDrawDescriptor_RigidMeshPart_t.hpp>
-#include <SDK/modellib/RenderPrimitiveType_t.hpp>
-#include <SDK/modellib/CRenderBufferBinding.hpp>
+#include "CMaterialDrawDescriptor_RigidMeshPart_t.hpp"
+#include "RenderPrimitiveType_t.hpp"
+#include "CRenderBufferBinding.hpp"
 
 
 
@@ -37,18 +37,19 @@ namespace CS2 {
 			PROPERTY(m_nDepthVertexBufferIndex,uint8_t, 0x24);
 			PROPERTY(m_nMeshletPackedIVBIndex,uint8_t, 0x25);
 			// PROPERTY(m_rigidMeshParts,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CMaterialDrawDescriptor_RigidMeshPart_t>), 0x28);
-			PROPERTY(m_nPrimitiveType,IDENTITY(modellib::RenderPrimitiveType_t), 0x38);
-			PROPERTY(m_nBaseVertex,int32_t, 0x3c);
-			PROPERTY(m_nVertexCount,int32_t, 0x40);
-			PROPERTY(m_nStartIndex,int32_t, 0x44);
-			PROPERTY(m_nIndexCount,int32_t, 0x48);
-			NESTED_PROPERTY(m_indexBuffer,IDENTITY(modellib::CRenderBufferBinding), 0xb0);
-			NESTED_PROPERTY(m_meshletPackedIVB,IDENTITY(modellib::CRenderBufferBinding), 0xd0);
-			PROPERTY(m_material,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x100);
-			S2_PAD(0x108);
+			// PROPERTY(m_rootBvhNodes,IDENTITY(GlobalTypes::CUtlLeanVector< uint16 >), 0x38);
+			PROPERTY(m_nPrimitiveType,IDENTITY(modellib::RenderPrimitiveType_t), 0x48);
+			PROPERTY(m_nBaseVertex,int32_t, 0x4c);
+			PROPERTY(m_nVertexCount,int32_t, 0x50);
+			PROPERTY(m_nStartIndex,int32_t, 0x54);
+			PROPERTY(m_nIndexCount,int32_t, 0x58);
+			NESTED_PROPERTY(m_indexBuffer,IDENTITY(modellib::CRenderBufferBinding), 0xc0);
+			NESTED_PROPERTY(m_meshletPackedIVB,IDENTITY(modellib::CRenderBufferBinding), 0xe0);
+			PROPERTY(m_material,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x110);
+			S2_PAD(0x118);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::modellib::CMaterialDrawDescriptor) == 0x108, "CMaterialDrawDescriptor size should be 0x108");
+		//static_assert(sizeof(CS2::modellib::CMaterialDrawDescriptor) == 0x118, "CMaterialDrawDescriptor size should be 0x118");
 
 #endif
 	}

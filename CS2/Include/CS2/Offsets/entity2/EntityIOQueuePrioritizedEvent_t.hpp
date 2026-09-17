@@ -16,8 +16,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_pTargetInput = 0x18; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hActivator = 0x20; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hCaller = 0x24; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nOutputID = 0x28; // int32_t m_nOutputID; |  0x28 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hEntTarget = 0x2c; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hEntTarget = 0x28; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_variantValue = 0x30; // GlobalTypes::CVariantBase<entity2::CVariantDefaultAllocator>  | Schema_Atomic | Size: 0x10
 			}
 		}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionOperator.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include "CParticleFunctionOperator.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
 
 
 
@@ -25,10 +25,11 @@ namespace CS2 {
 		public:
 			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1d8);
 			NESTED_PROPERTY(m_flInterpolation,IDENTITY(particleslib::CPerParticleFloatInput), 0x1e0);
-			S2_PAD(0x178);
+			PROPERTY(m_bPrevious,bool, 0x350);
+			S2_PAD(0x180);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_PointVectorAtNextParticle) == 0x350, "C_OP_PointVectorAtNextParticle size should be 0x350");
+		//static_assert(sizeof(CS2::particles::C_OP_PointVectorAtNextParticle) == 0x358, "C_OP_PointVectorAtNextParticle size should be 0x358");
 
 #endif
 	}

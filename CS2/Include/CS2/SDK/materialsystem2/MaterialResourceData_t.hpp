@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/materialsystem2/MaterialParamInt_t.hpp>
-#include <SDK/materialsystem2/MaterialParamFloat_t.hpp>
-#include <SDK/materialsystem2/MaterialParamVector_t.hpp>
-#include <SDK/materialsystem2/MaterialParamTexture_t.hpp>
-#include <SDK/materialsystem2/MaterialParamBuffer_t.hpp>
-#include <SDK/materialsystem2/MaterialParamString_t.hpp>
+#include "MaterialParamInt_t.hpp"
+#include "MaterialParamFloat_t.hpp"
+#include "MaterialParamVector_t.hpp"
+#include "MaterialParamTexture_t.hpp"
+#include "MaterialParamBuffer_t.hpp"
+#include "MaterialParamString_t.hpp"
 
 
 

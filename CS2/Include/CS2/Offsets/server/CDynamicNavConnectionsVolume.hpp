@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x918
+			// Class size: 0x938
 			namespace CDynamicNavConnectionsVolume /*: public CS2::server::CTriggerMultiple*/ {
-				constexpr std::ptrdiff_t m_iszConnectionTarget = 0x8e0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vecConnections = 0x8e8; // GlobalTypes::CUtlVector<server::DynamicVolumeDef_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_sTransitionType = 0x900; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bConnectionsEnabled = 0x908; // bool m_bConnectionsEnabled; |  0x908 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flTargetAreaSearchRadius = 0x90c; // float32 m_flTargetAreaSearchRadius; |  0x90c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flUpdateDistance = 0x910; // float32 m_flUpdateDistance; |  0x910 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxConnectionDistance = 0x914; // float32 m_flMaxConnectionDistance; |  0x914 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszConnectionTarget = 0x900; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_vecConnections = 0x908; // GlobalTypes::CUtlVector<server::DynamicVolumeDef_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_sTransitionType = 0x920; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bConnectionsEnabled = 0x928; // bool m_bConnectionsEnabled; |  0x928 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flTargetAreaSearchRadius = 0x92c; // float32 m_flTargetAreaSearchRadius; |  0x92c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flUpdateDistance = 0x930; // float32 m_flUpdateDistance; |  0x930 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxConnectionDistance = 0x934; // float32 m_flMaxConnectionDistance; |  0x934 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/mathlib_extended/AABB_t.hpp>
-#include <SDK/worldrenderer/ObjectTypeFlags_t.hpp>
-#include <SDK/worldrenderer/ClutterTile_t.hpp>
+#include "../mathlib_extended/AABB_t.hpp"
+#include "ObjectTypeFlags_t.hpp"
+#include "ClutterTile_t.hpp"
 
 
 

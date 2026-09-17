@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x50
+			// Class size: 0x60
 			namespace CPulse_Variable /**/ {
 				constexpr std::ptrdiff_t m_Name = 0x0; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_Description = 0x10; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
@@ -18,6 +18,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bIsPublicBlackboardVariable = 0x48; // bool m_bIsPublicBlackboardVariable; |  0x48 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bIsObservable = 0x49; // bool m_bIsObservable; |  0x49 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nEditorNodeID = 0x4c; // pulse_runtime_lib::PulseDocNodeID_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_Metadata = 0x50; // GlobalTypes::KeyValues3  | Schema_Atomic | Size: 0x10
 			}
 		}
 	}

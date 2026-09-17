@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CRulePointEntity.hpp>
-#include <SDK/client/hudtextparms_t.hpp>
+#include "CRulePointEntity.hpp"
+#include "../client/hudtextparms_t.hpp"
 
 
 
@@ -22,12 +22,12 @@ namespace CS2 {
 	namespace server {
 		class CGameText : public CS2::server::CRulePointEntity {
 		public:
-			PROPERTY(m_iszMessage,GlobalTypes::CUtlSymbolLarge*, 0x778);
-			NESTED_PROPERTY(m_textParms,IDENTITY(client::hudtextparms_t), 0x780);
+			PROPERTY(m_iszMessage,GlobalTypes::CUtlSymbolLarge*, 0x780);
+			NESTED_PROPERTY(m_textParms,IDENTITY(client::hudtextparms_t), 0x788);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CGameText) == 0x798, "CGameText size should be 0x798");
+		//static_assert(sizeof(CS2::server::CGameText) == 0x7A0, "CGameText size should be 0x7A0");
 
 #endif
 	}

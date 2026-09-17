@@ -7,10 +7,11 @@ namespace CS2 {
 	namespace server {
 		enum CFuncRotator_Rotate_t : std::uint32_t {
 			CFuncRotator_Rotate_t_ROTATE_LOOK_AT_TARGET = 0x3,
+			CFuncRotator_Rotate_t_ROTATE_LOOK_AT_TARGET_ONLY_PITCH = 0x5,
 			CFuncRotator_Rotate_t_ROTATE_LOOK_AT_TARGET_ONLY_YAW = 0x4,
 			CFuncRotator_Rotate_t_ROTATE_LOOP = 0x0,
 			CFuncRotator_Rotate_t_ROTATE_OSCILLATE = 0x1,
-			CFuncRotator_Rotate_t_ROTATE_RETURN_TO_INITIAL_ORIENTATION = 0x5,
+			CFuncRotator_Rotate_t_ROTATE_RETURN_TO_INITIAL_ORIENTATION = 0x6,
 			CFuncRotator_Rotate_t_ROTATE_STOP_AT_END = 0x2
 		};
 	}

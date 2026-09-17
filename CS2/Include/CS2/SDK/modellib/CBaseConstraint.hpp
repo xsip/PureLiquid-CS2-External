@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CBoneConstraintBase.hpp>
-#include <SDK/modellib/CConstraintSlave.hpp>
-#include <SDK/modellib/CConstraintTarget.hpp>
+#include "CBoneConstraintBase.hpp"
+#include "CConstraintSlave.hpp"
+#include "CConstraintTarget.hpp"
 
 
 

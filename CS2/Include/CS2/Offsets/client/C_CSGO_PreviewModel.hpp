@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1668
+			// Class size: 0x1690
 			namespace C_CSGO_PreviewModel /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_defaultAnim = 0x1158; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nDefaultAnimLoopMode = 0x1160; // client::AnimLoopMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flInitialModelScale = 0x1164; // float32 m_flInitialModelScale; |  0x1164 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_sInitialWeaponState = 0x1168; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_defaultAnim = 0x1180; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nDefaultAnimLoopMode = 0x1188; // client::AnimLoopMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flInitialModelScale = 0x118c; // float32 m_flInitialModelScale; |  0x118c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_sInitialWeaponState = 0x1190; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

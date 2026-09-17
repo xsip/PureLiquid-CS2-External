@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
+#include "CPulseCell_BaseYieldingInflow.hpp"
+#include "CPulse_OutflowConnection.hpp"
+#include "CPulse_ResumePoint.hpp"
 
 
 
@@ -23,14 +23,13 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_FireCursors : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_Outflows,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>), 0x48);
-			PROPERTY(m_bWaitForChildOutflows,bool, 0x60);
-			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x68);
-			NESTED_PROPERTY(m_OnCanceled,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xb0);
-			S2_PAD(0xB0);
+			NESTED_PROPERTY(m_Outflows,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutflowConnection>), 0xd8);
+			PROPERTY(m_bWaitForChildOutflows,bool, 0xf0);
+			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xf8);
+			S2_PAD(0x68);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_FireCursors) == 0xF8, "CPulseCell_FireCursors size should be 0xF8");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_FireCursors) == 0x140, "CPulseCell_FireCursors size should be 0x140");
 
 #endif
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/VPhysicsCollisionAttribute_t.hpp>
-#include <SDK/client/SolidType_t.hpp>
-#include <SDK/client/SurroundingBoundsType_t.hpp>
+#include "VPhysicsCollisionAttribute_t.hpp"
+#include "../client/SolidType_t.hpp"
+#include "../client/SurroundingBoundsType_t.hpp"
 
 
 
@@ -40,10 +40,10 @@ namespace CS2 {
 			PROPERTY(m_vCapsuleCenter1,GlobalTypes::Vector, 0x94);
 			PROPERTY(m_vCapsuleCenter2,GlobalTypes::Vector, 0xa0);
 			PROPERTY(m_flCapsuleRadius,float32, 0xac);
-			S2_PAD(0xB0);
+			S2_PAD(0xB8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCollisionProperty) == 0xB0, "CCollisionProperty size should be 0xB0");
+		//static_assert(sizeof(CS2::server::CCollisionProperty) == 0xB8, "CCollisionProperty size should be 0xB8");
 
 #endif
 	}

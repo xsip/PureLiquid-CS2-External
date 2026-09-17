@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CMarkupVolumeTagged.hpp>
+#include "CMarkupVolumeTagged.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CMarkupVolumeWithRef : public CS2::server::CMarkupVolumeTagged {
 		public:
-			PROPERTY(m_bUseRef,bool, 0x7b0);
-			PROPERTY(m_vRefPosEntitySpace,GlobalTypes::Vector, 0x7b4);
-			PROPERTY(m_vRefPosWorldSpace,GlobalTypes::VectorWS, 0x7c0);
-			PROPERTY(m_flRefDot,float32, 0x7cc);
+			PROPERTY(m_bUseRef,bool, 0x7b8);
+			PROPERTY(m_vRefPosEntitySpace,GlobalTypes::Vector, 0x7bc);
+			PROPERTY(m_vRefPosWorldSpace,GlobalTypes::VectorWS, 0x7c8);
+			PROPERTY(m_flRefDot,float32, 0x7d4);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CMarkupVolumeWithRef) == 0x7D0, "CMarkupVolumeWithRef size should be 0x7D0");
+		//static_assert(sizeof(CS2::server::CMarkupVolumeWithRef) == 0x7D8, "CMarkupVolumeWithRef size should be 0x7D8");
 
 #endif
 	}

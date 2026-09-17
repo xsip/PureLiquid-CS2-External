@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CSceneObjectData.hpp>
-#include <SDK/modellib/CRenderSkeleton.hpp>
-#include <SDK/modellib/DynamicMeshDeformParams_t.hpp>
+#include "CSceneObjectData.hpp"
+#include "CRenderSkeleton.hpp"
+#include "DynamicMeshDeformParams_t.hpp"
 
 
 
@@ -30,16 +30,16 @@ namespace CS2 {
 		class CRenderMesh  {
 		public:
 			// PROPERTY(m_sceneObjects,IDENTITY(GlobalTypes::CUtlLeanVectorFixedGrowable<modellib::CSceneObjectData>), 0x10);
-			// PROPERTY(m_constraints,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CBaseConstraint*>), 0xb8);
-			NESTED_PROPERTY(m_skeleton,IDENTITY(modellib::CRenderSkeleton), 0xc8);
-			PROPERTY(m_bUseUV2ForCharting,bool, 0x1d4);
-			PROPERTY(m_bEmbeddedMapMesh,bool, 0x1d5);
-			NESTED_PROPERTY(m_meshDeformParams,IDENTITY(modellib::DynamicMeshDeformParams_t), 0x1f8);
-			PROPERTY(m_pGroomData,IDENTITY(modellib::CRenderGroom*), 0x208);
-			S2_PAD(0x210);
+			// PROPERTY(m_constraints,IDENTITY(GlobalTypes::CUtlLeanVector<modellib::CBaseConstraint*>), 0xd0);
+			NESTED_PROPERTY(m_skeleton,IDENTITY(modellib::CRenderSkeleton), 0xe0);
+			PROPERTY(m_bUseUV2ForCharting,bool, 0x1ec);
+			PROPERTY(m_bEmbeddedMapMesh,bool, 0x1ed);
+			NESTED_PROPERTY(m_meshDeformParams,IDENTITY(modellib::DynamicMeshDeformParams_t), 0x210);
+			PROPERTY(m_pGroomData,IDENTITY(modellib::CRenderGroom*), 0x220);
+			S2_PAD(0x228);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::modellib::CRenderMesh) == 0x210, "CRenderMesh size should be 0x210");
+		//static_assert(sizeof(CS2::modellib::CRenderMesh) == 0x228, "CRenderMesh size should be 0x228");
 
 #endif
 	}

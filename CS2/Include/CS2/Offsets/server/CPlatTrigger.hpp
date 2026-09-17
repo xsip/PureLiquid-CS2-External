@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x770
+			// Class size: 0x778
 			namespace CPlatTrigger /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_pPlatform = 0x768; // GlobalTypes::CHandle<server::CFuncPlat>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_pPlatform = 0x770; // GlobalTypes::CHandle<server::CFuncPlat>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

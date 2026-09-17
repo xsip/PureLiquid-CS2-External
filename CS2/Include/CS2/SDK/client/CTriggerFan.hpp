@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseTrigger.hpp>
-#include <SDK/client/CountdownTimer.hpp>
+#include "C_BaseTrigger.hpp"
+#include "CountdownTimer.hpp"
 
 
 
@@ -27,19 +27,19 @@ namespace CS2 {
 	namespace client {
 		class CTriggerFan : public CS2::client::C_BaseTrigger {
 		public:
-			PROPERTY(m_vFanOriginOffset,GlobalTypes::Vector, 0x1078);
-			PROPERTY(m_vDirection,GlobalTypes::Vector, 0x1084);
-			PROPERTY(m_bPushTowardsInfoTarget,bool, 0x1090);
-			PROPERTY(m_bPushAwayFromInfoTarget,bool, 0x1091);
-			PROPERTY(m_qNoiseDelta,GlobalTypes::Quaternion, 0x10a0);
-			PROPERTY(m_hInfoFan,IDENTITY(GlobalTypes::CHandle<client::CInfoFan>), 0x10b0);
-			PROPERTY(m_flForce,float32, 0x10b4);
-			PROPERTY(m_bFalloff,bool, 0x10b8);
-			NESTED_PROPERTY(m_RampTimer,IDENTITY(client::CountdownTimer), 0x10c0);
+			PROPERTY(m_vFanOriginOffset,GlobalTypes::Vector, 0x1098);
+			PROPERTY(m_vDirection,GlobalTypes::Vector, 0x10a4);
+			PROPERTY(m_bPushTowardsInfoTarget,bool, 0x10b0);
+			PROPERTY(m_bPushAwayFromInfoTarget,bool, 0x10b1);
+			PROPERTY(m_qNoiseDelta,GlobalTypes::Quaternion, 0x10c0);
+			PROPERTY(m_hInfoFan,IDENTITY(GlobalTypes::CHandle<client::CInfoFan>), 0x10d0);
+			PROPERTY(m_flForce,float32, 0x10d4);
+			PROPERTY(m_bFalloff,bool, 0x10d8);
+			NESTED_PROPERTY(m_RampTimer,IDENTITY(client::CountdownTimer), 0x10e0);
 			S2_PAD(0x68);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CTriggerFan) == 0x10E0, "CTriggerFan size should be 0x10E0");
+		//static_assert(sizeof(CS2::client::CTriggerFan) == 0x1100, "CTriggerFan size should be 0x1100");
 
 #endif
 	}

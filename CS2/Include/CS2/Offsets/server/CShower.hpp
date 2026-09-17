@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x768
+			// Class size: 0x778
 			namespace CShower /*: public CS2::server::CModelPointEntity*/ {
-				// NO SCHEMA DATA FOUND!
+				constexpr std::ptrdiff_t m_flSpeed = 0x770; // float32 m_flSpeed; |  0x770 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

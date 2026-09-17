@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bMuzzleFlashEnabled = 0x20; // bool m_bMuzzleFlashEnabled; |  0x20 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_flMuzzleFlashBrightness = 0x24; // float32 m_flMuzzleFlashBrightness; |  0x24 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_quatMuzzleFlashOrientation = 0x30; // GlobalTypes::Quaternion  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_vecMuzzleFlashOrigin = 0x40; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecMuzzleFlashOrigin = 0x40; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_flFov = 0x4c; // float32 m_flFov; |  0x4c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flFarZ = 0x50; // float32 m_flFarZ; |  0x50 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flLinearAtten = 0x54; // float32 m_flLinearAtten; |  0x54 | Schema_Builtin | Size: 0x4

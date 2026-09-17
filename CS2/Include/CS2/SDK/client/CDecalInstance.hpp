@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/DecalFlags_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "DecalFlags_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -39,12 +39,13 @@ namespace CS2 {
 			PROPERTY(m_vPositionLS,GlobalTypes::Vector, 0x20);
 			PROPERTY(m_vPositionOS,GlobalTypes::Vector, 0x2c);
 			PROPERTY(m_vNormalLS,GlobalTypes::Vector, 0x38);
-			PROPERTY(m_vSAxisLS,GlobalTypes::Vector, 0x44);
-			PROPERTY(m_nFlags,IDENTITY(client::DecalFlags_t), 0x50);
-			PROPERTY(m_Color,GlobalTypes::Color, 0x54);
-			PROPERTY(m_flWidth,float32, 0x58);
-			PROPERTY(m_flHeight,float32, 0x5c);
-			PROPERTY(m_flDepth,float32, 0x60);
+			PROPERTY(m_vNormalOS,GlobalTypes::Vector, 0x44);
+			PROPERTY(m_vSAxisLS,GlobalTypes::Vector, 0x50);
+			PROPERTY(m_nFlags,IDENTITY(client::DecalFlags_t), 0x5c);
+			PROPERTY(m_Color,GlobalTypes::Color, 0x60);
+			PROPERTY(m_flWidth,float32, 0x64);
+			PROPERTY(m_flHeight,float32, 0x68);
+			PROPERTY(m_flDepth,float32, 0x6c);
 			PROPERTY(m_transform,GlobalTypes::CTransformWS, 0x70);
 			PROPERTY(m_flAnimationScale,float32, 0x90);
 			PROPERTY(m_flAnimationStartTime,float32, 0x94);

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseAnimGraph.hpp>
+#include "CBaseAnimGraph.hpp"
 
 
 
@@ -26,16 +26,16 @@ namespace CS2 {
 	namespace client {
 		class C_BulletHitModel : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_matLocal,GlobalTypes::matrix3x4_t, 0x1158);
-			PROPERTY(m_iBoneIndex,int32_t, 0x1188);
-			PROPERTY(m_hPlayerParent,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x118c);
-			PROPERTY(m_bIsHit,bool, 0x1190);
-			PROPERTY(m_flTimeCreated,float32, 0x1194);
-			PROPERTY(m_vecStartPos,GlobalTypes::Vector, 0x1198);
+			PROPERTY(m_matLocal,GlobalTypes::matrix3x4_t, 0x1180);
+			PROPERTY(m_iBoneIndex,int32_t, 0x11b0);
+			PROPERTY(m_hPlayerParent,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x11b4);
+			PROPERTY(m_bIsHit,bool, 0x11b8);
+			PROPERTY(m_flTimeCreated,float32, 0x11bc);
+			PROPERTY(m_vecStartPos,GlobalTypes::VectorWS, 0x11c0);
 			S2_PAD(0x50);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BulletHitModel) == 0x11A8, "C_BulletHitModel size should be 0x11A8");
+		//static_assert(sizeof(CS2::client::C_BulletHitModel) == 0x11D0, "C_BulletHitModel size should be 0x11D0");
 
 #endif
 	}

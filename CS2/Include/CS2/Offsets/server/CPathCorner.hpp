@@ -8,11 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x4C8
+			// Class size: 0x4D0
 			namespace CPathCorner /*: public CS2::server::CPointEntity*/ {
-				constexpr std::ptrdiff_t m_flWait = 0x4a8; // float32 m_flWait; |  0x4a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadius = 0x4ac; // float32 m_flRadius; |  0x4ac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_OnPass = 0x4b0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_flSpeed = 0x4a8; // float32 m_flSpeed; |  0x4a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flWait = 0x4ac; // float32 m_flWait; |  0x4ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x4b0; // float32 m_flRadius; |  0x4b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnPass = 0x4b8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

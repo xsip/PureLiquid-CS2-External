@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1850
+			// Class size: 0x21E8
 			namespace C_OP_RenderVolumetricEmitter /*: public CS2::particles::CParticleFunctionRenderer*/ {
 				constexpr std::ptrdiff_t m_strChannelType = 0x228; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nType = 0x230; // particles::ParticleVolumetricSmokeType_t  | Schema_DeclaredEnum | Size: 0x4
@@ -16,12 +16,15 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nEventType = 0x238; // particles::EventTypeSelection_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_vecPos = 0x240; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
 				constexpr std::ptrdiff_t m_vecVelocity = 0x8f8; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flRadius = 0xfb0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flDensity = 0x1120; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flTemperature = 0x1290; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMagnitude = 0x1400; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flKillRadius = 0x1570; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flFalloff = 0x16e0; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_vPrevPosition = 0xfb0; // particleslib::CPerParticleVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flSpeed = 0x1668; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flRadius = 0x17d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flDensity = 0x1948; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flTemperature = 0x1ab8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMagnitude = 0x1c28; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flKillRadius = 0x1d98; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flKillDensityScale = 0x1f08; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flFalloff = 0x2078; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

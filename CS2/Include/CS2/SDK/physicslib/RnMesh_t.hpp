@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/physicslib/RnNode_t.hpp>
-#include <SDK/physicslib/RnTriangle_t.hpp>
-#include <SDK/physicslib/RnWing_t.hpp>
+#include "RnNode_t.hpp"
+#include "RnTriangle_t.hpp"
+#include "RnWing_t.hpp"
 
 
 

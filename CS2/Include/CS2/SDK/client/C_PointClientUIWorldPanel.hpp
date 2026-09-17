@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseClientUIEntity.hpp>
+#include "C_BaseClientUIEntity.hpp"
 
 
 
@@ -26,9 +26,9 @@ namespace CS2 {
 	namespace client {
 		class C_PointClientUIWorldPanel : public CS2::client::C_BaseClientUIEntity {
 		public:
-			PROPERTY(m_bForceRecreateNextUpdate,bool, 0xfe0);
-			PROPERTY(m_bMoveViewToPlayerNextThink,bool, 0xfe1);
-			PROPERTY(m_bCheckCSSClasses,bool, 0xfe2);
+			PROPERTY(m_bForceRecreateNextUpdate,bool, 0xfe8);
+			PROPERTY(m_bMoveViewToPlayerNextThink,bool, 0xfe9);
+			PROPERTY(m_bCheckCSSClasses,bool, 0xfea);
 			PROPERTY(m_anchorDeltaTransform,GlobalTypes::CTransform, 0xff0);
 			PROPERTY(m_pOffScreenIndicator,IDENTITY(client::CPointOffScreenIndicatorUi*), 0x1180);
 			PROPERTY(m_bIgnoreInput,bool, 0x11a8);
@@ -55,10 +55,11 @@ namespace CS2 {
 			PROPERTY(m_bOnlyRenderToTexture,bool, 0x11f7);
 			PROPERTY(m_bDisableMipGen,bool, 0x11f8);
 			PROPERTY(m_nExplicitImageLayout,int32_t, 0x11fc);
-			S2_PAD(0x228);
+			PROPERTY(m_bIgnoreParentOrientation,bool, 0x1200);
+			S2_PAD(0x230);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PointClientUIWorldPanel) == 0x1200, "C_PointClientUIWorldPanel size should be 0x1200");
+		//static_assert(sizeof(CS2::client::C_PointClientUIWorldPanel) == 0x1210, "C_PointClientUIWorldPanel size should be 0x1210");
 
 #endif
 	}

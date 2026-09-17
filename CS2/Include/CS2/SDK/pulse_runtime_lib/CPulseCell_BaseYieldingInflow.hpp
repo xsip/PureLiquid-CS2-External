@@ -4,13 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseFlow.hpp>
+#include "CPulseCell_BaseFlow.hpp"
+#include "CPulse_ResumePoint.hpp"
 
 
 
@@ -21,9 +22,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_BaseYieldingInflow : public CS2::pulse_runtime_lib::CPulseCell_BaseFlow {
 		public:
+			NESTED_PROPERTY(m_BaseFlow_OnAfterCancel,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x48);
+			NESTED_PROPERTY(m_BaseFlow_WhileActive,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x90);
+			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow) == 0x48, "CPulseCell_BaseYieldingInflow size should be 0x48");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow) == 0xD8, "CPulseCell_BaseYieldingInflow size should be 0xD8");
 
 #endif
 	}

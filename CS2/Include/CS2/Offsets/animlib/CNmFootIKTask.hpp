@@ -8,20 +8,20 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x110
+			// Class size: 0x140
 			namespace CNmFootIKTask /*: public CS2::animlib::CNmPoseTask*/ {
-				constexpr std::ptrdiff_t m_nLeftEffectorBoneIdx = 0x48; // int32_t m_nLeftEffectorBoneIdx; |  0x48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRightEffectorBoneIdx = 0x4c; // int32_t m_nRightEffectorBoneIdx; |  0x4c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_leftTargetTransform = 0x50; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_rightTargetTransform = 0x70; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_nLeftTargetBoneIdx = 0x90; // int32_t m_nLeftTargetBoneIdx; |  0x90 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRightTargetBoneIdx = 0x94; // int32_t m_nRightTargetBoneIdx; |  0x94 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_leftTarget = 0xa0; // animlib::CNmTarget  | Schema_DeclaredClass | Size: 0x30
-				constexpr std::ptrdiff_t m_rightTarget = 0xd0; // animlib::CNmTarget  | Schema_DeclaredClass | Size: 0x30
-				constexpr std::ptrdiff_t m_blendMode = 0x100; // animlib::NmIKBlendMode_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_flBlendWeight = 0x104; // float32 m_flBlendWeight; |  0x104 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0x108; // bool m_bIsTargetInWorldSpace; |  0x108 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsRunningFromDeserializedData = 0x109; // bool m_bIsRunningFromDeserializedData; |  0x109 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nLeftEffectorBoneIdx = 0x70; // int32_t m_nLeftEffectorBoneIdx; |  0x70 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRightEffectorBoneIdx = 0x74; // int32_t m_nRightEffectorBoneIdx; |  0x74 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_leftTargetTransform = 0x80; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_rightTargetTransform = 0xa0; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_nLeftTargetBoneIdx = 0xc0; // int32_t m_nLeftTargetBoneIdx; |  0xc0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRightTargetBoneIdx = 0xc4; // int32_t m_nRightTargetBoneIdx; |  0xc4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_leftTarget = 0xd0; // animlib::CNmTarget  | Schema_DeclaredClass | Size: 0x30
+				constexpr std::ptrdiff_t m_rightTarget = 0x100; // animlib::CNmTarget  | Schema_DeclaredClass | Size: 0x30
+				constexpr std::ptrdiff_t m_blendMode = 0x130; // animlib::NmIKBlendMode_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_flBlendWeight = 0x134; // float32 m_flBlendWeight; |  0x134 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0x138; // bool m_bIsTargetInWorldSpace; |  0x138 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsRunningFromDeserializedData = 0x139; // bool m_bIsRunningFromDeserializedData; |  0x139 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

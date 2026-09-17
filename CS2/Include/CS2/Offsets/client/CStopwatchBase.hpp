@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0xC
 			namespace CStopwatchBase /*: public CS2::client::CSimpleSimTimer*/ {
-				constexpr std::ptrdiff_t m_fIsRunning = 0x8; // bool m_fIsRunning; |  0x8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsRunning = 0x8; // bool m_bIsRunning; |  0x8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

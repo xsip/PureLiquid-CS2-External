@@ -57,11 +57,12 @@ namespace CS2 {
 				)
 				);
 
-			pCsGoHud = ::Globals::pProc->ReadDirect<CCSGO_Hud*>(
+			// TODO: update pattern
+			/*pCsGoHud = ::Globals::pProc->ReadDirect<CCSGO_Hud*>(
 				pClient->ResolveRIP(
 					pClient->ScanMemory(CCSGO_HUD_PATTERN)
 					, 3, 7)
-			);
+			);*/
 
 			pGameResourceService = CreateInterface<CGameResourceService>("engine2.dll", "GameResourceServiceClientV001");
 			pMaterialSystem = CreateInterface<CMaterialSystem2>("materialsystem2.dll", "VMaterialSystem2_001");

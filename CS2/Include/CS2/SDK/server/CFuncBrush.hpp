@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/client/BrushSolidities_e.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../client/BrushSolidities_e.hpp"
 
 
 
@@ -22,16 +22,16 @@ namespace CS2 {
 	namespace server {
 		class CFuncBrush : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_iSolidity,IDENTITY(client::BrushSolidities_e), 0x768);
-			PROPERTY(m_iDisabled,int32_t, 0x76c);
-			PROPERTY(m_bSolidBsp,bool, 0x770);
-			PROPERTY(m_iszExcludedClass,GlobalTypes::CUtlSymbolLarge*, 0x778);
-			PROPERTY(m_bInvertExclusion,bool, 0x780);
-			PROPERTY(m_bScriptedMovement,bool, 0x781);
+			PROPERTY(m_iSolidity,IDENTITY(client::BrushSolidities_e), 0x770);
+			PROPERTY(m_iDisabled,int32_t, 0x774);
+			PROPERTY(m_bSolidBsp,bool, 0x778);
+			PROPERTY(m_iszExcludedClass,GlobalTypes::CUtlSymbolLarge*, 0x780);
+			PROPERTY(m_bInvertExclusion,bool, 0x788);
+			PROPERTY(m_bScriptedMovement,bool, 0x789);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncBrush) == 0x788, "CFuncBrush size should be 0x788");
+		//static_assert(sizeof(CS2::server::CFuncBrush) == 0x790, "CFuncBrush size should be 0x790");
 
 #endif
 	}

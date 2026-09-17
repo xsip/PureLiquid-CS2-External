@@ -13,8 +13,9 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_pnext = 0x4a8; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_pprevious = 0x4ac; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_paltpath = 0x4b0; // GlobalTypes::CHandle<server::CPathTrack>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadius = 0x4b4; // float32 m_flRadius; |  0x4b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_length = 0x4b8; // float32 m_length; |  0x4b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpeed = 0x4b4; // float32 m_flSpeed; |  0x4b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x4b8; // float32 m_flRadius; |  0x4b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_length = 0x4bc; // float32 m_length; |  0x4bc | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_altName = 0x4c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nIterVal = 0x4c8; // int32_t m_nIterVal; |  0x4c8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_eOrientationType = 0x4cc; // server::TrackOrientationType_t  | Schema_DeclaredEnum | Size: 0x4

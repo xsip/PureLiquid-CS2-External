@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CTeamplayRules.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/server/SpawnPoint.hpp>
-#include <SDK/server/CRetakeGameRules.hpp>
+#include "CTeamplayRules.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "SpawnPoint.hpp"
+#include "CRetakeGameRules.hpp"
 
 
 
@@ -93,8 +93,8 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_iMatchStats_PlayersAlive_T,int32_t, 30 , 0xb40);
 			PROPERTY_ARRAY(m_TeamRespawnWaveTimes,float32, 32 , 0xbb8);
 			PROPERTY_ARRAY(m_flNextRespawnWave,IDENTITY(entity2::GameTime_t), 32 , 0xc38);
-			PROPERTY(m_vMinimapMins,GlobalTypes::Vector, 0xcb8);
-			PROPERTY(m_vMinimapMaxs,GlobalTypes::Vector, 0xcc4);
+			PROPERTY(m_vMinimapMins,GlobalTypes::VectorWS, 0xcb8);
+			PROPERTY(m_vMinimapMaxs,GlobalTypes::VectorWS, 0xcc4);
 			PROPERTY_ARRAY(m_MinimapVerticalSectionHeights,float32, 8 , 0xcd0);
 			PROPERTY(m_ullLocalMatchID,uint64_t, 0xcf0);
 			PROPERTY_ARRAY(m_nEndMatchMapGroupVoteTypes,int32_t, 10 , 0xcf8);
@@ -168,7 +168,7 @@ namespace CS2 {
 			PROPERTY(m_bTargetBombed,bool, 0xf00);
 			PROPERTY(m_bBombDefused,bool, 0xf01);
 			PROPERTY(m_bMapHasBombZone,bool, 0xf02);
-			PROPERTY(m_vecMainCTSpawnPos,GlobalTypes::Vector, 0xf50);
+			PROPERTY(m_vecMainCTSpawnPos,GlobalTypes::VectorWS, 0xf50);
 			NESTED_PROPERTY(m_CTSpawnPointsMasterList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>), 0xf60);
 			NESTED_PROPERTY(m_TerroristSpawnPointsMasterList,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>), 0xf78);
 			PROPERTY(m_bRespawningAllRespawnablePlayers,bool, 0xf90);

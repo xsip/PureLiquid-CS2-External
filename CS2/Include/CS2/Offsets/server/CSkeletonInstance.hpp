@@ -8,14 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x420
+			// Class size: 0x460
 			namespace CSkeletonInstance /*: public CS2::server::CGameSceneNode*/ {
-				constexpr std::ptrdiff_t m_modelState = 0x130; // server::CModelState  | Schema_DeclaredClass | Size: 0x250
-				constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x380; // bool m_bUseParentRenderBounds; |  0x380 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x381; // bool m_bDisableSolidCollisionsForHierarchy; |  0x381 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_materialGroup = 0x384; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nHitboxSet = 0x388; // uint8_t m_nHitboxSet; |  0x388 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bForceServerConstraintsEnabled = 0x3e4; // bool m_bForceServerConstraintsEnabled; |  0x3e4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_modelState = 0x120; // server::CModelState  | Schema_DeclaredClass | Size: 0x290
+				constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x3b0; // bool m_bUseParentRenderBounds; |  0x3b0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x3b1; // bool m_bDisableSolidCollisionsForHierarchy; |  0x3b1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDirtyMotionType = 0x3b2; // bool m_bDirtyMotionType; |  0x3b2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsGeneratingLatchedParentSpaceState = 0x3b3; // bool m_bIsGeneratingLatchedParentSpaceState; |  0x3b3 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_materialGroup = 0x3b8; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nHitboxSet = 0x3bc; // uint8_t m_nHitboxSet; |  0x3bc | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceServerConstraintsEnabled = 0x41c; // bool m_bForceServerConstraintsEnabled; |  0x41c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

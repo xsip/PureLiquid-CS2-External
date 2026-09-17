@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/DamageTypes_t.hpp>
-#include <SDK/client/AmmoIndex_t.hpp>
-#include <SDK/client/TakeDamageFlags_t.hpp>
-#include <SDK/client/HitGroup_t.hpp>
-#include <SDK/client/DestructiblePartDamageRequest_t.hpp>
+#include "DamageTypes_t.hpp"
+#include "AmmoIndex_t.hpp"
+#include "TakeDamageFlags_t.hpp"
+#include "HitGroup_t.hpp"
+#include "DestructiblePartDamageRequest_t.hpp"
 
 
 

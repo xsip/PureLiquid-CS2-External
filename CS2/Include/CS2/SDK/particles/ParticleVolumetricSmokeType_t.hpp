@@ -8,7 +8,8 @@ namespace CS2 {
 		enum ParticleVolumetricSmokeType_t : std::uint32_t {
 			ParticleVolumetricSmokeType_t_PARTICLE_VOLUMETRIC_SMOKE_TYPE_EMISSION = 0x0,
 			ParticleVolumetricSmokeType_t_PARTICLE_VOLUMETRIC_SMOKE_TYPE_REPEL = 0x2,
-			ParticleVolumetricSmokeType_t_PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK = 0x1
+			ParticleVolumetricSmokeType_t_PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK = 0x1,
+			ParticleVolumetricSmokeType_t_PARTICLE_VOLUMETRIC_SMOKE_TYPE_TRACE = 0x3
 		};
 	}
 }

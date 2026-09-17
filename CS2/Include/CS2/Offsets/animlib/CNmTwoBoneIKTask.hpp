@@ -8,18 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0xC0
+			// Class size: 0xF0
 			namespace CNmTwoBoneIKTask /*: public CS2::animlib::CNmPoseTask*/ {
-				constexpr std::ptrdiff_t m_nEffectorBoneIdx = 0x48; // int32_t m_nEffectorBoneIdx; |  0x48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nEffectorTargetBoneIdx = 0x4c; // int32_t m_nEffectorTargetBoneIdx; |  0x4c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_targetTransform = 0x50; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_effectorTarget = 0x70; // animlib::CNmTarget  | Schema_DeclaredClass | Size: 0x30
-				constexpr std::ptrdiff_t m_blendMode = 0xa0; // animlib::NmIKBlendMode_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_flBlendWeight = 0xa4; // float32 m_flBlendWeight; |  0xa4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0xa8; // bool m_bIsTargetInWorldSpace; |  0xa8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsRunningFromDeserializedData = 0xa9; // bool m_bIsRunningFromDeserializedData; |  0xa9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flChainRotationWeight = 0xac; // float32 m_flChainRotationWeight; |  0xac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_debugEffectorBoneID = 0xb0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nEffectorBoneIdx = 0x70; // int32_t m_nEffectorBoneIdx; |  0x70 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nEffectorTargetBoneIdx = 0x74; // int32_t m_nEffectorTargetBoneIdx; |  0x74 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_targetTransform = 0x80; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_effectorTarget = 0xa0; // animlib::CNmTarget  | Schema_DeclaredClass | Size: 0x30
+				constexpr std::ptrdiff_t m_blendMode = 0xd0; // animlib::NmIKBlendMode_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_flBlendWeight = 0xd4; // float32 m_flBlendWeight; |  0xd4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0xd8; // bool m_bIsTargetInWorldSpace; |  0xd8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsRunningFromDeserializedData = 0xd9; // bool m_bIsRunningFromDeserializedData; |  0xd9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flChainRotationWeight = 0xdc; // float32 m_flChainRotationWeight; |  0xdc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_debugEffectorBoneID = 0xe0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

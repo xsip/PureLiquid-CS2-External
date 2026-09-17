@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerAsyncGenerator.hpp>
+#include "CVoiceContainerAsyncGenerator.hpp"
 
 
 
@@ -26,16 +26,16 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerGranulator : public CS2::soundsystem_voicecontainers::CVoiceContainerAsyncGenerator {
 		public:
-			PROPERTY(m_flGrainLength,float32, 0xb8);
-			PROPERTY(m_flGrainCrossfadeAmount,float32, 0xbc);
-			PROPERTY(m_flStartJitter,float32, 0xc0);
-			PROPERTY(m_flPlaybackJitter,float32, 0xc4);
-			PROPERTY(m_bShouldWraparound,bool, 0xc8);
-			PROPERTY(m_sourceAudio,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>), 0xd0);
+			PROPERTY(m_flGrainLength,float32, 0x80);
+			PROPERTY(m_flGrainCrossfadeAmount,float32, 0x84);
+			PROPERTY(m_flStartJitter,float32, 0x88);
+			PROPERTY(m_flPlaybackJitter,float32, 0x8c);
+			PROPERTY(m_bShouldWraparound,bool, 0x90);
+			PROPERTY(m_sourceAudio,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>), 0x98);
 			S2_PAD(0xD8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerGranulator) == 0x190, "CVoiceContainerGranulator size should be 0x190");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerGranulator) == 0x158, "CVoiceContainerGranulator size should be 0x158");
 
 #endif
 	}

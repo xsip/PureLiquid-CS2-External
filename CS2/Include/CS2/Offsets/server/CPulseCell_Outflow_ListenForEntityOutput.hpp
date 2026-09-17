@@ -8,13 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xF0
+			// Class size: 0x138
 			namespace CPulseCell_Outflow_ListenForEntityOutput /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
-				constexpr std::ptrdiff_t m_OnFired = 0x48; // pulse_runtime_lib::SignatureOutflow_Resume  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_OnCanceled = 0x90; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_strEntityOutput = 0xd8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_strEntityOutputParam = 0xe0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bListenUntilCanceled = 0xe8; // bool m_bListenUntilCanceled; |  0xe8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_OnFired = 0xd8; // pulse_runtime_lib::SignatureOutflow_Resume  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_strEntityOutput = 0x120; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_strEntityOutputParam = 0x128; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bListenUntilCanceled = 0x130; // bool m_bListenUntilCanceled; |  0x130 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

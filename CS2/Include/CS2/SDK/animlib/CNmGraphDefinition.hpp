@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/resourcesystem/InfoForResourceTypeCNmSkeleton.hpp>
-#include <SDK/animlib/CNmGraphDefinition_ReferencedGraphSlot_t.hpp>
-#include <SDK/animlib/CNmGraphDefinition_ExternalGraphSlot_t.hpp>
-#include <SDK/animlib/CNmGraphDefinition_ExternalPoseSlot_t.hpp>
+#include "../resourcesystem/InfoForResourceTypeCNmSkeleton.hpp"
+#include "CNmGraphDefinition_ReferencedGraphSlot_t.hpp"
+#include "CNmGraphDefinition_ExternalGraphSlot_t.hpp"
+#include "CNmGraphDefinition_ExternalPoseSlot_t.hpp"
 
 
 

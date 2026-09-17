@@ -8,6 +8,7 @@ namespace CS2 {
 		enum RenderBufferFlags_t : std::uint32_t {
 			RenderBufferFlags_t_RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
 			RenderBufferFlags_t_RENDER_BUFFER_BYTEADDRESS_BUFFER = 0x10,
+			RenderBufferFlags_t_RENDER_BUFFER_DYNAMIC_ZERO_COPY = 0x4000,
 			RenderBufferFlags_t_RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000,
 			RenderBufferFlags_t_RENDER_BUFFER_POOL_ALLOCATED = 0x800,
 			RenderBufferFlags_t_RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,

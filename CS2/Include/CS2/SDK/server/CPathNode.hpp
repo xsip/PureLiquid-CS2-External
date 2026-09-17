@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPointEntity.hpp>
+#include "CPointEntity.hpp"
 
 
 
@@ -30,7 +30,7 @@ namespace CS2 {
 			PROPERTY(m_vOutTangentLocal,GlobalTypes::Vector, 0x4b4);
 			PROPERTY(m_strParentPathUniqueID,GlobalTypes::CUtlString*, 0x4c0);
 			PROPERTY(m_strPathNodeParameter,GlobalTypes::CUtlString*, 0x4c8);
-			PROPERTY(m_xWSPrevParent,GlobalTypes::CTransform, 0x4d0);
+			PROPERTY(m_xWSPrevParent,GlobalTypes::CTransformWS, 0x4d0);
 			PROPERTY(m_hPath,IDENTITY(GlobalTypes::CHandle<server::CPathWithDynamicNodes>), 0x4f0);
 			S2_PAD(0x58);
 		};

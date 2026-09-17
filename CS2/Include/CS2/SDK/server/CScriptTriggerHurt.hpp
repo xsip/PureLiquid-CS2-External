@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CTriggerHurt.hpp>
+#include "CTriggerHurt.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CScriptTriggerHurt : public CS2::server::CTriggerHurt {
 		public:
-			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x950);
+			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x970);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CScriptTriggerHurt) == 0x960, "CScriptTriggerHurt size should be 0x960");
+		//static_assert(sizeof(CS2::server::CScriptTriggerHurt) == 0x980, "CScriptTriggerHurt size should be 0x980");
 
 #endif
 	}

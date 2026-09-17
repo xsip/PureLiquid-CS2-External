@@ -8,9 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x48
+			// Class size: 0xD8
 			namespace CPulseCell_BaseYieldingInflow /*: public CS2::pulse_runtime_lib::CPulseCell_BaseFlow*/ {
-				// NO SCHEMA DATA FOUND!
+				constexpr std::ptrdiff_t m_BaseFlow_OnAfterCancel = 0x48; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_BaseFlow_WhileActive = 0x90; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
 			}
 		}
 	}

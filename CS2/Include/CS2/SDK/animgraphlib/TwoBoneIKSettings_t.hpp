@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/IkEndEffectorType.hpp>
-#include <SDK/modellib/CAnimAttachment.hpp>
-#include <SDK/animgraphlib/IkTargetType.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include "IkEndEffectorType.hpp"
+#include "../modellib/CAnimAttachment.hpp"
+#include "IkTargetType.hpp"
+#include "CAnimParamHandle.hpp"
 
 
 

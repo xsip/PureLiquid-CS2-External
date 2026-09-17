@@ -4,14 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem/SndSeqInstrumentType_t.hpp>
-#include <SDK/soundsystem/SndSeqPlayerType_t.hpp>
+#include "SndSeqInstrumentType_t.hpp"
 
 
 
@@ -23,11 +22,10 @@ namespace CS2 {
 		class CSndSeqInstBaseSchema  {
 		public:
 			PROPERTY(m_nType,IDENTITY(soundsystem::SndSeqInstrumentType_t), 0x8);
-			PROPERTY(m_nPlayerType,IDENTITY(soundsystem::SndSeqPlayerType_t), 0xc);
-			PROPERTY(m_bStopCurrentEvents,bool, 0x12);
-			PROPERTY(m_flBPM,float32, 0x14);
-			PROPERTY(m_flBPMFactor,float32, 0x18);
-			PROPERTY(m_flBPMInvFactor,float32, 0x1c);
+			PROPERTY(m_bStopCurrentEvents,bool, 0xe);
+			PROPERTY(m_flBPM,float32, 0x10);
+			PROPERTY(m_flBPMFactor,float32, 0x14);
+			PROPERTY(m_flBPMInvFactor,float32, 0x18);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS

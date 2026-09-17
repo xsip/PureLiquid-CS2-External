@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_vecEntityMaxs = 0x4b4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_hCurrentInstance = 0x4c0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hCurrentBlocker = 0x4c4; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vecBlockerOrigin = 0x4c8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecBlockerOrigin = 0x4c8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_angPostSpawnDirection = 0x4d4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_flPostSpawnDirectionVariance = 0x4e0; // float32 m_flPostSpawnDirectionVariance; |  0x4e0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flPostSpawnSpeed = 0x4e4; // float32 m_flPostSpawnSpeed; |  0x4e4 | Schema_Builtin | Size: 0x4

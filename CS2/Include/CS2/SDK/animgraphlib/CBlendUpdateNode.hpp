@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
-#include <SDK/animgraphlib/CAnimUpdateNodeRef.hpp>
-#include <SDK/animgraphlib/AnimValueSource.hpp>
-#include <SDK/animgraphlib/LinearRootMotionBlendMode_t.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animgraphlib/CAnimInputDamping.hpp>
-#include <SDK/animgraphlib/BlendKeyType.hpp>
+#include "CAnimUpdateNodeBase.hpp"
+#include "CAnimUpdateNodeRef.hpp"
+#include "AnimValueSource.hpp"
+#include "LinearRootMotionBlendMode_t.hpp"
+#include "CAnimParamHandle.hpp"
+#include "CAnimInputDamping.hpp"
+#include "BlendKeyType.hpp"
 
 
 

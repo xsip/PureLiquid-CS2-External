@@ -10,8 +10,8 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x20
 			namespace locksound_t /**/ {
-				constexpr std::ptrdiff_t sLockedSound = 0x8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t sUnlockedSound = 0x10; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t sLockedSound = 0x8; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t sUnlockedSound = 0x10; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t flwaitSound = 0x18; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}

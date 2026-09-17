@@ -8,12 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xF8
+			// Class size: 0x140
 			namespace CPulseCell_PlaySequence /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
-				constexpr std::ptrdiff_t m_SequenceName = 0x48; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_PulseAnimEvents = 0x50; // pulse_runtime_lib::PulseNodeDynamicOutflows_t  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnFinished = 0x68; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_OnCanceled = 0xb0; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_SequenceName = 0xd8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_PulseAnimEvents = 0xe0; // pulse_runtime_lib::PulseNodeDynamicOutflows_t  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnFinished = 0xf8; // pulse_runtime_lib::CPulse_ResumePoint  | Schema_DeclaredClass | Size: 0x48
 			}
 		}
 	}

@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xFC0
+			// Class size: 0xFC8
 			namespace C_FuncElectrifiedVolume /*: public CS2::client::C_FuncBrush*/ {
-				constexpr std::ptrdiff_t m_nAmbientEffect = 0xfa8; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_EffectName = 0xfb0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bState = 0xfb8; // bool m_bState; |  0xfb8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nAmbientEffect = 0xfb0; // client::ParticleIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_EffectName = 0xfb8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bState = 0xfc0; // bool m_bState; |  0xfc0 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

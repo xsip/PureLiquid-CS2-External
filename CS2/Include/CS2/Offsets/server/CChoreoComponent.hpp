@@ -12,9 +12,10 @@ namespace CS2 {
 			namespace CChoreoComponent /**/ {
 				constexpr std::ptrdiff_t __m_pChainEntity = 0x8; // entity2::CNetworkVarChainer  | Schema_DeclaredClass | Size: 0x28
 				constexpr std::ptrdiff_t m_hOwner = 0x30; // GlobalTypes::CHandle<server::CBaseModelEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nNextSceneEventId = 0x68; // client::SceneEventId_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_bUpdateLayerPriorities = 0x6c; // bool m_bUpdateLayerPriorities; |  0x6c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flAllowResponsesEndTime = 0x70; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nExernalChoreoGraphCount = 0x34; // int32_t m_nExernalChoreoGraphCount; |  0x34 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_sActiveExternalChoreoGraphSlotID = 0x38; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nNextSceneEventId = 0x70; // client::SceneEventId_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flAllowResponsesEndTime = 0x74; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

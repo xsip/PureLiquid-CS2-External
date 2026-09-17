@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/GameTime_t.hpp>
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -26,6 +26,8 @@ namespace CS2 {
 	namespace server {
 		class CAI_Expresser  {
 		public:
+			PROPERTY(m_conceptCooldowns,IDENTITY(GlobalTypes::CUtlDict<entity2::GameTime_t>), 0x10);
+			PROPERTY(m_ruleCooldowns,IDENTITY(GlobalTypes::CUtlDict<entity2::GameTime_t>), 0x38);
 			NESTED_PROPERTY(m_flStopTalkTime,IDENTITY(entity2::GameTime_t), 0x60);
 			NESTED_PROPERTY(m_flStopTalkTimeWithoutDelay,IDENTITY(entity2::GameTime_t), 0x64);
 			NESTED_PROPERTY(m_flQueuedSpeechTime,IDENTITY(entity2::GameTime_t), 0x68);

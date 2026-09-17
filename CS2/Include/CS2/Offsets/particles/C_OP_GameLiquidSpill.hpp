@@ -8,11 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x510
+			// Class size: 0x680
 			namespace C_OP_GameLiquidSpill /*: public CS2::particles::CParticleFunctionRenderer*/ {
 				constexpr std::ptrdiff_t m_flLiquidContentsField = 0x228; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_flExpirationTime = 0x398; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_nAmountAttribute = 0x508; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x508; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bCheckExposedToSky = 0x678; // bool m_bCheckExposedToSky; |  0x678 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nAmountAttribute = 0x67c; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

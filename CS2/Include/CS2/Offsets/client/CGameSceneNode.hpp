@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x140
+			// Class size: 0x130
 			namespace CGameSceneNode /**/ {
 				constexpr std::ptrdiff_t m_nodeToWorld = 0x10; // GlobalTypes::CTransformWS  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_pOwner = 0x30; // entity2::CEntityInstance**  | Schema_Ptr | Size: 0x8
@@ -35,7 +35,6 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_name = 0x10c; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_hierarchyAttachName = 0x120; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_flClientLocalScale = 0x124; // float32 m_flClientLocalScale; |  0x124 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vRenderOrigin = 0x128; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

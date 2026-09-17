@@ -4,23 +4,23 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particles/ModelReference_t.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/CPerParticleVecInput.hpp>
-#include <SDK/particleslib/CPerParticleFloatInput.hpp>
-#include <SDK/particles/MaterialVariable_t.hpp>
-#include <SDK/particleslib/CParticleModelInput.hpp>
-#include <SDK/particles/RenderModelSubModelFieldType_t.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
-#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "ModelReference_t.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "../particleslib/CPerParticleVecInput.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
+#include "MaterialVariable_t.hpp"
+#include "../particleslib/CParticleModelInput.hpp"
+#include "RenderModelSubModelFieldType_t.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "../particleslib/CParticleCollectionVecInput.hpp"
+#include "../particleslib/ParticleColorBlendType_t.hpp"
 
 
 
@@ -92,10 +92,12 @@ namespace CS2 {
 			NESTED_PROPERTY(m_nAlpha2Field,IDENTITY(particles::ParticleAttributeIndex_t), 0x25a0);
 			NESTED_PROPERTY(m_vecColorScale,IDENTITY(particleslib::CParticleCollectionVecInput), 0x25a8);
 			PROPERTY(m_nColorBlendType,IDENTITY(particleslib::ParticleColorBlendType_t), 0x2c60);
-			S2_PAD(0x2A80);
+			PROPERTY(m_strLightStyle,GlobalTypes::CUtlString*, 0x2c68);
+			NESTED_PROPERTY(m_flLightStyleTime,IDENTITY(particleslib::CPerParticleFloatInput), 0x2c70);
+			S2_PAD(0x2BF8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_RenderModels) == 0x2CA8, "C_OP_RenderModels size should be 0x2CA8");
+		//static_assert(sizeof(CS2::particles::C_OP_RenderModels) == 0x2E20, "C_OP_RenderModels size should be 0x2E20");
 
 #endif
 	}

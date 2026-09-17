@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -21,13 +21,13 @@ namespace CS2 {
 	namespace server {
 		class CTriggerGameEvent : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_strStartTouchEventName,GlobalTypes::CUtlString*, 0x8c8);
-			PROPERTY(m_strEndTouchEventName,GlobalTypes::CUtlString*, 0x8d0);
-			PROPERTY(m_strTriggerID,GlobalTypes::CUtlString*, 0x8d8);
+			PROPERTY(m_strStartTouchEventName,GlobalTypes::CUtlString*, 0x8e8);
+			PROPERTY(m_strEndTouchEventName,GlobalTypes::CUtlString*, 0x8f0);
+			PROPERTY(m_strTriggerID,GlobalTypes::CUtlString*, 0x8f8);
 			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerGameEvent) == 0x8E0, "CTriggerGameEvent size should be 0x8E0");
+		//static_assert(sizeof(CS2::server::CTriggerGameEvent) == 0x900, "CTriggerGameEvent size should be 0x900");
 
 #endif
 	}

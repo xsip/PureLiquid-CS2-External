@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBasePlayerPawn.hpp>
-#include <SDK/server/CTouchExpansionComponent.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/CSPlayerState.hpp>
+#include "CBasePlayerPawn.hpp"
+#include "CTouchExpansionComponent.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/CSPlayerState.hpp"
 
 
 
@@ -30,25 +30,25 @@ namespace CS2 {
 	namespace server {
 		class CCSPlayerPawnBase : public CS2::server::CBasePlayerPawn {
 		public:
-			NESTED_PROPERTY(m_CTouchExpansionComponent,IDENTITY(server::CTouchExpansionComponent), 0xbc0);
-			PROPERTY(m_pPingServices,IDENTITY(server::CCSPlayer_PingServices*), 0xc10);
-			NESTED_PROPERTY(m_blindUntilTime,IDENTITY(entity2::GameTime_t), 0xc18);
-			NESTED_PROPERTY(m_blindStartTime,IDENTITY(entity2::GameTime_t), 0xc1c);
-			PROPERTY(m_iPlayerState,IDENTITY(client::CSPlayerState), 0xc20);
-			PROPERTY(m_bRespawning,bool, 0xcd0);
-			PROPERTY(m_bHasMovedSinceSpawn,bool, 0xcd1);
-			PROPERTY(m_iNumSpawns,int32_t, 0xcd4);
-			PROPERTY(m_flIdleTimeSinceLastAction,float32, 0xcdc);
-			PROPERTY(m_fNextRadarUpdateTime,float32, 0xce0);
-			PROPERTY(m_flFlashDuration,float32, 0xce4);
-			PROPERTY(m_flFlashMaxAlpha,float32, 0xce8);
-			PROPERTY(m_flProgressBarStartTime,float32, 0xcec);
-			PROPERTY(m_iProgressBarDuration,int32_t, 0xcf0);
-			PROPERTY(m_hOriginalController,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerController>), 0xcf4);
+			NESTED_PROPERTY(m_CTouchExpansionComponent,IDENTITY(server::CTouchExpansionComponent), 0xbf0);
+			PROPERTY(m_pPingServices,IDENTITY(server::CCSPlayer_PingServices*), 0xc40);
+			NESTED_PROPERTY(m_blindUntilTime,IDENTITY(entity2::GameTime_t), 0xc48);
+			NESTED_PROPERTY(m_blindStartTime,IDENTITY(entity2::GameTime_t), 0xc4c);
+			PROPERTY(m_iPlayerState,IDENTITY(client::CSPlayerState), 0xc50);
+			PROPERTY(m_bRespawning,bool, 0xd00);
+			PROPERTY(m_bHasMovedSinceSpawn,bool, 0xd01);
+			PROPERTY(m_iNumSpawns,int32_t, 0xd04);
+			PROPERTY(m_flIdleTimeSinceLastAction,float32, 0xd0c);
+			PROPERTY(m_fNextRadarUpdateTime,float32, 0xd10);
+			PROPERTY(m_flFlashDuration,float32, 0xd14);
+			PROPERTY(m_flFlashMaxAlpha,float32, 0xd18);
+			PROPERTY(m_flProgressBarStartTime,float32, 0xd1c);
+			PROPERTY(m_iProgressBarDuration,int32_t, 0xd20);
+			PROPERTY(m_hOriginalController,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerController>), 0xd24);
 			S2_PAD(0x150);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSPlayerPawnBase) == 0xD00, "CCSPlayerPawnBase size should be 0xD00");
+		//static_assert(sizeof(CS2::server::CCSPlayerPawnBase) == 0xD30, "CCSPlayerPawnBase size should be 0xD30");
 
 #endif
 	}

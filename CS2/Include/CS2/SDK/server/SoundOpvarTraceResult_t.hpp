@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,7 +20,7 @@ namespace CS2 {
 	namespace server {
 		class SoundOpvarTraceResult_t  {
 		public:
-			PROPERTY(vPos,GlobalTypes::Vector, 0x0);
+			PROPERTY(vPos,GlobalTypes::VectorWS, 0x0);
 			PROPERTY(bDidHit,bool, 0xc);
 			PROPERTY(flDistSqrToCenter,float32, 0x10);
 			S2_PAD(0x14);

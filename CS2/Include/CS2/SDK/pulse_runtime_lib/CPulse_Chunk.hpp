@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/PGDInstruction_t.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_RegisterInfo.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_InstructionDebug.hpp>
+#include "PGDInstruction_t.hpp"
+#include "CPulse_RegisterInfo.hpp"
+#include "CPulse_InstructionDebug.hpp"
 
 
 

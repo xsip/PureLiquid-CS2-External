@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0xB8
+			// Class size: 0x80
 			namespace CVoiceContainerAsyncGenerator /*: public CS2::soundsystem_voicecontainers::CVoiceContainerGenerator*/ {
 				// NO SCHEMA DATA FOUND!
 			}

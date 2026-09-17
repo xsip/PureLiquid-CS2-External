@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/resourcesystem/InfoForResourceTypeCModel.hpp>
-#include <SDK/compositematerialslib/CompositeMaterialAssemblyProcedure_t.hpp>
-#include <SDK/compositematerialslib/CompositeMaterial_t.hpp>
+#include "../resourcesystem/InfoForResourceTypeCModel.hpp"
+#include "CompositeMaterialAssemblyProcedure_t.hpp"
+#include "CompositeMaterial_t.hpp"
 
 
 

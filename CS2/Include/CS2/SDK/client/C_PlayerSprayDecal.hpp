@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_ModelPointEntity.hpp>
-#include <SDK/client/CPlayerSprayDecalRenderHelper.hpp>
+#include "C_ModelPointEntity.hpp"
+#include "CPlayerSprayDecalRenderHelper.hpp"
 
 
 
@@ -22,26 +22,26 @@ namespace CS2 {
 	namespace client {
 		class C_PlayerSprayDecal : public CS2::client::C_ModelPointEntity {
 		public:
-			PROPERTY(m_nUniqueID,int32_t, 0xfa8);
-			PROPERTY(m_unAccountID,uint32_t, 0xfac);
-			PROPERTY(m_unTraceID,uint32_t, 0xfb0);
-			PROPERTY(m_rtGcTime,uint32_t, 0xfb4);
-			PROPERTY(m_vecEndPos,GlobalTypes::Vector, 0xfb8);
-			PROPERTY(m_vecStart,GlobalTypes::Vector, 0xfc4);
-			PROPERTY(m_vecLeft,GlobalTypes::Vector, 0xfd0);
-			PROPERTY(m_vecNormal,GlobalTypes::Vector, 0xfdc);
-			PROPERTY(m_nPlayer,int32_t, 0xfe8);
-			PROPERTY(m_nEntity,int32_t, 0xfec);
-			PROPERTY(m_nHitbox,int32_t, 0xff0);
-			PROPERTY(m_flCreationTime,float32, 0xff4);
-			PROPERTY(m_nTintID,int32_t, 0xff8);
-			PROPERTY(m_nVersion,uint8_t, 0xffc);
-			PROPERTY_ARRAY(m_ubSignature,uint8_t, 128 , 0xffd);
-			NESTED_PROPERTY(m_SprayRenderHelper,IDENTITY(client::CPlayerSprayDecalRenderHelper), 0x1088);
+			PROPERTY(m_nUniqueID,int32_t, 0xfb0);
+			PROPERTY(m_unAccountID,uint32_t, 0xfb4);
+			PROPERTY(m_unTraceID,uint32_t, 0xfb8);
+			PROPERTY(m_rtGcTime,uint32_t, 0xfbc);
+			PROPERTY(m_vecEndPos,GlobalTypes::VectorWS, 0xfc0);
+			PROPERTY(m_vecStart,GlobalTypes::VectorWS, 0xfcc);
+			PROPERTY(m_vecLeft,GlobalTypes::Vector, 0xfd8);
+			PROPERTY(m_vecNormal,GlobalTypes::Vector, 0xfe4);
+			PROPERTY(m_nPlayer,int32_t, 0xff0);
+			PROPERTY(m_nEntity,int32_t, 0xff4);
+			PROPERTY(m_nHitbox,int32_t, 0xff8);
+			PROPERTY(m_flCreationTime,float32, 0xffc);
+			PROPERTY(m_nTintID,int32_t, 0x1000);
+			PROPERTY(m_nVersion,uint8_t, 0x1004);
+			PROPERTY_ARRAY(m_ubSignature,uint8_t, 128 , 0x1005);
+			NESTED_PROPERTY(m_SprayRenderHelper,IDENTITY(client::CPlayerSprayDecalRenderHelper), 0x1090);
 			S2_PAD(0x110);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PlayerSprayDecal) == 0x10B8, "C_PlayerSprayDecal size should be 0x10B8");
+		//static_assert(sizeof(CS2::client::C_PlayerSprayDecal) == 0x10C0, "C_PlayerSprayDecal size should be 0x10C0");
 
 #endif
 	}

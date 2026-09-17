@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/PetGroundType_t.hpp>
-#include <SDK/particles/ParticlePreviewBodyGroup_t.hpp>
+#include "PetGroundType_t.hpp"
+#include "ParticlePreviewBodyGroup_t.hpp"
 
 
 
@@ -39,10 +39,11 @@ namespace CS2 {
 			PROPERTY(m_bAnimationNonLooping,bool, 0x54);
 			PROPERTY(m_bSequenceNameIsAnimClipPath,bool, 0x55);
 			PROPERTY(m_vecPreviewGravity,GlobalTypes::Vector, 0x58);
-			S2_PAD(0x68);
+			PROPERTY(m_vecPreviewWind,GlobalTypes::Vector, 0x64);
+			S2_PAD(0x70);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::ParticlePreviewState_t) == 0x68, "ParticlePreviewState_t size should be 0x68");
+		//static_assert(sizeof(CS2::particles::ParticlePreviewState_t) == 0x70, "ParticlePreviewState_t size should be 0x70");
 
 #endif
 	}

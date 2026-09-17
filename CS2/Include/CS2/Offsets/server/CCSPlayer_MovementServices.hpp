@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xFF0
+			// Class size: 0xFE0
 			namespace CCSPlayer_MovementServices /*: public CS2::server::CPlayer_MovementServices_Humanoid*/ {
 				constexpr std::ptrdiff_t m_AnimationState = 0x310; // client::CCSPlayerAnimationState  | Schema_DeclaredClass | Size: 0xe0
 				constexpr std::ptrdiff_t m_bUsingGroundTopologyOffset = 0x3f0; // bool m_bUsingGroundTopologyOffset; |  0x3f0 | Schema_Builtin | Size: 0x1
@@ -41,27 +41,25 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bMadeFootstepNoise = 0x684; // bool m_bMadeFootstepNoise; |  0x684 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_iFootsteps = 0x688; // int32_t m_iFootsteps; |  0x688 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_fStashGrenadeParameterWhen = 0x68c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nButtonDownMaskPrev = 0x690; // uint64_t m_nButtonDownMaskPrev; |  0x690 | Schema_Builtin | Size: 0x8
-				constexpr std::ptrdiff_t m_bUseFrictionStashedSpeed = 0x698; // bool m_bUseFrictionStashedSpeed; |  0x698 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flUseFrictionStashedSpeedUntilFrac = 0x69c; // float32 m_flUseFrictionStashedSpeedUntilFrac; |  0x69c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFrictionStashedSpeed = 0x6a0; // float32 m_flFrictionStashedSpeed; |  0x6a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStamina = 0x6a4; // float32 m_flStamina; |  0x6a4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flHeightAtJumpStart = 0x6a8; // float32 m_flHeightAtJumpStart; |  0x6a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxJumpHeightThisJump = 0x6ac; // float32 m_flMaxJumpHeightThisJump; |  0x6ac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxJumpHeightLastJump = 0x6b0; // float32 m_flMaxJumpHeightLastJump; |  0x6b0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStaminaAtJumpStart = 0x6b4; // float32 m_flStaminaAtJumpStart; |  0x6b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flVelMulAtJumpStart = 0x6b8; // float32 m_flVelMulAtJumpStart; |  0x6b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x6bc; // float32 m_flAccumulatedJumpError; |  0x6bc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_LegacyJump = 0x6c0; // server::CCSPlayerLegacyJump  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_ModernJump = 0x6d8; // server::CCSPlayerModernJump  | Schema_DeclaredClass | Size: 0x38
-				constexpr std::ptrdiff_t m_nLastJumpTick = 0x710; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastJumpFrac = 0x714; // float32 m_flLastJumpFrac; |  0x714 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastJumpVelocityZ = 0x718; // float32 m_flLastJumpVelocityZ; |  0x718 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bJumpApexPending = 0x71c; // bool m_bJumpApexPending; |  0x71c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x720; // float32 m_flTicksSinceLastSurfingDetected; |  0x720 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bWasSurfing = 0x724; // bool m_bWasSurfing; |  0x724 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecWalkWishVel = 0x7b4; // GlobalTypes::Vector2D  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bHasEverProcessedCommand = 0xfe0; // bool m_bHasEverProcessedCommand; |  0xfe0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseFrictionStashedSpeed = 0x690; // bool m_bUseFrictionStashedSpeed; |  0x690 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flUseFrictionStashedSpeedUntilFrac = 0x694; // float32 m_flUseFrictionStashedSpeedUntilFrac; |  0x694 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFrictionStashedSpeed = 0x698; // float32 m_flFrictionStashedSpeed; |  0x698 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStamina = 0x69c; // float32 m_flStamina; |  0x69c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flHeightAtJumpStart = 0x6a0; // float32 m_flHeightAtJumpStart; |  0x6a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxJumpHeightThisJump = 0x6a4; // float32 m_flMaxJumpHeightThisJump; |  0x6a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxJumpHeightLastJump = 0x6a8; // float32 m_flMaxJumpHeightLastJump; |  0x6a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStaminaAtJumpStart = 0x6ac; // float32 m_flStaminaAtJumpStart; |  0x6ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flVelMulAtJumpStart = 0x6b0; // float32 m_flVelMulAtJumpStart; |  0x6b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x6b4; // float32 m_flAccumulatedJumpError; |  0x6b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_LegacyJump = 0x6b8; // server::CCSPlayerLegacyJump  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_ModernJump = 0x6d0; // server::CCSPlayerModernJump  | Schema_DeclaredClass | Size: 0x38
+				constexpr std::ptrdiff_t m_nLastJumpTick = 0x708; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastJumpFrac = 0x70c; // float32 m_flLastJumpFrac; |  0x70c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastJumpVelocityZ = 0x710; // float32 m_flLastJumpVelocityZ; |  0x710 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bJumpApexPending = 0x714; // bool m_bJumpApexPending; |  0x714 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x718; // float32 m_flTicksSinceLastSurfingDetected; |  0x718 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecWalkWishVel = 0x7a8; // GlobalTypes::Vector2D  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bHasEverProcessedCommand = 0xfd0; // bool m_bHasEverProcessedCommand; |  0xfd0 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionPreEmission.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particles/ParticleLightnintBranchBehavior_t.hpp>
+#include "CParticleFunctionPreEmission.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "ParticleLightnintBranchBehavior_t.hpp"
 
 
 
@@ -33,15 +33,20 @@ namespace CS2 {
 			NESTED_PROPERTY(m_flUVScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x7b0);
 			NESTED_PROPERTY(m_flUVOffset,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x920);
 			NESTED_PROPERTY(m_flSplitRate,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xa90);
-			NESTED_PROPERTY(m_flBranchTwist,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xc00);
-			PROPERTY(m_nBranchBehavior,IDENTITY(particles::ParticleLightnintBranchBehavior_t), 0xd70);
-			NESTED_PROPERTY(m_flRadiusStart,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd78);
-			NESTED_PROPERTY(m_flRadiusEnd,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xee8);
-			NESTED_PROPERTY(m_flDedicatedPool,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1058);
-			S2_PAD(0xFE8);
+			NESTED_PROPERTY(m_flRecursionSplitScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xc00);
+			PROPERTY(m_bScaleBranchDistance,bool, 0xd70);
+			NESTED_PROPERTY(m_flBranchDistanceScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xd78);
+			PROPERTY(m_bScaleBranchOffset,bool, 0xee8);
+			NESTED_PROPERTY(m_flBranchOffsetScale,IDENTITY(particleslib::CParticleCollectionFloatInput), 0xef0);
+			NESTED_PROPERTY(m_flBranchTwist,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1060);
+			PROPERTY(m_nBranchBehavior,IDENTITY(particles::ParticleLightnintBranchBehavior_t), 0x11d0);
+			NESTED_PROPERTY(m_flRadiusStart,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x11d8);
+			NESTED_PROPERTY(m_flRadiusEnd,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x1348);
+			NESTED_PROPERTY(m_flDedicatedPool,IDENTITY(particleslib::CParticleCollectionFloatInput), 0x14b8);
+			S2_PAD(0x1448);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_LightningSnapshotGenerator) == 0x11C8, "C_OP_LightningSnapshotGenerator size should be 0x11C8");
+		//static_assert(sizeof(CS2::particles::C_OP_LightningSnapshotGenerator) == 0x1628, "C_OP_LightningSnapshotGenerator size should be 0x1628");
 
 #endif
 	}

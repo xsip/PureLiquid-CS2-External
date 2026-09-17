@@ -8,14 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace worldrenderer {
-			// Class size: 0x3C
+			// Class size: 0x48
 			namespace RTProxyInstanceInfo_t /**/ {
 				constexpr std::ptrdiff_t m_nFlags = 0x0; // worldrenderer::RTProxyInstanceFlags_t  | Schema_DeclaredEnum | Size: 0x1
 				constexpr std::ptrdiff_t m_albedoFormat = 0x1; // modellib::VertexAlbedoFormat_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_nBLASCount = 0x2; // uint16_t m_nBLASCount; |  0x2 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_nBLASIndex = 0x4; // uint32_t m_nBLASIndex; |  0x4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nVertexAlbedoByteOffset = 0x8; // uint32_t m_nVertexAlbedoByteOffset; |  0x8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_mWorldFromLocal = 0xc; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
+				constexpr std::ptrdiff_t m_emissiveFormat = 0x2; // modellib::VertexAlbedoFormat_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_nBLASCount = 0x4; // uint16_t m_nBLASCount; |  0x4 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_nBLASIndex = 0x8; // uint32_t m_nBLASIndex; |  0x8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVertexAlbedoByteOffset = 0xc; // uint32_t m_nVertexAlbedoByteOffset; |  0xc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVertexEmissiveByteOffset = 0x10; // uint32_t m_nVertexEmissiveByteOffset; |  0x10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fEmissiveFactor = 0x14; // float32 m_fEmissiveFactor; |  0x14 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_mWorldFromLocal = 0x18; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
 			}
 		}
 	}

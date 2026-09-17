@@ -4,16 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CInfoChoreoLocatorShapeType_t.hpp>
+#include "CInfoChoreoLocatorShapeType_t.hpp"
 
 
 
+namespace CS2 {
+	namespace server {
+		class CBaseEntity;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -21,16 +26,18 @@ namespace CS2 {
 	namespace server {
 		class CInfoChoreoAnchorPosition  {
 		public:
-			PROPERTY(m_vOrigin,GlobalTypes::Vector, 0x0);
-			PROPERTY(m_qAngles,GlobalTypes::QAngle, 0xc);
-			PROPERTY(m_vExtentsMin,GlobalTypes::Vector, 0x18);
-			PROPERTY(m_vExtentsMax,GlobalTypes::Vector, 0x24);
-			PROPERTY(m_flRadius,float32, 0x30);
-			PROPERTY(m_nShapeType,IDENTITY(server::CInfoChoreoLocatorShapeType_t), 0x34);
-			S2_PAD(0x38);
+			PROPERTY(m_vOriginLS,GlobalTypes::Vector, 0x0);
+			PROPERTY(m_qAnglesLS,GlobalTypes::Quaternion, 0x10);
+			PROPERTY(m_vExtentsMin,GlobalTypes::Vector, 0x20);
+			PROPERTY(m_vExtentsMax,GlobalTypes::Vector, 0x2c);
+			PROPERTY(m_flRadius,float32, 0x38);
+			PROPERTY(m_bOnlyWarpPosition,bool, 0x3c);
+			PROPERTY(m_hParent,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x40);
+			PROPERTY(m_nShapeType,IDENTITY(server::CInfoChoreoLocatorShapeType_t), 0x44);
+			S2_PAD(0x50);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CInfoChoreoAnchorPosition) == 0x38, "CInfoChoreoAnchorPosition size should be 0x38");
+		//static_assert(sizeof(CS2::server::CInfoChoreoAnchorPosition) == 0x50, "CInfoChoreoAnchorPosition size should be 0x50");
 
 #endif
 	}

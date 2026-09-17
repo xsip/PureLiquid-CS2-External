@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CGameSceneNodeHandle.hpp>
-#include <SDK/client/CNetworkOriginCellCoordQuantizedVector.hpp>
+#include "CGameSceneNodeHandle.hpp"
+#include "../client/CNetworkOriginCellCoordQuantizedVector.hpp"
 
 
 
@@ -49,11 +49,10 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CUtlStringToken*, 0xf0);
 			PROPERTY(m_hierarchyAttachName,GlobalTypes::CUtlStringToken*, 0x104);
 			PROPERTY(m_flClientLocalScale,float32, 0x108);
-			PROPERTY(m_vRenderOrigin,GlobalTypes::Vector, 0x10c);
-			S2_PAD(0x120);
+			S2_PAD(0x110);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CGameSceneNode) == 0x120, "CGameSceneNode size should be 0x120");
+		//static_assert(sizeof(CS2::server::CGameSceneNode) == 0x110, "CGameSceneNode size should be 0x110");
 
 #endif
 	}

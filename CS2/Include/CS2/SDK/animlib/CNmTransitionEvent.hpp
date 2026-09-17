@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmEvent.hpp>
-#include <SDK/animlib/NmTransitionRule_t.hpp>
+#include "CNmEvent.hpp"
+#include "NmTransitionRule_t.hpp"
 
 
 

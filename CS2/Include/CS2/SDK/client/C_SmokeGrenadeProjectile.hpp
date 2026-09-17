@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseCSGrenadeProjectile.hpp>
+#include "C_BaseCSGrenadeProjectile.hpp"
 
 
 
@@ -21,20 +21,20 @@ namespace CS2 {
 	namespace client {
 		class C_SmokeGrenadeProjectile : public CS2::client::C_BaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nSmokeEffectTickBegin,int32_t, 0x1250);
-			PROPERTY(m_bDidSmokeEffect,bool, 0x1254);
-			PROPERTY(m_nRandomSeed,int32_t, 0x1258);
-			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0x125c);
-			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::Vector, 0x1268);
-			// PROPERTY(m_VoxelFrameData,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< uint8 >), 0x1278);
-			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0x1290);
-			PROPERTY(m_nVoxelUpdate,int32_t, 0x1294);
-			PROPERTY(m_bSmokeVolumeDataReceived,bool, 0x1298);
-			PROPERTY(m_bSmokeEffectSpawned,bool, 0x1299);
+			PROPERTY(m_nSmokeEffectTickBegin,int32_t, 0x1278);
+			PROPERTY(m_bDidSmokeEffect,bool, 0x127c);
+			PROPERTY(m_nRandomSeed,int32_t, 0x1280);
+			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0x1284);
+			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::VectorWS, 0x1290);
+			// PROPERTY(m_VoxelFrameData,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< uint8 >), 0x12a0);
+			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0x12b8);
+			PROPERTY(m_nVoxelUpdate,int32_t, 0x12bc);
+			PROPERTY(m_bSmokeVolumeDataReceived,bool, 0x12c0);
+			PROPERTY(m_bSmokeEffectSpawned,bool, 0x12c1);
 			S2_PAD(0x1B8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_SmokeGrenadeProjectile) == 0x13F0, "C_SmokeGrenadeProjectile size should be 0x13F0");
+		//static_assert(sizeof(CS2::client::C_SmokeGrenadeProjectile) == 0x1418, "C_SmokeGrenadeProjectile size should be 0x1418");
 
 #endif
 	}

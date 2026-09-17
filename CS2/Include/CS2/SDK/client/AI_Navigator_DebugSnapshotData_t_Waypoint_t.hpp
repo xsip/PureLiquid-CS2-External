@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -23,10 +23,11 @@ namespace CS2 {
 			PROPERTY(position,GlobalTypes::VectorWS, 0x0);
 			PROPERTY(nav_type,uint32_t, 0xc);
 			PROPERTY(flags,uint32_t, 0x10);
-			S2_PAD(0x14);
+			PROPERTY(is_pathcorner,bool, 0x14);
+			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::AI_Navigator_DebugSnapshotData_t_Waypoint_t) == 0x14, "AI_Navigator_DebugSnapshotData_t::Waypoint_t size should be 0x14");
+		//static_assert(sizeof(CS2::client::AI_Navigator_DebugSnapshotData_t_Waypoint_t) == 0x18, "AI_Navigator_DebugSnapshotData_t::Waypoint_t size should be 0x18");
 
 #endif
 	}

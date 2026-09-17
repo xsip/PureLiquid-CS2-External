@@ -16,7 +16,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_dpv = 0x4b4; // server::dynpitchvol_t  | Schema_DeclaredClass | Size: 0x64
 				constexpr std::ptrdiff_t m_fActive = 0x518; // bool m_fActive; |  0x518 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_fLooping = 0x519; // bool m_fLooping; |  0x519 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_iszSound = 0x520; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszSound = 0x520; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_sSourceEntName = 0x528; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hSoundSource = 0x530; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_nSoundSourceEntIndex = 0x534; // GlobalTypes::CEntityIndex  | Schema_Atomic | Size: 0x4

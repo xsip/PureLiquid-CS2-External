@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/mathlib_extended/AABB_t.hpp>
-#include <SDK/physicslib/RnVertex_t.hpp>
-#include <SDK/physicslib/RnHalfEdge_t.hpp>
-#include <SDK/physicslib/RnFace_t.hpp>
-#include <SDK/physicslib/RnPlane_t.hpp>
+#include "../mathlib_extended/AABB_t.hpp"
+#include "RnPlane_t.hpp"
+#include "RnVertex_t.hpp"
+#include "RnHalfEdge_t.hpp"
+#include "RnFace_t.hpp"
 
 
 
@@ -37,13 +37,13 @@ namespace CS2 {
 			PROPERTY(m_MassProperties,GlobalTypes::matrix3x4_t, 0x34);
 			PROPERTY(m_flVolume,float32, 0x64);
 			PROPERTY(m_flSurfaceArea,float32, 0x68);
-			NESTED_PROPERTY(m_Vertices,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnVertex_t>), 0x70);
-			NESTED_PROPERTY(m_VertexPositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x88);
-			NESTED_PROPERTY(m_Edges,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnHalfEdge_t>), 0xa0);
-			NESTED_PROPERTY(m_Faces,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnFace_t>), 0xb8);
-			NESTED_PROPERTY(m_FacePlanes,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnPlane_t>), 0xd0);
-			PROPERTY(m_nFlags,uint32_t, 0xe8);
-			PROPERTY(m_pRegionSVM,IDENTITY(physicslib::CRegionSVM*), 0xf0);
+			NESTED_PROPERTY(m_VertexPositions,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::Vector>), 0x70);
+			NESTED_PROPERTY(m_FacePlanes,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnPlane_t>), 0x88);
+			PROPERTY(m_nFlags,uint32_t, 0xa0);
+			PROPERTY(m_pRegionSVM,IDENTITY(physicslib::CRegionSVM*), 0xa8);
+			NESTED_PROPERTY(m_Vertices,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnVertex_t>), 0xb0);
+			NESTED_PROPERTY(m_Edges,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnHalfEdge_t>), 0xc8);
+			NESTED_PROPERTY(m_Faces,IDENTITY(GlobalTypes::CUtlVector<physicslib::RnFace_t>), 0xe0);
 			S2_PAD(0xF8);
 		};
 #ifdef USE_STATIC_ASSERTS

@@ -8,14 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x550
+			// Class size: 0x6C0
 			namespace C_OP_AttractToControlPoint /*: public CS2::particles::CParticleFunctionForce*/ {
 				constexpr std::ptrdiff_t m_vecComponentScale = 0x1e8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_fForceAmount = 0x1f8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_fFalloffPower = 0x368; // float32 m_fFalloffPower; |  0x368 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_TransformInput = 0x370; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
-				constexpr std::ptrdiff_t m_fForceAmountMin = 0x3d8; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bApplyMinForce = 0x548; // bool m_bApplyMinForce; |  0x548 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fMinimumDistance = 0x368; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_fFalloffPower = 0x4d8; // float32 m_fFalloffPower; |  0x4d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_TransformInput = 0x4e0; // particleslib::CParticleTransformInput  | Schema_DeclaredClass | Size: 0x68
+				constexpr std::ptrdiff_t m_fForceAmountMin = 0x548; // particleslib::CPerParticleFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bApplyMinForce = 0x6b8; // bool m_bApplyMinForce; |  0x6b8 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

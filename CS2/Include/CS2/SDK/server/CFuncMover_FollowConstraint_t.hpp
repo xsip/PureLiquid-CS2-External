@@ -6,6 +6,7 @@
 namespace CS2 {
 	namespace server {
 		enum CFuncMover_FollowConstraint_t : std::uint32_t {
+			CFuncMover_FollowConstraint_t_FOLLOW_CONSTRAINT_COUPLER = 0x3,
 			CFuncMover_FollowConstraint_t_FOLLOW_CONSTRAINT_DISTANCE = 0x0,
 			CFuncMover_FollowConstraint_t_FOLLOW_CONSTRAINT_RATIO = 0x2,
 			CFuncMover_FollowConstraint_t_FOLLOW_CONSTRAINT_SPRING = 0x1

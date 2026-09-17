@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseCSGrenadeProjectile.hpp>
-#include <SDK/server/IntervalTimer.hpp>
+#include "CBaseCSGrenadeProjectile.hpp"
+#include "IntervalTimer.hpp"
 
 
 
@@ -22,13 +22,13 @@ namespace CS2 {
 	namespace server {
 		class CMolotovProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_bIsIncGrenade,bool, 0xa30);
-			PROPERTY(m_bDetonated,bool, 0xa48);
-			NESTED_PROPERTY(m_stillTimer,IDENTITY(server::IntervalTimer), 0xa50);
+			PROPERTY(m_bIsIncGrenade,bool, 0xa60);
+			PROPERTY(m_bDetonated,bool, 0xa78);
+			NESTED_PROPERTY(m_stillTimer,IDENTITY(server::IntervalTimer), 0xa80);
 			S2_PAD(0x100);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CMolotovProjectile) == 0xB30, "CMolotovProjectile size should be 0xB30");
+		//static_assert(sizeof(CS2::server::CMolotovProjectile) == 0xB60, "CMolotovProjectile size should be 0xB60");
 
 #endif
 	}

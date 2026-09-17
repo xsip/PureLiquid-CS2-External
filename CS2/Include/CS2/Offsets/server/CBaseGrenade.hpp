@@ -8,22 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x9C0
+			// Class size: 0x9F0
 			namespace CBaseGrenade /*: public CS2::server::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_OnPlayerPickup = 0x948; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnExplode = 0x960; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_bHasWarnedAI = 0x978; // bool m_bHasWarnedAI; |  0x978 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsSmokeGrenade = 0x979; // bool m_bIsSmokeGrenade; |  0x979 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsLive = 0x97a; // bool m_bIsLive; |  0x97a | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_DmgRadius = 0x97c; // float32 m_DmgRadius; |  0x97c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDetonateTime = 0x980; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flWarnAITime = 0x984; // float32 m_flWarnAITime; |  0x984 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDamage = 0x988; // float32 m_flDamage; |  0x988 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iszBounceSound = 0x990; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_ExplosionSound = 0x998; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hThrower = 0x9a0; // GlobalTypes::CHandle<server::CCSPlayerPawn>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextAttack = 0x9b8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_hOriginalThrower = 0x9bc; // GlobalTypes::CHandle<server::CCSPlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bDamageDetonating = 0x968; // bool m_bDamageDetonating; |  0x968 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_OnPlayerPickup = 0x970; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnExplode = 0x988; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_bHasWarnedAI = 0x9a0; // bool m_bHasWarnedAI; |  0x9a0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsSmokeGrenade = 0x9a1; // bool m_bIsSmokeGrenade; |  0x9a1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsLive = 0x9a2; // bool m_bIsLive; |  0x9a2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_DmgRadius = 0x9a4; // float32 m_DmgRadius; |  0x9a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDetonateTime = 0x9a8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flWarnAITime = 0x9ac; // float32 m_flWarnAITime; |  0x9ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDamage = 0x9b0; // float32 m_flDamage; |  0x9b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszBounceSound = 0x9b8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_ExplosionSound = 0x9c0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hThrower = 0x9c8; // GlobalTypes::CHandle<server::CCSPlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextAttack = 0x9e0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_hOriginalThrower = 0x9e4; // GlobalTypes::CHandle<server::CCSPlayerPawn>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

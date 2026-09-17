@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_WaitForCursorsWithTagBase.hpp>
-#include <SDK/pulse_runtime_lib/PulseCursorCancelPriority_t.hpp>
+#include "CPulseCell_WaitForCursorsWithTagBase.hpp"
+#include "PulseCursorCancelPriority_t.hpp"
 
 
 
@@ -22,12 +22,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_WaitForCursorsWithTag : public CS2::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTagBase {
 		public:
-			PROPERTY(m_bTagSelfWhenComplete,bool, 0x98);
-			PROPERTY(m_nDesiredKillPriority,IDENTITY(pulse_runtime_lib::PulseCursorCancelPriority_t), 0x9c);
+			PROPERTY(m_bTagSelfWhenComplete,bool, 0x128);
+			PROPERTY(m_nDesiredKillPriority,IDENTITY(pulse_runtime_lib::PulseCursorCancelPriority_t), 0x12c);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTag) == 0xA0, "CPulseCell_WaitForCursorsWithTag size should be 0xA0");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTag) == 0x130, "CPulseCell_WaitForCursorsWithTag size should be 0x130");
 
 #endif
 	}

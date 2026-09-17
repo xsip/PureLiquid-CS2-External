@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/MoveType_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/ParticleIndex_t.hpp>
+#include "../client/MoveType_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/ParticleIndex_t.hpp"
 
 
 
@@ -31,7 +31,7 @@ namespace CS2 {
 			PROPERTY(m_hEnt,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x0);
 			PROPERTY(m_MoveType,IDENTITY(client::MoveType_t), 0x4);
 			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x8);
-			PROPERTY(m_vecStartOrigin,GlobalTypes::Vector, 0xc);
+			PROPERTY(m_vecStartOrigin,GlobalTypes::VectorWS, 0xc);
 			PROPERTY(m_qStartRot,GlobalTypes::Quaternion, 0x20);
 			NESTED_PROPERTY(m_nFXIndex,IDENTITY(client::ParticleIndex_t), 0x30);
 			S2_PAD(0x50);

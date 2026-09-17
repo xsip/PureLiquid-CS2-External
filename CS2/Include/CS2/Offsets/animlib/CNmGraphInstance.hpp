@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x3E0
+			// Class size: 0x3D0
 			namespace CNmGraphInstance /**/ {
 				// NO SCHEMA DATA FOUND!
 			}

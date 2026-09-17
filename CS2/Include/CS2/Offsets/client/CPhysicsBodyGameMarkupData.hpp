@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x28
 			namespace CPhysicsBodyGameMarkupData /**/ {
-				constexpr std::ptrdiff_t m_PhysicsBodyMarkupByBoneName = 0x0; // GlobalTypes::CUtlOrderedMap  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_PhysicsBodyMarkupByBoneName = 0x0; // GlobalTypes::CUtlDict<client::CPhysicsBodyGameMarkup>  | Schema_Atomic | Size: 0x28
 			}
 		}
 	}

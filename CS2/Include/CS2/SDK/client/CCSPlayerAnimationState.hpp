@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CCSPlayerAnimationState_MoveType_t.hpp>
-#include <SDK/client/CCSPlayerAnimationState_GroundMoveState_t.hpp>
-#include <SDK/client/CCSPlayerAnimationState_Direction_t.hpp>
-#include <SDK/client/CCSPlayerAnimationState_AirAction_t.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
+#include "CCSPlayerAnimationState_MoveType_t.hpp"
+#include "CCSPlayerAnimationState_GroundMoveState_t.hpp"
+#include "CCSPlayerAnimationState_Direction_t.hpp"
+#include "CCSPlayerAnimationState_AirAction_t.hpp"
+#include "../entity2/GameTick_t.hpp"
 
 
 

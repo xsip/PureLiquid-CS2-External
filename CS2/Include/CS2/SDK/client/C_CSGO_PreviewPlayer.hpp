@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_CSPlayerPawn.hpp>
+#include "C_CSPlayerPawn.hpp"
 
 
 
@@ -21,12 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_CSGO_PreviewPlayer : public CS2::client::C_CSPlayerPawn {
 		public:
-			PROPERTY(m_animgraphCharacterModeString,GlobalTypes::CGlobalSymbol, 0x3440);
-			PROPERTY(m_flInitialModelScale,float32, 0x3448);
+			PROPERTY(m_animgraphCharacterModeString,GlobalTypes::CGlobalSymbol, 0x3470);
+			PROPERTY(m_flInitialModelScale,float32, 0x3478);
 			S2_PAD(0xA0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayer) == 0x34E0, "C_CSGO_PreviewPlayer size should be 0x34E0");
+		//static_assert(sizeof(CS2::client::C_CSGO_PreviewPlayer) == 0x3510, "C_CSGO_PreviewPlayer size should be 0x3510");
 
 #endif
 	}

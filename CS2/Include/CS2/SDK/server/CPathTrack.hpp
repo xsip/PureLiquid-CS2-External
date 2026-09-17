@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPointEntity.hpp>
-#include <SDK/server/TrackOrientationType_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CPointEntity.hpp"
+#include "TrackOrientationType_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -26,8 +26,9 @@ namespace CS2 {
 			PROPERTY(m_pnext,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x4a8);
 			PROPERTY(m_pprevious,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x4ac);
 			PROPERTY(m_paltpath,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x4b0);
-			PROPERTY(m_flRadius,float32, 0x4b4);
-			PROPERTY(m_length,float32, 0x4b8);
+			PROPERTY(m_flSpeed,float32, 0x4b4);
+			PROPERTY(m_flRadius,float32, 0x4b8);
+			PROPERTY(m_length,float32, 0x4bc);
 			PROPERTY(m_altName,GlobalTypes::CUtlSymbolLarge*, 0x4c0);
 			PROPERTY(m_nIterVal,int32_t, 0x4c8);
 			PROPERTY(m_eOrientationType,IDENTITY(server::TrackOrientationType_t), 0x4cc);

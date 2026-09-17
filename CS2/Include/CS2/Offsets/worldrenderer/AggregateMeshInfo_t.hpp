@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace worldrenderer {
-			// Class size: 0x24
+			// Class size: 0x2C
 			namespace AggregateMeshInfo_t /**/ {
 				constexpr std::ptrdiff_t m_nVisClusterMemberOffset = 0x0; // uint32_t m_nVisClusterMemberOffset; |  0x0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nVisClusterMemberCount = 0x4; // uint8_t m_nVisClusterMemberCount; |  0x4 | Schema_Builtin | Size: 0x1
@@ -21,7 +21,9 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x14; // int32_t m_nLightProbeVolumePrecomputedHandshake; |  0x14 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nInstanceStreamOffset = 0x18; // uint32_t m_nInstanceStreamOffset; |  0x18 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nVertexAlbedoStreamOffset = 0x1c; // uint32_t m_nVertexAlbedoStreamOffset; |  0x1c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_instanceStreams = 0x20; // worldrenderer::AggregateInstanceStream_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_nVertexEmissiveStreamOffset = 0x20; // uint32_t m_nVertexEmissiveStreamOffset; |  0x20 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_instanceStreams = 0x24; // worldrenderer::AggregateInstanceStream_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_fEmissiveFactor = 0x28; // float32 m_fEmissiveFactor; |  0x28 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
-#include <SDK/pulse_runtime_lib/SignatureOutflow_Continue.hpp>
+#include "CPulseCell_BaseYieldingInflow.hpp"
+#include "CPulse_ResumePoint.hpp"
+#include "SignatureOutflow_Continue.hpp"
 
 
 
@@ -23,12 +23,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_IntervalTimer : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_Completed,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x48);
-			NESTED_PROPERTY(m_OnInterval,IDENTITY(pulse_runtime_lib::SignatureOutflow_Continue), 0x90);
+			NESTED_PROPERTY(m_Completed,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xd8);
+			NESTED_PROPERTY(m_OnInterval,IDENTITY(pulse_runtime_lib::SignatureOutflow_Continue), 0x120);
 			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_IntervalTimer) == 0xD8, "CPulseCell_IntervalTimer size should be 0xD8");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_IntervalTimer) == 0x168, "CPulseCell_IntervalTimer size should be 0x168");
 
 #endif
 	}

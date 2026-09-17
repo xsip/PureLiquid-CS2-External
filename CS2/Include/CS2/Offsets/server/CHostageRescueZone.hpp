@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8E8
+			// Class size: 0x908
 			namespace CHostageRescueZone /*: public CS2::server::CHostageRescueZoneShim*/ {
 				// NO SCHEMA DATA FOUND!
 			}

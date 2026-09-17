@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CHostageRescueZoneShim.hpp>
+#include "CHostageRescueZoneShim.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CHostageRescueZone) == 0x1090, "CHostageRescueZone size should be 0x1090");
+		//static_assert(sizeof(CS2::client::CHostageRescueZone) == 0x10B0, "CHostageRescueZone size should be 0x10B0");
 
 #endif
 	}

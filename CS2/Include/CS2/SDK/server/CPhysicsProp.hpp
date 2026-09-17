@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBreakableProp.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/physicslib/DynamicContinuousContactBehavior_t.hpp>
-#include <SDK/server/INavObstacle_NavObstacleType_t.hpp>
-#include <SDK/server/CPhysicsProp_CrateType_t.hpp>
+#include "CBreakableProp.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../physicslib/DynamicContinuousContactBehavior_t.hpp"
+#include "INavObstacle_NavObstacleType_t.hpp"
+#include "CPhysicsProp_CrateType_t.hpp"
 
 
 
@@ -26,52 +26,52 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsProp : public CS2::server::CBreakableProp {
 		public:
-			NESTED_PROPERTY(m_MotionEnabled,IDENTITY(entity2::CEntityIOOutput), 0xae0);
-			NESTED_PROPERTY(m_OnAwakened,IDENTITY(entity2::CEntityIOOutput), 0xaf8);
-			NESTED_PROPERTY(m_OnAwake,IDENTITY(entity2::CEntityIOOutput), 0xb10);
-			NESTED_PROPERTY(m_OnAsleep,IDENTITY(entity2::CEntityIOOutput), 0xb28);
-			NESTED_PROPERTY(m_OnPlayerUse,IDENTITY(entity2::CEntityIOOutput), 0xb40);
-			NESTED_PROPERTY(m_OnOutOfWorld,IDENTITY(entity2::CEntityIOOutput), 0xb58);
-			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xb70);
-			PROPERTY(m_bForceNavIgnore,bool, 0xb88);
-			PROPERTY(m_bNoNavmeshBlocker,bool, 0xb89);
-			PROPERTY(m_bForceNpcExclude,bool, 0xb8a);
-			PROPERTY(m_massScale,float32, 0xb8c);
-			PROPERTY(m_buoyancyScale,float32, 0xb90);
-			PROPERTY(m_damageType,int32_t, 0xb94);
-			PROPERTY(m_damageToEnableMotion,int32_t, 0xb98);
-			PROPERTY(m_flForceToEnableMotion,float32, 0xb9c);
-			PROPERTY(m_bThrownByPlayer,bool, 0xba0);
-			PROPERTY(m_bDroppedByPlayer,bool, 0xba1);
-			PROPERTY(m_bTouchedByPlayer,bool, 0xba2);
-			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xba3);
-			PROPERTY(m_bHasBeenAwakened,bool, 0xba4);
-			PROPERTY(m_bIsOverrideProp,bool, 0xba5);
-			NESTED_PROPERTY(m_flLastBurn,IDENTITY(entity2::GameTime_t), 0xba8);
-			PROPERTY(m_nDynamicContinuousContactBehavior,IDENTITY(physicslib::DynamicContinuousContactBehavior_t), 0xbac);
-			NESTED_PROPERTY(m_fNextCheckDisableMotionContactsTime,IDENTITY(entity2::GameTime_t), 0xbb0);
-			PROPERTY(m_iInitialGlowState,int32_t, 0xbb4);
-			PROPERTY(m_nGlowRange,int32_t, 0xbb8);
-			PROPERTY(m_nGlowRangeMin,int32_t, 0xbbc);
-			PROPERTY(m_glowColor,GlobalTypes::Color, 0xbc0);
-			PROPERTY(m_bShouldAutoConvertBackFromDebris,bool, 0xbc4);
-			PROPERTY(m_bMuteImpactEffects,bool, 0xbc5);
-			PROPERTY(m_nNavObstacleType,IDENTITY(server::INavObstacle_NavObstacleType_t), 0xbc8);
-			PROPERTY(m_bUpdateNavWhenMoving,bool, 0xbcc);
-			PROPERTY(m_bForceNavObstacleCut,bool, 0xbcd);
-			PROPERTY(m_bAllowObstacleConvexHullMerging,bool, 0xbce);
-			PROPERTY(m_bAcceptDamageFromHeldObjects,bool, 0xbcf);
-			PROPERTY(m_bEnableUseOutput,bool, 0xbd0);
-			PROPERTY(m_CrateType,IDENTITY(server::CPhysicsProp_CrateType_t), 0xbd4);
-			PROPERTY_ARRAY(m_strItemClass,GlobalTypes::CUtlSymbolLarge*, 4 , 0xbd8);
-			PROPERTY_ARRAY(m_nItemCount,int32_t, 4 , 0xbf8);
-			PROPERTY(m_bRemovableForAmmoBalancing,bool, 0xc08);
-			PROPERTY(m_bAwake,bool, 0xc09);
-			PROPERTY(m_bAttachedToReferenceFrame,bool, 0xc0a);
+			NESTED_PROPERTY(m_MotionEnabled,IDENTITY(entity2::CEntityIOOutput), 0xb00);
+			NESTED_PROPERTY(m_OnAwakened,IDENTITY(entity2::CEntityIOOutput), 0xb18);
+			NESTED_PROPERTY(m_OnAwake,IDENTITY(entity2::CEntityIOOutput), 0xb30);
+			NESTED_PROPERTY(m_OnAsleep,IDENTITY(entity2::CEntityIOOutput), 0xb48);
+			NESTED_PROPERTY(m_OnPlayerUse,IDENTITY(entity2::CEntityIOOutput), 0xb60);
+			NESTED_PROPERTY(m_OnOutOfWorld,IDENTITY(entity2::CEntityIOOutput), 0xb78);
+			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0xb90);
+			PROPERTY(m_bForceNavIgnore,bool, 0xba8);
+			PROPERTY(m_bNoNavmeshBlocker,bool, 0xba9);
+			PROPERTY(m_bForceNpcExclude,bool, 0xbaa);
+			PROPERTY(m_massScale,float32, 0xbac);
+			PROPERTY(m_buoyancyScale,float32, 0xbb0);
+			PROPERTY(m_damageType,int32_t, 0xbb4);
+			PROPERTY(m_damageToEnableMotion,int32_t, 0xbb8);
+			PROPERTY(m_flForceToEnableMotion,float32, 0xbbc);
+			PROPERTY(m_bThrownByPlayer,bool, 0xbc0);
+			PROPERTY(m_bDroppedByPlayer,bool, 0xbc1);
+			PROPERTY(m_bTouchedByPlayer,bool, 0xbc2);
+			PROPERTY(m_bFirstCollisionAfterLaunch,bool, 0xbc3);
+			PROPERTY(m_bHasBeenAwakened,bool, 0xbc4);
+			PROPERTY(m_bIsOverrideProp,bool, 0xbc5);
+			NESTED_PROPERTY(m_flLastBurn,IDENTITY(entity2::GameTime_t), 0xbc8);
+			PROPERTY(m_nDynamicContinuousContactBehavior,IDENTITY(physicslib::DynamicContinuousContactBehavior_t), 0xbcc);
+			NESTED_PROPERTY(m_fNextCheckDisableMotionContactsTime,IDENTITY(entity2::GameTime_t), 0xbd0);
+			PROPERTY(m_iInitialGlowState,int32_t, 0xbd4);
+			PROPERTY(m_nGlowRange,int32_t, 0xbd8);
+			PROPERTY(m_nGlowRangeMin,int32_t, 0xbdc);
+			PROPERTY(m_glowColor,GlobalTypes::Color, 0xbe0);
+			PROPERTY(m_bShouldAutoConvertBackFromDebris,bool, 0xbe4);
+			PROPERTY(m_bMuteImpactEffects,bool, 0xbe5);
+			PROPERTY(m_nNavObstacleType,IDENTITY(server::INavObstacle_NavObstacleType_t), 0xbe8);
+			PROPERTY(m_bUpdateNavWhenMoving,bool, 0xbec);
+			PROPERTY(m_bForceNavObstacleCut,bool, 0xbed);
+			PROPERTY(m_bAllowObstacleConvexHullMerging,bool, 0xbee);
+			PROPERTY(m_bAcceptDamageFromHeldObjects,bool, 0xbef);
+			PROPERTY(m_bEnableUseOutput,bool, 0xbf0);
+			PROPERTY(m_CrateType,IDENTITY(server::CPhysicsProp_CrateType_t), 0xbf4);
+			PROPERTY_ARRAY(m_strItemClass,GlobalTypes::CUtlSymbolLarge*, 4 , 0xbf8);
+			PROPERTY_ARRAY(m_nItemCount,int32_t, 4 , 0xc18);
+			PROPERTY(m_bRemovableForAmmoBalancing,bool, 0xc28);
+			PROPERTY(m_bAwake,bool, 0xc29);
+			PROPERTY(m_bAttachedToReferenceFrame,bool, 0xc2a);
 			S2_PAD(0x140);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPhysicsProp) == 0xC10, "CPhysicsProp size should be 0xC10");
+		//static_assert(sizeof(CS2::server::CPhysicsProp) == 0xC30, "CPhysicsProp size should be 0xC30");
 
 #endif
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CBaseRendererSource2.hpp>
-#include <SDK/particles/ParticleOrientationChoiceList_t.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
+#include "CBaseRendererSource2.hpp"
+#include "ParticleOrientationChoiceList_t.hpp"
+#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
 
 
 
@@ -29,11 +29,12 @@ namespace CS2 {
 			PROPERTY(m_flMaxSize,float32, 0x2dfc);
 			NESTED_PROPERTY(m_flStartFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2e00);
 			NESTED_PROPERTY(m_flEndFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f70);
-			PROPERTY(m_bClampV,bool, 0x30e0);
-			S2_PAD(0x2F8);
+			NESTED_PROPERTY(m_flSubPixelAAScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x30e0);
+			PROPERTY(m_bClampV,bool, 0x3250);
+			S2_PAD(0x468);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::CBaseTrailRenderer) == 0x30E8, "CBaseTrailRenderer size should be 0x30E8");
+		//static_assert(sizeof(CS2::particles::CBaseTrailRenderer) == 0x3258, "CBaseTrailRenderer size should be 0x3258");
 
 #endif
 	}

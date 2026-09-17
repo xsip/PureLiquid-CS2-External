@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmBoolValueNode_CDefinition.hpp>
-#include <SDK/animlib/CNmTimeConditionNode_ComparisonType_t.hpp>
-#include <SDK/animlib/CNmTimeConditionNode_Operator_t.hpp>
+#include "CNmBoolValueNode_CDefinition.hpp"
+#include "CNmTimeConditionNode_ComparisonType_t.hpp"
+#include "CNmTimeConditionNode_Operator_t.hpp"
 
 
 

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x538
+			// Class size: 0x540
 			namespace C_OP_ClientPhysics /*: public CS2::particles::CParticleFunctionRenderer*/ {
 				constexpr std::ptrdiff_t m_strPhysicsType = 0x228; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_bStartAsleep = 0x230; // bool m_bStartAsleep; |  0x230 | Schema_Builtin | Size: 0x1
@@ -23,6 +23,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nForcedSimId = 0x528; // int32_t m_nForcedSimId; |  0x528 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nColorBlendType = 0x52c; // particleslib::ParticleColorBlendType_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_nForcedStatusEffects = 0x530; // particles::ParticleAttrBoxFlags_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nNoCollisionAttribute = 0x534; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nZeroGravityAttribute = 0x538; // particles::ParticleAttributeIndex_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/DestructiblePartDamageRequest_t.hpp>
-#include <SDK/client/TakeDamageFlags_t.hpp>
-#include <SDK/client/HitGroup_t.hpp>
+#include "DestructiblePartDamageRequest_t.hpp"
+#include "TakeDamageFlags_t.hpp"
+#include "HitGroup_t.hpp"
 
 
 
@@ -34,18 +34,19 @@ namespace CS2 {
 			PROPERTY(m_nHealthBefore,int32_t, 0x1c);
 			PROPERTY(m_flDamageDealt,float32, 0x20);
 			PROPERTY(m_flPreModifiedDamage,float32, 0x24);
-			PROPERTY(m_nTotalledHealthLost,int32_t, 0x28);
-			PROPERTY(m_flTotalledDamageDealt,float32, 0x2c);
-			PROPERTY(m_flTotalledPreModifiedDamage,float32, 0x30);
-			PROPERTY(m_flNewDamageAccumulatorValue,float32, 0x34);
-			PROPERTY(m_nDamageFlags,IDENTITY(client::TakeDamageFlags_t), 0x38);
-			PROPERTY(m_bWasDamageSuppressed,bool, 0x40);
-			PROPERTY(m_bSuppressFlinch,bool, 0x41);
-			PROPERTY(m_nOverrideFlinchHitGroup,IDENTITY(client::HitGroup_t), 0x44);
-			S2_PAD(0x50);
+			PROPERTY(m_vDamagePosition,GlobalTypes::VectorWS, 0x28);
+			PROPERTY(m_nTotalledHealthLost,int32_t, 0x34);
+			PROPERTY(m_flTotalledDamageDealt,float32, 0x38);
+			PROPERTY(m_flTotalledPreModifiedDamage,float32, 0x3c);
+			PROPERTY(m_flNewDamageAccumulatorValue,float32, 0x40);
+			PROPERTY(m_nDamageFlags,IDENTITY(client::TakeDamageFlags_t), 0x48);
+			PROPERTY(m_bWasDamageSuppressed,bool, 0x50);
+			PROPERTY(m_bSuppressFlinch,bool, 0x51);
+			PROPERTY(m_nOverrideFlinchHitGroup,IDENTITY(client::HitGroup_t), 0x54);
+			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CTakeDamageResult) == 0x50, "CTakeDamageResult size should be 0x50");
+		//static_assert(sizeof(CS2::client::CTakeDamageResult) == 0x60, "CTakeDamageResult size should be 0x60");
 
 #endif
 	}

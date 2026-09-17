@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0xA0
+			// Class size: 0xD0
 			namespace CNmScaleTask /*: public CS2::animlib::CNmPoseTask*/ {
 				// NO SCHEMA DATA FOUND!
 			}

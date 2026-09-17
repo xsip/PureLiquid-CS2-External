@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
+#include "C_BaseModelEntity.hpp"
 
 
 
@@ -26,18 +26,18 @@ namespace CS2 {
 	namespace client {
 		class C_TextureBasedAnimatable : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_bLoop,bool, 0xfa8);
-			PROPERTY(m_flFPS,float32, 0xfac);
-			PROPERTY(m_hPositionKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xfb0);
-			PROPERTY(m_hRotationKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xfb8);
-			PROPERTY(m_vAnimationBoundsMin,GlobalTypes::Vector, 0xfc0);
-			PROPERTY(m_vAnimationBoundsMax,GlobalTypes::Vector, 0xfcc);
-			PROPERTY(m_flStartTime,float32, 0xfd8);
-			PROPERTY(m_flStartFrame,float32, 0xfdc);
+			PROPERTY(m_bLoop,bool, 0xfb0);
+			PROPERTY(m_flFPS,float32, 0xfb4);
+			PROPERTY(m_hPositionKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xfb8);
+			PROPERTY(m_hRotationKeys,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0xfc0);
+			PROPERTY(m_vAnimationBoundsMin,GlobalTypes::Vector, 0xfc8);
+			PROPERTY(m_vAnimationBoundsMax,GlobalTypes::Vector, 0xfd4);
+			PROPERTY(m_flStartTime,float32, 0xfe0);
+			PROPERTY(m_flStartFrame,float32, 0xfe4);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_TextureBasedAnimatable) == 0xFE0, "C_TextureBasedAnimatable size should be 0xFE0");
+		//static_assert(sizeof(CS2::client::C_TextureBasedAnimatable) == 0xFE8, "C_TextureBasedAnimatable size should be 0xFE8");
 
 #endif
 	}

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CFuncTrackChange.hpp>
+#include "CFuncTrackChange.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncTrackAuto) == 0x868, "CFuncTrackAuto size should be 0x868");
+		//static_assert(sizeof(CS2::server::CFuncTrackAuto) == 0x878, "CFuncTrackAuto size should be 0x878");
 
 #endif
 	}

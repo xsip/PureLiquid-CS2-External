@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/tier2/CRangeInt.hpp>
-#include <SDK/client/AmmoFlags_t.hpp>
-#include <SDK/tier2/CRangeFloat.hpp>
+#include "../tier2/CRangeInt.hpp"
+#include "AmmoFlags_t.hpp"
+#include "../tier2/CRangeFloat.hpp"
 
 
 

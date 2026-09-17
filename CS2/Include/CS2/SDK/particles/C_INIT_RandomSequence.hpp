@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionInitializer.hpp>
-#include <SDK/particles/SequenceWeightedList_t.hpp>
+#include "CParticleFunctionInitializer.hpp"
+#include "SequenceWeightedList_t.hpp"
 
 
 
@@ -27,10 +27,10 @@ namespace CS2 {
 			PROPERTY(m_bShuffle,bool, 0x1e8);
 			PROPERTY(m_bLinear,bool, 0x1e9);
 			NESTED_PROPERTY(m_WeightedList,IDENTITY(GlobalTypes::CUtlVector<particles::SequenceWeightedList_t>), 0x1f0);
-			S2_PAD(0x30);
+			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_INIT_RandomSequence) == 0x210, "C_INIT_RandomSequence size should be 0x210");
+		//static_assert(sizeof(CS2::particles::C_INIT_RandomSequence) == 0x228, "C_INIT_RandomSequence size should be 0x228");
 
 #endif
 	}

@@ -17,13 +17,13 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_MassProperties = 0x34; // GlobalTypes::matrix3x4_t  | Schema_Atomic | Size: 0x30
 				constexpr std::ptrdiff_t m_flVolume = 0x64; // float32 m_flVolume; |  0x64 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flSurfaceArea = 0x68; // float32 m_flSurfaceArea; |  0x68 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_Vertices = 0x70; // GlobalTypes::CUtlVector<physicslib::RnVertex_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_VertexPositions = 0x88; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_Edges = 0xa0; // GlobalTypes::CUtlVector<physicslib::RnHalfEdge_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_Faces = 0xb8; // GlobalTypes::CUtlVector<physicslib::RnFace_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_FacePlanes = 0xd0; // GlobalTypes::CUtlVector<physicslib::RnPlane_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nFlags = 0xe8; // uint32_t m_nFlags; |  0xe8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pRegionSVM = 0xf0; // physicslib::CRegionSVM**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_VertexPositions = 0x70; // GlobalTypes::CUtlVector<GlobalTypes::Vector>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_FacePlanes = 0x88; // GlobalTypes::CUtlVector<physicslib::RnPlane_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_nFlags = 0xa0; // uint32_t m_nFlags; |  0xa0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pRegionSVM = 0xa8; // physicslib::CRegionSVM**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_Vertices = 0xb0; // GlobalTypes::CUtlVector<physicslib::RnVertex_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Edges = 0xc8; // GlobalTypes::CUtlVector<physicslib::RnHalfEdge_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_Faces = 0xe0; // GlobalTypes::CUtlVector<physicslib::RnFace_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

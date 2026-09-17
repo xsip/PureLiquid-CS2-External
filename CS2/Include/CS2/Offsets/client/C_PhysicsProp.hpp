@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x12E0
+			// Class size: 0x1300
 			namespace C_PhysicsProp /*: public CS2::client::C_BreakableProp*/ {
-				constexpr std::ptrdiff_t m_bAwake = 0x12d0; // bool m_bAwake; |  0x12d0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAwake = 0x12f0; // bool m_bAwake; |  0x12f0 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

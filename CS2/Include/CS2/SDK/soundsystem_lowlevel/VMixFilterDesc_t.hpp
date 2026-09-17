@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_lowlevel/VMixFilterType_t.hpp>
-#include <SDK/soundsystem_lowlevel/VMixFilterSlope_t.hpp>
+#include "VMixFilterType_t.hpp"
+#include "VMixFilterSlope_t.hpp"
 
 
 

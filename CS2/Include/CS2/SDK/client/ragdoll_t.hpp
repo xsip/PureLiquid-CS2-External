@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/ragdollelement_t.hpp>
-#include <SDK/client/ragdollhierarchyjoint_t.hpp>
+#include "ragdollelement_t.hpp"
+#include "ragdollhierarchyjoint_t.hpp"
 
 
 

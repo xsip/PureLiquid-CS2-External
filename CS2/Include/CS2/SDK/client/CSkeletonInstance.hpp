@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CGameSceneNode.hpp>
-#include <SDK/client/CModelState.hpp>
+#include "CGameSceneNode.hpp"
+#include "CModelState.hpp"
 
 
 
@@ -22,15 +22,17 @@ namespace CS2 {
 	namespace client {
 		class CSkeletonInstance : public CS2::client::CGameSceneNode {
 		public:
-			NESTED_PROPERTY(m_modelState,IDENTITY(client::CModelState), 0x150);
-			PROPERTY(m_bUseParentRenderBounds,bool, 0x3c0);
-			PROPERTY(m_bDisableSolidCollisionsForHierarchy,bool, 0x3c1);
-			PROPERTY(m_materialGroup,GlobalTypes::CUtlStringToken*, 0x3c4);
-			PROPERTY(m_nHitboxSet,uint8_t, 0x3c8);
-			S2_PAD(0x320);
+			NESTED_PROPERTY(m_modelState,IDENTITY(client::CModelState), 0x140);
+			PROPERTY(m_bUseParentRenderBounds,bool, 0x3f0);
+			PROPERTY(m_bDisableSolidCollisionsForHierarchy,bool, 0x3f1);
+			PROPERTY(m_bDirtyMotionType,bool, 0x3f2);
+			PROPERTY(m_bIsGeneratingLatchedParentSpaceState,bool, 0x3f3);
+			PROPERTY(m_materialGroup,GlobalTypes::CUtlStringToken*, 0x3f8);
+			PROPERTY(m_nHitboxSet,uint8_t, 0x3fc);
+			S2_PAD(0x360);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CSkeletonInstance) == 0x460, "CSkeletonInstance size should be 0x460");
+		//static_assert(sizeof(CS2::client::CSkeletonInstance) == 0x490, "CSkeletonInstance size should be 0x490");
 
 #endif
 	}

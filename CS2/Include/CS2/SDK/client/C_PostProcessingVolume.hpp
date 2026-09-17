@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseTrigger.hpp>
+#include "C_BaseTrigger.hpp"
 
 
 
@@ -26,22 +26,22 @@ namespace CS2 {
 	namespace client {
 		class C_PostProcessingVolume : public CS2::client::C_BaseTrigger {
 		public:
-			PROPERTY(m_hPostSettings,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0x1088);
-			PROPERTY(m_flFadeDuration,float32, 0x1090);
-			PROPERTY(m_flMinLogExposure,float32, 0x1094);
-			PROPERTY(m_flMaxLogExposure,float32, 0x1098);
-			PROPERTY(m_flMinExposure,float32, 0x109c);
-			PROPERTY(m_flMaxExposure,float32, 0x10a0);
-			PROPERTY(m_flExposureCompensation,float32, 0x10a4);
-			PROPERTY(m_flExposureFadeSpeedUp,float32, 0x10a8);
-			PROPERTY(m_flExposureFadeSpeedDown,float32, 0x10ac);
-			PROPERTY(m_flTonemapEVSmoothingRange,float32, 0x10b0);
-			PROPERTY(m_bMaster,bool, 0x10b4);
-			PROPERTY(m_bExposureControl,bool, 0x10b5);
+			PROPERTY(m_hPostSettings,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0x10a8);
+			PROPERTY(m_flFadeDuration,float32, 0x10b0);
+			PROPERTY(m_flMinLogExposure,float32, 0x10b4);
+			PROPERTY(m_flMaxLogExposure,float32, 0x10b8);
+			PROPERTY(m_flMinExposure,float32, 0x10bc);
+			PROPERTY(m_flMaxExposure,float32, 0x10c0);
+			PROPERTY(m_flExposureCompensation,float32, 0x10c4);
+			PROPERTY(m_flExposureFadeSpeedUp,float32, 0x10c8);
+			PROPERTY(m_flExposureFadeSpeedDown,float32, 0x10cc);
+			PROPERTY(m_flTonemapEVSmoothingRange,float32, 0x10d0);
+			PROPERTY(m_bMaster,bool, 0x10d4);
+			PROPERTY(m_bExposureControl,bool, 0x10d5);
 			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PostProcessingVolume) == 0x10B8, "C_PostProcessingVolume size should be 0x10B8");
+		//static_assert(sizeof(CS2::client::C_PostProcessingVolume) == 0x10D8, "C_PostProcessingVolume size should be 0x10D8");
 
 #endif
 	}

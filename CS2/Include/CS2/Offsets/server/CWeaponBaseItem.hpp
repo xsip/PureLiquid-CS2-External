@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1040
+			// Class size: 0x1060
 			namespace CWeaponBaseItem /*: public CS2::server::CCSWeaponBase*/ {
-				constexpr std::ptrdiff_t m_bSequenceInProgress = 0x1030; // bool m_bSequenceInProgress; |  0x1030 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRedraw = 0x1031; // bool m_bRedraw; |  0x1031 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSequenceInProgress = 0x1050; // bool m_bSequenceInProgress; |  0x1050 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRedraw = 0x1051; // bool m_bRedraw; |  0x1051 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

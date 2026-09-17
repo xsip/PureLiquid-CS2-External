@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CAnimGraphControllerBase.hpp>
+#include "CAnimGraphControllerBase.hpp"
 
 
 
@@ -23,21 +23,22 @@ namespace CS2 {
 		public:
 			// PROPERTY(m_nAnimationSeed,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x88);
 			// PROPERTY(m_characterMode,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0xa0);
-			// PROPERTY(m_nTeamPreviewVariant,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xb8);
-			// PROPERTY(m_nTeamPreviewRandom,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xd0);
-			// PROPERTY(m_nTeamPreviewPosition,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xe8);
-			// PROPERTY(m_endOfMatchCelebration,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x100);
-			// PROPERTY(m_action,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x118);
-			// PROPERTY(m_bannerAnimation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x130);
-			// PROPERTY(m_weaponCategory,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x148);
-			// PROPERTY(m_weaponType,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x160);
-			// PROPERTY(m_weaponState,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x178);
-			// PROPERTY(m_inspectTurnAngle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x190);
-			// PROPERTY(m_bCT,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x1a8);
-			S2_PAD(0x138);
+			// PROPERTY(m_bCharacterModeReset,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0xb8);
+			// PROPERTY(m_nTeamPreviewVariant,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xd0);
+			// PROPERTY(m_nTeamPreviewRandom,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0xe8);
+			// PROPERTY(m_nTeamPreviewPosition,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x100);
+			// PROPERTY(m_endOfMatchCelebration,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x118);
+			// PROPERTY(m_action,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x130);
+			// PROPERTY(m_bannerAnimation,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x148);
+			// PROPERTY(m_weaponCategory,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x160);
+			// PROPERTY(m_weaponType,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x178);
+			// PROPERTY(m_weaponState,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef<GlobalTypes::CGlobalSymbol>), 0x190);
+			// PROPERTY(m_inspectTurnAngle,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< float32 >), 0x1a8);
+			// PROPERTY(m_bCT,IDENTITY(GlobalTypes::CAnimGraph2ParamOptionalRef< bool >), 0x1c0);
+			S2_PAD(0x150);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CCS2UIPawnGraphController) == 0x1C0, "CCS2UIPawnGraphController size should be 0x1C0");
+		//static_assert(sizeof(CS2::client::CCS2UIPawnGraphController) == 0x1D8, "CCS2UIPawnGraphController size should be 0x1D8");
 
 #endif
 	}

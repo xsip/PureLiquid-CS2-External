@@ -16,6 +16,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_supportMultipleEntitiesWithSameName = 0x4b9; // bool m_supportMultipleEntitiesWithSameName; |  0x4b9 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_disabled = 0x4ba; // bool m_disabled; |  0x4ba | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_succeeded = 0x4bb; // bool m_succeeded; |  0x4bb | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_allowMissing = 0x4bc; // bool m_allowMissing; |  0x4bc | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

@@ -4,25 +4,25 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/PermModelInfo_t.hpp>
-#include <SDK/modellib/PermModelExtPart_t.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCRenderMesh.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCPhysAggregateData.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCAnimationGroup.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCSequenceGroupData.hpp>
-#include <SDK/modellib/MaterialGroup_t.hpp>
-#include <SDK/modellib/ModelSkeletonData_t.hpp>
-#include <SDK/modellib/ModelBoneFlexDriver_t.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCModel.hpp>
-#include <SDK/modellib/PermModelDataAnimatedMaterialAttribute_t.hpp>
-#include <SDK/modellib/ModelAnimGraph2Ref_t.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCNmSkeleton.hpp>
+#include "PermModelInfo_t.hpp"
+#include "PermModelExtPart_t.hpp"
+#include "../resourcesystem/InfoForResourceTypeCRenderMesh.hpp"
+#include "../resourcesystem/InfoForResourceTypeCPhysAggregateData.hpp"
+#include "../resourcesystem/InfoForResourceTypeCAnimationGroup.hpp"
+#include "../resourcesystem/InfoForResourceTypeCSequenceGroupData.hpp"
+#include "MaterialGroup_t.hpp"
+#include "ModelSkeletonData_t.hpp"
+#include "ModelBoneFlexDriver_t.hpp"
+#include "../resourcesystem/InfoForResourceTypeCModel.hpp"
+#include "PermModelDataAnimatedMaterialAttribute_t.hpp"
+#include "ModelAnimGraph2Ref_t.hpp"
+#include "../resourcesystem/InfoForResourceTypeCNmSkeleton.hpp"
 
 
 

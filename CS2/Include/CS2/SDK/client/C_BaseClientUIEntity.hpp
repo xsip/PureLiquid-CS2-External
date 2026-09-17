@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
+#include "C_BaseModelEntity.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace client {
 		class C_BaseClientUIEntity : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_bEnabled,bool, 0xfb0);
-			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0xfb8);
-			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0xfc0);
-			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0xfc8);
+			PROPERTY(m_bEnabled,bool, 0xfb8);
+			PROPERTY(m_DialogXMLName,GlobalTypes::CUtlSymbolLarge*, 0xfc0);
+			PROPERTY(m_PanelClassName,GlobalTypes::CUtlSymbolLarge*, 0xfc8);
+			PROPERTY(m_PanelID,GlobalTypes::CUtlSymbolLarge*, 0xfd0);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BaseClientUIEntity) == 0xFD8, "C_BaseClientUIEntity size should be 0xFD8");
+		//static_assert(sizeof(CS2::client::C_BaseClientUIEntity) == 0xFE0, "C_BaseClientUIEntity size should be 0xFE0");
 
 #endif
 	}

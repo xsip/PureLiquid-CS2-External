@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/ScriptedMoveTo_t.hpp>
-#include <SDK/modellib/SharedMovementGait_t.hpp>
-#include <SDK/modellib/ScriptedHeldWeaponBehavior_t.hpp>
+#include "../modellib/ScriptedMoveTo_t.hpp"
+#include "../modellib/SharedMovementGait_t.hpp"
+#include "../modellib/ScriptedHeldWeaponBehavior_t.hpp"
 
 
 

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -28,24 +28,25 @@ namespace CS2 {
 	namespace server {
 		class CBaseGrenade : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0x948);
-			NESTED_PROPERTY(m_OnExplode,IDENTITY(entity2::CEntityIOOutput), 0x960);
-			PROPERTY(m_bHasWarnedAI,bool, 0x978);
-			PROPERTY(m_bIsSmokeGrenade,bool, 0x979);
-			PROPERTY(m_bIsLive,bool, 0x97a);
-			PROPERTY(m_DmgRadius,float32, 0x97c);
-			NESTED_PROPERTY(m_flDetonateTime,IDENTITY(entity2::GameTime_t), 0x980);
-			PROPERTY(m_flWarnAITime,float32, 0x984);
-			PROPERTY(m_flDamage,float32, 0x988);
-			PROPERTY(m_iszBounceSound,GlobalTypes::CUtlSymbolLarge*, 0x990);
-			PROPERTY(m_ExplosionSound,GlobalTypes::CUtlString*, 0x998);
-			PROPERTY(m_hThrower,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x9a0);
-			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0x9b8);
-			PROPERTY(m_hOriginalThrower,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x9bc);
-			S2_PAD(0x80);
+			PROPERTY(m_bDamageDetonating,bool, 0x968);
+			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0x970);
+			NESTED_PROPERTY(m_OnExplode,IDENTITY(entity2::CEntityIOOutput), 0x988);
+			PROPERTY(m_bHasWarnedAI,bool, 0x9a0);
+			PROPERTY(m_bIsSmokeGrenade,bool, 0x9a1);
+			PROPERTY(m_bIsLive,bool, 0x9a2);
+			PROPERTY(m_DmgRadius,float32, 0x9a4);
+			NESTED_PROPERTY(m_flDetonateTime,IDENTITY(entity2::GameTime_t), 0x9a8);
+			PROPERTY(m_flWarnAITime,float32, 0x9ac);
+			PROPERTY(m_flDamage,float32, 0x9b0);
+			PROPERTY(m_iszBounceSound,GlobalTypes::CUtlSymbolLarge*, 0x9b8);
+			PROPERTY(m_ExplosionSound,GlobalTypes::CUtlString*, 0x9c0);
+			PROPERTY(m_hThrower,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x9c8);
+			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0x9e0);
+			PROPERTY(m_hOriginalThrower,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0x9e4);
+			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseGrenade) == 0x9C0, "CBaseGrenade size should be 0x9C0");
+		//static_assert(sizeof(CS2::server::CBaseGrenade) == 0x9F0, "CBaseGrenade size should be 0x9F0");
 
 #endif
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CAudioPhonemeTag.hpp>
-#include <SDK/soundsystem_voicecontainers/CAudioEmphasisSample.hpp>
-#include <SDK/soundsystem_voicecontainers/CAudioMorphData.hpp>
+#include "CAudioPhonemeTag.hpp"
+#include "CAudioEmphasisSample.hpp"
+#include "CAudioMorphData.hpp"
 
 
 

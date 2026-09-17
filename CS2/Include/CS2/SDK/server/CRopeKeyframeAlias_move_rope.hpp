@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CRopeKeyframe.hpp>
+#include "CRopeKeyframe.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CRopeKeyframeAlias_move_rope) == 0x7C0, "CRopeKeyframeAlias_move_rope size should be 0x7C0");
+		//static_assert(sizeof(CS2::server::CRopeKeyframeAlias_move_rope) == 0x7C8, "CRopeKeyframeAlias_move_rope size should be 0x7C8");
 
 #endif
 	}

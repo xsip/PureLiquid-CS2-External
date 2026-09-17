@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CModelPointEntity.hpp>
-#include <SDK/client/DamageTypes_t.hpp>
-#include <SDK/client/Class_T.hpp>
+#include "CModelPointEntity.hpp"
+#include "../client/DamageTypes_t.hpp"
+#include "../client/Class_T.hpp"
 
 
 
@@ -28,25 +28,25 @@ namespace CS2 {
 	namespace server {
 		class CEnvExplosion : public CS2::server::CModelPointEntity {
 		public:
-			PROPERTY(m_iMagnitude,int32_t, 0x768);
-			PROPERTY(m_flPlayerDamage,float32, 0x76c);
-			PROPERTY(m_iRadiusOverride,int32_t, 0x770);
-			PROPERTY(m_flInnerRadius,float32, 0x774);
-			PROPERTY(m_flDamageForce,float32, 0x778);
-			PROPERTY(m_hInflictor,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x77c);
-			PROPERTY(m_iCustomDamageType,IDENTITY(client::DamageTypes_t), 0x780);
-			PROPERTY(m_bCreateDebris,bool, 0x784);
-			PROPERTY(m_iszCustomEffectName,GlobalTypes::CUtlSymbolLarge*, 0x790);
-			PROPERTY(m_iszCustomSoundName,GlobalTypes::CUtlSymbolLarge*, 0x798);
-			PROPERTY(m_bSuppressParticleImpulse,bool, 0x7a0);
-			PROPERTY(m_iClassIgnore,IDENTITY(client::Class_T), 0x7a4);
-			PROPERTY(m_iClassIgnore2,IDENTITY(client::Class_T), 0x7a8);
-			PROPERTY(m_iszEntityIgnoreName,GlobalTypes::CUtlSymbolLarge*, 0x7b0);
-			PROPERTY(m_hEntityIgnore,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7b8);
+			PROPERTY(m_iMagnitude,int32_t, 0x770);
+			PROPERTY(m_flPlayerDamage,float32, 0x774);
+			PROPERTY(m_iRadiusOverride,int32_t, 0x778);
+			PROPERTY(m_flInnerRadius,float32, 0x77c);
+			PROPERTY(m_flDamageForce,float32, 0x780);
+			PROPERTY(m_hInflictor,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x784);
+			PROPERTY(m_iCustomDamageType,IDENTITY(client::DamageTypes_t), 0x788);
+			PROPERTY(m_bCreateDebris,bool, 0x78c);
+			PROPERTY(m_iszCustomEffectName,GlobalTypes::CUtlSymbolLarge*, 0x798);
+			PROPERTY(m_iszCustomSoundName,GlobalTypes::CUtlSymbolLarge*, 0x7a0);
+			PROPERTY(m_bSuppressParticleImpulse,bool, 0x7a8);
+			PROPERTY(m_iClassIgnore,IDENTITY(client::Class_T), 0x7ac);
+			PROPERTY(m_iClassIgnore2,IDENTITY(client::Class_T), 0x7b0);
+			PROPERTY(m_iszEntityIgnoreName,GlobalTypes::CUtlSymbolLarge*, 0x7b8);
+			PROPERTY(m_hEntityIgnore,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7c0);
 			S2_PAD(0x58);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEnvExplosion) == 0x7C0, "CEnvExplosion size should be 0x7C0");
+		//static_assert(sizeof(CS2::server::CEnvExplosion) == 0x7C8, "CEnvExplosion size should be 0x7C8");
 
 #endif
 	}

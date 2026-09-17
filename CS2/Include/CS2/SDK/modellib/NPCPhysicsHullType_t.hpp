@@ -7,9 +7,11 @@ namespace CS2 {
 	namespace modellib {
 		enum NPCPhysicsHullType_t : std::uint32_t {
 			NPCPhysicsHullType_t_eCenteredCapsule = 0x2,
+			NPCPhysicsHullType_t_eCenteredCylinder = 0x6,
 			NPCPhysicsHullType_t_eGenericCapsule = 0x3,
 			NPCPhysicsHullType_t_eGroundBox = 0x4,
 			NPCPhysicsHullType_t_eGroundCapsule = 0x1,
+			NPCPhysicsHullType_t_eGroundCylinder = 0x5,
 			NPCPhysicsHullType_t_eInvalid = 0x0
 		};
 	}

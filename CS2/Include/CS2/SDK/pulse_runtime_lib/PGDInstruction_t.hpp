@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/PulseInstructionCode_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeVarIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeRegisterIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeInvokeIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeChunkIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeCallInfoIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeConstantIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeDomainValueIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeBlackboardReferenceIndex_t.hpp>
+#include "PulseInstructionCode_t.hpp"
+#include "PulseRuntimeVarIndex_t.hpp"
+#include "PulseRuntimeRegisterIndex_t.hpp"
+#include "PulseRuntimeInvokeIndex_t.hpp"
+#include "PulseRuntimeChunkIndex_t.hpp"
+#include "PulseRuntimeCallInfoIndex_t.hpp"
+#include "PulseRuntimeConstantIndex_t.hpp"
+#include "PulseRuntimeDomainValueIndex_t.hpp"
+#include "PulseRuntimeBlackboardReferenceIndex_t.hpp"
 
 
 

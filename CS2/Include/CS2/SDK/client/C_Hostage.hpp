@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseCombatCharacter.hpp>
-#include <SDK/client/EntitySpottedState_t.hpp>
-#include <SDK/client/CountdownTimer.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/modellib/AttachmentHandle_t.hpp>
+#include "C_BaseCombatCharacter.hpp"
+#include "EntitySpottedState_t.hpp"
+#include "CountdownTimer.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../modellib/AttachmentHandle_t.hpp"
 
 
 
@@ -32,33 +32,33 @@ namespace CS2 {
 	namespace client {
 		class C_Hostage : public CS2::client::C_BaseCombatCharacter {
 		public:
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(client::EntitySpottedState_t), 0x11e0);
-			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x11f8);
-			NESTED_PROPERTY(m_reuseTimer,IDENTITY(client::CountdownTimer), 0x1200);
-			PROPERTY(m_vel,GlobalTypes::Vector, 0x1218);
-			PROPERTY(m_isRescued,bool, 0x1224);
-			PROPERTY(m_jumpedThisFrame,bool, 0x1225);
-			PROPERTY(m_nHostageState,int32_t, 0x1228);
-			PROPERTY(m_bHandsHaveBeenCut,bool, 0x122c);
-			PROPERTY(m_hHostageGrabber,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x1230);
-			NESTED_PROPERTY(m_fLastGrabTime,IDENTITY(entity2::GameTime_t), 0x1234);
-			PROPERTY(m_vecGrabbedPos,GlobalTypes::Vector, 0x1238);
-			NESTED_PROPERTY(m_flRescueStartTime,IDENTITY(entity2::GameTime_t), 0x1244);
-			NESTED_PROPERTY(m_flGrabSuccessTime,IDENTITY(entity2::GameTime_t), 0x1248);
-			NESTED_PROPERTY(m_flDropStartTime,IDENTITY(entity2::GameTime_t), 0x124c);
-			NESTED_PROPERTY(m_flDeadOrRescuedTime,IDENTITY(entity2::GameTime_t), 0x1250);
-			NESTED_PROPERTY(m_blinkTimer,IDENTITY(client::CountdownTimer), 0x1258);
-			PROPERTY(m_lookAt,GlobalTypes::Vector, 0x1270);
-			NESTED_PROPERTY(m_lookAroundTimer,IDENTITY(client::CountdownTimer), 0x1280);
-			PROPERTY(m_isInit,bool, 0x1298);
-			NESTED_PROPERTY(m_eyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1299);
-			NESTED_PROPERTY(m_chestAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x129a);
-			PROPERTY(m_pPredictionOwner,IDENTITY(client::CBasePlayerController*), 0x12a0);
-			NESTED_PROPERTY(m_fNewestAlphaThinkTime,IDENTITY(entity2::GameTime_t), 0x12a8);
+			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(client::EntitySpottedState_t), 0x1208);
+			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x1220);
+			NESTED_PROPERTY(m_reuseTimer,IDENTITY(client::CountdownTimer), 0x1228);
+			PROPERTY(m_vel,GlobalTypes::Vector, 0x1240);
+			PROPERTY(m_isRescued,bool, 0x124c);
+			PROPERTY(m_jumpedThisFrame,bool, 0x124d);
+			PROPERTY(m_nHostageState,int32_t, 0x1250);
+			PROPERTY(m_bHandsHaveBeenCut,bool, 0x1254);
+			PROPERTY(m_hHostageGrabber,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x1258);
+			NESTED_PROPERTY(m_fLastGrabTime,IDENTITY(entity2::GameTime_t), 0x125c);
+			PROPERTY(m_vecGrabbedPos,GlobalTypes::VectorWS, 0x1260);
+			NESTED_PROPERTY(m_flRescueStartTime,IDENTITY(entity2::GameTime_t), 0x126c);
+			NESTED_PROPERTY(m_flGrabSuccessTime,IDENTITY(entity2::GameTime_t), 0x1270);
+			NESTED_PROPERTY(m_flDropStartTime,IDENTITY(entity2::GameTime_t), 0x1274);
+			NESTED_PROPERTY(m_flDeadOrRescuedTime,IDENTITY(entity2::GameTime_t), 0x1278);
+			NESTED_PROPERTY(m_blinkTimer,IDENTITY(client::CountdownTimer), 0x1280);
+			PROPERTY(m_lookAt,GlobalTypes::VectorWS, 0x1298);
+			NESTED_PROPERTY(m_lookAroundTimer,IDENTITY(client::CountdownTimer), 0x12a8);
+			PROPERTY(m_isInit,bool, 0x12c0);
+			NESTED_PROPERTY(m_eyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x12c1);
+			NESTED_PROPERTY(m_chestAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x12c2);
+			PROPERTY(m_pPredictionOwner,IDENTITY(client::CBasePlayerController*), 0x12c8);
+			NESTED_PROPERTY(m_fNewestAlphaThinkTime,IDENTITY(entity2::GameTime_t), 0x12d0);
 			S2_PAD(0xD0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_Hostage) == 0x12B0, "C_Hostage size should be 0x12B0");
+		//static_assert(sizeof(CS2::client::C_Hostage) == 0x12D8, "C_Hostage size should be 0x12D8");
 
 #endif
 	}

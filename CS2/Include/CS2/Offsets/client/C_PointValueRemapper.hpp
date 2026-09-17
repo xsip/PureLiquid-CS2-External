@@ -34,7 +34,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bFirstUpdate = 0x661; // bool m_bFirstUpdate; |  0x661 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_flPreviousValue = 0x664; // float32 m_flPreviousValue; |  0x664 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flPreviousUpdateTickTime = 0x668; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x66c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x66c; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

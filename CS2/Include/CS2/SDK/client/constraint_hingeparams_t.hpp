@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/constraint_axislimit_t.hpp>
-#include <SDK/client/constraint_breakableparams_t.hpp>
+#include "constraint_axislimit_t.hpp"
+#include "constraint_breakableparams_t.hpp"
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 	namespace client {
 		class constraint_hingeparams_t  {
 		public:
-			PROPERTY(worldPosition,GlobalTypes::Vector, 0x0);
+			PROPERTY(worldPosition,GlobalTypes::VectorWS, 0x0);
 			PROPERTY(worldAxisDirection,GlobalTypes::Vector, 0xc);
 			NESTED_PROPERTY(hingeAxis,IDENTITY(client::constraint_axislimit_t), 0x18);
 			NESTED_PROPERTY(constraint,IDENTITY(client::constraint_breakableparams_t), 0x28);

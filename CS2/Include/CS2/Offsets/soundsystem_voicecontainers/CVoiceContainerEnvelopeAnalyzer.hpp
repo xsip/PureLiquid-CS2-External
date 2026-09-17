@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x60
+			// Class size: 0x58
 			namespace CVoiceContainerEnvelopeAnalyzer /*: public CS2::soundsystem_voicecontainers::CVoiceContainerAnalysisBase*/ {
-				constexpr std::ptrdiff_t m_mode = 0x50; // soundsystem_voicecontainers::EMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_fAnalysisWindowMs = 0x54; // float32 m_fAnalysisWindowMs; |  0x54 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flThreshold = 0x58; // float32 m_flThreshold; |  0x58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_mode = 0x48; // soundsystem_voicecontainers::EMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_fAnalysisWindowMs = 0x4c; // float32 m_fAnalysisWindowMs; |  0x4c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flThreshold = 0x50; // float32 m_flThreshold; |  0x50 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

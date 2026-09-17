@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_WaitForCursorsWithTagBase.hpp>
+#include "CPulseCell_WaitForCursorsWithTagBase.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_CursorQueue : public CS2::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTagBase {
 		public:
-			PROPERTY(m_nCursorsAllowedToRunParallel,int32_t, 0x98);
+			PROPERTY(m_nCursorsAllowedToRunParallel,int32_t, 0x128);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_CursorQueue) == 0xA0, "CPulseCell_CursorQueue size should be 0xA0");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_CursorQueue) == 0x130, "CPulseCell_CursorQueue size should be 0x130");
 
 #endif
 	}

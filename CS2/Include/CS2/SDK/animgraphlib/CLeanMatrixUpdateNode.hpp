@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CLeafUpdateNode.hpp>
-#include <SDK/animgraphlib/CPoseHandle.hpp>
-#include <SDK/animgraphlib/CAnimInputDamping.hpp>
-#include <SDK/animgraphlib/AnimVectorSource.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animationsystem/HSequence.hpp>
+#include "CLeafUpdateNode.hpp"
+#include "CPoseHandle.hpp"
+#include "CAnimInputDamping.hpp"
+#include "AnimVectorSource.hpp"
+#include "CAnimParamHandle.hpp"
+#include "../animationsystem/HSequence.hpp"
 
 
 

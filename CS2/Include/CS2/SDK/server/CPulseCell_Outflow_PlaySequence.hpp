@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPulseCell_Outflow_PlaySceneBase.hpp>
+#include "CPulseCell_Outflow_PlaySceneBase.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CPulseCell_Outflow_PlaySequence : public CS2::server::CPulseCell_Outflow_PlaySceneBase {
 		public:
-			PROPERTY(m_ParamSequenceName,GlobalTypes::CUtlString*, 0xf0);
+			PROPERTY(m_ParamSequenceName,GlobalTypes::CUtlString*, 0x138);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_PlaySequence) == 0xF8, "CPulseCell_Outflow_PlaySequence size should be 0xF8");
+		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_PlaySequence) == 0x140, "CPulseCell_Outflow_PlaySequence size should be 0x140");
 
 #endif
 	}

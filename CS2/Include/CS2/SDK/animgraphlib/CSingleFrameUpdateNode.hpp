@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CLeafUpdateNode.hpp>
-#include <SDK/animgraphlib/CAnimActionUpdater.hpp>
-#include <SDK/animgraphlib/CPoseHandle.hpp>
-#include <SDK/animationsystem/HSequence.hpp>
+#include "CLeafUpdateNode.hpp"
+#include "CAnimActionUpdater.hpp"
+#include "CPoseHandle.hpp"
+#include "../animationsystem/HSequence.hpp"
 
 
 

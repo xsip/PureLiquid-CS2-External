@@ -8,11 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x14
+			// Class size: 0x18
 			namespace AI_Navigator_DebugSnapshotData_t_Waypoint_t /**/ {
 				constexpr std::ptrdiff_t position = 0x0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t nav_type = 0xc; // uint32_t nav_type; |  0xc | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t flags = 0x10; // uint32_t flags; |  0x10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t is_pathcorner = 0x14; // bool is_pathcorner; |  0x14 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

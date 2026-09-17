@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseCombatCharacter.hpp>
-#include <SDK/client/ViewAngleServerChange_t.hpp>
-#include <SDK/client/sky3dparams_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "C_BaseCombatCharacter.hpp"
+#include "ViewAngleServerChange_t.hpp"
+#include "sky3dparams_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -38,38 +38,38 @@ namespace CS2 {
 	namespace client {
 		class C_BasePlayerPawn : public CS2::client::C_BaseCombatCharacter {
 		public:
-			PROPERTY(m_pWeaponServices,IDENTITY(client::CPlayer_WeaponServices*), 0x11e0);
-			PROPERTY(m_pItemServices,IDENTITY(client::CPlayer_ItemServices*), 0x11e8);
-			PROPERTY(m_pAutoaimServices,IDENTITY(client::CPlayer_AutoaimServices*), 0x11f0);
-			PROPERTY(m_pObserverServices,IDENTITY(client::CPlayer_ObserverServices*), 0x11f8);
-			PROPERTY(m_pWaterServices,IDENTITY(client::CPlayer_WaterServices*), 0x1200);
-			PROPERTY(m_pUseServices,IDENTITY(client::CPlayer_UseServices*), 0x1208);
-			PROPERTY(m_pFlashlightServices,IDENTITY(client::CPlayer_FlashlightServices*), 0x1210);
-			PROPERTY(m_pCameraServices,IDENTITY(client::CPlayer_CameraServices*), 0x1218);
-			PROPERTY(m_pMovementServices,IDENTITY(client::CPlayer_MovementServices*), 0x1220);
-			// PROPERTY(m_ServerViewAngleChanges,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::ViewAngleServerChange_t>), 0x1230);
-			PROPERTY(v_angle,GlobalTypes::QAngle, 0x1298);
-			PROPERTY(v_anglePrevious,GlobalTypes::QAngle, 0x12a4);
-			PROPERTY(m_iHideHUD,uint32_t, 0x12b0);
-			NESTED_PROPERTY(m_skybox3d,IDENTITY(client::sky3dparams_t), 0x12b8);
-			NESTED_PROPERTY(m_flDeathTime,IDENTITY(entity2::GameTime_t), 0x1348);
-			PROPERTY(m_vecPredictionError,GlobalTypes::Vector, 0x134c);
-			NESTED_PROPERTY(m_flPredictionErrorTime,IDENTITY(entity2::GameTime_t), 0x1358);
-			PROPERTY(m_vecLastCameraSetupLocalOrigin,GlobalTypes::Vector, 0x1378);
-			NESTED_PROPERTY(m_flLastCameraSetupTime,IDENTITY(entity2::GameTime_t), 0x1384);
-			PROPERTY(m_flFOVSensitivityAdjust,float32, 0x1388);
-			PROPERTY(m_flMouseSensitivity,float32, 0x138c);
-			PROPERTY(m_vOldOrigin,GlobalTypes::Vector, 0x1390);
-			PROPERTY(m_flOldSimulationTime,float32, 0x139c);
-			PROPERTY(m_nLastExecutedCommandNumber,int32_t, 0x13a0);
-			PROPERTY(m_nLastExecutedCommandTick,int32_t, 0x13a4);
-			PROPERTY(m_hController,IDENTITY(GlobalTypes::CHandle<client::CBasePlayerController>), 0x13a8);
-			PROPERTY(m_hDefaultController,IDENTITY(GlobalTypes::CHandle<client::CBasePlayerController>), 0x13ac);
-			PROPERTY(m_bIsSwappingToPredictableController,bool, 0x13b0);
+			PROPERTY(m_pWeaponServices,IDENTITY(client::CPlayer_WeaponServices*), 0x1208);
+			PROPERTY(m_pItemServices,IDENTITY(client::CPlayer_ItemServices*), 0x1210);
+			PROPERTY(m_pAutoaimServices,IDENTITY(client::CPlayer_AutoaimServices*), 0x1218);
+			PROPERTY(m_pObserverServices,IDENTITY(client::CPlayer_ObserverServices*), 0x1220);
+			PROPERTY(m_pWaterServices,IDENTITY(client::CPlayer_WaterServices*), 0x1228);
+			PROPERTY(m_pUseServices,IDENTITY(client::CPlayer_UseServices*), 0x1230);
+			PROPERTY(m_pFlashlightServices,IDENTITY(client::CPlayer_FlashlightServices*), 0x1238);
+			PROPERTY(m_pCameraServices,IDENTITY(client::CPlayer_CameraServices*), 0x1240);
+			PROPERTY(m_pMovementServices,IDENTITY(client::CPlayer_MovementServices*), 0x1248);
+			// PROPERTY(m_ServerViewAngleChanges,IDENTITY(GlobalTypes::C_UtlVectorEmbeddedNetworkVar<client::ViewAngleServerChange_t>), 0x1258);
+			PROPERTY(v_angle,GlobalTypes::QAngle, 0x12c0);
+			PROPERTY(v_anglePrevious,GlobalTypes::QAngle, 0x12cc);
+			PROPERTY(m_iHideHUD,uint32_t, 0x12d8);
+			NESTED_PROPERTY(m_skybox3d,IDENTITY(client::sky3dparams_t), 0x12e0);
+			NESTED_PROPERTY(m_flDeathTime,IDENTITY(entity2::GameTime_t), 0x1370);
+			PROPERTY(m_vecPredictionError,GlobalTypes::Vector, 0x1374);
+			NESTED_PROPERTY(m_flPredictionErrorTime,IDENTITY(entity2::GameTime_t), 0x1380);
+			PROPERTY(m_vecLastCameraSetupLocalOrigin,GlobalTypes::Vector, 0x13a0);
+			NESTED_PROPERTY(m_flLastCameraSetupTime,IDENTITY(entity2::GameTime_t), 0x13ac);
+			PROPERTY(m_flFOVSensitivityAdjust,float32, 0x13b0);
+			PROPERTY(m_flMouseSensitivity,float32, 0x13b4);
+			PROPERTY(m_vOldOrigin,GlobalTypes::Vector, 0x13b8);
+			PROPERTY(m_flOldSimulationTime,float32, 0x13c4);
+			PROPERTY(m_nLastExecutedCommandNumber,int32_t, 0x13c8);
+			PROPERTY(m_nLastExecutedCommandTick,int32_t, 0x13cc);
+			PROPERTY(m_hController,IDENTITY(GlobalTypes::CHandle<client::CBasePlayerController>), 0x13d0);
+			PROPERTY(m_hDefaultController,IDENTITY(GlobalTypes::CHandle<client::CBasePlayerController>), 0x13d4);
+			PROPERTY(m_bIsSwappingToPredictableController,bool, 0x13d8);
 			S2_PAD(0x1D8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BasePlayerPawn) == 0x13B8, "C_BasePlayerPawn size should be 0x13B8");
+		//static_assert(sizeof(CS2::client::C_BasePlayerPawn) == 0x13E0, "C_BasePlayerPawn size should be 0x13E0");
 
 #endif
 	}

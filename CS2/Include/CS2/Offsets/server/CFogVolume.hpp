@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x790
+			// Class size: 0x798
 			namespace CFogVolume /*: public CS2::server::CServerOnlyModelEntity*/ {
-				constexpr std::ptrdiff_t m_fogName = 0x768; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_postProcessName = 0x770; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_colorCorrectionName = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bDisabled = 0x788; // bool m_bDisabled; |  0x788 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bInFogVolumesList = 0x789; // bool m_bInFogVolumesList; |  0x789 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fogName = 0x770; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_postProcessName = 0x778; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_colorCorrectionName = 0x780; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bDisabled = 0x790; // bool m_bDisabled; |  0x790 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bInFogVolumesList = 0x791; // bool m_bInFogVolumesList; |  0x791 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

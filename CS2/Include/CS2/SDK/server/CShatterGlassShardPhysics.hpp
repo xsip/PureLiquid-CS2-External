@@ -4,14 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPhysicsProp.hpp>
-#include <SDK/server/shard_model_desc_t.hpp>
+#include "CBaseModelEntity.hpp"
+#include "shard_model_desc_t.hpp"
+#include "../client/ShatterGlassEntityPoolState_t.hpp"
 
 
 
@@ -20,15 +21,16 @@
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace server {
-		class CShatterGlassShardPhysics : public CS2::server::CPhysicsProp {
+		class CShatterGlassShardPhysics : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_bDebris,bool, 0xc10);
-			PROPERTY(m_hParentShard,uint32_t, 0xc14);
-			NESTED_PROPERTY(m_ShardDesc,IDENTITY(server::shard_model_desc_t), 0xc18);
+			PROPERTY(m_hParentShard,uint32_t, 0x770);
+			NESTED_PROPERTY(m_ShardDesc,IDENTITY(server::shard_model_desc_t), 0x778);
+			PROPERTY(m_nPoolState,IDENTITY(client::ShatterGlassEntityPoolState_t), 0x7f8);
+			PROPERTY(m_bTouchedByPlayer,bool, 0x7fc);
 			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CShatterGlassShardPhysics) == 0xCA0, "CShatterGlassShardPhysics size should be 0xCA0");
+		//static_assert(sizeof(CS2::server::CShatterGlassShardPhysics) == 0x800, "CShatterGlassShardPhysics size should be 0x800");
 
 #endif
 	}

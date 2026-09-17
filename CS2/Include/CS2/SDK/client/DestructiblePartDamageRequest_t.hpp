@@ -4,18 +4,23 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/HitGroup_t.hpp>
-#include <SDK/client/EDestructibleParts_DestroyParameterFlags.hpp>
-#include <SDK/client/DamageTypes_t.hpp>
+#include "HitGroup_t.hpp"
+#include "EDestructibleParts_DestroyParameterFlags.hpp"
+#include "DamageTypes_t.hpp"
 
 
 
+namespace CS2 {
+	namespace client {
+		class C_BaseEntity;
+	}
+}
 
 
 using namespace GlobalTypes;
@@ -30,12 +35,13 @@ namespace CS2 {
 			PROPERTY(m_nDamageType,IDENTITY(client::DamageTypes_t), 0x10);
 			PROPERTY(m_flBreakDamage,float32, 0x14);
 			PROPERTY(m_flBreakDamageRadius,float32, 0x18);
-			PROPERTY(m_vWsBreakDamageOrigin,GlobalTypes::VectorWS, 0x1c);
-			PROPERTY(m_vWsBreakDamageForce,GlobalTypes::Vector, 0x28);
-			S2_PAD(0x38);
+			PROPERTY(m_hAttacker,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x1c);
+			PROPERTY(m_vWsBreakDamageOrigin,GlobalTypes::VectorWS, 0x20);
+			PROPERTY(m_vWsBreakDamageForce,GlobalTypes::Vector, 0x2c);
+			S2_PAD(0x3C);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::DestructiblePartDamageRequest_t) == 0x38, "DestructiblePartDamageRequest_t size should be 0x38");
+		//static_assert(sizeof(CS2::client::DestructiblePartDamageRequest_t) == 0x3C, "DestructiblePartDamageRequest_t size should be 0x3C");
 
 #endif
 	}

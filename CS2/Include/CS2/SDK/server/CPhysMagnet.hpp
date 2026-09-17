@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/server/magnetted_objects_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "magnetted_objects_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -24,22 +24,22 @@ namespace CS2 {
 	namespace server {
 		class CPhysMagnet : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_OnMagnetAttach,IDENTITY(entity2::CEntityIOOutput), 0x940);
-			NESTED_PROPERTY(m_OnMagnetDetach,IDENTITY(entity2::CEntityIOOutput), 0x958);
-			PROPERTY(m_massScale,float32, 0x970);
-			PROPERTY(m_forceLimit,float32, 0x974);
-			PROPERTY(m_torqueLimit,float32, 0x978);
-			NESTED_PROPERTY(m_MagnettedEntities,IDENTITY(GlobalTypes::CUtlVector<server::magnetted_objects_t>), 0x980);
-			PROPERTY(m_bActive,bool, 0x998);
-			PROPERTY(m_bHasHitSomething,bool, 0x999);
-			PROPERTY(m_flTotalMass,float32, 0x99c);
-			PROPERTY(m_flRadius,float32, 0x9a0);
-			NESTED_PROPERTY(m_flNextSuckTime,IDENTITY(entity2::GameTime_t), 0x9a4);
-			PROPERTY(m_iMaxObjectsAttached,int32_t, 0x9a8);
+			NESTED_PROPERTY(m_OnMagnetAttach,IDENTITY(entity2::CEntityIOOutput), 0x960);
+			NESTED_PROPERTY(m_OnMagnetDetach,IDENTITY(entity2::CEntityIOOutput), 0x978);
+			PROPERTY(m_massScale,float32, 0x990);
+			PROPERTY(m_forceLimit,float32, 0x994);
+			PROPERTY(m_torqueLimit,float32, 0x998);
+			NESTED_PROPERTY(m_MagnettedEntities,IDENTITY(GlobalTypes::CUtlVector<server::magnetted_objects_t>), 0x9a0);
+			PROPERTY(m_bActive,bool, 0x9b8);
+			PROPERTY(m_bHasHitSomething,bool, 0x9b9);
+			PROPERTY(m_flTotalMass,float32, 0x9bc);
+			PROPERTY(m_flRadius,float32, 0x9c0);
+			NESTED_PROPERTY(m_flNextSuckTime,IDENTITY(entity2::GameTime_t), 0x9c4);
+			PROPERTY(m_iMaxObjectsAttached,int32_t, 0x9c8);
 			S2_PAD(0x70);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPhysMagnet) == 0x9B0, "CPhysMagnet size should be 0x9B0");
+		//static_assert(sizeof(CS2::server::CPhysMagnet) == 0x9D0, "CPhysMagnet size should be 0x9D0");
 
 #endif
 	}

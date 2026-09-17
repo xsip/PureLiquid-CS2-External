@@ -8,11 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8D8
+			// Class size: 0x8F8
 			namespace CTriggerSave /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_bForceNewLevelUnit = 0x8c8; // bool m_bForceNewLevelUnit; |  0x8c8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fDangerousTimer = 0x8cc; // float32 m_fDangerousTimer; |  0x8cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_minHitPoints = 0x8d0; // int32_t m_minHitPoints; |  0x8d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bForceNewLevelUnit = 0x8e8; // bool m_bForceNewLevelUnit; |  0x8e8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_fDangerousTimer = 0x8ec; // float32 m_fDangerousTimer; |  0x8ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_minHitPoints = 0x8f0; // int32_t m_minHitPoints; |  0x8f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRetriggerDelay = 0x8f4; // float32 m_flRetriggerDelay; |  0x8f4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPoseNode_CDefinition.hpp>
-#include <SDK/animlib/CNmRootMotionData_SamplingMode_t.hpp>
-#include <SDK/animlib/CNmTargetWarpNode_TargetUpdateRule_t.hpp>
+#include "CNmPoseNode_CDefinition.hpp"
+#include "CNmRootMotionData_SamplingMode_t.hpp"
+#include "CNmTargetWarpNode_TargetUpdateRule_t.hpp"
 
 
 

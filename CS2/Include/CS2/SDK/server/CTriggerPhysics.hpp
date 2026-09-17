@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -26,24 +26,24 @@ namespace CS2 {
 	namespace server {
 		class CTriggerPhysics : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_pController,IDENTITY(client::IPhysicsMotionController*), 0x8d0);
-			PROPERTY(m_gravityScale,float32, 0x8d8);
-			PROPERTY(m_linearLimit,float32, 0x8dc);
-			PROPERTY(m_linearDamping,float32, 0x8e0);
-			PROPERTY(m_angularLimit,float32, 0x8e4);
-			PROPERTY(m_angularDamping,float32, 0x8e8);
-			PROPERTY(m_linearForce,float32, 0x8ec);
-			PROPERTY(m_flFrequency,float32, 0x8f0);
-			PROPERTY(m_flDampingRatio,float32, 0x8f4);
-			PROPERTY(m_vecLinearForcePointAt,GlobalTypes::Vector, 0x8f8);
-			PROPERTY(m_bCollapseToForcePoint,bool, 0x904);
-			PROPERTY(m_vecLinearForcePointAtWorld,GlobalTypes::Vector, 0x908);
-			PROPERTY(m_vecLinearForceDirection,GlobalTypes::Vector, 0x914);
-			PROPERTY(m_bConvertToDebrisWhenPossible,bool, 0x920);
+			PROPERTY(m_pController,IDENTITY(client::IPhysicsMotionController*), 0x8f0);
+			PROPERTY(m_gravityScale,float32, 0x8f8);
+			PROPERTY(m_linearLimit,float32, 0x8fc);
+			PROPERTY(m_linearDamping,float32, 0x900);
+			PROPERTY(m_angularLimit,float32, 0x904);
+			PROPERTY(m_angularDamping,float32, 0x908);
+			PROPERTY(m_linearForce,float32, 0x90c);
+			PROPERTY(m_flFrequency,float32, 0x910);
+			PROPERTY(m_flDampingRatio,float32, 0x914);
+			PROPERTY(m_vecLinearForcePointAt,GlobalTypes::Vector, 0x918);
+			PROPERTY(m_bCollapseToForcePoint,bool, 0x924);
+			PROPERTY(m_vecLinearForcePointAtWorld,GlobalTypes::VectorWS, 0x928);
+			PROPERTY(m_vecLinearForceDirection,GlobalTypes::Vector, 0x934);
+			PROPERTY(m_bConvertToDebrisWhenPossible,bool, 0x940);
 			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerPhysics) == 0x928, "CTriggerPhysics size should be 0x928");
+		//static_assert(sizeof(CS2::server::CTriggerPhysics) == 0x948, "CTriggerPhysics size should be 0x948");
 
 #endif
 	}

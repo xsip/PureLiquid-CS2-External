@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CBaseRendererSource2.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
-#include <SDK/particles/ParticleOrientationChoiceList_t.hpp>
-#include <SDK/particles/ParticleLightingQuality_t.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererVecInput.hpp>
-#include <SDK/particles/CReplicationParameters.hpp>
+#include "CBaseRendererSource2.hpp"
+#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
+#include "ParticleOrientationChoiceList_t.hpp"
+#include "ParticleLightingQuality_t.hpp"
+#include "../particleslib/CParticleCollectionRendererVecInput.hpp"
+#include "CReplicationParameters.hpp"
 
 
 
@@ -33,7 +33,7 @@ namespace CS2 {
 			PROPERTY(m_bUseYawWithNormalAligned,bool, 0x2f6c);
 			NESTED_PROPERTY(m_flMinSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x2f70);
 			NESTED_PROPERTY(m_flMaxSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x30e0);
-			NESTED_PROPERTY(m_flAlphaAdjustWithSizeAdjust,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3250);
+			NESTED_PROPERTY(m_flSubPixelAAScale,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3250);
 			NESTED_PROPERTY(m_flStartFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x33c0);
 			NESTED_PROPERTY(m_flEndFadeSize,IDENTITY(particleslib::CParticleCollectionRendererFloatInput), 0x3530);
 			PROPERTY(m_flStartFadeDot,float32, 0x36a0);

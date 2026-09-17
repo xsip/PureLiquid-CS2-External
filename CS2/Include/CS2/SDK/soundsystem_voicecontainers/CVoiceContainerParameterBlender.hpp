@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerBase.hpp>
-#include <SDK/soundsystem_voicecontainers/CSoundContainerReference.hpp>
+#include "CVoiceContainerBase.hpp"
+#include "CSoundContainerReference.hpp"
 
 
 
@@ -22,18 +22,18 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVoiceContainerParameterBlender : public CS2::soundsystem_voicecontainers::CVoiceContainerBase {
 		public:
-			NESTED_PROPERTY(m_firstSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xa8);
-			NESTED_PROPERTY(m_secondSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0xc8);
-			PROPERTY(m_bEnableOcclusionBlend,bool, 0xe8);
-			PROPERTY(m_curve1,GlobalTypes::CPiecewiseCurve, 0xf0);
-			PROPERTY(m_curve2,GlobalTypes::CPiecewiseCurve, 0x130);
-			PROPERTY(m_bEnableDistanceBlend,bool, 0x170);
-			PROPERTY(m_curve3,GlobalTypes::CPiecewiseCurve, 0x178);
-			PROPERTY(m_curve4,GlobalTypes::CPiecewiseCurve, 0x1b8);
+			NESTED_PROPERTY(m_firstSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0x70);
+			NESTED_PROPERTY(m_secondSound,IDENTITY(soundsystem_voicecontainers::CSoundContainerReference), 0x90);
+			PROPERTY(m_bEnableOcclusionBlend,bool, 0xb0);
+			PROPERTY(m_curve1,GlobalTypes::CPiecewiseCurve, 0xb8);
+			PROPERTY(m_curve2,GlobalTypes::CPiecewiseCurve, 0xf8);
+			PROPERTY(m_bEnableDistanceBlend,bool, 0x138);
+			PROPERTY(m_curve3,GlobalTypes::CPiecewiseCurve, 0x140);
+			PROPERTY(m_curve4,GlobalTypes::CPiecewiseCurve, 0x180);
 			S2_PAD(0x150);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerParameterBlender) == 0x1F8, "CVoiceContainerParameterBlender size should be 0x1F8");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVoiceContainerParameterBlender) == 0x1C0, "CVoiceContainerParameterBlender size should be 0x1C0");
 
 #endif
 	}

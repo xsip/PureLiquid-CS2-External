@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CMolotovGrenade.hpp>
+#include "CMolotovGrenade.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CIncendiaryGrenade) == 0x1070, "CIncendiaryGrenade size should be 0x1070");
+		//static_assert(sizeof(CS2::server::CIncendiaryGrenade) == 0x1090, "CIncendiaryGrenade size should be 0x1090");
 
 #endif
 	}

@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t type = 0x0; // client::PhysInterfaceId_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t hEntity = 0x4; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t fieldName = 0x8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t nObjects = 0x10; // int32_t nObjects; |  0x10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t bSaveObject = 0x10; // bool bSaveObject; |  0x10 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t modelName = 0x18; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t bbox = 0x20; // mathlib_extended::AABB_t  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t sphere = 0x38; // client::physics_save_sphere_t  | Schema_DeclaredClass | Size: 0x4

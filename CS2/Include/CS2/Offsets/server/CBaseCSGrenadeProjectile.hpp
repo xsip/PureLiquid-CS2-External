@@ -8,24 +8,24 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xA30
+			// Class size: 0xA60
 			namespace CBaseCSGrenadeProjectile /*: public CS2::server::CBaseGrenade*/ {
-				constexpr std::ptrdiff_t m_vInitialPosition = 0x9c0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vInitialVelocity = 0x9cc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nBounces = 0x9d8; // int32_t m_nBounces; |  0x9d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nExplodeEffectIndex = 0x9e0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nExplodeEffectTickBegin = 0x9e8; // int32_t m_nExplodeEffectTickBegin; |  0x9e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vecExplodeEffectOrigin = 0x9ec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flSpawnTime = 0x9f8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_unOGSExtraFlags = 0x9fc; // uint8_t m_unOGSExtraFlags; |  0x9fc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDetonationRecorded = 0x9fd; // bool m_bDetonationRecorded; |  0x9fd | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nItemIndex = 0x9fe; // uint16_t m_nItemIndex; |  0x9fe | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0xa00; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flLastBounceSoundTime = 0xa0c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_vecGrenadeSpin = 0xa10; // GlobalTypes::RotationVector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecLastHitSurfaceNormal = 0xa1c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nTicksAtZeroVelocity = 0xa28; // int32_t m_nTicksAtZeroVelocity; |  0xa28 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bHasEverHitEnemy = 0xa2c; // bool m_bHasEverHitEnemy; |  0xa2c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vInitialPosition = 0x9f0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vInitialVelocity = 0x9fc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nBounces = 0xa08; // int32_t m_nBounces; |  0xa08 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nExplodeEffectIndex = 0xa10; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nExplodeEffectTickBegin = 0xa18; // int32_t m_nExplodeEffectTickBegin; |  0xa18 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vecExplodeEffectOrigin = 0xa1c; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flSpawnTime = 0xa28; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_unOGSExtraFlags = 0xa2c; // uint8_t m_unOGSExtraFlags; |  0xa2c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDetonationRecorded = 0xa2d; // bool m_bDetonationRecorded; |  0xa2d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nItemIndex = 0xa2e; // uint16_t m_nItemIndex; |  0xa2e | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0xa30; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flLastBounceSoundTime = 0xa3c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_vecGrenadeSpin = 0xa40; // GlobalTypes::RotationVector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecLastHitSurfaceNormal = 0xa4c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nTicksAtZeroVelocity = 0xa58; // int32_t m_nTicksAtZeroVelocity; |  0xa58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bHasEverHitEnemy = 0xa5c; // bool m_bHasEverHitEnemy; |  0xa5c | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

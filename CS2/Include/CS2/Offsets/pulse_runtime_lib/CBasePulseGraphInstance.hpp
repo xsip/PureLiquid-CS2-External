@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x118
+			// Class size: 0x110
 			namespace CBasePulseGraphInstance /**/ {
 				// NO SCHEMA DATA FOUND!
 			}

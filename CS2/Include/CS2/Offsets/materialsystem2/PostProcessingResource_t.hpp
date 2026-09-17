@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace materialsystem2 {
-			// Class size: 0x138
+			// Class size: 0x158
 			namespace PostProcessingResource_t /**/ {
 				constexpr std::ptrdiff_t m_bHasTonemapParams = 0x0; // bool m_bHasTonemapParams; |  0x0 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_toneMapParams = 0x4; // materialsystem2::PostProcessingTonemapParameters_t  | Schema_DeclaredClass | Size: 0x3c
@@ -22,7 +22,9 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_colorCorrectionVolumeData = 0x110; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_bHasColorCorrection = 0x120; // bool m_bHasColorCorrection; |  0x120 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bHasFogScatteringParams = 0x121; // bool m_bHasFogScatteringParams; |  0x121 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_fogScatteringParams = 0x124; // materialsystem2::PostProcessingFogScatteringParameters_t  | Schema_DeclaredClass | Size: 0x14
+				constexpr std::ptrdiff_t m_fogScatteringParams = 0x124; // materialsystem2::PostProcessingFogScatteringParameters_t  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_bHasLocalExposureParams = 0x144; // bool m_bHasLocalExposureParams; |  0x144 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_localExposureParams = 0x148; // materialsystem2::PostProcessingLocalExposureParameters_t  | Schema_DeclaredClass | Size: 0x10
 			}
 		}
 	}

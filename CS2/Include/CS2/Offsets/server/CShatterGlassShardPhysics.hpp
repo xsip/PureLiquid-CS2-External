@@ -8,11 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xCA0
-			namespace CShatterGlassShardPhysics /*: public CS2::server::CPhysicsProp*/ {
-				constexpr std::ptrdiff_t m_bDebris = 0xc10; // bool m_bDebris; |  0xc10 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hParentShard = 0xc14; // uint32_t m_hParentShard; |  0xc14 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_ShardDesc = 0xc18; // server::shard_model_desc_t  | Schema_DeclaredClass | Size: 0x80
+			// Class size: 0x800
+			namespace CShatterGlassShardPhysics /*: public CS2::server::CBaseModelEntity*/ {
+				constexpr std::ptrdiff_t m_hParentShard = 0x770; // uint32_t m_hParentShard; |  0x770 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ShardDesc = 0x778; // server::shard_model_desc_t  | Schema_DeclaredClass | Size: 0x80
+				constexpr std::ptrdiff_t m_nPoolState = 0x7f8; // client::ShatterGlassEntityPoolState_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bTouchedByPlayer = 0x7fc; // bool m_bTouchedByPlayer; |  0x7fc | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

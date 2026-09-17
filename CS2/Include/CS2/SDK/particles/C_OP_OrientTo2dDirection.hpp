@@ -4,14 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionOperator.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
+#include "CParticleFunctionOperator.hpp"
+#include "../particleslib/CPerParticleVecInput.hpp"
+#include "ParticleAttributeIndex_t.hpp"
 
 
 
@@ -22,13 +23,14 @@ namespace CS2 {
 	namespace particles {
 		class C_OP_OrientTo2dDirection : public CS2::particles::CParticleFunctionOperator {
 		public:
-			PROPERTY(m_flRotOffset,float32, 0x1d8);
-			PROPERTY(m_flSpinStrength,float32, 0x1dc);
-			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x1e0);
-			S2_PAD(0x10);
+			NESTED_PROPERTY(m_vecInput,IDENTITY(particleslib::CPerParticleVecInput), 0x1d8);
+			PROPERTY(m_flRotOffset,float32, 0x890);
+			PROPERTY(m_flSpinStrength,float32, 0x894);
+			NESTED_PROPERTY(m_nFieldOutput,IDENTITY(particles::ParticleAttributeIndex_t), 0x898);
+			S2_PAD(0x6C8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_OrientTo2dDirection) == 0x1E8, "C_OP_OrientTo2dDirection size should be 0x1E8");
+		//static_assert(sizeof(CS2::particles::C_OP_OrientTo2dDirection) == 0x8A0, "C_OP_OrientTo2dDirection size should be 0x8A0");
 
 #endif
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/worldrenderer/BaseSceneObjectOverride_t.hpp>
-#include <SDK/modellib/MeshDrawPrimitiveFlags_t.hpp>
-#include <SDK/modellib/CRenderBufferBinding.hpp>
+#include "BaseSceneObjectOverride_t.hpp"
+#include "../modellib/MeshDrawPrimitiveFlags_t.hpp"
+#include "../modellib/CRenderBufferBinding.hpp"
 
 
 

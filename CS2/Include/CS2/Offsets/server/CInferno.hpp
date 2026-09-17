@@ -8,32 +8,32 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x13F0
+			// Class size: 0x13F8
 			namespace CInferno /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_firePositions = 0x768; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_fireParentPositions = 0xa68; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_bFireIsBurning = 0xd68; // bool m_bFireIsBurning[64]; |  0xd68 | Schema_FixedArray | Size: 0x40
-				constexpr std::ptrdiff_t m_BurnNormal = 0xda8; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
-				constexpr std::ptrdiff_t m_fireCount = 0x10a8; // int32_t m_fireCount; |  0x10a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nInfernoType = 0x10ac; // int32_t m_nInfernoType; |  0x10ac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x10b0; // int32_t m_nFireEffectTickBegin; |  0x10b0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFireLifetime = 0x10b4; // float32 m_nFireLifetime; |  0x10b4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bInPostEffectTime = 0x10b8; // bool m_bInPostEffectTime; |  0x10b8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bWasCreatedInSmoke = 0x10b9; // bool m_bWasCreatedInSmoke; |  0x10b9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_extent = 0x12c0; // navlib::Extent  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_damageTimer = 0x12d8; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_damageRampTimer = 0x12f0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_splashVelocity = 0x1308; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_InitialSplashVelocity = 0x1314; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_startPos = 0x1320; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0x132c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_activeTimer = 0x1338; // server::IntervalTimer  | Schema_DeclaredClass | Size: 0x10
-				constexpr std::ptrdiff_t m_fireSpawnOffset = 0x1348; // int32_t m_fireSpawnOffset; |  0x1348 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nMaxFlames = 0x134c; // int32_t m_nMaxFlames; |  0x134c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSpreadCount = 0x1350; // int32_t m_nSpreadCount; |  0x1350 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_BookkeepingTimer = 0x1358; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_NextSpreadTimer = 0x1370; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_nSourceItemDefIndex = 0x1388; // uint16_t m_nSourceItemDefIndex; |  0x1388 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_firePositions = 0x770; // GlobalTypes::VectorWS[64]  | Schema_FixedArray | Size: 0x300
+				constexpr std::ptrdiff_t m_fireParentPositions = 0xa70; // GlobalTypes::VectorWS[64]  | Schema_FixedArray | Size: 0x300
+				constexpr std::ptrdiff_t m_bFireIsBurning = 0xd70; // bool m_bFireIsBurning[64]; |  0xd70 | Schema_FixedArray | Size: 0x40
+				constexpr std::ptrdiff_t m_BurnNormal = 0xdb0; // GlobalTypes::Vector[64]  | Schema_FixedArray | Size: 0x300
+				constexpr std::ptrdiff_t m_fireCount = 0x10b0; // int32_t m_fireCount; |  0x10b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nInfernoType = 0x10b4; // int32_t m_nInfernoType; |  0x10b4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x10b8; // int32_t m_nFireEffectTickBegin; |  0x10b8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFireLifetime = 0x10bc; // float32 m_nFireLifetime; |  0x10bc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bInPostEffectTime = 0x10c0; // bool m_bInPostEffectTime; |  0x10c0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bWasCreatedInSmoke = 0x10c1; // bool m_bWasCreatedInSmoke; |  0x10c1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_extent = 0x12c8; // navlib::Extent  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_damageTimer = 0x12e0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_damageRampTimer = 0x12f8; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_splashVelocity = 0x1310; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_InitialSplashVelocity = 0x131c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_startPos = 0x1328; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0x1334; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_activeTimer = 0x1340; // server::IntervalTimer  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_fireSpawnOffset = 0x1350; // int32_t m_fireSpawnOffset; |  0x1350 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nMaxFlames = 0x1354; // int32_t m_nMaxFlames; |  0x1354 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSpreadCount = 0x1358; // int32_t m_nSpreadCount; |  0x1358 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_BookkeepingTimer = 0x1360; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_NextSpreadTimer = 0x1378; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_nSourceItemDefIndex = 0x1390; // uint16_t m_nSourceItemDefIndex; |  0x1390 | Schema_Builtin | Size: 0x2
 			}
 		}
 	}

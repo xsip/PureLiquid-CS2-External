@@ -4,16 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/server/CEconWearable.hpp>
-#include <SDK/client/Hull_t.hpp>
-#include <SDK/server/CMovementStatsProperty.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "CEconWearable.hpp"
+#include "RelationshipOverride_t.hpp"
+#include "../client/Hull_t.hpp"
+#include "CMovementStatsProperty.hpp"
 
 
 
@@ -24,20 +25,20 @@ namespace CS2 {
 	namespace server {
 		class CBaseCombatCharacter : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bForceServerRagdoll,bool, 0x940);
-			// PROPERTY(m_hMyWearables,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CEconWearable>>), 0x948);
-			PROPERTY(m_impactEnergyScale,float32, 0x960);
-			PROPERTY(m_bApplyStressDamage,bool, 0x964);
-			PROPERTY(m_bDeathEventsDispatched,bool, 0x965);
-			PROPERTY(m_pVecRelationships,IDENTITY(GlobalTypes::CUtlVector< RelationshipOverride_t >**), 0x9a8);
-			PROPERTY(m_strRelationships,GlobalTypes::CUtlSymbolLarge*, 0x9b0);
-			PROPERTY(m_eHull,IDENTITY(client::Hull_t), 0x9b8);
-			PROPERTY(m_nNavHullIdx,uint32_t, 0x9bc);
-			NESTED_PROPERTY(m_movementStats,IDENTITY(server::CMovementStatsProperty), 0x9c0);
-			S2_PAD(0xC0);
+			PROPERTY(m_bForceServerRagdoll,bool, 0x960);
+			// PROPERTY(m_hMyWearables,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CEconWearable>>), 0x968);
+			PROPERTY(m_impactEnergyScale,float32, 0x980);
+			PROPERTY(m_bApplyStressDamage,bool, 0x984);
+			PROPERTY(m_bDeathEventsDispatched,bool, 0x985);
+			NESTED_PROPERTY(m_vecRelationships,IDENTITY(GlobalTypes::CUtlVector<server::RelationshipOverride_t>), 0x9c8);
+			PROPERTY(m_strRelationships,GlobalTypes::CUtlSymbolLarge*, 0x9e0);
+			PROPERTY(m_eHull,IDENTITY(client::Hull_t), 0x9e8);
+			PROPERTY(m_nNavHullIdx,uint32_t, 0x9ec);
+			NESTED_PROPERTY(m_movementStats,IDENTITY(server::CMovementStatsProperty), 0x9f0);
+			S2_PAD(0xD0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseCombatCharacter) == 0xA00, "CBaseCombatCharacter size should be 0xA00");
+		//static_assert(sizeof(CS2::server::CBaseCombatCharacter) == 0xA30, "CBaseCombatCharacter size should be 0xA30");
 
 #endif
 	}

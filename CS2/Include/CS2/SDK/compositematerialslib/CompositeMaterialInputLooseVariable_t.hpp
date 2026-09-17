@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/compositematerialslib/CompositeMaterialInputLooseVariableType_t.hpp>
-#include <SDK/compositematerialslib/CompositeMaterialVarSystemVar_t.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeIMaterial2.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCTextureBase.hpp>
-#include <SDK/compositematerialslib/CompositeMaterialInputTextureType_t.hpp>
+#include "CompositeMaterialInputLooseVariableType_t.hpp"
+#include "CompositeMaterialVarSystemVar_t.hpp"
+#include "../resourcesystem/InfoForResourceTypeIMaterial2.hpp"
+#include "../resourcesystem/InfoForResourceTypeCTextureBase.hpp"
+#include "CompositeMaterialInputTextureType_t.hpp"
 
 
 

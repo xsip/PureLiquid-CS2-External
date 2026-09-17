@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
+#include "CBaseAnimGraph.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CBaseProp : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bModelOverrodeBlockLOS,bool, 0x940);
-			PROPERTY(m_iShapeType,int32_t, 0x944);
-			PROPERTY(m_bConformToCollisionBounds,bool, 0x948);
-			PROPERTY(m_mPreferredCatchTransform,GlobalTypes::CTransform, 0x950);
+			PROPERTY(m_bModelOverrodeBlockLOS,bool, 0x960);
+			PROPERTY(m_iShapeType,int32_t, 0x964);
+			PROPERTY(m_bConformToCollisionBounds,bool, 0x968);
+			PROPERTY(m_mPreferredCatchTransform,GlobalTypes::CTransform, 0x970);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseProp) == 0x970, "CBaseProp size should be 0x970");
+		//static_assert(sizeof(CS2::server::CBaseProp) == 0x990, "CBaseProp size should be 0x990");
 
 #endif
 	}

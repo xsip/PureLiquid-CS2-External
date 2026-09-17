@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/mathlib_extended/ConstantInfo_t.hpp>
-#include <SDK/mathlib_extended/VariableInfo_t.hpp>
-#include <SDK/mathlib_extended/FunctionInfo_t.hpp>
+#include "ConstantInfo_t.hpp"
+#include "VariableInfo_t.hpp"
+#include "FunctionInfo_t.hpp"
 
 
 

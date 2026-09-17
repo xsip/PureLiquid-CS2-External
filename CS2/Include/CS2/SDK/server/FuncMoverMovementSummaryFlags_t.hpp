@@ -7,11 +7,14 @@ namespace CS2 {
 	namespace server {
 		enum FuncMoverMovementSummaryFlags_t : std::uint32_t {
 			FuncMoverMovementSummaryFlags_t_eEventsDispatched = 0x10,
+			FuncMoverMovementSummaryFlags_t_eLoopToEnd = 0x40,
+			FuncMoverMovementSummaryFlags_t_eLoopToStart = 0x20,
 			FuncMoverMovementSummaryFlags_t_eMovementBegin = 0x1,
 			FuncMoverMovementSummaryFlags_t_eNone = 0x0,
 			FuncMoverMovementSummaryFlags_t_eReversing = 0x8,
 			FuncMoverMovementSummaryFlags_t_eStopBegin = 0x2,
-			FuncMoverMovementSummaryFlags_t_eStopComplete = 0x4
+			FuncMoverMovementSummaryFlags_t_eStopComplete = 0x4,
+			FuncMoverMovementSummaryFlags_t_eTransitionComplete = 0x80
 		};
 	}
 }

@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x4A0
+			// Class size: 0x4E0
 			namespace CBodyComponentSkeletonInstance /*: public CS2::server::CBodyComponent*/ {
-				constexpr std::ptrdiff_t m_skeletonInstance = 0x80; // server::CSkeletonInstance  | Schema_DeclaredClass | Size: 0x420
+				constexpr std::ptrdiff_t m_skeletonInstance = 0x80; // server::CSkeletonInstance  | Schema_DeclaredClass | Size: 0x460
 			}
 		}
 	}

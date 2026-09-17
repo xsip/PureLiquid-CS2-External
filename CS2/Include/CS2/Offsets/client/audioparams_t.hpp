@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x78
 			namespace audioparams_t /**/ {
-				constexpr std::ptrdiff_t localSound = 0x8; // GlobalTypes::Vector[8]  | Schema_FixedArray | Size: 0x60
+				constexpr std::ptrdiff_t localSound = 0x8; // GlobalTypes::VectorWS[8]  | Schema_FixedArray | Size: 0x60
 				constexpr std::ptrdiff_t soundscapeIndex = 0x68; // int32_t soundscapeIndex; |  0x68 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t localBits = 0x6c; // uint8_t localBits; |  0x6c | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t soundscapeEntityListIndex = 0x70; // int32_t soundscapeEntityListIndex; |  0x70 | Schema_Builtin | Size: 0x4

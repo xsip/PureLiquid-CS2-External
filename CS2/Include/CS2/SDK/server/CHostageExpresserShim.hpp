@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseCombatCharacter.hpp>
+#include "CBaseCombatCharacter.hpp"
 
 
 
@@ -26,11 +26,11 @@ namespace CS2 {
 	namespace server {
 		class CHostageExpresserShim : public CS2::server::CBaseCombatCharacter {
 		public:
-			PROPERTY(m_pExpresser,IDENTITY(server::CAI_Expresser*), 0xa00);
+			PROPERTY(m_pExpresser,IDENTITY(server::CAI_Expresser*), 0xa30);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CHostageExpresserShim) == 0xA10, "CHostageExpresserShim size should be 0xA10");
+		//static_assert(sizeof(CS2::server::CHostageExpresserShim) == 0xA40, "CHostageExpresserShim size should be 0xA40");
 
 #endif
 	}

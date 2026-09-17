@@ -6,7 +6,7 @@
 namespace CS2 {
 	namespace mathlib_extended {
 		enum fieldtype_t : std::uint8_t {
-			fieldtype_t_FIELD_AI_SCHEDULE_BITS = 0x45,
+			fieldtype_t_DEPRECATED_FIELD_AI_SCHEDULE_BITS = 0x45,
 			fieldtype_t_FIELD_AMMO_INDEX = 0x43,
 			fieldtype_t_FIELD_ATTACHMENT_HANDLE = 0x42,
 			fieldtype_t_FIELD_BOOLEAN = 0x6,
@@ -49,8 +49,10 @@ namespace CS2 {
 			fieldtype_t_FIELD_MODIFIER_HANDLE = 0x46,
 			fieldtype_t_FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 0x36,
 			fieldtype_t_FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 0x28,
+			fieldtype_t_FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS = 0x52,
 			fieldtype_t_FIELD_NETWORK_QUANTIZED_FLOAT = 0x2c,
 			fieldtype_t_FIELD_NETWORK_QUANTIZED_VECTOR = 0x2b,
+			fieldtype_t_FIELD_NETWORK_QUANTIZED_VECTORWS = 0x51,
 			fieldtype_t_FIELD_POSITION_VECTOR = 0xe,
 			fieldtype_t_FIELD_POSITIVEINTEGER_OR_NULL = 0x23,
 			fieldtype_t_FIELD_QANGLE = 0x27,
@@ -67,7 +69,7 @@ namespace CS2 {
 			fieldtype_t_FIELD_STRING_AND_TOKEN = 0x4b,
 			fieldtype_t_FIELD_TICK = 0x10,
 			fieldtype_t_FIELD_TIME = 0xf,
-			fieldtype_t_FIELD_TYPECOUNT = 0x51,
+			fieldtype_t_FIELD_TYPECOUNT = 0x53,
 			fieldtype_t_FIELD_TYPEUNKNOWN = 0x1d,
 			fieldtype_t_FIELD_UINT16 = 0x3a,
 			fieldtype_t_FIELD_UINT32 = 0x25,

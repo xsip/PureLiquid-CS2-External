@@ -4,22 +4,23 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/worldrenderer/SceneObject_t.hpp>
-#include <SDK/worldrenderer/AggregateSceneObject_t.hpp>
-#include <SDK/worldrenderer/ClutterSceneObject_t.hpp>
-#include <SDK/worldrenderer/AggregateRTProxySceneObject_t.hpp>
-#include <SDK/worldrenderer/ExtraVertexStreamOverride_t.hpp>
-#include <SDK/worldrenderer/MaterialOverride_t.hpp>
-#include <SDK/worldrenderer/WorldNodeOnDiskBufferData_t.hpp>
-#include <SDK/worldrenderer/AggregateInstanceStreamOnDiskData_t.hpp>
-#include <SDK/worldrenderer/AggregateVertexAlbedoStreamOnDiskData_t.hpp>
-#include <SDK/worldrenderer/BakedLightingInfo_t.hpp>
+#include "SceneObject_t.hpp"
+#include "AggregateSceneObject_t.hpp"
+#include "ClutterSceneObject_t.hpp"
+#include "AggregateRTProxySceneObject_t.hpp"
+#include "ExtraVertexStreamOverride_t.hpp"
+#include "MaterialOverride_t.hpp"
+#include "WorldNodeOnDiskBufferData_t.hpp"
+#include "AggregateInstanceStreamOnDiskData_t.hpp"
+#include "AggregateVertexAlbedoStreamOnDiskData_t.hpp"
+#include "AggregateVertexEmissiveStreamOnDiskData_t.hpp"
+#include "BakedLightingInfo_t.hpp"
 
 
 
@@ -40,15 +41,16 @@ namespace CS2 {
 			NESTED_PROPERTY(m_extraVertexStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::WorldNodeOnDiskBufferData_t>), 0xa8);
 			NESTED_PROPERTY(m_aggregateInstanceStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateInstanceStreamOnDiskData_t>), 0xc0);
 			NESTED_PROPERTY(m_vertexAlbedoStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateVertexAlbedoStreamOnDiskData_t>), 0xd8);
-			PROPERTY(m_layerNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0xf0);
-			NESTED_PROPERTY(m_sceneObjectLayerIndices,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x108);
-			PROPERTY(m_grassFileName,GlobalTypes::CUtlString*, 0x120);
-			NESTED_PROPERTY(m_nodeLightingInfo,IDENTITY(worldrenderer::BakedLightingInfo_t), 0x128);
-			PROPERTY(m_bHasBakedGeometryFlag,bool, 0x170);
-			S2_PAD(0x178);
+			NESTED_PROPERTY(m_vertexEmissiveStreams,IDENTITY(GlobalTypes::CUtlVector<worldrenderer::AggregateVertexEmissiveStreamOnDiskData_t>), 0xf0);
+			PROPERTY(m_layerNames,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlString>), 0x108);
+			NESTED_PROPERTY(m_sceneObjectLayerIndices,IDENTITY(GlobalTypes::CUtlVector< uint8 >), 0x120);
+			PROPERTY(m_grassFileName,GlobalTypes::CUtlString*, 0x138);
+			NESTED_PROPERTY(m_nodeLightingInfo,IDENTITY(worldrenderer::BakedLightingInfo_t), 0x140);
+			PROPERTY(m_bHasBakedGeometryFlag,bool, 0x188);
+			S2_PAD(0x190);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::worldrenderer::WorldNode_t) == 0x178, "WorldNode_t size should be 0x178");
+		//static_assert(sizeof(CS2::worldrenderer::WorldNode_t) == 0x190, "WorldNode_t size should be 0x190");
 
 #endif
 	}

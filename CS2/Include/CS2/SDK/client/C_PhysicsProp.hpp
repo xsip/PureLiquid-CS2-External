@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BreakableProp.hpp>
+#include "C_BreakableProp.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_PhysicsProp : public CS2::client::C_BreakableProp {
 		public:
-			PROPERTY(m_bAwake,bool, 0x12d0);
+			PROPERTY(m_bAwake,bool, 0x12f0);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PhysicsProp) == 0x12E0, "C_PhysicsProp size should be 0x12E0");
+		//static_assert(sizeof(CS2::client::C_PhysicsProp) == 0x1300, "C_PhysicsProp size should be 0x1300");
 
 #endif
 	}

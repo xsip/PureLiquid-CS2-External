@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/smartprops/CSmartPropElement_Deformer.hpp>
-#include <SDK/smartprops/CSmartPropAttributeOrientationMode.hpp>
+#include "CSmartPropElement_Deformer.hpp"
+#include "CSmartPropAttributeOrientationMode.hpp"
 
 
 

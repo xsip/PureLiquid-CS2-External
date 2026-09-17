@@ -10,34 +10,29 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0x30C0
 			namespace CChicken /*: public CS2::server::CDynamicProp*/ {
-				constexpr std::ptrdiff_t m_AttributeManager = 0xba0; // server::CAttributeContainer  | Schema_DeclaredClass | Size: 0x2f8
-				constexpr std::ptrdiff_t m_updateTimer = 0xe98; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_stuckAnchor = 0xeb0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_stuckTimer = 0xec0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_collisionStuckTimer = 0xed8; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_isOnGround = 0xef0; // bool m_isOnGround; |  0xef0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vFallVelocity = 0xef4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_desiredActivity = 0xf00; // server::ChickenActivity  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_currentActivity = 0xf04; // server::ChickenActivity  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_activityTimer = 0xf08; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_turnRate = 0xf20; // float32 m_turnRate; |  0xf20 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fleeFrom = 0xf24; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_moveRateThrottleTimer = 0xf28; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_startleTimer = 0xf40; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_vocalizeTimer = 0xf58; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_flWhenZombified = 0xf70; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_jumpedThisFrame = 0xf74; // bool m_jumpedThisFrame; |  0xf74 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_AttributeManager = 0xbc0; // server::CAttributeContainer  | Schema_DeclaredClass | Size: 0x2f8
+				constexpr std::ptrdiff_t m_updateTimer = 0xeb8; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_stuckAnchor = 0xed0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_collisionStuckTimer = 0xee0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_isOnGround = 0xef8; // bool m_isOnGround; |  0xef8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vFallVelocity = 0xefc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_desiredActivity = 0xf08; // client::EChickenActivity  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_currentActivity = 0xf0c; // client::EChickenActivity  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_activityTimer = 0xf10; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_turnRate = 0xf28; // float32 m_turnRate; |  0xf28 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fleeFrom = 0xf2c; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_moveRateThrottleTimer = 0xf30; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_startleTimer = 0xf48; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_vocalizeTimer = 0xf60; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_leader = 0xf78; // GlobalTypes::CHandle<server::CCSPlayerPawn>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_reuseTimer = 0xf90; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_hasBeenUsed = 0xfa8; // bool m_hasBeenUsed; |  0xfa8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_jumpTimer = 0xfb0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_flLastJumpTime = 0xfc8; // float32 m_flLastJumpTime; |  0xfc8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bInJump = 0xfcc; // bool m_bInJump; |  0xfcc | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_repathTimer = 0x2fd8; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_vecPathGoal = 0x3070; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flActiveFollowStartTime = 0x307c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_followMinuteTimer = 0x3080; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_BlockDirectionTimer = 0x30a0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_jumpTimer = 0xfa8; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_flLastJumpTime = 0xfc0; // float32 m_flLastJumpTime; |  0xfc0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_repathTimer = 0x2fd0; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_vecPathGoal = 0x3068; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flActiveFollowStartTime = 0x3074; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_followMinuteTimer = 0x3078; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_BlockDirectionTimer = 0x3098; // server::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

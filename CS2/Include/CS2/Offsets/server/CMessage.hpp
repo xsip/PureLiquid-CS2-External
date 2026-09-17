@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_MessageVolume = 0x4b0; // float32 m_MessageVolume; |  0x4b0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_MessageAttenuation = 0x4b4; // int32_t m_MessageAttenuation; |  0x4b4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_Radius = 0x4b8; // float32 m_Radius; |  0x4b8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_sNoise = 0x4c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_sNoise = 0x4c0; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_OnShowMessage = 0x4c8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}

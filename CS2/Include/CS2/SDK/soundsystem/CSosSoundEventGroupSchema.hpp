@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem/SosGroupType_t.hpp>
-#include <SDK/soundsystem/SosGroupFieldBehavior_t.hpp>
+#include "SosGroupType_t.hpp"
+#include "SosGroupFieldBehavior_t.hpp"
 
 
 

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -28,40 +28,40 @@ namespace CS2 {
 	namespace server {
 		class CPointCommentaryNode : public CS2::server::CBaseAnimGraph {
 		public:
-			PROPERTY(m_iszPreCommands,GlobalTypes::CUtlSymbolLarge*, 0x940);
-			PROPERTY(m_iszPostCommands,GlobalTypes::CUtlSymbolLarge*, 0x948);
-			PROPERTY(m_iszCommentaryFile,GlobalTypes::CUtlSymbolLarge*, 0x950);
-			PROPERTY(m_iszViewTarget,GlobalTypes::CUtlSymbolLarge*, 0x958);
-			PROPERTY(m_hViewTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x960);
-			PROPERTY(m_hViewTargetAngles,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x964);
-			PROPERTY(m_iszViewPosition,GlobalTypes::CUtlSymbolLarge*, 0x968);
-			PROPERTY(m_hViewPosition,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x970);
-			PROPERTY(m_hViewPositionMover,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x974);
-			PROPERTY(m_bPreventMovement,bool, 0x978);
-			PROPERTY(m_bUnderCrosshair,bool, 0x979);
-			PROPERTY(m_bUnstoppable,bool, 0x97a);
-			NESTED_PROPERTY(m_flFinishedTime,IDENTITY(entity2::GameTime_t), 0x97c);
-			PROPERTY(m_vecFinishOrigin,GlobalTypes::Vector, 0x980);
-			PROPERTY(m_vecOriginalAngles,GlobalTypes::QAngle, 0x98c);
-			PROPERTY(m_vecFinishAngles,GlobalTypes::QAngle, 0x998);
-			PROPERTY(m_bPreventChangesWhileMoving,bool, 0x9a4);
-			PROPERTY(m_bDisabled,bool, 0x9a5);
-			PROPERTY(m_vecTeleportOrigin,GlobalTypes::VectorWS, 0x9a8);
-			NESTED_PROPERTY(m_flAbortedPlaybackAt,IDENTITY(entity2::GameTime_t), 0x9b4);
-			NESTED_PROPERTY(m_pOnCommentaryStarted,IDENTITY(entity2::CEntityIOOutput), 0x9b8);
-			NESTED_PROPERTY(m_pOnCommentaryStopped,IDENTITY(entity2::CEntityIOOutput), 0x9d0);
-			PROPERTY(m_bActive,bool, 0x9e8);
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x9ec);
-			PROPERTY(m_flStartTimeInCommentary,float32, 0x9f0);
-			PROPERTY(m_iszTitle,GlobalTypes::CUtlSymbolLarge*, 0x9f8);
-			PROPERTY(m_iszSpeakers,GlobalTypes::CUtlSymbolLarge*, 0xa00);
-			PROPERTY(m_iNodeNumber,int32_t, 0xa08);
-			PROPERTY(m_iNodeNumberMax,int32_t, 0xa0c);
-			PROPERTY(m_bListenedTo,bool, 0xa10);
+			PROPERTY(m_iszPreCommands,GlobalTypes::CUtlSymbolLarge*, 0x960);
+			PROPERTY(m_iszPostCommands,GlobalTypes::CUtlSymbolLarge*, 0x968);
+			PROPERTY(m_iszCommentaryFile,GlobalTypes::CUtlSymbolLarge*, 0x970);
+			PROPERTY(m_iszViewTarget,GlobalTypes::CUtlSymbolLarge*, 0x978);
+			PROPERTY(m_hViewTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x980);
+			PROPERTY(m_hViewTargetAngles,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x984);
+			PROPERTY(m_iszViewPosition,GlobalTypes::CUtlSymbolLarge*, 0x988);
+			PROPERTY(m_hViewPosition,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x990);
+			PROPERTY(m_hViewPositionMover,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x994);
+			PROPERTY(m_bPreventMovement,bool, 0x998);
+			PROPERTY(m_bUnderCrosshair,bool, 0x999);
+			PROPERTY(m_bUnstoppable,bool, 0x99a);
+			NESTED_PROPERTY(m_flFinishedTime,IDENTITY(entity2::GameTime_t), 0x99c);
+			PROPERTY(m_vecFinishOrigin,GlobalTypes::VectorWS, 0x9a0);
+			PROPERTY(m_vecOriginalAngles,GlobalTypes::QAngle, 0x9ac);
+			PROPERTY(m_vecFinishAngles,GlobalTypes::QAngle, 0x9b8);
+			PROPERTY(m_bPreventChangesWhileMoving,bool, 0x9c4);
+			PROPERTY(m_bDisabled,bool, 0x9c5);
+			PROPERTY(m_vecTeleportOrigin,GlobalTypes::VectorWS, 0x9c8);
+			NESTED_PROPERTY(m_flAbortedPlaybackAt,IDENTITY(entity2::GameTime_t), 0x9d4);
+			NESTED_PROPERTY(m_pOnCommentaryStarted,IDENTITY(entity2::CEntityIOOutput), 0x9d8);
+			NESTED_PROPERTY(m_pOnCommentaryStopped,IDENTITY(entity2::CEntityIOOutput), 0x9f0);
+			PROPERTY(m_bActive,bool, 0xa08);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0xa0c);
+			PROPERTY(m_flStartTimeInCommentary,float32, 0xa10);
+			PROPERTY(m_iszTitle,GlobalTypes::CUtlSymbolLarge*, 0xa18);
+			PROPERTY(m_iszSpeakers,GlobalTypes::CUtlSymbolLarge*, 0xa20);
+			PROPERTY(m_iNodeNumber,int32_t, 0xa28);
+			PROPERTY(m_iNodeNumberMax,int32_t, 0xa2c);
+			PROPERTY(m_bListenedTo,bool, 0xa30);
 			S2_PAD(0xE0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPointCommentaryNode) == 0xA20, "CPointCommentaryNode size should be 0xA20");
+		//static_assert(sizeof(CS2::server::CPointCommentaryNode) == 0xA40, "CPointCommentaryNode size should be 0xA40");
 
 #endif
 	}

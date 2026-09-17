@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem/CSosGroupActionSchema.hpp>
-#include <SDK/soundsystem/SosActionStopType_t.hpp>
-#include <SDK/soundsystem/SosActionLimitSortType_t.hpp>
+#include "CSosGroupActionSchema.hpp"
+#include "SosActionStopType_t.hpp"
+#include "SosActionLimitSortType_t.hpp"
 
 
 

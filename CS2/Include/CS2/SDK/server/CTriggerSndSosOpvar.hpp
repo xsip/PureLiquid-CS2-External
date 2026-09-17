@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseTrigger.hpp"
+#include "CBaseEntity.hpp"
 
 
 
@@ -22,24 +22,24 @@ namespace CS2 {
 	namespace server {
 		class CTriggerSndSosOpvar : public CS2::server::CBaseTrigger {
 		public:
-			NESTED_PROPERTY(m_hTouchingPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x8c8);
-			PROPERTY(m_flPosition,GlobalTypes::Vector, 0x8e0);
-			PROPERTY(m_flCenterSize,float32, 0x8ec);
-			PROPERTY(m_flMinVal,float32, 0x8f0);
-			PROPERTY(m_flMaxVal,float32, 0x8f4);
-			PROPERTY(m_opvarName,GlobalTypes::CUtlSymbolLarge*, 0x8f8);
-			PROPERTY(m_stackName,GlobalTypes::CUtlSymbolLarge*, 0x900);
-			PROPERTY(m_operatorName,GlobalTypes::CUtlSymbolLarge*, 0x908);
-			PROPERTY(m_bVolIs2D,bool, 0x910);
-			PROPERTY_ARRAY(m_opvarNameChar,char, 256 , 0x911);
-			PROPERTY_ARRAY(m_stackNameChar,char, 256 , 0xa11);
-			PROPERTY_ARRAY(m_operatorNameChar,char, 256 , 0xb11);
-			PROPERTY(m_VecNormPos,GlobalTypes::Vector, 0xc14);
-			PROPERTY(m_flNormCenterSize,float32, 0xc20);
+			NESTED_PROPERTY(m_hTouchingPlayers,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x8e8);
+			PROPERTY(m_flPosition,GlobalTypes::VectorWS, 0x900);
+			PROPERTY(m_flCenterSize,float32, 0x90c);
+			PROPERTY(m_flMinVal,float32, 0x910);
+			PROPERTY(m_flMaxVal,float32, 0x914);
+			PROPERTY(m_opvarName,GlobalTypes::CUtlSymbolLarge*, 0x918);
+			PROPERTY(m_stackName,GlobalTypes::CUtlSymbolLarge*, 0x920);
+			PROPERTY(m_operatorName,GlobalTypes::CUtlSymbolLarge*, 0x928);
+			PROPERTY(m_bVolIs2D,bool, 0x930);
+			PROPERTY_ARRAY(m_opvarNameChar,char, 256 , 0x931);
+			PROPERTY_ARRAY(m_stackNameChar,char, 256 , 0xa31);
+			PROPERTY_ARRAY(m_operatorNameChar,char, 256 , 0xb31);
+			PROPERTY(m_VecNormPos,GlobalTypes::Vector, 0xc34);
+			PROPERTY(m_flNormCenterSize,float32, 0xc40);
 			S2_PAD(0x360);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerSndSosOpvar) == 0xC28, "CTriggerSndSosOpvar size should be 0xC28");
+		//static_assert(sizeof(CS2::server::CTriggerSndSosOpvar) == 0xC48, "CTriggerSndSosOpvar size should be 0xC48");
 
 #endif
 	}

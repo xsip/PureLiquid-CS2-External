@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/CAnimDesc.hpp>
-#include <SDK/animationsystem/CAnimDecoder.hpp>
-#include <SDK/animationsystem/CAnimFrameSegment.hpp>
+#include "CAnimDesc.hpp"
+#include "CAnimDecoder.hpp"
+#include "CAnimFrameSegment.hpp"
 
 
 

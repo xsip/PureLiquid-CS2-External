@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_TeamplayRules.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/C_RetakeGameRules.hpp>
+#include "C_TeamplayRules.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "C_RetakeGameRules.hpp"
 
 
 
@@ -91,8 +91,8 @@ namespace CS2 {
 			PROPERTY_ARRAY(m_iMatchStats_PlayersAlive_T,int32_t, 30 , 0xaa8);
 			PROPERTY_ARRAY(m_TeamRespawnWaveTimes,float32, 32 , 0xb20);
 			PROPERTY_ARRAY(m_flNextRespawnWave,IDENTITY(entity2::GameTime_t), 32 , 0xba0);
-			PROPERTY(m_vMinimapMins,GlobalTypes::Vector, 0xc20);
-			PROPERTY(m_vMinimapMaxs,GlobalTypes::Vector, 0xc2c);
+			PROPERTY(m_vMinimapMins,GlobalTypes::VectorWS, 0xc20);
+			PROPERTY(m_vMinimapMaxs,GlobalTypes::VectorWS, 0xc2c);
 			PROPERTY_ARRAY(m_MinimapVerticalSectionHeights,float32, 8 , 0xc38);
 			PROPERTY(m_ullLocalMatchID,uint64_t, 0xc58);
 			PROPERTY_ARRAY(m_nEndMatchMapGroupVoteTypes,int32_t, 10 , 0xc60);

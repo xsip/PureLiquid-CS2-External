@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/mathlib_extended/FuseVariableIndex_t.hpp>
-#include <SDK/mathlib_extended/FuseVariableType_t.hpp>
-#include <SDK/mathlib_extended/FuseVariableAccess_t.hpp>
+#include "FuseVariableIndex_t.hpp"
+#include "FuseVariableType_t.hpp"
+#include "FuseVariableAccess_t.hpp"
 
 
 

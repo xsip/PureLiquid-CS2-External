@@ -8,13 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x460
+			// Class size: 0x490
 			namespace CSkeletonInstance /*: public CS2::client::CGameSceneNode*/ {
-				constexpr std::ptrdiff_t m_modelState = 0x150; // client::CModelState  | Schema_DeclaredClass | Size: 0x270
-				constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x3c0; // bool m_bUseParentRenderBounds; |  0x3c0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x3c1; // bool m_bDisableSolidCollisionsForHierarchy; |  0x3c1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_materialGroup = 0x3c4; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nHitboxSet = 0x3c8; // uint8_t m_nHitboxSet; |  0x3c8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_modelState = 0x140; // client::CModelState  | Schema_DeclaredClass | Size: 0x2b0
+				constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x3f0; // bool m_bUseParentRenderBounds; |  0x3f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x3f1; // bool m_bDisableSolidCollisionsForHierarchy; |  0x3f1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDirtyMotionType = 0x3f2; // bool m_bDirtyMotionType; |  0x3f2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsGeneratingLatchedParentSpaceState = 0x3f3; // bool m_bIsGeneratingLatchedParentSpaceState; |  0x3f3 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_materialGroup = 0x3f8; // GlobalTypes::CUtlStringToken  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nHitboxSet = 0x3fc; // uint8_t m_nHitboxSet; |  0x3fc | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

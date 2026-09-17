@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseToggle.hpp>
-#include <SDK/server/locksound_t.hpp>
-#include <SDK/server/FuncDoorSpawnPos_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseToggle.hpp"
+#include "locksound_t.hpp"
+#include "FuncDoorSpawnPos_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -24,38 +24,39 @@ namespace CS2 {
 	namespace server {
 		class CBaseDoor : public CS2::server::CBaseToggle {
 		public:
-			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x7f8);
-			PROPERTY(m_vecMoveDirParentSpace,GlobalTypes::Vector, 0x804);
-			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0x810);
-			PROPERTY(m_bForceClosed,bool, 0x830);
-			PROPERTY(m_bDoorGroup,bool, 0x831);
-			PROPERTY(m_bLocked,bool, 0x832);
-			PROPERTY(m_bIgnoreDebris,bool, 0x833);
-			PROPERTY(m_bNoNPCs,bool, 0x834);
-			PROPERTY(m_eSpawnPosition,IDENTITY(server::FuncDoorSpawnPos_t), 0x838);
-			PROPERTY(m_flBlockDamage,float32, 0x83c);
-			PROPERTY(m_NoiseMoving,GlobalTypes::CUtlSymbolLarge*, 0x840);
-			PROPERTY(m_NoiseArrived,GlobalTypes::CUtlSymbolLarge*, 0x848);
-			PROPERTY(m_NoiseMovingClosed,GlobalTypes::CUtlSymbolLarge*, 0x850);
-			PROPERTY(m_NoiseArrivedClosed,GlobalTypes::CUtlSymbolLarge*, 0x858);
-			PROPERTY(m_ChainTarget,GlobalTypes::CUtlSymbolLarge*, 0x860);
-			NESTED_PROPERTY(m_OnBlockedClosing,IDENTITY(entity2::CEntityIOOutput), 0x868);
-			NESTED_PROPERTY(m_OnBlockedOpening,IDENTITY(entity2::CEntityIOOutput), 0x880);
-			NESTED_PROPERTY(m_OnUnblockedClosing,IDENTITY(entity2::CEntityIOOutput), 0x898);
-			NESTED_PROPERTY(m_OnUnblockedOpening,IDENTITY(entity2::CEntityIOOutput), 0x8b0);
-			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0x8c8);
-			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0x8e0);
-			NESTED_PROPERTY(m_OnClose,IDENTITY(entity2::CEntityIOOutput), 0x8f8);
-			NESTED_PROPERTY(m_OnOpen,IDENTITY(entity2::CEntityIOOutput), 0x910);
-			NESTED_PROPERTY(m_OnLockedUse,IDENTITY(entity2::CEntityIOOutput), 0x928);
-			PROPERTY(m_bLoopMoveSound,bool, 0x940);
-			PROPERTY(m_bCreateNavObstacle,bool, 0x960);
-			PROPERTY(m_isChaining,bool, 0x961);
-			PROPERTY(m_bIsUsable,bool, 0x962);
-			S2_PAD(0x180);
+			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x800);
+			PROPERTY(m_vecMoveDirParentSpace,GlobalTypes::Vector, 0x80c);
+			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0x818);
+			PROPERTY(m_bForceClosed,bool, 0x838);
+			PROPERTY(m_bDoorGroup,bool, 0x839);
+			PROPERTY(m_bLocked,bool, 0x83a);
+			PROPERTY(m_bIgnoreDebris,bool, 0x83b);
+			PROPERTY(m_bNoNPCs,bool, 0x83c);
+			PROPERTY(m_eSpawnPosition,IDENTITY(server::FuncDoorSpawnPos_t), 0x840);
+			PROPERTY(m_flBlockDamage,float32, 0x844);
+			PROPERTY(m_NoiseMoving,GlobalTypes::CGameSoundEventName, 0x848);
+			PROPERTY(m_NoiseArrived,GlobalTypes::CGameSoundEventName, 0x850);
+			PROPERTY(m_NoiseMovingClosed,GlobalTypes::CGameSoundEventName, 0x858);
+			PROPERTY(m_NoiseArrivedClosed,GlobalTypes::CGameSoundEventName, 0x860);
+			PROPERTY(m_ChainTarget,GlobalTypes::CUtlSymbolLarge*, 0x868);
+			NESTED_PROPERTY(m_OnBlockedClosing,IDENTITY(entity2::CEntityIOOutput), 0x870);
+			NESTED_PROPERTY(m_OnBlockedOpening,IDENTITY(entity2::CEntityIOOutput), 0x888);
+			NESTED_PROPERTY(m_OnUnblockedClosing,IDENTITY(entity2::CEntityIOOutput), 0x8a0);
+			NESTED_PROPERTY(m_OnUnblockedOpening,IDENTITY(entity2::CEntityIOOutput), 0x8b8);
+			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0x8d0);
+			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0x8e8);
+			NESTED_PROPERTY(m_OnClose,IDENTITY(entity2::CEntityIOOutput), 0x900);
+			NESTED_PROPERTY(m_OnOpen,IDENTITY(entity2::CEntityIOOutput), 0x918);
+			NESTED_PROPERTY(m_OnLockedUse,IDENTITY(entity2::CEntityIOOutput), 0x930);
+			PROPERTY(m_bLoopMoveSound,bool, 0x948);
+			PROPERTY(m_bCreateNavObstacle,bool, 0x968);
+			PROPERTY(m_flSpeed,float32, 0x96c);
+			PROPERTY(m_isChaining,bool, 0x970);
+			PROPERTY(m_bIsUsable,bool, 0x971);
+			S2_PAD(0x188);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseDoor) == 0x968, "CBaseDoor size should be 0x968");
+		//static_assert(sizeof(CS2::server::CBaseDoor) == 0x978, "CBaseDoor size should be 0x978");
 
 #endif
 	}

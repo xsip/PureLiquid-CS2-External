@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmFloatValueNode_CDefinition.hpp>
-#include <SDK/animlib/NmEasingOperation_t.hpp>
+#include "CNmFloatValueNode_CDefinition.hpp"
+#include "NmEasingOperation_t.hpp"
 
 
 

@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x11B8
+			// Class size: 0x11E0
 			namespace C_PointCommentaryNode /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_bActive = 0x1170; // bool m_bActive; |  0x1170 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bWasActive = 0x1171; // bool m_bWasActive; |  0x1171 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flEndTime = 0x1174; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTime = 0x1178; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartTimeInCommentary = 0x117c; // float32 m_flStartTimeInCommentary; |  0x117c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iszCommentaryFile = 0x1180; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszTitle = 0x1188; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iszSpeakers = 0x1190; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_iNodeNumber = 0x1198; // int32_t m_iNodeNumber; |  0x1198 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iNodeNumberMax = 0x119c; // int32_t m_iNodeNumberMax; |  0x119c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bListenedTo = 0x11a0; // bool m_bListenedTo; |  0x11a0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_sndCommentary = 0x11a8; // client::CSoundPatch**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_hViewPosition = 0x11b0; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bRestartAfterRestore = 0x11b4; // bool m_bRestartAfterRestore; |  0x11b4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bActive = 0x1198; // bool m_bActive; |  0x1198 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bWasActive = 0x1199; // bool m_bWasActive; |  0x1199 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flEndTime = 0x119c; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTime = 0x11a0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartTimeInCommentary = 0x11a4; // float32 m_flStartTimeInCommentary; |  0x11a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszCommentaryFile = 0x11a8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszTitle = 0x11b0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iszSpeakers = 0x11b8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_iNodeNumber = 0x11c0; // int32_t m_iNodeNumber; |  0x11c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iNodeNumberMax = 0x11c4; // int32_t m_iNodeNumberMax; |  0x11c4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bListenedTo = 0x11c8; // bool m_bListenedTo; |  0x11c8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_sndCommentary = 0x11d0; // client::CSoundPatch**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_hViewPosition = 0x11d8; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bRestartAfterRestore = 0x11dc; // bool m_bRestartAfterRestore; |  0x11dc | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

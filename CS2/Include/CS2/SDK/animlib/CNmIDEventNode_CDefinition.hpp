@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmIDValueNode_CDefinition.hpp>
-#include <SDK/animlib/CNmBitFlags.hpp>
+#include "CNmIDValueNode_CDefinition.hpp"
+#include "CNmBitFlags.hpp"
 
 
 

@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x8D8
+			// Class size: 0x8F8
 			namespace CTriggerTeleport /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_iLandmark = 0x8c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bUseLandmarkAngles = 0x8d0; // bool m_bUseLandmarkAngles; |  0x8d0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bMirrorPlayer = 0x8d1; // bool m_bMirrorPlayer; |  0x8d1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCheckDestIfClearForPlayer = 0x8d2; // bool m_bCheckDestIfClearForPlayer; |  0x8d2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_iLandmark = 0x8e8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bUseLandmarkAngles = 0x8f0; // bool m_bUseLandmarkAngles; |  0x8f0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bMirrorPlayer = 0x8f1; // bool m_bMirrorPlayer; |  0x8f1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCheckDestIfClearForPlayer = 0x8f2; // bool m_bCheckDestIfClearForPlayer; |  0x8f2 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

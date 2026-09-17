@@ -8,14 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x38
+			// Class size: 0x50
 			namespace CInfoChoreoAnchorPosition /**/ {
-				constexpr std::ptrdiff_t m_vOrigin = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_qAngles = 0xc; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vExtentsMin = 0x18; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vExtentsMax = 0x24; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flRadius = 0x30; // float32 m_flRadius; |  0x30 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nShapeType = 0x34; // server::CInfoChoreoLocatorShapeType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_vOriginLS = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_qAnglesLS = 0x10; // GlobalTypes::Quaternion  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_vExtentsMin = 0x20; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vExtentsMax = 0x2c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flRadius = 0x38; // float32 m_flRadius; |  0x38 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bOnlyWarpPosition = 0x3c; // bool m_bOnlyWarpPosition; |  0x3c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hParent = 0x40; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nShapeType = 0x44; // server::CInfoChoreoLocatorShapeType_t  | Schema_DeclaredEnum | Size: 0x4
 			}
 		}
 	}

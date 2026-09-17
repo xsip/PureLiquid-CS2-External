@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_szDestinationInputKey = 0x60; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_szHidingSpotInputKey = 0x68; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_szThreatInputKey = 0x70; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vecDestination = 0x78; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecDestination = 0x78; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_bAutoLookAdjust = 0x84; // bool m_bAutoLookAdjust; |  0x84 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bComputePath = 0x85; // bool m_bComputePath; |  0x85 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_flDamagingAreasPenaltyCost = 0x88; // float32 m_flDamagingAreasPenaltyCost; |  0x88 | Schema_Builtin | Size: 0x4

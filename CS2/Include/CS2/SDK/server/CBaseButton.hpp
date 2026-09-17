@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseToggle.hpp>
-#include <SDK/server/locksound_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseToggle.hpp"
+#include "locksound_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -29,35 +29,36 @@ namespace CS2 {
 	namespace server {
 		class CBaseButton : public CS2::server::CBaseToggle {
 		public:
-			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x7e8);
-			PROPERTY(m_fStayPushed,bool, 0x7f4);
-			PROPERTY(m_fRotating,bool, 0x7f5);
-			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0x7f8);
-			PROPERTY(m_sUseSound,GlobalTypes::CUtlSymbolLarge*, 0x818);
-			PROPERTY(m_sLockedSound,GlobalTypes::CUtlSymbolLarge*, 0x820);
-			PROPERTY(m_sUnlockedSound,GlobalTypes::CUtlSymbolLarge*, 0x828);
-			PROPERTY(m_sOverrideAnticipationName,GlobalTypes::CUtlSymbolLarge*, 0x830);
-			PROPERTY(m_bLocked,bool, 0x838);
-			PROPERTY(m_bDisabled,bool, 0x839);
-			NESTED_PROPERTY(m_flUseLockedTime,IDENTITY(entity2::GameTime_t), 0x83c);
-			PROPERTY(m_bSolidBsp,bool, 0x840);
-			NESTED_PROPERTY(m_OnDamaged,IDENTITY(entity2::CEntityIOOutput), 0x848);
-			NESTED_PROPERTY(m_OnPressed,IDENTITY(entity2::CEntityIOOutput), 0x860);
-			NESTED_PROPERTY(m_OnUseLocked,IDENTITY(entity2::CEntityIOOutput), 0x878);
-			NESTED_PROPERTY(m_OnIn,IDENTITY(entity2::CEntityIOOutput), 0x890);
-			NESTED_PROPERTY(m_OnOut,IDENTITY(entity2::CEntityIOOutput), 0x8a8);
-			PROPERTY(m_nState,int32_t, 0x8c0);
-			PROPERTY(m_hConstraint,GlobalTypes::CEntityHandle, 0x8c4);
-			PROPERTY(m_hConstraintParent,GlobalTypes::CEntityHandle, 0x8c8);
-			PROPERTY(m_bForceNpcExclude,bool, 0x8cc);
-			PROPERTY(m_sGlowEntity,GlobalTypes::CUtlSymbolLarge*, 0x8d0);
-			PROPERTY(m_glowEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseModelEntity>), 0x8d8);
-			PROPERTY(m_usable,bool, 0x8dc);
-			PROPERTY(m_szDisplayText,GlobalTypes::CUtlSymbolLarge*, 0x8e0);
+			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x7f0);
+			PROPERTY(m_fStayPushed,bool, 0x7fc);
+			PROPERTY(m_fRotating,bool, 0x7fd);
+			NESTED_PROPERTY(m_ls,IDENTITY(server::locksound_t), 0x800);
+			PROPERTY(m_sUseSound,GlobalTypes::CGameSoundEventName, 0x820);
+			PROPERTY(m_sLockedSound,GlobalTypes::CGameSoundEventName, 0x828);
+			PROPERTY(m_sUnlockedSound,GlobalTypes::CGameSoundEventName, 0x830);
+			PROPERTY(m_sOverrideAnticipationName,GlobalTypes::CUtlSymbolLarge*, 0x838);
+			PROPERTY(m_bLocked,bool, 0x840);
+			PROPERTY(m_bDisabled,bool, 0x841);
+			PROPERTY(m_flSpeed,float32, 0x844);
+			NESTED_PROPERTY(m_flUseLockedTime,IDENTITY(entity2::GameTime_t), 0x848);
+			PROPERTY(m_bSolidBsp,bool, 0x84c);
+			NESTED_PROPERTY(m_OnDamaged,IDENTITY(entity2::CEntityIOOutput), 0x850);
+			NESTED_PROPERTY(m_OnPressed,IDENTITY(entity2::CEntityIOOutput), 0x868);
+			NESTED_PROPERTY(m_OnUseLocked,IDENTITY(entity2::CEntityIOOutput), 0x880);
+			NESTED_PROPERTY(m_OnIn,IDENTITY(entity2::CEntityIOOutput), 0x898);
+			NESTED_PROPERTY(m_OnOut,IDENTITY(entity2::CEntityIOOutput), 0x8b0);
+			PROPERTY(m_nState,int32_t, 0x8c8);
+			PROPERTY(m_hConstraint,GlobalTypes::CEntityHandle, 0x8cc);
+			PROPERTY(m_hConstraintParent,GlobalTypes::CEntityHandle, 0x8d0);
+			PROPERTY(m_bForceNpcExclude,bool, 0x8d4);
+			PROPERTY(m_sGlowEntity,GlobalTypes::CUtlSymbolLarge*, 0x8d8);
+			PROPERTY(m_glowEntity,IDENTITY(GlobalTypes::CHandle<server::CBaseModelEntity>), 0x8e0);
+			PROPERTY(m_usable,bool, 0x8e4);
+			PROPERTY(m_szDisplayText,GlobalTypes::CUtlSymbolLarge*, 0x8e8);
 			S2_PAD(0x100);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseButton) == 0x8E8, "CBaseButton size should be 0x8E8");
+		//static_assert(sizeof(CS2::server::CBaseButton) == 0x8F0, "CBaseButton size should be 0x8F0");
 
 #endif
 	}

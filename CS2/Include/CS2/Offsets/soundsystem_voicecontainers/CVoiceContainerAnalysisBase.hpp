@@ -8,10 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x50
+			// Class size: 0x48
 			namespace CVoiceContainerAnalysisBase /**/ {
-				constexpr std::ptrdiff_t m_bRegenerateCurveOnCompile = 0x8; // bool m_bRegenerateCurveOnCompile; |  0x8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_curve = 0x10; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
+				constexpr std::ptrdiff_t m_curve = 0x8; // GlobalTypes::CPiecewiseCurve  | Schema_Atomic | Size: 0x40
 			}
 		}
 	}

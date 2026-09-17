@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
+#include "CBaseModelEntity.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CFuncVPhysicsClip : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_bDisabled,bool, 0x768);
+			PROPERTY(m_bDisabled,bool, 0x770);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncVPhysicsClip) == 0x770, "CFuncVPhysicsClip size should be 0x770");
+		//static_assert(sizeof(CS2::server::CFuncVPhysicsClip) == 0x778, "CFuncVPhysicsClip size should be 0x778");
 
 #endif
 	}

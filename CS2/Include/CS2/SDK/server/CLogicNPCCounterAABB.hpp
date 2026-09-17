@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLogicNPCCounter.hpp>
+#include "CLogicNPCCounter.hpp"
 
 
 
@@ -23,8 +23,8 @@ namespace CS2 {
 		public:
 			PROPERTY(m_vDistanceOuterMins,GlobalTypes::Vector, 0x728);
 			PROPERTY(m_vDistanceOuterMaxs,GlobalTypes::Vector, 0x734);
-			PROPERTY(m_vOuterMins,GlobalTypes::Vector, 0x740);
-			PROPERTY(m_vOuterMaxs,GlobalTypes::Vector, 0x74c);
+			PROPERTY(m_vOuterMins,GlobalTypes::VectorWS, 0x740);
+			PROPERTY(m_vOuterMaxs,GlobalTypes::VectorWS, 0x74c);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS

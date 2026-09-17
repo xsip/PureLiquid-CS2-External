@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CFuncNavBlocker.hpp>
+#include "CFuncNavBlocker.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CScriptNavBlocker : public CS2::server::CFuncNavBlocker {
 		public:
-			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x780);
+			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x788);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CScriptNavBlocker) == 0x790, "CScriptNavBlocker size should be 0x790");
+		//static_assert(sizeof(CS2::server::CScriptNavBlocker) == 0x798, "CScriptNavBlocker size should be 0x798");
 
 #endif
 	}

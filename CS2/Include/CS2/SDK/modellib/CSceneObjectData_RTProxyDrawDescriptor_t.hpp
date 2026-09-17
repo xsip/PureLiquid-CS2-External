@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CMaterialDrawDescriptor.hpp>
-#include <SDK/modellib/VertexAlbedoFormat_t.hpp>
+#include "CMaterialDrawDescriptor.hpp"
+#include "VertexAlbedoFormat_t.hpp"
 
 
 
@@ -22,16 +22,23 @@ namespace CS2 {
 	namespace modellib {
 		class CSceneObjectData_RTProxyDrawDescriptor_t  {
 		public:
-			NESTED_PROPERTY(m_drawDesc,IDENTITY(modellib::CMaterialDrawDescriptor), 0x0);
-			PROPERTY(m_mWorldFromLocal,GlobalTypes::matrix3x4_t, 0x108);
-			PROPERTY(m_nVertexAlbedoFormat,IDENTITY(modellib::VertexAlbedoFormat_t), 0x138);
-			PROPERTY(m_nVertexAlbedoVB,int8_t, 0x139);
-			PROPERTY(m_nVertexAlbedoOffset,uint16_t, 0x13a);
-			PROPERTY(m_nVertexAlbedoStride,uint16_t, 0x13c);
-			S2_PAD(0x140);
+			PROPERTY(m_materialGroupToken,uint32_t, 0x0);
+			PROPERTY(m_nSrcDrawIndex,int32_t, 0x4);
+			NESTED_PROPERTY(m_drawDesc,IDENTITY(modellib::CMaterialDrawDescriptor), 0x8);
+			PROPERTY(m_mWorldFromLocal,GlobalTypes::matrix3x4_t, 0x120);
+			PROPERTY(m_nVertexAlbedoFormat,IDENTITY(modellib::VertexAlbedoFormat_t), 0x150);
+			PROPERTY(m_nVertexAlbedoVB,int8_t, 0x151);
+			PROPERTY(m_nVertexAlbedoOffset,uint16_t, 0x152);
+			PROPERTY(m_nVertexAlbedoStride,uint16_t, 0x154);
+			PROPERTY(m_nVertexEmissiveFormat,IDENTITY(modellib::VertexAlbedoFormat_t), 0x156);
+			PROPERTY(m_nVertexEmissiveVB,int8_t, 0x157);
+			PROPERTY(m_nVertexEmissiveOffset,uint16_t, 0x158);
+			PROPERTY(m_nVertexEmissiveStride,uint16_t, 0x15a);
+			PROPERTY(m_fEmissiveFactor,float32, 0x15c);
+			S2_PAD(0x160);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::modellib::CSceneObjectData_RTProxyDrawDescriptor_t) == 0x140, "CSceneObjectData::RTProxyDrawDescriptor_t size should be 0x140");
+		//static_assert(sizeof(CS2::modellib::CSceneObjectData_RTProxyDrawDescriptor_t) == 0x160, "CSceneObjectData::RTProxyDrawDescriptor_t size should be 0x160");
 
 #endif
 	}

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPhysicsProp.hpp>
+#include "CPhysicsProp.hpp"
 
 
 
@@ -21,15 +21,15 @@ namespace CS2 {
 	namespace server {
 		class CPhysicsPropRespawnable : public CS2::server::CPhysicsProp {
 		public:
-			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0xc10);
-			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0xc1c);
-			PROPERTY(m_vOriginalMins,GlobalTypes::Vector, 0xc28);
-			PROPERTY(m_vOriginalMaxs,GlobalTypes::Vector, 0xc34);
-			PROPERTY(m_flRespawnDuration,float32, 0xc40);
+			PROPERTY(m_vOriginalSpawnOrigin,GlobalTypes::VectorWS, 0xc30);
+			PROPERTY(m_vOriginalSpawnAngles,GlobalTypes::QAngle, 0xc3c);
+			PROPERTY(m_vOriginalMins,GlobalTypes::Vector, 0xc48);
+			PROPERTY(m_vOriginalMaxs,GlobalTypes::Vector, 0xc54);
+			PROPERTY(m_flRespawnDuration,float32, 0xc60);
 			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPhysicsPropRespawnable) == 0xC50, "CPhysicsPropRespawnable size should be 0xC50");
+		//static_assert(sizeof(CS2::server::CPhysicsPropRespawnable) == 0xC70, "CPhysicsPropRespawnable size should be 0xC70");
 
 #endif
 	}

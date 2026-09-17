@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_SoundOpvarSetPointEntity.hpp>
+#include "CSoundOpvarSetBoxEntity.hpp"
 
 
 
@@ -19,7 +19,7 @@
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace client {
-		class C_SoundOpvarSetAABBEntity : public CS2::client::C_SoundOpvarSetPointEntity {
+		class C_SoundOpvarSetAABBEntity : public CS2::client::CSoundOpvarSetBoxEntity {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS

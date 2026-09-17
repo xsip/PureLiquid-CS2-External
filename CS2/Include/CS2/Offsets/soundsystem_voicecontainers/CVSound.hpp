@@ -8,19 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0x78
+			// Class size: 0x40
 			namespace CVSound /**/ {
-				constexpr std::ptrdiff_t m_nRate = 0x0; // int32_t m_nRate; |  0x0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nFormat = 0x4; // soundsystem_voicecontainers::CVSoundFormat_t  | Schema_DeclaredEnum | Size: 0x1
-				constexpr std::ptrdiff_t m_nChannels = 0x8; // uint32_t m_nChannels; |  0x8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nLoopStart = 0xc; // int32_t m_nLoopStart; |  0xc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSampleCount = 0x10; // uint32_t m_nSampleCount; |  0x10 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDuration = 0x14; // float32 m_flDuration; |  0x14 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_Sentences = 0x18; // GlobalTypes::CUtlVector<soundsystem_voicecontainers::CAudioSentence>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nStreamingSize = 0x30; // uint32_t m_nStreamingSize; |  0x30 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSeekTable = 0x38; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nLoopEnd = 0x50; // int32_t m_nLoopEnd; |  0x50 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_encodedHeader = 0x58; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_Sentences = 0x0; // GlobalTypes::CUtlLeanVector<soundsystem_voicecontainers::CAudioSentence>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_nRate = 0x10; // int32_t m_nRate; |  0x10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nFormat = 0x14; // soundsystem_voicecontainers::CVSoundFormat_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_nChannels = 0x18; // uint32_t m_nChannels; |  0x18 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nLoopStart = 0x1c; // int32_t m_nLoopStart; |  0x1c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSampleCount = 0x20; // uint32_t m_nSampleCount; |  0x20 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDuration = 0x24; // float32 m_flDuration; |  0x24 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nStreamingSize = 0x28; // uint32_t m_nStreamingSize; |  0x28 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nLoopEnd = 0x2c; // int32_t m_nLoopEnd; |  0x2c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

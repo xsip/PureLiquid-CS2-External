@@ -11,6 +11,7 @@ namespace CS2 {
 			// Class size: 0x48
 			namespace CPlayerPawnComponent /**/ {
 				constexpr std::ptrdiff_t __m_pChainEntity = 0x8; // entity2::CNetworkVarChainer  | Schema_DeclaredClass | Size: 0x28
+				constexpr std::ptrdiff_t m_pComponentGraphController = 0x30; // client::CAnimGraphControllerPtr  | Schema_DeclaredClass | Size: 0x8
 			}
 		}
 	}

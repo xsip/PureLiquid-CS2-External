@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CCSWeaponBase.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/server/EntitySpottedState_t.hpp>
+#include "CCSWeaponBase.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "EntitySpottedState_t.hpp"
 
 
 
@@ -23,21 +23,21 @@ namespace CS2 {
 	namespace server {
 		class CC4 : public CS2::server::CCSWeaponBase {
 		public:
-			PROPERTY(m_vecLastValidPlayerHeldPosition,GlobalTypes::Vector, 0x1060);
-			PROPERTY(m_vecLastValidDroppedPosition,GlobalTypes::Vector, 0x106c);
-			PROPERTY(m_bDoValidDroppedPositionCheck,bool, 0x1078);
-			PROPERTY(m_bStartedArming,bool, 0x1079);
-			NESTED_PROPERTY(m_fArmedTime,IDENTITY(entity2::GameTime_t), 0x107c);
-			PROPERTY(m_bBombPlacedAnimation,bool, 0x1080);
-			PROPERTY(m_bIsPlantingViaUse,bool, 0x1081);
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(server::EntitySpottedState_t), 0x1088);
-			PROPERTY(m_nSpotRules,int32_t, 0x10a0);
-			PROPERTY_ARRAY(m_bPlayedArmingBeeps,bool, 7 , 0x10a4);
-			PROPERTY(m_bBombPlanted,bool, 0x10ab);
+			PROPERTY(m_vecLastValidPlayerHeldPosition,GlobalTypes::VectorWS, 0x1080);
+			PROPERTY(m_vecLastValidDroppedPosition,GlobalTypes::VectorWS, 0x108c);
+			PROPERTY(m_bDoValidDroppedPositionCheck,bool, 0x1098);
+			PROPERTY(m_bStartedArming,bool, 0x1099);
+			NESTED_PROPERTY(m_fArmedTime,IDENTITY(entity2::GameTime_t), 0x109c);
+			PROPERTY(m_bBombPlacedAnimation,bool, 0x10a0);
+			PROPERTY(m_bIsPlantingViaUse,bool, 0x10a1);
+			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(server::EntitySpottedState_t), 0x10a8);
+			PROPERTY(m_nSpotRules,int32_t, 0x10c0);
+			PROPERTY_ARRAY(m_bPlayedArmingBeeps,bool, 7 , 0x10c4);
+			PROPERTY(m_bBombPlanted,bool, 0x10cb);
 			S2_PAD(0x80);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CC4) == 0x10B0, "CC4 size should be 0x10B0");
+		//static_assert(sizeof(CS2::server::CC4) == 0x10D0, "CC4 size should be 0x10D0");
 
 #endif
 	}

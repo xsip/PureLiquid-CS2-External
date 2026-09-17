@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseAnimGraph.hpp>
-#include <SDK/client/CountdownTimer.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "CountdownTimer.hpp"
 
 
 
@@ -22,33 +22,33 @@ namespace CS2 {
 	namespace client {
 		class C_Fish : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_pos,GlobalTypes::Vector, 0x1158);
-			PROPERTY(m_vel,GlobalTypes::Vector, 0x1164);
-			PROPERTY(m_angles,GlobalTypes::QAngle, 0x1170);
-			PROPERTY(m_localLifeState,int32_t, 0x117c);
-			PROPERTY(m_deathDepth,float32, 0x1180);
-			PROPERTY(m_deathAngle,float32, 0x1184);
-			PROPERTY(m_buoyancy,float32, 0x1188);
-			NESTED_PROPERTY(m_wiggleTimer,IDENTITY(client::CountdownTimer), 0x1190);
-			PROPERTY(m_wigglePhase,float32, 0x11a8);
-			PROPERTY(m_wiggleRate,float32, 0x11ac);
-			PROPERTY(m_actualPos,GlobalTypes::Vector, 0x11b0);
-			PROPERTY(m_actualAngles,GlobalTypes::QAngle, 0x11bc);
-			PROPERTY(m_poolOrigin,GlobalTypes::Vector, 0x11c8);
-			PROPERTY(m_waterLevel,float32, 0x11d4);
-			PROPERTY(m_gotUpdate,bool, 0x11d8);
-			PROPERTY(m_x,float32, 0x11dc);
-			PROPERTY(m_y,float32, 0x11e0);
-			PROPERTY(m_z,float32, 0x11e4);
-			PROPERTY(m_angle,float32, 0x11e8);
-			PROPERTY_ARRAY(m_errorHistory,float32, 20 , 0x11ec);
-			PROPERTY(m_errorHistoryIndex,int32_t, 0x123c);
-			PROPERTY(m_errorHistoryCount,int32_t, 0x1240);
-			PROPERTY(m_averageError,float32, 0x1244);
+			PROPERTY(m_pos,GlobalTypes::VectorWS, 0x1180);
+			PROPERTY(m_vel,GlobalTypes::Vector, 0x118c);
+			PROPERTY(m_angles,GlobalTypes::QAngle, 0x1198);
+			PROPERTY(m_localLifeState,int32_t, 0x11a4);
+			PROPERTY(m_deathDepth,float32, 0x11a8);
+			PROPERTY(m_deathAngle,float32, 0x11ac);
+			PROPERTY(m_buoyancy,float32, 0x11b0);
+			NESTED_PROPERTY(m_wiggleTimer,IDENTITY(client::CountdownTimer), 0x11b8);
+			PROPERTY(m_wigglePhase,float32, 0x11d0);
+			PROPERTY(m_wiggleRate,float32, 0x11d4);
+			PROPERTY(m_actualPos,GlobalTypes::VectorWS, 0x11d8);
+			PROPERTY(m_actualAngles,GlobalTypes::QAngle, 0x11e4);
+			PROPERTY(m_poolOrigin,GlobalTypes::VectorWS, 0x11f0);
+			PROPERTY(m_waterLevel,float32, 0x11fc);
+			PROPERTY(m_gotUpdate,bool, 0x1200);
+			PROPERTY(m_x,float32, 0x1204);
+			PROPERTY(m_y,float32, 0x1208);
+			PROPERTY(m_z,float32, 0x120c);
+			PROPERTY(m_angle,float32, 0x1210);
+			PROPERTY_ARRAY(m_errorHistory,float32, 20 , 0x1214);
+			PROPERTY(m_errorHistoryIndex,int32_t, 0x1264);
+			PROPERTY(m_errorHistoryCount,int32_t, 0x1268);
+			PROPERTY(m_averageError,float32, 0x126c);
 			S2_PAD(0xF0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_Fish) == 0x1248, "C_Fish size should be 0x1248");
+		//static_assert(sizeof(CS2::client::C_Fish) == 0x1270, "C_Fish size should be 0x1270");
 
 #endif
 	}

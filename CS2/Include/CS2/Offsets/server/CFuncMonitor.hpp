@@ -8,17 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7A8
+			// Class size: 0x7B0
 			namespace CFuncMonitor /*: public CS2::server::CFuncBrush*/ {
-				constexpr std::ptrdiff_t m_targetCamera = 0x788; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nResolutionEnum = 0x790; // int32_t m_nResolutionEnum; |  0x790 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bRenderShadows = 0x794; // bool m_bRenderShadows; |  0x794 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseUniqueColorTarget = 0x795; // bool m_bUseUniqueColorTarget; |  0x795 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_brushModelName = 0x798; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hTargetCamera = 0x7a0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_bEnabled = 0x7a4; // bool m_bEnabled; |  0x7a4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDraw3DSkybox = 0x7a5; // bool m_bDraw3DSkybox; |  0x7a5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bStartEnabled = 0x7a6; // bool m_bStartEnabled; |  0x7a6 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_targetCamera = 0x790; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nResolutionEnum = 0x798; // int32_t m_nResolutionEnum; |  0x798 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bRenderShadows = 0x79c; // bool m_bRenderShadows; |  0x79c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseUniqueColorTarget = 0x79d; // bool m_bUseUniqueColorTarget; |  0x79d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_brushModelName = 0x7a0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hTargetCamera = 0x7a8; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_bEnabled = 0x7ac; // bool m_bEnabled; |  0x7ac | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDraw3DSkybox = 0x7ad; // bool m_bDraw3DSkybox; |  0x7ad | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bStartEnabled = 0x7ae; // bool m_bStartEnabled; |  0x7ae | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

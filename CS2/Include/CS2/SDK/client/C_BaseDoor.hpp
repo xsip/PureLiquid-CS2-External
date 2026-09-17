@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseToggle.hpp>
+#include "C_BaseToggle.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_BaseDoor : public CS2::client::C_BaseToggle {
 		public:
-			PROPERTY(m_bIsUsable,bool, 0xfa8);
+			PROPERTY(m_bIsUsable,bool, 0xfb0);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BaseDoor) == 0xFB0, "C_BaseDoor size should be 0xFB0");
+		//static_assert(sizeof(CS2::client::C_BaseDoor) == 0xFB8, "C_BaseDoor size should be 0xFB8");
 
 #endif
 	}

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/mathlib_extended/PackedAABB_t.hpp>
-#include <SDK/modellib/CDrawCullingData.hpp>
+#include "../mathlib_extended/PackedAABB_t.hpp"
+#include "CDrawCullingData.hpp"
 
 
 

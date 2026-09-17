@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particleslib {
-			// Class size: 0x138
+			// Class size: 0x130
 			namespace CParticleBindingRealPulse /*: public CS2::particleslib::CParticleCollectionBindingInstance*/ {
 				// NO SCHEMA DATA FOUND!
 			}

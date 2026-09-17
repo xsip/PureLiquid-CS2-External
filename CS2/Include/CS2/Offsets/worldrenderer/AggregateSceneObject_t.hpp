@@ -15,6 +15,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nLayer = 0x8; // int16_t m_nLayer; |  0x8 | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_instanceStream = 0xa; // int16_t m_instanceStream; |  0xa | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_vertexAlbedoStream = 0xc; // int16_t m_vertexAlbedoStream; |  0xc | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_vertexEmissiveStream = 0xe; // int16_t m_vertexEmissiveStream; |  0xe | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_aggregateMeshes = 0x10; // GlobalTypes::CUtlVector<worldrenderer::AggregateMeshInfo_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_lodSetups = 0x28; // GlobalTypes::CUtlVector<worldrenderer::AggregateLODSetup_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_visClusterMembership = 0x40; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18

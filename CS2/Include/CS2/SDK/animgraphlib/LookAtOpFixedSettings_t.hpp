@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/CAnimAttachment.hpp>
-#include <SDK/animgraphlib/CAnimInputDamping.hpp>
-#include <SDK/animgraphlib/LookAtBone_t.hpp>
+#include "../modellib/CAnimAttachment.hpp"
+#include "CAnimInputDamping.hpp"
+#include "LookAtBone_t.hpp"
 
 
 

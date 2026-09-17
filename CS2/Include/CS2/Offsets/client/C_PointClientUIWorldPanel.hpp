@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1200
+			// Class size: 0x1210
 			namespace C_PointClientUIWorldPanel /*: public CS2::client::C_BaseClientUIEntity*/ {
-				constexpr std::ptrdiff_t m_bForceRecreateNextUpdate = 0xfe0; // bool m_bForceRecreateNextUpdate; |  0xfe0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bMoveViewToPlayerNextThink = 0xfe1; // bool m_bMoveViewToPlayerNextThink; |  0xfe1 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bCheckCSSClasses = 0xfe2; // bool m_bCheckCSSClasses; |  0xfe2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bForceRecreateNextUpdate = 0xfe8; // bool m_bForceRecreateNextUpdate; |  0xfe8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bMoveViewToPlayerNextThink = 0xfe9; // bool m_bMoveViewToPlayerNextThink; |  0xfe9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bCheckCSSClasses = 0xfea; // bool m_bCheckCSSClasses; |  0xfea | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_anchorDeltaTransform = 0xff0; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
 				constexpr std::ptrdiff_t m_pOffScreenIndicator = 0x1180; // client::CPointOffScreenIndicatorUi**  | Schema_Ptr | Size: 0x8
 				constexpr std::ptrdiff_t m_bIgnoreInput = 0x11a8; // bool m_bIgnoreInput; |  0x11a8 | Schema_Builtin | Size: 0x1
@@ -39,6 +39,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bOnlyRenderToTexture = 0x11f7; // bool m_bOnlyRenderToTexture; |  0x11f7 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bDisableMipGen = 0x11f8; // bool m_bDisableMipGen; |  0x11f8 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nExplicitImageLayout = 0x11fc; // int32_t m_nExplicitImageLayout; |  0x11fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIgnoreParentOrientation = 0x1200; // bool m_bIgnoreParentOrientation; |  0x1200 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

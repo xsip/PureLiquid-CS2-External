@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLogicalEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/server/CTestPulseIOComponent_Derived.hpp>
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/server/TestInputOutputCombinationsEnum_t.hpp>
-#include <SDK/server/CTestPulseIO_FloatStringArgs_t.hpp>
-#include <SDK/server/CTestPulseIO_EntityNameStringArgs_t.hpp>
-#include <SDK/server/CTestPulseIO_EntityHandleIntArgs_t.hpp>
-#include <SDK/server/CTestPulseIO_ThreeStringArgs_t.hpp>
+#include "CLogicalEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "CTestPulseIOComponent_Derived.hpp"
+#include "CBaseEntity.hpp"
+#include "TestInputOutputCombinationsEnum_t.hpp"
+#include "CTestPulseIO_FloatStringArgs_t.hpp"
+#include "CTestPulseIO_EntityNameStringArgs_t.hpp"
+#include "CTestPulseIO_EntityHandleIntArgs_t.hpp"
+#include "CTestPulseIO_ThreeStringArgs_t.hpp"
 
 
 

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/fogparams_t.hpp>
+#include "fogparams_t.hpp"
 
 
 
@@ -22,7 +22,7 @@ namespace CS2 {
 		class sky3dparams_t  {
 		public:
 			PROPERTY(scale,int16_t, 0x8);
-			PROPERTY(origin,GlobalTypes::Vector, 0xc);
+			PROPERTY(origin,GlobalTypes::VectorWS, 0xc);
 			PROPERTY(bClip3DSkyBoxNearToWorldFar,bool, 0x18);
 			PROPERTY(flClip3DSkyBoxNearToWorldFarOffset,float32, 0x1c);
 			NESTED_PROPERTY(fog,IDENTITY(client::fogparams_t), 0x20);

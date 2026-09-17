@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/smartprops/CSmartPropOperation.hpp>
-#include <SDK/smartprops/CSmartPropAttributeDirection.hpp>
-#include <SDK/smartprops/CSmartPropAttributeCoordinateSpace.hpp>
+#include "CSmartPropOperation.hpp"
+#include "CSmartPropAttributeDirection.hpp"
+#include "CSmartPropAttributeCoordinateSpace.hpp"
 
 
 

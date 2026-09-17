@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xB0
+			// Class size: 0xB8
 			namespace CCollisionProperty /**/ {
 				constexpr std::ptrdiff_t m_collisionAttribute = 0x10; // client::VPhysicsCollisionAttribute_t  | Schema_DeclaredClass | Size: 0x30
 				constexpr std::ptrdiff_t m_vecMins = 0x40; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc

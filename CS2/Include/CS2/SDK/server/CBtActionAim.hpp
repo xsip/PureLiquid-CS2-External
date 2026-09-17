@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBtNode.hpp>
-#include <SDK/server/CountdownTimer.hpp>
+#include "CBtNode.hpp"
+#include "CountdownTimer.hpp"
 
 
 

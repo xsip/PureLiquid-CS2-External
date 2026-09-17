@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseAnimGraph.hpp>
-#include <SDK/modellib/AttachmentHandle_t.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "../modellib/AttachmentHandle_t.hpp"
 
 
 
@@ -27,19 +27,19 @@ namespace CS2 {
 	namespace client {
 		class C_RagdollProp : public CS2::client::CBaseAnimGraph {
 		public:
-			// PROPERTY(m_ragEnabled,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< bool >), 0x1158);
-			// PROPERTY(m_ragPos,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>), 0x1170);
-			// PROPERTY(m_ragAngles,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::QAngle>), 0x1188);
-			PROPERTY(m_flBlendWeight,float32, 0x11a0);
-			PROPERTY(m_hRagdollSource,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x11a4);
-			NESTED_PROPERTY(m_iEyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x11a8);
-			PROPERTY(m_flBlendWeightCurrent,float32, 0x11ac);
-			NESTED_PROPERTY(m_parentPhysicsBoneIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x11b0);
-			NESTED_PROPERTY(m_worldSpaceBoneComputationOrder,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x11c8);
+			// PROPERTY(m_ragEnabled,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< bool >), 0x1180);
+			// PROPERTY(m_ragPos,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::Vector>), 0x1198);
+			// PROPERTY(m_ragAngles,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::QAngle>), 0x11b0);
+			PROPERTY(m_flBlendWeight,float32, 0x11c8);
+			PROPERTY(m_hRagdollSource,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x11cc);
+			NESTED_PROPERTY(m_iEyeAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x11d0);
+			PROPERTY(m_flBlendWeightCurrent,float32, 0x11d4);
+			NESTED_PROPERTY(m_parentPhysicsBoneIndices,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x11d8);
+			NESTED_PROPERTY(m_worldSpaceBoneComputationOrder,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x11f0);
 			S2_PAD(0x88);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_RagdollProp) == 0x11E0, "C_RagdollProp size should be 0x11E0");
+		//static_assert(sizeof(CS2::client::C_RagdollProp) == 0x1208, "C_RagdollProp size should be 0x1208");
 
 #endif
 	}

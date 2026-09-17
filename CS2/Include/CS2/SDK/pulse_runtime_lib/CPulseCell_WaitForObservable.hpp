@@ -4,15 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
-#include <SDK/pulse_runtime_lib/PulseObservableBoolExpression_t.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
+#include "CPulseCell_BaseYieldingInflow.hpp"
+#include "CPulse_ResumePoint.hpp"
 
 
 
@@ -23,12 +22,12 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_WaitForObservable : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			NESTED_PROPERTY(m_Condition,IDENTITY(pulse_runtime_lib::PulseObservableBoolExpression_t), 0x48);
-			NESTED_PROPERTY(m_OnTrue,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0xc0);
+			PROPERTY(m_Condition,IDENTITY(GlobalTypes::CPulseObservableExpression< bool >), 0xd8);
+			NESTED_PROPERTY(m_OnTrue,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x150);
 			S2_PAD(0xC0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_WaitForObservable) == 0x108, "CPulseCell_WaitForObservable size should be 0x108");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_WaitForObservable) == 0x198, "CPulseCell_WaitForObservable size should be 0x198");
 
 #endif
 	}

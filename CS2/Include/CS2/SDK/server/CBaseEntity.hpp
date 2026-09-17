@@ -4,25 +4,25 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/CEntityInstance.hpp>
-#include <SDK/client/CNetworkTransmitComponent.hpp>
-#include <SDK/client/thinkfunc_t.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/server/ResponseContext_t.hpp>
-#include <SDK/client/TakeDamageFlags_t.hpp>
-#include <SDK/client/EntityPlatformTypes_t.hpp>
-#include <SDK/client/MoveCollide_t.hpp>
-#include <SDK/client/MoveType_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/client/CNetworkVelocityVector.hpp>
-#include <SDK/client/BloodType.hpp>
+#include "../entity2/CEntityInstance.hpp"
+#include "../client/CNetworkTransmitComponent.hpp"
+#include "../client/thinkfunc_t.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "ResponseContext_t.hpp"
+#include "../client/TakeDamageFlags_t.hpp"
+#include "../client/EntityPlatformTypes_t.hpp"
+#include "../client/MoveCollide_t.hpp"
+#include "../client/MoveType_t.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "../client/CNetworkVelocityVector.hpp"
+#include "../client/BloodType.hpp"
 
 
 
@@ -84,7 +84,6 @@ namespace CS2 {
 			PROPERTY(m_iTeamNum,uint8_t, 0x344);
 			PROPERTY(m_iGlobalname,GlobalTypes::CUtlSymbolLarge*, 0x348);
 			PROPERTY(m_iSentToClients,int32_t, 0x350);
-			PROPERTY(m_flSpeed,float32, 0x354);
 			PROPERTY(m_sUniqueHammerID,GlobalTypes::CUtlString*, 0x358);
 			PROPERTY(m_spawnflags,uint32_t, 0x360);
 			NESTED_PROPERTY(m_nNextThinkTick,IDENTITY(entity2::GameTick_t), 0x364);

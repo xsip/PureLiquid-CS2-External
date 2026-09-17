@@ -8,16 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0xA8
+			// Class size: 0x78
 			namespace AI_DefaultNPC_DebugSnapshotData_t /*: public CS2::client::DebugSnapshotBaseStructuredData_t*/ {
 				constexpr std::ptrdiff_t s_npc_current_ability = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t s_npc_tactic_current = 0x10; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t s_npc_tactic_phase = 0x18; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t tactic_interrupt_conditions = 0x20; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t s_npc_current_movement = 0x38; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t path_query_schedule = 0x40; // client::AI_DefaultNPC_DebugSnapshotData_t::PathQuery_t  | Schema_DeclaredClass | Size: 0x28
-				constexpr std::ptrdiff_t path_query_tactic = 0x68; // client::AI_DefaultNPC_DebugSnapshotData_t::PathQuery_t  | Schema_DeclaredClass | Size: 0x28
-				constexpr std::ptrdiff_t path_queries_speculative = 0x90; // GlobalTypes::CUtlVector<client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t path_query = 0x38; // client::AI_DefaultNPC_DebugSnapshotData_t::PathQuery_t  | Schema_DeclaredClass | Size: 0x28
+				constexpr std::ptrdiff_t path_queries_speculative = 0x60; // GlobalTypes::CUtlVector<client::AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

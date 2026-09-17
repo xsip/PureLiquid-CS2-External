@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_CSWeaponBase.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
+#include "C_CSWeaponBase.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/GameTick_t.hpp"
 
 
 
@@ -23,24 +23,24 @@ namespace CS2 {
 	namespace client {
 		class C_BaseCSGrenade : public CS2::client::C_CSWeaponBase {
 		public:
-			PROPERTY(m_bClientPredictDelete,bool, 0x1cb0);
-			PROPERTY(m_bRedraw,bool, 0x1cb1);
-			PROPERTY(m_bIsHeldByPlayer,bool, 0x1cb2);
-			PROPERTY(m_bPinPulled,bool, 0x1cb3);
-			PROPERTY(m_bJumpThrow,bool, 0x1cb4);
-			PROPERTY(m_bThrowAnimating,bool, 0x1cb5);
-			NESTED_PROPERTY(m_fThrowTime,IDENTITY(entity2::GameTime_t), 0x1cb8);
-			PROPERTY(m_flThrowStrength,float32, 0x1cc0);
-			NESTED_PROPERTY(m_fDropTime,IDENTITY(entity2::GameTime_t), 0x1d38);
-			NESTED_PROPERTY(m_fPinPullTime,IDENTITY(entity2::GameTime_t), 0x1d3c);
-			PROPERTY(m_bJustPulledPin,bool, 0x1d40);
-			NESTED_PROPERTY(m_nNextHoldTick,IDENTITY(entity2::GameTick_t), 0x1d44);
-			PROPERTY(m_flNextHoldFrac,float32, 0x1d48);
-			PROPERTY(m_hSwitchToWeaponAfterThrow,IDENTITY(GlobalTypes::CHandle<client::C_CSWeaponBase>), 0x1d4c);
+			PROPERTY(m_bClientPredictDelete,bool, 0x1ce0);
+			PROPERTY(m_bRedraw,bool, 0x1ce1);
+			PROPERTY(m_bIsHeldByPlayer,bool, 0x1ce2);
+			PROPERTY(m_bPinPulled,bool, 0x1ce3);
+			PROPERTY(m_bJumpThrow,bool, 0x1ce4);
+			PROPERTY(m_bThrowAnimating,bool, 0x1ce5);
+			NESTED_PROPERTY(m_fThrowTime,IDENTITY(entity2::GameTime_t), 0x1ce8);
+			PROPERTY(m_flThrowStrength,float32, 0x1cf0);
+			NESTED_PROPERTY(m_fDropTime,IDENTITY(entity2::GameTime_t), 0x1d68);
+			NESTED_PROPERTY(m_fPinPullTime,IDENTITY(entity2::GameTime_t), 0x1d6c);
+			PROPERTY(m_bJustPulledPin,bool, 0x1d70);
+			NESTED_PROPERTY(m_nNextHoldTick,IDENTITY(entity2::GameTick_t), 0x1d74);
+			PROPERTY(m_flNextHoldFrac,float32, 0x1d78);
+			PROPERTY(m_hSwitchToWeaponAfterThrow,IDENTITY(GlobalTypes::CHandle<client::C_CSWeaponBase>), 0x1d7c);
 			S2_PAD(0xC0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BaseCSGrenade) == 0x1D70, "C_BaseCSGrenade size should be 0x1D70");
+		//static_assert(sizeof(CS2::client::C_BaseCSGrenade) == 0x1DA0, "C_BaseCSGrenade size should be 0x1DA0");
 
 #endif
 	}

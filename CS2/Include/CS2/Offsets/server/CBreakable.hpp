@@ -8,24 +8,24 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x840
+			// Class size: 0x848
 			namespace CBreakable /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_CPropDataComponent = 0x770; // server::CPropDataComponent  | Schema_DeclaredClass | Size: 0x40
-				constexpr std::ptrdiff_t m_Material = 0x7b0; // server::Materials  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_hBreaker = 0x7b4; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_Explosion = 0x7b8; // server::Explosions  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_iszSpawnObject = 0x7c0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_flPressureDelay = 0x7c8; // float32 m_flPressureDelay; |  0x7c8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iMinHealthDmg = 0x7cc; // int32_t m_iMinHealthDmg; |  0x7cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iszPropData = 0x7d0; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_impactEnergyScale = 0x7d8; // float32 m_impactEnergyScale; |  0x7d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nOverrideBlockLOS = 0x7dc; // server::EOverrideBlockLOS_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_OnStartDeath = 0x7e0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnBreak = 0x7f8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnHealthChanged = 0x810; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_PerformanceMode = 0x830; // client::PerformanceMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_hPhysicsAttacker = 0x834; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0x838; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_CPropDataComponent = 0x778; // server::CPropDataComponent  | Schema_DeclaredClass | Size: 0x40
+				constexpr std::ptrdiff_t m_Material = 0x7b8; // server::Materials  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_hBreaker = 0x7bc; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_Explosion = 0x7c0; // server::Explosions  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_iszSpawnObject = 0x7c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flPressureDelay = 0x7d0; // float32 m_flPressureDelay; |  0x7d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iMinHealthDmg = 0x7d4; // int32_t m_iMinHealthDmg; |  0x7d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iszPropData = 0x7d8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_impactEnergyScale = 0x7e0; // float32 m_impactEnergyScale; |  0x7e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nOverrideBlockLOS = 0x7e4; // server::EOverrideBlockLOS_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_OnStartDeath = 0x7e8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnBreak = 0x800; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnHealthChanged = 0x818; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_PerformanceMode = 0x838; // client::PerformanceMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_hPhysicsAttacker = 0x83c; // GlobalTypes::CHandle<server::CBasePlayerPawn>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0x840; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

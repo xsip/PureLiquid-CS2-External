@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
-#include <SDK/client/ParticleIndex_t.hpp>
+#include "C_BaseModelEntity.hpp"
+#include "ParticleIndex_t.hpp"
 
 
 
@@ -27,34 +27,34 @@ namespace CS2 {
 	namespace client {
 		class C_Inferno : public CS2::client::C_BaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_nfxFireDamageEffect,IDENTITY(client::ParticleIndex_t), 0xfe8);
-			PROPERTY(m_hInfernoPointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xff0);
-			PROPERTY(m_hInfernoFillerPointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xff8);
-			PROPERTY(m_hInfernoOutlinePointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1000);
-			PROPERTY(m_hInfernoClimbingOutlinePointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1008);
-			PROPERTY(m_hInfernoDecalsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1010);
-			PROPERTY_ARRAY(m_firePositions,GlobalTypes::Vector, 64 , 0x1018);
-			PROPERTY_ARRAY(m_fireParentPositions,GlobalTypes::Vector, 64 , 0x1318);
-			PROPERTY_ARRAY(m_bFireIsBurning,bool, 64 , 0x1618);
-			PROPERTY_ARRAY(m_BurnNormal,GlobalTypes::Vector, 64 , 0x1658);
-			PROPERTY(m_fireCount,int32_t, 0x1958);
-			PROPERTY(m_nInfernoType,int32_t, 0x195c);
-			PROPERTY(m_nFireLifetime,float32, 0x1960);
-			PROPERTY(m_bInPostEffectTime,bool, 0x1964);
-			PROPERTY(m_lastFireCount,int32_t, 0x1968);
-			PROPERTY(m_nFireEffectTickBegin,int32_t, 0x196c);
-			PROPERTY(m_drawableCount,int32_t, 0x8570);
-			PROPERTY(m_blosCheck,bool, 0x8574);
-			PROPERTY(m_nlosperiod,int32_t, 0x8578);
-			PROPERTY(m_maxFireHalfWidth,float32, 0x857c);
-			PROPERTY(m_maxFireHeight,float32, 0x8580);
-			PROPERTY(m_minBounds,GlobalTypes::Vector, 0x8584);
-			PROPERTY(m_maxBounds,GlobalTypes::Vector, 0x8590);
-			PROPERTY(m_flLastGrassBurnThink,float32, 0x859c);
-			S2_PAD(0x7608);
+			NESTED_PROPERTY(m_nfxFireDamageEffect,IDENTITY(client::ParticleIndex_t), 0xff0);
+			PROPERTY(m_hInfernoPointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0xff8);
+			PROPERTY(m_hInfernoFillerPointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1000);
+			PROPERTY(m_hInfernoOutlinePointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1008);
+			PROPERTY(m_hInfernoClimbingOutlinePointsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1010);
+			PROPERTY(m_hInfernoDecalsSnapshot,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSnapshot>), 0x1018);
+			PROPERTY_ARRAY(m_firePositions,GlobalTypes::VectorWS, 64 , 0x1020);
+			PROPERTY_ARRAY(m_fireParentPositions,GlobalTypes::VectorWS, 64 , 0x1320);
+			PROPERTY_ARRAY(m_bFireIsBurning,bool, 64 , 0x1620);
+			PROPERTY_ARRAY(m_BurnNormal,GlobalTypes::Vector, 64 , 0x1660);
+			PROPERTY(m_fireCount,int32_t, 0x1960);
+			PROPERTY(m_nInfernoType,int32_t, 0x1964);
+			PROPERTY(m_nFireLifetime,float32, 0x1968);
+			PROPERTY(m_bInPostEffectTime,bool, 0x196c);
+			PROPERTY(m_lastFireCount,int32_t, 0x1970);
+			PROPERTY(m_nFireEffectTickBegin,int32_t, 0x1974);
+			PROPERTY(m_drawableCount,int32_t, 0x8580);
+			PROPERTY(m_blosCheck,bool, 0x8584);
+			PROPERTY(m_nlosperiod,int32_t, 0x8588);
+			PROPERTY(m_maxFireHalfWidth,float32, 0x858c);
+			PROPERTY(m_maxFireHeight,float32, 0x8590);
+			PROPERTY(m_minBounds,GlobalTypes::VectorWS, 0x8594);
+			PROPERTY(m_maxBounds,GlobalTypes::VectorWS, 0x85a0);
+			PROPERTY(m_flLastGrassBurnThink,float32, 0x85ac);
+			S2_PAD(0x7610);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_Inferno) == 0x85B0, "C_Inferno size should be 0x85B0");
+		//static_assert(sizeof(CS2::client::C_Inferno) == 0x85C0, "C_Inferno size should be 0x85C0");
 
 #endif
 	}

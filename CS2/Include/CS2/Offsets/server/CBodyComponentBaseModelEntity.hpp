@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x4A0
+			// Class size: 0x4E0
 			namespace CBodyComponentBaseModelEntity /*: public CS2::server::CBodyComponentSkeletonInstance*/ {
 				// NO SCHEMA DATA FOUND!
 			}

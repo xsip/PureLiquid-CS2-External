@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/CSeqSeqDescFlag.hpp>
-#include <SDK/animationsystem/CSeqTransition.hpp>
-#include <SDK/animationsystem/CSeqCmdLayer.hpp>
-#include <SDK/animationsystem/CAnimEventDefinition.hpp>
-#include <SDK/animationsystem/CAnimActivity.hpp>
-#include <SDK/animationsystem/CSeqPoseSetting.hpp>
+#include "CSeqSeqDescFlag.hpp"
+#include "CSeqTransition.hpp"
+#include "CSeqCmdLayer.hpp"
+#include "CAnimEventDefinition.hpp"
+#include "CAnimActivity.hpp"
+#include "CSeqPoseSetting.hpp"
 
 
 

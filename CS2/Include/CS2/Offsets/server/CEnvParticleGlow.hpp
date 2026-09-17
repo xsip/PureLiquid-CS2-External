@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xCF8
+			// Class size: 0xD10
 			namespace CEnvParticleGlow /*: public CS2::server::CParticleSystem*/ {
-				constexpr std::ptrdiff_t m_flAlphaScale = 0xce0; // float32 m_flAlphaScale; |  0xce0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadiusScale = 0xce4; // float32 m_flRadiusScale; |  0xce4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSelfIllumScale = 0xce8; // float32 m_flSelfIllumScale; |  0xce8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_ColorTint = 0xcec; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_hTextureOverride = 0xcf0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_flAlphaScale = 0xcf8; // float32 m_flAlphaScale; |  0xcf8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadiusScale = 0xcfc; // float32 m_flRadiusScale; |  0xcfc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSelfIllumScale = 0xd00; // float32 m_flSelfIllumScale; |  0xd00 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_ColorTint = 0xd04; // GlobalTypes::Color  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_hTextureOverride = 0xd08; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

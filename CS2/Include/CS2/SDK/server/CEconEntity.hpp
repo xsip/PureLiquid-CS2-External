@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseAnimGraph.hpp>
-#include <SDK/server/CAttributeContainer.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "CAttributeContainer.hpp"
 
 
 
@@ -27,19 +27,19 @@ namespace CS2 {
 	namespace server {
 		class CEconEntity : public CS2::server::CBaseAnimGraph {
 		public:
-			NESTED_PROPERTY(m_AttributeManager,IDENTITY(server::CAttributeContainer), 0x958);
-			PROPERTY(m_OriginalOwnerXuidLow,uint32_t, 0xc50);
-			PROPERTY(m_OriginalOwnerXuidHigh,uint32_t, 0xc54);
-			PROPERTY(m_nFallbackPaintKit,int32_t, 0xc58);
-			PROPERTY(m_nFallbackSeed,int32_t, 0xc5c);
-			PROPERTY(m_flFallbackWear,float32, 0xc60);
-			PROPERTY(m_nFallbackStatTrak,int32_t, 0xc64);
-			PROPERTY(m_hOldProvidee,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xc68);
-			PROPERTY(m_iOldOwnerClass,int32_t, 0xc6c);
+			NESTED_PROPERTY(m_AttributeManager,IDENTITY(server::CAttributeContainer), 0x978);
+			PROPERTY(m_OriginalOwnerXuidLow,uint32_t, 0xc70);
+			PROPERTY(m_OriginalOwnerXuidHigh,uint32_t, 0xc74);
+			PROPERTY(m_nFallbackPaintKit,int32_t, 0xc78);
+			PROPERTY(m_nFallbackSeed,int32_t, 0xc7c);
+			PROPERTY(m_flFallbackWear,float32, 0xc80);
+			PROPERTY(m_nFallbackStatTrak,int32_t, 0xc84);
+			PROPERTY(m_hOldProvidee,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xc88);
+			PROPERTY(m_iOldOwnerClass,int32_t, 0xc8c);
 			S2_PAD(0x330);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEconEntity) == 0xC70, "CEconEntity size should be 0xC70");
+		//static_assert(sizeof(CS2::server::CEconEntity) == 0xC90, "CEconEntity size should be 0xC90");
 
 #endif
 	}

@@ -4,20 +4,20 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_CSPlayerPawnBase.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/loadout_slot_t.hpp>
-#include <SDK/client/C_EconItemView.hpp>
-#include <SDK/client/EntitySpottedState_t.hpp>
-#include <SDK/client/CSPlayerBlockingUseAction_t.hpp>
-#include <SDK/client/ParticleIndex_t.hpp>
-#include <SDK/client/CountdownTimer.hpp>
+#include "C_CSPlayerPawnBase.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "loadout_slot_t.hpp"
+#include "C_EconItemView.hpp"
+#include "EntitySpottedState_t.hpp"
+#include "CSPlayerBlockingUseAction_t.hpp"
+#include "ParticleIndex_t.hpp"
+#include "CountdownTimer.hpp"
 
 
 
@@ -41,112 +41,112 @@ namespace CS2 {
 	namespace client {
 		class C_CSPlayerPawn : public CS2::client::C_CSPlayerPawnBase {
 		public:
-			PROPERTY(m_pBulletServices,IDENTITY(client::CCSPlayer_BulletServices*), 0x1468);
-			PROPERTY(m_pHostageServices,IDENTITY(client::CCSPlayer_HostageServices*), 0x1470);
-			PROPERTY(m_pBuyServices,IDENTITY(client::CCSPlayer_BuyServices*), 0x1478);
-			PROPERTY(m_pGlowServices,IDENTITY(client::CCSPlayer_GlowServices*), 0x1480);
-			PROPERTY(m_pActionTrackingServices,IDENTITY(client::CCSPlayer_ActionTrackingServices*), 0x1488);
-			PROPERTY(m_pAimPunchServices,IDENTITY(client::CCSPlayer_AimPunchServices*), 0x1490);
-			PROPERTY(m_pDamageReactServices,IDENTITY(client::CCSPlayer_DamageReactServices*), 0x1498);
-			NESTED_PROPERTY(m_flHealthShotBoostExpirationTime,IDENTITY(entity2::GameTime_t), 0x14a0);
-			NESTED_PROPERTY(m_flLastFiredWeaponTime,IDENTITY(entity2::GameTime_t), 0x14a4);
-			PROPERTY(m_bHasFemaleVoice,bool, 0x14a8);
-			PROPERTY(m_flLandingTimeSeconds,float32, 0x14ac);
-			PROPERTY(m_flOldFallVelocity,float32, 0x14b0);
-			PROPERTY_ARRAY(m_szLastPlaceName,char, 18 , 0x14b4);
-			PROPERTY(m_bPrevDefuser,bool, 0x14c6);
-			PROPERTY(m_bPrevHelmet,bool, 0x14c7);
-			PROPERTY(m_nPrevArmorVal,int32_t, 0x14c8);
-			PROPERTY(m_nPrevGrenadeAmmoCount,int32_t, 0x14cc);
-			PROPERTY(m_unPreviousWeaponHash,uint32_t, 0x14d0);
-			PROPERTY(m_unWeaponHash,uint32_t, 0x14d4);
-			PROPERTY(m_bInBuyZone,bool, 0x14d8);
-			PROPERTY(m_bPreviouslyInBuyZone,bool, 0x14d9);
-			PROPERTY(m_bInLanding,bool, 0x14da);
-			PROPERTY(m_flLandingStartTime,float32, 0x14dc);
-			PROPERTY(m_bInHostageRescueZone,bool, 0x14e0);
-			PROPERTY(m_bInBombZone,bool, 0x14e1);
-			PROPERTY(m_bIsBuyMenuOpen,bool, 0x14e2);
-			NESTED_PROPERTY(m_flTimeOfLastInjury,IDENTITY(entity2::GameTime_t), 0x14e4);
-			NESTED_PROPERTY(m_flNextSprayDecalTime,IDENTITY(entity2::GameTime_t), 0x14e8);
-			PROPERTY(m_iRetakesOffering,int32_t, 0x1640);
-			PROPERTY(m_iRetakesOfferingCard,int32_t, 0x1644);
-			PROPERTY(m_bRetakesHasDefuseKit,bool, 0x1648);
-			PROPERTY(m_bRetakesMVPLastRound,bool, 0x1649);
-			PROPERTY(m_iRetakesMVPBoostItem,int32_t, 0x164c);
-			PROPERTY(m_RetakesMVPBoostExtraUtility,IDENTITY(client::loadout_slot_t), 0x1650);
-			PROPERTY(m_bNeedToReApplyGloves,bool, 0x1655);
-			NESTED_PROPERTY(m_EconGloves,IDENTITY(client::C_EconItemView), 0x1658);
-			PROPERTY(m_nEconGlovesChanged,uint8_t, 0x1ac8);
-			PROPERTY(m_bMustSyncRagdollState,bool, 0x1ac9);
-			PROPERTY(m_nRagdollDamageBone,int32_t, 0x1acc);
-			PROPERTY(m_vRagdollDamageForce,GlobalTypes::Vector, 0x1ad0);
-			PROPERTY(m_vRagdollDamagePosition,GlobalTypes::Vector, 0x1adc);
-			PROPERTY_ARRAY(m_szRagdollDamageWeaponName,char, 64 , 0x1ae8);
-			PROPERTY(m_bRagdollDamageHeadshot,bool, 0x1b28);
-			PROPERTY(m_vRagdollServerOrigin,GlobalTypes::Vector, 0x1b2c);
-			NESTED_PROPERTY(m_lastLandTime,IDENTITY(entity2::GameTime_t), 0x1b38);
-			PROPERTY(m_bOnGroundLastTick,bool, 0x1b3c);
-			PROPERTY(m_hHudModelArms,IDENTITY(GlobalTypes::CHandle<client::C_CS2HudModelArms>), 0x1b58);
-			PROPERTY(m_qDeathEyeAngles,GlobalTypes::QAngle, 0x1b5c);
-			PROPERTY(m_bLeftHanded,bool, 0x1b68);
-			NESTED_PROPERTY(m_fSwitchedHandednessTime,IDENTITY(entity2::GameTime_t), 0x1b6c);
-			PROPERTY(m_flViewmodelOffsetX,float32, 0x1b70);
-			PROPERTY(m_flViewmodelOffsetY,float32, 0x1b74);
-			PROPERTY(m_flViewmodelOffsetZ,float32, 0x1b78);
-			PROPERTY(m_flViewmodelFOV,float32, 0x1b7c);
-			PROPERTY_ARRAY(m_vecPlayerPatchEconIndices,uint32_t, 5 , 0x1b80);
-			PROPERTY(m_GunGameImmunityColor,GlobalTypes::Color, 0x1bc8);
-			NESTED_PROPERTY(m_vecBulletHitModels,IDENTITY(GlobalTypes::CUtlVector<client::C_BulletHitModel*>), 0x1c18);
-			PROPERTY(m_bIsWalking,bool, 0x1c30);
-			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(client::EntitySpottedState_t), 0x1c38);
-			PROPERTY(m_bIsScoped,bool, 0x1c50);
-			PROPERTY(m_bResumeZoom,bool, 0x1c51);
-			PROPERTY(m_bIsDefusing,bool, 0x1c52);
-			PROPERTY(m_bIsGrabbingHostage,bool, 0x1c53);
-			PROPERTY(m_iBlockingUseActionInProgress,IDENTITY(client::CSPlayerBlockingUseAction_t), 0x1c54);
-			NESTED_PROPERTY(m_flEmitSoundTime,IDENTITY(entity2::GameTime_t), 0x1c58);
-			PROPERTY(m_bInNoDefuseArea,bool, 0x1c5c);
-			PROPERTY(m_nWhichBombZone,int32_t, 0x1c60);
-			PROPERTY(m_iShotsFired,int32_t, 0x1c64);
-			PROPERTY(m_flFlinchStack,float32, 0x1c68);
-			PROPERTY(m_flVelocityModifier,float32, 0x1c6c);
-			PROPERTY(m_bWaitForNoAttack,bool, 0x1c70);
-			PROPERTY(m_ignoreLadderJumpTime,float32, 0x1c74);
-			PROPERTY(m_bKilledByHeadshot,bool, 0x1c79);
-			PROPERTY(m_ArmorValue,int32_t, 0x1c7c);
-			PROPERTY(m_unCurrentEquipmentValue,uint16_t, 0x1c80);
-			PROPERTY(m_unRoundStartEquipmentValue,uint16_t, 0x1c82);
-			PROPERTY(m_unFreezetimeEndEquipmentValue,uint16_t, 0x1c84);
-			PROPERTY(m_nLastKillerIndex,GlobalTypes::CEntityIndex, 0x1c88);
-			PROPERTY(m_bOldIsScoped,bool, 0x1c8c);
-			PROPERTY(m_bHasDeathInfo,bool, 0x1c8d);
-			PROPERTY(m_flDeathInfoTime,float32, 0x1c90);
-			PROPERTY(m_vecDeathInfoOrigin,GlobalTypes::Vector, 0x1c94);
-			NESTED_PROPERTY(m_grenadeParameterStashTime,IDENTITY(entity2::GameTime_t), 0x1cd0);
-			PROPERTY(m_bGrenadeParametersStashed,bool, 0x1cd4);
-			PROPERTY(m_angStashedShootAngles,GlobalTypes::QAngle, 0x1cd8);
-			PROPERTY(m_vecStashedGrenadeThrowPosition,GlobalTypes::Vector, 0x1ce4);
-			PROPERTY(m_vecStashedVelocity,GlobalTypes::Vector, 0x1cf0);
-			PROPERTY(m_bShouldAutobuyDMWeapons,bool, 0x3230);
-			NESTED_PROPERTY(m_fImmuneToGunGameDamageTime,IDENTITY(entity2::GameTime_t), 0x3234);
-			PROPERTY(m_bGunGameImmunity,bool, 0x3238);
-			NESTED_PROPERTY(m_fImmuneToGunGameDamageTimeLast,IDENTITY(entity2::GameTime_t), 0x323c);
-			PROPERTY(m_fMolotovDamageTime,float32, 0x3240);
-			NESTED_PROPERTY(m_nPlayerInfernoBodyFx,IDENTITY(client::ParticleIndex_t), 0x32ac);
-			PROPERTY(m_angEyeAngles,GlobalTypes::QAngle, 0x3320);
-			PROPERTY_ARRAY(m_arrOldEyeAnglesTimes,IDENTITY(entity2::GameTime_t), 4 , 0x33b0);
-			PROPERTY_ARRAY(m_arrOldEyeAngles,GlobalTypes::QAngle, 4 , 0x33c0);
-			PROPERTY(m_angEyeAnglesVelocity,GlobalTypes::QAngle, 0x33f0);
-			PROPERTY(m_iIDEntIndex,GlobalTypes::CEntityIndex, 0x33fc);
-			NESTED_PROPERTY(m_delayTargetIDTimer,IDENTITY(client::CountdownTimer), 0x3400);
-			PROPERTY(m_iTargetItemEntIdx,GlobalTypes::CEntityIndex, 0x3418);
-			PROPERTY(m_iOldIDEntIndex,GlobalTypes::CEntityIndex, 0x341c);
-			NESTED_PROPERTY(m_holdTargetIDTimer,IDENTITY(client::CountdownTimer), 0x3420);
-			S2_PAD(0x1FE8);
+			PROPERTY(m_pBulletServices,IDENTITY(client::CCSPlayer_BulletServices*), 0x1490);
+			PROPERTY(m_pHostageServices,IDENTITY(client::CCSPlayer_HostageServices*), 0x1498);
+			PROPERTY(m_pBuyServices,IDENTITY(client::CCSPlayer_BuyServices*), 0x14a0);
+			PROPERTY(m_pGlowServices,IDENTITY(client::CCSPlayer_GlowServices*), 0x14a8);
+			PROPERTY(m_pActionTrackingServices,IDENTITY(client::CCSPlayer_ActionTrackingServices*), 0x14b0);
+			PROPERTY(m_pAimPunchServices,IDENTITY(client::CCSPlayer_AimPunchServices*), 0x14b8);
+			PROPERTY(m_pDamageReactServices,IDENTITY(client::CCSPlayer_DamageReactServices*), 0x14c0);
+			NESTED_PROPERTY(m_flHealthShotBoostExpirationTime,IDENTITY(entity2::GameTime_t), 0x14c8);
+			NESTED_PROPERTY(m_flLastFiredWeaponTime,IDENTITY(entity2::GameTime_t), 0x14cc);
+			PROPERTY(m_bHasFemaleVoice,bool, 0x14d0);
+			PROPERTY(m_flLandingTimeSeconds,float32, 0x14d4);
+			PROPERTY(m_flOldFallVelocity,float32, 0x14d8);
+			PROPERTY_ARRAY(m_szLastPlaceName,char, 18 , 0x14dc);
+			PROPERTY(m_bPrevDefuser,bool, 0x14ee);
+			PROPERTY(m_bPrevHelmet,bool, 0x14ef);
+			PROPERTY(m_nPrevArmorVal,int32_t, 0x14f0);
+			PROPERTY(m_nPrevGrenadeAmmoCount,int32_t, 0x14f4);
+			PROPERTY(m_unPreviousWeaponHash,uint32_t, 0x14f8);
+			PROPERTY(m_unWeaponHash,uint32_t, 0x14fc);
+			PROPERTY(m_bInBuyZone,bool, 0x1500);
+			PROPERTY(m_bPreviouslyInBuyZone,bool, 0x1501);
+			PROPERTY(m_bInLanding,bool, 0x1502);
+			PROPERTY(m_flLandingStartTime,float32, 0x1504);
+			PROPERTY(m_bInHostageRescueZone,bool, 0x1508);
+			PROPERTY(m_bInBombZone,bool, 0x1509);
+			PROPERTY(m_bIsBuyMenuOpen,bool, 0x150a);
+			NESTED_PROPERTY(m_flTimeOfLastInjury,IDENTITY(entity2::GameTime_t), 0x150c);
+			NESTED_PROPERTY(m_flNextSprayDecalTime,IDENTITY(entity2::GameTime_t), 0x1510);
+			PROPERTY(m_iRetakesOffering,int32_t, 0x1678);
+			PROPERTY(m_iRetakesOfferingCard,int32_t, 0x167c);
+			PROPERTY(m_bRetakesHasDefuseKit,bool, 0x1680);
+			PROPERTY(m_bRetakesMVPLastRound,bool, 0x1681);
+			PROPERTY(m_iRetakesMVPBoostItem,int32_t, 0x1684);
+			PROPERTY(m_RetakesMVPBoostExtraUtility,IDENTITY(client::loadout_slot_t), 0x1688);
+			PROPERTY(m_bNeedToReApplyGloves,bool, 0x168d);
+			NESTED_PROPERTY(m_EconGloves,IDENTITY(client::C_EconItemView), 0x1690);
+			PROPERTY(m_nEconGlovesChanged,uint8_t, 0x1b00);
+			PROPERTY(m_bMustSyncRagdollState,bool, 0x1b01);
+			PROPERTY(m_nRagdollDamageBone,int32_t, 0x1b04);
+			PROPERTY(m_vRagdollDamageForce,GlobalTypes::Vector, 0x1b08);
+			PROPERTY_ARRAY(m_szRagdollDamageWeaponName,char, 64 , 0x1b14);
+			PROPERTY(m_bRagdollDamageHeadshot,bool, 0x1b54);
+			PROPERTY(m_vRagdollServerOrigin,GlobalTypes::VectorWS, 0x1b58);
+			NESTED_PROPERTY(m_lastLandTime,IDENTITY(entity2::GameTime_t), 0x1b64);
+			PROPERTY(m_bOnGroundLastTick,bool, 0x1b68);
+			PROPERTY(m_hHudModelArms,IDENTITY(GlobalTypes::CHandle<client::C_CS2HudModelArms>), 0x1b84);
+			PROPERTY(m_qDeathEyeAngles,GlobalTypes::QAngle, 0x1b88);
+			PROPERTY(m_bLeftHanded,bool, 0x1b94);
+			NESTED_PROPERTY(m_fSwitchedHandednessTime,IDENTITY(entity2::GameTime_t), 0x1b98);
+			PROPERTY(m_flViewmodelOffsetX,float32, 0x1b9c);
+			PROPERTY(m_flViewmodelOffsetY,float32, 0x1ba0);
+			PROPERTY(m_flViewmodelOffsetZ,float32, 0x1ba4);
+			PROPERTY(m_flViewmodelFOV,float32, 0x1ba8);
+			PROPERTY_ARRAY(m_vecPlayerPatchEconIndices,uint32_t, 5 , 0x1bac);
+			PROPERTY(m_GunGameImmunityColor,GlobalTypes::Color, 0x1bf0);
+			NESTED_PROPERTY(m_vecBulletHitModels,IDENTITY(GlobalTypes::CUtlVector<client::C_BulletHitModel*>), 0x1c40);
+			PROPERTY(m_bIsWalking,bool, 0x1c58);
+			NESTED_PROPERTY(m_entitySpottedState,IDENTITY(client::EntitySpottedState_t), 0x1c60);
+			PROPERTY(m_bIsScoped,bool, 0x1c78);
+			PROPERTY(m_bResumeZoom,bool, 0x1c79);
+			PROPERTY(m_bIsDefusing,bool, 0x1c7a);
+			PROPERTY(m_bIsGrabbingHostage,bool, 0x1c7b);
+			PROPERTY(m_iBlockingUseActionInProgress,IDENTITY(client::CSPlayerBlockingUseAction_t), 0x1c7c);
+			NESTED_PROPERTY(m_flEmitSoundTime,IDENTITY(entity2::GameTime_t), 0x1c80);
+			PROPERTY(m_bInNoDefuseArea,bool, 0x1c84);
+			PROPERTY(m_nWhichBombZone,int32_t, 0x1c88);
+			PROPERTY(m_iShotsFired,int32_t, 0x1c8c);
+			PROPERTY(m_flFlinchStack,float32, 0x1c90);
+			PROPERTY(m_flVelocityModifier,float32, 0x1c94);
+			PROPERTY(m_bWaitForNoAttack,bool, 0x1c98);
+			PROPERTY(m_ignoreLadderJumpTime,float32, 0x1c9c);
+			PROPERTY(m_bKilledByHeadshot,bool, 0x1ca1);
+			PROPERTY(m_ArmorValue,int32_t, 0x1ca4);
+			PROPERTY(m_unCurrentEquipmentValue,uint16_t, 0x1ca8);
+			PROPERTY(m_unRoundStartEquipmentValue,uint16_t, 0x1caa);
+			PROPERTY(m_unFreezetimeEndEquipmentValue,uint16_t, 0x1cac);
+			PROPERTY(m_nLastKillerIndex,GlobalTypes::CEntityIndex, 0x1cb0);
+			PROPERTY(m_bOldIsScoped,bool, 0x1cb4);
+			PROPERTY(m_bHasDeathInfo,bool, 0x1cb5);
+			PROPERTY(m_flDeathInfoTime,float32, 0x1cb8);
+			PROPERTY(m_vecDeathInfoOrigin,GlobalTypes::VectorWS, 0x1cbc);
+			NESTED_PROPERTY(m_grenadeParameterStashTime,IDENTITY(entity2::GameTime_t), 0x1cf8);
+			PROPERTY(m_bGrenadeParametersStashed,bool, 0x1cfc);
+			PROPERTY(m_angStashedShootAngles,GlobalTypes::QAngle, 0x1d00);
+			PROPERTY(m_vecStashedGrenadeThrowPosition,GlobalTypes::VectorWS, 0x1d0c);
+			PROPERTY(m_vecStashedGrenadeThrowPawnCenter,GlobalTypes::VectorWS, 0x1d18);
+			PROPERTY(m_vecStashedVelocity,GlobalTypes::Vector, 0x1d24);
+			PROPERTY(m_bShouldAutobuyDMWeapons,bool, 0x3260);
+			NESTED_PROPERTY(m_fImmuneToGunGameDamageTime,IDENTITY(entity2::GameTime_t), 0x3264);
+			PROPERTY(m_bGunGameImmunity,bool, 0x3268);
+			NESTED_PROPERTY(m_fImmuneToGunGameDamageTimeLast,IDENTITY(entity2::GameTime_t), 0x326c);
+			PROPERTY(m_fMolotovDamageTime,float32, 0x3270);
+			NESTED_PROPERTY(m_nPlayerInfernoBodyFx,IDENTITY(client::ParticleIndex_t), 0x32dc);
+			PROPERTY(m_angEyeAngles,GlobalTypes::QAngle, 0x3350);
+			PROPERTY_ARRAY(m_arrOldEyeAnglesTimes,IDENTITY(entity2::GameTime_t), 4 , 0x33e0);
+			PROPERTY_ARRAY(m_arrOldEyeAngles,GlobalTypes::QAngle, 4 , 0x33f0);
+			PROPERTY(m_angEyeAnglesVelocity,GlobalTypes::QAngle, 0x3420);
+			PROPERTY(m_iIDEntIndex,GlobalTypes::CEntityIndex, 0x342c);
+			NESTED_PROPERTY(m_delayTargetIDTimer,IDENTITY(client::CountdownTimer), 0x3430);
+			PROPERTY(m_iTargetItemEntIdx,GlobalTypes::CEntityIndex, 0x3448);
+			PROPERTY(m_iOldIDEntIndex,GlobalTypes::CEntityIndex, 0x344c);
+			NESTED_PROPERTY(m_holdTargetIDTimer,IDENTITY(client::CountdownTimer), 0x3450);
+			S2_PAD(0x1FF0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CSPlayerPawn) == 0x3440, "C_CSPlayerPawn size should be 0x3440");
+		//static_assert(sizeof(CS2::client::C_CSPlayerPawn) == 0x3470, "C_CSPlayerPawn size should be 0x3470");
 
 #endif
 	}

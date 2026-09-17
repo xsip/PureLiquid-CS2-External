@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseCSGrenadeProjectile.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseCSGrenadeProjectile.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -22,22 +22,22 @@ namespace CS2 {
 	namespace server {
 		class CSmokeGrenadeProjectile : public CS2::server::CBaseCSGrenadeProjectile {
 		public:
-			PROPERTY(m_nSmokeEffectTickBegin,int32_t, 0xa58);
-			PROPERTY(m_bDidSmokeEffect,bool, 0xa5c);
-			PROPERTY(m_nRandomSeed,int32_t, 0xa60);
-			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0xa64);
-			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::Vector, 0xa70);
-			// PROPERTY(m_VoxelFrameData,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0xa80);
-			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0xa98);
-			PROPERTY(m_nVoxelUpdate,int32_t, 0xa9c);
-			NESTED_PROPERTY(m_flLastBounce,IDENTITY(entity2::GameTime_t), 0xaa0);
-			NESTED_PROPERTY(m_fllastSimulationTime,IDENTITY(entity2::GameTime_t), 0xaa4);
-			PROPERTY(m_bExplodeFromInferno,bool, 0x2d28);
-			PROPERTY(m_bDidGroundScorch,bool, 0x2d29);
+			PROPERTY(m_nSmokeEffectTickBegin,int32_t, 0xa88);
+			PROPERTY(m_bDidSmokeEffect,bool, 0xa8c);
+			PROPERTY(m_nRandomSeed,int32_t, 0xa90);
+			PROPERTY(m_vSmokeColor,GlobalTypes::Vector, 0xa94);
+			PROPERTY(m_vSmokeDetonationPos,GlobalTypes::VectorWS, 0xaa0);
+			// PROPERTY(m_VoxelFrameData,IDENTITY(GlobalTypes::CNetworkUtlVectorBase< uint8 >), 0xab0);
+			PROPERTY(m_nVoxelFrameDataSize,int32_t, 0xac8);
+			PROPERTY(m_nVoxelUpdate,int32_t, 0xacc);
+			NESTED_PROPERTY(m_flLastBounce,IDENTITY(entity2::GameTime_t), 0xad0);
+			NESTED_PROPERTY(m_fllastSimulationTime,IDENTITY(entity2::GameTime_t), 0xad4);
+			PROPERTY(m_bExplodeFromInferno,bool, 0x2d58);
+			PROPERTY(m_bDidGroundScorch,bool, 0x2d59);
 			S2_PAD(0x2300);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CSmokeGrenadeProjectile) == 0x2D30, "CSmokeGrenadeProjectile size should be 0x2D30");
+		//static_assert(sizeof(CS2::server::CSmokeGrenadeProjectile) == 0x2D60, "CSmokeGrenadeProjectile size should be 0x2D60");
 
 #endif
 	}

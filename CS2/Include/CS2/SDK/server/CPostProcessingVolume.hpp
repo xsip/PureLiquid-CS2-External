@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -26,22 +26,22 @@ namespace CS2 {
 	namespace server {
 		class CPostProcessingVolume : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_hPostSettings,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0x8d8);
-			PROPERTY(m_flFadeDuration,float32, 0x8e0);
-			PROPERTY(m_flMinLogExposure,float32, 0x8e4);
-			PROPERTY(m_flMaxLogExposure,float32, 0x8e8);
-			PROPERTY(m_flMinExposure,float32, 0x8ec);
-			PROPERTY(m_flMaxExposure,float32, 0x8f0);
-			PROPERTY(m_flExposureCompensation,float32, 0x8f4);
-			PROPERTY(m_flExposureFadeSpeedUp,float32, 0x8f8);
-			PROPERTY(m_flExposureFadeSpeedDown,float32, 0x8fc);
-			PROPERTY(m_flTonemapEVSmoothingRange,float32, 0x900);
-			PROPERTY(m_bMaster,bool, 0x904);
-			PROPERTY(m_bExposureControl,bool, 0x905);
+			PROPERTY(m_hPostSettings,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource>), 0x8f8);
+			PROPERTY(m_flFadeDuration,float32, 0x900);
+			PROPERTY(m_flMinLogExposure,float32, 0x904);
+			PROPERTY(m_flMaxLogExposure,float32, 0x908);
+			PROPERTY(m_flMinExposure,float32, 0x90c);
+			PROPERTY(m_flMaxExposure,float32, 0x910);
+			PROPERTY(m_flExposureCompensation,float32, 0x914);
+			PROPERTY(m_flExposureFadeSpeedUp,float32, 0x918);
+			PROPERTY(m_flExposureFadeSpeedDown,float32, 0x91c);
+			PROPERTY(m_flTonemapEVSmoothingRange,float32, 0x920);
+			PROPERTY(m_bMaster,bool, 0x924);
+			PROPERTY(m_bExposureControl,bool, 0x925);
 			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPostProcessingVolume) == 0x908, "CPostProcessingVolume size should be 0x908");
+		//static_assert(sizeof(CS2::server::CPostProcessingVolume) == 0x928, "CPostProcessingVolume size should be 0x928");
 
 #endif
 	}

@@ -4,21 +4,21 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CAnimUpdateNodeBase.hpp>
-#include <SDK/animgraphlib/CAnimComponentUpdater.hpp>
-#include <SDK/animgraphlib/CAnimParameterManagerUpdater.hpp>
-#include <SDK/animgraphlib/CAnimTagManagerUpdater.hpp>
-#include <SDK/animgraphlib/CAnimScriptManager.hpp>
-#include <SDK/animgraphlib/CAnimGraphSettingsManager.hpp>
-#include <SDK/animgraphlib/CStaticPoseCacheBuilder.hpp>
-#include <SDK/modellib/CAnimSkeleton.hpp>
-#include <SDK/animgraphlib/CAnimNodePath.hpp>
+#include "CAnimUpdateNodeBase.hpp"
+#include "CAnimComponentUpdater.hpp"
+#include "CAnimParameterManagerUpdater.hpp"
+#include "CAnimTagManagerUpdater.hpp"
+#include "CAnimScriptManager.hpp"
+#include "CAnimGraphSettingsManager.hpp"
+#include "CStaticPoseCacheBuilder.hpp"
+#include "../modellib/CAnimSkeleton.hpp"
+#include "CAnimNodePath.hpp"
 
 
 

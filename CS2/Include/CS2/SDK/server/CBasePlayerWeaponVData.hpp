@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CEntitySubclassVDataBase.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCModel.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp>
-#include <SDK/client/ItemFlagTypes_t.hpp>
-#include <SDK/client/AmmoIndex_t.hpp>
-#include <SDK/client/RumbleEffect_t.hpp>
+#include "../client/CEntitySubclassVDataBase.hpp"
+#include "../resourcesystem/InfoForResourceTypeCModel.hpp"
+#include "../resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
+#include "../client/ItemFlagTypes_t.hpp"
+#include "../client/AmmoIndex_t.hpp"
+#include "../client/RumbleEffect_t.hpp"
 
 
 

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CTriggerPush.hpp>
+#include "CTriggerPush.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CScriptTriggerPush : public CS2::server::CTriggerPush {
 		public:
-			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x8f8);
+			PROPERTY(m_vExtent,GlobalTypes::Vector, 0x920);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CScriptTriggerPush) == 0x908, "CScriptTriggerPush size should be 0x908");
+		//static_assert(sizeof(CS2::server::CScriptTriggerPush) == 0x930, "CScriptTriggerPush size should be 0x930");
 
 #endif
 	}

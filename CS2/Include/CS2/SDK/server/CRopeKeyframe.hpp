@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/modellib/AttachmentHandle_t.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../modellib/AttachmentHandle_t.hpp"
 
 
 
@@ -30,31 +30,31 @@ namespace CS2 {
 	namespace server {
 		class CRopeKeyframe : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_RopeFlags,uint16_t, 0x770);
-			PROPERTY(m_iNextLinkName,GlobalTypes::CUtlSymbolLarge*, 0x778);
-			PROPERTY(m_Slack,int16_t, 0x780);
-			PROPERTY(m_Width,float32, 0x784);
-			PROPERTY(m_TextureScale,float32, 0x788);
-			PROPERTY(m_nSegments,uint8_t, 0x78c);
-			PROPERTY(m_bConstrainBetweenEndpoints,bool, 0x78d);
-			PROPERTY(m_strRopeMaterialModel,GlobalTypes::CUtlSymbolLarge*, 0x790);
-			PROPERTY(m_iRopeMaterialModelIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x798);
-			PROPERTY(m_Subdiv,uint8_t, 0x7a0);
-			PROPERTY(m_nChangeCount,uint8_t, 0x7a1);
-			PROPERTY(m_RopeLength,int16_t, 0x7a2);
-			PROPERTY(m_fLockedPoints,uint8_t, 0x7a4);
-			PROPERTY(m_bCreatedFromMapFile,bool, 0x7a5);
-			PROPERTY(m_flScrollSpeed,float32, 0x7a8);
-			PROPERTY(m_bStartPointValid,bool, 0x7ac);
-			PROPERTY(m_bEndPointValid,bool, 0x7ad);
-			PROPERTY(m_hStartPoint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7b0);
-			PROPERTY(m_hEndPoint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7b4);
-			NESTED_PROPERTY(m_iStartAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x7b8);
-			NESTED_PROPERTY(m_iEndAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x7b9);
+			PROPERTY(m_RopeFlags,uint16_t, 0x778);
+			PROPERTY(m_iNextLinkName,GlobalTypes::CUtlSymbolLarge*, 0x780);
+			PROPERTY(m_Slack,int16_t, 0x788);
+			PROPERTY(m_Width,float32, 0x78c);
+			PROPERTY(m_TextureScale,float32, 0x790);
+			PROPERTY(m_nSegments,uint8_t, 0x794);
+			PROPERTY(m_bConstrainBetweenEndpoints,bool, 0x795);
+			PROPERTY(m_strRopeMaterialModel,GlobalTypes::CUtlSymbolLarge*, 0x798);
+			PROPERTY(m_iRopeMaterialModelIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x7a0);
+			PROPERTY(m_Subdiv,uint8_t, 0x7a8);
+			PROPERTY(m_nChangeCount,uint8_t, 0x7a9);
+			PROPERTY(m_RopeLength,int16_t, 0x7aa);
+			PROPERTY(m_fLockedPoints,uint8_t, 0x7ac);
+			PROPERTY(m_bCreatedFromMapFile,bool, 0x7ad);
+			PROPERTY(m_flScrollSpeed,float32, 0x7b0);
+			PROPERTY(m_bStartPointValid,bool, 0x7b4);
+			PROPERTY(m_bEndPointValid,bool, 0x7b5);
+			PROPERTY(m_hStartPoint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7b8);
+			PROPERTY(m_hEndPoint,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x7bc);
+			NESTED_PROPERTY(m_iStartAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x7c0);
+			NESTED_PROPERTY(m_iEndAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x7c1);
 			S2_PAD(0x58);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CRopeKeyframe) == 0x7C0, "CRopeKeyframe size should be 0x7C0");
+		//static_assert(sizeof(CS2::server::CRopeKeyframe) == 0x7C8, "CRopeKeyframe size should be 0x7C8");
 
 #endif
 	}

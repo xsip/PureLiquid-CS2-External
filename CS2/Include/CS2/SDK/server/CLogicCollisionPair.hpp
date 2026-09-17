@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLogicalEntity.hpp>
+#include "CLogicalEntity.hpp"
 
 
 
@@ -27,6 +27,7 @@ namespace CS2 {
 			PROPERTY(m_supportMultipleEntitiesWithSameName,bool, 0x4b9);
 			PROPERTY(m_disabled,bool, 0x4ba);
 			PROPERTY(m_succeeded,bool, 0x4bb);
+			PROPERTY(m_allowMissing,bool, 0x4bc);
 			S2_PAD(0x18);
 		};
 #ifdef USE_STATIC_ASSERTS

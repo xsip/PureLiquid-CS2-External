@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionInitializer.hpp>
-#include <SDK/particleslib/CParticleModelInput.hpp>
-#include <SDK/particleslib/CParticleTransformInput.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particleslib/CParticleCollectionVecInput.hpp>
+#include "CParticleFunctionInitializer.hpp"
+#include "../particleslib/CParticleModelInput.hpp"
+#include "../particleslib/CParticleTransformInput.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "../particleslib/CParticleCollectionVecInput.hpp"
 
 
 

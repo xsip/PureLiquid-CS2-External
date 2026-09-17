@@ -8,22 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particles {
-			// Class size: 0x1828
+			// Class size: 0x1998
 			namespace C_OP_MultiSegmentDisplaySnapshotGenerator /*: public CS2::particles::CParticleFunctionPreEmission*/ {
 				constexpr std::ptrdiff_t m_nCPSnapshot = 0x1e0; // int32_t m_nCPSnapshot; |  0x1e0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nSegCount = 0x1e4; // particles::ParticleMultiSegmentCountSelection_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_nInputType = 0x1e8; // particles::ParticleMultiSegmentInputSelection_t  | Schema_DeclaredEnum | Size: 0x4
 				constexpr std::ptrdiff_t m_strDefaultString = 0x1f0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_flValue = 0x1f8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_SpecialCharList = 0x368; // GlobalTypes::CUtlVector<particles::ParticleMultiSegmentSpecialCharacter_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_vecColorUnlit = 0x380; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_vecColorLit = 0xa38; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
-				constexpr std::ptrdiff_t m_flRadius = 0x10f0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flSpacing = 0x1260; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMinCount = 0x13d0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flMaxCount = 0x1540; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_bPrependEmpty = 0x16b0; // bool m_bPrependEmpty; |  0x16b0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flDigitsAfterDecimal = 0x16b8; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flScollOffset = 0x368; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_SpecialCharList = 0x4d8; // GlobalTypes::CUtlVector<particles::ParticleMultiSegmentSpecialCharacter_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_vecColorUnlit = 0x4f0; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_vecColorLit = 0xba8; // particleslib::CParticleCollectionVecInput  | Schema_DeclaredClass | Size: 0x6b8
+				constexpr std::ptrdiff_t m_flRadius = 0x1260; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flSpacing = 0x13d0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMinCount = 0x1540; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flMaxCount = 0x16b0; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_bPrependEmpty = 0x1820; // bool m_bPrependEmpty; |  0x1820 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flDigitsAfterDecimal = 0x1828; // particleslib::CParticleCollectionFloatInput  | Schema_DeclaredClass | Size: 0x170
 			}
 		}
 	}

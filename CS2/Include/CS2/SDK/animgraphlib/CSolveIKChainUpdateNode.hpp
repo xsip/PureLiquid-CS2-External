@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
-#include <SDK/animgraphlib/CSolveIKTargetHandle_t.hpp>
-#include <SDK/animgraphlib/SolveIKChainPoseOpFixedSettings_t.hpp>
+#include "CUnaryUpdateNode.hpp"
+#include "CSolveIKTargetHandle_t.hpp"
+#include "SolveIKChainPoseOpFixedSettings_t.hpp"
 
 
 

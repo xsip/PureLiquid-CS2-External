@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/CVSoundFormat_t.hpp>
-#include <SDK/soundsystem_voicecontainers/CAudioSentence.hpp>
+#include "CAudioSentence.hpp"
+#include "CVSoundFormat_t.hpp"
 
 
 
@@ -22,21 +22,19 @@ namespace CS2 {
 	namespace soundsystem_voicecontainers {
 		class CVSound  {
 		public:
-			PROPERTY(m_nRate,int32_t, 0x0);
-			PROPERTY(m_nFormat,IDENTITY(soundsystem_voicecontainers::CVSoundFormat_t), 0x4);
-			PROPERTY(m_nChannels,uint32_t, 0x8);
-			PROPERTY(m_nLoopStart,int32_t, 0xc);
-			PROPERTY(m_nSampleCount,uint32_t, 0x10);
-			PROPERTY(m_flDuration,float32, 0x14);
-			NESTED_PROPERTY(m_Sentences,IDENTITY(GlobalTypes::CUtlVector<soundsystem_voicecontainers::CAudioSentence>), 0x18);
-			PROPERTY(m_nStreamingSize,uint32_t, 0x30);
-			NESTED_PROPERTY(m_nSeekTable,IDENTITY(GlobalTypes::CUtlVector< int32 >), 0x38);
-			PROPERTY(m_nLoopEnd,int32_t, 0x50);
-			PROPERTY(m_encodedHeader,GlobalTypes::CUtlBinaryBlock, 0x58);
-			S2_PAD(0x78);
+			// PROPERTY(m_Sentences,IDENTITY(GlobalTypes::CUtlLeanVector<soundsystem_voicecontainers::CAudioSentence>), 0x0);
+			PROPERTY(m_nRate,int32_t, 0x10);
+			PROPERTY(m_nFormat,IDENTITY(soundsystem_voicecontainers::CVSoundFormat_t), 0x14);
+			PROPERTY(m_nChannels,uint32_t, 0x18);
+			PROPERTY(m_nLoopStart,int32_t, 0x1c);
+			PROPERTY(m_nSampleCount,uint32_t, 0x20);
+			PROPERTY(m_flDuration,float32, 0x24);
+			PROPERTY(m_nStreamingSize,uint32_t, 0x28);
+			PROPERTY(m_nLoopEnd,int32_t, 0x2c);
+			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVSound) == 0x78, "CVSound size should be 0x78");
+		//static_assert(sizeof(CS2::soundsystem_voicecontainers::CVSound) == 0x40, "CVSound size should be 0x40");
 
 #endif
 	}

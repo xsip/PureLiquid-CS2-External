@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x7A0
+			// Class size: 0x7A8
 			namespace CTextureBasedAnimatable /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_bLoop = 0x768; // bool m_bLoop; |  0x768 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flFPS = 0x76c; // float32 m_flFPS; |  0x76c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_hPositionKeys = 0x770; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hRotationKeys = 0x778; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vAnimationBoundsMin = 0x780; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vAnimationBoundsMax = 0x78c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flStartTime = 0x798; // float32 m_flStartTime; |  0x798 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartFrame = 0x79c; // float32 m_flStartFrame; |  0x79c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bLoop = 0x770; // bool m_bLoop; |  0x770 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flFPS = 0x774; // float32 m_flFPS; |  0x774 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hPositionKeys = 0x778; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hRotationKeys = 0x780; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_vAnimationBoundsMin = 0x788; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vAnimationBoundsMax = 0x794; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flStartTime = 0x7a0; // float32 m_flStartTime; |  0x7a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartFrame = 0x7a4; // float32 m_flStartFrame; |  0x7a4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

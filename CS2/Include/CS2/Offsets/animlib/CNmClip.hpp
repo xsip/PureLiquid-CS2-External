@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x240
+			// Class size: 0x200
 			namespace CNmClip /**/ {
 				constexpr std::ptrdiff_t m_skeleton = 0x0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCNmSkeleton>  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nNumFrames = 0x8; // uint32_t m_nNumFrames; |  0x8 | Schema_Builtin | Size: 0x4
@@ -16,16 +16,13 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_compressedPoseData = 0x10; // GlobalTypes::CUtlBinaryBlock  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_trackCompressionSettings = 0x20; // GlobalTypes::CUtlVector<animlib::NmCompressionSettings_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_compressedPoseOffsets = 0x38; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_floatCurveIDs = 0x50; // GlobalTypes::CUtlVector<GlobalTypes::CGlobalSymbol>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_floatCurveDefs = 0x68; // GlobalTypes::CUtlVector<animlib::NmFloatCurveCompressionSettings_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_compressedFloatCurveData = 0x80; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_compressedFloatCurveOffsets = 0x98; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_secondaryAnimations = 0xd8; // GlobalTypes::CUtlVectorFixedGrowable<animlib::CNmClip*>  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_syncTrack = 0xf8; // animlib::CNmSyncTrack  | Schema_DeclaredClass | Size: 0xb0
-				constexpr std::ptrdiff_t m_rootMotion = 0x1b0; // animlib::CNmRootMotionData  | Schema_DeclaredClass | Size: 0x50
-				constexpr std::ptrdiff_t m_bIsAdditive = 0x200; // bool m_bIsAdditive; |  0x200 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_modelSpaceSamplingChain = 0x208; // GlobalTypes::CUtlVector<animlib::CNmClip_ModelSpaceSamplingChainLink_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_modelSpaceBoneSamplingIndices = 0x220; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_secondaryAnimations = 0x78; // GlobalTypes::CUtlVectorFixedGrowable<animlib::CNmClip*>  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_floatChannelData = 0x98; // GlobalTypes::CUtlVectorFixedGrowable<animlib::CNmFloatChannelData*>  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_syncTrack = 0xc0; // animlib::CNmSyncTrack  | Schema_DeclaredClass | Size: 0xb0
+				constexpr std::ptrdiff_t m_rootMotion = 0x170; // animlib::CNmRootMotionData  | Schema_DeclaredClass | Size: 0x50
+				constexpr std::ptrdiff_t m_bIsAdditive = 0x1c0; // bool m_bIsAdditive; |  0x1c0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_modelSpaceSamplingChain = 0x1c8; // GlobalTypes::CUtlVector<animlib::CNmClip_ModelSpaceSamplingChainLink_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_modelSpaceBoneSamplingIndices = 0x1e0; // GlobalTypes::CUtlVector  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

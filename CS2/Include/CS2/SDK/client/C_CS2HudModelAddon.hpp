@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_LateUpdatedAnimating.hpp>
+#include "C_LateUpdatedAnimating.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CS2HudModelAddon) == 0x1200, "C_CS2HudModelAddon size should be 0x1200");
+		//static_assert(sizeof(CS2::client::C_CS2HudModelAddon) == 0x1250, "C_CS2HudModelAddon size should be 0x1250");
 
 #endif
 	}

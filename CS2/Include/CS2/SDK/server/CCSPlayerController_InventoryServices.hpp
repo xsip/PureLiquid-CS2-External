@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CPlayerControllerComponent.hpp>
-#include <SDK/client/MedalRank_t.hpp>
-#include <SDK/server/ServerAuthoritativeWeaponSlot_t.hpp>
+#include "../client/CPlayerControllerComponent.hpp"
+#include "../client/MedalRank_t.hpp"
+#include "ServerAuthoritativeWeaponSlot_t.hpp"
 
 
 

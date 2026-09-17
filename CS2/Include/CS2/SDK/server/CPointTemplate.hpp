@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLogicalEntity.hpp>
-#include <SDK/client/PointTemplateClientOnlyEntityBehavior_t.hpp>
-#include <SDK/client/PointTemplateOwnerSpawnGroupType_t.hpp>
+#include "CLogicalEntity.hpp"
+#include "../client/PointTemplateClientOnlyEntityBehavior_t.hpp"
+#include "../client/PointTemplateOwnerSpawnGroupType_t.hpp"
 
 
 

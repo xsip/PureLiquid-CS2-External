@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CModelPointEntity.hpp>
+#include "CModelPointEntity.hpp"
 
 
 
@@ -21,9 +21,11 @@ namespace CS2 {
 	namespace server {
 		class CShower : public CS2::server::CModelPointEntity {
 		public:
+			PROPERTY(m_flSpeed,float32, 0x770);
+			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CShower) == 0x768, "CShower size should be 0x768");
+		//static_assert(sizeof(CS2::server::CShower) == 0x778, "CShower size should be 0x778");
 
 #endif
 	}

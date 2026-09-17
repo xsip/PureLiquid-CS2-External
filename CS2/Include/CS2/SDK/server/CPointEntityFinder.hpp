@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
-#include <SDK/server/EntFinderMethod_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CBaseEntity.hpp"
+#include "EntFinderMethod_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 

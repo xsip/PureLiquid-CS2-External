@@ -8,32 +8,33 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x920
+			// Class size: 0x930
 			namespace CPointClientUIWorldPanel /*: public CS2::server::CBaseClientUIEntity*/ {
-				constexpr std::ptrdiff_t m_bIgnoreInput = 0x8c8; // bool m_bIgnoreInput; |  0x8c8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLit = 0x8c9; // bool m_bLit; |  0x8c9 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bFollowPlayerAcrossTeleport = 0x8ca; // bool m_bFollowPlayerAcrossTeleport; |  0x8ca | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flWidth = 0x8cc; // float32 m_flWidth; |  0x8cc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flHeight = 0x8d0; // float32 m_flHeight; |  0x8d0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDPI = 0x8d4; // float32 m_flDPI; |  0x8d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flInteractDistance = 0x8d8; // float32 m_flInteractDistance; |  0x8d8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDepthOffset = 0x8dc; // float32 m_flDepthOffset; |  0x8dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unOwnerContext = 0x8e0; // uint32_t m_unOwnerContext; |  0x8e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unHorizontalAlign = 0x8e4; // uint32_t m_unHorizontalAlign; |  0x8e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unVerticalAlign = 0x8e8; // uint32_t m_unVerticalAlign; |  0x8e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_unOrientation = 0x8ec; // uint32_t m_unOrientation; |  0x8ec | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bAllowInteractionFromAllSceneWorlds = 0x8f0; // bool m_bAllowInteractionFromAllSceneWorlds; |  0x8f0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecCSSClasses = 0x8f8; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bOpaque = 0x910; // bool m_bOpaque; |  0x910 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNoDepth = 0x911; // bool m_bNoDepth; |  0x911 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bVisibleWhenParentNoDraw = 0x912; // bool m_bVisibleWhenParentNoDraw; |  0x912 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRenderBackface = 0x913; // bool m_bRenderBackface; |  0x913 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bUseOffScreenIndicator = 0x914; // bool m_bUseOffScreenIndicator; |  0x914 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bExcludeFromSaveGames = 0x915; // bool m_bExcludeFromSaveGames; |  0x915 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bGrabbable = 0x916; // bool m_bGrabbable; |  0x916 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bOnlyRenderToTexture = 0x917; // bool m_bOnlyRenderToTexture; |  0x917 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bDisableMipGen = 0x918; // bool m_bDisableMipGen; |  0x918 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nExplicitImageLayout = 0x91c; // int32_t m_nExplicitImageLayout; |  0x91c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIgnoreInput = 0x8d0; // bool m_bIgnoreInput; |  0x8d0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLit = 0x8d1; // bool m_bLit; |  0x8d1 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bFollowPlayerAcrossTeleport = 0x8d2; // bool m_bFollowPlayerAcrossTeleport; |  0x8d2 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flWidth = 0x8d4; // float32 m_flWidth; |  0x8d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flHeight = 0x8d8; // float32 m_flHeight; |  0x8d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDPI = 0x8dc; // float32 m_flDPI; |  0x8dc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flInteractDistance = 0x8e0; // float32 m_flInteractDistance; |  0x8e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDepthOffset = 0x8e4; // float32 m_flDepthOffset; |  0x8e4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unOwnerContext = 0x8e8; // uint32_t m_unOwnerContext; |  0x8e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unHorizontalAlign = 0x8ec; // uint32_t m_unHorizontalAlign; |  0x8ec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unVerticalAlign = 0x8f0; // uint32_t m_unVerticalAlign; |  0x8f0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_unOrientation = 0x8f4; // uint32_t m_unOrientation; |  0x8f4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bAllowInteractionFromAllSceneWorlds = 0x8f8; // bool m_bAllowInteractionFromAllSceneWorlds; |  0x8f8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecCSSClasses = 0x900; // GlobalTypes::CNetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bOpaque = 0x918; // bool m_bOpaque; |  0x918 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNoDepth = 0x919; // bool m_bNoDepth; |  0x919 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bVisibleWhenParentNoDraw = 0x91a; // bool m_bVisibleWhenParentNoDraw; |  0x91a | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRenderBackface = 0x91b; // bool m_bRenderBackface; |  0x91b | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bUseOffScreenIndicator = 0x91c; // bool m_bUseOffScreenIndicator; |  0x91c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bExcludeFromSaveGames = 0x91d; // bool m_bExcludeFromSaveGames; |  0x91d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bGrabbable = 0x91e; // bool m_bGrabbable; |  0x91e | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bOnlyRenderToTexture = 0x91f; // bool m_bOnlyRenderToTexture; |  0x91f | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bDisableMipGen = 0x920; // bool m_bDisableMipGen; |  0x920 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nExplicitImageLayout = 0x924; // int32_t m_nExplicitImageLayout; |  0x924 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bIgnoreParentOrientation = 0x928; // bool m_bIgnoreParentOrientation; |  0x928 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

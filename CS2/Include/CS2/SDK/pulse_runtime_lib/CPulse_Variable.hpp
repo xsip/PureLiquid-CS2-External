@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/PulseVariableKeysSource_t.hpp>
-#include <SDK/pulse_runtime_lib/PulseDocNodeID_t.hpp>
+#include "PulseVariableKeysSource_t.hpp"
+#include "PulseDocNodeID_t.hpp"
 
 
 
@@ -30,10 +30,11 @@ namespace CS2 {
 			PROPERTY(m_bIsPublicBlackboardVariable,bool, 0x48);
 			PROPERTY(m_bIsObservable,bool, 0x49);
 			NESTED_PROPERTY(m_nEditorNodeID,IDENTITY(pulse_runtime_lib::PulseDocNodeID_t), 0x4c);
-			S2_PAD(0x50);
+			PROPERTY(m_Metadata,GlobalTypes::KeyValues3, 0x50);
+			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_Variable) == 0x50, "CPulse_Variable size should be 0x50");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulse_Variable) == 0x60, "CPulse_Variable size should be 0x60");
 
 #endif
 	}

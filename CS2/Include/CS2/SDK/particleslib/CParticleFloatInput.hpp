@@ -4,23 +4,23 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particleslib/CParticleInput.hpp>
-#include <SDK/particleslib/ParticleFloatType_t.hpp>
-#include <SDK/particleslib/ParticleFloatMapType_t.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/ParticleFloatRandomMode_t.hpp>
-#include <SDK/particleslib/PFNoiseTurbulence_t.hpp>
-#include <SDK/particleslib/PFNoiseType_t.hpp>
-#include <SDK/particleslib/PFNoiseModifier_t.hpp>
-#include <SDK/particleslib/ParticleFloatInputMode_t.hpp>
-#include <SDK/particleslib/ParticleFloatRoundType_t.hpp>
-#include <SDK/particleslib/ParticleFloatBiasType_t.hpp>
+#include "CParticleInput.hpp"
+#include "ParticleFloatType_t.hpp"
+#include "ParticleFloatMapType_t.hpp"
+#include "../particles/ParticleAttributeIndex_t.hpp"
+#include "ParticleFloatRandomMode_t.hpp"
+#include "PFNoiseTurbulence_t.hpp"
+#include "PFNoiseType_t.hpp"
+#include "PFNoiseModifier_t.hpp"
+#include "ParticleFloatInputMode_t.hpp"
+#include "ParticleFloatRoundType_t.hpp"
+#include "ParticleFloatBiasType_t.hpp"
 
 
 

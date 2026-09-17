@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
-#include <SDK/animgraphlib/FootLockPoseOpFixedSettings.hpp>
-#include <SDK/animgraphlib/FootFixedSettings.hpp>
-#include <SDK/animgraphlib/CAnimInputDamping.hpp>
+#include "CUnaryUpdateNode.hpp"
+#include "FootLockPoseOpFixedSettings.hpp"
+#include "FootFixedSettings.hpp"
+#include "CAnimInputDamping.hpp"
 
 
 

@@ -8,21 +8,23 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x940
+			// Class size: 0x960
 			namespace CBaseAnimGraph /*: public CS2::server::CBaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_graphControllerManager = 0x768; // client::CAnimGraphControllerManager  | Schema_DeclaredClass | Size: 0xb0
-				constexpr std::ptrdiff_t m_pMainGraphController = 0x818; // client::CAnimGraphControllerBase**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_bInitiallyPopulateInterpHistory = 0x820; // bool m_bInitiallyPopulateInterpHistory; |  0x820 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_pChoreoServices = 0x828; // client::IChoreoServices**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_bAnimGraphUpdateEnabled = 0x830; // bool m_bAnimGraphUpdateEnabled; |  0x830 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bAnimationUpdateScheduled = 0x831; // bool m_bAnimationUpdateScheduled; |  0x831 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecForce = 0x834; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nForceBone = 0x840; // int32_t m_nForceBone; |  0x840 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pRagdollControl = 0x850; // vphysics2::IPhysicsRagdollControl**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_RagdollPose = 0x858; // server::PhysicsRagdollPose_t  | Schema_DeclaredClass | Size: 0x28
-				constexpr std::ptrdiff_t m_bRagdollEnabled = 0x880; // bool m_bRagdollEnabled; |  0x880 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bRagdollClientSide = 0x881; // bool m_bRagdollClientSide; |  0x881 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_xParentedRagdollRootInEntitySpace = 0x890; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_graphControllerManager = 0x770; // client::CAnimGraphControllerManager  | Schema_DeclaredClass | Size: 0x98
+				constexpr std::ptrdiff_t m_pMainGraphController = 0x808; // client::CAnimGraphControllerPtr  | Schema_DeclaredClass | Size: 0x8
+				constexpr std::ptrdiff_t m_bInitiallyPopulateInterpHistory = 0x810; // bool m_bInitiallyPopulateInterpHistory; |  0x810 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_OnLayerCycleUpdated = 0x818; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnExternalChoreoGraphChanged = 0x838; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_pChoreoServices = 0x850; // client::IChoreoServices**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_bAnimGraphUpdateEnabled = 0x858; // bool m_bAnimGraphUpdateEnabled; |  0x858 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bAnimationUpdateScheduled = 0x859; // bool m_bAnimationUpdateScheduled; |  0x859 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_vecForce = 0x85c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nForceBone = 0x868; // int32_t m_nForceBone; |  0x868 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pRagdollControl = 0x878; // vphysics2::IPhysicsRagdollControl**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_RagdollPose = 0x880; // server::PhysicsRagdollPose_t  | Schema_DeclaredClass | Size: 0x28
+				constexpr std::ptrdiff_t m_bRagdollEnabled = 0x8a8; // bool m_bRagdollEnabled; |  0x8a8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bRagdollClientSide = 0x8a9; // bool m_bRagdollClientSide; |  0x8a9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_xParentedRagdollRootInEntitySpace = 0x8b0; // GlobalTypes::CTransform  | Schema_Atomic | Size: 0x20
 			}
 		}
 	}

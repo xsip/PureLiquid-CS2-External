@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace particleslib {
-			// Class size: 0x138
+			// Class size: 0x130
 			namespace CParticleCollectionBindingInstance /*: public CS2::pulse_runtime_lib::CBasePulseGraphInstance*/ {
 				// NO SCHEMA DATA FOUND!
 			}

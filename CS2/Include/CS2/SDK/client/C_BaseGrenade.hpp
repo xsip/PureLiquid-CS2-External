@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseAnimGraph.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CBaseAnimGraph.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -27,22 +27,22 @@ namespace CS2 {
 	namespace client {
 		class C_BaseGrenade : public CS2::client::CBaseAnimGraph {
 		public:
-			PROPERTY(m_bHasWarnedAI,bool, 0x1158);
-			PROPERTY(m_bIsSmokeGrenade,bool, 0x1159);
-			PROPERTY(m_bIsLive,bool, 0x115a);
-			PROPERTY(m_DmgRadius,float32, 0x115c);
-			NESTED_PROPERTY(m_flDetonateTime,IDENTITY(entity2::GameTime_t), 0x1160);
-			PROPERTY(m_flWarnAITime,float32, 0x1164);
-			PROPERTY(m_flDamage,float32, 0x1168);
-			PROPERTY(m_iszBounceSound,GlobalTypes::CUtlSymbolLarge*, 0x1170);
-			PROPERTY(m_ExplosionSound,GlobalTypes::CUtlString*, 0x1178);
-			PROPERTY(m_hThrower,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x1180);
-			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0x1198);
-			PROPERTY(m_hOriginalThrower,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x119c);
+			PROPERTY(m_bHasWarnedAI,bool, 0x1180);
+			PROPERTY(m_bIsSmokeGrenade,bool, 0x1181);
+			PROPERTY(m_bIsLive,bool, 0x1182);
+			PROPERTY(m_DmgRadius,float32, 0x1184);
+			NESTED_PROPERTY(m_flDetonateTime,IDENTITY(entity2::GameTime_t), 0x1188);
+			PROPERTY(m_flWarnAITime,float32, 0x118c);
+			PROPERTY(m_flDamage,float32, 0x1190);
+			PROPERTY(m_iszBounceSound,GlobalTypes::CUtlSymbolLarge*, 0x1198);
+			PROPERTY(m_ExplosionSound,GlobalTypes::CUtlString*, 0x11a0);
+			PROPERTY(m_hThrower,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x11a8);
+			NESTED_PROPERTY(m_flNextAttack,IDENTITY(entity2::GameTime_t), 0x11c0);
+			PROPERTY(m_hOriginalThrower,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x11c4);
 			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BaseGrenade) == 0x11A0, "C_BaseGrenade size should be 0x11A0");
+		//static_assert(sizeof(CS2::client::C_BaseGrenade) == 0x11C8, "C_BaseGrenade size should be 0x11C8");
 
 #endif
 	}

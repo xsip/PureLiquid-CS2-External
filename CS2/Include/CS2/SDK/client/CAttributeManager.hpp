@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseEntity.hpp>
-#include <SDK/client/attributeprovidertypes_t.hpp>
-#include <SDK/client/CAttributeManager_cached_attribute_float_t.hpp>
+#include "C_BaseEntity.hpp"
+#include "attributeprovidertypes_t.hpp"
+#include "CAttributeManager_cached_attribute_float_t.hpp"
 
 
 

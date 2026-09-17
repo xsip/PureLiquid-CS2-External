@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BasePlayerWeapon.hpp>
-#include <SDK/client/WeaponGameplayAnimState.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/client/CSWeaponMode.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/client/C_IronSightController.hpp>
+#include "C_BasePlayerWeapon.hpp"
+#include "WeaponGameplayAnimState.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "CSWeaponMode.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "C_IronSightController.hpp"
 
 
 
@@ -32,64 +32,64 @@ namespace CS2 {
 	namespace client {
 		class C_CSWeaponBase : public CS2::client::C_BasePlayerWeapon {
 		public:
-			PROPERTY(m_iWeaponGameplayAnimState,IDENTITY(client::WeaponGameplayAnimState), 0x1758);
-			NESTED_PROPERTY(m_flWeaponGameplayAnimStateTimestamp,IDENTITY(entity2::GameTime_t), 0x175c);
-			NESTED_PROPERTY(m_flInspectCancelCompleteTime,IDENTITY(entity2::GameTime_t), 0x1760);
-			PROPERTY(m_bInspectPending,bool, 0x1764);
-			PROPERTY(m_bInspectShouldLoop,bool, 0x1765);
-			PROPERTY(m_flCrosshairDistance,float32, 0x1790);
-			PROPERTY(m_iAmmoLastCheck,int32_t, 0x1794);
-			PROPERTY(m_nLastEmptySoundCmdNum,int32_t, 0x1798);
-			PROPERTY(m_bFireOnEmpty,bool, 0x179c);
-			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0x17a0);
-			PROPERTY(m_weaponMode,IDENTITY(client::CSWeaponMode), 0x17b8);
-			PROPERTY(m_flTurningInaccuracyDelta,float32, 0x17bc);
-			PROPERTY(m_vecTurningInaccuracyEyeDirLast,GlobalTypes::Vector, 0x17c0);
-			PROPERTY(m_flTurningInaccuracy,float32, 0x17cc);
-			PROPERTY(m_fAccuracyPenalty,float32, 0x17d0);
-			NESTED_PROPERTY(m_flLastAccuracyUpdateTime,IDENTITY(entity2::GameTime_t), 0x17d4);
-			PROPERTY(m_fAccuracySmoothedForZoom,float32, 0x17d8);
-			PROPERTY(m_iRecoilIndex,int32_t, 0x17dc);
-			PROPERTY(m_flRecoilIndex,float32, 0x17e0);
-			PROPERTY(m_bBurstMode,bool, 0x17e4);
-			NESTED_PROPERTY(m_flLastBurstModeChangeTime,IDENTITY(entity2::GameTime_t), 0x17e8);
-			NESTED_PROPERTY(m_nPostponeFireReadyTicks,IDENTITY(entity2::GameTick_t), 0x17ec);
-			PROPERTY(m_flPostponeFireReadyFrac,float32, 0x17f0);
-			PROPERTY(m_bInReload,bool, 0x17f4);
-			NESTED_PROPERTY(m_nDeployTick,IDENTITY(entity2::GameTick_t), 0x17f8);
-			NESTED_PROPERTY(m_flDroppedAtTime,IDENTITY(entity2::GameTime_t), 0x17fc);
-			PROPERTY(m_bIsHauledBack,bool, 0x1804);
-			PROPERTY(m_bSilencerOn,bool, 0x1805);
-			NESTED_PROPERTY(m_flTimeSilencerSwitchComplete,IDENTITY(entity2::GameTime_t), 0x1808);
-			PROPERTY(m_flWeaponActionPlaybackRate,float32, 0x180c);
-			PROPERTY(m_iOriginalTeamNumber,int32_t, 0x1810);
-			PROPERTY(m_iMostRecentTeamNumber,int32_t, 0x1814);
-			PROPERTY(m_bDroppedNearBuyZone,bool, 0x1818);
-			PROPERTY(m_flNextAttackRenderTimeOffset,float32, 0x181c);
-			PROPERTY(m_bClearWeaponIdentifyingUGC,bool, 0x18b8);
-			PROPERTY(m_bVisualsDataSet,bool, 0x18b9);
-			PROPERTY(m_bUIWeapon,bool, 0x18ba);
-			PROPERTY(m_nCustomEconReloadEventId,int32_t, 0x18bc);
-			PROPERTY(m_bCanBePickedUp,bool, 0x18c8);
-			NESTED_PROPERTY(m_nextPrevOwnerUseTime,IDENTITY(entity2::GameTime_t), 0x18cc);
-			PROPERTY(m_hPrevOwner,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x18d0);
-			NESTED_PROPERTY(m_nDropTick,IDENTITY(entity2::GameTick_t), 0x18d4);
-			PROPERTY(m_bWasActiveWeaponWhenDropped,bool, 0x18d8);
-			PROPERTY(m_donated,bool, 0x18fc);
-			NESTED_PROPERTY(m_fLastShotTime,IDENTITY(entity2::GameTime_t), 0x1900);
-			PROPERTY(m_bWasOwnedByCT,bool, 0x1904);
-			PROPERTY(m_bWasOwnedByTerrorist,bool, 0x1905);
-			PROPERTY(m_flNextClientFireBulletTime,float32, 0x1908);
-			PROPERTY(m_flNextClientFireBulletTime_Repredict,float32, 0x190c);
-			NESTED_PROPERTY(m_IronSightController,IDENTITY(client::C_IronSightController), 0x1960);
-			PROPERTY(m_iIronSightMode,int32_t, 0x1a10);
-			NESTED_PROPERTY(m_flLastLOSTraceFailureTime,IDENTITY(entity2::GameTime_t), 0x1a88);
-			PROPERTY(m_flWatTickOffset,float32, 0x1ae8);
-			NESTED_PROPERTY(m_flLastShakeTime,IDENTITY(entity2::GameTime_t), 0x1afc);
-			S2_PAD(0x5B0);
+			PROPERTY(m_iWeaponGameplayAnimState,IDENTITY(client::WeaponGameplayAnimState), 0x1778);
+			NESTED_PROPERTY(m_flWeaponGameplayAnimStateTimestamp,IDENTITY(entity2::GameTime_t), 0x177c);
+			NESTED_PROPERTY(m_flInspectCancelCompleteTime,IDENTITY(entity2::GameTime_t), 0x1780);
+			PROPERTY(m_bInspectPending,bool, 0x1784);
+			PROPERTY(m_bInspectShouldLoop,bool, 0x1785);
+			PROPERTY(m_flCrosshairDistance,float32, 0x17b0);
+			PROPERTY(m_iAmmoLastCheck,int32_t, 0x17b4);
+			PROPERTY(m_nLastEmptySoundCmdNum,int32_t, 0x17b8);
+			PROPERTY(m_bFireOnEmpty,bool, 0x17bc);
+			NESTED_PROPERTY(m_OnPlayerPickup,IDENTITY(entity2::CEntityIOOutput), 0x17c0);
+			PROPERTY(m_weaponMode,IDENTITY(client::CSWeaponMode), 0x17d8);
+			PROPERTY(m_flTurningInaccuracyDelta,float32, 0x17dc);
+			PROPERTY(m_vecTurningInaccuracyEyeDirLast,GlobalTypes::Vector, 0x17e0);
+			PROPERTY(m_flTurningInaccuracy,float32, 0x17ec);
+			PROPERTY(m_fAccuracyPenalty,float32, 0x17f0);
+			NESTED_PROPERTY(m_flLastAccuracyUpdateTime,IDENTITY(entity2::GameTime_t), 0x17f4);
+			PROPERTY(m_fAccuracySmoothedForZoom,float32, 0x17f8);
+			PROPERTY(m_iRecoilIndex,int32_t, 0x17fc);
+			PROPERTY(m_flRecoilIndex,float32, 0x1800);
+			PROPERTY(m_bBurstMode,bool, 0x1804);
+			NESTED_PROPERTY(m_flLastBurstModeChangeTime,IDENTITY(entity2::GameTime_t), 0x1808);
+			NESTED_PROPERTY(m_nPostponeFireReadyTicks,IDENTITY(entity2::GameTick_t), 0x180c);
+			PROPERTY(m_flPostponeFireReadyFrac,float32, 0x1810);
+			PROPERTY(m_bInReload,bool, 0x1814);
+			NESTED_PROPERTY(m_nDeployTick,IDENTITY(entity2::GameTick_t), 0x1818);
+			NESTED_PROPERTY(m_flDroppedAtTime,IDENTITY(entity2::GameTime_t), 0x181c);
+			PROPERTY(m_bIsHauledBack,bool, 0x1824);
+			PROPERTY(m_bSilencerOn,bool, 0x1825);
+			NESTED_PROPERTY(m_flTimeSilencerSwitchComplete,IDENTITY(entity2::GameTime_t), 0x1828);
+			PROPERTY(m_flWeaponActionPlaybackRate,float32, 0x182c);
+			PROPERTY(m_iOriginalTeamNumber,int32_t, 0x1830);
+			PROPERTY(m_iMostRecentTeamNumber,int32_t, 0x1834);
+			PROPERTY(m_bDroppedNearBuyZone,bool, 0x1838);
+			PROPERTY(m_flNextAttackRenderTimeOffset,float32, 0x183c);
+			PROPERTY(m_bClearWeaponIdentifyingUGC,bool, 0x18e8);
+			PROPERTY(m_bVisualsDataSet,bool, 0x18e9);
+			PROPERTY(m_bUIWeapon,bool, 0x18ea);
+			PROPERTY(m_nCustomEconReloadEventId,int32_t, 0x18ec);
+			PROPERTY(m_bCanBePickedUp,bool, 0x18f8);
+			NESTED_PROPERTY(m_nextPrevOwnerUseTime,IDENTITY(entity2::GameTime_t), 0x18fc);
+			PROPERTY(m_hPrevOwner,IDENTITY(GlobalTypes::CHandle<client::C_CSPlayerPawn>), 0x1900);
+			NESTED_PROPERTY(m_nDropTick,IDENTITY(entity2::GameTick_t), 0x1904);
+			PROPERTY(m_bWasActiveWeaponWhenDropped,bool, 0x1908);
+			PROPERTY(m_donated,bool, 0x192c);
+			NESTED_PROPERTY(m_fLastShotTime,IDENTITY(entity2::GameTime_t), 0x1930);
+			PROPERTY(m_bWasOwnedByCT,bool, 0x1934);
+			PROPERTY(m_bWasOwnedByTerrorist,bool, 0x1935);
+			PROPERTY(m_flNextClientFireBulletTime,float32, 0x1938);
+			PROPERTY(m_flNextClientFireBulletTime_Repredict,float32, 0x193c);
+			NESTED_PROPERTY(m_IronSightController,IDENTITY(client::C_IronSightController), 0x1990);
+			PROPERTY(m_iIronSightMode,int32_t, 0x1a40);
+			NESTED_PROPERTY(m_flLastLOSTraceFailureTime,IDENTITY(entity2::GameTime_t), 0x1ab8);
+			PROPERTY(m_flWatTickOffset,float32, 0x1b18);
+			NESTED_PROPERTY(m_flLastShakeTime,IDENTITY(entity2::GameTime_t), 0x1b2c);
+			S2_PAD(0x5B8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_CSWeaponBase) == 0x1CB0, "C_CSWeaponBase size should be 0x1CB0");
+		//static_assert(sizeof(CS2::client::C_CSWeaponBase) == 0x1CE0, "C_CSWeaponBase size should be 0x1CE0");
 
 #endif
 	}

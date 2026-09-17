@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionForce.hpp>
-#include <SDK/particleslib/CPerParticleFloatInput.hpp>
-#include <SDK/particleslib/CParticleTransformInput.hpp>
+#include "CParticleFunctionForce.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
+#include "../particleslib/CParticleTransformInput.hpp"
 
 
 
@@ -25,14 +25,15 @@ namespace CS2 {
 		public:
 			PROPERTY(m_vecComponentScale,GlobalTypes::Vector, 0x1e8);
 			NESTED_PROPERTY(m_fForceAmount,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f8);
-			PROPERTY(m_fFalloffPower,float32, 0x368);
-			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x370);
-			NESTED_PROPERTY(m_fForceAmountMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x3d8);
-			PROPERTY(m_bApplyMinForce,bool, 0x548);
-			S2_PAD(0x368);
+			NESTED_PROPERTY(m_fMinimumDistance,IDENTITY(particleslib::CPerParticleFloatInput), 0x368);
+			PROPERTY(m_fFalloffPower,float32, 0x4d8);
+			NESTED_PROPERTY(m_TransformInput,IDENTITY(particleslib::CParticleTransformInput), 0x4e0);
+			NESTED_PROPERTY(m_fForceAmountMin,IDENTITY(particleslib::CPerParticleFloatInput), 0x548);
+			PROPERTY(m_bApplyMinForce,bool, 0x6b8);
+			S2_PAD(0x4D8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_AttractToControlPoint) == 0x550, "C_OP_AttractToControlPoint size should be 0x550");
+		//static_assert(sizeof(CS2::particles::C_OP_AttractToControlPoint) == 0x6C0, "C_OP_AttractToControlPoint size should be 0x6C0");
 
 #endif
 	}

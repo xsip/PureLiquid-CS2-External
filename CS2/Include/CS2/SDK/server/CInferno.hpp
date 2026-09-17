@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/navlib/Extent.hpp>
-#include <SDK/server/CountdownTimer.hpp>
-#include <SDK/server/IntervalTimer.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../navlib/Extent.hpp"
+#include "CountdownTimer.hpp"
+#include "IntervalTimer.hpp"
 
 
 
@@ -24,34 +24,34 @@ namespace CS2 {
 	namespace server {
 		class CInferno : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY_ARRAY(m_firePositions,GlobalTypes::Vector, 64 , 0x768);
-			PROPERTY_ARRAY(m_fireParentPositions,GlobalTypes::Vector, 64 , 0xa68);
-			PROPERTY_ARRAY(m_bFireIsBurning,bool, 64 , 0xd68);
-			PROPERTY_ARRAY(m_BurnNormal,GlobalTypes::Vector, 64 , 0xda8);
-			PROPERTY(m_fireCount,int32_t, 0x10a8);
-			PROPERTY(m_nInfernoType,int32_t, 0x10ac);
-			PROPERTY(m_nFireEffectTickBegin,int32_t, 0x10b0);
-			PROPERTY(m_nFireLifetime,float32, 0x10b4);
-			PROPERTY(m_bInPostEffectTime,bool, 0x10b8);
-			PROPERTY(m_bWasCreatedInSmoke,bool, 0x10b9);
-			NESTED_PROPERTY(m_extent,IDENTITY(navlib::Extent), 0x12c0);
-			NESTED_PROPERTY(m_damageTimer,IDENTITY(server::CountdownTimer), 0x12d8);
-			NESTED_PROPERTY(m_damageRampTimer,IDENTITY(server::CountdownTimer), 0x12f0);
-			PROPERTY(m_splashVelocity,GlobalTypes::Vector, 0x1308);
-			PROPERTY(m_InitialSplashVelocity,GlobalTypes::Vector, 0x1314);
-			PROPERTY(m_startPos,GlobalTypes::Vector, 0x1320);
-			PROPERTY(m_vecOriginalSpawnLocation,GlobalTypes::Vector, 0x132c);
-			NESTED_PROPERTY(m_activeTimer,IDENTITY(server::IntervalTimer), 0x1338);
-			PROPERTY(m_fireSpawnOffset,int32_t, 0x1348);
-			PROPERTY(m_nMaxFlames,int32_t, 0x134c);
-			PROPERTY(m_nSpreadCount,int32_t, 0x1350);
-			NESTED_PROPERTY(m_BookkeepingTimer,IDENTITY(server::CountdownTimer), 0x1358);
-			NESTED_PROPERTY(m_NextSpreadTimer,IDENTITY(server::CountdownTimer), 0x1370);
-			PROPERTY(m_nSourceItemDefIndex,uint16_t, 0x1388);
+			PROPERTY_ARRAY(m_firePositions,GlobalTypes::VectorWS, 64 , 0x770);
+			PROPERTY_ARRAY(m_fireParentPositions,GlobalTypes::VectorWS, 64 , 0xa70);
+			PROPERTY_ARRAY(m_bFireIsBurning,bool, 64 , 0xd70);
+			PROPERTY_ARRAY(m_BurnNormal,GlobalTypes::Vector, 64 , 0xdb0);
+			PROPERTY(m_fireCount,int32_t, 0x10b0);
+			PROPERTY(m_nInfernoType,int32_t, 0x10b4);
+			PROPERTY(m_nFireEffectTickBegin,int32_t, 0x10b8);
+			PROPERTY(m_nFireLifetime,float32, 0x10bc);
+			PROPERTY(m_bInPostEffectTime,bool, 0x10c0);
+			PROPERTY(m_bWasCreatedInSmoke,bool, 0x10c1);
+			NESTED_PROPERTY(m_extent,IDENTITY(navlib::Extent), 0x12c8);
+			NESTED_PROPERTY(m_damageTimer,IDENTITY(server::CountdownTimer), 0x12e0);
+			NESTED_PROPERTY(m_damageRampTimer,IDENTITY(server::CountdownTimer), 0x12f8);
+			PROPERTY(m_splashVelocity,GlobalTypes::Vector, 0x1310);
+			PROPERTY(m_InitialSplashVelocity,GlobalTypes::Vector, 0x131c);
+			PROPERTY(m_startPos,GlobalTypes::VectorWS, 0x1328);
+			PROPERTY(m_vecOriginalSpawnLocation,GlobalTypes::VectorWS, 0x1334);
+			NESTED_PROPERTY(m_activeTimer,IDENTITY(server::IntervalTimer), 0x1340);
+			PROPERTY(m_fireSpawnOffset,int32_t, 0x1350);
+			PROPERTY(m_nMaxFlames,int32_t, 0x1354);
+			PROPERTY(m_nSpreadCount,int32_t, 0x1358);
+			NESTED_PROPERTY(m_BookkeepingTimer,IDENTITY(server::CountdownTimer), 0x1360);
+			NESTED_PROPERTY(m_NextSpreadTimer,IDENTITY(server::CountdownTimer), 0x1378);
+			PROPERTY(m_nSourceItemDefIndex,uint16_t, 0x1390);
 			S2_PAD(0xC88);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CInferno) == 0x13F0, "CInferno size should be 0x13F0");
+		//static_assert(sizeof(CS2::server::CInferno) == 0x13F8, "CInferno size should be 0x13F8");
 
 #endif
 	}

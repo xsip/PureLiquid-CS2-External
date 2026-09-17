@@ -8,18 +8,18 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1050
+			// Class size: 0x1070
 			namespace CCSWeaponBaseGun /*: public CS2::server::CCSWeaponBase*/ {
-				constexpr std::ptrdiff_t m_zoomLevel = 0x1030; // int32_t m_zoomLevel; |  0x1030 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iBurstShotsRemaining = 0x1034; // int32_t m_iBurstShotsRemaining; |  0x1034 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_silencedModelIndex = 0x1040; // int32_t m_silencedModelIndex; |  0x1040 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_inPrecache = 0x1044; // bool m_inPrecache; |  0x1044 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNeedsBoltAction = 0x1045; // bool m_bNeedsBoltAction; |  0x1045 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRevolverCylinderIdx = 0x1048; // int32_t m_nRevolverCylinderIdx; |  0x1048 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bSkillReloadAvailable = 0x104c; // bool m_bSkillReloadAvailable; |  0x104c | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSkillReloadLiftedReloadKey = 0x104d; // bool m_bSkillReloadLiftedReloadKey; |  0x104d | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSkillBoltInterruptAvailable = 0x104e; // bool m_bSkillBoltInterruptAvailable; |  0x104e | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bSkillBoltLiftedFireKey = 0x104f; // bool m_bSkillBoltLiftedFireKey; |  0x104f | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_zoomLevel = 0x1050; // int32_t m_zoomLevel; |  0x1050 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iBurstShotsRemaining = 0x1054; // int32_t m_iBurstShotsRemaining; |  0x1054 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_silencedModelIndex = 0x1060; // int32_t m_silencedModelIndex; |  0x1060 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_inPrecache = 0x1064; // bool m_inPrecache; |  0x1064 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNeedsBoltAction = 0x1065; // bool m_bNeedsBoltAction; |  0x1065 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRevolverCylinderIdx = 0x1068; // int32_t m_nRevolverCylinderIdx; |  0x1068 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bSkillReloadAvailable = 0x106c; // bool m_bSkillReloadAvailable; |  0x106c | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSkillReloadLiftedReloadKey = 0x106d; // bool m_bSkillReloadLiftedReloadKey; |  0x106d | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSkillBoltInterruptAvailable = 0x106e; // bool m_bSkillBoltInterruptAvailable; |  0x106e | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bSkillBoltLiftedFireKey = 0x106f; // bool m_bSkillBoltLiftedFireKey; |  0x106f | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

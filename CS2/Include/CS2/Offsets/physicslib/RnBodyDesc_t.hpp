@@ -11,7 +11,7 @@ namespace CS2 {
 			// Class size: 0xE0
 			namespace RnBodyDesc_t /**/ {
 				constexpr std::ptrdiff_t m_sDebugName = 0x0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_vPosition = 0x8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vPosition = 0x8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_qOrientation = 0x14; // GlobalTypes::QuaternionStorage  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_vLinearVelocity = 0x24; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vAngularVelocity = 0x30; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc

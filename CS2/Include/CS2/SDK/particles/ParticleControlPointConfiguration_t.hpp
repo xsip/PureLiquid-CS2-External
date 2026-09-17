@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/ParticleControlPointDriver_t.hpp>
-#include <SDK/particles/ParticlePreviewState_t.hpp>
+#include "ParticleControlPointDriver_t.hpp"
+#include "ParticlePreviewState_t.hpp"
 
 
 
@@ -25,10 +25,10 @@ namespace CS2 {
 			PROPERTY(m_name,GlobalTypes::CUtlString*, 0x0);
 			NESTED_PROPERTY(m_drivers,IDENTITY(GlobalTypes::CUtlVector<particles::ParticleControlPointDriver_t>), 0x8);
 			NESTED_PROPERTY(m_previewState,IDENTITY(particles::ParticlePreviewState_t), 0x20);
-			S2_PAD(0x88);
+			S2_PAD(0x90);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::ParticleControlPointConfiguration_t) == 0x88, "ParticleControlPointConfiguration_t size should be 0x88");
+		//static_assert(sizeof(CS2::particles::ParticleControlPointConfiguration_t) == 0x90, "ParticleControlPointConfiguration_t size should be 0x90");
 
 #endif
 	}

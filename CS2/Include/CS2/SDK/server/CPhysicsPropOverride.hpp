@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPhysicsProp.hpp>
+#include "CPhysicsProp.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPhysicsPropOverride) == 0xC10, "CPhysicsPropOverride size should be 0xC10");
+		//static_assert(sizeof(CS2::server::CPhysicsPropOverride) == 0xC30, "CPhysicsPropOverride size should be 0xC30");
 
 #endif
 	}

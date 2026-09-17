@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "CBaseEntity.hpp"
 
 
 
@@ -23,19 +23,20 @@ namespace CS2 {
 	namespace server {
 		class CFuncConveyor : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_szConveyorModels,GlobalTypes::CUtlSymbolLarge*, 0x768);
-			PROPERTY(m_flTransitionDurationSeconds,float32, 0x770);
-			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x774);
-			PROPERTY(m_vecMoveDirEntitySpace,GlobalTypes::Vector, 0x780);
-			PROPERTY(m_flTargetSpeed,float32, 0x78c);
-			NESTED_PROPERTY(m_nTransitionStartTick,IDENTITY(entity2::GameTick_t), 0x790);
-			PROPERTY(m_nTransitionDurationTicks,int32_t, 0x794);
-			PROPERTY(m_flTransitionStartSpeed,float32, 0x798);
-			// PROPERTY(m_hConveyorModels,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>), 0x7a0);
+			PROPERTY(m_szConveyorModels,GlobalTypes::CUtlSymbolLarge*, 0x770);
+			PROPERTY(m_flTransitionDurationSeconds,float32, 0x778);
+			PROPERTY(m_flSpeed,float32, 0x77c);
+			PROPERTY(m_angMoveEntitySpace,GlobalTypes::QAngle, 0x780);
+			PROPERTY(m_vecMoveDirEntitySpace,GlobalTypes::Vector, 0x78c);
+			PROPERTY(m_flTargetSpeed,float32, 0x798);
+			NESTED_PROPERTY(m_nTransitionStartTick,IDENTITY(entity2::GameTick_t), 0x79c);
+			PROPERTY(m_nTransitionDurationTicks,int32_t, 0x7a0);
+			PROPERTY(m_flTransitionStartSpeed,float32, 0x7a4);
+			// PROPERTY(m_hConveyorModels,IDENTITY(server::CNetworkUtlVectorBase<GlobalTypes::CHandle<server::CBaseEntity>>), 0x7a8);
 			S2_PAD(0x50);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncConveyor) == 0x7B8, "CFuncConveyor size should be 0x7B8");
+		//static_assert(sizeof(CS2::server::CFuncConveyor) == 0x7C0, "CFuncConveyor size should be 0x7C0");
 
 #endif
 	}

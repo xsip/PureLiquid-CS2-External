@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmEvent.hpp>
-#include <SDK/animlib/CNmEventRelevance_t.hpp>
-#include <SDK/animlib/CNmParticleEvent_Type_t.hpp>
-#include <SDK/animlib/CNmEventTargetEntity_t.hpp>
-#include <SDK/animationsystem/ParticleAttachment_t.hpp>
+#include "CNmEvent.hpp"
+#include "CNmEventRelevance_t.hpp"
+#include "CNmParticleEvent_Type_t.hpp"
+#include "CNmEventTargetEntity_t.hpp"
+#include "../animationsystem/ParticleAttachment_t.hpp"
 
 
 

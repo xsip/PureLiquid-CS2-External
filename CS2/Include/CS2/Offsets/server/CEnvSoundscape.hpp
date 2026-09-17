@@ -12,7 +12,7 @@ namespace CS2 {
 			namespace CEnvSoundscape /*: public CS2::server::CBaseEntity*/ {
 				constexpr std::ptrdiff_t m_OnPlay = 0x4a8; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 				constexpr std::ptrdiff_t m_flRadius = 0x4c0; // float32 m_flRadius; |  0x4c0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_soundEventName = 0x4c8; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_soundEventName = 0x4c8; // GlobalTypes::CGameSoundEventName  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_bOverrideWithEvent = 0x4d0; // bool m_bOverrideWithEvent; |  0x4d0 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_soundscapeIndex = 0x4d4; // int32_t m_soundscapeIndex; |  0x4d4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_soundscapeEntityListId = 0x4d8; // int32_t m_soundscapeEntityListId; |  0x4d8 | Schema_Builtin | Size: 0x4

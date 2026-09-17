@@ -8,15 +8,15 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace modellib {
-			// Class size: 0x210
+			// Class size: 0x228
 			namespace CRenderMesh /**/ {
-				constexpr std::ptrdiff_t m_sceneObjects = 0x10; // GlobalTypes::CUtlLeanVectorFixedGrowable<modellib::CSceneObjectData>  | Schema_Atomic | Size: 0xa8
-				constexpr std::ptrdiff_t m_constraints = 0xb8; // GlobalTypes::CUtlLeanVector<modellib::CBaseConstraint*>  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_skeleton = 0xc8; // modellib::CRenderSkeleton  | Schema_DeclaredClass | Size: 0x50
-				constexpr std::ptrdiff_t m_bUseUV2ForCharting = 0x1d4; // bool m_bUseUV2ForCharting; |  0x1d4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bEmbeddedMapMesh = 0x1d5; // bool m_bEmbeddedMapMesh; |  0x1d5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_meshDeformParams = 0x1f8; // modellib::DynamicMeshDeformParams_t  | Schema_DeclaredClass | Size: 0xc
-				constexpr std::ptrdiff_t m_pGroomData = 0x208; // modellib::CRenderGroom**  | Schema_Ptr | Size: 0x8
+				constexpr std::ptrdiff_t m_sceneObjects = 0x10; // GlobalTypes::CUtlLeanVectorFixedGrowable<modellib::CSceneObjectData>  | Schema_Atomic | Size: 0xc0
+				constexpr std::ptrdiff_t m_constraints = 0xd0; // GlobalTypes::CUtlLeanVector<modellib::CBaseConstraint*>  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_skeleton = 0xe0; // modellib::CRenderSkeleton  | Schema_DeclaredClass | Size: 0x50
+				constexpr std::ptrdiff_t m_bUseUV2ForCharting = 0x1ec; // bool m_bUseUV2ForCharting; |  0x1ec | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bEmbeddedMapMesh = 0x1ed; // bool m_bEmbeddedMapMesh; |  0x1ed | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_meshDeformParams = 0x210; // modellib::DynamicMeshDeformParams_t  | Schema_DeclaredClass | Size: 0xc
+				constexpr std::ptrdiff_t m_pGroomData = 0x220; // modellib::CRenderGroom**  | Schema_Ptr | Size: 0x8
 			}
 		}
 	}

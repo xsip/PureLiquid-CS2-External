@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0x118
+			// Class size: 0x110
 			namespace CPulseGraphInstance_TestDomain_FakeEntityOwner /*: public CS2::pulse_runtime_lib::CBasePulseGraphInstance*/ {
 				// NO SCHEMA DATA FOUND!
 			}

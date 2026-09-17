@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xCB0
+			// Class size: 0xCD0
 			namespace CBasePlayerWeapon /*: public CS2::server::CEconEntity*/ {
-				constexpr std::ptrdiff_t m_nNextPrimaryAttackTick = 0xc70; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextPrimaryAttackTickRatio = 0xc74; // float32 m_flNextPrimaryAttackTickRatio; |  0xc74 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nNextSecondaryAttackTick = 0xc78; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextSecondaryAttackTickRatio = 0xc7c; // float32 m_flNextSecondaryAttackTickRatio; |  0xc7c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iClip1 = 0xc80; // int32_t m_iClip1; |  0xc80 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_iClip2 = 0xc84; // int32_t m_iClip2; |  0xc84 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_pReserveAmmo = 0xc88; // int32_t m_pReserveAmmo[2]; |  0xc88 | Schema_FixedArray | Size: 0x8
-				constexpr std::ptrdiff_t m_OnPlayerUse = 0xc90; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_nNextPrimaryAttackTick = 0xc90; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextPrimaryAttackTickRatio = 0xc94; // float32 m_flNextPrimaryAttackTickRatio; |  0xc94 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nNextSecondaryAttackTick = 0xc98; // entity2::GameTick_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextSecondaryAttackTickRatio = 0xc9c; // float32 m_flNextSecondaryAttackTickRatio; |  0xc9c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iClip1 = 0xca0; // int32_t m_iClip1; |  0xca0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_iClip2 = 0xca4; // int32_t m_iClip2; |  0xca4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pReserveAmmo = 0xca8; // int32_t m_pReserveAmmo[2]; |  0xca8 | Schema_FixedArray | Size: 0x8
+				constexpr std::ptrdiff_t m_OnPlayerUse = 0xcb0; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
 			}
 		}
 	}

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BasePropDoor.hpp>
+#include "C_BasePropDoor.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PropDoorRotating) == 0x13E0, "C_PropDoorRotating size should be 0x13E0");
+		//static_assert(sizeof(CS2::client::C_PropDoorRotating) == 0x1400, "C_PropDoorRotating size should be 0x1400");
 
 #endif
 	}

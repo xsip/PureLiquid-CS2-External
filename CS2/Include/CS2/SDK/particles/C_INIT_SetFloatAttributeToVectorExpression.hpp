@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionInitializer.hpp>
-#include <SDK/particles/VectorFloatExpressionType_t.hpp>
-#include <SDK/particleslib/CPerParticleVecInput.hpp>
-#include <SDK/particleslib/CParticleRemapFloatInput.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/ParticleSetMethod_t.hpp>
+#include "CParticleFunctionInitializer.hpp"
+#include "VectorFloatExpressionType_t.hpp"
+#include "../particleslib/CPerParticleVecInput.hpp"
+#include "../particleslib/CParticleRemapFloatInput.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "../particleslib/ParticleSetMethod_t.hpp"
 
 
 

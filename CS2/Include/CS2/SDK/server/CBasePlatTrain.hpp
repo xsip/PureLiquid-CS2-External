@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseToggle.hpp>
+#include "CBaseToggle.hpp"
 
 
 
@@ -21,15 +21,15 @@ namespace CS2 {
 	namespace server {
 		class CBasePlatTrain : public CS2::server::CBaseToggle {
 		public:
-			PROPERTY(m_NoiseMoving,GlobalTypes::CUtlSymbolLarge*, 0x7e8);
-			PROPERTY(m_NoiseArrived,GlobalTypes::CUtlSymbolLarge*, 0x7f0);
-			PROPERTY(m_volume,float32, 0x800);
-			PROPERTY(m_flTWidth,float32, 0x804);
-			PROPERTY(m_flTLength,float32, 0x808);
+			PROPERTY(m_NoiseMoving,GlobalTypes::CGameSoundEventName, 0x7f0);
+			PROPERTY(m_NoiseArrived,GlobalTypes::CGameSoundEventName, 0x7f8);
+			PROPERTY(m_volume,float32, 0x808);
+			PROPERTY(m_flTWidth,float32, 0x80c);
+			PROPERTY(m_flTLength,float32, 0x810);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBasePlatTrain) == 0x810, "CBasePlatTrain size should be 0x810");
+		//static_assert(sizeof(CS2::server::CBasePlatTrain) == 0x818, "CBasePlatTrain size should be 0x818");
 
 #endif
 	}

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/smartprops/CSmartPropSelectionCriteria.hpp>
-#include <SDK/smartprops/CSmartPropAttributePathPositions.hpp>
+#include "CSmartPropSelectionCriteria.hpp"
+#include "CSmartPropAttributePathPositions.hpp"
 
 
 

@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/DamageTypes_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseTrigger.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../client/DamageTypes_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "CBaseEntity.hpp"
 
 
 
@@ -25,24 +25,24 @@ namespace CS2 {
 	namespace server {
 		class CTriggerHurt : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_flOriginalDamage,float32, 0x8c8);
-			PROPERTY(m_flDamage,float32, 0x8cc);
-			PROPERTY(m_flDamageCap,float32, 0x8d0);
-			NESTED_PROPERTY(m_flLastDmgTime,IDENTITY(entity2::GameTime_t), 0x8d4);
-			PROPERTY(m_flForgivenessDelay,float32, 0x8d8);
-			PROPERTY(m_bitsDamageInflict,IDENTITY(client::DamageTypes_t), 0x8dc);
-			PROPERTY(m_damageModel,int32_t, 0x8e0);
-			PROPERTY(m_bNoDmgForce,bool, 0x8e4);
-			PROPERTY(m_vDamageForce,GlobalTypes::Vector, 0x8e8);
-			PROPERTY(m_thinkAlways,bool, 0x8f4);
-			PROPERTY(m_hurtThinkPeriod,float32, 0x8f8);
-			NESTED_PROPERTY(m_OnHurt,IDENTITY(entity2::CEntityIOOutput), 0x900);
-			NESTED_PROPERTY(m_OnHurtPlayer,IDENTITY(entity2::CEntityIOOutput), 0x918);
-			NESTED_PROPERTY(m_hurtEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x930);
+			PROPERTY(m_flOriginalDamage,float32, 0x8e8);
+			PROPERTY(m_flDamage,float32, 0x8ec);
+			PROPERTY(m_flDamageCap,float32, 0x8f0);
+			NESTED_PROPERTY(m_flLastDmgTime,IDENTITY(entity2::GameTime_t), 0x8f4);
+			PROPERTY(m_flForgivenessDelay,float32, 0x8f8);
+			PROPERTY(m_bitsDamageInflict,IDENTITY(client::DamageTypes_t), 0x8fc);
+			PROPERTY(m_damageModel,int32_t, 0x900);
+			PROPERTY(m_bNoDmgForce,bool, 0x904);
+			PROPERTY(m_vDamageForce,GlobalTypes::Vector, 0x908);
+			PROPERTY(m_thinkAlways,bool, 0x914);
+			PROPERTY(m_hurtThinkPeriod,float32, 0x918);
+			NESTED_PROPERTY(m_OnHurt,IDENTITY(entity2::CEntityIOOutput), 0x920);
+			NESTED_PROPERTY(m_OnHurtPlayer,IDENTITY(entity2::CEntityIOOutput), 0x938);
+			NESTED_PROPERTY(m_hurtEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::CBaseEntity>>), 0x950);
 			S2_PAD(0x88);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerHurt) == 0x950, "CTriggerHurt size should be 0x950");
+		//static_assert(sizeof(CS2::server::CTriggerHurt) == 0x970, "CTriggerHurt size should be 0x970");
 
 #endif
 	}

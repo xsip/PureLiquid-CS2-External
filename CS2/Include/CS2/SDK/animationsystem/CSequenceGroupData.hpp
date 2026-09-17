@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/CSeqS1SeqDesc.hpp>
-#include <SDK/animationsystem/CSeqSynthAnimDesc.hpp>
-#include <SDK/animationsystem/CSeqCmdSeqDesc.hpp>
-#include <SDK/animationsystem/CSeqBoneMaskList.hpp>
-#include <SDK/animationsystem/CSeqScaleSet.hpp>
-#include <SDK/animationsystem/CSeqPoseParamDesc.hpp>
-#include <SDK/animationsystem/CSeqIKLock.hpp>
+#include "CSeqS1SeqDesc.hpp"
+#include "CSeqSynthAnimDesc.hpp"
+#include "CSeqCmdSeqDesc.hpp"
+#include "CSeqBoneMaskList.hpp"
+#include "CSeqScaleSet.hpp"
+#include "CSeqPoseParamDesc.hpp"
+#include "CSeqIKLock.hpp"
 
 
 

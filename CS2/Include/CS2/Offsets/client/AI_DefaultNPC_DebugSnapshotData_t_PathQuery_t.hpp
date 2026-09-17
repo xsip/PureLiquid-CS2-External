@@ -10,8 +10,8 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x28
 			namespace AI_DefaultNPC_DebugSnapshotData_t_PathQuery_t /**/ {
-				constexpr std::ptrdiff_t m_sInitialQueryName = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_sCurrentQueryName = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nInitialMovementId = 0x0; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nCurrentMovementId = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nMode = 0x10; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nType = 0x18; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_nState = 0x20; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8

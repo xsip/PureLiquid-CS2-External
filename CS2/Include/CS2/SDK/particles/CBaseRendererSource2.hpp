@@ -4,28 +4,28 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
-#include <SDK/particles/ParticleAttributeIndex_t.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererVecInput.hpp>
-#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
-#include <SDK/particles/SpriteCardShaderType_t.hpp>
-#include <SDK/particles/ParticleSequenceCropOverride_t.hpp>
-#include <SDK/particles/TextureGroup_t.hpp>
-#include <SDK/particleslib/AnimationType_t.hpp>
-#include <SDK/particles/ParticleOutputBlendMode_t.hpp>
-#include <SDK/particles/ParticleFogType_t.hpp>
-#include <SDK/particles/SpriteCardPerParticleScale_t.hpp>
-#include <SDK/particles/ParticleAlphaReferenceType_t.hpp>
-#include <SDK/particles/BlurFilterType_t.hpp>
-#include <SDK/particles/ParticleDepthFeatheringMode_t.hpp>
-#include <SDK/particles/ParticleSortingChoiceList_t.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
+#include "ParticleAttributeIndex_t.hpp"
+#include "../particleslib/CParticleCollectionRendererVecInput.hpp"
+#include "../particleslib/ParticleColorBlendType_t.hpp"
+#include "SpriteCardShaderType_t.hpp"
+#include "ParticleSequenceCropOverride_t.hpp"
+#include "TextureGroup_t.hpp"
+#include "../particleslib/AnimationType_t.hpp"
+#include "ParticleOutputBlendMode_t.hpp"
+#include "ParticleFogType_t.hpp"
+#include "SpriteCardPerParticleScale_t.hpp"
+#include "ParticleAlphaReferenceType_t.hpp"
+#include "BlurFilterType_t.hpp"
+#include "ParticleDepthFeatheringMode_t.hpp"
+#include "ParticleSortingChoiceList_t.hpp"
 
 
 

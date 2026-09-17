@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CMotionSearchDB.hpp>
-#include <SDK/animgraphlib/CMotionGraph.hpp>
-#include <SDK/animgraphlib/CMotionGraphConfig.hpp>
-#include <SDK/modellib/AnimScriptHandle.hpp>
+#include "CMotionSearchDB.hpp"
+#include "CMotionGraph.hpp"
+#include "CMotionGraphConfig.hpp"
+#include "../modellib/AnimScriptHandle.hpp"
 
 
 

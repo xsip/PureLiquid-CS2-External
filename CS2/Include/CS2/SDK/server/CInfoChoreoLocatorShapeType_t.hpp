@@ -6,10 +6,11 @@
 namespace CS2 {
 	namespace server {
 		enum CInfoChoreoLocatorShapeType_t : std::uint32_t {
-			CInfoChoreoLocatorShapeType_t_COUNT = 0x2,
+			CInfoChoreoLocatorShapeType_t_COUNT = 0x3,
 			CInfoChoreoLocatorShapeType_t_LINE = 0x1,
-			CInfoChoreoLocatorShapeType_t_NONE = 0x3,
-			CInfoChoreoLocatorShapeType_t_POINT = 0x0
+			CInfoChoreoLocatorShapeType_t_NONE = 0x4,
+			CInfoChoreoLocatorShapeType_t_POINT = 0x0,
+			CInfoChoreoLocatorShapeType_t_RADIUS = 0x2
 		};
 	}
 }

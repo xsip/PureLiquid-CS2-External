@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseClientUIEntity.hpp>
+#include "C_BaseClientUIEntity.hpp"
 
 
 
@@ -21,23 +21,23 @@ namespace CS2 {
 	namespace client {
 		class C_PointClientUIHUD : public CS2::client::C_BaseClientUIEntity {
 		public:
-			PROPERTY(m_bCheckCSSClasses,bool, 0xfe0);
-			PROPERTY(m_bIgnoreInput,bool, 0x1158);
-			PROPERTY(m_flWidth,float32, 0x115c);
-			PROPERTY(m_flHeight,float32, 0x1160);
-			PROPERTY(m_flDPI,float32, 0x1164);
-			PROPERTY(m_flInteractDistance,float32, 0x1168);
-			PROPERTY(m_flDepthOffset,float32, 0x116c);
-			PROPERTY(m_unOwnerContext,uint32_t, 0x1170);
-			PROPERTY(m_unHorizontalAlign,uint32_t, 0x1174);
-			PROPERTY(m_unVerticalAlign,uint32_t, 0x1178);
-			PROPERTY(m_unOrientation,uint32_t, 0x117c);
-			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x1180);
-			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x1188);
+			PROPERTY(m_bCheckCSSClasses,bool, 0xfe8);
+			PROPERTY(m_bIgnoreInput,bool, 0x1160);
+			PROPERTY(m_flWidth,float32, 0x1164);
+			PROPERTY(m_flHeight,float32, 0x1168);
+			PROPERTY(m_flDPI,float32, 0x116c);
+			PROPERTY(m_flInteractDistance,float32, 0x1170);
+			PROPERTY(m_flDepthOffset,float32, 0x1174);
+			PROPERTY(m_unOwnerContext,uint32_t, 0x1178);
+			PROPERTY(m_unHorizontalAlign,uint32_t, 0x117c);
+			PROPERTY(m_unVerticalAlign,uint32_t, 0x1180);
+			PROPERTY(m_unOrientation,uint32_t, 0x1184);
+			PROPERTY(m_bAllowInteractionFromAllSceneWorlds,bool, 0x1188);
+			// PROPERTY(m_vecCSSClasses,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlSymbolLarge>), 0x1190);
 			S2_PAD(0x1C8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PointClientUIHUD) == 0x11A0, "C_PointClientUIHUD size should be 0x11A0");
+		//static_assert(sizeof(CS2::client::C_PointClientUIHUD) == 0x11A8, "C_PointClientUIHUD size should be 0x11A8");
 
 #endif
 	}

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
+#include "C_BaseModelEntity.hpp"
 
 
 
@@ -26,22 +26,22 @@ namespace CS2 {
 	namespace client {
 		class C_EnvSky : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfa8);
-			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfb0);
-			PROPERTY(m_bStartDisabled,bool, 0xfb8);
-			PROPERTY(m_vTintColor,GlobalTypes::Color, 0xfb9);
-			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0xfbd);
-			PROPERTY(m_flBrightnessScale,float32, 0xfc4);
-			PROPERTY(m_nFogType,int32_t, 0xfc8);
-			PROPERTY(m_flFogMinStart,float32, 0xfcc);
-			PROPERTY(m_flFogMinEnd,float32, 0xfd0);
-			PROPERTY(m_flFogMaxStart,float32, 0xfd4);
-			PROPERTY(m_flFogMaxEnd,float32, 0xfd8);
-			PROPERTY(m_bEnabled,bool, 0xfdc);
+			PROPERTY(m_hSkyMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfb0);
+			PROPERTY(m_hSkyMaterialLightingOnly,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xfb8);
+			PROPERTY(m_bStartDisabled,bool, 0xfc0);
+			PROPERTY(m_vTintColor,GlobalTypes::Color, 0xfc1);
+			PROPERTY(m_vTintColorLightingOnly,GlobalTypes::Color, 0xfc5);
+			PROPERTY(m_flBrightnessScale,float32, 0xfcc);
+			PROPERTY(m_nFogType,int32_t, 0xfd0);
+			PROPERTY(m_flFogMinStart,float32, 0xfd4);
+			PROPERTY(m_flFogMinEnd,float32, 0xfd8);
+			PROPERTY(m_flFogMaxStart,float32, 0xfdc);
+			PROPERTY(m_flFogMaxEnd,float32, 0xfe0);
+			PROPERTY(m_bEnabled,bool, 0xfe4);
 			S2_PAD(0x60);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_EnvSky) == 0x1008, "C_EnvSky size should be 0x1008");
+		//static_assert(sizeof(CS2::client::C_EnvSky) == 0x1010, "C_EnvSky size should be 0x1010");
 
 #endif
 	}

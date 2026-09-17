@@ -8,17 +8,19 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x130
+			// Class size: 0x2F0
 			namespace CPrecipitationVData /*: public CS2::client::CEntitySubclassVDataBase*/ {
 				constexpr std::ptrdiff_t m_szParticlePrecipitationEffect = 0x28; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
-				constexpr std::ptrdiff_t m_flInnerDistance = 0x108; // float32 m_flInnerDistance; |  0x108 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nAttachType = 0x10c; // animationsystem::ParticleAttachment_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_bBatchSameVolumeType = 0x110; // bool m_bBatchSameVolumeType; |  0x110 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_nRTEnvCP = 0x114; // int32_t m_nRTEnvCP; |  0x114 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nRTEnvCPComponent = 0x118; // int32_t m_nRTEnvCPComponent; |  0x118 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_szModifier = 0x120; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nUseSnapshotFromSurfaceGraph = 0x128; // int32_t m_nUseSnapshotFromSurfaceGraph; |  0x128 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_snapshotFilter = 0x12c; // client::PrecipitationFilter_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_szParticlePrecipitationPuddleEffect = 0x108; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_szParticlePrecipitationPostEffect = 0x1e8; // GlobalTypes::CResourceNameTyped<GlobalTypes::CWeakHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>>  | Schema_Atomic | Size: 0xe0
+				constexpr std::ptrdiff_t m_flInnerDistance = 0x2c8; // float32 m_flInnerDistance; |  0x2c8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nAttachType = 0x2cc; // animationsystem::ParticleAttachment_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_bBatchSameVolumeType = 0x2d0; // bool m_bBatchSameVolumeType; |  0x2d0 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_nRTEnvCP = 0x2d4; // int32_t m_nRTEnvCP; |  0x2d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nRTEnvCPComponent = 0x2d8; // int32_t m_nRTEnvCPComponent; |  0x2d8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_szModifier = 0x2e0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_nUseSnapshotFromSurfaceGraph = 0x2e8; // int32_t m_nUseSnapshotFromSurfaceGraph; |  0x2e8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_snapshotFilter = 0x2ec; // client::PrecipitationFilter_t  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

@@ -10,6 +10,8 @@ namespace CS2 {
 		namespace server {
 			// Class size: 0xA0
 			namespace CAI_Expresser /**/ {
+				constexpr std::ptrdiff_t m_conceptCooldowns = 0x10; // GlobalTypes::CUtlDict<entity2::GameTime_t>  | Schema_Atomic | Size: 0x28
+				constexpr std::ptrdiff_t m_ruleCooldowns = 0x38; // GlobalTypes::CUtlDict<entity2::GameTime_t>  | Schema_Atomic | Size: 0x28
 				constexpr std::ptrdiff_t m_flStopTalkTime = 0x60; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_flStopTalkTimeWithoutDelay = 0x64; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_flQueuedSpeechTime = 0x68; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4

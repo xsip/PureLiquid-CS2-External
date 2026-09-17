@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CTriggerOnce.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CTriggerOnce.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -28,25 +28,25 @@ namespace CS2 {
 	namespace server {
 		class CTriggerLook : public CS2::server::CTriggerOnce {
 		public:
-			PROPERTY(m_hLookTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8e0);
-			PROPERTY(m_flFieldOfView,float32, 0x8e4);
-			PROPERTY(m_flLookTime,float32, 0x8e8);
-			PROPERTY(m_flLookTimeTotal,float32, 0x8ec);
-			NESTED_PROPERTY(m_flLookTimeLast,IDENTITY(entity2::GameTime_t), 0x8f0);
-			PROPERTY(m_flTimeoutDuration,float32, 0x8f4);
-			PROPERTY(m_bTimeoutFired,bool, 0x8f8);
-			PROPERTY(m_bIsLooking,bool, 0x8f9);
-			PROPERTY(m_b2DFOV,bool, 0x8fa);
-			PROPERTY(m_bUseVelocity,bool, 0x8fb);
-			PROPERTY(m_bTestOcclusion,bool, 0x8fc);
-			PROPERTY(m_bTestAllVisibleOcclusion,bool, 0x8fd);
-			NESTED_PROPERTY(m_OnTimeout,IDENTITY(entity2::CEntityIOOutput), 0x900);
-			NESTED_PROPERTY(m_OnStartLook,IDENTITY(entity2::CEntityIOOutput), 0x918);
-			NESTED_PROPERTY(m_OnEndLook,IDENTITY(entity2::CEntityIOOutput), 0x930);
+			PROPERTY(m_hLookTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x900);
+			PROPERTY(m_flFieldOfView,float32, 0x904);
+			PROPERTY(m_flLookTime,float32, 0x908);
+			PROPERTY(m_flLookTimeTotal,float32, 0x90c);
+			NESTED_PROPERTY(m_flLookTimeLast,IDENTITY(entity2::GameTime_t), 0x910);
+			PROPERTY(m_flTimeoutDuration,float32, 0x914);
+			PROPERTY(m_bTimeoutFired,bool, 0x918);
+			PROPERTY(m_bIsLooking,bool, 0x919);
+			PROPERTY(m_b2DFOV,bool, 0x91a);
+			PROPERTY(m_bUseVelocity,bool, 0x91b);
+			PROPERTY(m_bTestOcclusion,bool, 0x91c);
+			PROPERTY(m_bTestAllVisibleOcclusion,bool, 0x91d);
+			NESTED_PROPERTY(m_OnTimeout,IDENTITY(entity2::CEntityIOOutput), 0x920);
+			NESTED_PROPERTY(m_OnStartLook,IDENTITY(entity2::CEntityIOOutput), 0x938);
+			NESTED_PROPERTY(m_OnEndLook,IDENTITY(entity2::CEntityIOOutput), 0x950);
 			S2_PAD(0x68);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerLook) == 0x948, "CTriggerLook size should be 0x948");
+		//static_assert(sizeof(CS2::server::CTriggerLook) == 0x968, "CTriggerLook size should be 0x968");
 
 #endif
 	}

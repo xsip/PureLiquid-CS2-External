@@ -8,15 +8,17 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace animlib {
-			// Class size: 0x38
+			// Class size: 0x78
 			namespace CNmChainLookatNode_CDefinition /*: public CS2::animlib::CNmPassthroughNode_CDefinition*/ {
-				constexpr std::ptrdiff_t m_chainEndBoneID = 0x18; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_nLookatTargetNodeIdx = 0x20; // int16_t m_nLookatTargetNodeIdx; |  0x20 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_nEnabledNodeIdx = 0x22; // int16_t m_nEnabledNodeIdx; |  0x22 | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_flBlendTimeSeconds = 0x24; // float32 m_flBlendTimeSeconds; |  0x24 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nChainLength = 0x28; // uint8_t m_nChainLength; |  0x28 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0x29; // bool m_bIsTargetInWorldSpace; |  0x29 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_chainForwardDir = 0x2c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_endEffectorBoneID = 0x18; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_endEffectorForwardAxis = 0x20; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_endEffectorOffset = 0x2c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_nLookatTargetNodeIdx = 0x38; // int16_t m_nLookatTargetNodeIdx; |  0x38 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_nEnabledNodeIdx = 0x3a; // int16_t m_nEnabledNodeIdx; |  0x3a | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_flBlendTimeSeconds = 0x3c; // float32 m_flBlendTimeSeconds; |  0x3c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_chainWeights = 0x40; // GlobalTypes::CUtlVectorFixedGrowable  | Schema_Atomic | Size: 0x30
+				constexpr std::ptrdiff_t m_nChainLength = 0x70; // uint8_t m_nChainLength; |  0x70 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bIsTargetInWorldSpace = 0x71; // bool m_bIsTargetInWorldSpace; |  0x71 | Schema_Builtin | Size: 0x1
 			}
 		}
 	}

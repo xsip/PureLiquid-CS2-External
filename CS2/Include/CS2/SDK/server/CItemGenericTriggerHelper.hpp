@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
+#include "CBaseModelEntity.hpp"
 
 
 
@@ -26,11 +26,11 @@ namespace CS2 {
 	namespace server {
 		class CItemGenericTriggerHelper : public CS2::server::CBaseModelEntity {
 		public:
-			PROPERTY(m_hParentItem,IDENTITY(GlobalTypes::CHandle<server::CItemGeneric>), 0x768);
+			PROPERTY(m_hParentItem,IDENTITY(GlobalTypes::CHandle<server::CItemGeneric>), 0x770);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CItemGenericTriggerHelper) == 0x770, "CItemGenericTriggerHelper size should be 0x770");
+		//static_assert(sizeof(CS2::server::CItemGenericTriggerHelper) == 0x778, "CItemGenericTriggerHelper size should be 0x778");
 
 #endif
 	}

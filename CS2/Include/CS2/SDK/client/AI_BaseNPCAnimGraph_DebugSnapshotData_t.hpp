@@ -4,13 +4,12 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/DebugSnapshotBaseStructuredData_t.hpp>
 
 
 
@@ -19,16 +18,20 @@
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace client {
-		class AI_BaseNPCAnimGraph_DebugSnapshotData_t : public CS2::client::DebugSnapshotBaseStructuredData_t {
+		class AI_BaseNPCAnimGraph_DebugSnapshotData_t  {
 		public:
-			PROPERTY(e_action_desired,GlobalTypes::CGlobalSymbol, 0x8);
-			PROPERTY(b_action_restart,bool, 0x10);
-			PROPERTY(e_movement_type_desired,GlobalTypes::CGlobalSymbol, 0x18);
-			PROPERTY(b_movement_type_restart,bool, 0x20);
-			S2_PAD(0x20);
+			PROPERTY(e_action_desired,GlobalTypes::CGlobalSymbol, 0x0);
+			PROPERTY(e_action_handshake_restart,GlobalTypes::CGlobalSymbol, 0x8);
+			PROPERTY(e_action_handshake_body_authority_current,GlobalTypes::CGlobalSymbol, 0x10);
+			PROPERTY(e_action_handshake_body_authority_desired,GlobalTypes::CGlobalSymbol, 0x18);
+			PROPERTY(e_movement_type_desired,GlobalTypes::CGlobalSymbol, 0x20);
+			PROPERTY(e_movement_handshake_restart,GlobalTypes::CGlobalSymbol, 0x28);
+			PROPERTY(e_movement_handshake_body_authority_current,GlobalTypes::CGlobalSymbol, 0x30);
+			PROPERTY(e_movement_handshake_body_authority_desired,GlobalTypes::CGlobalSymbol, 0x38);
+			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::AI_BaseNPCAnimGraph_DebugSnapshotData_t) == 0x28, "AI_BaseNPCAnimGraph_DebugSnapshotData_t size should be 0x28");
+		//static_assert(sizeof(CS2::client::AI_BaseNPCAnimGraph_DebugSnapshotData_t) == 0x40, "AI_BaseNPCAnimGraph_DebugSnapshotData_t size should be 0x40");
 
 #endif
 	}

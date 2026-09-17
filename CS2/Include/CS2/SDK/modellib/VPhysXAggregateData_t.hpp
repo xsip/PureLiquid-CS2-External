@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/VPhysXBodyPart_t.hpp>
-#include <SDK/modellib/PhysShapeMarkup_t.hpp>
-#include <SDK/modellib/VPhysXConstraint2_t.hpp>
-#include <SDK/modellib/VPhysXJoint_t.hpp>
-#include <SDK/modellib/VPhysXCollisionAttributes_t.hpp>
+#include "VPhysXBodyPart_t.hpp"
+#include "PhysShapeMarkup_t.hpp"
+#include "VPhysXConstraint2_t.hpp"
+#include "VPhysXJoint_t.hpp"
+#include "VPhysXCollisionAttributes_t.hpp"
 
 
 

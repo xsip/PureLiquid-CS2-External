@@ -14,7 +14,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iszOperator = 0x10; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_iszOpvar = 0x18; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_flVal = 0x20; // float32 m_flVal; |  0x20 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vPos = 0x24; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vPos = 0x24; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

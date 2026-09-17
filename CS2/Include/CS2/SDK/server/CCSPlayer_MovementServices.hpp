@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPlayer_MovementServices_Humanoid.hpp>
-#include <SDK/client/CCSPlayerAnimationState.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/server/CCSPlayerLegacyJump.hpp>
-#include <SDK/server/CCSPlayerModernJump.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
+#include "CPlayer_MovementServices_Humanoid.hpp"
+#include "../client/CCSPlayerAnimationState.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "CCSPlayerLegacyJump.hpp"
+#include "CCSPlayerModernJump.hpp"
+#include "../entity2/GameTick_t.hpp"
 
 
 
@@ -57,31 +57,29 @@ namespace CS2 {
 			PROPERTY(m_bMadeFootstepNoise,bool, 0x684);
 			PROPERTY(m_iFootsteps,int32_t, 0x688);
 			NESTED_PROPERTY(m_fStashGrenadeParameterWhen,IDENTITY(entity2::GameTime_t), 0x68c);
-			PROPERTY(m_nButtonDownMaskPrev,uint64_t, 0x690);
-			PROPERTY(m_bUseFrictionStashedSpeed,bool, 0x698);
-			PROPERTY(m_flUseFrictionStashedSpeedUntilFrac,float32, 0x69c);
-			PROPERTY(m_flFrictionStashedSpeed,float32, 0x6a0);
-			PROPERTY(m_flStamina,float32, 0x6a4);
-			PROPERTY(m_flHeightAtJumpStart,float32, 0x6a8);
-			PROPERTY(m_flMaxJumpHeightThisJump,float32, 0x6ac);
-			PROPERTY(m_flMaxJumpHeightLastJump,float32, 0x6b0);
-			PROPERTY(m_flStaminaAtJumpStart,float32, 0x6b4);
-			PROPERTY(m_flVelMulAtJumpStart,float32, 0x6b8);
-			PROPERTY(m_flAccumulatedJumpError,float32, 0x6bc);
-			NESTED_PROPERTY(m_LegacyJump,IDENTITY(server::CCSPlayerLegacyJump), 0x6c0);
-			NESTED_PROPERTY(m_ModernJump,IDENTITY(server::CCSPlayerModernJump), 0x6d8);
-			NESTED_PROPERTY(m_nLastJumpTick,IDENTITY(entity2::GameTick_t), 0x710);
-			PROPERTY(m_flLastJumpFrac,float32, 0x714);
-			PROPERTY(m_flLastJumpVelocityZ,float32, 0x718);
-			PROPERTY(m_bJumpApexPending,bool, 0x71c);
-			PROPERTY(m_flTicksSinceLastSurfingDetected,float32, 0x720);
-			PROPERTY(m_bWasSurfing,bool, 0x724);
-			PROPERTY(m_vecWalkWishVel,GlobalTypes::Vector2D, 0x7b4);
-			PROPERTY(m_bHasEverProcessedCommand,bool, 0xfe0);
-			S2_PAD(0xD60);
+			PROPERTY(m_bUseFrictionStashedSpeed,bool, 0x690);
+			PROPERTY(m_flUseFrictionStashedSpeedUntilFrac,float32, 0x694);
+			PROPERTY(m_flFrictionStashedSpeed,float32, 0x698);
+			PROPERTY(m_flStamina,float32, 0x69c);
+			PROPERTY(m_flHeightAtJumpStart,float32, 0x6a0);
+			PROPERTY(m_flMaxJumpHeightThisJump,float32, 0x6a4);
+			PROPERTY(m_flMaxJumpHeightLastJump,float32, 0x6a8);
+			PROPERTY(m_flStaminaAtJumpStart,float32, 0x6ac);
+			PROPERTY(m_flVelMulAtJumpStart,float32, 0x6b0);
+			PROPERTY(m_flAccumulatedJumpError,float32, 0x6b4);
+			NESTED_PROPERTY(m_LegacyJump,IDENTITY(server::CCSPlayerLegacyJump), 0x6b8);
+			NESTED_PROPERTY(m_ModernJump,IDENTITY(server::CCSPlayerModernJump), 0x6d0);
+			NESTED_PROPERTY(m_nLastJumpTick,IDENTITY(entity2::GameTick_t), 0x708);
+			PROPERTY(m_flLastJumpFrac,float32, 0x70c);
+			PROPERTY(m_flLastJumpVelocityZ,float32, 0x710);
+			PROPERTY(m_bJumpApexPending,bool, 0x714);
+			PROPERTY(m_flTicksSinceLastSurfingDetected,float32, 0x718);
+			PROPERTY(m_vecWalkWishVel,GlobalTypes::Vector2D, 0x7a8);
+			PROPERTY(m_bHasEverProcessedCommand,bool, 0xfd0);
+			S2_PAD(0xD50);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CCSPlayer_MovementServices) == 0xFF0, "CCSPlayer_MovementServices size should be 0xFF0");
+		//static_assert(sizeof(CS2::server::CCSPlayer_MovementServices) == 0xFE0, "CCSPlayer_MovementServices size should be 0xFE0");
 
 #endif
 	}

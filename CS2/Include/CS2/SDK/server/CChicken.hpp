@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CDynamicProp.hpp>
-#include <SDK/server/CAttributeContainer.hpp>
-#include <SDK/server/CountdownTimer.hpp>
-#include <SDK/server/ChickenActivity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "CDynamicProp.hpp"
+#include "CAttributeContainer.hpp"
+#include "CountdownTimer.hpp"
+#include "../client/EChickenActivity.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -31,35 +31,30 @@ namespace CS2 {
 	namespace server {
 		class CChicken : public CS2::server::CDynamicProp {
 		public:
-			NESTED_PROPERTY(m_AttributeManager,IDENTITY(server::CAttributeContainer), 0xba0);
-			NESTED_PROPERTY(m_updateTimer,IDENTITY(server::CountdownTimer), 0xe98);
-			PROPERTY(m_stuckAnchor,GlobalTypes::Vector, 0xeb0);
-			NESTED_PROPERTY(m_stuckTimer,IDENTITY(server::CountdownTimer), 0xec0);
-			NESTED_PROPERTY(m_collisionStuckTimer,IDENTITY(server::CountdownTimer), 0xed8);
-			PROPERTY(m_isOnGround,bool, 0xef0);
-			PROPERTY(m_vFallVelocity,GlobalTypes::Vector, 0xef4);
-			PROPERTY(m_desiredActivity,IDENTITY(server::ChickenActivity), 0xf00);
-			PROPERTY(m_currentActivity,IDENTITY(server::ChickenActivity), 0xf04);
-			NESTED_PROPERTY(m_activityTimer,IDENTITY(server::CountdownTimer), 0xf08);
-			PROPERTY(m_turnRate,float32, 0xf20);
-			PROPERTY(m_fleeFrom,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xf24);
-			NESTED_PROPERTY(m_moveRateThrottleTimer,IDENTITY(server::CountdownTimer), 0xf28);
-			NESTED_PROPERTY(m_startleTimer,IDENTITY(server::CountdownTimer), 0xf40);
-			NESTED_PROPERTY(m_vocalizeTimer,IDENTITY(server::CountdownTimer), 0xf58);
-			NESTED_PROPERTY(m_flWhenZombified,IDENTITY(entity2::GameTime_t), 0xf70);
-			PROPERTY(m_jumpedThisFrame,bool, 0xf74);
+			NESTED_PROPERTY(m_AttributeManager,IDENTITY(server::CAttributeContainer), 0xbc0);
+			NESTED_PROPERTY(m_updateTimer,IDENTITY(server::CountdownTimer), 0xeb8);
+			PROPERTY(m_stuckAnchor,GlobalTypes::VectorWS, 0xed0);
+			NESTED_PROPERTY(m_collisionStuckTimer,IDENTITY(server::CountdownTimer), 0xee0);
+			PROPERTY(m_isOnGround,bool, 0xef8);
+			PROPERTY(m_vFallVelocity,GlobalTypes::Vector, 0xefc);
+			PROPERTY(m_desiredActivity,IDENTITY(client::EChickenActivity), 0xf08);
+			PROPERTY(m_currentActivity,IDENTITY(client::EChickenActivity), 0xf0c);
+			NESTED_PROPERTY(m_activityTimer,IDENTITY(server::CountdownTimer), 0xf10);
+			PROPERTY(m_turnRate,float32, 0xf28);
+			PROPERTY(m_fleeFrom,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0xf2c);
+			NESTED_PROPERTY(m_moveRateThrottleTimer,IDENTITY(server::CountdownTimer), 0xf30);
+			NESTED_PROPERTY(m_startleTimer,IDENTITY(server::CountdownTimer), 0xf48);
+			NESTED_PROPERTY(m_vocalizeTimer,IDENTITY(server::CountdownTimer), 0xf60);
 			PROPERTY(m_leader,IDENTITY(GlobalTypes::CHandle<server::CCSPlayerPawn>), 0xf78);
 			NESTED_PROPERTY(m_reuseTimer,IDENTITY(server::CountdownTimer), 0xf90);
-			PROPERTY(m_hasBeenUsed,bool, 0xfa8);
-			NESTED_PROPERTY(m_jumpTimer,IDENTITY(server::CountdownTimer), 0xfb0);
-			PROPERTY(m_flLastJumpTime,float32, 0xfc8);
-			PROPERTY(m_bInJump,bool, 0xfcc);
-			NESTED_PROPERTY(m_repathTimer,IDENTITY(server::CountdownTimer), 0x2fd8);
-			PROPERTY(m_vecPathGoal,GlobalTypes::Vector, 0x3070);
-			NESTED_PROPERTY(m_flActiveFollowStartTime,IDENTITY(entity2::GameTime_t), 0x307c);
-			NESTED_PROPERTY(m_followMinuteTimer,IDENTITY(server::CountdownTimer), 0x3080);
-			NESTED_PROPERTY(m_BlockDirectionTimer,IDENTITY(server::CountdownTimer), 0x30a0);
-			S2_PAD(0x2540);
+			NESTED_PROPERTY(m_jumpTimer,IDENTITY(server::CountdownTimer), 0xfa8);
+			PROPERTY(m_flLastJumpTime,float32, 0xfc0);
+			NESTED_PROPERTY(m_repathTimer,IDENTITY(server::CountdownTimer), 0x2fd0);
+			PROPERTY(m_vecPathGoal,GlobalTypes::VectorWS, 0x3068);
+			NESTED_PROPERTY(m_flActiveFollowStartTime,IDENTITY(entity2::GameTime_t), 0x3074);
+			NESTED_PROPERTY(m_followMinuteTimer,IDENTITY(server::CountdownTimer), 0x3078);
+			NESTED_PROPERTY(m_BlockDirectionTimer,IDENTITY(server::CountdownTimer), 0x3098);
+			S2_PAD(0x2520);
 		};
 #ifdef USE_STATIC_ASSERTS
 		//static_assert(sizeof(CS2::server::CChicken) == 0x30C0, "CChicken size should be 0x30C0");

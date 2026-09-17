@@ -4,22 +4,22 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBasePlayerWeaponVData.hpp>
-#include <SDK/client/CSWeaponType.hpp>
-#include <SDK/client/CSWeaponCategory.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCNmSkeleton.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp>
-#include <SDK/client/gear_slot_t.hpp>
-#include <SDK/client/loadout_slot_t.hpp>
-#include <SDK/client/CSWeaponSilencerType.hpp>
-#include <SDK/client/CFiringModeFloat.hpp>
-#include <SDK/client/CFiringModeInt.hpp>
+#include "CBasePlayerWeaponVData.hpp"
+#include "../client/CSWeaponType.hpp"
+#include "../client/CSWeaponCategory.hpp"
+#include "../resourcesystem/InfoForResourceTypeCNmSkeleton.hpp"
+#include "../resourcesystem/InfoForResourceTypeIParticleSystemDefinition.hpp"
+#include "../client/gear_slot_t.hpp"
+#include "../client/loadout_slot_t.hpp"
+#include "../client/CSWeaponSilencerType.hpp"
+#include "../client/CFiringModeFloat.hpp"
+#include "../client/CFiringModeInt.hpp"
 
 
 

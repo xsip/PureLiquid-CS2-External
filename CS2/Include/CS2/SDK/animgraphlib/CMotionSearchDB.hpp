@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CMotionSearchNode.hpp>
-#include <SDK/animgraphlib/CProductQuantizer.hpp>
-#include <SDK/animgraphlib/MotionDBIndex.hpp>
+#include "CMotionSearchNode.hpp"
+#include "CProductQuantizer.hpp"
+#include "MotionDBIndex.hpp"
 
 
 

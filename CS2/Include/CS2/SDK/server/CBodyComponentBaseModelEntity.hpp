@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBodyComponentSkeletonInstance.hpp>
+#include "CBodyComponentSkeletonInstance.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBodyComponentBaseModelEntity) == 0x4A0, "CBodyComponentBaseModelEntity size should be 0x4A0");
+		//static_assert(sizeof(CS2::server::CBodyComponentBaseModelEntity) == 0x4E0, "CBodyComponentBaseModelEntity size should be 0x4E0");
 
 #endif
 	}

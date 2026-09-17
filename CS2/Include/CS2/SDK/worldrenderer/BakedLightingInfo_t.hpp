@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/resourcesystem/InfoForResourceTypeCTextureBase.hpp>
-#include <SDK/worldrenderer/BakedLightingInfo_t_BakedShadowAssignment_t.hpp>
+#include "../resourcesystem/InfoForResourceTypeCTextureBase.hpp"
+#include "BakedLightingInfo_t_BakedShadowAssignment_t.hpp"
 
 
 

@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
+#include "CPulseCell_BaseYieldingInflow.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_BaseState) == 0x48, "CPulseCell_BaseState size should be 0x48");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_BaseState) == 0xD8, "CPulseCell_BaseState size should be 0xD8");
 
 #endif
 	}

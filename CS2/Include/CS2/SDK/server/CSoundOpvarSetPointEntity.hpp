@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CSoundOpvarSetPointBase.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CSoundOpvarSetPointBase.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -42,8 +42,8 @@ namespace CS2 {
 			PROPERTY(m_hDynamicEntity,GlobalTypes::CEntityHandle, 0x600);
 			PROPERTY(m_iszDynamicEntityName,GlobalTypes::CUtlSymbolLarge*, 0x608);
 			PROPERTY(m_flPathingDistanceNormFactor,float32, 0x610);
-			PROPERTY(m_vPathingSourcePos,GlobalTypes::Vector, 0x614);
-			PROPERTY(m_vPathingListenerPos,GlobalTypes::Vector, 0x620);
+			PROPERTY(m_vPathingSourcePos,GlobalTypes::VectorWS, 0x614);
+			PROPERTY(m_vPathingListenerPos,GlobalTypes::VectorWS, 0x620);
 			PROPERTY(m_vPathingDirection,GlobalTypes::Vector, 0x62c);
 			PROPERTY(m_nPathingSourceIndex,int32_t, 0x638);
 			S2_PAD(0xF0);

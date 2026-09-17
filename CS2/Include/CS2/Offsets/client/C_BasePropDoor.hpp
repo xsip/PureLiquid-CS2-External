@@ -8,16 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x13E0
+			// Class size: 0x1400
 			namespace C_BasePropDoor /*: public CS2::client::C_DynamicProp*/ {
-				constexpr std::ptrdiff_t m_eDoorState = 0x13b0; // client::DoorState_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_modelChanged = 0x13b4; // bool m_modelChanged; |  0x13b4 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bLocked = 0x13b5; // bool m_bLocked; |  0x13b5 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bNoNPCs = 0x13b6; // bool m_bNoNPCs; |  0x13b6 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_closedPosition = 0x13b8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_closedAngles = 0x13c4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_hMaster = 0x13d0; // GlobalTypes::CHandle<client::C_BasePropDoor>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vWhereToSetLightingOrigin = 0x13d4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_eDoorState = 0x13d0; // client::DoorState_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_modelChanged = 0x13d4; // bool m_modelChanged; |  0x13d4 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bLocked = 0x13d5; // bool m_bLocked; |  0x13d5 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bNoNPCs = 0x13d6; // bool m_bNoNPCs; |  0x13d6 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_closedPosition = 0x13d8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_closedAngles = 0x13e4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_hMaster = 0x13f0; // GlobalTypes::CHandle<client::C_BasePropDoor>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_vWhereToSetLightingOrigin = 0x13f4; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

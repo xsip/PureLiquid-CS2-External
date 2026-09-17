@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CPlayerControllerComponent.hpp>
-#include <SDK/server/CSPerRoundStats_t.hpp>
-#include <SDK/server/CSMatchStats_t.hpp>
+#include "../client/CPlayerControllerComponent.hpp"
+#include "CSPerRoundStats_t.hpp"
+#include "CSMatchStats_t.hpp"
 
 
 

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CEntitySubclassVDataBase.hpp>
-#include <SDK/resourcesystem/InfoForResourceTypeCModel.hpp>
-#include <SDK/client/CSkillFloat.hpp>
+#include "CEntitySubclassVDataBase.hpp"
+#include "../resourcesystem/InfoForResourceTypeCModel.hpp"
+#include "CSkillFloat.hpp"
 
 
 

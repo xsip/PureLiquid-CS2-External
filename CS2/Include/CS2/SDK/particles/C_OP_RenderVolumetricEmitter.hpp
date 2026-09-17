@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particles/ParticleVolumetricSmokeType_t.hpp>
-#include <SDK/particles/ParticleVolumetricSmokeCreationType_t.hpp>
-#include <SDK/particles/EventTypeSelection_t.hpp>
-#include <SDK/particleslib/CPerParticleVecInput.hpp>
-#include <SDK/particleslib/CPerParticleFloatInput.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "ParticleVolumetricSmokeType_t.hpp"
+#include "ParticleVolumetricSmokeCreationType_t.hpp"
+#include "EventTypeSelection_t.hpp"
+#include "../particleslib/CPerParticleVecInput.hpp"
+#include "../particleslib/CPerParticleFloatInput.hpp"
 
 
 
@@ -32,16 +32,19 @@ namespace CS2 {
 			PROPERTY(m_nEventType,IDENTITY(particles::EventTypeSelection_t), 0x238);
 			NESTED_PROPERTY(m_vecPos,IDENTITY(particleslib::CPerParticleVecInput), 0x240);
 			NESTED_PROPERTY(m_vecVelocity,IDENTITY(particleslib::CPerParticleVecInput), 0x8f8);
-			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0xfb0);
-			NESTED_PROPERTY(m_flDensity,IDENTITY(particleslib::CPerParticleFloatInput), 0x1120);
-			NESTED_PROPERTY(m_flTemperature,IDENTITY(particleslib::CPerParticleFloatInput), 0x1290);
-			NESTED_PROPERTY(m_flMagnitude,IDENTITY(particleslib::CPerParticleFloatInput), 0x1400);
-			NESTED_PROPERTY(m_flKillRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x1570);
-			NESTED_PROPERTY(m_flFalloff,IDENTITY(particleslib::CPerParticleFloatInput), 0x16e0);
-			S2_PAD(0x1628);
+			NESTED_PROPERTY(m_vPrevPosition,IDENTITY(particleslib::CPerParticleVecInput), 0xfb0);
+			NESTED_PROPERTY(m_flSpeed,IDENTITY(particleslib::CPerParticleFloatInput), 0x1668);
+			NESTED_PROPERTY(m_flRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x17d8);
+			NESTED_PROPERTY(m_flDensity,IDENTITY(particleslib::CPerParticleFloatInput), 0x1948);
+			NESTED_PROPERTY(m_flTemperature,IDENTITY(particleslib::CPerParticleFloatInput), 0x1ab8);
+			NESTED_PROPERTY(m_flMagnitude,IDENTITY(particleslib::CPerParticleFloatInput), 0x1c28);
+			NESTED_PROPERTY(m_flKillRadius,IDENTITY(particleslib::CPerParticleFloatInput), 0x1d98);
+			NESTED_PROPERTY(m_flKillDensityScale,IDENTITY(particleslib::CPerParticleFloatInput), 0x1f08);
+			NESTED_PROPERTY(m_flFalloff,IDENTITY(particleslib::CPerParticleFloatInput), 0x2078);
+			S2_PAD(0x1FC0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_RenderVolumetricEmitter) == 0x1850, "C_OP_RenderVolumetricEmitter size should be 0x1850");
+		//static_assert(sizeof(CS2::particles::C_OP_RenderVolumetricEmitter) == 0x21E8, "C_OP_RenderVolumetricEmitter size should be 0x21E8");
 
 #endif
 	}

@@ -8,31 +8,31 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1248
+			// Class size: 0x1270
 			namespace C_Fish /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_pos = 0x1158; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vel = 0x1164; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angles = 0x1170; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_localLifeState = 0x117c; // int32_t m_localLifeState; |  0x117c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_deathDepth = 0x1180; // float32 m_deathDepth; |  0x1180 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_deathAngle = 0x1184; // float32 m_deathAngle; |  0x1184 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_buoyancy = 0x1188; // float32 m_buoyancy; |  0x1188 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_wiggleTimer = 0x1190; // client::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_wigglePhase = 0x11a8; // float32 m_wigglePhase; |  0x11a8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_wiggleRate = 0x11ac; // float32 m_wiggleRate; |  0x11ac | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_actualPos = 0x11b0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_actualAngles = 0x11bc; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_poolOrigin = 0x11c8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_waterLevel = 0x11d4; // float32 m_waterLevel; |  0x11d4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_gotUpdate = 0x11d8; // bool m_gotUpdate; |  0x11d8 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_x = 0x11dc; // float32 m_x; |  0x11dc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_y = 0x11e0; // float32 m_y; |  0x11e0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_z = 0x11e4; // float32 m_z; |  0x11e4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_angle = 0x11e8; // float32 m_angle; |  0x11e8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_errorHistory = 0x11ec; // float32 m_errorHistory[20]; |  0x11ec | Schema_FixedArray | Size: 0x50
-				constexpr std::ptrdiff_t m_errorHistoryIndex = 0x123c; // int32_t m_errorHistoryIndex; |  0x123c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_errorHistoryCount = 0x1240; // int32_t m_errorHistoryCount; |  0x1240 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_averageError = 0x1244; // float32 m_averageError; |  0x1244 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_pos = 0x1180; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vel = 0x118c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angles = 0x1198; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_localLifeState = 0x11a4; // int32_t m_localLifeState; |  0x11a4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_deathDepth = 0x11a8; // float32 m_deathDepth; |  0x11a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_deathAngle = 0x11ac; // float32 m_deathAngle; |  0x11ac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_buoyancy = 0x11b0; // float32 m_buoyancy; |  0x11b0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_wiggleTimer = 0x11b8; // client::CountdownTimer  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_wigglePhase = 0x11d0; // float32 m_wigglePhase; |  0x11d0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_wiggleRate = 0x11d4; // float32 m_wiggleRate; |  0x11d4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_actualPos = 0x11d8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_actualAngles = 0x11e4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_poolOrigin = 0x11f0; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_waterLevel = 0x11fc; // float32 m_waterLevel; |  0x11fc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_gotUpdate = 0x1200; // bool m_gotUpdate; |  0x1200 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_x = 0x1204; // float32 m_x; |  0x1204 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_y = 0x1208; // float32 m_y; |  0x1208 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_z = 0x120c; // float32 m_z; |  0x120c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_angle = 0x1210; // float32 m_angle; |  0x1210 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_errorHistory = 0x1214; // float32 m_errorHistory[20]; |  0x1214 | Schema_FixedArray | Size: 0x50
+				constexpr std::ptrdiff_t m_errorHistoryIndex = 0x1264; // int32_t m_errorHistoryIndex; |  0x1264 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_errorHistoryCount = 0x1268; // int32_t m_errorHistoryCount; |  0x1268 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_averageError = 0x126c; // float32 m_averageError; |  0x126c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

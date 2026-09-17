@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBtNode.hpp>
-#include <SDK/server/CountdownTimer.hpp>
+#include "CBtNode.hpp"
+#include "CountdownTimer.hpp"
 
 
 
@@ -25,7 +25,7 @@ namespace CS2 {
 			PROPERTY(m_szDestinationInputKey,GlobalTypes::CUtlString*, 0x60);
 			PROPERTY(m_szHidingSpotInputKey,GlobalTypes::CUtlString*, 0x68);
 			PROPERTY(m_szThreatInputKey,GlobalTypes::CUtlString*, 0x70);
-			PROPERTY(m_vecDestination,GlobalTypes::Vector, 0x78);
+			PROPERTY(m_vecDestination,GlobalTypes::VectorWS, 0x78);
 			PROPERTY(m_bAutoLookAdjust,bool, 0x84);
 			PROPERTY(m_bComputePath,bool, 0x85);
 			PROPERTY(m_flDamagingAreasPenaltyCost,float32, 0x88);

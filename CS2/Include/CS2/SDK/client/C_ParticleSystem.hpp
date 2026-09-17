@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/client/CHandle< C_BaseEntity >.hpp>
+#include "C_BaseModelEntity.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "CHandle< C_BaseEntity >.hpp"
 
 
 
@@ -28,34 +28,36 @@ namespace CS2 {
 	namespace client {
 		class C_ParticleSystem : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY_ARRAY(m_szSnapshotFileName,char, 512 , 0xfa8);
-			PROPERTY(m_bActive,bool, 0x11a8);
-			PROPERTY(m_bFrozen,bool, 0x11a9);
-			PROPERTY(m_flFreezeTransitionDuration,float32, 0x11ac);
-			PROPERTY(m_nStopType,int32_t, 0x11b0);
-			PROPERTY(m_bAnimateDuringGameplayPause,bool, 0x11b4);
-			PROPERTY(m_iEffectIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x11b8);
-			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x11c0);
-			PROPERTY(m_flPreSimTime,float32, 0x11c4);
-			PROPERTY_ARRAY(m_vServerControlPoints,GlobalTypes::Vector, 4 , 0x11c8);
-			PROPERTY_ARRAY(m_iServerControlPointAssignments,uint8_t, 4 , 0x11f8);
-			// PROPERTY_ARRAY(m_hControlPointEnts,IDENTITY(GlobalTypes::CHandle< C_BaseEntity >[64]), 64 , 0x11fc);
-			PROPERTY(m_bNoSave,bool, 0x12fc);
-			PROPERTY(m_bNoFreeze,bool, 0x12fd);
-			PROPERTY(m_bNoRamp,bool, 0x12fe);
-			PROPERTY(m_bStartActive,bool, 0x12ff);
-			PROPERTY(m_iszEffectName,GlobalTypes::CUtlSymbolLarge*, 0x1300);
-			PROPERTY_ARRAY(m_iszControlPointNames,GlobalTypes::CUtlSymbolLarge*, 64 , 0x1308);
-			PROPERTY(m_nDataCP,int32_t, 0x1508);
-			PROPERTY(m_vecDataCPValue,GlobalTypes::Vector, 0x150c);
-			PROPERTY(m_nTintCP,int32_t, 0x1518);
-			PROPERTY(m_clrTint,GlobalTypes::Color, 0x151c);
-			PROPERTY(m_bOldActive,bool, 0x1540);
-			PROPERTY(m_bOldFrozen,bool, 0x1541);
-			S2_PAD(0x5B0);
+			PROPERTY_ARRAY(m_szSnapshotFileName,char, 512 , 0xfb0);
+			PROPERTY(m_bActive,bool, 0x11b0);
+			PROPERTY(m_bFrozen,bool, 0x11b1);
+			PROPERTY(m_flFreezeTransitionDuration,float32, 0x11b4);
+			PROPERTY(m_nStopType,int32_t, 0x11b8);
+			PROPERTY(m_bAnimateDuringGameplayPause,bool, 0x11bc);
+			PROPERTY(m_iEffectIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIParticleSystemDefinition>), 0x11c0);
+			NESTED_PROPERTY(m_flStartTime,IDENTITY(entity2::GameTime_t), 0x11c8);
+			PROPERTY(m_flPreSimTime,float32, 0x11cc);
+			PROPERTY_ARRAY(m_vServerControlPoints,GlobalTypes::Vector, 4 , 0x11d0);
+			PROPERTY_ARRAY(m_iServerControlPointAssignments,uint8_t, 4 , 0x1200);
+			// PROPERTY_ARRAY(m_hControlPointEnts,IDENTITY(GlobalTypes::CHandle< C_BaseEntity >[64]), 64 , 0x1204);
+			PROPERTY(m_bDataStringLocalized,bool, 0x1304);
+			PROPERTY(m_strDataString,GlobalTypes::CUtlString*, 0x1308);
+			PROPERTY(m_bNoSave,bool, 0x1310);
+			PROPERTY(m_bNoFreeze,bool, 0x1311);
+			PROPERTY(m_bNoRamp,bool, 0x1312);
+			PROPERTY(m_bStartActive,bool, 0x1313);
+			PROPERTY(m_iszEffectName,GlobalTypes::CUtlSymbolLarge*, 0x1318);
+			PROPERTY_ARRAY(m_iszControlPointNames,GlobalTypes::CUtlSymbolLarge*, 64 , 0x1320);
+			PROPERTY(m_nDataCP,int32_t, 0x1520);
+			PROPERTY(m_vecDataCPValue,GlobalTypes::Vector, 0x1524);
+			PROPERTY(m_nTintCP,int32_t, 0x1530);
+			PROPERTY(m_clrTint,GlobalTypes::Color, 0x1534);
+			PROPERTY(m_bOldActive,bool, 0x1558);
+			PROPERTY(m_bOldFrozen,bool, 0x1559);
+			S2_PAD(0x5D0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_ParticleSystem) == 0x1558, "C_ParticleSystem size should be 0x1558");
+		//static_assert(sizeof(CS2::client::C_ParticleSystem) == 0x1580, "C_ParticleSystem size should be 0x1580");
 
 #endif
 	}

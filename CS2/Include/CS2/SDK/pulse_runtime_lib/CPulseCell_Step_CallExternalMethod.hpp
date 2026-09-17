@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseYieldingInflow.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeBlackboardReferenceIndex_t.hpp>
-#include <SDK/pulse_runtime_lib/CPulseRuntimeMethodArg.hpp>
-#include <SDK/pulse_runtime_lib/PulseMethodCallMode_t.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_ResumePoint.hpp>
+#include "CPulseCell_BaseYieldingInflow.hpp"
+#include "PulseRuntimeBlackboardReferenceIndex_t.hpp"
+#include "CPulseRuntimeMethodArg.hpp"
+#include "PulseMethodCallMode_t.hpp"
+#include "CPulse_ResumePoint.hpp"
 
 
 
@@ -25,15 +25,15 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CPulseCell_Step_CallExternalMethod : public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow {
 		public:
-			PROPERTY(m_MethodName,GlobalTypes::PulseSymbol_t, 0x48);
-			NESTED_PROPERTY(m_nBlackboardIndex,IDENTITY(pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t), 0x58);
-			// PROPERTY(m_ExpectedArgs,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>), 0x60);
-			PROPERTY(m_nAsyncCallMode,IDENTITY(pulse_runtime_lib::PulseMethodCallMode_t), 0x70);
-			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x78);
+			PROPERTY(m_MethodName,GlobalTypes::PulseSymbol_t, 0xd8);
+			NESTED_PROPERTY(m_nBlackboardIndex,IDENTITY(pulse_runtime_lib::PulseRuntimeBlackboardReferenceIndex_t), 0xe8);
+			// PROPERTY(m_ExpectedArgs,IDENTITY(GlobalTypes::CUtlLeanVector<pulse_runtime_lib::CPulseRuntimeMethodArg>), 0xf0);
+			PROPERTY(m_nAsyncCallMode,IDENTITY(pulse_runtime_lib::PulseMethodCallMode_t), 0x100);
+			NESTED_PROPERTY(m_OnFinished,IDENTITY(pulse_runtime_lib::CPulse_ResumePoint), 0x108);
 			S2_PAD(0x78);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Step_CallExternalMethod) == 0xC0, "CPulseCell_Step_CallExternalMethod size should be 0xC0");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseCell_Step_CallExternalMethod) == 0x150, "CPulseCell_Step_CallExternalMethod size should be 0x150");
 
 #endif
 	}

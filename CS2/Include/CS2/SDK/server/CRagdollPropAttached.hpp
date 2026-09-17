@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CRagdollProp.hpp>
+#include "CRagdollProp.hpp"
 
 
 
@@ -21,16 +21,16 @@ namespace CS2 {
 	namespace server {
 		class CRagdollPropAttached : public CS2::server::CRagdollProp {
 		public:
-			PROPERTY(m_boneIndexAttached,uint32_t, 0xab0);
-			PROPERTY(m_ragdollAttachedObjectIndex,uint32_t, 0xab4);
-			PROPERTY(m_attachmentPointBoneSpace,GlobalTypes::Vector, 0xab8);
-			PROPERTY(m_attachmentPointRagdollSpace,GlobalTypes::Vector, 0xac4);
-			PROPERTY(m_bShouldDetach,bool, 0xad0);
-			PROPERTY(m_bShouldDeleteAttachedActivationRecord,bool, 0xae0);
+			PROPERTY(m_boneIndexAttached,uint32_t, 0xb20);
+			PROPERTY(m_ragdollAttachedObjectIndex,uint32_t, 0xb24);
+			PROPERTY(m_attachmentPointBoneSpace,GlobalTypes::Vector, 0xb28);
+			PROPERTY(m_attachmentPointRagdollSpace,GlobalTypes::Vector, 0xb34);
+			PROPERTY(m_bShouldDetach,bool, 0xb40);
+			PROPERTY(m_bShouldDeleteAttachedActivationRecord,bool, 0xb50);
 			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CRagdollPropAttached) == 0xAF0, "CRagdollPropAttached size should be 0xAF0");
+		//static_assert(sizeof(CS2::server::CRagdollPropAttached) == 0xB60, "CRagdollPropAttached size should be 0xB60");
 
 #endif
 	}

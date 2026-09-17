@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseToggle.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
-#include <SDK/client/C_BaseEntity.hpp>
+#include "C_BaseToggle.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "C_BaseEntity.hpp"
 
 
 
@@ -28,21 +28,22 @@ namespace CS2 {
 	namespace client {
 		class C_BaseTrigger : public CS2::client::C_BaseToggle {
 		public:
-			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0xfa8);
-			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0xfc0);
-			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0xfd8);
-			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0xff0);
-			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x1008);
-			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x1020);
-			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x1038);
-			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>), 0x1050);
-			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x1068);
-			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<client::CBaseFilter>), 0x1070);
-			PROPERTY(m_bDisabled,bool, 0x1074);
-			S2_PAD(0xD0);
+			NESTED_PROPERTY(m_OnStartTouch,IDENTITY(entity2::CEntityIOOutput), 0xfb0);
+			NESTED_PROPERTY(m_OnStartTouchAll,IDENTITY(entity2::CEntityIOOutput), 0xfc8);
+			NESTED_PROPERTY(m_OnEndTouch,IDENTITY(entity2::CEntityIOOutput), 0xfe0);
+			NESTED_PROPERTY(m_OnEndTouchAll,IDENTITY(entity2::CEntityIOOutput), 0xff8);
+			NESTED_PROPERTY(m_OnTouching,IDENTITY(entity2::CEntityIOOutput), 0x1010);
+			NESTED_PROPERTY(m_OnTouchingEachEntity,IDENTITY(entity2::CEntityIOOutput), 0x1028);
+			NESTED_PROPERTY(m_OnNotTouching,IDENTITY(entity2::CEntityIOOutput), 0x1040);
+			NESTED_PROPERTY(m_OnTouchingChanged,IDENTITY(entity2::CEntityIOOutput), 0x1058);
+			NESTED_PROPERTY(m_hTouchingEntities,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CHandle<client::C_BaseEntity>>), 0x1070);
+			PROPERTY(m_iFilterName,GlobalTypes::CUtlSymbolLarge*, 0x1088);
+			PROPERTY(m_hFilter,IDENTITY(GlobalTypes::CHandle<client::CBaseFilter>), 0x1090);
+			PROPERTY(m_bDisabled,bool, 0x1094);
+			S2_PAD(0xE8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BaseTrigger) == 0x1078, "C_BaseTrigger size should be 0x1078");
+		//static_assert(sizeof(CS2::client::C_BaseTrigger) == 0x1098, "C_BaseTrigger size should be 0x1098");
 
 #endif
 	}

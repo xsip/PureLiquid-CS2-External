@@ -8,12 +8,12 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xA70
+			// Class size: 0xAA0
 			namespace CDecoyProjectile /*: public CS2::server::CBaseCSGrenadeProjectile*/ {
-				constexpr std::ptrdiff_t m_nDecoyShotTick = 0xa48; // int32_t m_nDecoyShotTick; |  0xa48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_shotsRemaining = 0xa4c; // int32_t m_shotsRemaining; |  0xa4c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_fExpireTime = 0xa50; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_decoyWeaponDefIndex = 0xa60; // uint16_t m_decoyWeaponDefIndex; |  0xa60 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_nDecoyShotTick = 0xa78; // int32_t m_nDecoyShotTick; |  0xa78 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_shotsRemaining = 0xa7c; // int32_t m_shotsRemaining; |  0xa7c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fExpireTime = 0xa80; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_decoyWeaponDefIndex = 0xa90; // uint16_t m_decoyWeaponDefIndex; |  0xa90 | Schema_Builtin | Size: 0x2
 			}
 		}
 	}

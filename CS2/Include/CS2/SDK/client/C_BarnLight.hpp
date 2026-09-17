@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "C_BaseModelEntity.hpp"
+#include "../entity2/GameTime_t.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -28,86 +28,86 @@ namespace CS2 {
 	namespace client {
 		class C_BarnLight : public CS2::client::C_BaseModelEntity {
 		public:
-			PROPERTY(m_bEnabled,bool, 0xfa8);
-			PROPERTY(m_nColorMode,int32_t, 0xfac);
-			PROPERTY(m_Color,GlobalTypes::Color, 0xfb0);
-			PROPERTY(m_flColorTemperature,float32, 0xfb4);
-			PROPERTY(m_flBrightness,float32, 0xfb8);
-			PROPERTY(m_flBrightnessScale,float32, 0xfbc);
-			PROPERTY(m_nDirectLight,int32_t, 0xfc0);
-			PROPERTY(m_nBakedShadowIndex,int32_t, 0xfc4);
-			PROPERTY(m_nLightPathUniqueId,int32_t, 0xfc8);
-			PROPERTY(m_nLightMapUniqueId,int32_t, 0xfcc);
-			PROPERTY(m_nLuminaireShape,int32_t, 0xfd0);
-			PROPERTY(m_flLuminaireSize,float32, 0xfd4);
-			PROPERTY(m_flLuminaireAnisotropy,float32, 0xfd8);
-			PROPERTY(m_LightStyleString,GlobalTypes::CUtlString*, 0xfe0);
-			NESTED_PROPERTY(m_flLightStyleStartTime,IDENTITY(entity2::GameTime_t), 0xfe8);
-			// PROPERTY(m_QueuedLightStyleStrings,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0xff0);
-			// PROPERTY(m_LightStyleEvents,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0x1008);
-			// PROPERTY(m_LightStyleTargets,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseModelEntity>>), 0x1020);
-			PROPERTY_ARRAY(m_StyleEvent,IDENTITY(entity2::CEntityIOOutput), 4 , 0x1038);
-			PROPERTY(m_hLightCookie,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x1098);
-			PROPERTY(m_flShape,float32, 0x10a0);
-			PROPERTY(m_flSoftX,float32, 0x10a4);
-			PROPERTY(m_flSoftY,float32, 0x10a8);
-			PROPERTY(m_flSkirt,float32, 0x10ac);
-			PROPERTY(m_flSkirtNear,float32, 0x10b0);
-			PROPERTY(m_vSizeParams,GlobalTypes::Vector, 0x10b4);
-			PROPERTY(m_flRange,float32, 0x10c0);
-			PROPERTY(m_vShear,GlobalTypes::Vector, 0x10c4);
-			PROPERTY(m_nBakeSpecularToCubemaps,int32_t, 0x10d0);
-			PROPERTY(m_vBakeSpecularToCubemapsSize,GlobalTypes::Vector, 0x10d4);
-			PROPERTY(m_flBakeSpecularToCubemapsScale,float32, 0x10e0);
-			PROPERTY(m_nCastShadows,int32_t, 0x10e4);
-			PROPERTY(m_nShadowMapSize,int32_t, 0x10e8);
-			PROPERTY(m_nShadowPriority,int32_t, 0x10ec);
-			PROPERTY(m_bContactShadow,bool, 0x10f0);
-			PROPERTY(m_bForceShadowsEnabled,bool, 0x10f1);
-			PROPERTY(m_nBounceLight,int32_t, 0x10f4);
-			PROPERTY(m_flBounceScale,float32, 0x10f8);
-			PROPERTY(m_flMinRoughness,float32, 0x10fc);
-			PROPERTY(m_vAlternateColor,GlobalTypes::Vector, 0x1100);
-			PROPERTY(m_fAlternateColorBrightness,float32, 0x110c);
-			PROPERTY(m_nFog,int32_t, 0x1110);
-			PROPERTY(m_flFogStrength,float32, 0x1114);
-			PROPERTY(m_nFogShadows,int32_t, 0x1118);
-			PROPERTY(m_flFogScale,float32, 0x111c);
-			PROPERTY(m_flFadeSizeStart,float32, 0x1120);
-			PROPERTY(m_flFadeSizeEnd,float32, 0x1124);
-			PROPERTY(m_flShadowFadeSizeStart,float32, 0x1128);
-			PROPERTY(m_flShadowFadeSizeEnd,float32, 0x112c);
-			PROPERTY(m_bPrecomputedFieldsValid,bool, 0x1130);
-			PROPERTY(m_vPrecomputedBoundsMins,GlobalTypes::Vector, 0x1134);
-			PROPERTY(m_vPrecomputedBoundsMaxs,GlobalTypes::Vector, 0x1140);
-			PROPERTY(m_vPrecomputedOBBOrigin,GlobalTypes::Vector, 0x114c);
-			PROPERTY(m_vPrecomputedOBBAngles,GlobalTypes::QAngle, 0x1158);
-			PROPERTY(m_vPrecomputedOBBExtent,GlobalTypes::Vector, 0x1164);
-			PROPERTY(m_nPrecomputedSubFrusta,int32_t, 0x1170);
-			PROPERTY(m_vPrecomputedOBBOrigin0,GlobalTypes::Vector, 0x1174);
-			PROPERTY(m_vPrecomputedOBBAngles0,GlobalTypes::QAngle, 0x1180);
-			PROPERTY(m_vPrecomputedOBBExtent0,GlobalTypes::Vector, 0x118c);
-			PROPERTY(m_vPrecomputedOBBOrigin1,GlobalTypes::Vector, 0x1198);
-			PROPERTY(m_vPrecomputedOBBAngles1,GlobalTypes::QAngle, 0x11a4);
-			PROPERTY(m_vPrecomputedOBBExtent1,GlobalTypes::Vector, 0x11b0);
-			PROPERTY(m_vPrecomputedOBBOrigin2,GlobalTypes::Vector, 0x11bc);
-			PROPERTY(m_vPrecomputedOBBAngles2,GlobalTypes::QAngle, 0x11c8);
-			PROPERTY(m_vPrecomputedOBBExtent2,GlobalTypes::Vector, 0x11d4);
-			PROPERTY(m_vPrecomputedOBBOrigin3,GlobalTypes::Vector, 0x11e0);
-			PROPERTY(m_vPrecomputedOBBAngles3,GlobalTypes::QAngle, 0x11ec);
-			PROPERTY(m_vPrecomputedOBBExtent3,GlobalTypes::Vector, 0x11f8);
-			PROPERTY(m_vPrecomputedOBBOrigin4,GlobalTypes::Vector, 0x1204);
-			PROPERTY(m_vPrecomputedOBBAngles4,GlobalTypes::QAngle, 0x1210);
-			PROPERTY(m_vPrecomputedOBBExtent4,GlobalTypes::Vector, 0x121c);
-			PROPERTY(m_vPrecomputedOBBOrigin5,GlobalTypes::Vector, 0x1228);
-			PROPERTY(m_vPrecomputedOBBAngles5,GlobalTypes::QAngle, 0x1234);
-			PROPERTY(m_vPrecomputedOBBExtent5,GlobalTypes::Vector, 0x1240);
-			PROPERTY(m_bInitialBoneSetup,bool, 0x1290);
-			// PROPERTY(m_VisClusters,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< uint16 >), 0x1298);
+			PROPERTY(m_bEnabled,bool, 0xfb0);
+			PROPERTY(m_nColorMode,int32_t, 0xfb4);
+			PROPERTY(m_Color,GlobalTypes::Color, 0xfb8);
+			PROPERTY(m_flColorTemperature,float32, 0xfbc);
+			PROPERTY(m_flBrightness,float32, 0xfc0);
+			PROPERTY(m_flBrightnessScale,float32, 0xfc4);
+			PROPERTY(m_nDirectLight,int32_t, 0xfc8);
+			PROPERTY(m_nBakedShadowIndex,int32_t, 0xfcc);
+			PROPERTY(m_nLightPathUniqueId,int32_t, 0xfd0);
+			PROPERTY(m_nLightMapUniqueId,int32_t, 0xfd4);
+			PROPERTY(m_nLuminaireShape,int32_t, 0xfd8);
+			PROPERTY(m_flLuminaireSize,float32, 0xfdc);
+			PROPERTY(m_flLuminaireAnisotropy,float32, 0xfe0);
+			PROPERTY(m_LightStyleString,GlobalTypes::CUtlString*, 0xfe8);
+			NESTED_PROPERTY(m_flLightStyleStartTime,IDENTITY(entity2::GameTime_t), 0xff0);
+			// PROPERTY(m_QueuedLightStyleStrings,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0xff8);
+			// PROPERTY(m_LightStyleEvents,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CUtlString>), 0x1010);
+			// PROPERTY(m_LightStyleTargets,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_BaseModelEntity>>), 0x1028);
+			PROPERTY_ARRAY(m_StyleEvent,IDENTITY(entity2::CEntityIOOutput), 4 , 0x1040);
+			PROPERTY(m_hLightCookie,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCTextureBase>), 0x10a0);
+			PROPERTY(m_flShape,float32, 0x10a8);
+			PROPERTY(m_flSoftX,float32, 0x10ac);
+			PROPERTY(m_flSoftY,float32, 0x10b0);
+			PROPERTY(m_flSkirt,float32, 0x10b4);
+			PROPERTY(m_flSkirtNear,float32, 0x10b8);
+			PROPERTY(m_vSizeParams,GlobalTypes::Vector, 0x10bc);
+			PROPERTY(m_flRange,float32, 0x10c8);
+			PROPERTY(m_vShear,GlobalTypes::Vector, 0x10cc);
+			PROPERTY(m_nBakeSpecularToCubemaps,int32_t, 0x10d8);
+			PROPERTY(m_vBakeSpecularToCubemapsSize,GlobalTypes::Vector, 0x10dc);
+			PROPERTY(m_flBakeSpecularToCubemapsScale,float32, 0x10e8);
+			PROPERTY(m_nCastShadows,int32_t, 0x10ec);
+			PROPERTY(m_nShadowMapSize,int32_t, 0x10f0);
+			PROPERTY(m_nShadowPriority,int32_t, 0x10f4);
+			PROPERTY(m_bContactShadow,bool, 0x10f8);
+			PROPERTY(m_bForceShadowsEnabled,bool, 0x10f9);
+			PROPERTY(m_nBounceLight,int32_t, 0x10fc);
+			PROPERTY(m_flBounceScale,float32, 0x1100);
+			PROPERTY(m_flMinRoughness,float32, 0x1104);
+			PROPERTY(m_vAlternateColor,GlobalTypes::Vector, 0x1108);
+			PROPERTY(m_fAlternateColorBrightness,float32, 0x1114);
+			PROPERTY(m_nFog,int32_t, 0x1118);
+			PROPERTY(m_flFogStrength,float32, 0x111c);
+			PROPERTY(m_nFogShadows,int32_t, 0x1120);
+			PROPERTY(m_flFogScale,float32, 0x1124);
+			PROPERTY(m_flFadeSizeStart,float32, 0x1128);
+			PROPERTY(m_flFadeSizeEnd,float32, 0x112c);
+			PROPERTY(m_flShadowFadeSizeStart,float32, 0x1130);
+			PROPERTY(m_flShadowFadeSizeEnd,float32, 0x1134);
+			PROPERTY(m_bPrecomputedFieldsValid,bool, 0x1138);
+			PROPERTY(m_vPrecomputedBoundsMins,GlobalTypes::Vector, 0x113c);
+			PROPERTY(m_vPrecomputedBoundsMaxs,GlobalTypes::Vector, 0x1148);
+			PROPERTY(m_vPrecomputedOBBOrigin,GlobalTypes::Vector, 0x1154);
+			PROPERTY(m_vPrecomputedOBBAngles,GlobalTypes::QAngle, 0x1160);
+			PROPERTY(m_vPrecomputedOBBExtent,GlobalTypes::Vector, 0x116c);
+			PROPERTY(m_nPrecomputedSubFrusta,int32_t, 0x1178);
+			PROPERTY(m_vPrecomputedOBBOrigin0,GlobalTypes::Vector, 0x117c);
+			PROPERTY(m_vPrecomputedOBBAngles0,GlobalTypes::QAngle, 0x1188);
+			PROPERTY(m_vPrecomputedOBBExtent0,GlobalTypes::Vector, 0x1194);
+			PROPERTY(m_vPrecomputedOBBOrigin1,GlobalTypes::Vector, 0x11a0);
+			PROPERTY(m_vPrecomputedOBBAngles1,GlobalTypes::QAngle, 0x11ac);
+			PROPERTY(m_vPrecomputedOBBExtent1,GlobalTypes::Vector, 0x11b8);
+			PROPERTY(m_vPrecomputedOBBOrigin2,GlobalTypes::Vector, 0x11c4);
+			PROPERTY(m_vPrecomputedOBBAngles2,GlobalTypes::QAngle, 0x11d0);
+			PROPERTY(m_vPrecomputedOBBExtent2,GlobalTypes::Vector, 0x11dc);
+			PROPERTY(m_vPrecomputedOBBOrigin3,GlobalTypes::Vector, 0x11e8);
+			PROPERTY(m_vPrecomputedOBBAngles3,GlobalTypes::QAngle, 0x11f4);
+			PROPERTY(m_vPrecomputedOBBExtent3,GlobalTypes::Vector, 0x1200);
+			PROPERTY(m_vPrecomputedOBBOrigin4,GlobalTypes::Vector, 0x120c);
+			PROPERTY(m_vPrecomputedOBBAngles4,GlobalTypes::QAngle, 0x1218);
+			PROPERTY(m_vPrecomputedOBBExtent4,GlobalTypes::Vector, 0x1224);
+			PROPERTY(m_vPrecomputedOBBOrigin5,GlobalTypes::Vector, 0x1230);
+			PROPERTY(m_vPrecomputedOBBAngles5,GlobalTypes::QAngle, 0x123c);
+			PROPERTY(m_vPrecomputedOBBExtent5,GlobalTypes::Vector, 0x1248);
+			PROPERTY(m_bInitialBoneSetup,bool, 0x1298);
+			// PROPERTY(m_VisClusters,IDENTITY(GlobalTypes::C_NetworkUtlVectorBase< uint16 >), 0x12a0);
 			S2_PAD(0x310);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_BarnLight) == 0x12B8, "C_BarnLight size should be 0x12B8");
+		//static_assert(sizeof(CS2::client::C_BarnLight) == 0x12C0, "C_BarnLight size should be 0x12C0");
 
 #endif
 	}

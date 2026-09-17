@@ -6,6 +6,7 @@
 namespace CS2 {
 	namespace client {
 		enum EDestructibleParts_DestroyParameterFlags : std::uint32_t {
+			EDestructibleParts_DestroyParameterFlags_ApplyPhysicsForce = 0x40,
 			EDestructibleParts_DestroyParameterFlags_Default = 0x7,
 			EDestructibleParts_DestroyParameterFlags_EnableFlinches = 0x4,
 			EDestructibleParts_DestroyParameterFlags_ForceDamageApply = 0x8,

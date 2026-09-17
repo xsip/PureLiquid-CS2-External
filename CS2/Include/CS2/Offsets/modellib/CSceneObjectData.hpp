@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace modellib {
-			// Class size: 0xA0
+			// Class size: 0xB8
 			namespace CSceneObjectData /**/ {
 				constexpr std::ptrdiff_t m_vMinBounds = 0x0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vMaxBounds = 0xc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc

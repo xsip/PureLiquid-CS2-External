@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xC50
+			// Class size: 0xC70
 			namespace CPhysicsPropRespawnable /*: public CS2::server::CPhysicsProp*/ {
-				constexpr std::ptrdiff_t m_vOriginalSpawnOrigin = 0xc10; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOriginalSpawnAngles = 0xc1c; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOriginalMins = 0xc28; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOriginalMaxs = 0xc34; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flRespawnDuration = 0xc40; // float32 m_flRespawnDuration; |  0xc40 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_vOriginalSpawnOrigin = 0xc30; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vOriginalSpawnAngles = 0xc3c; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vOriginalMins = 0xc48; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vOriginalMaxs = 0xc54; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flRespawnDuration = 0xc60; // float32 m_flRespawnDuration; |  0xc60 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1558
+			// Class size: 0x1580
 			namespace C_MapPreviewParticleSystem /*: public CS2::client::C_ParticleSystem*/ {
 				// NO SCHEMA DATA FOUND!
 			}

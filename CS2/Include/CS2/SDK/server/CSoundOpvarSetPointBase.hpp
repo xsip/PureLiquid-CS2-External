@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseEntity.hpp>
+#include "CBaseEntity.hpp"
 
 
 
@@ -24,7 +24,7 @@ namespace CS2 {
 			PROPERTY(m_bDisabled,bool, 0x4a8);
 			PROPERTY(m_hSource,GlobalTypes::CEntityHandle, 0x4ac);
 			PROPERTY(m_iszSourceEntityName,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
-			PROPERTY(m_vLastPosition,GlobalTypes::Vector, 0x520);
+			PROPERTY(m_vLastPosition,GlobalTypes::VectorWS, 0x520);
 			PROPERTY(m_flRefreshTime,float32, 0x52c);
 			PROPERTY(m_iszStackName,GlobalTypes::CUtlSymbolLarge*, 0x530);
 			PROPERTY(m_iszOperatorName,GlobalTypes::CUtlSymbolLarge*, 0x538);

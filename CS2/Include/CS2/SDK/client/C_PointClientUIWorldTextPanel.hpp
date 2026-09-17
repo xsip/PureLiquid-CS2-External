@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_PointClientUIWorldPanel.hpp>
+#include "C_PointClientUIWorldPanel.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_PointClientUIWorldTextPanel : public CS2::client::C_PointClientUIWorldPanel {
 		public:
-			PROPERTY_ARRAY(m_messageText,char, 512 , 0x1200);
+			PROPERTY_ARRAY(m_messageText,char, 512 , 0x1210);
 			S2_PAD(0x200);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_PointClientUIWorldTextPanel) == 0x1400, "C_PointClientUIWorldTextPanel size should be 0x1400");
+		//static_assert(sizeof(CS2::client::C_PointClientUIWorldTextPanel) == 0x1410, "C_PointClientUIWorldTextPanel size should be 0x1410");
 
 #endif
 	}

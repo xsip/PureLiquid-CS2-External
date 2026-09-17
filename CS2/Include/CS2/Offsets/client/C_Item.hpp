@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x17C8
+			// Class size: 0x17F0
 			namespace C_Item /*: public CS2::client::C_EconEntity*/ {
-				constexpr std::ptrdiff_t m_pReticleHintTextName = 0x16c8; // char m_pReticleHintTextName[256]; |  0x16c8 | Schema_FixedArray | Size: 0x100
+				constexpr std::ptrdiff_t m_pReticleHintTextName = 0x16f0; // char m_pReticleHintTextName[256]; |  0x16f0 | Schema_FixedArray | Size: 0x100
 			}
 		}
 	}

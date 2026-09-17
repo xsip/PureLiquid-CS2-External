@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/GameTime_t.hpp>
-#include <SDK/entity2/EntityIOTargetType_t.hpp>
-#include <SDK/entity2/CVariantDefaultAllocator.hpp>
+#include "GameTime_t.hpp"
+#include "EntityIOTargetType_t.hpp"
+#include "CVariantDefaultAllocator.hpp"
 
 
 
@@ -29,8 +29,7 @@ namespace CS2 {
 			PROPERTY(m_pTargetInput,GlobalTypes::CUtlSymbolLarge*, 0x18);
 			PROPERTY(m_hActivator,GlobalTypes::CEntityHandle, 0x20);
 			PROPERTY(m_hCaller,GlobalTypes::CEntityHandle, 0x24);
-			PROPERTY(m_nOutputID,int32_t, 0x28);
-			PROPERTY(m_hEntTarget,GlobalTypes::CEntityHandle, 0x2c);
+			PROPERTY(m_hEntTarget,GlobalTypes::CEntityHandle, 0x28);
 			// PROPERTY(m_variantValue,IDENTITY(GlobalTypes::CVariantBase<entity2::CVariantDefaultAllocator>), 0x30);
 			S2_PAD(0x70);
 		};

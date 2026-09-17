@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CRotButton.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CRotButton.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -22,24 +22,24 @@ namespace CS2 {
 	namespace server {
 		class CMomentaryRotButton : public CS2::server::CRotButton {
 		public:
-			// PROPERTY(m_Position,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x8e8);
-			NESTED_PROPERTY(m_OnUnpressed,IDENTITY(entity2::CEntityIOOutput), 0x908);
-			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0x920);
-			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0x938);
-			NESTED_PROPERTY(m_OnReachedPosition,IDENTITY(entity2::CEntityIOOutput), 0x950);
-			PROPERTY(m_lastUsed,int32_t, 0x968);
-			PROPERTY(m_start,GlobalTypes::QAngle, 0x96c);
-			PROPERTY(m_end,GlobalTypes::QAngle, 0x978);
-			PROPERTY(m_IdealYaw,float32, 0x984);
-			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x988);
-			PROPERTY(m_bUpdateTarget,bool, 0x990);
-			PROPERTY(m_direction,int32_t, 0x994);
-			PROPERTY(m_returnSpeed,float32, 0x998);
-			PROPERTY(m_flStartPosition,float32, 0x99c);
+			// PROPERTY(m_Position,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x8f0);
+			NESTED_PROPERTY(m_OnUnpressed,IDENTITY(entity2::CEntityIOOutput), 0x910);
+			NESTED_PROPERTY(m_OnFullyOpen,IDENTITY(entity2::CEntityIOOutput), 0x928);
+			NESTED_PROPERTY(m_OnFullyClosed,IDENTITY(entity2::CEntityIOOutput), 0x940);
+			NESTED_PROPERTY(m_OnReachedPosition,IDENTITY(entity2::CEntityIOOutput), 0x958);
+			PROPERTY(m_lastUsed,int32_t, 0x970);
+			PROPERTY(m_start,GlobalTypes::QAngle, 0x974);
+			PROPERTY(m_end,GlobalTypes::QAngle, 0x980);
+			PROPERTY(m_IdealYaw,float32, 0x98c);
+			PROPERTY(m_sNoise,GlobalTypes::CUtlSymbolLarge*, 0x990);
+			PROPERTY(m_bUpdateTarget,bool, 0x998);
+			PROPERTY(m_direction,int32_t, 0x99c);
+			PROPERTY(m_returnSpeed,float32, 0x9a0);
+			PROPERTY(m_flStartPosition,float32, 0x9a4);
 			S2_PAD(0xB8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CMomentaryRotButton) == 0x9A0, "CMomentaryRotButton size should be 0x9A0");
+		//static_assert(sizeof(CS2::server::CMomentaryRotButton) == 0x9A8, "CMomentaryRotButton size should be 0x9A8");
 
 #endif
 	}

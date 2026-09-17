@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -24,7 +24,7 @@ namespace CS2 {
 			PROPERTY(m_iszOperator,GlobalTypes::CUtlSymbolLarge*, 0x10);
 			PROPERTY(m_iszOpvar,GlobalTypes::CUtlSymbolLarge*, 0x18);
 			PROPERTY(m_flVal,float32, 0x20);
-			PROPERTY(m_vPos,GlobalTypes::Vector, 0x24);
+			PROPERTY(m_vPos,GlobalTypes::VectorWS, 0x24);
 			S2_PAD(0x30);
 		};
 #ifdef USE_STATIC_ASSERTS

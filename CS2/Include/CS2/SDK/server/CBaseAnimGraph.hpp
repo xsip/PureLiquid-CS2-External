@@ -4,21 +4,22 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseModelEntity.hpp>
-#include <SDK/client/CAnimGraphControllerManager.hpp>
-#include <SDK/server/PhysicsRagdollPose_t.hpp>
+#include "CBaseModelEntity.hpp"
+#include "../client/CAnimGraphControllerManager.hpp"
+#include "../client/CAnimGraphControllerPtr.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
+#include "PhysicsRagdollPose_t.hpp"
 
 
 
 namespace CS2 {
 	namespace client {
-		class CAnimGraphControllerBase;
 		class IChoreoServices;
 	}
 	namespace vphysics2 {
@@ -32,23 +33,25 @@ namespace CS2 {
 	namespace server {
 		class CBaseAnimGraph : public CS2::server::CBaseModelEntity {
 		public:
-			NESTED_PROPERTY(m_graphControllerManager,IDENTITY(client::CAnimGraphControllerManager), 0x768);
-			PROPERTY(m_pMainGraphController,IDENTITY(client::CAnimGraphControllerBase*), 0x818);
-			PROPERTY(m_bInitiallyPopulateInterpHistory,bool, 0x820);
-			PROPERTY(m_pChoreoServices,IDENTITY(client::IChoreoServices*), 0x828);
-			PROPERTY(m_bAnimGraphUpdateEnabled,bool, 0x830);
-			PROPERTY(m_bAnimationUpdateScheduled,bool, 0x831);
-			PROPERTY(m_vecForce,GlobalTypes::Vector, 0x834);
-			PROPERTY(m_nForceBone,int32_t, 0x840);
-			PROPERTY(m_pRagdollControl,IDENTITY(vphysics2::IPhysicsRagdollControl*), 0x850);
-			NESTED_PROPERTY(m_RagdollPose,IDENTITY(server::PhysicsRagdollPose_t), 0x858);
-			PROPERTY(m_bRagdollEnabled,bool, 0x880);
-			PROPERTY(m_bRagdollClientSide,bool, 0x881);
-			PROPERTY(m_xParentedRagdollRootInEntitySpace,GlobalTypes::CTransform, 0x890);
-			S2_PAD(0x1D8);
+			NESTED_PROPERTY(m_graphControllerManager,IDENTITY(client::CAnimGraphControllerManager), 0x770);
+			NESTED_PROPERTY(m_pMainGraphController,IDENTITY(client::CAnimGraphControllerPtr), 0x808);
+			PROPERTY(m_bInitiallyPopulateInterpHistory,bool, 0x810);
+			// PROPERTY(m_OnLayerCycleUpdated,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x818);
+			NESTED_PROPERTY(m_OnExternalChoreoGraphChanged,IDENTITY(entity2::CEntityIOOutput), 0x838);
+			PROPERTY(m_pChoreoServices,IDENTITY(client::IChoreoServices*), 0x850);
+			PROPERTY(m_bAnimGraphUpdateEnabled,bool, 0x858);
+			PROPERTY(m_bAnimationUpdateScheduled,bool, 0x859);
+			PROPERTY(m_vecForce,GlobalTypes::Vector, 0x85c);
+			PROPERTY(m_nForceBone,int32_t, 0x868);
+			PROPERTY(m_pRagdollControl,IDENTITY(vphysics2::IPhysicsRagdollControl*), 0x878);
+			NESTED_PROPERTY(m_RagdollPose,IDENTITY(server::PhysicsRagdollPose_t), 0x880);
+			PROPERTY(m_bRagdollEnabled,bool, 0x8a8);
+			PROPERTY(m_bRagdollClientSide,bool, 0x8a9);
+			PROPERTY(m_xParentedRagdollRootInEntitySpace,GlobalTypes::CTransform, 0x8b0);
+			S2_PAD(0x1F0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CBaseAnimGraph) == 0x940, "CBaseAnimGraph size should be 0x940");
+		//static_assert(sizeof(CS2::server::CBaseAnimGraph) == 0x960, "CBaseAnimGraph size should be 0x960");
 
 #endif
 	}

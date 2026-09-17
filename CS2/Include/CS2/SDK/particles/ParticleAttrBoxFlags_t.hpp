@@ -7,12 +7,16 @@ namespace CS2 {
 	namespace particles {
 		enum ParticleAttrBoxFlags_t : std::uint32_t {
 			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_ASLEEP = 0x8,
+			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_DISABLE_NONSTATIC_COLLISION = 0x40,
 			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_ELECTRIFIED = 0x4,
 			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_FROZEN = 0x10,
+			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_MOTION_DISABLED = 0x100,
 			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_NONE = 0x0,
 			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_ON_FIRE = 0x2,
 			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_TIMED_DECAY = 0x20,
-			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1
+			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_WAKE_DECAY = 0x80,
+			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1,
+			ParticleAttrBoxFlags_t_PARTICLE_ATTR_BOX_FLAGS_ZERO_GRAVITY = 0x200
 		};
 	}
 }

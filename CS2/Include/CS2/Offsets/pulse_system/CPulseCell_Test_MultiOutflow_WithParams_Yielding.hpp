@@ -8,13 +8,13 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0x1B0
+			// Class size: 0x240
 			namespace CPulseCell_Test_MultiOutflow_WithParams_Yielding /*: public CS2::pulse_runtime_lib::CPulseCell_BaseYieldingInflow*/ {
-				constexpr std::ptrdiff_t m_Out1 = 0x48; // pulse_runtime_lib::SignatureOutflow_Continue  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_AsyncChild1 = 0x90; // pulse_runtime_lib::SignatureOutflow_Continue  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_AsyncChild2 = 0xd8; // pulse_runtime_lib::SignatureOutflow_Continue  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_YieldResume1 = 0x120; // pulse_runtime_lib::SignatureOutflow_Resume  | Schema_DeclaredClass | Size: 0x48
-				constexpr std::ptrdiff_t m_YieldResume2 = 0x168; // pulse_runtime_lib::SignatureOutflow_Resume  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_Out1 = 0xd8; // pulse_runtime_lib::SignatureOutflow_Continue  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_AsyncChild1 = 0x120; // pulse_runtime_lib::SignatureOutflow_Continue  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_AsyncChild2 = 0x168; // pulse_runtime_lib::SignatureOutflow_Continue  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_YieldResume1 = 0x1b0; // pulse_runtime_lib::SignatureOutflow_Resume  | Schema_DeclaredClass | Size: 0x48
+				constexpr std::ptrdiff_t m_YieldResume2 = 0x1f8; // pulse_runtime_lib::SignatureOutflow_Resume  | Schema_DeclaredClass | Size: 0x48
 			}
 		}
 	}

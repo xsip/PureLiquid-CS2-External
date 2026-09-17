@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBeam.hpp>
+#include "CBeam.hpp"
 
 
 
@@ -26,15 +26,15 @@ namespace CS2 {
 	namespace server {
 		class CEnvLaser : public CS2::server::CBeam {
 		public:
-			PROPERTY(m_iszLaserTarget,GlobalTypes::CUtlSymbolLarge*, 0x808);
-			PROPERTY(m_pSprite,IDENTITY(GlobalTypes::CHandle<server::CSprite>), 0x810);
-			PROPERTY(m_iszSpriteName,GlobalTypes::CUtlSymbolLarge*, 0x818);
-			PROPERTY(m_firePosition,GlobalTypes::Vector, 0x820);
-			PROPERTY(m_flStartFrame,float32, 0x82c);
+			PROPERTY(m_iszLaserTarget,GlobalTypes::CUtlSymbolLarge*, 0x810);
+			PROPERTY(m_pSprite,IDENTITY(GlobalTypes::CHandle<server::CSprite>), 0x818);
+			PROPERTY(m_iszSpriteName,GlobalTypes::CUtlSymbolLarge*, 0x820);
+			PROPERTY(m_firePosition,GlobalTypes::Vector, 0x828);
+			PROPERTY(m_flStartFrame,float32, 0x834);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CEnvLaser) == 0x830, "CEnvLaser size should be 0x830");
+		//static_assert(sizeof(CS2::server::CEnvLaser) == 0x838, "CEnvLaser size should be 0x838");
 
 #endif
 	}

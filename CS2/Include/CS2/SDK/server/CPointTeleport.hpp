@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CServerOnlyPointEntity.hpp>
+#include "CServerOnlyPointEntity.hpp"
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace server {
 		class CPointTeleport : public CS2::server::CServerOnlyPointEntity {
 		public:
-			PROPERTY(m_vSaveOrigin,GlobalTypes::Vector, 0x4a8);
+			PROPERTY(m_vSaveOrigin,GlobalTypes::VectorWS, 0x4a8);
 			PROPERTY(m_vSaveAngles,GlobalTypes::QAngle, 0x4b4);
 			PROPERTY(m_bTeleportParentedEntities,bool, 0x4c0);
 			PROPERTY(m_bTeleportUseCurrentAngle,bool, 0x4c1);

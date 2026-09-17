@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_system/CPulseGraphInstance_TestDomain.hpp>
+#include "CPulseGraphInstance_TestDomain.hpp"
 
 
 
@@ -23,7 +23,7 @@ namespace CS2 {
 		public:
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView) == 0x160, "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView size should be 0x160");
+		//static_assert(sizeof(CS2::pulse_system::CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView) == 0x158, "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView size should be 0x158");
 
 #endif
 	}

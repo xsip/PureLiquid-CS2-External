@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0xE8
+			// Class size: 0xB0
 			namespace CVoiceContainerMultiBlender /*: public CS2::soundsystem_voicecontainers::CVoiceContainerBase*/ {
-				constexpr std::ptrdiff_t m_soundsToPlay = 0xa8; // soundsystem_voicecontainers::CSoundContainerReferenceArray  | Schema_DeclaredClass | Size: 0x38
-				constexpr std::ptrdiff_t m_flBlendFactor = 0xe0; // float32 m_flBlendFactor; |  0xe0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flCrossover = 0xe4; // float32 m_flCrossover; |  0xe4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // soundsystem_voicecontainers::CSoundContainerReferenceArray  | Schema_DeclaredClass | Size: 0x38
+				constexpr std::ptrdiff_t m_flBlendFactor = 0xa8; // float32 m_flBlendFactor; |  0xa8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flCrossover = 0xac; // float32 m_flCrossover; |  0xac | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

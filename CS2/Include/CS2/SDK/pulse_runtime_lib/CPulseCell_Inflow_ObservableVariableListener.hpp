@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_Inflow_BaseEntrypoint.hpp>
-#include <SDK/pulse_runtime_lib/PulseRuntimeBlackboardReferenceIndex_t.hpp>
+#include "CPulseCell_Inflow_BaseEntrypoint.hpp"
+#include "PulseRuntimeBlackboardReferenceIndex_t.hpp"
 
 
 

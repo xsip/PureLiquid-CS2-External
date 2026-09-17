@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xF8
+			// Class size: 0x140
 			namespace CPulseCell_Outflow_PlaySequence /*: public CS2::server::CPulseCell_Outflow_PlaySceneBase*/ {
-				constexpr std::ptrdiff_t m_ParamSequenceName = 0xf0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_ParamSequenceName = 0x138; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

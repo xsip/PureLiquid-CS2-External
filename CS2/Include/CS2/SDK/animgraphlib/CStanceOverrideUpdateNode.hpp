@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
-#include <SDK/animgraphlib/StanceInfo_t.hpp>
-#include <SDK/animgraphlib/CAnimUpdateNodeRef.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
-#include <SDK/animgraphlib/StanceOverrideMode.hpp>
+#include "CUnaryUpdateNode.hpp"
+#include "StanceInfo_t.hpp"
+#include "CAnimUpdateNodeRef.hpp"
+#include "CAnimParamHandle.hpp"
+#include "StanceOverrideMode.hpp"
 
 
 

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CAnimTagBase.hpp>
-#include <SDK/animgraphlib/CBodyGroupSetting.hpp>
+#include "CAnimTagBase.hpp"
+#include "CBodyGroupSetting.hpp"
 
 
 

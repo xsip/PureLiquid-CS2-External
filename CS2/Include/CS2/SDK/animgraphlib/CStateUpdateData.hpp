@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/AnimScriptHandle.hpp>
-#include <SDK/animgraphlib/CStateActionUpdater.hpp>
-#include <SDK/modellib/AnimStateID.hpp>
+#include "../modellib/AnimScriptHandle.hpp"
+#include "CStateActionUpdater.hpp"
+#include "../modellib/AnimStateID.hpp"
 
 
 

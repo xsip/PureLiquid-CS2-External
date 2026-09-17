@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CMotionNode.hpp>
-#include <SDK/animgraphlib/MotionBlendItem.hpp>
+#include "CMotionNode.hpp"
+#include "MotionBlendItem.hpp"
 
 
 

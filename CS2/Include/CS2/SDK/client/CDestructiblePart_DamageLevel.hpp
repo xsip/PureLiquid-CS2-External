@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CSkillInt.hpp>
-#include <SDK/client/EDestructiblePartDamagePassThroughType.hpp>
-#include <SDK/client/DestructiblePartDestructionDeathBehavior_t.hpp>
-#include <SDK/tier2/CRangeFloat.hpp>
+#include "CSkillInt.hpp"
+#include "EDestructiblePartDamagePassThroughType.hpp"
+#include "DestructiblePartDestructionDeathBehavior_t.hpp"
+#include "../tier2/CRangeFloat.hpp"
 
 
 

@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x1070
+			// Class size: 0x1090
 			namespace CDecoyGrenade /*: public CS2::server::CBaseCSGrenade*/ {
 				// NO SCHEMA DATA FOUND!
 			}

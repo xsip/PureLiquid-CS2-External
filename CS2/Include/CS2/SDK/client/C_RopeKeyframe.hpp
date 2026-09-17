@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseModelEntity.hpp>
-#include <SDK/modellib/AttachmentHandle_t.hpp>
-#include <SDK/client/C_RopeKeyframe_CPhysicsDelegate.hpp>
+#include "C_BaseModelEntity.hpp"
+#include "../modellib/AttachmentHandle_t.hpp"
+#include "C_RopeKeyframe_CPhysicsDelegate.hpp"
 
 
 
@@ -31,46 +31,46 @@ namespace CS2 {
 	namespace client {
 		class C_RopeKeyframe : public CS2::client::C_BaseModelEntity {
 		public:
-			// PROPERTY(m_LinksTouchingSomething,IDENTITY(GlobalTypes::CBitVec< 10 >), 0xfb0);
-			PROPERTY(m_nLinksTouchingSomething,int32_t, 0xfb4);
-			PROPERTY(m_bApplyWind,bool, 0xfb8);
-			PROPERTY(m_fPrevLockedPoints,int32_t, 0xfbc);
-			PROPERTY(m_iForcePointMoveCounter,int32_t, 0xfc0);
-			PROPERTY_ARRAY(m_bPrevEndPointPos,bool, 2 , 0xfc4);
-			PROPERTY_ARRAY(m_vPrevEndPointPos,GlobalTypes::VectorWS, 2 , 0xfc8);
-			PROPERTY(m_flCurScroll,float32, 0xfe0);
-			PROPERTY(m_flScrollSpeed,float32, 0xfe4);
-			PROPERTY(m_RopeFlags,uint16_t, 0xfe8);
-			PROPERTY(m_iRopeMaterialModelIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xff0);
-			PROPERTY(m_nSegments,uint8_t, 0x1268);
-			PROPERTY(m_hStartPoint,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x126c);
-			PROPERTY(m_hEndPoint,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x1270);
-			NESTED_PROPERTY(m_iStartAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1274);
-			NESTED_PROPERTY(m_iEndAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x1275);
-			PROPERTY(m_Subdiv,uint8_t, 0x1276);
-			PROPERTY(m_RopeLength,int16_t, 0x1278);
-			PROPERTY(m_Slack,int16_t, 0x127a);
-			PROPERTY(m_TextureScale,float32, 0x127c);
-			PROPERTY(m_fLockedPoints,uint8_t, 0x1280);
-			PROPERTY(m_nChangeCount,uint8_t, 0x1281);
-			PROPERTY(m_Width,float32, 0x1284);
-			NESTED_PROPERTY(m_PhysicsDelegate,IDENTITY(client::C_RopeKeyframe_CPhysicsDelegate), 0x1288);
-			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x1298);
-			PROPERTY(m_TextureHeight,int32_t, 0x12a0);
-			PROPERTY(m_vecImpulse,GlobalTypes::Vector, 0x12a4);
-			PROPERTY(m_vecPreviousImpulse,GlobalTypes::Vector, 0x12b0);
-			PROPERTY(m_flCurrentGustTimer,float32, 0x12bc);
-			PROPERTY(m_flCurrentGustLifetime,float32, 0x12c0);
-			PROPERTY(m_flTimeToNextGust,float32, 0x12c4);
-			PROPERTY(m_vWindDir,GlobalTypes::Vector, 0x12c8);
-			PROPERTY(m_vColorMod,GlobalTypes::Vector, 0x12d4);
-			PROPERTY_ARRAY(m_vCachedEndPointAttachmentPos,GlobalTypes::VectorWS, 2 , 0x12e0);
-			PROPERTY_ARRAY(m_vCachedEndPointAttachmentAngle,GlobalTypes::QAngle, 2 , 0x12f8);
-			PROPERTY(m_bConstrainBetweenEndpoints,bool, 0x1310);
+			// PROPERTY(m_LinksTouchingSomething,IDENTITY(GlobalTypes::CBitVec< 10 >), 0xfb8);
+			PROPERTY(m_nLinksTouchingSomething,int32_t, 0xfbc);
+			PROPERTY(m_bApplyWind,bool, 0xfc0);
+			PROPERTY(m_fPrevLockedPoints,int32_t, 0xfc4);
+			PROPERTY(m_iForcePointMoveCounter,int32_t, 0xfc8);
+			PROPERTY_ARRAY(m_bPrevEndPointPos,bool, 2 , 0xfcc);
+			PROPERTY_ARRAY(m_vPrevEndPointPos,GlobalTypes::VectorWS, 2 , 0xfd0);
+			PROPERTY(m_flCurScroll,float32, 0xfe8);
+			PROPERTY(m_flScrollSpeed,float32, 0xfec);
+			PROPERTY(m_RopeFlags,uint16_t, 0xff0);
+			PROPERTY(m_iRopeMaterialModelIndex,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0xff8);
+			PROPERTY(m_nSegments,uint8_t, 0x1270);
+			PROPERTY(m_hStartPoint,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x1274);
+			PROPERTY(m_hEndPoint,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x1278);
+			NESTED_PROPERTY(m_iStartAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x127c);
+			NESTED_PROPERTY(m_iEndAttachment,IDENTITY(modellib::AttachmentHandle_t), 0x127d);
+			PROPERTY(m_Subdiv,uint8_t, 0x127e);
+			PROPERTY(m_RopeLength,int16_t, 0x1280);
+			PROPERTY(m_Slack,int16_t, 0x1282);
+			PROPERTY(m_TextureScale,float32, 0x1284);
+			PROPERTY(m_fLockedPoints,uint8_t, 0x1288);
+			PROPERTY(m_nChangeCount,uint8_t, 0x1289);
+			PROPERTY(m_Width,float32, 0x128c);
+			NESTED_PROPERTY(m_PhysicsDelegate,IDENTITY(client::C_RopeKeyframe_CPhysicsDelegate), 0x1290);
+			PROPERTY(m_hMaterial,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>), 0x12a0);
+			PROPERTY(m_TextureHeight,int32_t, 0x12a8);
+			PROPERTY(m_vecImpulse,GlobalTypes::Vector, 0x12ac);
+			PROPERTY(m_vecPreviousImpulse,GlobalTypes::Vector, 0x12b8);
+			PROPERTY(m_flCurrentGustTimer,float32, 0x12c4);
+			PROPERTY(m_flCurrentGustLifetime,float32, 0x12c8);
+			PROPERTY(m_flTimeToNextGust,float32, 0x12cc);
+			PROPERTY(m_vWindDir,GlobalTypes::Vector, 0x12d0);
+			PROPERTY(m_vColorMod,GlobalTypes::Vector, 0x12dc);
+			PROPERTY_ARRAY(m_vCachedEndPointAttachmentPos,GlobalTypes::VectorWS, 2 , 0x12e8);
+			PROPERTY_ARRAY(m_vCachedEndPointAttachmentAngle,GlobalTypes::QAngle, 2 , 0x1300);
+			PROPERTY(m_bConstrainBetweenEndpoints,bool, 0x1318);
 			S2_PAD(0x370);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_RopeKeyframe) == 0x1318, "C_RopeKeyframe size should be 0x1318");
+		//static_assert(sizeof(CS2::client::C_RopeKeyframe) == 0x1320, "C_RopeKeyframe size should be 0x1320");
 
 #endif
 	}

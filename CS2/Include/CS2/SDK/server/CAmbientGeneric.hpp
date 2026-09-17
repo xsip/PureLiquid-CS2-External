@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPointEntity.hpp>
-#include <SDK/client/soundlevel_t.hpp>
-#include <SDK/server/dynpitchvol_t.hpp>
+#include "CPointEntity.hpp"
+#include "../client/soundlevel_t.hpp"
+#include "dynpitchvol_t.hpp"
 
 
 
@@ -34,7 +34,7 @@ namespace CS2 {
 			NESTED_PROPERTY(m_dpv,IDENTITY(server::dynpitchvol_t), 0x4b4);
 			PROPERTY(m_fActive,bool, 0x518);
 			PROPERTY(m_fLooping,bool, 0x519);
-			PROPERTY(m_iszSound,GlobalTypes::CUtlSymbolLarge*, 0x520);
+			PROPERTY(m_iszSound,GlobalTypes::CGameSoundEventName, 0x520);
 			PROPERTY(m_sSourceEntName,GlobalTypes::CUtlSymbolLarge*, 0x528);
 			PROPERTY(m_hSoundSource,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x530);
 			PROPERTY(m_nSoundSourceEntIndex,GlobalTypes::CEntityIndex, 0x534);

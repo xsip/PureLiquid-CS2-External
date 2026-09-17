@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPoseTask.hpp>
-#include <SDK/animlib/CNmTarget.hpp>
-#include <SDK/animlib/NmIKBlendMode_t.hpp>
+#include "CNmPoseTask.hpp"
+#include "CNmTarget.hpp"
+#include "NmIKBlendMode_t.hpp"
 
 
 
@@ -23,20 +23,20 @@ namespace CS2 {
 	namespace animlib {
 		class CNmTwoBoneIKTask : public CS2::animlib::CNmPoseTask {
 		public:
-			PROPERTY(m_nEffectorBoneIdx,int32_t, 0x48);
-			PROPERTY(m_nEffectorTargetBoneIdx,int32_t, 0x4c);
-			PROPERTY(m_targetTransform,GlobalTypes::CTransform, 0x50);
-			NESTED_PROPERTY(m_effectorTarget,IDENTITY(animlib::CNmTarget), 0x70);
-			PROPERTY(m_blendMode,IDENTITY(animlib::NmIKBlendMode_t), 0xa0);
-			PROPERTY(m_flBlendWeight,float32, 0xa4);
-			PROPERTY(m_bIsTargetInWorldSpace,bool, 0xa8);
-			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0xa9);
-			PROPERTY(m_flChainRotationWeight,float32, 0xac);
-			PROPERTY(m_debugEffectorBoneID,GlobalTypes::CGlobalSymbol, 0xb0);
-			S2_PAD(0x78);
+			PROPERTY(m_nEffectorBoneIdx,int32_t, 0x70);
+			PROPERTY(m_nEffectorTargetBoneIdx,int32_t, 0x74);
+			PROPERTY(m_targetTransform,GlobalTypes::CTransform, 0x80);
+			NESTED_PROPERTY(m_effectorTarget,IDENTITY(animlib::CNmTarget), 0xa0);
+			PROPERTY(m_blendMode,IDENTITY(animlib::NmIKBlendMode_t), 0xd0);
+			PROPERTY(m_flBlendWeight,float32, 0xd4);
+			PROPERTY(m_bIsTargetInWorldSpace,bool, 0xd8);
+			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0xd9);
+			PROPERTY(m_flChainRotationWeight,float32, 0xdc);
+			PROPERTY(m_debugEffectorBoneID,GlobalTypes::CGlobalSymbol, 0xe0);
+			S2_PAD(0x80);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::animlib::CNmTwoBoneIKTask) == 0xC0, "CNmTwoBoneIKTask size should be 0xC0");
+		//static_assert(sizeof(CS2::animlib::CNmTwoBoneIKTask) == 0xF0, "CNmTwoBoneIKTask size should be 0xF0");
 
 #endif
 	}

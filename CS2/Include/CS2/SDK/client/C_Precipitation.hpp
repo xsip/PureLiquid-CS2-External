@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseTrigger.hpp>
-#include <SDK/client/TimedEvent.hpp>
+#include "C_BaseTrigger.hpp"
+#include "TimedEvent.hpp"
 
 
 
@@ -22,18 +22,18 @@ namespace CS2 {
 	namespace client {
 		class C_Precipitation : public CS2::client::C_BaseTrigger {
 		public:
-			PROPERTY(m_flDensity,float32, 0x1078);
-			PROPERTY(m_flParticleInnerDist,float32, 0x1088);
-			PROPERTY(m_pParticleDef,char*, 0x1090);
-			PROPERTY_ARRAY(m_tParticlePrecipTraceTimer,IDENTITY(client::TimedEvent), 1 , 0x109c);
-			PROPERTY_ARRAY(m_bActiveParticlePrecipEmitter,bool, 1 , 0x10a4);
-			PROPERTY(m_bParticlePrecipInitialized,bool, 0x10a5);
-			PROPERTY(m_bHasSimulatedSinceLastSceneObjectUpdate,bool, 0x10a6);
-			PROPERTY(m_nAvailableSheetSequencesMaxIndex,int32_t, 0x10a8);
-			S2_PAD(0x38);
+			PROPERTY(m_flDensity,float32, 0x1098);
+			PROPERTY(m_flParticleInnerDist,float32, 0x10a8);
+			PROPERTY(m_pParticleDef,char*, 0x10b0);
+			PROPERTY_ARRAY(m_tParticlePrecipTraceTimer,IDENTITY(client::TimedEvent), 1 , 0x10c4);
+			PROPERTY_ARRAY(m_bActiveParticlePrecipEmitter,bool, 1 , 0x10cc);
+			PROPERTY(m_bParticlePrecipInitialized,bool, 0x10cd);
+			PROPERTY(m_bHasSimulatedSinceLastSceneObjectUpdate,bool, 0x10ce);
+			PROPERTY(m_nAvailableSheetSequencesMaxIndex,int32_t, 0x10d0);
+			S2_PAD(0x40);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_Precipitation) == 0x10B0, "C_Precipitation size should be 0x10B0");
+		//static_assert(sizeof(CS2::client::C_Precipitation) == 0x10D8, "C_Precipitation size should be 0x10D8");
 
 #endif
 	}

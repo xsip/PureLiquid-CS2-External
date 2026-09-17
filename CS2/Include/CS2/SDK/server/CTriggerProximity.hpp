@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -26,15 +26,15 @@ namespace CS2 {
 	namespace server {
 		class CTriggerProximity : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_hMeasureTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8c8);
-			PROPERTY(m_iszMeasureTarget,GlobalTypes::CUtlSymbolLarge*, 0x8d0);
-			PROPERTY(m_fRadius,float32, 0x8d8);
-			PROPERTY(m_nTouchers,int32_t, 0x8dc);
-			// PROPERTY(m_NearestEntityDistance,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x8e0);
+			PROPERTY(m_hMeasureTarget,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x8e8);
+			PROPERTY(m_iszMeasureTarget,GlobalTypes::CUtlSymbolLarge*, 0x8f0);
+			PROPERTY(m_fRadius,float32, 0x8f8);
+			PROPERTY(m_nTouchers,int32_t, 0x8fc);
+			// PROPERTY(m_NearestEntityDistance,IDENTITY(GlobalTypes::CEntityOutputTemplate< float32 >), 0x900);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerProximity) == 0x900, "CTriggerProximity size should be 0x900");
+		//static_assert(sizeof(CS2::server::CTriggerProximity) == 0x920, "CTriggerProximity size should be 0x920");
 
 #endif
 	}

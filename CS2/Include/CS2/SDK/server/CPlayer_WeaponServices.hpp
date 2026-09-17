@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CPlayerPawnComponent.hpp>
-#include <SDK/server/CBasePlayerWeapon.hpp>
+#include "../client/CPlayerPawnComponent.hpp"
+#include "CBasePlayerWeapon.hpp"
 
 
 

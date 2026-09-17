@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPulseCell_Outflow_PlaySceneBase.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_OutflowConnection.hpp>
-#include <SDK/server/CPulseCell_Outflow_PlayVCD_VCDRequirementInfo_t.hpp>
+#include "CPulseCell_Outflow_PlayVCDBase.hpp"
+#include "../pulse_runtime_lib/CPulse_OutflowConnection.hpp"
+#include "CPulseCell_Outflow_PlayVCD_VCDRequirementInfo_t.hpp"
 
 
 
@@ -26,16 +26,16 @@ namespace CS2 {
 using namespace GlobalTypes;
 namespace CS2 {
 	namespace server {
-		class CPulseCell_Outflow_PlayVCD : public CS2::server::CPulseCell_Outflow_PlaySceneBase {
+		class CPulseCell_Outflow_PlayVCD : public CS2::server::CPulseCell_Outflow_PlayVCDBase {
 		public:
-			PROPERTY(m_hChoreoScene,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>), 0xf0);
-			NESTED_PROPERTY(m_OnPaused,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0xf8);
-			NESTED_PROPERTY(m_OnResumed,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x140);
-			NESTED_PROPERTY(m_OutRequirements,IDENTITY(GlobalTypes::CUtlVector<server::CPulseCell_Outflow_PlayVCD_VCDRequirementInfo_t>), 0x188);
+			PROPERTY(m_hChoreoScene,IDENTITY(GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeCChoreoSceneResource>), 0x138);
+			NESTED_PROPERTY(m_OnPaused,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x140);
+			NESTED_PROPERTY(m_OnResumed,IDENTITY(pulse_runtime_lib::CPulse_OutflowConnection), 0x188);
+			NESTED_PROPERTY(m_OutRequirements,IDENTITY(GlobalTypes::CUtlVector<server::CPulseCell_Outflow_PlayVCD_VCDRequirementInfo_t>), 0x1d0);
 			S2_PAD(0xB0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_PlayVCD) == 0x1A0, "CPulseCell_Outflow_PlayVCD size should be 0x1A0");
+		//static_assert(sizeof(CS2::server::CPulseCell_Outflow_PlayVCD) == 0x1E8, "CPulseCell_Outflow_PlayVCD size should be 0x1E8");
 
 #endif
 	}

@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_voicecontainers/EWaveform.hpp>
-#include <SDK/soundsystem_voicecontainers/EMidiNote.hpp>
-#include <SDK/soundsystem_voicecontainers/CVoiceContainerStaticAdditiveSynth_CGainScalePerInstance.hpp>
+#include "EWaveform.hpp"
+#include "EMidiNote.hpp"
+#include "CVoiceContainerStaticAdditiveSynth_CGainScalePerInstance.hpp"
 
 
 

@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1370
-			namespace C_ShatterGlassShardPhysics /*: public CS2::client::C_PhysicsProp*/ {
-				constexpr std::ptrdiff_t m_ShardDesc = 0x12e8; // client::shard_model_desc_t  | Schema_DeclaredClass | Size: 0x80
+			// Class size: 0x1038
+			namespace C_ShatterGlassShardPhysics /*: public CS2::client::C_BaseModelEntity*/ {
+				constexpr std::ptrdiff_t m_ShardDesc = 0xfb8; // client::shard_model_desc_t  | Schema_DeclaredClass | Size: 0x80
 			}
 		}
 	}

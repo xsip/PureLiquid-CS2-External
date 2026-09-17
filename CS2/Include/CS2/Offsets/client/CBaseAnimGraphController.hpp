@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x690
+			// Class size: 0x6A0
 			namespace CBaseAnimGraphController /*: public CS2::client::CSkeletonAnimationController*/ {
 				constexpr std::ptrdiff_t m_nAnimationAlgorithm = 0x18; // client::AnimationAlgorithm_t  | Schema_DeclaredEnum | Size: 0x1
 				constexpr std::ptrdiff_t m_nNextExternalGraphHandle = 0x1c; // client::ExternalAnimGraphHandle_t  | Schema_DeclaredClass | Size: 0x4
@@ -39,9 +39,9 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_vecExternalGraphIds = 0x410; // GlobalTypes::C_NetworkUtlVectorBase<resourcefile::ResourceId_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_vecExternalClipIds = 0x428; // GlobalTypes::C_NetworkUtlVectorBase<resourcefile::ResourceId_t>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_sAnimGraph2Identifier = 0x440; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_pGraphInstanceAG2 = 0x448; // animlib::CNmGraphInstance**  | Schema_Ptr | Size: 0x8
-				constexpr std::ptrdiff_t m_vecExternalGraphs = 0x660; // GlobalTypes::CUtlVector<client::ExternalAnimGraph_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_nPrevAnimationAlgorithm = 0x689; // client::AnimationAlgorithm_t  | Schema_DeclaredEnum | Size: 0x1
+				constexpr std::ptrdiff_t m_pGraphInstanceAG2 = 0x448; // client::CAnimGraph2InstancePtr  | Schema_DeclaredClass | Size: 0x10
+				constexpr std::ptrdiff_t m_vecExternalGraphs = 0x668; // client::CExternalAnimGraphList  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_nPrevAnimationAlgorithm = 0x699; // client::AnimationAlgorithm_t  | Schema_DeclaredEnum | Size: 0x1
 			}
 		}
 	}

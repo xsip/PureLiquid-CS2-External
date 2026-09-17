@@ -73,8 +73,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iMatchStats_PlayersAlive_T = 0xb40; // int32_t m_iMatchStats_PlayersAlive_T[30]; |  0xb40 | Schema_FixedArray | Size: 0x78
 				constexpr std::ptrdiff_t m_TeamRespawnWaveTimes = 0xbb8; // float32 m_TeamRespawnWaveTimes[32]; |  0xbb8 | Schema_FixedArray | Size: 0x80
 				constexpr std::ptrdiff_t m_flNextRespawnWave = 0xc38; // GlobalTypes::GameTime_t[32]  | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_vMinimapMins = 0xcb8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vMinimapMaxs = 0xcc4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vMinimapMins = 0xcb8; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vMinimapMaxs = 0xcc4; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_MinimapVerticalSectionHeights = 0xcd0; // float32 m_MinimapVerticalSectionHeights[8]; |  0xcd0 | Schema_FixedArray | Size: 0x20
 				constexpr std::ptrdiff_t m_ullLocalMatchID = 0xcf0; // uint64_t m_ullLocalMatchID; |  0xcf0 | Schema_Builtin | Size: 0x8
 				constexpr std::ptrdiff_t m_nEndMatchMapGroupVoteTypes = 0xcf8; // int32_t m_nEndMatchMapGroupVoteTypes[10]; |  0xcf8 | Schema_FixedArray | Size: 0x28
@@ -148,7 +148,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bTargetBombed = 0xf00; // bool m_bTargetBombed; |  0xf00 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bBombDefused = 0xf01; // bool m_bBombDefused; |  0xf01 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_bMapHasBombZone = 0xf02; // bool m_bMapHasBombZone; |  0xf02 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_vecMainCTSpawnPos = 0xf50; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecMainCTSpawnPos = 0xf50; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_CTSpawnPointsMasterList = 0xf60; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_TerroristSpawnPointsMasterList = 0xf78; // GlobalTypes::CUtlVector<GlobalTypes::CHandle<server::SpawnPoint>>  | Schema_Atomic | Size: 0x18
 				constexpr std::ptrdiff_t m_bRespawningAllRespawnablePlayers = 0xf90; // bool m_bRespawningAllRespawnablePlayers; |  0xf90 | Schema_Builtin | Size: 0x1

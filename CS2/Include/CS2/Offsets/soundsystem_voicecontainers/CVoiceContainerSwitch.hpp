@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace soundsystem_voicecontainers {
-			// Class size: 0xC0
+			// Class size: 0x88
 			namespace CVoiceContainerSwitch /*: public CS2::soundsystem_voicecontainers::CVoiceContainerBase*/ {
-				constexpr std::ptrdiff_t m_soundsToPlay = 0xa8; // GlobalTypes::CUtlVector<soundsystem_voicecontainers::CSoundContainerReference>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // GlobalTypes::CUtlVector<soundsystem_voicecontainers::CSoundContainerReference>  | Schema_Atomic | Size: 0x18
 			}
 		}
 	}

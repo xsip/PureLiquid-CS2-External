@@ -8,11 +8,11 @@ namespace CS2 {
 		enum BeamType_t : std::uint32_t {
 			BeamType_t_BEAM_ENTPOINT = 0x2,
 			BeamType_t_BEAM_ENTS = 0x3,
-			BeamType_t_BEAM_HOSE = 0x4,
 			BeamType_t_BEAM_INVALID = 0x0,
 			BeamType_t_BEAM_LASER = 0x6,
 			BeamType_t_BEAM_POINTS = 0x1,
-			BeamType_t_BEAM_SPLINE = 0x5
+			BeamType_t_BEAM_SPLINE = 0x5,
+			BeamType_t_xxBEAM_HOSExxunused = 0x4
 		};
 	}
 }

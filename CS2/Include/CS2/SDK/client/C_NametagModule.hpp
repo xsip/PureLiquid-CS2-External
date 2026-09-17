@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_CS2WeaponModuleBase.hpp>
+#include "C_CS2WeaponModuleBase.hpp"
 
 
 
@@ -21,11 +21,11 @@ namespace CS2 {
 	namespace client {
 		class C_NametagModule : public CS2::client::C_CS2WeaponModuleBase {
 		public:
-			PROPERTY(m_strNametagString,GlobalTypes::CUtlString*, 0x1160);
+			PROPERTY(m_strNametagString,GlobalTypes::CUtlString*, 0x1188);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_NametagModule) == 0x1168, "C_NametagModule size should be 0x1168");
+		//static_assert(sizeof(CS2::client::C_NametagModule) == 0x1190, "C_NametagModule size should be 0x1190");
 
 #endif
 	}

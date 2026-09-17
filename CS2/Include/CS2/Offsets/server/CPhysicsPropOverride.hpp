@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xC10
+			// Class size: 0xC30
 			namespace CPhysicsPropOverride /*: public CS2::server::CPhysicsProp*/ {
 				// NO SCHEMA DATA FOUND!
 			}

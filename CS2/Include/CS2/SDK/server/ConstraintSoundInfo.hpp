@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/VelocitySampler.hpp>
-#include <SDK/server/SimpleConstraintSoundProfile.hpp>
+#include "VelocitySampler.hpp"
+#include "SimpleConstraintSoundProfile.hpp"
 
 
 

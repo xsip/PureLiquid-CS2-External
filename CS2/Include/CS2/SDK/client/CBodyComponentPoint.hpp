@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBodyComponent.hpp>
-#include <SDK/client/CGameSceneNode.hpp>
+#include "CBodyComponent.hpp"
+#include "CGameSceneNode.hpp"
 
 
 
@@ -23,10 +23,10 @@ namespace CS2 {
 		class CBodyComponentPoint : public CS2::client::CBodyComponent {
 		public:
 			NESTED_PROPERTY(m_sceneNode,IDENTITY(client::CGameSceneNode), 0x80);
-			S2_PAD(0x148);
+			S2_PAD(0x138);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CBodyComponentPoint) == 0x1C0, "CBodyComponentPoint size should be 0x1C0");
+		//static_assert(sizeof(CS2::client::CBodyComponentPoint) == 0x1B0, "CBodyComponentPoint size should be 0x1B0");
 
 #endif
 	}

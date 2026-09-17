@@ -8,22 +8,22 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x9A0
+			// Class size: 0x9A8
 			namespace CMomentaryRotButton /*: public CS2::server::CRotButton*/ {
-				constexpr std::ptrdiff_t m_Position = 0x8e8; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
-				constexpr std::ptrdiff_t m_OnUnpressed = 0x908; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnFullyOpen = 0x920; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnFullyClosed = 0x938; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnReachedPosition = 0x950; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_lastUsed = 0x968; // int32_t m_lastUsed; |  0x968 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_start = 0x96c; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_end = 0x978; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_IdealYaw = 0x984; // float32 m_IdealYaw; |  0x984 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_sNoise = 0x988; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_bUpdateTarget = 0x990; // bool m_bUpdateTarget; |  0x990 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_direction = 0x994; // int32_t m_direction; |  0x994 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_returnSpeed = 0x998; // float32 m_returnSpeed; |  0x998 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartPosition = 0x99c; // float32 m_flStartPosition; |  0x99c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_Position = 0x8f0; // GlobalTypes::CEntityOutputTemplate  | Schema_Atomic | Size: 0x20
+				constexpr std::ptrdiff_t m_OnUnpressed = 0x910; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnFullyOpen = 0x928; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnFullyClosed = 0x940; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnReachedPosition = 0x958; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_lastUsed = 0x970; // int32_t m_lastUsed; |  0x970 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_start = 0x974; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_end = 0x980; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_IdealYaw = 0x98c; // float32 m_IdealYaw; |  0x98c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_sNoise = 0x990; // GlobalTypes::CUtlSymbolLarge  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_bUpdateTarget = 0x998; // bool m_bUpdateTarget; |  0x998 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_direction = 0x99c; // int32_t m_direction; |  0x99c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_returnSpeed = 0x9a0; // float32 m_returnSpeed; |  0x9a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartPosition = 0x9a4; // float32 m_flStartPosition; |  0x9a4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

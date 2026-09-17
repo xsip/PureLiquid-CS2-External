@@ -8,20 +8,20 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x9B0
+			// Class size: 0x9D0
 			namespace CPhysMagnet /*: public CS2::server::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_OnMagnetAttach = 0x940; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_OnMagnetDetach = 0x958; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
-				constexpr std::ptrdiff_t m_massScale = 0x970; // float32 m_massScale; |  0x970 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_forceLimit = 0x974; // float32 m_forceLimit; |  0x974 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_torqueLimit = 0x978; // float32 m_torqueLimit; |  0x978 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_MagnettedEntities = 0x980; // GlobalTypes::CUtlVector<server::magnetted_objects_t>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_bActive = 0x998; // bool m_bActive; |  0x998 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_bHasHitSomething = 0x999; // bool m_bHasHitSomething; |  0x999 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flTotalMass = 0x99c; // float32 m_flTotalMass; |  0x99c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flRadius = 0x9a0; // float32 m_flRadius; |  0x9a0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flNextSuckTime = 0x9a4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_iMaxObjectsAttached = 0x9a8; // int32_t m_iMaxObjectsAttached; |  0x9a8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_OnMagnetAttach = 0x960; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_OnMagnetDetach = 0x978; // entity2::CEntityIOOutput  | Schema_DeclaredClass | Size: 0x18
+				constexpr std::ptrdiff_t m_massScale = 0x990; // float32 m_massScale; |  0x990 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_forceLimit = 0x994; // float32 m_forceLimit; |  0x994 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_torqueLimit = 0x998; // float32 m_torqueLimit; |  0x998 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_MagnettedEntities = 0x9a0; // GlobalTypes::CUtlVector<server::magnetted_objects_t>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_bActive = 0x9b8; // bool m_bActive; |  0x9b8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_bHasHitSomething = 0x9b9; // bool m_bHasHitSomething; |  0x9b9 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flTotalMass = 0x9bc; // float32 m_flTotalMass; |  0x9bc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flRadius = 0x9c0; // float32 m_flRadius; |  0x9c0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flNextSuckTime = 0x9c4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_iMaxObjectsAttached = 0x9c8; // int32_t m_iMaxObjectsAttached; |  0x9c8 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

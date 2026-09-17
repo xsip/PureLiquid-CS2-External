@@ -8,31 +8,32 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x1020
+			// Class size: 0x1030
 			namespace C_Sprite /*: public CS2::client::C_BaseModelEntity*/ {
-				constexpr std::ptrdiff_t m_hSpriteMaterial = 0xfa8; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
-				constexpr std::ptrdiff_t m_hAttachedToEntity = 0xfb0; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_nAttachment = 0xfb4; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_flSpriteFramerate = 0xfb8; // float32 m_flSpriteFramerate; |  0xfb8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flFrame = 0xfbc; // float32 m_flFrame; |  0xfbc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDieTime = 0xfc0; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nBrightness = 0xfd0; // uint32_t m_nBrightness; |  0xfd0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBrightnessDuration = 0xfd4; // float32 m_flBrightnessDuration; |  0xfd4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flSpriteScale = 0xfd8; // float32 m_flSpriteScale; |  0xfd8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flScaleDuration = 0xfdc; // float32 m_flScaleDuration; |  0xfdc | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_bWorldSpaceScale = 0xfe0; // bool m_bWorldSpaceScale; |  0xfe0 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_flGlowProxySize = 0xfe4; // float32 m_flGlowProxySize; |  0xfe4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flHDRColorScale = 0xfe8; // float32 m_flHDRColorScale; |  0xfe8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flLastTime = 0xfec; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_flMaxFrame = 0xff0; // float32 m_flMaxFrame; |  0xff0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flStartScale = 0xff4; // float32 m_flStartScale; |  0xff4 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flDestScale = 0xff8; // float32 m_flDestScale; |  0xff8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flScaleTimeStart = 0xffc; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nStartBrightness = 0x1000; // int32_t m_nStartBrightness; |  0x1000 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nDestBrightness = 0x1004; // int32_t m_nDestBrightness; |  0x1004 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flBrightnessTimeStart = 0x1008; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_nSpriteWidth = 0x1018; // int32_t m_nSpriteWidth; |  0x1018 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nSpriteHeight = 0x101c; // int32_t m_nSpriteHeight; |  0x101c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hSpriteMaterial = 0xfb0; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_hAttachedToEntity = 0xfb8; // GlobalTypes::CHandle<client::C_BaseEntity>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_nAttachment = 0xfbc; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_flSpriteFramerate = 0xfc0; // float32 m_flSpriteFramerate; |  0xfc0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flFrame = 0xfc4; // float32 m_flFrame; |  0xfc4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDieTime = 0xfc8; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nBrightness = 0xfd8; // uint32_t m_nBrightness; |  0xfd8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBrightnessDuration = 0xfdc; // float32 m_flBrightnessDuration; |  0xfdc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpriteScale = 0xfe0; // float32 m_flSpriteScale; |  0xfe0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flScaleDuration = 0xfe4; // float32 m_flScaleDuration; |  0xfe4 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_bWorldSpaceScale = 0xfe8; // bool m_bWorldSpaceScale; |  0xfe8 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_flGlowProxySize = 0xfec; // float32 m_flGlowProxySize; |  0xfec | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flHDRColorScale = 0xff0; // float32 m_flHDRColorScale; |  0xff0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flLastTime = 0xff4; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_flMaxFrame = 0xff8; // float32 m_flMaxFrame; |  0xff8 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flStartScale = 0xffc; // float32 m_flStartScale; |  0xffc | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flDestScale = 0x1000; // float32 m_flDestScale; |  0x1000 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flScaleTimeStart = 0x1004; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nStartBrightness = 0x1008; // int32_t m_nStartBrightness; |  0x1008 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nDestBrightness = 0x100c; // int32_t m_nDestBrightness; |  0x100c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flBrightnessTimeStart = 0x1010; // entity2::GameTime_t  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_nSpriteWidth = 0x1020; // int32_t m_nSpriteWidth; |  0x1020 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nSpriteHeight = 0x1024; // int32_t m_nSpriteHeight; |  0x1024 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flSpeed = 0x1028; // float32 m_flSpeed; |  0x1028 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

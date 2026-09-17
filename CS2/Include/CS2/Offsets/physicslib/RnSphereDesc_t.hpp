@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace physicslib {
 			// Class size: 0x28
 			namespace RnSphereDesc_t /*: public CS2::physicslib::RnShapeDesc_t*/ {
-				constexpr std::ptrdiff_t m_Sphere = 0x18; // GlobalTypes::SphereBase_t  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_Sphere = 0x18; // GlobalTypes::RnSphere_t  | Schema_Atomic | Size: 0x10
 			}
 		}
 	}

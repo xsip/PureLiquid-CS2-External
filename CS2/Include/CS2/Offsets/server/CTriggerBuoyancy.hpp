@@ -8,10 +8,10 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x9E8
+			// Class size: 0xA08
 			namespace CTriggerBuoyancy /*: public CS2::server::CBaseTrigger*/ {
-				constexpr std::ptrdiff_t m_BuoyancyHelper = 0x8c8; // server::CBuoyancyHelper  | Schema_DeclaredClass | Size: 0x118
-				constexpr std::ptrdiff_t m_flFluidDensity = 0x9e0; // float32 m_flFluidDensity; |  0x9e0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_BuoyancyHelper = 0x8e8; // server::CBuoyancyHelper  | Schema_DeclaredClass | Size: 0x118
+				constexpr std::ptrdiff_t m_flFluidDensity = 0xa00; // float32 m_flFluidDensity; |  0xa00 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

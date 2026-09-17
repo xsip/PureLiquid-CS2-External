@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CBaseTrigger.hpp>
+#include "CBaseTrigger.hpp"
 
 
 
@@ -26,17 +26,18 @@ namespace CS2 {
 	namespace server {
 		class CTriggerPush : public CS2::server::CBaseTrigger {
 		public:
-			PROPERTY(m_angPushEntitySpace,GlobalTypes::QAngle, 0x8c8);
-			PROPERTY(m_vecPushDirEntitySpace,GlobalTypes::Vector, 0x8d4);
-			PROPERTY(m_bTriggerOnStartTouch,bool, 0x8e0);
-			PROPERTY(m_bUsePathSimple,bool, 0x8e1);
-			PROPERTY(m_iszPathSimpleName,GlobalTypes::CUtlSymbolLarge*, 0x8e8);
-			PROPERTY(m_PathSimple,IDENTITY(GlobalTypes::CHandle<server::CPathSimple>), 0x8f0);
-			PROPERTY(m_splinePushType,uint32_t, 0x8f4);
-			S2_PAD(0x30);
+			PROPERTY(m_angPushEntitySpace,GlobalTypes::QAngle, 0x8e8);
+			PROPERTY(m_vecPushDirEntitySpace,GlobalTypes::Vector, 0x8f4);
+			PROPERTY(m_bTriggerOnStartTouch,bool, 0x900);
+			PROPERTY(m_bUsePathSimple,bool, 0x901);
+			PROPERTY(m_iszPathSimpleName,GlobalTypes::CUtlSymbolLarge*, 0x908);
+			PROPERTY(m_PathSimple,IDENTITY(GlobalTypes::CHandle<server::CPathSimple>), 0x910);
+			PROPERTY(m_splinePushType,uint32_t, 0x914);
+			PROPERTY(m_flSpeed,float32, 0x918);
+			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CTriggerPush) == 0x8F8, "CTriggerPush size should be 0x8F8");
+		//static_assert(sizeof(CS2::server::CTriggerPush) == 0x920, "CTriggerPush size should be 0x920");
 
 #endif
 	}

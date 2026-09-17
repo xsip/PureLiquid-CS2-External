@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPoseNode_CDefinition.hpp>
-#include <SDK/animlib/NmPercent_t.hpp>
-#include <SDK/animlib/CNmBitFlags.hpp>
-#include <SDK/animlib/NmEasingOperation_t.hpp>
-#include <SDK/animlib/NmRootMotionBlendMode_t.hpp>
+#include "CNmPoseNode_CDefinition.hpp"
+#include "NmPercent_t.hpp"
+#include "CNmBitFlags.hpp"
+#include "NmEasingOperation_t.hpp"
+#include "NmRootMotionBlendMode_t.hpp"
 
 
 

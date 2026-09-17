@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,7 +20,7 @@ namespace CS2 {
 	namespace server {
 		class audioparams_t  {
 		public:
-			PROPERTY_ARRAY(localSound,GlobalTypes::Vector, 8 , 0x8);
+			PROPERTY_ARRAY(localSound,GlobalTypes::VectorWS, 8 , 0x8);
 			PROPERTY(soundscapeIndex,int32_t, 0x68);
 			PROPERTY(localBits,uint8_t, 0x6c);
 			PROPERTY(soundscapeEntityListIndex,int32_t, 0x70);

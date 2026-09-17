@@ -4,19 +4,19 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animationsystem/CAnimDesc_Flag.hpp>
-#include <SDK/animationsystem/CAnimEncodedFrames.hpp>
-#include <SDK/animationsystem/CAnimMovement.hpp>
-#include <SDK/animationsystem/CAnimEventDefinition.hpp>
-#include <SDK/animationsystem/CAnimActivity.hpp>
-#include <SDK/animationsystem/CAnimLocalHierarchy.hpp>
-#include <SDK/animationsystem/CAnimSequenceParams.hpp>
+#include "CAnimDesc_Flag.hpp"
+#include "CAnimEncodedFrames.hpp"
+#include "CAnimMovement.hpp"
+#include "CAnimEventDefinition.hpp"
+#include "CAnimActivity.hpp"
+#include "CAnimLocalHierarchy.hpp"
+#include "CAnimSequenceParams.hpp"
 
 
 

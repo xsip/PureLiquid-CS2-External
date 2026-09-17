@@ -9,16 +9,8 @@ namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
 			// Class size: 0x6A8
-			namespace CSoundOpvarSetAABBEntity /*: public CS2::server::CSoundOpvarSetPointEntity*/ {
-				constexpr std::ptrdiff_t m_vDistanceInnerMins = 0x640; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vDistanceInnerMaxs = 0x64c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vDistanceOuterMins = 0x658; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vDistanceOuterMaxs = 0x664; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_nAABBDirection = 0x670; // int32_t m_nAABBDirection; |  0x670 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vInnerMins = 0x674; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vInnerMaxs = 0x680; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOuterMins = 0x68c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vOuterMaxs = 0x698; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+			namespace CSoundOpvarSetAABBEntity /*: public CS2::server::CSoundOpvarSetBoxEntity*/ {
+				// NO SCHEMA DATA FOUND!
 			}
 		}
 	}

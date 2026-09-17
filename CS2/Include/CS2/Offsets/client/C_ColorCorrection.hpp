@@ -10,7 +10,7 @@ namespace CS2 {
 		namespace client {
 			// Class size: 0x848
 			namespace C_ColorCorrection /*: public CS2::client::C_BaseEntity*/ {
-				constexpr std::ptrdiff_t m_vecOrigin = 0x600; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecOrigin = 0x600; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_MinFalloff = 0x60c; // float32 m_MinFalloff; |  0x60c | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_MaxFalloff = 0x610; // float32 m_MaxFalloff; |  0x610 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_flFadeInDuration = 0x614; // float32 m_flFadeInDuration; |  0x614 | Schema_Builtin | Size: 0x4

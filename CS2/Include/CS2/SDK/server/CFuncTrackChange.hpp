@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CFuncPlatRot.hpp>
-#include <SDK/server/TRAIN_CODE.hpp>
+#include "CFuncPlatRot.hpp"
+#include "TRAIN_CODE.hpp"
 
 
 
@@ -28,19 +28,19 @@ namespace CS2 {
 	namespace server {
 		class CFuncTrackChange : public CS2::server::CFuncPlatRot {
 		public:
-			PROPERTY(m_trackTop,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x830);
-			PROPERTY(m_trackBottom,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x834);
-			PROPERTY(m_train,IDENTITY(GlobalTypes::CHandle<server::CFuncTrackTrain>), 0x838);
-			PROPERTY(m_trackTopName,GlobalTypes::CUtlSymbolLarge*, 0x840);
-			PROPERTY(m_trackBottomName,GlobalTypes::CUtlSymbolLarge*, 0x848);
-			PROPERTY(m_trainName,GlobalTypes::CUtlSymbolLarge*, 0x850);
-			PROPERTY(m_code,IDENTITY(server::TRAIN_CODE), 0x858);
-			PROPERTY(m_targetState,int32_t, 0x85c);
-			PROPERTY(m_use,int32_t, 0x860);
+			PROPERTY(m_trackTop,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x840);
+			PROPERTY(m_trackBottom,IDENTITY(GlobalTypes::CHandle<server::CPathTrack>), 0x844);
+			PROPERTY(m_train,IDENTITY(GlobalTypes::CHandle<server::CFuncTrackTrain>), 0x848);
+			PROPERTY(m_trackTopName,GlobalTypes::CUtlSymbolLarge*, 0x850);
+			PROPERTY(m_trackBottomName,GlobalTypes::CUtlSymbolLarge*, 0x858);
+			PROPERTY(m_trainName,GlobalTypes::CUtlSymbolLarge*, 0x860);
+			PROPERTY(m_code,IDENTITY(server::TRAIN_CODE), 0x868);
+			PROPERTY(m_targetState,int32_t, 0x86c);
+			PROPERTY(m_use,int32_t, 0x870);
 			S2_PAD(0x38);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFuncTrackChange) == 0x868, "CFuncTrackChange size should be 0x868");
+		//static_assert(sizeof(CS2::server::CFuncTrackChange) == 0x878, "CFuncTrackChange size should be 0x878");
 
 #endif
 	}

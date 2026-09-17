@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/modellib/AnimComponentID.hpp>
-#include <SDK/animgraphlib/AnimNodeNetworkMode.hpp>
+#include "../modellib/AnimComponentID.hpp"
+#include "AnimNodeNetworkMode.hpp"
 
 
 

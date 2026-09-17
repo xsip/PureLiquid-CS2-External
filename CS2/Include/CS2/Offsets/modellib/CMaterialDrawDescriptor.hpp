@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace modellib {
-			// Class size: 0x108
+			// Class size: 0x118
 			namespace CMaterialDrawDescriptor /**/ {
 				constexpr std::ptrdiff_t m_flUvDensity = 0x0; // float32 m_flUvDensity; |  0x0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_vTintColor = 0x4; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
@@ -19,14 +19,15 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_nDepthVertexBufferIndex = 0x24; // uint8_t m_nDepthVertexBufferIndex; |  0x24 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_nMeshletPackedIVBIndex = 0x25; // uint8_t m_nMeshletPackedIVBIndex; |  0x25 | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_rigidMeshParts = 0x28; // GlobalTypes::CUtlLeanVector<modellib::CMaterialDrawDescriptor_RigidMeshPart_t>  | Schema_Atomic | Size: 0x10
-				constexpr std::ptrdiff_t m_nPrimitiveType = 0x38; // modellib::RenderPrimitiveType_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_nBaseVertex = 0x3c; // int32_t m_nBaseVertex; |  0x3c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nVertexCount = 0x40; // int32_t m_nVertexCount; |  0x40 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nStartIndex = 0x44; // int32_t m_nStartIndex; |  0x44 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_nIndexCount = 0x48; // int32_t m_nIndexCount; |  0x48 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_indexBuffer = 0xb0; // modellib::CRenderBufferBinding  | Schema_DeclaredClass | Size: 0x20
-				constexpr std::ptrdiff_t m_meshletPackedIVB = 0xd0; // modellib::CRenderBufferBinding  | Schema_DeclaredClass | Size: 0x20
-				constexpr std::ptrdiff_t m_material = 0x100; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_rootBvhNodes = 0x38; // GlobalTypes::CUtlLeanVector  | Schema_Atomic | Size: 0x10
+				constexpr std::ptrdiff_t m_nPrimitiveType = 0x48; // modellib::RenderPrimitiveType_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_nBaseVertex = 0x4c; // int32_t m_nBaseVertex; |  0x4c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nVertexCount = 0x50; // int32_t m_nVertexCount; |  0x50 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nStartIndex = 0x54; // int32_t m_nStartIndex; |  0x54 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nIndexCount = 0x58; // int32_t m_nIndexCount; |  0x58 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_indexBuffer = 0xc0; // modellib::CRenderBufferBinding  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_meshletPackedIVB = 0xe0; // modellib::CRenderBufferBinding  | Schema_DeclaredClass | Size: 0x20
+				constexpr std::ptrdiff_t m_material = 0x110; // GlobalTypes::CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2>  | Schema_Atomic | Size: 0x8
 			}
 		}
 	}

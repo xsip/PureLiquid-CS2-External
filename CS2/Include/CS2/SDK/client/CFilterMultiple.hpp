@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CBaseFilter.hpp>
-#include <SDK/client/filter_t.hpp>
-#include <SDK/client/CHandle< C_BaseEntity >.hpp>
+#include "CBaseFilter.hpp"
+#include "filter_t.hpp"
+#include "CHandle< C_BaseEntity >.hpp"
 
 
 

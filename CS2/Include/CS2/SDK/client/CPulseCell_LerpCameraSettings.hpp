@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulseCell_BaseLerp.hpp>
-#include <SDK/client/PointCameraSettings_t.hpp>
+#include "../pulse_runtime_lib/CPulseCell_BaseLerp.hpp"
+#include "PointCameraSettings_t.hpp"
 
 
 
@@ -22,13 +22,13 @@ namespace CS2 {
 	namespace client {
 		class CPulseCell_LerpCameraSettings : public CS2::pulse_runtime_lib::CPulseCell_BaseLerp {
 		public:
-			PROPERTY(m_flSeconds,float32, 0x90);
-			NESTED_PROPERTY(m_Start,IDENTITY(client::PointCameraSettings_t), 0x94);
-			NESTED_PROPERTY(m_End,IDENTITY(client::PointCameraSettings_t), 0xa4);
+			PROPERTY(m_flSeconds,float32, 0x120);
+			NESTED_PROPERTY(m_Start,IDENTITY(client::PointCameraSettings_t), 0x124);
+			NESTED_PROPERTY(m_End,IDENTITY(client::PointCameraSettings_t), 0x134);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::CPulseCell_LerpCameraSettings) == 0xB8, "CPulseCell_LerpCameraSettings size should be 0xB8");
+		//static_assert(sizeof(CS2::client::CPulseCell_LerpCameraSettings) == 0x148, "CPulseCell_LerpCameraSettings size should be 0x148");
 
 #endif
 	}

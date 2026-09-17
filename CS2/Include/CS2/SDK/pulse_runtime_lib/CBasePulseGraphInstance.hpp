@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -20,10 +20,10 @@ namespace CS2 {
 	namespace pulse_runtime_lib {
 		class CBasePulseGraphInstance  {
 		public:
-			S2_PAD(0x118);
+			S2_PAD(0x110);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CBasePulseGraphInstance) == 0x118, "CBasePulseGraphInstance size should be 0x118");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CBasePulseGraphInstance) == 0x110, "CBasePulseGraphInstance size should be 0x110");
 
 #endif
 	}

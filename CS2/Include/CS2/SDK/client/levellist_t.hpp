@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -23,7 +23,7 @@ namespace CS2 {
 			PROPERTY(m_sMapName,GlobalTypes::CUtlString*, 0x0);
 			PROPERTY(m_sLandmarkName,GlobalTypes::CUtlString*, 0x8);
 			PROPERTY(m_hEntLandmark,GlobalTypes::CEntityHandle, 0x10);
-			PROPERTY(m_vecLandmarkOrigin,GlobalTypes::Vector, 0x14);
+			PROPERTY(m_vecLandmarkOrigin,GlobalTypes::VectorWS, 0x14);
 			PROPERTY(m_vecLandmarkAngles,GlobalTypes::QAngle, 0x20);
 			S2_PAD(0x30);
 		};

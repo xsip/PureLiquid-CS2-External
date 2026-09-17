@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CPropDoorRotating.hpp>
+#include "CPropDoorRotating.hpp"
 
 
 
@@ -21,14 +21,14 @@ namespace CS2 {
 	namespace server {
 		class CPropDoorRotatingBreakable : public CS2::server::CPropDoorRotating {
 		public:
-			PROPERTY(m_bBreakable,bool, 0xe20);
-			PROPERTY(m_isAbleToCloseAreaPortals,bool, 0xe21);
-			PROPERTY(m_currentDamageState,int32_t, 0xe24);
-			PROPERTY(m_damageStates,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>), 0xe28);
+			PROPERTY(m_bBreakable,bool, 0xe40);
+			PROPERTY(m_isAbleToCloseAreaPortals,bool, 0xe41);
+			PROPERTY(m_currentDamageState,int32_t, 0xe44);
+			PROPERTY(m_damageStates,IDENTITY(GlobalTypes::CUtlVector<GlobalTypes::CUtlSymbolLarge>), 0xe48);
 			S2_PAD(0x20);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CPropDoorRotatingBreakable) == 0xE40, "CPropDoorRotatingBreakable size should be 0xE40");
+		//static_assert(sizeof(CS2::server::CPropDoorRotatingBreakable) == 0xE60, "CPropDoorRotatingBreakable size should be 0xE60");
 
 #endif
 	}

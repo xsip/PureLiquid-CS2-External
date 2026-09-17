@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_system {
-			// Class size: 0x140
+			// Class size: 0x138
 			namespace CPulseGraphInstance_TurtleGraphics /*: public CS2::pulse_runtime_lib::CBasePulseGraphInstance*/ {
 				// NO SCHEMA DATA FOUND!
 			}

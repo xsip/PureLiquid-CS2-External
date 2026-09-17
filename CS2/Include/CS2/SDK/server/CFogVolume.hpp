@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CServerOnlyModelEntity.hpp>
+#include "CServerOnlyModelEntity.hpp"
 
 
 
@@ -21,15 +21,15 @@ namespace CS2 {
 	namespace server {
 		class CFogVolume : public CS2::server::CServerOnlyModelEntity {
 		public:
-			PROPERTY(m_fogName,GlobalTypes::CUtlSymbolLarge*, 0x768);
-			PROPERTY(m_postProcessName,GlobalTypes::CUtlSymbolLarge*, 0x770);
-			PROPERTY(m_colorCorrectionName,GlobalTypes::CUtlSymbolLarge*, 0x778);
-			PROPERTY(m_bDisabled,bool, 0x788);
-			PROPERTY(m_bInFogVolumesList,bool, 0x789);
+			PROPERTY(m_fogName,GlobalTypes::CUtlSymbolLarge*, 0x770);
+			PROPERTY(m_postProcessName,GlobalTypes::CUtlSymbolLarge*, 0x778);
+			PROPERTY(m_colorCorrectionName,GlobalTypes::CUtlSymbolLarge*, 0x780);
+			PROPERTY(m_bDisabled,bool, 0x790);
+			PROPERTY(m_bInFogVolumesList,bool, 0x791);
 			S2_PAD(0x28);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::server::CFogVolume) == 0x790, "CFogVolume size should be 0x790");
+		//static_assert(sizeof(CS2::server::CFogVolume) == 0x798, "CFogVolume size should be 0x798");
 
 #endif
 	}

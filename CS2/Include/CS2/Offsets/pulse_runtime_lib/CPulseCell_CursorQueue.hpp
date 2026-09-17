@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0xA0
+			// Class size: 0x130
 			namespace CPulseCell_CursorQueue /*: public CS2::pulse_runtime_lib::CPulseCell_WaitForCursorsWithTagBase*/ {
-				constexpr std::ptrdiff_t m_nCursorsAllowedToRunParallel = 0x98; // int32_t m_nCursorsAllowedToRunParallel; |  0x98 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_nCursorsAllowedToRunParallel = 0x128; // int32_t m_nCursorsAllowedToRunParallel; |  0x128 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

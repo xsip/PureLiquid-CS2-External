@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/Relationship_t.hpp>
-#include <SDK/client/Class_T.hpp>
+#include "Relationship_t.hpp"
+#include "../client/Class_T.hpp"
 
 
 

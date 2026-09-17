@@ -17,7 +17,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_bUseYawWithNormalAligned = 0x2f6c; // bool m_bUseYawWithNormalAligned; |  0x2f6c | Schema_Builtin | Size: 0x1
 				constexpr std::ptrdiff_t m_flMinSize = 0x2f70; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_flMaxSize = 0x30e0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
-				constexpr std::ptrdiff_t m_flAlphaAdjustWithSizeAdjust = 0x3250; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
+				constexpr std::ptrdiff_t m_flSubPixelAAScale = 0x3250; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_flStartFadeSize = 0x33c0; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_flEndFadeSize = 0x3530; // particleslib::CParticleCollectionRendererFloatInput  | Schema_DeclaredClass | Size: 0x170
 				constexpr std::ptrdiff_t m_flStartFadeDot = 0x36a0; // float32 m_flStartFadeDot; |  0x36a0 | Schema_Builtin | Size: 0x4

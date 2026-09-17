@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/physicslib/RnShapeDesc_t.hpp>
+#include "RnShapeDesc_t.hpp"
 
 
 
@@ -21,7 +21,7 @@ namespace CS2 {
 	namespace physicslib {
 		class RnSphereDesc_t : public CS2::physicslib::RnShapeDesc_t {
 		public:
-			PROPERTY(m_Sphere,IDENTITY(GlobalTypes::SphereBase_t< float32 >), 0x18);
+			PROPERTY(m_Sphere,GlobalTypes::RnSphere_t, 0x18);
 			S2_PAD(0x10);
 		};
 #ifdef USE_STATIC_ASSERTS

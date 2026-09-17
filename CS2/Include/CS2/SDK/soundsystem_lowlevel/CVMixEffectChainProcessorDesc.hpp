@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/soundsystem_lowlevel/CVMixBaseProcessorDesc.hpp>
-#include <SDK/soundsystem_lowlevel/VMixEffectChainDesc_t.hpp>
+#include "CVMixBaseProcessorDesc.hpp"
+#include "VMixEffectChainDesc_t.hpp"
 
 
 

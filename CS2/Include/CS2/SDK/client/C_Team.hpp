@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_BaseEntity.hpp>
-#include <SDK/client/CBasePlayerController.hpp>
-#include <SDK/client/C_BasePlayerPawn.hpp>
+#include "C_BaseEntity.hpp"
+#include "CBasePlayerController.hpp"
+#include "C_BasePlayerPawn.hpp"
 
 
 

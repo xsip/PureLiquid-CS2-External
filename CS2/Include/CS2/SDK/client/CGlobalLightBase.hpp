@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -26,7 +26,7 @@ namespace CS2 {
 		class CGlobalLightBase  {
 		public:
 			PROPERTY(m_bSpotLight,bool, 0x10);
-			PROPERTY(m_SpotLightOrigin,GlobalTypes::Vector, 0x14);
+			PROPERTY(m_SpotLightOrigin,GlobalTypes::VectorWS, 0x14);
 			PROPERTY(m_SpotLightAngles,GlobalTypes::QAngle, 0x20);
 			PROPERTY(m_ShadowDirection,GlobalTypes::Vector, 0x2c);
 			PROPERTY(m_AmbientDirection,GlobalTypes::Vector, 0x38);
@@ -60,10 +60,10 @@ namespace CS2 {
 			PROPERTY(m_flFoWDarkness,float32, 0xc0);
 			PROPERTY(m_bEnableSeparateSkyboxFog,bool, 0xc4);
 			PROPERTY(m_vFowColor,GlobalTypes::Vector, 0xc8);
-			PROPERTY(m_ViewOrigin,GlobalTypes::Vector, 0xd4);
+			PROPERTY(m_ViewOrigin,GlobalTypes::VectorWS, 0xd4);
 			PROPERTY(m_ViewAngles,GlobalTypes::QAngle, 0xe0);
 			PROPERTY(m_flViewFoV,float32, 0xec);
-			PROPERTY_ARRAY(m_WorldPoints,GlobalTypes::Vector, 8 , 0xf0);
+			PROPERTY_ARRAY(m_WorldPoints,GlobalTypes::VectorWS, 8 , 0xf0);
 			PROPERTY(m_vFogOffsetLayer0,GlobalTypes::Vector2D, 0x4a8);
 			PROPERTY(m_vFogOffsetLayer1,GlobalTypes::Vector2D, 0x4b0);
 			PROPERTY(m_hEnvWind,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0x4b8);

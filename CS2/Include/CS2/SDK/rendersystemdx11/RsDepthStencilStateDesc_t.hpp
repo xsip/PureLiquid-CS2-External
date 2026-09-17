@@ -4,14 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/rendersystemdx11/RsComparison_t.hpp>
-#include <SDK/rendersystemdx11/RsStencilStateDesc_t.hpp>
+#include "RsStencilStateDesc_t.hpp"
 
 
 
@@ -22,7 +21,6 @@ namespace CS2 {
 	namespace rendersystemdx11 {
 		class RsDepthStencilStateDesc_t  {
 		public:
-			PROPERTY(m_depthFunc,IDENTITY(rendersystemdx11::RsComparison_t), 0x1);
 			NESTED_PROPERTY(m_stencilState,IDENTITY(rendersystemdx11::RsStencilStateDesc_t), 0x2);
 			S2_PAD(0x8);
 		};

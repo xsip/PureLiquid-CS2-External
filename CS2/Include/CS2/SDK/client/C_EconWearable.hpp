@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_EconEntity.hpp>
+#include "C_EconEntity.hpp"
 
 
 
@@ -21,12 +21,12 @@ namespace CS2 {
 	namespace client {
 		class C_EconWearable : public CS2::client::C_EconEntity {
 		public:
-			PROPERTY(m_nForceSkin,int32_t, 0x16c8);
-			PROPERTY(m_bAlwaysAllow,bool, 0x16cc);
+			PROPERTY(m_nForceSkin,int32_t, 0x16f0);
+			PROPERTY(m_bAlwaysAllow,bool, 0x16f4);
 			S2_PAD(0x8);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_EconWearable) == 0x16D0, "C_EconWearable size should be 0x16D0");
+		//static_assert(sizeof(CS2::client::C_EconWearable) == 0x16F8, "C_EconWearable size should be 0x16F8");
 
 #endif
 	}

@@ -12,7 +12,8 @@ namespace CS2 {
 			ModelMeshBufferUsage_t_MESH_BUFFER_USAGE_NONE = 0x0,
 			ModelMeshBufferUsage_t_MESH_BUFFER_USAGE_RT_PROXY = 0x10,
 			ModelMeshBufferUsage_t_MESH_BUFFER_USAGE_VB = 0x1,
-			ModelMeshBufferUsage_t_MESH_BUFFER_USAGE_VERTEX_ALBEDO = 0x20
+			ModelMeshBufferUsage_t_MESH_BUFFER_USAGE_VERTEX_ALBEDO = 0x20,
+			ModelMeshBufferUsage_t_MESH_BUFFER_USAGE_VERTEX_EMISSIVE = 0x40
 		};
 	}
 }

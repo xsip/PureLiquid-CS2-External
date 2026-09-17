@@ -8,14 +8,14 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace client {
-			// Class size: 0x11E0
+			// Class size: 0x1208
 			namespace C_BaseCombatCharacter /*: public CS2::client::CBaseAnimGraph*/ {
-				constexpr std::ptrdiff_t m_hMyWearables = 0x1158; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_EconWearable>>  | Schema_Atomic | Size: 0x18
-				constexpr std::ptrdiff_t m_leftFootAttachment = 0x1170; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_rightFootAttachment = 0x1171; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
-				constexpr std::ptrdiff_t m_nWaterWakeMode = 0x1174; // client::C_BaseCombatCharacter::WaterWakeMode_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flWaterWorldZ = 0x1178; // float32 m_flWaterWorldZ; |  0x1178 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_flWaterNextTraceTime = 0x117c; // float32 m_flWaterNextTraceTime; |  0x117c | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_hMyWearables = 0x1180; // GlobalTypes::C_NetworkUtlVectorBase<GlobalTypes::CHandle<client::C_EconWearable>>  | Schema_Atomic | Size: 0x18
+				constexpr std::ptrdiff_t m_leftFootAttachment = 0x1198; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_rightFootAttachment = 0x1199; // modellib::AttachmentHandle_t  | Schema_DeclaredClass | Size: 0x1
+				constexpr std::ptrdiff_t m_nWaterWakeMode = 0x119c; // client::C_BaseCombatCharacter::WaterWakeMode_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flWaterWorldZ = 0x11a0; // float32 m_flWaterWorldZ; |  0x11a0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_flWaterNextTraceTime = 0x11a4; // float32 m_flWaterNextTraceTime; |  0x11a4 | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

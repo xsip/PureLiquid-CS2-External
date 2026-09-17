@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/entity2/CNetworkVarChainer.hpp>
-#include <SDK/client/SceneEventId_t.hpp>
-#include <SDK/entity2/GameTime_t.hpp>
+#include "../entity2/CNetworkVarChainer.hpp"
+#include "../client/SceneEventId_t.hpp"
+#include "../entity2/GameTime_t.hpp"
 
 
 
@@ -30,9 +30,10 @@ namespace CS2 {
 		public:
 			NESTED_PROPERTY(__m_pChainEntity,IDENTITY(entity2::CNetworkVarChainer), 0x8);
 			PROPERTY(m_hOwner,IDENTITY(GlobalTypes::CHandle<server::CBaseModelEntity>), 0x30);
-			NESTED_PROPERTY(m_nNextSceneEventId,IDENTITY(client::SceneEventId_t), 0x68);
-			PROPERTY(m_bUpdateLayerPriorities,bool, 0x6c);
-			NESTED_PROPERTY(m_flAllowResponsesEndTime,IDENTITY(entity2::GameTime_t), 0x70);
+			PROPERTY(m_nExernalChoreoGraphCount,int32_t, 0x34);
+			PROPERTY(m_sActiveExternalChoreoGraphSlotID,GlobalTypes::CGlobalSymbol, 0x38);
+			NESTED_PROPERTY(m_nNextSceneEventId,IDENTITY(client::SceneEventId_t), 0x70);
+			NESTED_PROPERTY(m_flAllowResponsesEndTime,IDENTITY(entity2::GameTime_t), 0x74);
 			S2_PAD(0x80);
 		};
 #ifdef USE_STATIC_ASSERTS

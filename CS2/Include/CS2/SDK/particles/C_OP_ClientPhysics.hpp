@@ -4,16 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/CParticleFunctionRenderer.hpp>
-#include <SDK/particleslib/CParticleCollectionFloatInput.hpp>
-#include <SDK/particleslib/ParticleColorBlendType_t.hpp>
-#include <SDK/particles/ParticleAttrBoxFlags_t.hpp>
+#include "CParticleFunctionRenderer.hpp"
+#include "../particleslib/CParticleCollectionFloatInput.hpp"
+#include "../particleslib/ParticleColorBlendType_t.hpp"
+#include "ParticleAttrBoxFlags_t.hpp"
+#include "ParticleAttributeIndex_t.hpp"
 
 
 
@@ -37,10 +38,12 @@ namespace CS2 {
 			PROPERTY(m_nForcedSimId,int32_t, 0x528);
 			PROPERTY(m_nColorBlendType,IDENTITY(particleslib::ParticleColorBlendType_t), 0x52c);
 			PROPERTY(m_nForcedStatusEffects,IDENTITY(particles::ParticleAttrBoxFlags_t), 0x530);
-			S2_PAD(0x310);
+			NESTED_PROPERTY(m_nNoCollisionAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x534);
+			NESTED_PROPERTY(m_nZeroGravityAttribute,IDENTITY(particles::ParticleAttributeIndex_t), 0x538);
+			S2_PAD(0x318);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::particles::C_OP_ClientPhysics) == 0x538, "C_OP_ClientPhysics size should be 0x538");
+		//static_assert(sizeof(CS2::particles::C_OP_ClientPhysics) == 0x540, "C_OP_ClientPhysics size should be 0x540");
 
 #endif
 	}

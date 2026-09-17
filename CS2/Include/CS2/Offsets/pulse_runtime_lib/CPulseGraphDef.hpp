@@ -8,7 +8,7 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x198
+			// Class size: 0x1B0
 			namespace CPulseGraphDef /**/ {
 				constexpr std::ptrdiff_t m_DomainIdentifier = 0x8; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
 				constexpr std::ptrdiff_t m_DomainSubType = 0x18; // GlobalTypes::CPulseValueFullType  | Schema_Atomic | Size: 0x18

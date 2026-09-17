@@ -8,9 +8,9 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0x790
+			// Class size: 0x798
 			namespace CScriptNavBlocker /*: public CS2::server::CFuncNavBlocker*/ {
-				constexpr std::ptrdiff_t m_vExtent = 0x780; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vExtent = 0x788; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
 			}
 		}
 	}

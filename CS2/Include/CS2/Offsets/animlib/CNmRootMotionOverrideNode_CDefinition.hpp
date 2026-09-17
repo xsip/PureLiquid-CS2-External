@@ -14,9 +14,10 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_desiredFacingDirectionNodeIdx = 0x1a; // int16_t m_desiredFacingDirectionNodeIdx; |  0x1a | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_linearVelocityLimitNodeIdx = 0x1c; // int16_t m_linearVelocityLimitNodeIdx; |  0x1c | Schema_Builtin | Size: 0x2
 				constexpr std::ptrdiff_t m_angularVelocityLimitNodeIdx = 0x1e; // int16_t m_angularVelocityLimitNodeIdx; |  0x1e | Schema_Builtin | Size: 0x2
-				constexpr std::ptrdiff_t m_maxLinearVelocity = 0x20; // float32 m_maxLinearVelocity; |  0x20 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_maxAngularVelocityRadians = 0x24; // float32 m_maxAngularVelocityRadians; |  0x24 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_overrideFlags = 0x28; // animlib::CNmBitFlags  | Schema_DeclaredClass | Size: 0x4
+				constexpr std::ptrdiff_t m_enabledNodeIdx = 0x20; // int16_t m_enabledNodeIdx; |  0x20 | Schema_Builtin | Size: 0x2
+				constexpr std::ptrdiff_t m_maxLinearVelocity = 0x24; // float32 m_maxLinearVelocity; |  0x24 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_maxAngularVelocityRadians = 0x28; // float32 m_maxAngularVelocityRadians; |  0x28 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_overrideFlags = 0x2c; // animlib::CNmBitFlags  | Schema_DeclaredClass | Size: 0x4
 			}
 		}
 	}

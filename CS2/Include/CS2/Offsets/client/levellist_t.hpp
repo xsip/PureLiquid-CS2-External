@@ -13,7 +13,7 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_sMapName = 0x0; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_sLandmarkName = 0x8; // GlobalTypes::CUtlString  | Schema_Atomic | Size: 0x8
 				constexpr std::ptrdiff_t m_hEntLandmark = 0x10; // GlobalTypes::CEntityHandle  | Schema_Atomic | Size: 0x4
-				constexpr std::ptrdiff_t m_vecLandmarkOrigin = 0x14; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecLandmarkOrigin = 0x14; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_vecLandmarkAngles = 0x20; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
 			}
 		}

@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/worldrenderer/RTProxyBLAS_t.hpp>
-#include <SDK/worldrenderer/RTProxyInstanceInfo_t.hpp>
+#include "RTProxyBLAS_t.hpp"
+#include "RTProxyInstanceInfo_t.hpp"
 
 
 
@@ -28,10 +28,11 @@ namespace CS2 {
 			PROPERTY(m_VBData,GlobalTypes::CUtlBinaryBlock, 0x38);
 			PROPERTY(m_IBData,GlobalTypes::CUtlBinaryBlock, 0x48);
 			PROPERTY(m_InstanceAlbedoData,GlobalTypes::CUtlBinaryBlock, 0x58);
-			S2_PAD(0x68);
+			PROPERTY(m_InstanceEmissiveData,GlobalTypes::CUtlBinaryBlock, 0x68);
+			S2_PAD(0x78);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::worldrenderer::AggregateRTProxySceneObject_t) == 0x68, "AggregateRTProxySceneObject_t size should be 0x68");
+		//static_assert(sizeof(CS2::worldrenderer::AggregateRTProxySceneObject_t) == 0x78, "AggregateRTProxySceneObject_t size should be 0x78");
 
 #endif
 	}

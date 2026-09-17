@@ -8,26 +8,26 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace server {
-			// Class size: 0xE20
+			// Class size: 0xE40
 			namespace CPropDoorRotating /*: public CS2::server::CBasePropDoor*/ {
-				constexpr std::ptrdiff_t m_vecAxis = 0xd80; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_flDistance = 0xd8c; // float32 m_flDistance; |  0xd8c | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_eSpawnPosition = 0xd90; // server::PropDoorRotatingSpawnPos_t  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_eOpenDirection = 0xd94; // server::PropDoorRotatingOpenDirection_e  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_eCurrentOpenDirection = 0xd98; // server::PropDoorRotatingOpenDirection_e  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_eDefaultCheckDirection = 0xd9c; // server::doorCheck_e  | Schema_DeclaredEnum | Size: 0x4
-				constexpr std::ptrdiff_t m_flAjarAngle = 0xda0; // float32 m_flAjarAngle; |  0xda0 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_angRotationAjarDeprecated = 0xda4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angRotationClosed = 0xdb0; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angRotationOpenForward = 0xdbc; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angRotationOpenBack = 0xdc8; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_angGoal = 0xdd4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecForwardBoundsMin = 0xde0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecForwardBoundsMax = 0xdec; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecBackBoundsMin = 0xdf8; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vecBackBoundsMax = 0xe04; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_bAjarDoorShouldntAlwaysOpen = 0xe10; // bool m_bAjarDoorShouldntAlwaysOpen; |  0xe10 | Schema_Builtin | Size: 0x1
-				constexpr std::ptrdiff_t m_hEntityBlocker = 0xe14; // GlobalTypes::CHandle<server::CEntityBlocker>  | Schema_Atomic | Size: 0x4
+				constexpr std::ptrdiff_t m_vecAxis = 0xda0; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_flDistance = 0xdac; // float32 m_flDistance; |  0xdac | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_eSpawnPosition = 0xdb0; // server::PropDoorRotatingSpawnPos_t  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_eOpenDirection = 0xdb4; // server::PropDoorRotatingOpenDirection_e  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_eCurrentOpenDirection = 0xdb8; // server::PropDoorRotatingOpenDirection_e  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_eDefaultCheckDirection = 0xdbc; // server::doorCheck_e  | Schema_DeclaredEnum | Size: 0x4
+				constexpr std::ptrdiff_t m_flAjarAngle = 0xdc0; // float32 m_flAjarAngle; |  0xdc0 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_angRotationAjarDeprecated = 0xdc4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angRotationClosed = 0xdd0; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angRotationOpenForward = 0xddc; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angRotationOpenBack = 0xde8; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_angGoal = 0xdf4; // GlobalTypes::QAngle  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecForwardBoundsMin = 0xe00; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecForwardBoundsMax = 0xe0c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecBackBoundsMin = 0xe18; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vecBackBoundsMax = 0xe24; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_bAjarDoorShouldntAlwaysOpen = 0xe30; // bool m_bAjarDoorShouldntAlwaysOpen; |  0xe30 | Schema_Builtin | Size: 0x1
+				constexpr std::ptrdiff_t m_hEntityBlocker = 0xe34; // GlobalTypes::CHandle<server::CEntityBlocker>  | Schema_Atomic | Size: 0x4
 			}
 		}
 	}

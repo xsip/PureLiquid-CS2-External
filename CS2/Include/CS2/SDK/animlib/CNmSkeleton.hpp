@@ -4,14 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/NmBoneMaskSetDefinition_t.hpp>
-#include <SDK/animlib/CNmSkeleton_SecondarySkeleton_t.hpp>
+#include "NmBoneMaskSetDefinition_t.hpp"
+#include "CNmSkeleton_SecondarySkeleton_t.hpp"
+#include "CNmFloatChannelSet_t.hpp"
 
 
 
@@ -30,11 +31,12 @@ namespace CS2 {
 			PROPERTY(m_numBonesToSampleAtLowLOD,int32_t, 0x60);
 			// PROPERTY(m_maskDefinitions,IDENTITY(GlobalTypes::CUtlLeanVector<animlib::NmBoneMaskSetDefinition_t>), 0x88);
 			// PROPERTY(m_secondarySkeletons,IDENTITY(GlobalTypes::CUtlLeanVector<animlib::CNmSkeleton_SecondarySkeleton_t>), 0xa8);
-			PROPERTY(m_bIsPropSkeleton,bool, 0xb8);
-			S2_PAD(0xC0);
+			// PROPERTY(m_floatChannelSets,IDENTITY(GlobalTypes::CUtlLeanVector<animlib::CNmFloatChannelSet_t>), 0xb8);
+			PROPERTY(m_bIsPropSkeleton,bool, 0xc8);
+			S2_PAD(0xD0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::animlib::CNmSkeleton) == 0xC0, "CNmSkeleton size should be 0xC0");
+		//static_assert(sizeof(CS2::animlib::CNmSkeleton) == 0xD0, "CNmSkeleton size should be 0xD0");
 
 #endif
 	}

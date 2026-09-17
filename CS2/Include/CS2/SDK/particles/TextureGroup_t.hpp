@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/particles/SpriteCardTextureType_t.hpp>
-#include <SDK/particles/SpriteCardTextureChannel_t.hpp>
-#include <SDK/particles/ParticleTextureLayerBlendType_t.hpp>
-#include <SDK/particleslib/CParticleCollectionRendererFloatInput.hpp>
-#include <SDK/particles/TextureControls_t.hpp>
+#include "SpriteCardTextureType_t.hpp"
+#include "SpriteCardTextureChannel_t.hpp"
+#include "ParticleTextureLayerBlendType_t.hpp"
+#include "../particleslib/CParticleCollectionRendererFloatInput.hpp"
+#include "TextureControls_t.hpp"
 
 
 

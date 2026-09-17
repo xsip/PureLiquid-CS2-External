@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/server/CLogicalEntity.hpp>
-#include <SDK/entity2/CEntityIOOutput.hpp>
+#include "CLogicalEntity.hpp"
+#include "../entity2/CEntityIOOutput.hpp"
 
 
 
@@ -37,7 +37,7 @@ namespace CS2 {
 			PROPERTY(m_hAttach2,IDENTITY(GlobalTypes::CHandle<server::CBaseEntity>), 0x4c4);
 			PROPERTY(m_nameAttachment1,GlobalTypes::CUtlSymbolLarge*, 0x4c8);
 			PROPERTY(m_nameAttachment2,GlobalTypes::CUtlSymbolLarge*, 0x4d0);
-			PROPERTY(m_breakSound,GlobalTypes::CUtlSymbolLarge*, 0x4d8);
+			PROPERTY(m_breakSound,GlobalTypes::CGameSoundEventName, 0x4d8);
 			PROPERTY(m_forceLimit,float32, 0x4e0);
 			PROPERTY(m_torqueLimit,float32, 0x4e4);
 			PROPERTY(m_minTeleportDistance,float32, 0x4e8);

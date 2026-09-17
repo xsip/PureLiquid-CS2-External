@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
@@ -22,7 +22,7 @@ namespace CS2 {
 		public:
 			PROPERTY(m_speed,float32, 0x8);
 			PROPERTY(m_maxTorque,float32, 0xc);
-			PROPERTY(m_axis,GlobalTypes::VectorWS, 0x10);
+			PROPERTY(m_axis,GlobalTypes::Vector, 0x10);
 			PROPERTY(m_inertiaFactor,float32, 0x1c);
 			S2_PAD(0x20);
 		};

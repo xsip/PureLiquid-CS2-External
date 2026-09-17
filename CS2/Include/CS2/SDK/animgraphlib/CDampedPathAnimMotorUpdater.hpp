@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CPathAnimMotorUpdaterBase.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include "CPathAnimMotorUpdaterBase.hpp"
+#include "CAnimParamHandle.hpp"
 
 
 

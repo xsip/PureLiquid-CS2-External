@@ -4,13 +4,13 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/C_FuncBrush.hpp>
+#include "C_FuncBrush.hpp"
 
 
 
@@ -26,18 +26,18 @@ namespace CS2 {
 	namespace client {
 		class C_FuncMonitor : public CS2::client::C_FuncBrush {
 		public:
-			PROPERTY(m_targetCamera,GlobalTypes::CUtlString*, 0xfa8);
-			PROPERTY(m_nResolutionEnum,int32_t, 0xfb0);
-			PROPERTY(m_bRenderShadows,bool, 0xfb4);
-			PROPERTY(m_bUseUniqueColorTarget,bool, 0xfb5);
-			PROPERTY(m_brushModelName,GlobalTypes::CUtlString*, 0xfb8);
-			PROPERTY(m_hTargetCamera,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xfc0);
-			PROPERTY(m_bEnabled,bool, 0xfc4);
-			PROPERTY(m_bDraw3DSkybox,bool, 0xfc5);
-			S2_PAD(0x478);
+			PROPERTY(m_targetCamera,GlobalTypes::CUtlString*, 0xfb0);
+			PROPERTY(m_nResolutionEnum,int32_t, 0xfb8);
+			PROPERTY(m_bRenderShadows,bool, 0xfbc);
+			PROPERTY(m_bUseUniqueColorTarget,bool, 0xfbd);
+			PROPERTY(m_brushModelName,GlobalTypes::CUtlString*, 0xfc0);
+			PROPERTY(m_hTargetCamera,IDENTITY(GlobalTypes::CHandle<client::C_BaseEntity>), 0xfc8);
+			PROPERTY(m_bEnabled,bool, 0xfcc);
+			PROPERTY(m_bDraw3DSkybox,bool, 0xfcd);
+			S2_PAD(0x480);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::client::C_FuncMonitor) == 0x1420, "C_FuncMonitor size should be 0x1420");
+		//static_assert(sizeof(CS2::client::C_FuncMonitor) == 0x1430, "C_FuncMonitor size should be 0x1430");
 
 #endif
 	}

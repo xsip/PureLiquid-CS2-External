@@ -4,17 +4,17 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/pulse_runtime_lib/CPulse_Variable.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_PublicOutput.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_Constant.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_DomainValue.hpp>
-#include <SDK/pulse_runtime_lib/CPulse_BlackboardReference.hpp>
+#include "CPulse_Variable.hpp"
+#include "CPulse_PublicOutput.hpp"
+#include "CPulse_Constant.hpp"
+#include "CPulse_DomainValue.hpp"
+#include "CPulse_BlackboardReference.hpp"
 
 
 
@@ -48,10 +48,10 @@ namespace CS2 {
 			NESTED_PROPERTY(m_DomainValues,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_DomainValue>), 0xf8);
 			NESTED_PROPERTY(m_BlackboardReferences,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_BlackboardReference>), 0x110);
 			NESTED_PROPERTY(m_OutputConnections,IDENTITY(GlobalTypes::CUtlVector<pulse_runtime_lib::CPulse_OutputConnection*>), 0x128);
-			S2_PAD(0x198);
+			S2_PAD(0x1B0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseGraphDef) == 0x198, "CPulseGraphDef size should be 0x198");
+		//static_assert(sizeof(CS2::pulse_runtime_lib::CPulseGraphDef) == 0x1B0, "CPulseGraphDef size should be 0x1B0");
 
 #endif
 	}

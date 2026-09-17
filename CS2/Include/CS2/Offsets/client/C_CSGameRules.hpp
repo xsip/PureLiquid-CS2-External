@@ -73,8 +73,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_iMatchStats_PlayersAlive_T = 0xaa8; // int32_t m_iMatchStats_PlayersAlive_T[30]; |  0xaa8 | Schema_FixedArray | Size: 0x78
 				constexpr std::ptrdiff_t m_TeamRespawnWaveTimes = 0xb20; // float32 m_TeamRespawnWaveTimes[32]; |  0xb20 | Schema_FixedArray | Size: 0x80
 				constexpr std::ptrdiff_t m_flNextRespawnWave = 0xba0; // GlobalTypes::GameTime_t[32]  | Schema_FixedArray | Size: 0x80
-				constexpr std::ptrdiff_t m_vMinimapMins = 0xc20; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vMinimapMaxs = 0xc2c; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vMinimapMins = 0xc20; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vMinimapMaxs = 0xc2c; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_MinimapVerticalSectionHeights = 0xc38; // float32 m_MinimapVerticalSectionHeights[8]; |  0xc38 | Schema_FixedArray | Size: 0x20
 				constexpr std::ptrdiff_t m_ullLocalMatchID = 0xc58; // uint64_t m_ullLocalMatchID; |  0xc58 | Schema_Builtin | Size: 0x8
 				constexpr std::ptrdiff_t m_nEndMatchMapGroupVoteTypes = 0xc60; // int32_t m_nEndMatchMapGroupVoteTypes[10]; |  0xc60 | Schema_FixedArray | Size: 0x28

@@ -4,16 +4,16 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animgraphlib/CUnaryUpdateNode.hpp>
-#include <SDK/animgraphlib/LookAtOpFixedSettings_t.hpp>
-#include <SDK/animgraphlib/AnimVectorSource.hpp>
-#include <SDK/animgraphlib/CAnimParamHandle.hpp>
+#include "CUnaryUpdateNode.hpp"
+#include "LookAtOpFixedSettings_t.hpp"
+#include "AnimVectorSource.hpp"
+#include "CAnimParamHandle.hpp"
 
 
 

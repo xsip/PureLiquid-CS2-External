@@ -8,13 +8,16 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace materialsystem2 {
-			// Class size: 0x14
+			// Class size: 0x20
 			namespace PostProcessingFogScatteringParameters_t /**/ {
 				constexpr std::ptrdiff_t m_fRadius = 0x0; // float32 m_fRadius; |  0x0 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_fScale = 0x4; // float32 m_fScale; |  0x4 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_fCubemapScale = 0x8; // float32 m_fCubemapScale; |  0x8 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_fVolumetricScale = 0xc; // float32 m_fVolumetricScale; |  0xc | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_fGradientScale = 0x10; // float32 m_fGradientScale; |  0x10 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fWaterScale = 0x14; // float32 m_fWaterScale; |  0x14 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fWaterDensity = 0x18; // float32 m_fWaterDensity; |  0x18 | Schema_Builtin | Size: 0x4
+				constexpr std::ptrdiff_t m_fWaterDepthBlurRadius = 0x1c; // float32 m_fWaterDepthBlurRadius; |  0x1c | Schema_Builtin | Size: 0x4
 			}
 		}
 	}

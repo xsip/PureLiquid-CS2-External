@@ -4,14 +4,14 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/worldrenderer/RTProxyInstanceFlags_t.hpp>
-#include <SDK/modellib/VertexAlbedoFormat_t.hpp>
+#include "RTProxyInstanceFlags_t.hpp"
+#include "../modellib/VertexAlbedoFormat_t.hpp"
 
 
 
@@ -24,14 +24,17 @@ namespace CS2 {
 		public:
 			PROPERTY(m_nFlags,IDENTITY(worldrenderer::RTProxyInstanceFlags_t), 0x0);
 			PROPERTY(m_albedoFormat,IDENTITY(modellib::VertexAlbedoFormat_t), 0x1);
-			PROPERTY(m_nBLASCount,uint16_t, 0x2);
-			PROPERTY(m_nBLASIndex,uint32_t, 0x4);
-			PROPERTY(m_nVertexAlbedoByteOffset,uint32_t, 0x8);
-			PROPERTY(m_mWorldFromLocal,GlobalTypes::matrix3x4_t, 0xc);
-			S2_PAD(0x3C);
+			PROPERTY(m_emissiveFormat,IDENTITY(modellib::VertexAlbedoFormat_t), 0x2);
+			PROPERTY(m_nBLASCount,uint16_t, 0x4);
+			PROPERTY(m_nBLASIndex,uint32_t, 0x8);
+			PROPERTY(m_nVertexAlbedoByteOffset,uint32_t, 0xc);
+			PROPERTY(m_nVertexEmissiveByteOffset,uint32_t, 0x10);
+			PROPERTY(m_fEmissiveFactor,float32, 0x14);
+			PROPERTY(m_mWorldFromLocal,GlobalTypes::matrix3x4_t, 0x18);
+			S2_PAD(0x48);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::worldrenderer::RTProxyInstanceInfo_t) == 0x3C, "RTProxyInstanceInfo_t size should be 0x3C");
+		//static_assert(sizeof(CS2::worldrenderer::RTProxyInstanceInfo_t) == 0x48, "RTProxyInstanceInfo_t size should be 0x48");
 
 #endif
 	}

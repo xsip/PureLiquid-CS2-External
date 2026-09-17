@@ -4,15 +4,15 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/animlib/CNmPoseTask.hpp>
-#include <SDK/animlib/CNmTarget.hpp>
-#include <SDK/animlib/NmIKBlendMode_t.hpp>
+#include "CNmPoseTask.hpp"
+#include "CNmTarget.hpp"
+#include "NmIKBlendMode_t.hpp"
 
 
 
@@ -23,22 +23,22 @@ namespace CS2 {
 	namespace animlib {
 		class CNmFootIKTask : public CS2::animlib::CNmPoseTask {
 		public:
-			PROPERTY(m_nLeftEffectorBoneIdx,int32_t, 0x48);
-			PROPERTY(m_nRightEffectorBoneIdx,int32_t, 0x4c);
-			PROPERTY(m_leftTargetTransform,GlobalTypes::CTransform, 0x50);
-			PROPERTY(m_rightTargetTransform,GlobalTypes::CTransform, 0x70);
-			PROPERTY(m_nLeftTargetBoneIdx,int32_t, 0x90);
-			PROPERTY(m_nRightTargetBoneIdx,int32_t, 0x94);
-			NESTED_PROPERTY(m_leftTarget,IDENTITY(animlib::CNmTarget), 0xa0);
-			NESTED_PROPERTY(m_rightTarget,IDENTITY(animlib::CNmTarget), 0xd0);
-			PROPERTY(m_blendMode,IDENTITY(animlib::NmIKBlendMode_t), 0x100);
-			PROPERTY(m_flBlendWeight,float32, 0x104);
-			PROPERTY(m_bIsTargetInWorldSpace,bool, 0x108);
-			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0x109);
-			S2_PAD(0xC8);
+			PROPERTY(m_nLeftEffectorBoneIdx,int32_t, 0x70);
+			PROPERTY(m_nRightEffectorBoneIdx,int32_t, 0x74);
+			PROPERTY(m_leftTargetTransform,GlobalTypes::CTransform, 0x80);
+			PROPERTY(m_rightTargetTransform,GlobalTypes::CTransform, 0xa0);
+			PROPERTY(m_nLeftTargetBoneIdx,int32_t, 0xc0);
+			PROPERTY(m_nRightTargetBoneIdx,int32_t, 0xc4);
+			NESTED_PROPERTY(m_leftTarget,IDENTITY(animlib::CNmTarget), 0xd0);
+			NESTED_PROPERTY(m_rightTarget,IDENTITY(animlib::CNmTarget), 0x100);
+			PROPERTY(m_blendMode,IDENTITY(animlib::NmIKBlendMode_t), 0x130);
+			PROPERTY(m_flBlendWeight,float32, 0x134);
+			PROPERTY(m_bIsTargetInWorldSpace,bool, 0x138);
+			PROPERTY(m_bIsRunningFromDeserializedData,bool, 0x139);
+			S2_PAD(0xD0);
 		};
 #ifdef USE_STATIC_ASSERTS
-		//static_assert(sizeof(CS2::animlib::CNmFootIKTask) == 0x110, "CNmFootIKTask size should be 0x110");
+		//static_assert(sizeof(CS2::animlib::CNmFootIKTask) == 0x140, "CNmFootIKTask size should be 0x140");
 
 #endif
 	}

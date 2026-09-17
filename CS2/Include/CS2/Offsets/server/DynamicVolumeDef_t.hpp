@@ -13,8 +13,8 @@ namespace CS2 {
 				constexpr std::ptrdiff_t m_source = 0x0; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_target = 0x4; // GlobalTypes::CHandle<server::CBaseEntity>  | Schema_Atomic | Size: 0x4
 				constexpr std::ptrdiff_t m_nHullIdx = 0x8; // int32_t m_nHullIdx; |  0x8 | Schema_Builtin | Size: 0x4
-				constexpr std::ptrdiff_t m_vSourceAnchorPos = 0xc; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
-				constexpr std::ptrdiff_t m_vTargetAnchorPos = 0x18; // GlobalTypes::Vector  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vSourceAnchorPos = 0xc; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
+				constexpr std::ptrdiff_t m_vTargetAnchorPos = 0x18; // GlobalTypes::VectorWS  | Schema_Atomic | Size: 0xc
 				constexpr std::ptrdiff_t m_nAreaSrc = 0x24; // uint32_t m_nAreaSrc; |  0x24 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_nAreaDst = 0x28; // uint32_t m_nAreaDst; |  0x28 | Schema_Builtin | Size: 0x4
 				constexpr std::ptrdiff_t m_bAttached = 0x2c; // bool m_bAttached; |  0x2c | Schema_Builtin | Size: 0x1

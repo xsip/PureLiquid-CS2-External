@@ -4,18 +4,18 @@
 #pragma once
 
 #ifndef CUSTOM_GLOBAL_TYPES
-	#include <SDK/GlobalTypes.hpp>
+	#include "../GlobalTypes.hpp"
 #else
 	#include <Custom/GlobalTypes.hpp>
 #endif
 
 
-#include <SDK/client/CPlayerPawnComponent.hpp>
-#include <SDK/entity2/GameTick_t.hpp>
-#include <SDK/server/fogplayerparams_t.hpp>
-#include <SDK/server/audioparams_t.hpp>
-#include <SDK/server/CPostProcessingVolume.hpp>
-#include <SDK/server/CEnvSoundscapeTriggerable.hpp>
+#include "../client/CPlayerPawnComponent.hpp"
+#include "../entity2/GameTick_t.hpp"
+#include "fogplayerparams_t.hpp"
+#include "audioparams_t.hpp"
+#include "CPostProcessingVolume.hpp"
+#include "CEnvSoundscapeTriggerable.hpp"
 
 
 

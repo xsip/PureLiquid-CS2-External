@@ -8,11 +8,11 @@
 namespace CS2 {
 	namespace SchemaOffsets {
 		namespace pulse_runtime_lib {
-			// Class size: 0x10
+			// Class size: 0x18
 			namespace CPulse_InstructionDebug /**/ {
 				constexpr std::ptrdiff_t m_nFlowNodeID = 0x0; // pulse_runtime_lib::PulseDocNodeID_t  | Schema_DeclaredClass | Size: 0x4
 				constexpr std::ptrdiff_t m_nValueNodeID = 0x4; // pulse_runtime_lib::PulseDocNodeID_t  | Schema_DeclaredClass | Size: 0x4
-				constexpr std::ptrdiff_t m_SequencePointName = 0x8; // GlobalTypes::CGlobalSymbol  | Schema_Atomic | Size: 0x8
+				constexpr std::ptrdiff_t m_SequencePointName = 0x8; // GlobalTypes::PulseSymbol_t  | Schema_Atomic | Size: 0x10
 			}
 		}
 	}
